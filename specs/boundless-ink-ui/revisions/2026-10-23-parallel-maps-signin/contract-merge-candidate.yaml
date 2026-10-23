@@ -1,0 +1,13 @@
+schema_version: 1
+project_id: boundless-ink-ui
+scope: world, resources, sign-in, monthly-sign-in
+status: candidate-specification
+assets: pending-generation
+approved: false
+protected_shared_contracts_unchanged: true
+merge_candidates:
+  - target: contracts/screen-contract.yaml
+    entries: [world, resources, sign-in, monthly-sign-in]
+    detail: design.md#待合并公共契约条目
+  - target: contracts/asset-manifest.yaml
+    entries: [world-map-v1-candidate, resources-map-v1-candidate, sign-in-v1-candidate]

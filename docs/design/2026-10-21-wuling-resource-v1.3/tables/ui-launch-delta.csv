@@ -1,0 +1,7 @@
+path,action,phase,purpose
+Source/BoundlessImmortality/Frontend/UI/InkUiLaunchPanels.h,add_planned,UI-P1,开服页面与榜单类声明
+Source/BoundlessImmortality/Frontend/UI/InkUiLaunchPanels.cpp,add_planned,UI-P1,开服页面与榜单只读数据绑定
+Content/UI/Ink/Wuling/Widgets/WBP_InkLaunchEvent.uasset,add_planned,UI-P1,开服总览个人任务武灵目标规则
+Content/UI/Ink/Wuling/Widgets/WBP_InkLaunchRank.uasset,add_planned,UI-P1,玩法贡献荣誉榜
+SourceAssets/UI/Wuling/Generated/WulingLaunchTitleEmblem.png,add_if_not_reusable,UI-P1,无文字512透明飞雁徽记
+Content/UI/Ink/Wuling/Textures/T_WulingLaunchTitleEmblem.uasset,add_if_not_reusable,UI-P1,青云踏飞雁称号徽记

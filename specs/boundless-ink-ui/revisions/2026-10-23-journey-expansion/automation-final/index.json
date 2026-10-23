@@ -1,0 +1,1572 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "AVHERD",
+			"instance": "A8E43EA24ED6AE69F8B270A744DCF764",
+			"instanceName": "AVHERD-32468",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (26H2) [10.0.26300.9711] ",
+			"model": "Default",
+			"gPU": "AMD Radeon RX 7900 XTX",
+			"cPUModel": "13th Gen Intel(R) Core(TM) i5-13600KF",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.23-06.02.49",
+	"succeeded": 101,
+	"succeededWithWarnings": 1,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 2.6201138496398926,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "AuthorityGuard",
+			"fullTestPath": "Boundless.InkUI.Launch.AuthorityGuard",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016441598534584045,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StableViewKey",
+			"fullTestPath": "Boundless.InkUI.Launch.StableViewKey",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015917699784040451,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StartFeedback",
+			"fullTestPath": "Boundless.InkUI.Launch.StartFeedback",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016978401690721512,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SnapshotIsolation",
+			"fullTestPath": "Boundless.InkUI.WulingSect.SnapshotIsolation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015148799866437912,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Geometry",
+			"fullTestPath": "Boundless.UI.HomeV2.Geometry",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016286700963973999,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ActualDamageAndStarCharges",
+			"fullTestPath": "BoundlessImmortality.Cultivation.ActualDamageAndStarCharges",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016379199922084808,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AllUnlockedCoexist",
+			"fullTestPath": "BoundlessImmortality.Cultivation.AllUnlockedCoexist",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016371600329875946,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuraNoRecursion",
+			"fullTestPath": "BoundlessImmortality.Cultivation.AuraNoRecursion",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016505297273397446,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ExpiryAndCooldownBoundaries",
+			"fullTestPath": "BoundlessImmortality.Cultivation.ExpiryAndCooldownBoundaries",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016466502100229263,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "GiftQuantityAndFiniteTimers",
+			"fullTestPath": "BoundlessImmortality.Cultivation.GiftQuantityAndFiniteTimers",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016300201416015625,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "GiftStackFormula",
+			"fullTestPath": "BoundlessImmortality.Cultivation.GiftStackFormula",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016362503170967102,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PotionDepartureMigration",
+			"fullTestPath": "BoundlessImmortality.Cultivation.PotionDepartureMigration",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016290601342916489,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RealmFeedbackOnce",
+			"fullTestPath": "BoundlessImmortality.Cultivation.RealmFeedbackOnce",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015898898243904114,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RealmMaterialGate",
+			"fullTestPath": "BoundlessImmortality.Cultivation.RealmMaterialGate",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016522400081157684,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ReceiptImportReplay",
+			"fullTestPath": "BoundlessImmortality.Cultivation.ReceiptImportReplay",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017480801790952682,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SharedOutboxRoomRecovery",
+			"fullTestPath": "BoundlessImmortality.Cultivation.SharedOutboxRoomRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.046516001224517822,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RealActionProgress",
+			"fullTestPath": "BoundlessImmortality.Frontend.AnchorStatus.RealActionProgress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015914902091026306,
+			"dateTime": "2026.10.23-06.02.45",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SafePresentation",
+			"fullTestPath": "BoundlessImmortality.Frontend.AnchorStatus.SafePresentation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015278302133083344,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MajorRealmAndBoundaries",
+			"fullTestPath": "BoundlessImmortality.Frontend.AttributeRating.MajorRealmAndBoundaries",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01623699814081192,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RealmBoundaries",
+			"fullTestPath": "BoundlessImmortality.Frontend.CharacterCultivation.RealmBoundaries",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016522899270057678,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SlotBorderBounds",
+			"fullTestPath": "BoundlessImmortality.Frontend.CharacterCultivation.SlotBorderBounds",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015954699367284775,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Distance",
+			"fullTestPath": "BoundlessImmortality.Frontend.CultivationNameplate.Distance",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016980797052383423,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Geometry",
+			"fullTestPath": "BoundlessImmortality.Frontend.CultivationNameplate.Geometry",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01571519672870636,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "BufferedProgress",
+			"fullTestPath": "BoundlessImmortality.Frontend.Feedback.BufferedProgress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01666250079870224,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DamageTiers",
+			"fullTestPath": "BoundlessImmortality.Frontend.Feedback.DamageTiers",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017507098615169525,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "GMIsolation",
+			"fullTestPath": "BoundlessImmortality.Frontend.Feedback.GMIsolation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016214799135923386,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RegeneratedMeterArtwork",
+			"fullTestPath": "BoundlessImmortality.Frontend.Feedback.RegeneratedMeterArtwork",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015248198062181473,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SingleDamageEvent",
+			"fullTestPath": "BoundlessImmortality.Frontend.Feedback.SingleDamageEvent",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016233500093221664,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Actions",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Actions",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015694398432970047,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Capacity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Capacity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017313096672296524,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NewMarker",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.NewMarker",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01733040064573288,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Quantity1To100",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Quantity1To100",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.020149502903223038,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StableIdentity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.StableIdentity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016128499060869217,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ActivityFade",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.ActivityFade",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015274196863174438,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DataChanges",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.DataChanges",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016051899641752243,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ManualFade",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.ManualFade",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016470696777105331,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PortraitRows",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.PortraitRows",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016585301607847214,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Rows",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.Rows",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016076497733592987,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Assets",
+			"fullTestPath": "BoundlessImmortality.Frontend.NiagaraTitles.Assets",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.08057810366153717,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DestroyedComponentLifecycle",
+			"fullTestPath": "BoundlessImmortality.Frontend.NiagaraTitles.DestroyedComponentLifecycle",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016739901155233383,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Quality",
+			"fullTestPath": "BoundlessImmortality.Frontend.NiagaraTitles.Quality",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017305102199316025,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "VisibilityPolicy",
+			"fullTestPath": "BoundlessImmortality.Frontend.NiagaraTitles.VisibilityPolicy",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016304198652505875,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AnnouncementClearance",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.AnnouncementClearance",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016336601227521896,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PortraitHudRail",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.PortraitHudRail",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017533101141452789,
+			"dateTime": "2026.10.23-06.02.46",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RequestIdentity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.RequestIdentity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01534150168299675,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SafeLayout",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.SafeLayout",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016321700066328049,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "GroundAndVoid",
+			"fullTestPath": "BoundlessImmortality.Frontend.SafeReentry.GroundAndVoid",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.020918902009725571,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MenuPawnRoles",
+			"fullTestPath": "BoundlessImmortality.Frontend.SafeReentry.MenuPawnRoles",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.0097489021718502045,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StageCoordinatesKeepPawnRoles",
+			"fullTestPath": "BoundlessImmortality.Frontend.SafeReentry.StageCoordinatesKeepPawnRoles",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.0098279006779193878,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Warning",
+						"message": "LogSpawn: UWorld::DestroyActor: World has no context! World: Untitled, Actor: /Temp/Untitled_3.Untitled:PersistentLevel.Character_0",
+						"context": "log",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.10.23-06.02.47"
+				}
+			],
+			"warnings": 1,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IsolatedSlots",
+			"fullTestPath": "BoundlessImmortality.Frontend.Save.IsolatedSlots",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.064544998109340668,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MemoryIntegrity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Save.MemoryIntegrity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016471501439809799,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MenuPlayTime",
+			"fullTestPath": "BoundlessImmortality.Frontend.Save.MenuPlayTime",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01605360209941864,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Validation",
+			"fullTestPath": "BoundlessImmortality.Frontend.Save.Validation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015431199222803116,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ChestProgress",
+			"fullTestPath": "BoundlessImmortality.Frontend.SignIn.ChestProgress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016847196966409683,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WheelResultStable",
+			"fullTestPath": "BoundlessImmortality.Frontend.Visual.WheelResultStable",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015686701983213425,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NoSceneInteraction",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Alert.NoSceneInteraction",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.02237740159034729,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OrbitAndParameters",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Alert.OrbitAndParameters",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.028994496911764145,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PureHeightCurve",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Alert.PureHeightCurve",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017773300409317017,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Regression",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Alert.Regression",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.020201500505208969,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RunningReturn",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Alert.RunningReturn",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.035261999815702438,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DynamicAttackFrequency",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Night.DynamicAttackFrequency",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.029851898550987244,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RunningCatchUp",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Night.RunningCatchUp",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.030729100108146667,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WideTempo",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Night.WideTempo",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.13872510194778442,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "InterruptCombat",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Presentation.InterruptCombat",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017931900918483734,
+			"dateTime": "2026.10.23-06.02.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MenuCycle",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Presentation.MenuCycle",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.038516901433467865,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DepthAndShadow",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Refinement.DepthAndShadow",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.019032299518585205,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "FrameSmoothness",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Refinement.FrameSmoothness",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018354900181293488,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IdleDwell",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Refinement.IdleDwell",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018298499286174774,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OwnerApproach",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Refinement.OwnerApproach",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017702899873256683,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SpatialBezier",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Refinement.SpatialBezier",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01612430065870285,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IndependentMotion",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.SpatialRanges.IndependentMotion",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.3058621883392334,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "LegacyInheritance",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.SpatialRanges.LegacyInheritance",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018643800169229507,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IndependentAlert",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Tempo.IndependentAlert",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.034324899315834045,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AcknowledgementReconnect",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.AcknowledgementReconnect",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.020828798413276672,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Anchor",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Anchor",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018824499100446701,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AnchorProfileRouting",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.AnchorProfileRouting",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017684001475572586,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AudienceCommands",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.AudienceCommands",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015814501792192459,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AudienceRouting",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.AudienceRouting",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018098801374435425,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AvatarRefresh",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.AvatarRefresh",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017516199499368668,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "BezierDynamics",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.BezierDynamics",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015663199126720428,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CombatClock",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.CombatClock",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016127500683069229,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ComboProbability",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.ComboProbability",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.015891000628471375,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "EligibilityMutation",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.EligibilityMutation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016220100224018097,
+			"dateTime": "2026.10.23-06.02.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "FlightCancellation",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.FlightCancellation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.022332001477479935,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "GMControls",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.GMControls",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.022333100438117981,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ImpactCallbacks",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.ImpactCallbacks",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.030253499746322632,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "LivingFlight",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.LivingFlight",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.052881199866533279,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MixedRangeSkillEligibility",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.MixedRangeSkillEligibility",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.019005898386240005,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Monster",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Monster",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.020288500934839249,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MovingTargetFlight",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.MovingTargetFlight",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017201300710439682,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "QueuedAttackSwitch",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.QueuedAttackSwitch",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.017826598137617111,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejoinCapacity",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.RejoinCapacity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.021037202328443527,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Roster",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Roster",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016671102494001389,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SkillCommitAfterExecution",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.SkillCommitAfterExecution",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.018834799528121948,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Skills",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Skills",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016279798001050949,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Swarm",
+			"fullTestPath": "BoundlessImmortality.LiveWeapons.Swarm",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.20633520185947418,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AlertLeaseIsolation",
+			"fullTestPath": "BoundlessImmortality.Wuling.AlertLeaseIsolation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.019433300942182541,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuthorityInventory",
+			"fullTestPath": "BoundlessImmortality.Wuling.AuthorityInventory",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016778402030467987,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuthorityProjection",
+			"fullTestPath": "BoundlessImmortality.Wuling.AuthorityProjection",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016552302986383438,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "FunctionalRoutes",
+			"fullTestPath": "BoundlessImmortality.Wuling.FunctionalRoutes",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.01660890132188797,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "HonorKeepsLegacyGift",
+			"fullTestPath": "BoundlessImmortality.Wuling.HonorKeepsLegacyGift",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016607999801635742,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RewardReceiptQueue",
+			"fullTestPath": "BoundlessImmortality.Wuling.RewardReceiptQueue",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"A8E43EA24ED6AE69F8B270A744DCF764"
+			],
+			"duration": 0.016073998063802719,
+			"dateTime": "2026.10.23-06.02.49",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+  "registry_asset_count": 570,
+  "registry_classes": {
+    "Texture2D": 70,
+    "Material": 57,
+    "NiagaraSystem": 12,
+    "WidgetBlueprint": 8,
+    "MaterialInstanceConstant": 416,
+    "InkUiThemeData": 1,
+    "FontFace": 3,
+    "Font": 3
+  },
+  "migration_rows": 570,
+  "all_assets_hashed": true,
+  "unique_destination_count": 570,
+  "protected_pages": [
+    "character",
+    "inventory",
+    "leaderboard"
+  ],
+  "planned_screen_count": 44,
+  "runtime_routes": 38,
+  "supplemental_routes": 6,
+  "all_runtime_routes_accounted": true,
+  "layout_coverage_complete": true,
+  "asset_mutations_executed": false,
+  "native_build_run": false,
+  "pie_run": false,
+  "cook_run": false,
+  "device_test_run": false
+}

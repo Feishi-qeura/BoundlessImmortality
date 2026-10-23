@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-slice-correction-v4-visual-review",
+  "status": "author-visual-review-passed",
+  "complete": true,
+  "user_approved": false,
+  "per_reply_image_limit": 1,
+  "inspected_count": 1,
+  "required_image_count": 1,
+  "inspected": [
+    {
+      "component_id": "home-rank-paper",
+      "variant": "narrow",
+      "mode": "full/Fit-responsive-fallback",
+      "path": "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png",
+      "dimensions": [
+        1260,
+        399
+      ],
+      "art_dimensions": [
+        1260,
+        319
+      ],
+      "art_origin": [
+        0,
+        40
+      ],
+      "scale": 0.8,
+      "integer_rounding_aspect_error": 0.0024748391354565413,
+      "sha256": "596683dd1d232a4d7c93674ba3d00ae4eb91a2fd86057b7b8de2b800ab5f461e",
+      "numerical_check_passed": true,
+      "result": "visual-pass-at-review-scale",
+      "displayed_dimensions": [
+        1260,
+        399
+      ],
+      "findings": "复用上一聊天已查看并报告通过的 narrow Fit v4 结论；本轮核对图片哈希与确定性RGBA重建，未重新打开图片，不新增细节性视觉观察。",
+      "scope": "Previously reported offline narrow Fit preview pass only; no UE sampling, text/hit layout, device or user acceptance.",
+      "review_method": "reused-prior-reported-inspection",
+      "current_turn_reopened": false,
+      "issue_resolution": "rank-paper-v2-cloud-tips-cross-fixed-endcaps",
+      "provenance": "evidence/v4-review-reuse-provenance.json"
+    }
+  ],
+  "pending": [],
+  "carried_review": "evidence/home-slice-correction-visual-review.json",
+  "carried_passes": [
+    "home-top-tile narrow Fit v3",
+    "home-rank-paper guides v3",
+    "home-rank-paper wide v3"
+  ],
+  "rejected_preview": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+  "contract": "contracts/home-slice-correction-v4.yaml",
+  "inspection_complete": true,
+  "visual_acceptance_passed": true,
+  "current_turn_images_reopened": 0,
+  "evidence_reuse": "evidence/v4-review-reuse-provenance.json",
+  "open_issues": [],
+  "resolved_issues": [
+    "top-tile-v2-ornament-crosses-fixed-regions",
+    "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+  ]
+}

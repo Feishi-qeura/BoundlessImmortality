@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-slice-correction-v4-visual-review",
+  "status": "pending",
+  "complete": false,
+  "user_approved": false,
+  "per_reply_image_limit": 1,
+  "inspected_count": 0,
+  "required_image_count": 1,
+  "inspected": [],
+  "pending": [
+    "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png"
+  ],
+  "carried_review": "evidence/home-slice-correction-visual-review.json",
+  "carried_passes": [
+    "home-top-tile narrow Fit v3",
+    "home-rank-paper guides v3",
+    "home-rank-paper wide v3"
+  ],
+  "rejected_preview": "evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+  "contract": "contracts/home-slice-correction-v4.yaml"
+}

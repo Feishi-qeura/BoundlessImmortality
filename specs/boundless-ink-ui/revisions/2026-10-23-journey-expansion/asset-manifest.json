@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "id": "world-map-v1",
+      "path": "assets\\world-map-v1.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "transparent_background": false,
+      "sha256": "68b5c1f2a69d4610f242c65c58ad8361b09e76d27c3625a3ecf5402e22f32cdd",
+      "prompt_path": "world-map-prompt.md",
+      "source_tool": "built-in-image_gen",
+      "unreal_asset": "/Game/UI/Ink/Textures/Journey/T_WorldAtlas_v1",
+      "imported": true
+    },
+    {
+      "id": "resource-map-v1",
+      "path": "assets\\resource-map-v1.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "transparent_background": false,
+      "sha256": "b28d77c6aa2105f0d701350d4c4164c5c5da01581831fc131b475b2f8c14497b",
+      "prompt_path": "resource-map-prompt.md",
+      "source_tool": "built-in-image_gen",
+      "unreal_asset": "/Game/UI/Ink/Textures/Journey/T_ResourceAtlas_v1",
+      "imported": true
+    }
+  ],
+  "python": "3.12.14"
+}

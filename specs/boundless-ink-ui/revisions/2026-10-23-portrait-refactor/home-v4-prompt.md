@@ -1,0 +1,9 @@
+# HUD v4：保留场景的探索修订
+status: pending-generation
+approved: false
+
+v3产生了新的仙山场景，只能作为风格探索，不能作为项目场景替换。此版以已有UE截图为编辑底图；仍是概念编辑图，不能作为运行截图。
+
+## 图像生成提示词
+Edit image 1, the actual portrait game screenshot, ONLY to redesign its HUD. Image 2 is a UI ART STYLE reference only. Keep the exact simple turquoise sky, rock cliff shape, yellow-green foliage, small existing character and camera composition from image 1. Do not add distant palaces, mountains, trees, buildings, birds, clouds, a new character or any other environment. The central gameplay region must match image 1 as closely as possible. Redesign only existing UI overlays with restrained Chinese xianxia brush ink, warm parchment, thin aged gold and muted jade. Do not paint a white wash across the screen. Maintain 9:16.
+Use a cleaner compact top-left avatar medallion containing 主 as the real placeholder, a dark brush-ink text backing with 主播 and 炼气一阶 and two crisp narrow meters 血量 100/100 and 修为 0/100 plus subtle 护盾·未激活. Right top: smaller evenly spaced ornate seal icons 活动, 签到, 仙途, no big rectangular tiles. Preserve ample safe margins. Replace the oversized 查看排行 paper rectangle with a small vertical ink and fine gold tab at the right edge above the character. Do not add a task panel because no real task exists in the screenshot. Bottom five equally spaced icons 角色, 背包, 修炼, 排行, 菜单 on a shallow dark ink fade, central cultivation a modest jade and gold glow slightly raised. Refine the other icons to match the second image's hand-drawn gold silhouettes. No white fog across the bottom. Add a discreet visible label 视觉预览·布局候选 above bottom navigation. Keep all text legible with generous spacing. No currencies, VIP, new features, marketing headings, extra panels or red badges. This is a layout concept editing the screenshot, not a new world illustration. Do not borrow the background from image 2.

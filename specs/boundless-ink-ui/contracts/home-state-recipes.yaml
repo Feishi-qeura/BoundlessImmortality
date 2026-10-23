@@ -1,0 +1,403 @@
+schema_version: 1
+project_id: boundless-ink-ui
+source_asset_id: home-v2
+status: specified-not-engine-implemented
+controls:
+- id: home-control-activity
+  art:
+  - home-top-tile
+  - home-icon-activity
+  label: 活动
+  action: OpenActivities
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: &id001
+      tint:
+      - 1
+      - 1
+      - 1
+      - 1
+      translation:
+      - 0
+      - 0
+      scale: 1
+      focus: false
+      submit_enabled: true
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: &id002
+      tint:
+      - 0.92
+      - 0.98
+      - 1
+      - 1
+      translation:
+      - 0
+      - 0
+      scale: 1
+      overlay: blue-ink-at-0.12
+      duration_ms: 120
+      desktop_only: true
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: &id003
+      tint:
+      - 0.85
+      - 0.85
+      - 0.85
+      - 1
+      translation:
+      - 0
+      - 2
+      scale: 1
+      duration_ms: 80
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: &id004
+      tint:
+      - 1
+      - 1
+      - 1
+      - 1
+      translation:
+      - 0
+      - 0
+      scale: 1
+      outline: thin-aged-gold
+      focus: true
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: &id005
+      tint:
+      - 1
+      - 1
+      - 1
+      - 1
+      translation:
+      - 0
+      - 0
+      scale: 1
+      outline: gold-selected-mark
+      persists_until_selection_changes: true
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: &id006
+      tint:
+      - 0.62
+      - 0.62
+      - 0.62
+      - 0.7
+      translation:
+      - 0
+      - 0
+      scale: 1
+      submit_enabled: false
+      reason_visible: true
+      label_contrast_min: 4.5
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: &id007
+      tint:
+      - 0.78
+      - 0.78
+      - 0.78
+      - 0.9
+      translation:
+      - 0
+      - 0
+      scale: 1
+      submit_enabled: false
+      return_enabled: true
+      show_progress: true
+      retry_request: same-request-id
+      success_only_from_authoritative_snapshot: true
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-sign-in
+  art:
+  - home-top-tile
+  - home-icon-sign-in
+  label: 签到
+  action: OpenSignIn
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-journey
+  art:
+  - home-top-tile
+  - home-icon-journey
+  label: 仙途
+  action: OpenExtensions
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-character
+  art:
+  - home-avatar-portrait
+  - home-avatar-frame
+  label: 角色
+  action: OpenCharacter
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-bag
+  art:
+  - home-icon-bag
+  label: 背包
+  action: OpenInventory
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-cultivate
+  art:
+  - home-icon-cultivate
+  label: 修炼/收功
+  action: ToggleCultivation
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-leaderboard
+  art:
+  - home-icon-rank
+  label: 排行
+  action: OpenLeaderboard
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-menu
+  art:
+  - home-icon-menu
+  label: 菜单
+  action: ToggleHUDMenu
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+- id: home-control-view-rank
+  art:
+  - home-rank-paper
+  label: 查看排行
+  action: HUDRankView
+  states:
+  - id: normal
+    art_mode: shared-base-textures
+    render_recipe: *id001
+  - id: hover
+    art_mode: shared-base-textures
+    render_recipe: *id002
+  - id: pressed
+    art_mode: shared-base-textures
+    render_recipe: *id003
+  - id: focused
+    art_mode: shared-base-textures
+    render_recipe: *id004
+  - id: selected
+    art_mode: shared-base-textures
+    render_recipe: *id005
+  - id: disabled
+    art_mode: shared-base-textures
+    render_recipe: *id006
+  - id: pending
+    art_mode: shared-base-textures
+    render_recipe: *id007
+  minimum_hit_size:
+  - 88
+  - 88
+  label_font: LXGWWenKai
+  label_is_dynamic: true
+  event_dispatch: one release inside widget triggers one action; cancel drag or release outside
+  runtime_implementation: not-created-this-stage
+overlay_layers:
+  navigation_veil: runtime vertical transparent-to-ink gradient, HitTestInvisible
+  health_fraction: clip red fill left-to-right, clamp0..1; unknown value shows pending label, no fabricated health
+  qi_fraction: clip jade fill left-to-right, share same well geometry
+  cultivation: idle/cultivating/interrupted/blocked/pending; label from authoritative state
+  badge: only real unread/claimable data; no baked red dots
+  reduced_motion: stop looping glow, retain static selection and labels

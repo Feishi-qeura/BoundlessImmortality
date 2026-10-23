@@ -1,0 +1,8 @@
+method_id,name,route,initial_implementation,max_level,main_mechanic,support_mechanic
+METHOD_EDGE,疾锋剑诀,剑修,true,6,每5次命中强化至1.8倍,完整蓄力后下一击增伤10%
+METHOD_STAR,星罗法诀,法修,false,6,每20秒法域6秒增伤20%,范围目标额外伤害5%
+METHOD_GUARD,玄罡体经,护体,true,6,每30秒护体6秒减伤20%,低生命防御提高10%
+METHOD_ECHO,回响诀,魂修,true,6,每4次命中追加0.5倍延迟伤害,每20秒下一击追加0.1倍延迟伤害
+METHOD_PACT,合契经,协契,false,6,20秒标记成员增伤15%,每20秒标记首击增伤5%
+METHOD_SURGE,燃脉诀,燃息,false,6,10%当前生命换25%伤害6秒间隔30秒,低生命本命剑增伤10%
+METHOD_ETHER,百蚀经,蚀灵,false,6,每秒0.05倍最多5层持续5秒,每20秒首次命中加1层

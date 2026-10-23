@@ -1,0 +1,2469 @@
+schema_version: 1
+project_id: boundless-ink-ui
+status: approved
+suite_extension:
+  document: revisions/2026-10-23-screen-contract-addendum.md
+  design_reference: revisions/2026-10-23-full-portrait-suite-design.md
+  scope_status: user-confirmed
+  visual_assets_status: pending-review
+  runtime_logic_changes: false
+screens:
+- id: main
+  legacy_screen_id: UI_MAIN
+  name: 主菜单
+  category: core
+  priority: must-have
+  status: preserved
+  purpose: 保留启动页的水墨题字、人物与按钮构图
+  entry_points:
+  - application-start
+  primary_actions:
+  - 进入HUD
+  dependencies: []
+  route: Main
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: preserve-runtime
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 开始、继续、存档、设置、退出；沿用当前可达路径
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: &id001
+  - default
+  - loading
+  - ready
+  - empty
+  - locked
+  - pending
+  - disconnected
+  - error
+  - expired
+  - feature-disabled
+  edge_cases:
+  - 存档为空、继续不可用、退出确认
+  - 不为参考图增设选服登录
+  data_needs:
+  - FrontendVm
+  rules:
+  - 保留现有启动页；导航清单见当前路由，缺项只登记
+  output:
+    brief: briefs/main.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Main
+  specification_approved: true
+- id: home
+  legacy_screen_id: UI_HUD
+  name: 常驻HUD
+  category: core
+  priority: must-have
+  status: approved
+  purpose: 保留游戏首页HUD与相机，作为新页面的风格衔接基准
+  entry_points:
+  - main
+  primary_actions:
+  - 修炼或收功
+  dependencies:
+  - main
+  route: HUD
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: preserve-runtime
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 左上主播头像、血量与修为条；右上活动/签到/仙途
+    center:
+    - 原场景与角色，侧边现有查看排行；无虚假任务
+    bottom:
+    - 角色/背包/修炼/排行/菜单
+    floating:
+    - 仅确认过的短播报；最多3条
+  responsive:
+    portrait: 保留现有720×1280 HUD槽位，概念只作风格对照
+    landscape: 保留左上/右上锚点与底中五导航，不整体拉伸
+  components:
+  - home-identity-ink
+  - home-avatar-frame
+  - home-avatar-portrait
+  - home-realm-plaque
+  - home-bar-track
+  - home-health-fill
+  - home-qi-fill
+  - home-top-tile
+  - home-icon-activity
+  - home-icon-sign-in
+  - home-icon-journey
+  - home-icon-bag
+  - home-icon-cultivate
+  - home-icon-rank
+  - home-icon-menu
+  - home-rank-paper
+  - home-preview-paper
+  - home-bottom-cloud
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 无目标则隐藏目标
+  - 断线不加收益
+  - 修炼/收功使用实际状态
+  data_needs:
+  - AnchorVm
+  - WorldVm
+  - LeaseVm
+  rules:
+  - 不得改镜头、山石、人物尺寸和导航顺序；概念图不是运行截图
+  output:
+    brief: briefs/home.md
+    prompt: prompts/pages/home-v2.md
+    image: assets/pages/home-v2.png
+  approval:
+    approved: true
+    candidate: home-v2
+    evidence: evidence/approval-home-v2.json
+  current_route_aliases:
+  - HUD
+  specification_approved: true
+- id: character
+  legacy_screen_id: UI_CHARACTER
+  name: 角色
+  category: core
+  priority: must-have
+  status: preserved
+  purpose: 保留当前丹田与功法装备槽及属性评级面板
+  entry_points:
+  - home
+  primary_actions:
+  - 查看当前属性及进入获准子页
+  dependencies:
+  - home
+  route: Character
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: preserve-runtime
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 功法行、丹田、六侧槽、下方已配槽与实际属性；保持当前品质框和减弱动态选项
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 空槽、锁槽、长属性、未配置
+  - 不套用参考图旧立绘属性卡或虚构总战力
+  data_needs:
+  - AnchorVm
+  - MethodVm
+  - EquipmentVm
+  rules:
+  - 保留当前角色评级系统，不恢复旧稿；用户保留优先
+  output:
+    brief: briefs/character.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Character
+  - CharacterProfile
+  runtime_route_note: 当前主要属性面板为CharacterProfile；Character为旧表入口名，保留二者现有路由映射。
+  specification_approved: true
+- id: inventory
+  legacy_screen_id: UI_INVENTORY
+  name: 物品
+  category: core
+  priority: must-have
+  status: preserved
+  purpose: 保留背包全套UI、模型与操作
+  entry_points:
+  - home
+  primary_actions:
+  - 选物品查看允许动作
+  dependencies:
+  - home
+  route: Inventory
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: preserve-runtime
+  profile_gate: economic_inventory
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 分类/搜索/列表与网格/新标/数量/滚动/多选/分页/详情/出售分解整理
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 200物理槽、默认20解锁、40每页
+  - hover蓝、selected金
+  - 绑定到期托管动作权限
+  data_needs:
+  - InventoryVm
+  rules:
+  - 不改格数、材质、框架；新增来源页从允许的详情入口进入
+  output:
+    brief: briefs/inventory.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Inventory
+  specification_approved: true
+- id: leaderboard
+  legacy_screen_id: UI_RANK
+  name: 排行
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制榜单外壳与阅读层级
+  entry_points:
+  - home
+  primary_actions:
+  - 切换榜单
+  dependencies:
+  - home
+  route: Leaderboard
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 本房/全服、剑灵数/修炼速度/伤害；窄榜8行、我的位置、规则与周期
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未上榜、空榜、头像失败、周期切换、并列
+  - 不提供假好友榜
+  data_needs:
+  - LeaderboardVm
+  rules:
+  - 保留持久行/头像更新逻辑与8行边界；重制视觉不能造成头像闪烁
+  output:
+    brief: briefs/leaderboard.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Leaderboard
+  specification_approved: true
+- id: saves
+  legacy_screen_id: UI_SAVES
+  name: 存档
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制存档列表，明确本地范围
+  entry_points:
+  - home
+  primary_actions:
+  - 载入或保存
+  dependencies:
+  - home
+  route: Saves
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 槽位、时间、模式、摘要、覆盖或载入
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 空槽、坏档、版本不兼容、覆盖和删除二次确认
+  data_needs:
+  - SaveVm
+  rules:
+  - 不可把本地存档覆盖在线成长或服务账本
+  output:
+    brief: briefs/saves.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Saves
+  specification_approved: true
+- id: settings
+  legacy_screen_id: UI_SETTINGS
+  name: 设置
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制设置页，降低调整成本
+  entry_points:
+  - home
+  primary_actions:
+  - 应用设置
+  dependencies:
+  - home
+  route: Settings
+  current_status: existing_wbp_and_source_not_runtime_tested
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 声音/图像/控制/文字可读性/减弱动态；仅列现有能力
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 应用失败恢复原值
+  - 未保存退出提示
+  - 未知能力不绘可用开关
+  data_needs:
+  - SettingsVm
+  rules:
+  - 键鼠与触控焦点可达；返回不中断待对账事务
+  output:
+    brief: briefs/settings.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Settings
+  specification_approved: true
+- id: wuling
+  legacy_screen_id: UI_WULING
+  name: 武灵总览成员建设记录
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制武灵组织总览与名册
+  entry_points:
+  - journey
+  primary_actions:
+  - 创建或管理武灵
+  dependencies:
+  - journey
+  route: Wuling
+  current_status: existing_native_prototype_calls
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 总览/成员/建设/记录四子栏；正式、参与、临时人数分开；公库与当前租约
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未创建、名称2–12等效汉字、审核驳回、改名冷却
+  - 成员20一页
+  data_needs:
+  - GuildVm
+  - WorldVm
+  rules:
+  - 武灵是主播创建的组织；移除与解散说明个人权益保留
+  output:
+    brief: briefs/wuling.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Wuling
+  - WulingGuild
+  specification_approved: true
+- id: sword-spirit
+  legacy_screen_id: UI_SWORD
+  name: 我的剑灵
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制个人剑灵权益页
+  entry_points:
+  - journey
+  primary_actions:
+  - 查看个人剑灵与选择称号
+  dependencies:
+  - journey
+  route: SwordSpirit
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 查看身份、归属、境界修为、称号、已解锁剑形、有效增益与来源
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未加入、未解锁、到期、其他房间范围、非本人权限
+  data_needs:
+  - SwordVm
+  - GiftEffectVm
+  rules:
+  - 观众无生命防御死亡栏；解锁剑形不增加观众人数
+  output:
+    brief: briefs/sword-spirit.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - SwordSpirit
+  - WulingRights
+  specification_approved: true
+- id: gift-rules
+  legacy_screen_id: UI_GIFT_RULES
+  name: 礼物效果说明
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制效果规则说明页
+  entry_points:
+  - sword-spirit
+  primary_actions:
+  - 查看效果说明
+  dependencies:
+  - sword-spirit
+  route: GiftRules
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 来源/对象/原期限/到期/叠加/当前模式；旧权益与候选规则分列
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 测试/正式、过期、暂不适用、断线未确认
+  data_needs:
+  - GiftEffectVm
+  rules:
+  - 送礼跳官方路径；说明点击不购买，不生成付费加概率入口
+  output:
+    brief: briefs/gift-rules.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - GiftRules
+  specification_approved: true
+- id: methods
+  legacy_screen_id: UI_METHODS
+  name: 功法构筑
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制功法构筑页
+  entry_points:
+  - journey
+  primary_actions:
+  - 确认准备期配置
+  dependencies:
+  - journey
+  route: CultivationMethods
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 七路线、1主修、当前辅修槽、锁定条件、主辅差异和草稿预览
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 事件中禁换并显示原因
+  - 不足材料跳世界来源
+  - 确认失败留旧配置
+  data_needs:
+  - MethodVm
+  rules:
+  - 第3/6级强化从规则表读取；不在UI推导另一倍率
+  output:
+    brief: briefs/methods.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - CultivationMethods
+  - CharacterSkills
+  - WulingEquipment|methods
+  specification_approved: true
+- id: race-lobby
+  legacy_screen_id: UI_RACE_LOBBY
+  name: 竞采匹配
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制匹配大厅
+  entry_points:
+  - resource-detail
+  primary_actions:
+  - 报名或取消
+  dependencies:
+  - resource-detail
+  route: RaceLobby
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 资源、人数档、2–4真实武灵、等待时间、统一规则和取消
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 60秒无对手转世界历练
+  - 取消与匹配成功竞态按服务结果
+  data_needs:
+  - RaceVm
+  - GuildVm
+  rules:
+  - 没有真实对手只留空位，不画假姓名或头像
+  output:
+    brief: briefs/race-lobby.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - RaceLobby
+  - WulingRace|lobby
+  specification_approved: true
+- id: race-live
+  legacy_screen_id: UI_RACE_LIVE
+  name: 竞采现场
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制竞采现场轻量HUD
+  entry_points:
+  - race-lobby
+  primary_actions:
+  - 响应当前阶段
+  dependencies:
+  - race-lobby
+  route: RaceLive
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 120秒准备/360秒挑战/120秒结算；600共同/200主播/200成员；最多10冻结代表
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未响应/有效响应/断线/阶段切换
+  - 礼物表现与计分分开
+  data_needs:
+  - RaceVm
+  rules:
+  - 中央保护角色；准确分母；直播观看者通过允许指令响应
+  output:
+    brief: briefs/race-live.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - RaceLive
+  - WulingRace|live
+  specification_approved: true
+- id: race-result
+  legacy_screen_id: UI_RACE_RESULT
+  name: 竞采结算
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制竞采结算
+  entry_points:
+  - race-live
+  primary_actions:
+  - 查看开采权或回世界
+  dependencies:
+  - race-live
+  route: RaceSettlement
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 总分与三项来源、600资格线、并列组、30/20/10分钟租期
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未达标原因、并列、对账中、租约已开始
+  data_needs:
+  - RaceVm
+  - RewardVm
+  rules:
+  - 第600秒租约自动开始；确认不延后计时
+  output:
+    brief: briefs/race-result.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - RaceSettlement
+  - WulingRace|result
+  specification_approved: true
+- id: lease
+  legacy_screen_id: UI_LEASE
+  name: 当前开采权
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制当前开采权
+  entry_points:
+  - race-result
+  primary_actions:
+  - 查看收益来源并回历练
+  dependencies:
+  - race-result
+  route: ResourceLease
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 服务器start/end、剩余时间、受益身份、在线积累、已入账和下一档
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 到期/断线暂停更新/无租约/跨房不适用
+  data_needs:
+  - LeaseVm
+  rules:
+  - 离线不自行计数；允许并列配额，不假装唯一控制者
+  output:
+    brief: briefs/lease.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - ResourceLease
+  - WulingRace|lease
+  specification_approved: true
+- id: world-result
+  legacy_screen_id: UI_ROUND_RESULT
+  name: 历练结算
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制历练结算
+  entry_points:
+  - world
+  primary_actions:
+  - 确认展示或再去历练
+  dependencies:
+  - world
+  route: EventSettlement
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 基础阶段、个人修为、个人贡献、公库、额外核心分别列归属和收据
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 中断保留已完成阶段
+  - 待对账/已到账/已展示
+  data_needs:
+  - RewardVm
+  rules:
+  - 确认只标已读，不能再次发奖励；满包转待入账收据
+  output:
+    brief: briefs/world-result.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - EventSettlement
+  specification_approved: true
+- id: offline
+  legacy_screen_id: UI_OFFLINE
+  name: 离线收益
+  category: system
+  priority: optional
+  status: specified
+  purpose: 重制离线收益页
+  entry_points:
+  - home
+  primary_actions:
+  - 确认已入账展示
+  dependencies:
+  - home
+  route: OfflineRewards
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: offline_cultivation
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 上次结算、本次有效时长、8小时上限、基础10%、修为结果、原收据
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - profile禁用/无收益/待对账/已入账
+  data_needs:
+  - RewardVm
+  rules:
+  - 不受灵脉礼物放大；确认不重复领取；仅获准profile显示
+  output:
+    brief: briefs/offline.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - OfflineRewards
+  - WulingOffline
+  specification_approved: true
+- id: shop
+  legacy_screen_id: UI_SHOP
+  name: 原型商店
+  category: system
+  priority: optional
+  status: specified
+  purpose: 重制原型商店
+  entry_points:
+  - home
+  primary_actions:
+  - 核对完整成本后制作或购买
+  dependencies:
+  - home
+  route: Shop
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: npc_shop
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - SKU、成本、绑定材料、产物、限购、唯一窗口、期限、数量与总价
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 低余额/售罄/旧价过期/事务中/feature禁用
+  data_needs:
+  - EconomyVm
+  - InventoryVm
+  rules:
+  - 仅prototype_full；发布候选入口隐藏且直达请求拒绝
+  output:
+    brief: briefs/shop.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Shop
+  - WulingShop
+  specification_approved: true
+- id: market
+  legacy_screen_id: UI_MARKET
+  name: 原型寄售
+  category: system
+  priority: optional
+  status: specified
+  purpose: 重制原型寄售
+  entry_points:
+  - home
+  primary_actions:
+  - 整单买入或挂牌
+  dependencies:
+  - home
+  route: Market
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: player_trade
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 白名单原料、单价区间、数量、税费、总价、到期、托管
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 旧价失效/订单已售/背包满/超白名单/禁用
+  data_needs:
+  - EconomyVm
+  - InventoryVm
+  rules:
+  - 完整费用二次确认；无服务不假扣币或假成交
+  output:
+    brief: briefs/market.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Market
+  - WulingMarket
+  specification_approved: true
+- id: orders
+  legacy_screen_id: UI_ORDERS
+  name: 我的订单
+  category: system
+  priority: optional
+  status: specified
+  purpose: 重制我的订单
+  entry_points:
+  - market
+  primary_actions:
+  - 撤单或查看应收
+  dependencies:
+  - market
+  route: TradeOrders
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: player_trade
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 挂牌/成交/取消/到期/应收；时间、数量、手续费与唯一收据
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 空订单/撤单竞态/应收待对账/禁用
+  data_needs:
+  - EconomyVm
+  rules:
+  - 按订单版本原子请求；不能因关闭重开发一次应收
+  output:
+    brief: briefs/orders.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - TradeOrders
+  - WulingOrders
+  specification_approved: true
+- id: world
+  legacy_screen_id: UI_WORLD
+  name: 世界历练
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制世界历练主页
+  entry_points:
+  - journey
+  primary_actions:
+  - 选择路线并开始历练
+  dependencies:
+  - journey
+  route: WorldCultivation
+  current_status: existing_live_qi_plus_preview_regions
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 首发三区与后续锁区、独行/小/中/大预设、路线、10分钟阶段、免费固定供给
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 准备/进行/30秒恢复/结算中/完成/中断
+  - 运行中锁预设
+  data_needs:
+  - WorldVm
+  - AnchorVm
+  rules:
+  - 非送礼补给入口可达；同一轮在武灵与世界共用round_id
+  output:
+    brief: briefs/world.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - WorldCultivation
+  specification_approved: true
+- id: region
+  legacy_screen_id: UI_REGION
+  name: 区域详情
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制区域详情
+  entry_points:
+  - world
+  primary_actions:
+  - 按条件进入历练
+  dependencies:
+  - world
+  route: RegionDetail
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 一幅等比区域山水、难度、阶段、固定奖励、开放条件与参与说明
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 境界锁定、事件互斥、未开放、奖励未同步
+  data_needs:
+  - WorldVm
+  rules:
+  - 锁定区域保留条件说明，不画虚假的开始按钮
+  output:
+    brief: briefs/region.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - RegionDetail
+  specification_approved: true
+- id: resources
+  legacy_screen_id: UI_RESOURCES
+  name: 资源争夺
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制五类资源选择
+  entry_points:
+  - journey
+  primary_actions:
+  - 查看资源并报名
+  dependencies:
+  - journey
+  route: ResourceContest
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 灵泉/灵石矿/灵草园/玄铁脉/残卷遗址；对象、产出、间隔、租期、当前开采权
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未开放、已有租约、正式成员不足、网络断开
+  data_needs:
+  - LeaseVm
+  - RaceVm
+  rules:
+  - 资源是临时配额；不渲染为永久独占矿点
+  output:
+    brief: briefs/resources.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - ResourceContest
+  specification_approved: true
+- id: resource-detail
+  legacy_screen_id: UI_RESOURCE_DETAIL
+  name: 资源详情
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制资源规则和报名说明
+  entry_points:
+  - resources
+  primary_actions:
+  - 进入竞采匹配
+  dependencies:
+  - resources
+  route: ResourceDetail
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 收益对象、单位产出、统一竞采规则、人数档、资格
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 正式成员不足、活跃租约、profile关闭
+  data_needs:
+  - LeaseVm
+  - RaceVm
+  rules:
+  - 说明世界历练替代路线；不把礼物额作为分数
+  output:
+    brief: briefs/resource-detail.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - ResourceDetail
+  specification_approved: true
+- id: sign-in
+  legacy_screen_id: UI_SIGN
+  name: 签到组及日签到
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制签到组及七日页
+  entry_points:
+  - home
+  primary_actions:
+  - 查看奖励并签到
+  dependencies:
+  - home
+  route: SignIn
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_session_numeric
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 七日宝箱、今日详情、累计轨道、已签形态、固定CTA；月历和每日剑诀二级页
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 可签/请求中/已签/跨日
+  - 宝箱先详情后领取
+  - 未达和断线可看明细
+  data_needs:
+  - ActivityVm
+  rules:
+  - 沿用现有服务账本；每日300修为依当前规则，动画不触发发奖
+  output:
+    brief: briefs/sign-in.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - SignIn
+  specification_approved: true
+- id: monthly-sign-in
+  legacy_screen_id: UI_MONTH
+  name: 月签到
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制月签日历
+  entry_points:
+  - sign-in
+  primary_actions:
+  - 选日或查看累计奖励
+  dependencies:
+  - sign-in
+  route: MonthlySignIn
+  current_status: existing_preview_old_7_14_21_28
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: cross_session_numeric
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 服务器月份、七列日历、今天/已签/未到、3/7/14/21累计宝箱和数量
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 跨月、月末、节点未达/可领/已领、断线
+  - 节点后轨道与箱中心对齐
+  data_needs:
+  - ActivityVm
+  rules:
+  - 不能沿用参考图/旧稿7/14/21/28；复用现有已领取账本
+  output:
+    brief: briefs/monthly-sign-in.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - MonthlySignIn
+  specification_approved: true
+- id: daily-verse
+  legacy_screen_id: UI_VERSE
+  name: 每日剑诀
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制每日剑诀
+  entry_points:
+  - sign-in
+  primary_actions:
+  - 查看剑诀并去行动
+  dependencies:
+  - sign-in
+  route: DailyFortune
+  current_status: existing_demo_text
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 卷轴诗签、固定轮换剑诀与行动提示、对应免费玩法入口
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 已读/未读、固定轮换未知、无网络
+  data_needs:
+  - ActivityVm
+  rules:
+  - 不做随机吉凶、改签付费；不展示抽奖入口
+  output:
+    brief: briefs/daily-verse.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - DailyFortune
+  specification_approved: true
+- id: activities
+  legacy_screen_id: UI_ACTIVITIES
+  name: 活动组
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制活动总入口
+  entry_points:
+  - home
+  primary_actions:
+  - 选择活动
+  dependencies:
+  - home
+  route: Activities
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 日常/限时/开服；首屏一个主题头图、目标卡、实际时间和状态
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 空活动、未开、进行、已结束、可领取、feature关闭
+  data_needs:
+  - ActivityVm
+  - LaunchVm
+  rules:
+  - 不用两张大海报撑空白；红点仅真实未读/可领
+  output:
+    brief: briefs/activities.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Activities
+  specification_approved: true
+- id: daily-activities
+  legacy_screen_id: UI_DAILY
+  name: 日常活动
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制日常活动列表
+  entry_points:
+  - activities
+  primary_actions:
+  - 前往或查看奖励
+  dependencies:
+  - activities
+  route: DailyActivities
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 实际目标、当前/需求、预算、固定奖励、前往和已领取
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未解锁/进行/达成/待对账/已领/周期切换
+  data_needs:
+  - ActivityVm
+  rules:
+  - 不能以页面打开产生进度；领取沿用原request_id
+  output:
+    brief: briefs/daily-activities.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - DailyActivities
+  specification_approved: true
+- id: timed-activities
+  legacy_screen_id: UI_LIMITED
+  name: 限时活动
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制限时活动列表
+  entry_points:
+  - activities
+  primary_actions:
+  - 查看限时活动
+  dependencies:
+  - activities
+  route: TimedActivities
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 等比主题卡、start/end与Asia/Hong_Kong时区、免费参与与期限
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未开始/进行/已结束/数据未知
+  data_needs:
+  - ActivityVm
+  rules:
+  - 没有服务起止时间就显示待同步，不生成倒计时
+  output:
+    brief: briefs/timed-activities.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - TimedActivities
+  specification_approved: true
+- id: daily-detail
+  legacy_screen_id: UI_ACTIVITY_DETAIL
+  name: 日常详情
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制日常详情
+  entry_points:
+  - daily-activities
+  primary_actions:
+  - 参与允许活动
+  dependencies:
+  - daily-activities
+  route: DailyActivityDetail
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 主题头图、条件、任务、奖励归属、预算、主操作
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 预算耗尽/条件不足/已完成/断线
+  data_needs:
+  - ActivityVm
+  - RewardVm
+  rules:
+  - 标明是否替换基础预算；不足给来源入口
+  output:
+    brief: briefs/daily-detail.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - DailyActivityDetail
+  specification_approved: true
+- id: timed-detail
+  legacy_screen_id: UI_TIMED_DETAIL
+  name: 限时详情
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制限时详情
+  entry_points:
+  - timed-activities
+  primary_actions:
+  - 参与或确认结果
+  dependencies:
+  - timed-activities
+  route: TimedActivityDetail
+  current_status: existing_preview
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: base
+  source_phase: UI-P3
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 剩余时间、真实规则、固定产出、截止、有效期与入口
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未开/过期/满包/处理中/活动版本变化
+  data_needs:
+  - ActivityVm
+  - RewardVm
+  rules:
+  - 不新增随机抽奖或未规划付费档位
+  output:
+    brief: briefs/timed-detail.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - TimedActivityDetail
+  specification_approved: true
+- id: launch
+  legacy_screen_id: UI_LAUNCH
+  name: 青云初启开服活动
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制青云初启
+  entry_points:
+  - activities
+  primary_actions:
+  - 查看目标或确认展示
+  dependencies:
+  - activities
+  route: LaunchEvent
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: launch_activity
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 总览/个人任务/武灵目标/规则四内栏、本人报名、七任务、1/3/6/12轮次、称号到期
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未报名/进行/达成/自动入账/过期/profile禁用
+  data_needs:
+  - LaunchVm
+  - RewardVm
+  rules:
+  - 四内栏不重复压路由；发布候选隐藏并拒绝直达
+  output:
+    brief: briefs/launch.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - LaunchEvent
+  - WulingActivity|launch
+  specification_approved: true
+- id: launch-rank
+  legacy_screen_id: UI_LAUNCH_RANK
+  name: 开服玩法贡献榜
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制开服贡献榜
+  entry_points:
+  - launch
+  primary_actions:
+  - 查看贡献明细
+  dependencies:
+  - launch
+  route: LaunchRank
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: launch_activity
+  source_phase: UI-P1
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 免费贡献四来源、轮数、资格、并列名次和荣誉
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未达资格/并列/周期结算/未上榜/禁用
+  data_needs:
+  - LaunchVm
+  rules:
+  - 不展示消费排名或已关闭的修为奖励
+  output:
+    brief: briefs/launch-rank.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - LaunchRank
+  specification_approved: true
+- id: breakthrough
+  legacy_screen_id: UI_BREAK_PREPARE
+  name: 突破准备
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制突破准备
+  entry_points:
+  - character
+  primary_actions:
+  - 核对成本后确认突破
+  dependencies:
+  - character
+  route: BreakthroughPrepare
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: item_extension
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 四类材料实例槽、数量/替换、Q评分来源、确定品质、失败扣修与保底规则
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 不足材料跳来源
+  - 准备取消
+  - 与其他事件互斥
+  - 预留过期
+  data_needs:
+  - BreakthroughVm
+  - InventoryVm
+  rules:
+  - 确定Q与天劫成功率分开展示；v1.4覆盖旧突破成本语义
+  output:
+    brief: briefs/breakthrough.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - BreakthroughPrepare
+  - WulingBreakthrough
+  specification_approved: true
+- id: tribulation
+  legacy_screen_id: UI_TRIBULATION
+  name: 天劫助力
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制渡劫现场
+  entry_points:
+  - breakthrough
+  primary_actions:
+  - 观众发送助力；主播查看结果
+  dependencies:
+  - breakthrough
+  route: Tribulation
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: item_extension
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 15秒准备、60秒三重天劫、8秒揭示；不同助力人数、基础/助力/保底/最终概率
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 准备/天劫/冻结/提交/对账/成功/失败/清理
+  - 已助力和截止可见
+  data_needs:
+  - TribulationVm
+  rules:
+  - 50%基础+每唯一助力1百分点(最多50)+每失败10百分点(最多50)，封顶100%；失败扣1500修为保留材料和境界
+  output:
+    brief: briefs/tribulation.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - Tribulation
+  - WulingBreakthrough|trial
+  specification_approved: true
+- id: item-sources
+  legacy_screen_id: UI_ITEM_SOURCES
+  name: 物品来源
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制物品来源追踪
+  entry_points:
+  - inventory
+  primary_actions:
+  - 选择免费来源并前往
+  dependencies:
+  - inventory
+  route: ItemSources
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: item_extension
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 材料分型品质、具体区域/副本、专注进度、配方与共享额度
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 未知物品/区域锁定/额度耗尽/可制作/版本变更
+  data_needs:
+  - ItemSourceVm
+  rules:
+  - 来源沿v1.4表；不得导入旧表叠加奖励；回背包保留选中项
+  output:
+    brief: briefs/item-sources.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - ItemSources
+  - WulingSources
+  specification_approved: true
+- id: guild-build
+  legacy_screen_id: UI_GUILD_BUILD
+  name: 武灵建设
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制武灵建设
+  entry_points:
+  - wuling
+  primary_actions:
+  - 预览并原子提交建设
+  dependencies:
+  - wuling
+  route: GuildConstruction
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: item_extension
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 公库余额、建设项目、材料、级别、成本、外显预览、版本与记录
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 权限不足/材料不足/提交中/版本冲突/已完成
+  data_needs:
+  - GuildBuildVm
+  rules:
+  - 个人与公库分开；v1.4建设表覆盖旧100资材示意，不生造永久倍率
+  output:
+    brief: briefs/guild-build.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - GuildConstruction
+  - WulingConstruction
+  specification_approved: true
+- id: equipment
+  legacy_screen_id: UI_EQUIPMENT
+  name: 装备与法宝
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制装备法宝子页
+  entry_points:
+  - character
+  primary_actions:
+  - 在准备期确认配置
+  dependencies:
+  - character
+  route: EquipmentFabao
+  current_status: new_planned
+  route_verification: planning-csv; inspect runtime alias before integration
+  delivery: redesign-planned
+  profile_gate: item_extension
+  source_phase: UI-P2
+  layout:
+    top:
+    - 标题、返回、作用对象与真实状态
+    center:
+    - 主播四个非武器装备槽和一个法宝槽、属性上限、归属、替换前后
+    bottom:
+    - 固定主操作与禁用理由
+    floating:
+    - 必要详情与确认；装饰不接收点击
+  responsive:
+    portrait: 720×1280单列列表→详情，标题与CTA固定，中段独立滚动
+    landscape: 1280×720列表+详情；常规页右侧抽屉，密集页居中宽页
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 带理由按钮
+  - 状态条
+  - 按业务选择奖励/成员/来源块
+  states: *id001
+  edge_cases:
+  - 安全准备期/事件冻结/锁定/冷却/绑定/过期
+  data_needs:
+  - EquipmentVm
+  - InventoryVm
+  rules:
+  - 不重画被保留角色页；切装不重置法宝冷却
+  output:
+    brief: briefs/equipment.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+    reason: 用户仅指定保留范围，未批准本轮新视觉
+  current_route_aliases:
+  - EquipmentFabao
+  - CharacterEquipment
+  - CharacterArtifacts
+  - WulingEquipment
+  specification_approved: true
+- id: journey
+  name: 仙途菜单
+  category: core
+  priority: must-have
+  status: specified
+  purpose: 重制系统总入口且保持现有导航位置
+  entry_points:
+  - home
+  primary_actions:
+  - 进入世界、武灵或资源系统
+  dependencies:
+  - home
+  route: Extensions
+  current_status: source-present; InkFeaturePanels.cpp lists six routes
+  delivery: redesign-planned
+  profile_gate: base
+  layout:
+    top:
+    - 仙途标题与返回
+    center:
+    - 世界历练/武灵/我的剑灵/功法/资源五组入口，按能力隐藏；保留现有签到活动角色捷径
+    bottom:
+    - 返回HUD
+    floating: []
+  responsive:
+    portrait: 高频入口上置，纵向滚动
+    landscape: 两列入口与主题山水，真实文字独立
+  components: []
+  component_planning:
+  - 软边入口卡
+  - 状态条
+  states: *id001
+  edge_cases:
+  - 开关关闭不显示可用入口
+  - 世界事件进行中展示当前状态
+  data_needs:
+  - WorldVm
+  - GuildVm
+  rules:
+  - 不在HUD新增第二排入口
+  output:
+    brief: briefs/journey.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+  current_route_aliases:
+  - Extensions
+  specification_approved: true
+- id: craft
+  name: 物品炼制
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制物品炼制
+  entry_points:
+  - inventory
+  primary_actions:
+  - 查看条件后确认允许动作
+  dependencies:
+  - inventory
+  route: WulingCraft
+  current_status: source-present-not-runtime-tested-this-run
+  delivery: redesign-planned
+  profile_gate: item_extension
+  layout:
+    top:
+    - 标题、返回与当前身份
+    center:
+    - 配方、材料分型与品质、共享额度、产物、缺口与来源；完整成本确认后原子制作
+    bottom:
+    - 固定主操作与禁用原因
+    floating:
+    - 详情与必要确认
+  responsive:
+    portrait: 单列内容滚动，主操作固定
+    landscape: 列表与详情双栏
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 状态条
+  - 带理由按钮
+  states: *id001
+  edge_cases:
+  - 缺料、额度耗尽、版本冲突、满包待入账、重复提交
+  data_needs:
+  - RecipeVm
+  - InventoryVm
+  rules:
+  - 当前接口能力优先，不画假成功；不覆盖保留页
+  output:
+    brief: briefs/craft.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+  current_route_aliases:
+  - WulingCraft
+  specification_approved: true
+- id: appearance
+  name: 名片外观
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制名片外观
+  entry_points:
+  - character
+  primary_actions:
+  - 查看条件后确认允许动作
+  dependencies:
+  - character
+  route: CharacterAppearance
+  current_status: source-present-not-runtime-tested-this-run
+  delivery: redesign-planned
+  profile_gate: base
+  layout:
+    top:
+    - 标题、返回与当前身份
+    center:
+    - 已获头像框与称号、等比试戴、来源、期限和应用；未获只预览
+    bottom:
+    - 固定主操作与禁用原因
+    floating:
+    - 详情与必要确认
+  responsive:
+    portrait: 单列内容滚动，主操作固定
+    landscape: 列表与详情双栏
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 状态条
+  - 带理由按钮
+  states: *id001
+  edge_cases:
+  - 未解锁、过期、当前规则不适用；不得试戴即取得权益
+  data_needs:
+  - AppearanceVm
+  - GiftEffectVm
+  rules:
+  - 当前接口能力优先，不画假成功；不覆盖保留页
+  output:
+    brief: briefs/appearance.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+  current_route_aliases:
+  - CharacterAppearance
+  specification_approved: true
+- id: resource-rank
+  name: 资源贡献榜
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制资源贡献榜
+  entry_points:
+  - resources
+  primary_actions:
+  - 查看条件后确认允许动作
+  dependencies:
+  - resources
+  route: ResourceRanking
+  current_status: source-present-not-runtime-tested-this-run
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  layout:
+    top:
+    - 标题、返回与当前身份
+    center:
+    - 周期、规则、三类分数、并列与自己位置；与竞采结算同一数据
+    bottom:
+    - 固定主操作与禁用原因
+    floating:
+    - 详情与必要确认
+  responsive:
+    portrait: 单列内容滚动，主操作固定
+    landscape: 列表与详情双栏
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 状态条
+  - 带理由按钮
+  states: *id001
+  edge_cases:
+  - 旧周期、对账中、未上榜、feature关闭
+  data_needs:
+  - RaceVm
+  rules:
+  - 当前接口能力优先，不画假成功；不覆盖保留页
+  output:
+    brief: briefs/resource-rank.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+  current_route_aliases:
+  - ResourceRanking
+  specification_approved: true
+- id: resource-rewards
+  name: 资源奖励明细
+  category: system
+  priority: must-have
+  status: specified
+  purpose: 重制资源奖励明细
+  entry_points:
+  - resource-detail
+  primary_actions:
+  - 查看条件后确认允许动作
+  dependencies:
+  - resource-detail
+  route: ResourceRewards
+  current_status: source-present-not-runtime-tested-this-run
+  delivery: redesign-planned
+  profile_gate: cross_host_race
+  layout:
+    top:
+    - 标题、返回与当前身份
+    center:
+    - 租期、实际受益、在线积累、收据与来源明细；确认只已读
+    bottom:
+    - 固定主操作与禁用原因
+    floating:
+    - 详情与必要确认
+  responsive:
+    portrait: 单列内容滚动，主操作固定
+    landscape: 列表与详情双栏
+  components: []
+  component_planning:
+  - 功能页外壳
+  - 状态条
+  - 带理由按钮
+  states: *id001
+  edge_cases:
+  - 无租约、过期、断线、未达资格
+  data_needs:
+  - LeaseVm
+  - RewardVm
+  rules:
+  - 当前接口能力优先，不画假成功；不覆盖保留页
+  output:
+    brief: briefs/resource-rewards.md
+    prompt: ''
+    image: ''
+  approval:
+    approved: false
+  current_route_aliases:
+  - ResourceRewards
+  specification_approved: true
+scope_approval:
+  date: '2026-10-22'
+  timezone: Asia/Hong_Kong
+  source: direct-user-message
+  quote: 批准首页v2及规范和屏幕地图，开始拆解首页组件
+  approved:
+  - home-v2
+  - style-contract
+  - screen-map
+  - supporting-ui-planning-documentation
+  authorized_next_stage: home-component-breakdown
+  new_component_assets_approved: false
+  runtime_changes_authorized: false

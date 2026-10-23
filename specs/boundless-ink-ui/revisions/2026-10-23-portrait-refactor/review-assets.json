@@ -1,0 +1,30 @@
+{
+  "assets": [
+    {
+      "path": "home-v3-exploration.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "sha256": "ae083c8884051d869430f3bf7cf23466c8f3177b04c88a3302ae0bfb23c5dccb",
+      "approved": false,
+      "status": "exploration-environment-drift",
+      "source_tool": "built-in-image_gen",
+      "runtime_screenshot": false
+    },
+    {
+      "path": "home-v4-review.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "sha256": "f31effbda60f85c45622c525f32d4fa84507c40846baa1bb1ddefaf0e7937eeb",
+      "approved": false,
+      "status": "review-only",
+      "source_tool": "built-in-image_gen",
+      "runtime_screenshot": false
+    }
+  ]
+}

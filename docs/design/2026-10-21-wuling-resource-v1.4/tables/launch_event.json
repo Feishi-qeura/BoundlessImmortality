@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "activity_id": "ACT_QINGYUN_LAUNCH",
+  "launch_version": "qingyun_launch_v1",
+  "display_name": "青云初启",
+  "timezone": "Asia/Hong_Kong",
+  "start_mode": "server_relative_once_per_anchor",
+  "duration_seconds": 604800,
+  "activity_day_seconds": 86400,
+  "settlement_grace_seconds": 60,
+  "complete_round_seconds": 600,
+  "minimum_formal_members_for_guild_round": 1,
+  "task_qi_total": 780,
+  "score": {
+    "stage_points": [
+      2,
+      3,
+      5
+    ],
+    "correct_response_points": 3,
+    "correct_responses_per_round_cap": 2,
+    "route_vote_points": 2,
+    "free_participation_points": 2,
+    "scored_rounds_per_activity_day": 6,
+    "max_per_round": 20,
+    "max_per_day": 120,
+    "max_seven_days": 840,
+    "rank_min_points": 30,
+    "rank_min_complete_rounds": 2,
+    "tie_policy": "competition_rank_same_score_same_rank",
+    "gift_value_weight": 0,
+    "gift_count_weight": 0,
+    "damage_weight": 0,
+    "realm_weight": 0,
+    "exchangeable": false,
+    "day_bucket_basis": "round_start_utc",
+    "round_selection": "first_six_with_personal_fact_ordered_by_start_then_id"
+  },
+  "title": {
+    "title_id": "QingyunFeiyan",
+    "item_id": "COS_QINGYUN_FEIYAN",
+    "name": "青云踏飞雁",
+    "owner_type": "viewer",
+    "requires_tasks": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07"
+    ],
+    "requires_gift": false,
+    "requires_rank": false,
+    "has_numeric_bonus": false,
+    "max_duration_seconds": 2592000,
+    "expiry_policy": "min_grant_plus_duration_and_entitlement_window_end",
+    "tradeable": false
+  },
+  "guild_reward_budget": {
+    "CUR_STONE": 200,
+    "MAT_BREAK": 60
+  },
+  "final_guild_buff": {
+    "required_complete_rounds": 12,
+    "duration_seconds": 1200,
+    "cultivation_additive": 0.1,
+    "spirit_damage_additive": 0.1,
+    "anchor_defense_additive": 0.1,
+    "stack_rule": "highest_event_source_only",
+    "offline_effect": false,
+    "race_scoring_effect": false,
+    "claim_restarts_timer": false
+  },
+  "numeric_rank_candidates": {
+    "enabled": false,
+    "first_five": [
+      4800,
+      3480,
+      2520,
+      1800,
+      1260
+    ],
+    "tail_rank_start": 6,
+    "tail_rank_end": 30,
+    "tail_start_qi": 500,
+    "tail_end_qi": 150,
+    "rounding": "ROUND_HALF_UP",
+    "requires_separate_product_and_platform_decision": true
+  },
+  "profiles": {
+    "prototype_full": {
+      "activity_enabled": true,
+      "task_numeric_rewards": true,
+      "guild_numeric_rewards": true,
+      "guild_numeric_buff": true,
+      "title_reward": true,
+      "rank_numeric_rewards": false,
+      "real_payment_allowed": false
+    },
+    "douyin_release_candidate": {
+      "activity_enabled": false,
+      "task_numeric_rewards": false,
+      "guild_numeric_rewards": false,
+      "guild_numeric_buff": false,
+      "title_reward": false,
+      "rank_numeric_rewards": false,
+      "real_payment_allowed": false
+    }
+  },
+  "world_preset": {
+    "id": "WORLD_QINGYUN_LAUNCH",
+    "reuse_world_mechanics": true,
+    "prepare_seconds": 60,
+    "stage_seconds": [
+      160,
+      160,
+      160
+    ],
+    "settlement_seconds": 60,
+    "guard_opportunities": 2,
+    "break_opportunities": 2,
+    "free_route_vote": true
+  }
+}

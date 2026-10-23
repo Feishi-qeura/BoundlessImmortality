@@ -1,0 +1,29 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "key": "SwordHeader",
+      "prompt": "Production 2D xianxia UI title banner, exactly one complete low horizontal banner on transparent background, width:height 5.5:1. Refined hand-painted shuimo mountains and pale jade mist on warm xuan paper, fine antique gold border, restrained paired ancient swords and cloud motifs at left/right ends. CENTERED exact large Chinese calligraphy text: 剑灵排行 . This exact title is the only text. Lettering takes central half, dark ink with restrained gold accents. Symmetric balanced margins, flat front view, clean complete edges, no extra cards, no shadow, transparent outside banner."
+    },
+    {
+      "key": "SpeedHeader",
+      "prompt": "Production 2D xianxia UI title banner, exactly one complete low horizontal banner on transparent background, width:height 5.5:1. Hand-painted Chinese shuimo paper, celadon and turquoise flowing spiritual mist, delicate bamboo leaves and auspicious cloud ribbons at left/right ends, fine jade-gold border. CENTERED exact large Chinese calligraphy text: 修炼速度榜 . This exact title is the only text. Dark teal ink lettering with subtle gold edge, central half quiet and readable. Symmetric balanced margins, flat front view, complete edges, no extra cards, no shadow, transparent outside."
+    },
+    {
+      "key": "DamageHeader",
+      "prompt": "Production 2D xianxia UI title banner, exactly one complete low horizontal banner on transparent background, width:height 5.5:1. Hand-painted Chinese shuimo on warm stone-gray xuan paper, vermilion ink lightning and black sword-cut brushwork at left/right ends, fine dark antique-gold border. CENTERED exact large Chinese calligraphy text: 伤害排行榜 . This exact title is the only text. Bold dark ink lettering with restrained red-gold accents, central half quiet and readable. Symmetric balanced margins, flat front view, complete edges, no extra cards, no shadow, transparent outside."
+    },
+    {
+      "key": "SwordRows",
+      "prompt": "Production sprite atlas for xianxia game ranking rows. EXACTLY TEN horizontal EMPTY row panels stacked vertically, single column, ten equally spaced cells, each cell same width and height. Portrait canvas 1024x2048, 10 rows each 1024x204. Every panel has 5% side safe padding and transparent gaps. Each individual row is a low wide rectangular frame, width:height about 6.5:1, flat front view. NO TEXT, NO NUMBERS, NO ICON SLOTS, NO GRID, no headings. Center 75% quiet pale warm xuan paper for live black Chinese names. Fine jade-gold borders, hand-painted shuimo clouds and SWORD filigree only near outer edge. TOP row is rank TEN: subtle silver-jade outline. Each subsequent row down becomes visibly more distinguished: progressively finer gold filigree, small sword ornaments, jade cloud curls, bronze wings, silver dragon accents. BOTTOM row is rank ONE: magnificent yet refined gold dragon/sword corners, warm gold metal, celestial gold crest, strongest premium decoration. Exactly ten whole individual panels increasing in prestige from top to bottom, consistent rectangles, absolutely no overlapping or crop, transparent outside each panel."
+    },
+    {
+      "key": "SpeedRows",
+      "prompt": "Production sprite atlas for xianxia game ranking rows. EXACTLY TEN horizontal EMPTY row panels stacked vertically, single column, ten equally spaced cells, each same width/height. Portrait canvas 1024x2048, 10 rows each1024x204. Every panel has 5% side safe padding and transparent gaps. Individual panel width:height about6.5:1, flat front view. NO TEXT, NO NUMBERS, NO ICON SLOTS, NO GRID or headings. Center75% quiet pale celadon xuan paper for live black Chinese names. JADE/TURQUOISE cultivation theme: bamboo, airy auspicious clouds, delicate spiritual ribbons along edges. TOP rankTEN has subtle silver-green outline. Each next row down noticeably increases prestige: refined jade filigree, turquoise clouds, gold veins, silver cranes, green jade phoenix wings. BOTTOM rankONE: magnificent refined celestial jade phoenix and gold cloud corners, premium elegant ornament. Exactly ten full nonoverlapping row frames, increasing prestige from top to bottom. Transparent outside panels."
+    },
+    {
+      "key": "DamageRows",
+      "prompt": "Production sprite atlas for xianxia game ranking rows. EXACTLY TEN horizontal EMPTY row panels stacked vertically, single column, ten equally spaced cells same width/height. Portrait canvas1024x2048,10 rows each1024x204. Panels each5%side safe padding and transparent gaps. Individual panel width:height about6.5:1, flat front view. NO TEXT, NO NUMBERS, NO ICON SLOTS, NO GRID or headings. Center75%quiet pale stone-gray xuan paper for live black Chinese names. VERMILION/BLACK damage theme: sword-cut ink strokes, scarlet lightning, dark bronze-gold metallic corners. TOP rankTEN subtle silver-red outline. Each next row down visibly increases prestige: red ink curls, bronze sword fragments, gold lightning veins, dragon scales, crimson-gold phoenix flames confined to border. BOTTOM rankONE magnificent gold battle dragon and crimson lightning corners, premium restrained power. Exactly ten complete nonoverlapping frames increasing prestige top to bottom. Transparent outside panels."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "user_handoff": "上一聊天已经查看 narrow Fit v4 并报告通过，但审核结论尚未落盘，新ZIP尚未生成。",
+  "corroborating_chat": {
+    "thread_id": "01a16246-883b-7211-b3a5-78c3bf0c8698",
+    "message_id": "msg_05dcf86a5374ae76016ada0ad82b38819bae734b4c3fa7a311",
+    "timestamp_utc": "2026-10-22T13:08:42.299Z",
+    "excerpt": "原聊天已口头报告最后一张 v4 图通过，但磁盘上的审核状态仍是“待审”，新 ZIP 也尚未生成。",
+    "local_rollout": "rollout-2026-10-22T14-22-31-01a16246-883b-7211-b3a5-78c3bf0c8698.jsonl",
+    "line": 252
+  },
+  "evidence_kind": "User-provided handoff corroborated by saved chat report; original detailed v4 inspection record was not recovered.",
+  "current_turn_checks": [
+    "preview SHA256 matches v4 plan and generation checks",
+    "exact deterministic RGBA Fit reconstruction",
+    "six carried accepted-image hashes match saved reviews"
+  ],
+  "preview_path": "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png",
+  "preview_sha256": "596683dd1d232a4d7c93674ba3d00ae4eb91a2fd86057b7b8de2b800ab5f461e",
+  "current_turn_images_reopened": 0,
+  "limitation": "No new visual observations are claimed. Prior reported visual pass is reused within offline preview scope; user approval and runtime remain unverified."
+}

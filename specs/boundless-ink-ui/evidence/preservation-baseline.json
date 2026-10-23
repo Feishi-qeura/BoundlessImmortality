@@ -1,0 +1,3352 @@
+[
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+    "size": 20805,
+    "sha256": "39aa2443a7d191cc84e175ffe1e87c7958c2420f2f9a88a0b4ca62a8b850fab9"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.h",
+    "size": 7553,
+    "sha256": "f828d9a238434c2c4299f4ec9c23c84ccd1ee013fcf2c8ffb74371d84c717370"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+    "size": 4167,
+    "sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkAttributeRating.h",
+    "size": 1687,
+    "sha256": "b7539a8185eebabcc73c4609bbe0e2ff523ddbea4a21ae984ef515c4af94abcf"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkBufferedProgressWidget.cpp",
+    "size": 1773,
+    "sha256": "8ee95cd3ff670195f0b2a7e39dae813f85362af28f7d4dc28ef7735dca9f41e4"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkBufferedProgressWidget.h",
+    "size": 1233,
+    "sha256": "8d7dc77672df94f774c9a4bae8b9ba9d386e172d09e23b6c37e867d3d4e9dcff"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+    "size": 8945,
+    "sha256": "5d3985b9f3a9bca085eb2a52c3430ca8d359046d808481b4d73898e79f5d390f"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.h",
+    "size": 3427,
+    "sha256": "32fd832e3818d05c13eb0a4b27f935a20e8e987a57b1f37f2aef2f2acc2ec420"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+    "size": 25645,
+    "sha256": "57bd643d903b31ddc87f98901de6c2cf73f6391afc6cd6b4f5fac3c32d0cf587"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkDamageFeedbackComponent.cpp",
+    "size": 3634,
+    "sha256": "0ed534a08b1d20f33a2787774347e54490c0989d2a0329ce2a543c3edd4b350c"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkDamageFeedbackComponent.h",
+    "size": 2343,
+    "sha256": "16803dbd80ac7f8cc4b166f8d5af36eed745be69f3c3c4a08407f679045e609e"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkDrawPanel.cpp",
+    "size": 5010,
+    "sha256": "ad2ce107c24615b6a400d889ef5e940fee6bde8df5202dac086e550115122174"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+    "size": 31078,
+    "sha256": "f923e9b6190b37929c7ed06fbc1a054ad4d4d8849debace3193d277ef5a89da9"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.h",
+    "size": 2458,
+    "sha256": "168691dc8963df42f1ee2e141b2ac5969f61b19aa483e9a27617355722968df2"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+    "size": 4914,
+    "sha256": "554795caca110e9e13f6481d704ce80c6d0a38fe7639bfe9cbd80eb49b852e89"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+    "size": 19936,
+    "sha256": "0071190b6fb6a628505459f9a22a310d01f33dba1f347d195beb16eae7141e40"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+    "size": 14194,
+    "sha256": "5c86def880d2253ef1d275e67fcef9b6db57fe4ecb3de03c8f2bdfc37e17d896"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+    "size": 12576,
+    "sha256": "f546e1133e6367bb98f7754545836d575d7c7aa843e047e9be2654f7440996a8"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+    "size": 3465,
+    "sha256": "fdc1959fbf616e3bc2ad7722b94aa681da210f75ec093669a6f9f1f6bcbb7e3d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFrontendTypes.h",
+    "size": 4614,
+    "sha256": "28ba4e357f7f05e73ad0f0164414a4632f2f5c0776635d13197bab6f0279a8c6"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+    "size": 78273,
+    "sha256": "5a5d68c1f2e7f6ff3cf37d2b9fc8924fb0e68d885250e2e31eed52d517d7df90"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+    "size": 16959,
+    "sha256": "ee88d6b7636405b903510b0e02b783d24e9ec89fcda3cdabf546f21c12329327"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+    "size": 15007,
+    "sha256": "852189c516d61375ca2a3c1e0efda52bb808518227c63f79f146b4fb5e9f866b"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkGameplayEncounters.cpp",
+    "size": 4664,
+    "sha256": "6706b01e34ffe45b4e7fddfad4e2a7b1ad302bcc0dfec6190a2a9774f7343a80"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+    "size": 9491,
+    "sha256": "00ddc494446f222b4a9847918e1d45a5c20e5c5415be5d7a6292c398159451a0"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkInventoryModel.cpp",
+    "size": 8662,
+    "sha256": "ebffb5db0d0a52f31507f89ca01b2eb5173fc35f7479ece4909cf962ce332fde"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkInventoryModel.h",
+    "size": 4876,
+    "sha256": "e2c7f6d0956b0fdeb72d54976ee0abc08024b39a6b61277836793f8f0e1c8bc0"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkInventoryScrollBar.cpp",
+    "size": 1063,
+    "sha256": "a4b1fadd84e69b2a0acf90bd803f87a36cc56fc2633a171fb5a294a8b8f1b9ac"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkInventoryScrollBar.h",
+    "size": 848,
+    "sha256": "e8e8f6d8678f8de8df286a37c6ae64f612913fd2e6a7a8d1a2c90715acd5538d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+    "size": 44889,
+    "sha256": "7da57fc204d05182cd95511da51e767ba6c67dbabe3a87cf15ffc9c6931d6e9c"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardAvatarRequest.cpp",
+    "size": 1039,
+    "sha256": "2fe257aaba3bddba62a5766f117c5a356e8725dca0b955c8acef989374f60d05"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardAvatarRequest.h",
+    "size": 812,
+    "sha256": "f57a6e6e2f94d36bb42a73500d18008de730dde0eb49d503e6ae6d8f302c3481"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardPresentation.h",
+    "size": 6678,
+    "sha256": "9dbe31109193af74492a21bf13cd196e489ee09365f1c330cf0f86ba3e26d162"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardTheme.cpp",
+    "size": 2797,
+    "sha256": "bdbc920492f405a9f8443aa865f70e74d00b870a6c38f8bd5592813e963792fd"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardTheme.h",
+    "size": 360,
+    "sha256": "42b0c81b54520d85a232d7016b0024f0b52fdd9d4ec3eea1b96bbc85f7bcd706"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+    "size": 44563,
+    "sha256": "38dc04507f5febe780cb690fa5fba404fb4f33baa4ae42e4fdd3bf3b23d0b169"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+    "size": 21674,
+    "sha256": "09bb38797156eef6115df13f1ea91f09a182f3a60faded4e436755f209ffcd59"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.h",
+    "size": 10279,
+    "sha256": "7ace184bf72dbe86819e2c41b2d94ee4a8b7297a6b83a319214d23bf164099b6"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.cpp",
+    "size": 16189,
+    "sha256": "398ec3400fd548dbdafb5ad51ffaba960f8af165c1c104bf52609c084a1689c5"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.h",
+    "size": 5293,
+    "sha256": "2cf7fdaf7bee80fd1857a4bfe0b5ce31c22d8fb0b6e4dafc030ef67e09a160ba"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkPawnSafety.cpp",
+    "size": 2793,
+    "sha256": "cc17ec55bc24b3dd5e7b2602ff35f9a58edd46979e91312bc69fae995f9b5603"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkPawnSafety.h",
+    "size": 471,
+    "sha256": "eaedaa2654c8e9d377435eb292c0d4b7220d5af2e11ed1c9bb111331e871120d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.cpp",
+    "size": 10274,
+    "sha256": "b4a08900e6b17a5fa5456be03a46592b8f5260301d096e486ab273b66d8c4c9d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.h",
+    "size": 2079,
+    "sha256": "9a3cbb830e526ab36b8972acf13e030a19b118034cc45ad68b4c8b598937439d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkProgressState.h",
+    "size": 2537,
+    "sha256": "191a393b45c17773b188f1aaa76e1e4b299d127758d9d1b5cdfbcdf67055b0aa"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkRewardsPanels.cpp",
+    "size": 5172,
+    "sha256": "d911fd602c27a55ad85a80b3773bcd8ea5365a7e0e1dca414a3e4fb51eb36cad"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.cpp",
+    "size": 15247,
+    "sha256": "dabc995baed4036e269029acb8655e81898d4f3fd02dc626f670e734462fcca3"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.h",
+    "size": 4462,
+    "sha256": "2a44efd7fce95dee941ac3436a70b2f65c736b8f928c93f42fa245f41ac5fb60"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.cpp",
+    "size": 4172,
+    "sha256": "b883694e93da5a6512a3cfaceb1956a689a526eba4a03954341ca8e4313cb3a4"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.h",
+    "size": 1413,
+    "sha256": "144877315f6327044df3da35572f5aad90bff1b76e33b77b59f86091e6073ca2"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInPresentation.h",
+    "size": 367,
+    "sha256": "e046545cab3ece8add1e04e1aaa549d34d92fd4abe8087ff107761683e8ce771"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+    "size": 10373,
+    "sha256": "158e5edc126d97a7af7efbe87caff9ebe20d1fd1ec3532638a73226d83925eef"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInShell.cpp",
+    "size": 7708,
+    "sha256": "42b01420030a248f94f6ee3f1edcaf58239a26a047bf7498bea54841699cc1f4"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+    "size": 9492,
+    "sha256": "a6c2d9918d02d226327f1fcb24bb1ccca64c4ab07f3d03682b6ee81b4e597565"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/CultivationNameplateTests.cpp",
+    "size": 3192,
+    "sha256": "734f45196399eb7878ca922ad3bb8eda1a361311b700914832841114a547572d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkAnchorStatusTests.cpp",
+    "size": 4078,
+    "sha256": "1ecef23c1ac9449cbc06d1676353b6653bba76f7aaec4009157fc671948e1b43"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkAttributeRatingTests.cpp",
+    "size": 2821,
+    "sha256": "0bc625482409d0677aae5a25619e9bd1ffdbfff8cd6f2d70a19f14fbe2cb6536"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkCharacterCultivationTests.cpp",
+    "size": 2153,
+    "sha256": "c6b206434a9b196176ccd92d0ddfc3bb6c15275b99bd4f5f74dae0611cd8744c"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkFeedbackTests.cpp",
+    "size": 7092,
+    "sha256": "5575e47e2c49b09c6ae9ada49709d9a969a2fc0b7acfb6982850aa36d1226145"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkInventoryTests.cpp",
+    "size": 14345,
+    "sha256": "9a5bfe9c2b09493e07ffb92957ae69fb9cef3570c09168fdd09551ea4a6c7a13"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkLeaderboardTests.cpp",
+    "size": 4128,
+    "sha256": "fae134b03758075822c8012b2a9d176a9b5fe15bcc87eaf9ad519101c28baa69"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkMenuPawnRoleTests.cpp",
+    "size": 1805,
+    "sha256": "76a4086b845da1d2011296304aeb6df59cc7b76ec8e61d38990be82cff9e9113"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkNiagaraTitleTests.cpp",
+    "size": 4964,
+    "sha256": "85f50bc2db3276ff1cfa4ebbfca63cab4b0c4c77c019bd1131be719662fa0bbe"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkPawnSafetyTests.cpp",
+    "size": 3600,
+    "sha256": "8db75e9203049e0ad8f54c70856fad38bafd2237f2731df99fe25d8d9ecc8bc3"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkSaveTests.cpp",
+    "size": 12776,
+    "sha256": "ab5a27a2971b93e87f7b79745f6963f1a9bf2dc8cfd82ab5d192782e3bfbc76c"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkSignInRankTests.cpp",
+    "size": 3158,
+    "sha256": "b53e6f7db59bb5b03281fadff04dc82c9e9d574afd2feffd663d54985a5b5421"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkUiLayoutTests.cpp",
+    "size": 4869,
+    "sha256": "b63605562f84c728344b263bb9925d11d9a8120c58d44e02c635b4936dd6e946"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/Tests/InkWheelPresentationTests.cpp",
+    "size": 1309,
+    "sha256": "1066bcedda591e89e17733c7f05338b5845fca66df7e647b60dd2233c0c62ad5"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.cpp",
+    "size": 884,
+    "sha256": "2f4fd3db9ff1f146518083e4e0a6b30a65bb4d90af3b5be68d605dd5d70632bd"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.h",
+    "size": 632,
+    "sha256": "078233c2dfeb61e95e24a4d3da7e3ad3d7c9c0349370e84ccca00a40a50c0e97"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiResponsiveLayout.cpp",
+    "size": 2291,
+    "sha256": "86c5628be68313e753a3e5acaaae55e4aa50836b62dc292998959085ecdba79f"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiResponsiveLayout.h",
+    "size": 602,
+    "sha256": "440853a077ee4cb2f35764b506e194b0e32e9e8f458fe52314885f5792c5b320"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.cpp",
+    "size": 1406,
+    "sha256": "e35103a8cbcaac1de75ee03950fe36fbd9fa08d6cfdc3e43f8c06868e5cdb27d"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.h",
+    "size": 2648,
+    "sha256": "1e3956f1a9dc50458f30cd4fbdac87135b568ad1fd06135b8ede62e6b753805e"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.cpp",
+    "size": 1184,
+    "sha256": "d4a31d4bf0768609e3d7039402d1adafd1dcfec6a41cec40d4e6d2330c25f2e6"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.h",
+    "size": 1665,
+    "sha256": "f9c4ad4d71ac27d030c2bbf0303ef41e0de1a0d3c6e35f5a84d44ba709e98fe3"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWheelPresentation.h",
+    "size": 1527,
+    "sha256": "add2cdd49016de80dd5acecc72154d855d6cc4f7d88ff46bbf114e51b694707e"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+    "size": 9132,
+    "sha256": "f65ea4fd37fe0cf2b2bc6885e7366d6740186f13b38dfd274f7db5a9fd771edb"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.h",
+    "size": 706,
+    "sha256": "5af7f819836c05c0d54b6659c786989acd85d6fa8304679995239d17441017e0"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+    "size": 25093,
+    "sha256": "1d21fee407616d56a05437e8a289cd78b0a79a9f26a14c35256f31519eca611b"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.h",
+    "size": 1028,
+    "sha256": "76021f2d79f1bb013f918736a82491934b0f88fbd1f6e7c5f4df8d89eb1c333b"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/WulingFrontendData.h",
+    "size": 1596,
+    "sha256": "d71d3c754fc57a370448ef5355cb2c89b73fe3ca64a2ad63c3218beaa715741e"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterProfile20261022/M_DantianUI.uasset",
+    "size": 9081,
+    "sha256": "b2871ace3023a93c0e5289c3a0f94d4fe88e5d546e4669467e340bdca9559235"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterProfile20261022/M_SlotMoteUI.uasset",
+    "size": 6852,
+    "sha256": "ad054bf9b89cf4b703d8de1ca61c767befc9760ec8e84f9aa8a954dbe997df9d"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterProfile20261022/NS_Dantian.uasset",
+    "size": 484769,
+    "sha256": "d4ccd1e137b608563974611ca68d25770dda81a5241b2e3d271685bbf1439ae2"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterProfile20261022/NS_NodeBorder.uasset",
+    "size": 493805,
+    "sha256": "a7f65e686c02381ca95f8c45edf60d4f4c7bc3dce0f7a8c8fc3d283318fa72d6"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterProfile20261022/WBP_CharacterProfile.uasset",
+    "size": 21594,
+    "sha256": "d224960df4205fd530fac5e15545268e64e73ab1b1beaf316d2211e46d2c1564"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/M_QualityFrameUI.uasset",
+    "size": 10504,
+    "sha256": "d4064094622b77a3ea09e13aa4f1a4e95f5903e86601cc2f4e6235e32a4722fd"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_A.uasset",
+    "size": 1310878,
+    "sha256": "7b829f367b2ea814284aaebaf6f23f519a36b271b7d018c7d8f27bb035cee874"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_B.uasset",
+    "size": 1655569,
+    "sha256": "e67d241e3eb64df5ffbc5aecf95d6bb8bd3889156c0359429b0be0ae4c4cb82e"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_C.uasset",
+    "size": 1483759,
+    "sha256": "02e14315ace5e1b4d2b5f47b755d339c67473386820e87f6e45aa7a02dbdde57"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_D.uasset",
+    "size": 1321232,
+    "sha256": "c13010e93857cfaa334ee01aca3f8707c99bc093d15e16495d2c9e1572d88b20"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_S.uasset",
+    "size": 1327812,
+    "sha256": "2493e8664612be711001467426949f6c0526fe458bd291486cc073fd8bed8e74"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_SS.uasset",
+    "size": 1440120,
+    "sha256": "c830edcdbc7e262382a88036df97ef53b0424c453f25e03d70d5d56e6694d0d7"
+  },
+  {
+    "path": "Content/UI/Ink/CharacterRating20261022/T_Rating_SSS.uasset",
+    "size": 1303613,
+    "sha256": "6c831f8b6de9f8edc62bf5e2c7f6a452814f1445018a4f9ec1c065a9efa12c4d"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/M_InkTitleAura.uasset",
+    "size": 15894,
+    "sha256": "1127366b7e182106481986f02e42387ff7f6b3df11e649492dd8178592f7f0e8"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_BarFill.uasset",
+    "size": 8895,
+    "sha256": "7c21330d4f5b919ced4ac1f2b773d1a655c1ad12216fe42bd973c18e3c86f9ec"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_BarTrack.uasset",
+    "size": 8901,
+    "sha256": "958df6bd3c01af2b16085b24fc4f7ffe13995c8cdee89018156a52d8c1175043"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_BlueButton.uasset",
+    "size": 8913,
+    "sha256": "e37b0b7f0ba9cb225f505b99799a8f3b237f0096c7f15b0003ebda0f413dc8ba"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_Card.uasset",
+    "size": 8877,
+    "sha256": "54988690986a25adf6cc9117968e94092281336808271ca4dff6c9c9b82e1145"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_GoldButton.uasset",
+    "size": 8913,
+    "sha256": "f56be125511b1977ffb64be469153daf503023cec343213b19703bb768241ccc"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_Heading.uasset",
+    "size": 8895,
+    "sha256": "3cc5b91cef157127e826a8cc4657bc52d74fa569dfd40fca9aa0b4d430e8251d"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_PaperButton.uasset",
+    "size": 8919,
+    "sha256": "62bb9d3694a0b32fe741d92602866cc50afb57d1d33a99e3582fff39feb396dd"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/MI_Cohesion_SelectedTab.uasset",
+    "size": 8919,
+    "sha256": "2dd5f99031e06c1f0476c7d4cbee83e418fa3b1bf41cde1525cfb8803f844125"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/NS_InkTitleAura.uasset",
+    "size": 236696,
+    "sha256": "a05361c07fac77af7df154f256ea8f3f5961ecc0fb1b4996de8629eb109579d0"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/T_CohesionControls.uasset",
+    "size": 2068088,
+    "sha256": "f793214a88a2d8f23390e274102cb7f2f5ed2ec6bd2b97e8dc13ac68a5039211"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/T_CohesionIcons.uasset",
+    "size": 2482347,
+    "sha256": "792ad96eba0d6771f99c8eb4adae270217884e96afd0c7178d90580c2598a7a9"
+  },
+  {
+    "path": "Content/UI/Ink/Cohesion20261021/T_CohesionScenes.uasset",
+    "size": 3620042,
+    "sha256": "5f7f69f6c8d3e476db01d6243878e0e765586508bcc2a347b8f0a8a921a644a6"
+  },
+  {
+    "path": "Content/UI/Ink/Cultivation/T_InkFeatureScenes.uasset",
+    "size": 3835162,
+    "sha256": "250fb6e6a5ac94a2b19da447983eb06c7faa2d674ac10243d7491c97d77aecb4"
+  },
+  {
+    "path": "Content/UI/Ink/Cultivation/T_RealmBanners.uasset",
+    "size": 3704651,
+    "sha256": "44e42d6d5374d3fa4539b513cf1c7a4d6c4a1d3392092157c8047b52af5671e8"
+  },
+  {
+    "path": "Content/UI/Ink/Cultivation/T_RealmChart.uasset",
+    "size": 2784657,
+    "sha256": "6e46c4a7e882a781f3f0a661316e624d2d81bca9ce959895318b8d75c83ee625"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_LifePotion.uasset",
+    "size": 1658999,
+    "sha256": "321590188d7f5c79b872be42fddfedf4e2aa3d1473036e3ed0ed838f3687cd07"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_LoveExplosion.uasset",
+    "size": 26778,
+    "sha256": "5c5600142c6d475343375783db414cbc767ebae5a5ded9e9312d4c6013a42c75"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_MysteryAirdrop.uasset",
+    "size": 45777,
+    "sha256": "ee5bd49ef397900d09dc48dc11b9c9d22d08f4886dc34ca18e75f24fb501e9f8"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_RareChest.uasset",
+    "size": 2516495,
+    "sha256": "d8c4a6c05969bee38253cd17acbbbd77a5b7571f38d9c4801bbfa7f4c819c8e7"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_StrawberryDessert.uasset",
+    "size": 2402000,
+    "sha256": "660df887c8ad34411380af0faba3c722ead58318cf0e378eba315e97d39700c6"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_SuperAirdrop.uasset",
+    "size": 47262,
+    "sha256": "ca3651c702c2820581ef27a371167c657941cca155d14c9bcc1b34280e9d24c6"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_SuperJet.uasset",
+    "size": 58224,
+    "sha256": "77b718e95e99729c71a942ea3abd39a2ff51b7cc4d5abef59b53177ddcb25544"
+  },
+  {
+    "path": "Content/UI/Ink/Gifts/T_Gift_Wand.uasset",
+    "size": 28752,
+    "sha256": "310741cc0dfeb0a789add0d4175882a0ccffdc2b4d8315801a78f69deae88d50"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/M_InkAtlasUI.uasset",
+    "size": 27264,
+    "sha256": "b069bf61b62eb66178b6e75b2f4c4bdbce10a350417f1b8952972d9abc1b1a00"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/M_InkInventoryAtlasUI.uasset",
+    "size": 70417,
+    "sha256": "3b362dbc52dac8df7b03044e9d7a8418718662e85458537919a3331dd96e4036"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/M_InkScrollFade.uasset",
+    "size": 10287,
+    "sha256": "011ee3215cbdf0c2534e8b90c9e2c15107357e02f35d028c4a18a42db16de0a9"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_InkCardSoft.uasset",
+    "size": 9492,
+    "sha256": "c153d194e61588d8a36c7ac9915192cbf2ff8c88f26a4cf02f17e5de3e3eba4d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_143_222_229_Fit.uasset",
+    "size": 7002,
+    "sha256": "fd7cac03be97c008597fe103373d5212109b164cd1eb1e4f63872892c3a2c505"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_143_222_229_Slice.uasset",
+    "size": 7014,
+    "sha256": "0cce2286e427741b8cc4d70f6cb0cc9f07ed07cc3f8b0c7c314c609009ff4068"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_233_222_317_Fit.uasset",
+    "size": 7002,
+    "sha256": "d5b59b613915916cf039e904e01ed6b08396b3ca1aafe43d7ad452e3460cbd17"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_233_222_317_Slice.uasset",
+    "size": 7014,
+    "sha256": "8b7d9345140ca9775c30d654af9375b7c47466ec233d9a723117498a8dbf0f0f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_48_222_142_Fit.uasset",
+    "size": 6996,
+    "sha256": "e2ae404a3e6a135b03bda649f7c1dd905bb785255ef599a6d4b03648d2ce3e4d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_14_48_222_142_Slice.uasset",
+    "size": 7008,
+    "sha256": "ded2de40e770f20ee1189fe446196f69b7c6c638b9ee2df4a7ba5888e4c1db32"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_330_222_407_Fit.uasset",
+    "size": 7002,
+    "sha256": "825f8c5b93c0e449267a237576ff5dbaaa7692275f06093781cad3cd00abcb46"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_330_222_407_Slice.uasset",
+    "size": 7014,
+    "sha256": "269b9e4b01b6fe8040f962879520f3804dad0a8805f8f9d91536ec92c2750f53"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_412_222_488_Fit.uasset",
+    "size": 7002,
+    "sha256": "5b3b5d239408aaf3bcf3cd17c612e1a48f9d6482f158f39d4268638a31298135"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_412_222_488_Slice.uasset",
+    "size": 7014,
+    "sha256": "1d28470b03be0f60820ff444769a3baacbaa1ea58576c0535d926929047c1492"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_494_222_572_Fit.uasset",
+    "size": 7002,
+    "sha256": "5c7a252c2d9d762e3ae4616073a4819ad6fe18df96683686f2577f690c544ea5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_15_494_222_572_Slice.uasset",
+    "size": 7014,
+    "sha256": "8d027f956a619e9980e898be42e2781c932eae55a56d4d9c79e6819c10659ef9"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_20_804_208_882_Fit.uasset",
+    "size": 7002,
+    "sha256": "0124b97808b693ff704bd86c55af6257ab8044773b3c0ebca19dba012d2f6887"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_20_804_208_882_Slice.uasset",
+    "size": 7014,
+    "sha256": "a7f0d0ccb7ec6fd4c47563e9c72a280bbc3ce2c5636a242a51d113d48da56351"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_211_804_396_882_Fit.uasset",
+    "size": 7008,
+    "sha256": "c19ce71f54e2bc829f642b41aafabe80fada76e0cc1e8f8529666f0cfb71ba17"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_211_804_396_882_Slice.uasset",
+    "size": 7020,
+    "sha256": "347a65732ed7012fa4c5f8aa882ce02545cf357a8ed4e6a7598305193567fecd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_330_429_407_Fit.uasset",
+    "size": 7008,
+    "sha256": "be1e92e3f001616b77727189d410812e401a53481b14c7c3c8715fa6be0b5f2b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_330_429_407_Slice.uasset",
+    "size": 7020,
+    "sha256": "272e4e7eebff403e334bb674b736627d00448891f32cc4c81838cb6e9d307b57"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_412_429_488_Fit.uasset",
+    "size": 7008,
+    "sha256": "3d290f95533d465c067dc6ed498accbd9f7e7b8b859ecf0db8044121aae38a5c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_412_429_488_Slice.uasset",
+    "size": 7020,
+    "sha256": "7c8ccf926d303e90cfdd33720c0c7ec69c998632f6f8ce61f2caa1154ed05503"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_494_429_572_Fit.uasset",
+    "size": 7008,
+    "sha256": "3bc238d43ffc3cb692ddb5eae4498656fa81ec2d8b4c185bcc5baee7059cecb0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_222_494_429_572_Slice.uasset",
+    "size": 7020,
+    "sha256": "ccce7e093f5f9fcbbe3c2a32b25bcebb14d2c5fe629c2a24fcdaa53d7440db59"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_143_431_229_Fit.uasset",
+    "size": 7008,
+    "sha256": "9ca02ee4a50a077c40bda8340b9f43b7d5b8582af3b3c5a130c087a0f93fe053"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_143_431_229_Slice.uasset",
+    "size": 7020,
+    "sha256": "283850aebf52032716a8051b20e574513874ea16da3d983a95904594b744655c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_233_431_317_Fit.uasset",
+    "size": 7008,
+    "sha256": "b7c646ac313df4c808a679177005ddfc8af99322326c717d805a278788ee6bdc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_233_431_317_Slice.uasset",
+    "size": 7020,
+    "sha256": "1ec8831a612ce365de2682334a3552973168d663d84865ae33de8cbb2dcdfa9e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_48_431_142_Fit.uasset",
+    "size": 7002,
+    "sha256": "8bbce8dcb5d4b9db7e264212e11df3c80c7262e7a6f2412642893a7497c7f2d5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_224_48_431_142_Slice.uasset",
+    "size": 7014,
+    "sha256": "edeae7579742a877ce1beb27390aa5b52d970669844c499f0d8e57cfa51aabae"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_143_634_229_Fit.uasset",
+    "size": 7008,
+    "sha256": "05a770b9b773439480001c182f51677f36c372a21e39f4fac5e0c39fa95f84c0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_143_634_229_Slice.uasset",
+    "size": 7020,
+    "sha256": "780636a95da94ad05e1802a6373f0c2e9b203754d7988e840ec89375457863de"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_233_634_317_Fit.uasset",
+    "size": 7008,
+    "sha256": "41981b79ee83570acf46cdf63defbb7d8856cf10f6e3dd6a374e415124f0436c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_233_634_317_Slice.uasset",
+    "size": 7020,
+    "sha256": "3acc2e2adff16bd0fe7e54068721350f8e4bc2f73c02054afd67c065fd2423d0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_48_634_142_Fit.uasset",
+    "size": 7002,
+    "sha256": "a074cb4525f760bfde96b0cbfb4942af3cd47d649fd7e6046cbf115003e98811"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_430_48_634_142_Slice.uasset",
+    "size": 7014,
+    "sha256": "f7058cc92483fe44542c193665b39c90a9bfa1aa6c983099ce623197ab6cc2d0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_577_804_765_882_Fit.uasset",
+    "size": 7008,
+    "sha256": "b75080e890068968da0ae86b9ce0aee9c6d26d6837c17acf6026f87a1d445253"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedButtons_577_804_765_882_Slice.uasset",
+    "size": 7020,
+    "sha256": "1008e23abd2f4a618c84e18bbbe656149cf5b63e2de778b87452b5b50e38da36"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1004_846_1054_894_Fit.uasset",
+    "size": 19196,
+    "sha256": "0a2fc65f14ac3862d15febfbfef481a6b614e64de2b73a03410f3fd3bdc977a9"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1004_846_1054_894_Slice.uasset",
+    "size": 19310,
+    "sha256": "6365f9686d27efb1d8cb4469c6c4255fb07d12d86f4ffffbac8ad0a99361f4b1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1018_1135_1086_1200_Fit.uasset",
+    "size": 20346,
+    "sha256": "68977209737ec3339f97c6066a0e14a69e1c206746d0d7925521a7e76be030c4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1018_1135_1086_1200_Slice.uasset",
+    "size": 20410,
+    "sha256": "1c1ffc5bb950a0790dd4bd97b98a2675c5b85f4fa8be551dbcfcb865275aa26b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1030_966_1233_1034_Fit.uasset",
+    "size": 18949,
+    "sha256": "aecb0acf2225b62d7423dbb1562bc154fd49d6b73773bc4fb1baf98a70b27f0e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1030_966_1233_1034_Slice.uasset",
+    "size": 22777,
+    "sha256": "22373615853cc47c878008fe2fb0188e6affaa52bfd237545d232478323d6807"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1033_956_1242_1034_Fit.uasset",
+    "size": 19166,
+    "sha256": "cc177c37dd800470eca916e02cebd5d7b02a934ff9e5528516bfa9d2d451ad4b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1033_956_1242_1034_Slice.uasset",
+    "size": 22436,
+    "sha256": "4c9673c507f58ff0d54e9d36b702ed38a9b9b5d3496636cff5638f5f89ab25c2"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1037_1043_1102_1111_Fit.uasset",
+    "size": 18382,
+    "sha256": "29129de363c7f189b74280c3f5b027bb33fc5aca6d11b5d4fc112b332b5496dd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1037_1043_1102_1111_Slice.uasset",
+    "size": 18366,
+    "sha256": "4d04a68978e13ddd7304abac568fe02beb3a5013124aef202135787878f1d7e7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1046_733_1107_792_Fit.uasset",
+    "size": 20279,
+    "sha256": "0ca455ce0c9a9ecbe245b4092131ffe711e3a1da6c6ead8e8aa0ece93fb91d7b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1046_733_1107_792_Slice.uasset",
+    "size": 20385,
+    "sha256": "ca134e5ee11f1f6f667c865b43f251fab689caef964c46042041f48e9ca5869f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1047_1050_1098_1106_Fit.uasset",
+    "size": 18582,
+    "sha256": "9079a35c8cc3a9f36ff7df4fbd87316ec581e4d6f72c25e724bca407ab7c18dd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1047_1050_1098_1106_Slice.uasset",
+    "size": 18659,
+    "sha256": "897d9783109436b0070930501536fc443139ef8cdb0e8fe2003466232bbbd270"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1061_864_1134_933_Fit.uasset",
+    "size": 19027,
+    "sha256": "865f63055be27c2fa3a70bd26ebff34de3abbd0d3baafc9b5872fb6098bbaf5a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1061_864_1134_933_Slice.uasset",
+    "size": 19201,
+    "sha256": "6db1231c5ec06b7667770f92be11721e1d28aa5d9567766a138eea465a684bd0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1062_757_1137_833_Fit.uasset",
+    "size": 20661,
+    "sha256": "1ac21afd782561e58a76e7693ad69fd328a2b5b68bf96cbe3957b66032a979ce"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1062_757_1137_833_Slice.uasset",
+    "size": 20683,
+    "sha256": "e947c5c9f027a1156d43b3fa6e06b295489c9dade901ef18238ae2328a91e1b8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1063_354_1153_456_Fit.uasset",
+    "size": 20235,
+    "sha256": "8b3eb1464246914a7b8d1a55f89162ce618418472185035d82500075209ddbbd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1063_354_1153_456_Slice.uasset",
+    "size": 20658,
+    "sha256": "90ff22369f493262b78a44fd395554817629d53f5a794b880bb6acc5a785fba0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1064_464_1153_565_Fit.uasset",
+    "size": 21608,
+    "sha256": "12556ef5e981eacda4e6adaa87f016a180c90cbb262ba66cee11a23f85ad4fe7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1064_464_1153_565_Slice.uasset",
+    "size": 22216,
+    "sha256": "6f38c322e299a58528de33fe0c09b23172bd03e419dc3c652821d9fe5847fbd1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1066_846_1117_894_Fit.uasset",
+    "size": 19623,
+    "sha256": "48f409447123de40b069540982706eee9eef9596b007a81bf1f4759d0a40097f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1066_846_1117_894_Slice.uasset",
+    "size": 19764,
+    "sha256": "de58bc389c7d186a22800227119047be6b7fb330136487c0e18603f1c7030c82"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1070_331_1157_433_Fit.uasset",
+    "size": 19477,
+    "sha256": "9d08dfaaf8203540322840901e25d13caaf9154118461f5d8edd75c2b0b97486"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1070_331_1157_433_Slice.uasset",
+    "size": 19872,
+    "sha256": "a5d16d7b49ca3b86b4fe66d2e631480e9489566481d8dc528fabd9b4e1d819b1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1073_438_1157_535_Fit.uasset",
+    "size": 20628,
+    "sha256": "d0ffe4b949d70d8a6e70858a6d1c381328b5adc92b02da1c941f862a976833f6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1073_438_1157_535_Slice.uasset",
+    "size": 21260,
+    "sha256": "4290512278266272e02e1a215a4d7af956afcfec0c348c6ade48c574b3184627"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1077_1126_1158_1204_Fit.uasset",
+    "size": 19604,
+    "sha256": "e11b43effc307b32f99ba85d330e30e1f5df8cafbd1bc9f327df44aa975b154b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1077_1126_1158_1204_Slice.uasset",
+    "size": 19737,
+    "sha256": "de2c9996b6e0392513335ab0d61547e4cc178d01be2f8ce19648f541d6533a32"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1093_1135_1160_1200_Fit.uasset",
+    "size": 19877,
+    "sha256": "7f6eeb833363889b6992650907e2b4dd599972fc05e06884fb0ebc2284f5237c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1093_1135_1160_1200_Slice.uasset",
+    "size": 20032,
+    "sha256": "1efa652acaa8bb09b56299ee26120f873d07cf2026f89f4b5cd75be49e358477"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1104_1043_1166_1111_Fit.uasset",
+    "size": 19285,
+    "sha256": "d93845042f0d9c6e1913a795471b9c7c430b767a5b6aa36faf648326cf79b68f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1104_1043_1166_1111_Slice.uasset",
+    "size": 19614,
+    "sha256": "b4fec30852fbb7412e66e07c0dc084b673170191ff6f0ff1deb95032cffa48cb"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1108_1053_1151_1098_Fit.uasset",
+    "size": 17726,
+    "sha256": "b99b502c9013d91fcbf640b2881e6562482ffeb6a46d4147465cb6671b32aaaa"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1108_1053_1151_1098_Slice.uasset",
+    "size": 17866,
+    "sha256": "f44b4804171691b50a913df8b4275aab832cd6ff3569b2da48aecfc78296d8f8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_359_1241_455_Fit.uasset",
+    "size": 21258,
+    "sha256": "b546143ab99f53451298b4d0fd200ed6de0ee9b4494606b5383f7feb06d6c2f9"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_359_1241_455_Slice.uasset",
+    "size": 21518,
+    "sha256": "89c3a7f334bd7d8a92d4511e631b2c0aedf5137860a57d6a19333549d0ad22e4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_477_1241_559_Fit.uasset",
+    "size": 21113,
+    "sha256": "5e6d4d4fb764ef8a484173f53d89ada909f596140ac4ef1f24684514bcc60a99"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_477_1241_559_Slice.uasset",
+    "size": 21463,
+    "sha256": "4eecc17503de514d2ceaf04f71f5716191857a87d5c318e6b7c12ac6d7d417a3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_566_1184_914_Fit.uasset",
+    "size": 16443,
+    "sha256": "9dcc24eff658f555559332f9076d04b22b2492a9c7d33c9b904f556edff809aa"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1152_566_1184_914_Slice.uasset",
+    "size": 21456,
+    "sha256": "ec9ceb38a24ffdc4a4c414ef64b0c19cbbc68cf8b75dce2b77ad85475f10e30f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1154_584_1189_951_Fit.uasset",
+    "size": 16668,
+    "sha256": "ecc7f49c474898a895f638899847c5e9f8440c4379aac01321699ce39dea0525"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1154_584_1189_951_Slice.uasset",
+    "size": 21752,
+    "sha256": "75a29314e2e8953e00c6cd7f3d5b875d013d9a73dbe5fb6e225d4e5ba0e99f3e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1157_660_1178_770_Fit.uasset",
+    "size": 17381,
+    "sha256": "0c8dba2738834b99d7ac0e5d122d27ab3a0e0a3a4a2749e3003e6f01db8d0a47"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1157_660_1178_770_Slice.uasset",
+    "size": 20306,
+    "sha256": "10995ca8f03212418b4b1197a5d562784bf2671a565be364bb613fdf11e5f6dd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1158_1126_1239_1204_Fit.uasset",
+    "size": 20093,
+    "sha256": "1d4f2a4b47b550540a334c8985ec66fa1c49f71e7d18a58c930d6e2314b402b4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1158_1126_1239_1204_Slice.uasset",
+    "size": 20266,
+    "sha256": "f7b2aeddcedbe99ca79fc8eb36495ff8d569ee3296652ad2a22df9d14dfae479"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1158_685_1186_804_Fit.uasset",
+    "size": 17413,
+    "sha256": "a2bcbbe42305b25f5ed7e0524df77f190ab3479784eec0521ba3287f5a46dfd8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1158_685_1186_804_Slice.uasset",
+    "size": 19899,
+    "sha256": "465f58ad8fbcee6e526c35530d0094371aa62c36abe11c80d7f4a2352782d0fc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1160_447_1241_528_Fit.uasset",
+    "size": 20870,
+    "sha256": "9432fa37c8eaebc4ddf824f69806a21eb4fbb7555c5b4e304dc5d1e238763502"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1160_447_1241_528_Slice.uasset",
+    "size": 20882,
+    "sha256": "e3d6f88566a82bf570997f313b78dd6857ec9cf7386641e4300cf4014a8d4a4d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1161_339_1241_431_Fit.uasset",
+    "size": 19857,
+    "sha256": "1cecf3e97c0d675f90f2958ac4f77f43688904f4024a677442e442ef2227dbc1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1161_339_1241_431_Slice.uasset",
+    "size": 20343,
+    "sha256": "7200ddfe647770a35216b30243b3c7c2c70d39a5e3add776022ad6d57f5bcc87"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1167_1048_1206_1104_Fit.uasset",
+    "size": 17130,
+    "sha256": "a7e7528503f86b2ae41dec18680187a24f32de957c10993a074c2c6fb2cb7a53"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1167_1048_1206_1104_Slice.uasset",
+    "size": 17781,
+    "sha256": "9d6efe1577ba6b980b823eb9c057ea4d16d8be24f6fd4ed71f89121bf06b625b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1167_1135_1234_1200_Fit.uasset",
+    "size": 20752,
+    "sha256": "7f0d9e03fabc15f5a45b381b8e176da74d54c893474824646b1ba7110bc77de6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1167_1135_1234_1200_Slice.uasset",
+    "size": 20899,
+    "sha256": "135d1a31eecfc96c9dd20d9bf159891697263318e0b3e962d7189506b6da0b4d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1173_1043_1211_1111_Fit.uasset",
+    "size": 16455,
+    "sha256": "7972acea01ae984f6264c1dc9f3f21f874ba66788d60e14cedffdf86ab994c16"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1173_1043_1211_1111_Slice.uasset",
+    "size": 16909,
+    "sha256": "e4055dfb9169bc70337e240e7c3069d5608fca56242bec67bc47b3c403a7f2d2"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1195_566_1231_914_Fit.uasset",
+    "size": 16500,
+    "sha256": "fe68e3e98a914ec5137d1e0b7eac6c1b186dd9e2b2a6458336df793795bb2e83"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1195_566_1231_914_Slice.uasset",
+    "size": 21059,
+    "sha256": "74b9e5e2ee9c49ad0294ef1584959dc530c3ec5388980ab42d3edd281fae8257"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1198_584_1238_951_Fit.uasset",
+    "size": 16598,
+    "sha256": "3698d7d91e711a2c9a37707e15f88c1623e110da5597e2fda9509b85a2d22da3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_1198_584_1238_951_Slice.uasset",
+    "size": 20276,
+    "sha256": "d6a70f6c6a32b2a7badcfdca0bced61bfc296e3709b330a0470ce2b6cd0a00c2"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_0_683_131_Fit.uasset",
+    "size": 7006,
+    "sha256": "4c2fc19b42bbf1998d54cf0a4a393373e4f62cd24b3d264bae37d1e759335619"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_0_683_131_Slice.uasset",
+    "size": 7018,
+    "sha256": "f4b5279e6ba33a53d93744ebfed71c7ca513d545b380ca1f9efe8e766c9eefd3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_0_683_542_Fit.uasset",
+    "size": 20902,
+    "sha256": "7ca113d9172b6d030fcc9b4c930732f57ecadbaaafb29a2900d5db6ccb3a03dc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_0_683_542_Slice.uasset",
+    "size": 21231,
+    "sha256": "dab8865d6831261da5e5231c43b190e1f89642eacef042b711942a784b0618aa"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_1115_314_1190_Fit.uasset",
+    "size": 18397,
+    "sha256": "34e39d4291f2e2e48d9b508051077f449fc03beb96b4cdfb269437addfad0c70"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_14_1115_314_1190_Slice.uasset",
+    "size": 23790,
+    "sha256": "abfb80519d6957e03b7ecfb49991dac80c7b989c2c210fdb277129d03d656f72"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_165_667_290_791_Fit.uasset",
+    "size": 19484,
+    "sha256": "57d05ac357a19081478fad235535a816cbd01187dea9921087e1e76892396b28"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_165_667_290_791_Slice.uasset",
+    "size": 19617,
+    "sha256": "1317c4d3cc3efc08a969dc9c2e9079ecf7651da68be1647dacceddc1cd000006"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_168_635_280_746_Fit.uasset",
+    "size": 19713,
+    "sha256": "2e3ed0bdd5273c16ba3f2c84f2e42aa6137fc34fc93c24d30aaada3a0618a9e8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_168_635_280_746_Slice.uasset",
+    "size": 19748,
+    "sha256": "69cf7c3bc0d7444ea9939a1429cd54c1801dcc304655154cbfbf75af3a94e18d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_17_1041_222_1110_Fit.uasset",
+    "size": 18346,
+    "sha256": "e61fde054de56efbc5a2047b2ed7520a0400eecca345e1d0870586d71ab2fa4b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_17_1041_222_1110_Slice.uasset",
+    "size": 21180,
+    "sha256": "4e41abda334a127cb9d4297be07f7288b6d1edea5558a6694983c7981baf1aac"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_17_956_221_1034_Fit.uasset",
+    "size": 19364,
+    "sha256": "ed3aafdd81b70631f8fc0fa5aeada92ca249c152aaaa400ead8397f6c6e3560b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_17_956_221_1034_Slice.uasset",
+    "size": 22849,
+    "sha256": "d1356b87de34a70351fb4c9998142faa8fd9c825634c38a372edab3559c09990"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_188_802_335_944_Fit.uasset",
+    "size": 23466,
+    "sha256": "e3507e96a1341d753fe13394b97b86f2d6dbd9ada403fbd9ac31508c0884fed1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_188_802_335_944_Slice.uasset",
+    "size": 23566,
+    "sha256": "b45a860eebb5daeff57f4b7e4cd1236a81548d71b64f6d92cfb3c76011d7b9db"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_18_579_239_656_Fit.uasset",
+    "size": 19152,
+    "sha256": "c256609204ddec66a50b76dc483e23c1846e000a8c542100e886be947b758cb1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_18_579_239_656_Slice.uasset",
+    "size": 22790,
+    "sha256": "bbecf43412816f5fb7e368d362c9b9a2b401ca3193a6d7886f99224052da7fe4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_193_794_328_924_Fit.uasset",
+    "size": 23057,
+    "sha256": "af019da88927e9bc524097602e32b48f19f3c017a2041739ee8adae6d4129f10"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_193_794_328_924_Slice.uasset",
+    "size": 23382,
+    "sha256": "a19b96bb89bab6ea441f193abae31cb619b0a50a5c03639ebcc5e6dbfb0bb7e1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_20_16_683_565_Fit.uasset",
+    "size": 22843,
+    "sha256": "de2ec2c261336a27326ea1ddf292d3b2407575fc243150dc75325d18026eaee8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_20_16_683_565_Slice.uasset",
+    "size": 23035,
+    "sha256": "ea611941b7e3582918274487aafb89082eee077e960c981312d291af0efbc88f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_225_956_423_1034_Fit.uasset",
+    "size": 19093,
+    "sha256": "be002448ca34662426f811cfa2b57890b69cd281934f064418c86fdb6eee984f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_225_956_423_1034_Slice.uasset",
+    "size": 22178,
+    "sha256": "9cc2a6b3cd2eea75e872979fa4d794acd3a6c02491fe84c6a40a9fbcf058ad54"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_229_1041_434_1110_Fit.uasset",
+    "size": 18471,
+    "sha256": "6337a2ccf3f2003fbad136d6f720f67eb6c89de42386c0b497f23ddb8d3ff58b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_229_1041_434_1110_Slice.uasset",
+    "size": 21365,
+    "sha256": "551a3aef9b8d40a725202d16a09586ca1d101cf169d94254c5949ed429aca2e1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_236_966_425_1034_Fit.uasset",
+    "size": 18855,
+    "sha256": "f78a3a4fbdaf67fc9e76cd15ba3bc4e372a346fd49356f8f33a1eb6c04cf4649"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_236_966_425_1034_Slice.uasset",
+    "size": 22211,
+    "sha256": "9398c2d7542078df0889ad98ec8f1e483f88e7bafbe8ba3b96f9d93d4678ac82"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_237_1047_430_1108_Fit.uasset",
+    "size": 18531,
+    "sha256": "d509b71caabce4538b8da3794b7fd66d5221e44040e6a08eeb12d0e645974bc7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_237_1047_430_1108_Slice.uasset",
+    "size": 21450,
+    "sha256": "70dfb5284f6aa9b2284ada3e9c105385ed1abf7547e07ce2195247702107017e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_23_1121_320_1190_Fit.uasset",
+    "size": 18197,
+    "sha256": "193ead2d9927583bbde230b4a9747d61f2490af8fcf289463904acc2cc852cca"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_23_1121_320_1190_Slice.uasset",
+    "size": 23807,
+    "sha256": "367b49cc24557648fe0fa7f3ed168e1f96eacbc7a105f5dd951218479bb363b6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_240_1185_294_1242_Fit.uasset",
+    "size": 18460,
+    "sha256": "b585a76a278f5d116f958e1fdb5eac12fba8de0cbd9d11c66a31b8929d781a02"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_240_1185_294_1242_Slice.uasset",
+    "size": 18616,
+    "sha256": "358b1a523437335b71144e3454e98108fedbf14c44c983f1e2cd5ee068c06032"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_242_1191_288_1235_Fit.uasset",
+    "size": 19288,
+    "sha256": "b8bfb98667a36f32e4b72571dda065e8fecc0149ad48f80994ecebd973162a4a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_242_1191_288_1235_Slice.uasset",
+    "size": 19495,
+    "sha256": "0a244c15d9bdf645fb248ea35080b8a778225eac6be2c64adf4d8efecef8be0e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_244_579_443_656_Fit.uasset",
+    "size": 18899,
+    "sha256": "dab71f8a508b874fa5597fdca00157a0b57a818dc4bcaf0becf15e0225d52c2f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_244_579_443_656_Slice.uasset",
+    "size": 21857,
+    "sha256": "e270197f40a3c58b24b14ad7ff2bee8198b13e98ef0a2bcdf7c9d4bd8687e0e8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_251_552_445_617_Fit.uasset",
+    "size": 18369,
+    "sha256": "a14acd639b8e4ebbfaf31b81c76073d3543b3e9278786bae0e934d57155ef2c4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_251_552_445_617_Slice.uasset",
+    "size": 21858,
+    "sha256": "5deecc4bf90b987f94ce2aa18908e46e9e89f10a6676d9246c1aefaec3d11684"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_27_1047_224_1108_Fit.uasset",
+    "size": 18390,
+    "sha256": "899e95b6d1601ec5d2a63c10914d7059630d87ed271784c7f83c018b57f0e1ea"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_27_1047_224_1108_Slice.uasset",
+    "size": 21496,
+    "sha256": "42634fbacaa26c65161ef08341b282ce44db0a61c0581f11be39acf5ffd52284"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_27_550_243_617_Fit.uasset",
+    "size": 18888,
+    "sha256": "bb32ea0658c533c505a4c1411065c97781b19e0d37decc698cc22a5cb5d92e09"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_27_550_243_617_Slice.uasset",
+    "size": 22645,
+    "sha256": "6d0f753762348e9990c56110f1fd0caacf081c0f7f085d74fe5df70a3ae4e0db"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_28_667_153_791_Fit.uasset",
+    "size": 19428,
+    "sha256": "5c931671f2b30020d1054c586022b8b61df87262f2f9441dbf3534fa925a79f8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_28_667_153_791_Slice.uasset",
+    "size": 19510,
+    "sha256": "d0a20c8d342a919674dd88239c2140ed0c67f1365df856c16b0df593358bd05b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_28_802_172_944_Fit.uasset",
+    "size": 22206,
+    "sha256": "9c2d345266c9fd042d836cdd0904253dfc1549ceccdf905cd14d894e11cf1787"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_28_802_172_944_Slice.uasset",
+    "size": 22233,
+    "sha256": "0530556c1b3e44cde16fb73f2bd6eb5393dd584990a84a2297ccf439c735c5b7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_29_966_221_1034_Fit.uasset",
+    "size": 19093,
+    "sha256": "3b24629ecdad2e875a88c51d22a05178bf72d32a185b9fe0a4a17c917f1bdd11"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_29_966_221_1034_Slice.uasset",
+    "size": 22867,
+    "sha256": "98151058cc7b031558b8355630beddbfe15e182291bc8c89408670a011b5e8f4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_300_666_425_791_Fit.uasset",
+    "size": 19977,
+    "sha256": "ade9969638f2df8dbcf065692387e93ef8b39357e2d07d4a6b0239bfe7de726b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_300_666_425_791_Slice.uasset",
+    "size": 19994,
+    "sha256": "2de38c34d4ca361fb0c6f7bddc616ffe0efc5938dd173945da402aadf0436937"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_301_635_413_746_Fit.uasset",
+    "size": 20117,
+    "sha256": "d1f0a68681abe3a116f43bc4b2a76bffe6d1e834231e2712aeabfaf47f7a2491"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_301_635_413_746_Slice.uasset",
+    "size": 20166,
+    "sha256": "46de98a5d87e27c10c62e607b4ca18dcd44d4ee658433dd1d54f31e57bb04a35"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_30_794_164_924_Fit.uasset",
+    "size": 22202,
+    "sha256": "df19b52005585ca030993e41645693472dd53b9bf825c9cf28f758485f08b15d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_30_794_164_924_Slice.uasset",
+    "size": 22358,
+    "sha256": "7d7fd2992b4b3a2d6881a1530a2cdb252a2840fc75eccc089f8f447201516687"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_325_1121_550_1191_Fit.uasset",
+    "size": 17968,
+    "sha256": "c528eb16dc94baec9265e5d6db0347877521a778a76cfba7ad1f3c292e7249b8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_325_1121_550_1191_Slice.uasset",
+    "size": 20650,
+    "sha256": "c171191329ea5fd5192bd5f8a434855bf13175d7a50a837acdd4a109d5604ab0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_32_1185_91_1242_Fit.uasset",
+    "size": 18195,
+    "sha256": "212f5cacb5097a7c57f9d6add77171fac59dd405e648297e55fe042ba46b1f62"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_32_1185_91_1242_Slice.uasset",
+    "size": 18329,
+    "sha256": "a36ca09058f55e3b090618c5873e1dc04cc5c8cb824b8fbdc28da7dfcdcc4265"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_32_635_144_746_Fit.uasset",
+    "size": 19185,
+    "sha256": "df51b06038855a5f75f8c1419f5bfb37014e05ba9fb6ac704ae908dfca7ae64f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_32_635_144_746_Slice.uasset",
+    "size": 19197,
+    "sha256": "085606271dd460309615127399df6b5d44101468216416a1a6e163f0a77a1b50"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_334_1128_560_1191_Fit.uasset",
+    "size": 17964,
+    "sha256": "3745712c74e36f24750e62dd798943c08521f3cc0aad4733f863f7fc4d939aaf"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_334_1128_560_1191_Slice.uasset",
+    "size": 20767,
+    "sha256": "c431b873926ab6b8c48c18f5a7099a37e88133bc60383e487299fcc0499f31d0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_349_802_497_944_Fit.uasset",
+    "size": 22440,
+    "sha256": "e0178581097d3492e7fc89466dee06fd1bc8636e617fe0d1017d212e4ddb77cf"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_349_802_497_944_Slice.uasset",
+    "size": 22557,
+    "sha256": "6f70f1a8aa0b57a882914273098f0510cf8a4a1d06df06a6263a5027e95451e6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_357_794_492_924_Fit.uasset",
+    "size": 22360,
+    "sha256": "35b35edf904a2d8877b0cc2a0d4b2dc889d1808d72950ea2c83c74ab2da7ce9a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_357_794_492_924_Slice.uasset",
+    "size": 22638,
+    "sha256": "4b7dc06c8ce7d3bb1d2a298da382cd720ef7a4dd5edb92f5edef381c376c7ce3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_40_1191_86_1235_Fit.uasset",
+    "size": 19003,
+    "sha256": "89a2d638594f870c9e731463a7c92c3cd01db26f8239541abe1cfd591e0013e0"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_40_1191_86_1235_Slice.uasset",
+    "size": 19208,
+    "sha256": "8fe7d27ef88f67b9e489d5db55952d128a4fa83dcc538438f245912a4f6d1e67"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_423_956_622_1034_Fit.uasset",
+    "size": 18775,
+    "sha256": "c0ed158c3bbee9b23f1ba42834347d362b89738f87adb3dce5f733a1a19836e3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_423_956_622_1034_Slice.uasset",
+    "size": 21871,
+    "sha256": "57583b7d988dc9ff98afecb3ade3adf0c214d79745e0d836637d395be07cf2fd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_433_966_623_1034_Fit.uasset",
+    "size": 18652,
+    "sha256": "11ba841903e67baf7befc4a52038367b3d14af01c9f04c2f066ee0cdd41e46e1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_433_966_623_1034_Slice.uasset",
+    "size": 21674,
+    "sha256": "f8f53989d734654ecdf87a0422f051536871ffefab2a74f70ec4a002a27603df"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_435_1049_852_1108_Fit.uasset",
+    "size": 16961,
+    "sha256": "7307ca6528322e57049c39e2a48119a66c8c09d3de9497df6d75c7c43aabfe35"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_435_1049_852_1108_Slice.uasset",
+    "size": 19887,
+    "sha256": "c68f0c8fc554d7b5b0c9aee96f805fab1772a2bf4d3e2a7cded10260734bc886"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_436_1041_862_1111_Fit.uasset",
+    "size": 17297,
+    "sha256": "6720de6884ac4a655ae796f016972a2e96d352ace59cc7ed32e007eac74344fb"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_436_1041_862_1111_Slice.uasset",
+    "size": 20049,
+    "sha256": "b5d5ad3fb280f7fef7e95ad7667a2aa15e798989e4c178678ee7475efdfca82f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_437_666_561_791_Fit.uasset",
+    "size": 19444,
+    "sha256": "66942f5ac9ace840b82ad5c2a922758c8771b1cee60232d7fbcc5ef8389f3845"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_437_666_561_791_Slice.uasset",
+    "size": 19411,
+    "sha256": "078edc7da831133396b4063268936b3de29e516e1e00bdb054b674133438c94a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_438_635_552_746_Fit.uasset",
+    "size": 19942,
+    "sha256": "3787c1530c6bac10db20f819c4bb7dbc07def2d71aeed5baeece619ccfc4d7d1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_438_635_552_746_Slice.uasset",
+    "size": 19769,
+    "sha256": "946d63c60c220c7c1871eebc8bd7edf7055ebc7095f38eb651706d0ebdd66e53"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_450_579_651_656_Fit.uasset",
+    "size": 18823,
+    "sha256": "6c006ab1eaceb645f528d73481ea4c17b66388a87ef76c40f2324184e4e695ea"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_450_579_651_656_Slice.uasset",
+    "size": 21841,
+    "sha256": "381a9521c03d603d1b9e82bda07cc6df6c2600b5cd36811a265ad04a7a3ec1b1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_454_552_648_617_Fit.uasset",
+    "size": 18357,
+    "sha256": "5d57834daadf19673bd43efb1c33b203f18b91b176213dd278133c198b5153c2"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_454_552_648_617_Slice.uasset",
+    "size": 21969,
+    "sha256": "4ce845b63e34b58fa2ec2a87c967a682b2e1fcc1227c46a7045483f76354bd4b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_511_802_657_944_Fit.uasset",
+    "size": 21999,
+    "sha256": "0e2c8b714cc46b86d1f5d84dadb29a7246f205f482836a9e956b3bceee8b8081"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_511_802_657_944_Slice.uasset",
+    "size": 22053,
+    "sha256": "9f3d0fdc6139eb74fa36b90512d765df54086d9e97f94a8f009617ddcbab781d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_521_794_656_924_Fit.uasset",
+    "size": 22133,
+    "sha256": "f0ef155c574e86ef3c99320d7a3f15c02e41aa2c5a6cad2d5610806746b1e751"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_521_794_656_924_Slice.uasset",
+    "size": 22426,
+    "sha256": "dfe45baeee1d7837efe38e1a10a3ce42e2a6fa8dd8e85b0e4e71f8ae6d2dcc38"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_548_1121_770_1191_Fit.uasset",
+    "size": 17875,
+    "sha256": "ed009e9e842a6d9b20c2e9c3d9c7e8b456a8fca8449fc51053468fc9d82fb3f8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_548_1121_770_1191_Slice.uasset",
+    "size": 19903,
+    "sha256": "2c5f47bfe65bfb5a6210ced14ec13c2dce56f5fe729adc6b5e2cded3d7e7dad6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_570_1133_784_1191_Fit.uasset",
+    "size": 17893,
+    "sha256": "386d83b9eb381034f3899e28a8fdbfca54bc9d9a55369437512e32d7260559a1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_570_1133_784_1191_Slice.uasset",
+    "size": 20102,
+    "sha256": "2de4856042f28d4bcaf1c4e78e9493bfb6630fe4a2f92f9dbe9e5183573c3d30"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_573_635_688_746_Fit.uasset",
+    "size": 18925,
+    "sha256": "c04ada8c8d6a7e2c6cf822850676fbf6f8362ef657fd63d9f70cd8edb651294d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_573_635_688_746_Slice.uasset",
+    "size": 18913,
+    "sha256": "267573d1d7b1b3e9f39cc734edc220154414d85116ebbfbc8776cae5c8cc2b8e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_573_667_696_791_Fit.uasset",
+    "size": 19143,
+    "sha256": "174a51b30ed782e9cb14ea1692f4c408995b2d3a26e0ae0b15da7229ae291f69"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_573_667_696_791_Slice.uasset",
+    "size": 19115,
+    "sha256": "04706228f10dc8b28f2e01596c9d6674f547ecd04a161b55ba2de817f54041f6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_622_956_819_1034_Fit.uasset",
+    "size": 19110,
+    "sha256": "f7bd05f1e7ccc91afc1d6cf12d6f74436c6db6c7c19f90ea37804faf38aeba10"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_622_956_819_1034_Slice.uasset",
+    "size": 22316,
+    "sha256": "2068d987b5a9c82ff02f2f75759082879ad8492aaeb518f4d898117cee2135cf"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_631_966_823_1034_Fit.uasset",
+    "size": 18905,
+    "sha256": "f9ead2d862586b2777e9c43f1a2d6edc88b84ca86e3374cacdef89ebdb5b9f82"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_631_966_823_1034_Slice.uasset",
+    "size": 22324,
+    "sha256": "bd0cc322791a6bdb63001e6afd2dacbe62ec3885793a381b367975f7b2d6ccb5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_654_579_856_656_Fit.uasset",
+    "size": 18671,
+    "sha256": "9258618e570ed3b18a54405e77bc1135d340ad2e0d2be3ed1ade04548e23bb4b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_654_579_856_656_Slice.uasset",
+    "size": 21636,
+    "sha256": "fb651b7877d12fa497bee016ab67284ff2aab6024d58d2091b86ee938f733351"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_657_552_851_617_Fit.uasset",
+    "size": 18310,
+    "sha256": "9789b321d0fee9db8aa302d0d91a753e539987d602855a5b1d6c75de7fa72857"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_657_552_851_617_Slice.uasset",
+    "size": 21869,
+    "sha256": "ae733781559ab7e2a1535a129bf09360c458b6ea274dc42ce87e555846ed3fad"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_669_802_815_944_Fit.uasset",
+    "size": 23366,
+    "sha256": "a4887eeacf0ebf261b13af0ea21a871dc4b840aae9658b23da2661257cd42355"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_669_802_815_944_Slice.uasset",
+    "size": 23327,
+    "sha256": "7828d2e686f3a66fe394d8e87d20b7df266b9e84942d82006aa29563a817b2b7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_684_794_819_924_Fit.uasset",
+    "size": 23060,
+    "sha256": "22b9da27598984090a7a8c328772397890bf25ad84a3012059816d732553606f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_684_794_819_924_Slice.uasset",
+    "size": 23324,
+    "sha256": "09508a0436ce860e6d37fe37886618a401de60c3d6d9682050d5057c99875c08"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_692_24_973_542_Fit.uasset",
+    "size": 19272,
+    "sha256": "b4684afd4fee5e06b0a7eea1c83b4e2088bceb2f40e7a7b8d64aacae49d5ef9a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_692_24_973_542_Slice.uasset",
+    "size": 20946,
+    "sha256": "aa0fa8834500e204e7cd298bb8ecd87b0499db55e892f976de8984e6a0c9a300"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_692_52_963_565_Fit.uasset",
+    "size": 20544,
+    "sha256": "38c55b073a595c12be21228b8c19faed42be132e6b327d8ad91895198fae709d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_692_52_963_565_Slice.uasset",
+    "size": 23175,
+    "sha256": "30e7d9ddcc7a270cdb5a3aff04a886abdf7c77e15d082c1648c938a07048f78e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_708_667_832_791_Fit.uasset",
+    "size": 19479,
+    "sha256": "5ce65483d324e4cef56890365cb6d8bca8308595d5e1398616194ffbacf9a9be"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_708_667_832_791_Slice.uasset",
+    "size": 19491,
+    "sha256": "de496964577cbcd4c7835dcff3ead88121f92b050d114fc8cfa44a70d6d0cbbe"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_709_635_824_746_Fit.uasset",
+    "size": 19086,
+    "sha256": "bac7fe1f85d2f07c0f333714bfd3a9311b1b9cf334b59d9ace288830545ad96f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_709_635_824_746_Slice.uasset",
+    "size": 19087,
+    "sha256": "ce61457a08551f8a1fe4c81b9ffe012eb9ced248142fece809bd183abadf8332"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_772_1121_991_1191_Fit.uasset",
+    "size": 17630,
+    "sha256": "f2d553d1007d7f741d43667621ec814e141adfa6934dbf3f9c3408c1b7b637ef"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_772_1121_991_1191_Slice.uasset",
+    "size": 19129,
+    "sha256": "e1944af9663ddb30951fa2e14f3af84ac56784f288579fe45e1dc369abe4577c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_787_1129_997_1190_Fit.uasset",
+    "size": 17748,
+    "sha256": "f2e2c2e2290631a11c7dc7f3f2f9a8e7eb3e4f92242acc4a728dda3a8a0ced3f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_787_1129_997_1190_Slice.uasset",
+    "size": 19793,
+    "sha256": "a9c3b2940215568f31fd01943007cf7d1ec774d55a2fa59914a821e723ef5a6b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_824_956_1029_1034_Fit.uasset",
+    "size": 19384,
+    "sha256": "61d90db985a1b317e77ab1fe2bd9d47ab1e515932e7f2d8b693fe7fc58a19ef6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_824_956_1029_1034_Slice.uasset",
+    "size": 22791,
+    "sha256": "3e93d1eb3761c2cf8809105fd3da38e7ba6f9a59d49cc4207f46e5cc1a89b8fc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_829_966_1020_1034_Fit.uasset",
+    "size": 19069,
+    "sha256": "dd64ebce780d7dfd6b66c6b09ec6582e0c441f5ebc3a386a276db60c8eb3a91a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_829_966_1020_1034_Slice.uasset",
+    "size": 22548,
+    "sha256": "0a848e44aab65180e0ca027efdc7af5de3a626c176278d79212f570cc9995831"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_840_864_906_933_Fit.uasset",
+    "size": 18447,
+    "sha256": "c23bf90f7a20b2d5bd42e526bdc00ebade3b42130be5fb95feb43abe467dd4ef"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_840_864_906_933_Slice.uasset",
+    "size": 18514,
+    "sha256": "7e3d10b6e6b0e92192e29928a43c101a837306b6c79c4ee27bd74e91063e81cc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_847_759_916_831_Fit.uasset",
+    "size": 18035,
+    "sha256": "668a99fb10facf77a8915e953a1e6cdf55e556ca09950302b37801c1af5f74bd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_847_759_916_831_Slice.uasset",
+    "size": 18112,
+    "sha256": "b987edb1ce79a5fbcefec4b05957b74616eb24d3ead0cf218500c5ffe01889f3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_860_550_1063_617_Fit.uasset",
+    "size": 18244,
+    "sha256": "d2f1b60eabf5b6c9390b761cb48017840657758c375297e1de20e65623cb5b68"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_860_550_1063_617_Slice.uasset",
+    "size": 21713,
+    "sha256": "0a385b3033d3eb161d7373a9b4e9cfeca02b782455030c6876bb0d1b6db0dd94"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_860_733_918_792_Fit.uasset",
+    "size": 18777,
+    "sha256": "09fc8f4cda902e7d684f215645e7207cf1d9166a20c8ef688e960b59be8f74ed"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_860_733_918_792_Slice.uasset",
+    "size": 18838,
+    "sha256": "ab3b9671812c4f8938f48495eea3c73059683abac59cc0bd321ff00a3fb1b222"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_861_579_1076_656_Fit.uasset",
+    "size": 18654,
+    "sha256": "bb01ba0d3c493fc09f1afac01bd2be42577c8d085157c2c2cd7e8f06d1392b53"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_861_579_1076_656_Slice.uasset",
+    "size": 21610,
+    "sha256": "ef60bec684adff75693c318c1a52edaa86a7d96f682477db976129517403fc94"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_865_1041_1028_1111_Fit.uasset",
+    "size": 17872,
+    "sha256": "f95f7135a41cb28726d95f04efaecd7ebf8687f281808c91f253574b6813136c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_865_1041_1028_1111_Slice.uasset",
+    "size": 19238,
+    "sha256": "f32522cf061cdb1c8170300957aeacab35026a6b450d11cddaead85453bd4b49"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_866_629_954_691_Fit.uasset",
+    "size": 19507,
+    "sha256": "4d183f6ca00f897ac6008da2d2f60fdbcb5f3b70424ad15d2b977928f78aebc3"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_866_629_954_691_Slice.uasset",
+    "size": 20778,
+    "sha256": "98d1b569a23e6d8763ffa91714d14314f329f19bf1c176137056b3de91efe795"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_866_846_911_894_Fit.uasset",
+    "size": 18576,
+    "sha256": "352fe89d1a7c357cf672dc3ede513570ebbcc55de100d2525dd855ce95914e27"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_866_846_911_894_Slice.uasset",
+    "size": 18690,
+    "sha256": "88bc17f2632deb34a3335771c3af4c7a67522a79ee6bda572a5df86cfc6eabb8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_868_1049_1027_1108_Fit.uasset",
+    "size": 18003,
+    "sha256": "d16d2226d2b1f8185bfde2e36d843b55843efcfc2b4eeb2e4cf842b214323c7f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_868_1049_1027_1108_Slice.uasset",
+    "size": 19692,
+    "sha256": "433d88492d657512ff9c31e746600024ea8e0bc1333ba83b1c60c3d2873ea502"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_869_666_971_742_Fit.uasset",
+    "size": 18833,
+    "sha256": "798ba4c03680df8fd048e7f8ecbeb2d41172edfb78c851a5d257eae71dc0ca56"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_869_666_971_742_Slice.uasset",
+    "size": 19625,
+    "sha256": "9a3ad0b598770c52fd32a61e93ff03aa4401d19c69a6627cabb063c1c4061f97"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_913_864_980_933_Fit.uasset",
+    "size": 20025,
+    "sha256": "9b64b52a309f1027e4e1db8428e223c3b92618f7cb4879aea5dd57121104beac"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_913_864_980_933_Slice.uasset",
+    "size": 20140,
+    "sha256": "dee0f170636c5df544b8cfece971c5811934c97b270d0a820b9981b43bfa106a"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_918_759_987_831_Fit.uasset",
+    "size": 18677,
+    "sha256": "b3a60c5a6d7d4333839c486cf93cb449dd11b33abf7576736629e3a1780ec66f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_918_759_987_831_Slice.uasset",
+    "size": 18823,
+    "sha256": "704fbac734b514eea038a1fa9b88fe567334fca38c95d08466dcadf1b283482c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_91_1185_238_1242_Fit.uasset",
+    "size": 17057,
+    "sha256": "237e7e93c0746e126836d102ce9e3e1c1ba8a667ab63156c01408b6cdcd6bffa"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_91_1185_238_1242_Slice.uasset",
+    "size": 18363,
+    "sha256": "0cb07632e43ff991fd1b546fc5b22d154c47454b0882a7c76f7b2d020584efde"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_91_1191_236_1234_Fit.uasset",
+    "size": 17033,
+    "sha256": "146b9b93ca447a162185c11d8506df1683e539a13b4e8c52c3efd44d6b470488"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_91_1191_236_1234_Slice.uasset",
+    "size": 18448,
+    "sha256": "d3ae9d86b7e3e0021775450dfd68bc75ca6a8622edb0a0c8e2b199ee3e907afc"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_922_733_980_792_Fit.uasset",
+    "size": 19176,
+    "sha256": "06a16302432d89627553f9ec98515c78a3b46cbb73c323bb010932443814e4e9"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_922_733_980_792_Slice.uasset",
+    "size": 19223,
+    "sha256": "1e2c5366d8f3a1ea8f04b61fec6553e4c648a36a60a9a17b0e67e789bf6501b7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_932_846_982_894_Fit.uasset",
+    "size": 20697,
+    "sha256": "e8d724ae86826ebc945e5f2ce43b7bda878d733e1b2da9adb67411b9b2246859"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_932_846_982_894_Slice.uasset",
+    "size": 20771,
+    "sha256": "aa002b08784153d134d821e5a5a88297509421d110e7a82db5298152ee543366"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_972_359_1062_454_Fit.uasset",
+    "size": 21420,
+    "sha256": "81923e6187ca2564c3abc866a74d678935a1631146701bdd7d3af995d727ffd5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_972_359_1062_454_Slice.uasset",
+    "size": 21711,
+    "sha256": "38a4fe5c8c9008d45b5abc51b26390c76c611540cc27277d3c043be28a167736"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_973_466_1062_564_Fit.uasset",
+    "size": 20393,
+    "sha256": "296a7728f3f99a9b7db6dae0339387d52203273d83528e0d102ee6c9bd08c7d4"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_973_466_1062_564_Slice.uasset",
+    "size": 20748,
+    "sha256": "c81662cf0f91939a3bd4efe65349f5fa397c2d5356918d6e7cd279a29bd950ff"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_975_86_1237_298_Fit.uasset",
+    "size": 21956,
+    "sha256": "2d5f8532933e7ab29c823866619d540bf2ff0b8f76a019c7a93ddc55e42f4775"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_975_86_1237_298_Slice.uasset",
+    "size": 22482,
+    "sha256": "49bbf46577d88e8f3ebb819fdb346813105726f025db1cd88a63a0f38defeaa1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_980_636_1078_682_Fit.uasset",
+    "size": 18178,
+    "sha256": "3b569e4aaa74e9957a1f7f171500ed3e580db648a3cc65365e90268574b30ddd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_980_636_1078_682_Slice.uasset",
+    "size": 19691,
+    "sha256": "782b2c1ce20c766ee09f877e84f6862bb0d0dc46a7f9c55c94400d591b8de71f"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_981_58_1240_290_Fit.uasset",
+    "size": 20212,
+    "sha256": "cd1b947d48e18b2693079ea1b04658c6e0005c872bb5f6258e991e3647ba9185"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_981_58_1240_290_Slice.uasset",
+    "size": 20333,
+    "sha256": "5793c9597bcb43d3fdd28db17304089118b2f1225780751782f6529fa5dfee33"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_983_338_1068_429_Fit.uasset",
+    "size": 20432,
+    "sha256": "75c30833fdff5fad375bd7877b813553ec42836e6ca9a85b76e182ff91e00a18"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_983_338_1068_429_Slice.uasset",
+    "size": 20690,
+    "sha256": "c2f26aec73f9bcef3e09382ca0d262d9dbd92548b6f3edee5fe6670eb17cccd7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_985_442_1068_531_Fit.uasset",
+    "size": 19792,
+    "sha256": "54422e8533ce96be80b56086831c3b7bf84190247dc450fc0b87fe1fece03af6"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_985_442_1068_531_Slice.uasset",
+    "size": 20046,
+    "sha256": "fbf39eae49a89f1c09a629f8464dfd1739f419c0e75cad14133ee70e9cf5fad7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_985_733_1043_792_Fit.uasset",
+    "size": 19496,
+    "sha256": "3919a0035107e005d817b4f29c02214550068ad279e2d7bc564dc811a26f0827"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_985_733_1043_792_Slice.uasset",
+    "size": 19562,
+    "sha256": "5cd5080d629587b5cc88523b19db92d19e88ea8306bd4542e5f4fe0f7bf52704"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_987_669_1107_737_Fit.uasset",
+    "size": 17233,
+    "sha256": "1059f908ddf48d107998938ae7644a832f1cf6b986e0c4baa6838eeab2fda4df"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_987_669_1107_737_Slice.uasset",
+    "size": 17997,
+    "sha256": "5f0d492696b77e7ece529ebe3933f59874f789e11aff378f6b18ee7c7075ed92"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_988_864_1059_933_Fit.uasset",
+    "size": 18454,
+    "sha256": "89ad76098e60136d3ce6756a97e0b6509c7eafafbfc562ce62381496e061d950"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_988_864_1059_933_Slice.uasset",
+    "size": 18566,
+    "sha256": "ffc6740a16988e71d0958a636cff1e5286bfa70e12e941b0f28fde2682b6f2f5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_991_759_1061_831_Fit.uasset",
+    "size": 19006,
+    "sha256": "71e367e90155f423f02d70343147cc024aa9bf03bb17d4afd7cefaf08e0279e5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_991_759_1061_831_Slice.uasset",
+    "size": 19070,
+    "sha256": "c9b320b2c7013b37e546757a60a5864b6239dc19abc52aae18a99ba2668da5b7"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_998_1126_1077_1204_Fit.uasset",
+    "size": 19567,
+    "sha256": "a19364b4a1800bd3b2ba85b63b734b017938446dee40998637c12e3900b6f007"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedInventory_998_1126_1077_1204_Slice.uasset",
+    "size": 19646,
+    "sha256": "1a5072bbc9581f3554f8afc37a9e6574d94ca09b6377b9580ae4607370a53f42"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_16_450_436_584_Fit.uasset",
+    "size": 6978,
+    "sha256": "aa515936763fdc562e68d550078b0457f5ba6d64b89408ea81ea8c03bc1cd9dd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_16_450_436_584_Slice.uasset",
+    "size": 6990,
+    "sha256": "1bcfd39b72698d4712b27a30f00b6378fcc0a8632ee2d582616411b3542fc4c1"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_28_15_815_443_Fit.uasset",
+    "size": 13732,
+    "sha256": "e148bece2f14ed8a489009bce242bb2e54a401feeea35389d72f47b295c1be6c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_28_15_815_443_Slice.uasset",
+    "size": 14190,
+    "sha256": "16690c5ac9342a4f0e07b948a5ee4b34c7dffece4bd83730278e6a3dc744b79b"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_40_935_976_987_Fit.uasset",
+    "size": 6978,
+    "sha256": "2f79e9e9af25db6eebaa0e73e76dce2f6400bfc3a7e801b7eeae4713ab87b94c"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_40_935_976_987_Slice.uasset",
+    "size": 6990,
+    "sha256": "3b8a2a5f0354fad9166b07a783a6c4adfc9594e888769c6e9d6efac9720a67f2"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_40_990_976_1041_Fit.uasset",
+    "size": 6984,
+    "sha256": "713163f89bad90a772f3808d5ad9722d857a7c6b45cb41da5de3e70e1a46dae8"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_40_990_976_1041_Slice.uasset",
+    "size": 6996,
+    "sha256": "6e22ba2fe6e2ff04bad688329c1550ac1acbf009499b44eeb5fa953735db6a83"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_438_450_858_584_Fit.uasset",
+    "size": 6984,
+    "sha256": "b73e1d42f6e77e9c264bffa8ff38304dd102dc5bdd36f84c7d01bf9993bcc4cb"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_438_450_858_584_Slice.uasset",
+    "size": 6996,
+    "sha256": "2c22c83a62a998c3cfe434de5763bc33182130993aee51ad52c86d37e2418f3e"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_827_45_1134_421_Fit.uasset",
+    "size": 6984,
+    "sha256": "b674926eed6e6a28b743f6ce07eb60b6d818953bd0ee5044ed39d002cec50310"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_827_45_1134_421_Slice.uasset",
+    "size": 6996,
+    "sha256": "777f26d8997cf0316bae4264db21ab5cfabccac878664707d009a21503ca7f06"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_858_450_1253_584_Fit.uasset",
+    "size": 6990,
+    "sha256": "b6eb664abb01fbfaed10c8171c9178af7d382eeb965e7ff5355ad653203876bd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Atlas/MI_T_ProvidedRank_858_450_1253_584_Slice.uasset",
+    "size": 7002,
+    "sha256": "d360cb7e0c66c02e7b998f315092f18bb3a8013fc1999f24caf6577b44c13e18"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/M_InkLeaderboard.uasset",
+    "size": 19125,
+    "sha256": "cda9bba4332384b11dad64232ce5324035414c2aab48630e306b44965009cd7d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_AnchorColumns.uasset",
+    "size": 7627,
+    "sha256": "37b1073de6af53f32cd6f4bcdad0946af943884ba42e79151418359760473814"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_AnchorFrame.uasset",
+    "size": 7615,
+    "sha256": "b45b9dced84c881ad3af570c5323b421e6e0c27ada0e48fec43cce8b3ba46816"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_AnchorHeading.uasset",
+    "size": 7627,
+    "sha256": "57b14b1e30e9c6efd6b2dfa9f3d69342e94b80bdc63f1b9e75db7b211d3f4465"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_BronzeRow.uasset",
+    "size": 7603,
+    "sha256": "86be08260df4e4fe20f2389323b980a7fc49b16d3bfe0c4353c8ffa882e966ad"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Close.uasset",
+    "size": 7579,
+    "sha256": "7f7a8a896677bb10a0f28d09e574228846d8237073e3df2957dbfcc924f6523d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_CompactFrame.uasset",
+    "size": 7621,
+    "sha256": "ca06da1bf84c80f97f34fda54f80d74f67f06467a571541894eefd3048dd7d34"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_DamageHeading.uasset",
+    "size": 7627,
+    "sha256": "2e11ca7ada3c07cc07392d3e4982cb1b23c41d755990ef635dec35711dd96055"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_GoldRow.uasset",
+    "size": 7591,
+    "sha256": "cf84d4487b4c824b60e955ac512d5b7a13739ff06edf83f755d8b2c8abdb3081"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Medal1.uasset",
+    "size": 7585,
+    "sha256": "424dc2e695b13e2ad3beb330e540138c3e23141d8ea94ce1893cd40b9d787875"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Medal2.uasset",
+    "size": 7585,
+    "sha256": "b40925bf70132d7d43fb77342c1249db498d08528650bb4f44532c507a9151be"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Medal3.uasset",
+    "size": 7585,
+    "sha256": "25eee0a67132d94672f3cdec594e3244f03ab0d55ade0f48031708913ef40ddd"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_PlainRow.uasset",
+    "size": 7597,
+    "sha256": "d90915faf582bc0eea01cee7b4c288afbd9f61b89d82d3fb7640733a8c510569"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Rail.uasset",
+    "size": 7573,
+    "sha256": "98587c867b3659879ecbf12753508e9a7ac3a710b38120bb3e58fdb884200dfe"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_SpeedHeading.uasset",
+    "size": 7621,
+    "sha256": "6d64a8eb09ef1383089af87844767e00fe4dae8fd14a128fe749c99ca16065a5"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Thumb.uasset",
+    "size": 7579,
+    "sha256": "c8383c334bdc87af209450c462ff08ceeccde22ab24b54ba7398e8191a657c45"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_Cyberspace.uasset",
+    "size": 7655,
+    "sha256": "beec5453583d94bd1272fefe26cab21034d129bf9d158fae20e7010c3c805700"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_DivineBlade.uasset",
+    "size": 7661,
+    "sha256": "02d5a25fadd888c97bd4cdccf18382e2f3747b477eff6a0d6fe3fc0c588fd21d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_Godslayer.uasset",
+    "size": 7649,
+    "sha256": "a6f17afa7362ed7fd0eb1b1bea20b93e05030d240bb6cc3ca8af01fa7f3f9a47"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_LeftGuardian.uasset",
+    "size": 7667,
+    "sha256": "8907bab8efa28e3dfa9575f1a51ac71ace3e1018ebf727f59bf6a8cd94e42eaf"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_Novice.uasset",
+    "size": 7631,
+    "sha256": "5fd9dbbefddcfa48237feebd1b254c24d4ba20c2fa0876324e1663b6479bc85d"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_RightGuardian.uasset",
+    "size": 7673,
+    "sha256": "479ba7cc356748b58822b9d24c07680dbd27e9e1e8cb21c5ffa49ced63566580"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_SevenStar.uasset",
+    "size": 7649,
+    "sha256": "08da039ec1b2ad8747b3c1422dd1bfe0dab02969e5b061a8e2efa40e5b288b48"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/Leaderboard/MI_Rank_Title_SoulEater.uasset",
+    "size": 7649,
+    "sha256": "f854f24499b1a1333631b6985cff5ce0b4ae06f94b84aee4f1c251ec91bf42de"
+  },
+  {
+    "path": "Content/UI/Ink/Materials/M_InkTitleFeather.uasset",
+    "size": 7478,
+    "sha256": "d4c22f4b4e8ea4ce8714acf080c4f74916ff42de5bf7be2c512ce7011fb3c352"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Flowing20261022/M_TitleMoteUI.uasset",
+    "size": 10048,
+    "sha256": "2161f12a1aa4bcacfe6e6eaa8022fb27dfd758c8e44e26e7504ec2a23ee858bd"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Flowing20261022/NS_AvatarFrameParticles.uasset",
+    "size": 594745,
+    "sha256": "be5b37267cac714ac4992f2fa4271452645e1476308582efd8e01d56294dd8a4"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Flowing20261022/NS_HonorParticles.uasset",
+    "size": 514459,
+    "sha256": "8699f741f610db0d3a06b3bf52431be0d21ed2cea76f51c838d80cdabd8041f1"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Flowing20261022/NS_RealmIconParticles.uasset",
+    "size": 594627,
+    "sha256": "5eea8eac3dffe8372e6255fa5234af04f46d5dcd5dc464f8b6dec66848a623b1"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Flowing20261022/NS_RealmParticles.uasset",
+    "size": 514459,
+    "sha256": "42ae1e3c2b228f2870cb0cfd3bde63e9da8d6416ad754643d9da84ffd5cd91ef"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkGoldNamecard.uasset",
+    "size": 9462,
+    "sha256": "9f26c53c14e30889c1cc9a5fe38a25a6c716983860536619c0215173073daf10"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkGoldRankCompact.uasset",
+    "size": 9503,
+    "sha256": "2ee9217f3ad3a1acb2cecc0dc05d6f971c289f22a1a22d74068d06cd1b42fc8b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkGoldRankLandscape.uasset",
+    "size": 9515,
+    "sha256": "497ecb48af1bf5df6a2e6e2468c8834faf3c4a6e25fb809144131cfbde34b7b6"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkGoldRankPortrait.uasset",
+    "size": 9510,
+    "sha256": "1374527015c06805e24bce307b3a8a61871d9366193b88a261c82a3f84835c5b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkNavigationFade.uasset",
+    "size": 8311,
+    "sha256": "6ad3f22019eb98eb04430cd28ebbb16dda2d9b5054ccf539d888aa45c97c6a19"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_InkWash.uasset",
+    "size": 8221,
+    "sha256": "bc7056e6fe97b8fb379533c13896be3ccfe5a3a4ace3a3e98fb6912345f9496d"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuContinueDisabled.uasset",
+    "size": 7794,
+    "sha256": "a79ce99d5d3b9d6ec76d6b4d58030e50bf3c8ef40f8c4b7a7e75ddac1fcf2118"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuContinueHover.uasset",
+    "size": 7779,
+    "sha256": "e442412cd0c43d0d19c17384181e33b048e131d9f53758159bb436229aa393df"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuContinueNormal.uasset",
+    "size": 7784,
+    "sha256": "967f4a02b436c36517d4e27a045f643a1c1a44fdff61847a69dfd65b365b4dae"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitDisabled.uasset",
+    "size": 7774,
+    "sha256": "2d7a7c3b6479777b7494b061d566f26ef1bd05f7386451e2d0c5cbf0c09c7799"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitDisabledClean.uasset",
+    "size": 7663,
+    "sha256": "84a3b74a7f424a5606f46bebe8cae8da2ca8f925c9f54e75b10f908ccec5de7e"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitHover.uasset",
+    "size": 7759,
+    "sha256": "6e0a8b3f9fe779c5102b931a494e9cb0fc442cac6f891f91b9947586b35c7468"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitHoverClean.uasset",
+    "size": 7648,
+    "sha256": "92c6daf780485c503a74413a07dc07b99cf7de967f268211b1c7da8eda4cbc17"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitNormal.uasset",
+    "size": 7764,
+    "sha256": "90d2b4aee82705b384a7fb0113bacf6095bc8002af6cca8c85cac6a66a7cf773"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuExitNormalClean.uasset",
+    "size": 7653,
+    "sha256": "a109a7f525477f7a46cc6abd8f59b7e3cdd37755d0a8d9062539d6d5e9cb0597"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsDisabled.uasset",
+    "size": 7794,
+    "sha256": "81cae663e68d44adeb78b1197685099a9c96178b9a8c8f2778414491c9d2ed7c"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsDisabledClean.uasset",
+    "size": 7683,
+    "sha256": "a3fccca8d0a970f4e06bc185a6ee400bb0bbf23e29015adb2513e63e9639e9ee"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsHover.uasset",
+    "size": 7779,
+    "sha256": "15483d35ec4acbe75fcd040bcf705e836ec2be40c83e8a869e9867b22c623570"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsHoverClean.uasset",
+    "size": 7668,
+    "sha256": "05def694e2424e934e14f6285b7e1ce804fa29ee62169f8c877c5125eef924b4"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsNormal.uasset",
+    "size": 7784,
+    "sha256": "cc2bcd084506ea309991009bdb34df98df2bde303fece4254834832a5dbf21e2"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuSettingsNormalClean.uasset",
+    "size": 7673,
+    "sha256": "76f692183b09c8569d3a0336302f68d82058d160e2817c0fe581c46470d6d588"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuStartDisabled.uasset",
+    "size": 7779,
+    "sha256": "80864f3dd81eefd1e06ab4366486bf53de501e9195b60b6bb70ffa1d7720109e"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuStartHover.uasset",
+    "size": 7764,
+    "sha256": "c584b4b0b6c9684491d32c6089fa4fcc8ff9c480c75525191d589dbf692390e7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_ProvidedMenuStartNormal.uasset",
+    "size": 7769,
+    "sha256": "be718bb35fd44e4881f4a20734884dced47ee14f02d920c9cc93eb5b189fa689"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageHeader.uasset",
+    "size": 24307,
+    "sha256": "7eed604dbaa59abc10d2fd8beaf306e0c4c7c9b1d7d0792cfb10edf958d286e6"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier01.uasset",
+    "size": 17673,
+    "sha256": "daedc056fd28f202628beb71648955fe75f86495dcb1ea1c7278be82f62b6e47"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier02.uasset",
+    "size": 15647,
+    "sha256": "ca8ca2044dd6fcb85250be7e793d13df02016a795070c23ef66045e3b0377a00"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier03.uasset",
+    "size": 15328,
+    "sha256": "2b4738e4c0a90488e3d082a61b84bf5c3a6ad64f4a7d2b8eef30197af5f18d99"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier04.uasset",
+    "size": 14104,
+    "sha256": "e97b2da876cf511945638bbc558a28b871871e30fadd42fb7417b4c95daf8171"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier05.uasset",
+    "size": 14032,
+    "sha256": "e230431d46d6d6caabe6b75bcc2834607b93cb223f52853098588915630a6e5c"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier06.uasset",
+    "size": 14003,
+    "sha256": "3c983e99868c0e9e14512555249c481e4003f1a8ff5523a0699926f7d88b24b6"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier07.uasset",
+    "size": 14004,
+    "sha256": "40cddc3c8d1ceaf00f6f4aeb1341d4a8dd89f19eb9e3aecb5a0dcc8eecb2cf15"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier08.uasset",
+    "size": 13079,
+    "sha256": "5e69be8d193dafe67585c97e9aaba27f4100547dad203143a39bd2508ade544d"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier09.uasset",
+    "size": 11978,
+    "sha256": "fba86b635c6ad13cba1ed68079911c136e91ad57b1fa5a150bbdc56109a3b710"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankDamageTier10.uasset",
+    "size": 11137,
+    "sha256": "c965775d690702b5a78c86190434fdbf41aa225408c4f633c45dd7a73d7ea6b7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedHeader.uasset",
+    "size": 23630,
+    "sha256": "cbcbe82cadcabb140cd1d6793447c4324868535e7e84c9389043b2fd2bc0748b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier01.uasset",
+    "size": 16536,
+    "sha256": "56516270a74080715b70ce55240043e3de695834a4443edc4ea2ed2e464b01cf"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier02.uasset",
+    "size": 15236,
+    "sha256": "d05058cb8eed830fca1cc4a35461d8b5cfd0d3b80a3f514bb4b41ae00759e12b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier03.uasset",
+    "size": 14851,
+    "sha256": "ed97f252d34025674f324817d0a381e27862e45b51ff0015f1c31649a4a6896a"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier04.uasset",
+    "size": 13908,
+    "sha256": "776c11e9c60cd2f5f39f01ba35ed2d5bf84da723b67f95a45b5f18d5156ea005"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier05.uasset",
+    "size": 14100,
+    "sha256": "a8530ef4a6ac8e18bff8113b95bb735392194a6cbf8cb4ee30f366ce5dc83e82"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier06.uasset",
+    "size": 13462,
+    "sha256": "262f90a42d2f5b37f6ba5e1cac6940280382bde684a6798a70c04a85b57cda24"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier07.uasset",
+    "size": 12839,
+    "sha256": "9dd6f0289742102aa17983d0e844d5082e257e468295be02bbf8645c7a5077d5"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier08.uasset",
+    "size": 12684,
+    "sha256": "f3f6e0a2a71cbea773e70e6dc4a680035d008844a7593f7b398e2eedda3eb284"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier09.uasset",
+    "size": 12097,
+    "sha256": "7c27f7d7524bb2a4871f211ce91d6dd29c127f4b7c519bedaa3871b4fbac199b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSpeedTier10.uasset",
+    "size": 11690,
+    "sha256": "362d96d98142ae175455286414e64245e6cc07ba7bd23908d7c1767bdb344c34"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordHeader.uasset",
+    "size": 25388,
+    "sha256": "5612a74dd1a49563da2faa582b6fa8add6b6f445dc5c5429df15f156207cb0a3"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier01.uasset",
+    "size": 17619,
+    "sha256": "a10ecf498a487938af50c3838e97245ac9508032f739009c3e75362af818b231"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier02.uasset",
+    "size": 16342,
+    "sha256": "57147c617f4480ccdd7aec857538c2cf722ba8a2a61f32149b523bc8080c0c41"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier03.uasset",
+    "size": 13833,
+    "sha256": "1a8adbecda178669419433a82dfa79392178f78f76dcf6336c36344c272e9198"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier04.uasset",
+    "size": 13065,
+    "sha256": "911d21c9721ead5cae4867165dd080d88447ead225619de5312f90cc671d0ecb"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier05.uasset",
+    "size": 12611,
+    "sha256": "41f46bf9a356fbbb4c3ef229021a4ecf7112c0fe4d4c4e257c125584d8a26d63"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier06.uasset",
+    "size": 11903,
+    "sha256": "6eecf26a99e744b5d12e21b01c408be835306dded1b07eb79b08a27cc78f09aa"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier07.uasset",
+    "size": 11277,
+    "sha256": "c5b71f0e443ae2a0feda78f82b4fcbc4307cdcd021f704cae371aeffbbf3a709"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier08.uasset",
+    "size": 10560,
+    "sha256": "042e417804d938626c35e9cc0c8fe218fc26993b09ad3ab6914f1bb68b318ebb"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier09.uasset",
+    "size": 9964,
+    "sha256": "8e76791132d16442a2f2244c8995e0ab1aba7680e9576f47a30deba230c104d8"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankSwordTier10.uasset",
+    "size": 9606,
+    "sha256": "d8e88fcbb8ac1c51f929537c7cf786545265b431d020b9bbe9dc10e32e2532e8"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RankTierSlice.uasset",
+    "size": 25372,
+    "sha256": "12727bee0a2cae5f35fd0a96829ffec790432f9d657ef22ecb257c0d723d72d0"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_RealmIconTransparent.uasset",
+    "size": 8266,
+    "sha256": "48962f21e7e3fd0d194cbf2c450541de9878c7dd5117871c180b14e740e37b3e"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_TitleMoteUI.uasset",
+    "size": 6921,
+    "sha256": "f3d9c70754fa5c00c0db88f33519de44ccbc0c43a44d1cb1645a39b910f952e5"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaBacking.uasset",
+    "size": 8765,
+    "sha256": "97fce2fde09c3b859d72956f9e3a49ab966f7b3f9b212ae654c65ec3f6e3961c"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonHover.uasset",
+    "size": 9034,
+    "sha256": "2123fae3ae7f35c17d6a54bd3c920865ead2d47fd27b9aed747ca63963d155a7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonHoverSlice.uasset",
+    "size": 7239,
+    "sha256": "ca9ded26be7eed7dc6a8a698f24cfb349022d40e787e2fd244994970e70e5daa"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonNormal.uasset",
+    "size": 9039,
+    "sha256": "8762ea243e7c7941a69aed9a86dcd0a348090fc8a71c36fd52fe5fcb8c9b6512"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonNormalSlice.uasset",
+    "size": 7244,
+    "sha256": "aed3352d6017e5d0ff0e95fd617c94030c2ce403d1ec76c1750f1976da788c0b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonPressed.uasset",
+    "size": 9044,
+    "sha256": "a0461209cd06086f17a2a824aa6311ad08fe4a2c90766e42c893544d775a8ad7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonPressedSlice.uasset",
+    "size": 7249,
+    "sha256": "4fcf703efbcda834cd0560d7dd95e8e7c150538a6663cb92e0b4f62c496c9850"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonSelected.uasset",
+    "size": 9049,
+    "sha256": "a9b9c7299cd4105102b3379bd3500cd66d1a36bb67ad02e1f3efd9fe2692b332"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/M_XianxiaButtonSelectedSlice.uasset",
+    "size": 7254,
+    "sha256": "aca50f639ba1d8a4df5c63ac65c288d64a163b7e36f571ff9519bc74054a3180"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_00.uasset",
+    "size": 3589,
+    "sha256": "16925fd5af588dd896dbc03ab0dc4db3d43c77654a765516a8620f1c153a04d6"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_01.uasset",
+    "size": 3589,
+    "sha256": "099802696f582e7aa3d4b448aa8d6443ea3858e8b03de1aa63041e0d13af9e7f"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_02.uasset",
+    "size": 3589,
+    "sha256": "d13d173a805a815fee650636cb30cd0be8714819ccc2eea6d7cad6dbd53b5e1b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_03.uasset",
+    "size": 3589,
+    "sha256": "b762960f8799193c62f27fb04e5a76808e6c070ad33e9622b58f6a5a7191812c"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_04.uasset",
+    "size": 3589,
+    "sha256": "d6fd4d885d32d122ad1df7429934552825c3cc7a7ac3d871886c6d0d978fb840"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_05.uasset",
+    "size": 3589,
+    "sha256": "84b0bbfba2fe2cf121be846bc94c3fb0071f42df3810978d8a6cdb82af28473a"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_06.uasset",
+    "size": 3589,
+    "sha256": "79b5a15d8786c13ae21c06996d28caea865a36fbe4002fe2f341fd85473197a1"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_07.uasset",
+    "size": 3589,
+    "sha256": "d22d4890e2634911671f2442080eac78c3cb3eb93ae0f400f3cee4580695d104"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_08.uasset",
+    "size": 3589,
+    "sha256": "b9bf409bf16829ac14c12e1e9da079c77a4ab72aef486d2eb820235ecc0cf243"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_09.uasset",
+    "size": 3589,
+    "sha256": "617b585b3619e966578e599bb8c2ef9847016a3ee6261ea950d9d2d0c1941427"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_10.uasset",
+    "size": 3583,
+    "sha256": "797810fd3b808f6bb45a2d2fbb46806b9912ccb8cb0bf2e899cd248ec4f47ef8"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_11.uasset",
+    "size": 3583,
+    "sha256": "f9805fd099e90c4ea82d3c237f6519d1cca57727dbd1a9dbb6f274d3db8464b9"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_12.uasset",
+    "size": 3583,
+    "sha256": "71db878a88acff7b73b44390ab1da113924dccfc02b5d10e146922ecec497bbd"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_13.uasset",
+    "size": 3583,
+    "sha256": "304306b818f30311704cbb32df6ae6b4311794ee059b30fd27c7acbc4f2c3177"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_14.uasset",
+    "size": 3583,
+    "sha256": "fa8dfb197d806d2c5f949fb2d48b8f4dbc7351c59f57e6a2859b62b9881fb9a7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_15.uasset",
+    "size": 3583,
+    "sha256": "5152cb9d658703c300dff4b04423519c44e5befda0fb8b28721d8e17a3b78cae"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_16.uasset",
+    "size": 3583,
+    "sha256": "648a53e0e23c63f81b3dc993e2f3ca704dd6c0b32f7033e03acb6f9b3085d01d"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_17.uasset",
+    "size": 3583,
+    "sha256": "068acb94a30d12ab8f62d6f4f63d835f28c62a7f73b16ef4588b7ea895f25bd9"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_18.uasset",
+    "size": 3583,
+    "sha256": "a0bc3449b17dcdb936447beaaacc59cb82daa282a54bfd33d3a4e8bd5df38a34"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_19.uasset",
+    "size": 3583,
+    "sha256": "bd383b11758312a10d0784684a557d5c6fc9f9f0dc22bbd0ef585d1feffd9d71"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_20.uasset",
+    "size": 3583,
+    "sha256": "1a55babceb96df0ea645e023a5ec199a9e8e636e5b124b53d1d5c09e9fed4169"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_21.uasset",
+    "size": 3583,
+    "sha256": "5020bd0467cc0ce57951fd016bcf6ea8021e0b4636718f4357de529a4c7ca784"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_22.uasset",
+    "size": 3583,
+    "sha256": "6423ddb7b72fdb4d4f91d1b86482d3b931799c4d7bd83c16bccbc03ea5a19939"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_23.uasset",
+    "size": 3583,
+    "sha256": "1b34f8f02a1d6e97b9d21024e2f7d27cd927465f0255f96928d37080571873e7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_24.uasset",
+    "size": 3583,
+    "sha256": "91709a00085310f2e37808683c0638bda259bda906c7a9183cb69716dc7954e7"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_25.uasset",
+    "size": 3583,
+    "sha256": "fc74181ce1628edc8047a9edffa184a6f755547042a41f1a068564cdf93c5671"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_26.uasset",
+    "size": 3583,
+    "sha256": "6b751e7de2b9dd34134872d2fa68133305f6ec4a8a13af24aea659817b95e08a"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_27.uasset",
+    "size": 3583,
+    "sha256": "d9616d3512fd0338713440961fbad96e429ded84d0863da9cc340b86bd3d4f75"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_28.uasset",
+    "size": 3583,
+    "sha256": "58fad1de71a3323e41666fbfd409d307831577c6fcfbb0b391f7b48fbda672eb"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_29.uasset",
+    "size": 3583,
+    "sha256": "bed6993b6eee96a5ffe952686fda62f0191ebedf6d7e8b619ca6d2309053faba"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_30.uasset",
+    "size": 3583,
+    "sha256": "de38d8b995033e43278b1f0f0f5a4df633bc14f3af1bfc15a7f9d5f22ebc7c42"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_31.uasset",
+    "size": 3583,
+    "sha256": "a646d9ee82f741673888cdffc7d12281359080c60d8b9dfbc11fc2c0c158b33d"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_32.uasset",
+    "size": 3583,
+    "sha256": "ac634957d3889a14275e4c45ce39dcd0c78ce2d0a8210557d6b692e60724f085"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/MI_RealmIconStage_33.uasset",
+    "size": 3583,
+    "sha256": "aa977ea71b4741c6422355998614a71630975fd3b32882f71b9655e2b267daf6"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/NS_AvatarFrameParticles.uasset",
+    "size": 416127,
+    "sha256": "c06a51298aa5f3f0d6801e757cde80f520498d6e8457adf39207bc3ae3d48cbd"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/NS_HonorParticles.uasset",
+    "size": 415891,
+    "sha256": "110094e1a0f8a7747d938e0ccf1e29e4c4e755dd84b4295854872aba012a49bb"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/NS_RealmIconParticles.uasset",
+    "size": 416055,
+    "sha256": "41bc720a68062d1bb676713bfabe87e2a7885854b9357ec93458e7916461fd31"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/NS_RealmParticles.uasset",
+    "size": 415891,
+    "sha256": "72a78f6e409899765f9fc202e001e154739b7fe779a21ef7f5cecd94b643bd52"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_CultivationPadded.uasset",
+    "size": 1529213,
+    "sha256": "e59a9e4dfc712f8578e91ceb15be920774b4d62f58207098cca2b2907a70cb12"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_InkGoldLeaderboardLandscape.uasset",
+    "size": 2497224,
+    "sha256": "7fdf43dcfd0d720c0ebb61aa9ee1cf6efc47a030da67d84d1252a53d0ef54522"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_InkGoldLeaderboardPortrait.uasset",
+    "size": 2552437,
+    "sha256": "264b78a9c835ae97db6d7d436c1ac15927394c06b8fc6e8ddb97e6e97e0359ee"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_InkGoldNamecard.uasset",
+    "size": 2266601,
+    "sha256": "f06e37cfa601d66eb232bcab9a3a1b046afec7d5e43af4e244f487187e7cd10e"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_NavigationComplete.uasset",
+    "size": 1581610,
+    "sha256": "1b78f0529aed9a7cab36c2ea39ac1ba8bb7b0201df91432f8e88dcc26f4d47b4"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_ProvidedMenuControls.uasset",
+    "size": 3029561,
+    "sha256": "a9d9031ad31362ae7e40fb5c9e7032cc86f1a8277641a707f237d7da30697ebf"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankDamageHeader.uasset",
+    "size": 1866955,
+    "sha256": "8fee7d518a7665f2b125267b29f169e0f16a876f8d4b1c541fa3437bfe1b44b4"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankDamageRows.uasset",
+    "size": 3175551,
+    "sha256": "b0777f5e92b3d471ef3516d00df82c0e6d8930432fd28319d44d5927c34a5698"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankDamageRowsSpaced.uasset",
+    "size": 2909276,
+    "sha256": "ef365bc5de7b18d672ba230086504ec4388aac0bad059d493396732a38cffd1b"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankSpeedHeader.uasset",
+    "size": 1776975,
+    "sha256": "ac1eaf24e91839bf853ed04acfa57dabc9f6f85b284656951e7e3465fe97b6d9"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankSpeedRows.uasset",
+    "size": 2906198,
+    "sha256": "7921c34f601b6e582a243548413a44638cce5751d3301d3c43db268e5a2b5afc"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankSwordHeader.uasset",
+    "size": 1986043,
+    "sha256": "36c858e5617bde80c909c48df5dfd7fb2c4614a14d66b96c3440eead7fe98031"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_RankSwordRows.uasset",
+    "size": 2732228,
+    "sha256": "48588b31162bb26529a55f0f29596d0949ad55d6a7b718fc240532d822092aae"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaBacking.uasset",
+    "size": 2384156,
+    "sha256": "e7f94f647384b328c19dda8bfd34b86a4893bf87d888cf75090e99bbaf748d88"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaButtons.uasset",
+    "size": 1560654,
+    "sha256": "f480f5c724ea754cc4df2e6758b9611bf320f153e9cabda024910d3bc337b88d"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaButtonsRectangular.uasset",
+    "size": 1268946,
+    "sha256": "6d724dfdeeaef6a05b11faf05eba20441688648e0f2dd05c3fc5f251c38673db"
+  },
+  {
+    "path": "Content/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters.uasset",
+    "size": 1478071,
+    "sha256": "8da11c59b5fdcb05f765844d63ad7318425d262b5d2ce35d8a5f930527c04162"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_BarFill.uasset",
+    "size": 6848,
+    "sha256": "0477e1ef0357fbb3455d78923dfc37e19ecb05b20f32e6d2b42a410e0ae05f73"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_BarTrack.uasset",
+    "size": 6854,
+    "sha256": "db5cf63284125f830877f0ce5f78543441720f81c6eab30337209c0351a100c1"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_BlueButton.uasset",
+    "size": 6866,
+    "sha256": "61c658800ec19013621889639dd3f986aca97b9930bcfdc35fe9ce9f7c759db2"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_Card.uasset",
+    "size": 6830,
+    "sha256": "54af922f82e7b7cee83a4e9232a1f9bbc299e61c62c9ae6bc17a511c3555922a"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_GoldButton.uasset",
+    "size": 6866,
+    "sha256": "ef6aef4be102b95d1c84e7b25a193611e2c3477b5c0ee2ade0d74ad24bfdbd5a"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_Heading.uasset",
+    "size": 6848,
+    "sha256": "120ea4e94b1cce84fbbe9bf7905e35e12b82820e9ebb3e9d77e70871a7cd3eaf"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_PaperButton.uasset",
+    "size": 6872,
+    "sha256": "1e5bbd3b96ffbe89a47484b4141837809d442964e5396c7967b6da8d67db90c6"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/MI_Polish_SelectedTab.uasset",
+    "size": 6872,
+    "sha256": "38fe3607e4d664f45b8a0109c91851d753803dc467ea41bc20000ae926dc5a02"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/T_PolishControls.uasset",
+    "size": 2355571,
+    "sha256": "970edc9eab4d2ca2c3748d9f911805dc19602e7a3aad67ec4f49f28544b5747b"
+  },
+  {
+    "path": "Content/UI/Ink/Polish/T_PolishOrnaments.uasset",
+    "size": 2681407,
+    "sha256": "df6fcd8e8b491bd30c16d53e4cda8ec360ba37965337d8e6f80a9be7e32be72e"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_BarFill.uasset",
+    "size": 6894,
+    "sha256": "c1ebe9d6db64e964a12dd3c82c9b2ac4e12c5093e187dfc49fc15a02bb993fd9"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_BarTrack.uasset",
+    "size": 6900,
+    "sha256": "0ac66263a18f717a9079795297f371774bba1ff9a0170b524dd0b761e5b744fb"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_BlueButton.uasset",
+    "size": 6912,
+    "sha256": "5d93271d06b0ceda5b3d55b097bfb086afa61642805d4294cdfaf886811be741"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_Card.uasset",
+    "size": 6876,
+    "sha256": "b59d45d273c9ed63114c7b09e2be92bbda19f1db64577593aba57f7069590874"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_GoldButton.uasset",
+    "size": 6912,
+    "sha256": "6a2742f271dd56c649497e465fb8ceeae49a23e4abc2ca336cb5a44225a668fe"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_Heading.uasset",
+    "size": 6894,
+    "sha256": "c9a9b71e7e09d1994ca9e1412262e84434adb3cc110de348437dc9e43be0bf46"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_PaperButton.uasset",
+    "size": 6918,
+    "sha256": "9cf47b37eb679d4a31613d00882ceb3070e1ffba192ded8f36e2bce9957dc19a"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/MI_Portrait_SelectedTab.uasset",
+    "size": 6918,
+    "sha256": "29869aa5cbeea03d2bac81f19245e2afa5a82c9dae4cd3677910548d6ed52059"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/T_PortraitControls.uasset",
+    "size": 2462805,
+    "sha256": "a5ff44c868ff7890fa07dbace027edc1246bc5b562df0d9775d4c085eb93070b"
+  },
+  {
+    "path": "Content/UI/Ink/Portrait20261021/T_PortraitPanel.uasset",
+    "size": 2303086,
+    "sha256": "729fc5a628f9b6b02715972e4ff60f3d81e0d3cb6c5d771b605f6b5f518228fd"
+  },
+  {
+    "path": "Content/UI/Ink/Provided/T_LeaderboardTitles.uasset",
+    "size": 3246626,
+    "sha256": "187281e36abf5b639180f6f045a9037e233621cb49280cb113f712fbd8f42b2f"
+  },
+  {
+    "path": "Content/UI/Ink/Provided/T_ProvidedButtons.uasset",
+    "size": 3029746,
+    "sha256": "2c7550f5fcf70a9ea0e1f4d98afe992217aca419295757ada0bd9742b50c6492"
+  },
+  {
+    "path": "Content/UI/Ink/Provided/T_ProvidedInventory.uasset",
+    "size": 2392744,
+    "sha256": "8093a3d9a4b5aa2a42df2f612d10df2d1d27b8c1e068bb835ecc3953d15556f6"
+  },
+  {
+    "path": "Content/UI/Ink/Provided/T_ProvidedRank.uasset",
+    "size": 2424038,
+    "sha256": "942bc94c5dc05b5252f379e1afd95266b93a743513438dd8185eeda8805b5fec"
+  },
+  {
+    "path": "Content/UI/Ink/Provided/T_ProvidedTitle.uasset",
+    "size": 1922097,
+    "sha256": "0af10042810a4ae66b09201b64268efd90d05474d3217ebf58a74887b87cb156"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Data/DA_InkUITheme_v1.uasset",
+    "size": 1976,
+    "sha256": "2b1499804dd45ff1cb41183faee4fef8331f49a477ace81ee64190209a202c92"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/F_InkBody.uasset",
+    "size": 3195,
+    "sha256": "63a0082696e504a72e274cdd48d24223bedf9118ea9ea4b73e1799edd5b076fc"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/F_InkDisplay.uasset",
+    "size": 335713,
+    "sha256": "10516d3f1abfa2912f8c2820b8feb8a33ee7ec6e389bd9b5d512a464a4e551fe"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/F_InkFallback.uasset",
+    "size": 3057,
+    "sha256": "37980e05a76fe0882100acc41c2283d7152e7eda129c417852225f821a41ab08"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/FF_InkMaShanZheng.uasset",
+    "size": 5859520,
+    "sha256": "5e9277405bc570588b3cb4a719cc0a48ad2ca0bde3e6229c50db2130f8899c91"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/FF_InkNotoFallback.uasset",
+    "size": 16438955,
+    "sha256": "581dfa6ab0909bd4db85b165b28f2323fe87fbca83404de5c8c5eaeadd0fbc99"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Fonts/FF_InkWenKai.uasset",
+    "size": 25930495,
+    "sha256": "6127cf1990f43eea5208b5444fbaa8cfb48e8d7660a708745dd89425265cb3a1"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/M_InkCultivateSigil.uasset",
+    "size": 9569,
+    "sha256": "608f1f6f724ed100bc0c323c1afd06560595e68479e66397b44c761093eae483"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/M_InkHudVeil.uasset",
+    "size": 7310,
+    "sha256": "bda3c7e4f90391aed7c38b28d1b13c20c70fb50d22867ef1e3b26bb0ba4584bf"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/M_InkSceneSoft.uasset",
+    "size": 10636,
+    "sha256": "5b5de9e18d6a4a7d24159f8543a3c15376e91c09a14647a5f271bed23eec4f7c"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_0.uasset",
+    "size": 3617,
+    "sha256": "64779127f32210ed6ce31d2b0b73f8047bd1352ec72fa1c432b49445d9d26044"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_1.uasset",
+    "size": 3617,
+    "sha256": "4e109506b76ebe557786f086ef06a484cb1fe7539242edc0bb6070916de836a0"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_2.uasset",
+    "size": 3617,
+    "sha256": "e794fe420edcf79d3ef7f8ab8e9b81ac03f55e2ef41cd199c7b0f0ef46f9dd7c"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_3.uasset",
+    "size": 3617,
+    "sha256": "7cedbf13d668a85ac551d75293a3a3b66ae511c579143897787633db07c75114"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_4.uasset",
+    "size": 3617,
+    "sha256": "3e42b30c4687667e3338f9e84c97e3f912ceecb4ce804fdd052da4e1ec7871a9"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_5.uasset",
+    "size": 3617,
+    "sha256": "158f67d7dee0edb145f80a539d3834d2550c315b17eaf195f12ab3624942e9e9"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_6.uasset",
+    "size": 3617,
+    "sha256": "ec3b3d2b6187adec1b34f9ddb05d965051fd6ec6766b39249d05d44532610615"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261021/Materials/MI_InkSceneSoft_7.uasset",
+    "size": 3617,
+    "sha256": "dd95ba261c05a61fe60718da67bd03f22cc3d45470b34a6b9bd51170075fbd8b"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261022/Materials/M_InkCloudRibbon.uasset",
+    "size": 7532,
+    "sha256": "20f406bcf9141878dc21f9c6db463e424f7871a931f030686a1202f758b78828"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261022/Materials/M_InkPaperCloud.uasset",
+    "size": 7657,
+    "sha256": "a050bf38a0ed4d73f6fbf71cb5f8e2a533ffb5a7b8658028a38558004d7df88f"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261022/Materials/M_InkWheel.uasset",
+    "size": 7793,
+    "sha256": "756843f180d33ecaa51b58cfef5df78e94e89f380e740bc2e6a228303510e4ec"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261022/Textures/T_ChestStates.uasset",
+    "size": 1571359,
+    "sha256": "ae14f8f1921ed7c5844be3c02c15399593786fb47736692953126b6231baae46"
+  },
+  {
+    "path": "Content/UI/Ink/Refactor20261022/Textures/T_NavigationAtlas.uasset",
+    "size": 2055470,
+    "sha256": "311cb0c5c437bddf3d3d241270c9c96f72a4e6632e77a4ecf1cf9946de9319ae"
+  },
+  {
+    "path": "Content/UI/Ink/SignIn20261022/M_ClaimableChestUI.uasset",
+    "size": 7649,
+    "sha256": "aea1b67de07a4ea265ea50756c7bb6d14f4303e6a67f0b0bb2fca68c4b80f17d"
+  },
+  {
+    "path": "Content/UI/Ink/SignIn20261022/NS_ClaimableChest.uasset",
+    "size": 236662,
+    "sha256": "127a20704c2e1e825e493f5f1ac3d46adad52e1e6d41901f28336b0102fec6d5"
+  },
+  {
+    "path": "Content/UI/Ink/Textures/T_InkAttributeIcons.uasset",
+    "size": 1247654,
+    "sha256": "d8ee3dbc4d0beb863b234847e27ed1e6c6773107f8ce3d881a375486984fd716"
+  },
+  {
+    "path": "Content/UI/Ink/Textures/T_InkMeditation.uasset",
+    "size": 1375090,
+    "sha256": "3dd660b7d9e3c27be27da841a8e6d6f254c3b8d03e67f724fb64a3eb07492dbb"
+  },
+  {
+    "path": "Content/UI/Ink/Textures/T_InkTitle.uasset",
+    "size": 1921480,
+    "sha256": "4a9717ea4c1eeb244c92044c950ca3167619cc120683b8df0a1f576c564bf656"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkCharacter.uasset",
+    "size": 2151270,
+    "sha256": "0723a8207161e67e1c3421f2d371cd0620968b08c9e611fc9ae7bacf421bddc1"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkFrontend.uasset",
+    "size": 2150137,
+    "sha256": "240643923a8623f30f2af0ae022c3aa22e0568de72d77069c80cbb8f815b814f"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkInventory.uasset",
+    "size": 2150821,
+    "sha256": "1bbbd475c5cc89b1391d75d41f1ca9624e1dc7292b8c3e60bda26c1df5df4d57"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkLeaderboard.uasset",
+    "size": 2157592,
+    "sha256": "ba2cba9739b6e82268722b943f247d15631161b266b8787993bceef4c77d3725"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkMainMenu.uasset",
+    "size": 2150138,
+    "sha256": "6991b0adaa62e3c272cdffc9db21f3d5fdabc9957a29447b84065ad88a3fae38"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkSaves.uasset",
+    "size": 2149040,
+    "sha256": "bffd656e41f189b8ed5cdc8ca979ad7b4fceb7cac0b29d6c1808a38b3f88344f"
+  },
+  {
+    "path": "Content/UI/Ink/Widgets/WBP_InkSettings.uasset",
+    "size": 2150336,
+    "sha256": "3dfe12b9bf9dc0392564113a571a129575872bee5e035e194437aa4042014081"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/imagegen-letter-prompts.json",
+    "size": 4718,
+    "sha256": "8a4c943c3fd5928ece2235440e6afc228c1734124ebb10ff24693ec32f93ee57"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/imagegen-prompts.json",
+    "size": 1502,
+    "sha256": "a5803c5c3eac1b5e7fd036369a8ad07f3e9a98c6c7a8ea2b6babbc58e8cc0345"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_A.png",
+    "size": 1265702,
+    "sha256": "b08c9be88067967fd1c5175177548cd0c005ec90b88f6de48744206a245b8298"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_B.png",
+    "size": 1571256,
+    "sha256": "f3de2344303559fac573b5ccd2aea20a82a4183fe0f219255c7dc88a24f694d1"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_C.png",
+    "size": 1443723,
+    "sha256": "9cf6e3e0720b2e658defd35347d8dddc9bce32f687996a1aa9ff9deb3959bf12"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_D.png",
+    "size": 1524745,
+    "sha256": "da8c65057fbe8fe3d6fdedbb8c6a117ba86c46622aebc17d1ce414d2583de065"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_S.png",
+    "size": 1223875,
+    "sha256": "79e75df62097a14f6e0f01de576fb74dd9ef38f9d99cf5dff0631b5b6e5986d5"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_SS.png",
+    "size": 1413490,
+    "sha256": "955b166fc9969c9267a9e252565bdaa044f59b0213843f3a3236df0b073975aa"
+  },
+  {
+    "path": "SourceAssets/UI/CharacterRating20261022/T_Rating_SSS.png",
+    "size": 1259981,
+    "sha256": "358aa94ee22fa47acd616b81fc3f235ac0284e747b6a3ede298dd6a45664d499"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/button-rectangular-prompt.txt",
+    "size": 1435,
+    "sha256": "e465577fd4ac4bb855dd5fa18c8b1d41c4cc3595bdc78cdfe0765aa597cb4ded"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/button-regions.json",
+    "size": 490,
+    "sha256": "98402c44a76bbb65417f050ac2bec7a5b026a3d566a05b23cd26de6277b88b15"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/ink-panel-prompts.json",
+    "size": 4080,
+    "sha256": "f2cea6229898e37a48d075db5094cffa16847c3973d40a18d97839f11ca329a4"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/navigation-complete-prompt.txt",
+    "size": 980,
+    "sha256": "343adb711bfd04b5ce46f97254b39503c7e58caf692ac79504ee244f7537c236"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/prompts.json",
+    "size": 3890,
+    "sha256": "ec6d9f2feb7e4fbff8a9f7186c99fe057a6db2e16cae6b3daeec53adbb552959"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/rank-theme-prompts.json",
+    "size": 5311,
+    "sha256": "bd79398629896c37e7c3d9a0f47b9402f334f9086d45ccaac5dfc00e410fe925"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/rank-theme-regions.json",
+    "size": 3854,
+    "sha256": "46d24c0da91d14124e4f40aef3be3c7be7db2d4b770a3c10c35f29fb6cda6b87"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_CultivationPadded.png",
+    "size": 1525519,
+    "sha256": "6e768a277724a767ea9bff818b49add7276a936285fbef8da25ccc2ff05d36ec"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_InkGoldLeaderboardLandscape.png",
+    "size": 2809349,
+    "sha256": "79e195f0387b017c1f1696ac05f57502750863561b74cd3c899e9348e9d9adfe"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_InkGoldLeaderboardPortrait.png",
+    "size": 2987962,
+    "sha256": "245d9987ee31410452bedb1f753a2eef0ce58f27f90054038cd3741bdbe49bcc"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_InkGoldNamecard.png",
+    "size": 2481774,
+    "sha256": "e1c393b0f924e362a6d55da0465b1fbb68a7302f94d0d62ffd1f90a3c0c007ca"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_NavigationComplete.png",
+    "size": 1624338,
+    "sha256": "5f1c52dec37a542bc51ccb16c882899ae78555eea6ffd2ba763957e584705327"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_ProvidedMenuControls.png",
+    "size": 2905165,
+    "sha256": "82fdace377a7b432ff7b47b495b6cde5f65ce12d14b3f0f587bc24a630cd84c0"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankDamageHeader.png",
+    "size": 1978733,
+    "sha256": "a39ef36158a2adfe945c5ca496a09bac8b88ebd1ed6685ff52b8ec80a871979c"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankDamageRows.png",
+    "size": 3073517,
+    "sha256": "695aa01a0f4dbc1e04d739e70396af650ec132e906645f3246a0f742eddc21d8"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankDamageRowsSpaced.png",
+    "size": 2759862,
+    "sha256": "85d516b92442502aba00cd194c272095e877cdbc2131b949fc05f103283371e5"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankSpeedHeader.png",
+    "size": 1719437,
+    "sha256": "22a4a9b88c724dad1c66325efa8aa2dfac42d4eeb896894bc922088b167a09a2"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankSpeedRows.png",
+    "size": 2780498,
+    "sha256": "79e07568f2c30e1d9f4c57aa4eb441d62de6fdb6a8dabfaeabe48b92c8ed950a"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankSwordHeader.png",
+    "size": 2029629,
+    "sha256": "f56a0f016873df09cd0fe9dc53a5b7f53448b4e854604df8a24c4eb1592cd23c"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_RankSwordRows.png",
+    "size": 2727418,
+    "sha256": "ba0126e8b311018544c54115189dc41a751b553540f1fbe182db6e0aa55d34a1"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_XianxiaBacking.png",
+    "size": 2461145,
+    "sha256": "55746d0e0eaf1206974ddce1789c189a69673ca0225a2dfea901f496e205543e"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_XianxiaButtons.png",
+    "size": 1508799,
+    "sha256": "08b0a5d4cf6844acc999906aa9b758c027983f7c180317345b7ddd21e55de160"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_XianxiaButtonsRectangular.png",
+    "size": 1244020,
+    "sha256": "98845eb0403e3837cea97399294ee0b1f7a88a8fb1af24324cead580ebbc779a"
+  },
+  {
+    "path": "SourceAssets/UI/NiagaraRevision20261022/T_XianxiaMeters.png",
+    "size": 1348451,
+    "sha256": "4043910d984da5289b409075e078b7042c1183172f42ed0a1db5e2b287f2c235"
+  },
+  {
+    "path": "SourceAssets/UI/VisualRefactor20261022/chest-generation-prompt.txt",
+    "size": 1194,
+    "sha256": "1c72292a358673c95e908e19d7dad303534e5118f46be15537f66da68b400ecb"
+  },
+  {
+    "path": "SourceAssets/UI/VisualRefactor20261022/generation-prompt.txt",
+    "size": 1601,
+    "sha256": "f2464d395859c826741d79aa3d1abfaa7ffac3bfa80d568b493c0df61e620bb8"
+  },
+  {
+    "path": "SourceAssets/UI/VisualRefactor20261022/T_ChestStates.png",
+    "size": 1512955,
+    "sha256": "0ed5f63208bc3e7a206fa82e7af6f38e2f9a7325d15a2bcc31a666f80f0204b0"
+  },
+  {
+    "path": "SourceAssets/UI/VisualRefactor20261022/T_NavigationAtlas.png",
+    "size": 2052111,
+    "sha256": "d27f87c5d1c7f19d11ce29f79f49700c9820a9763aac4e0178a321a8c4534e30"
+  }
+]

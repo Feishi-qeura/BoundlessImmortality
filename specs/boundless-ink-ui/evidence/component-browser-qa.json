@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "renderer": "Chrome headless local file; background networking disabled",
+  "browser_plugin_available": false,
+  "fallback_reason": "No browser automation plugin; sandbox browser startup failed; local rendering succeeded with approved escalation",
+  "component_images_loaded": "18/18 visible in rendered page",
+  "screenshots": [
+    {
+      "background": "checker",
+      "path": "evidence/component-review-checker.png",
+      "dimensions": [
+        1400,
+        2250
+      ],
+      "visually_inspected": true
+    },
+    {
+      "background": "light",
+      "path": "evidence/component-review-light.png",
+      "dimensions": [
+        1400,
+        2250
+      ],
+      "visually_inspected": true
+    },
+    {
+      "background": "dark",
+      "path": "evidence/component-review-dark.png",
+      "dimensions": [
+        1400,
+        2250
+      ],
+      "visually_inspected": true
+    }
+  ],
+  "visual_findings": "All current components visible; no baked labels, opaque screenshot rectangles or visible colored edge spill at review scale. Frame and gear centers show selected background.",
+  "interaction_limit": "State dropdown is a visual recipe demonstration; UE interactions and device sampling not tested."
+}

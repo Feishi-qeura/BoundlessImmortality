@@ -1,0 +1,5 @@
+Use case: precise-object-edit
+Asset type: one standalone transparent cultivation fill strip, revised from the approved health fill shape.
+Image 1 is the edit target: home-health-fill-default-v1.png. Image 2 is home-v2 style reference only.
+Change ONLY the red lacquer fill color in image 1 into deep jade green (#3A8D83 with darker emerald shadow). Preserve the image 1 long narrow pointed-ended ribbon silhouette, same proportions, same narrow upper-left highlight, same subtle cloudy internal texture, same transparent canvas margin and position. The health and cultivation strips share the exact same track geometry in the game. This must look like the GREEN version of that RED strip, not a different decorative component.
+Do not add a green outer glow, no halo, no gold perimeter, no golden flourishes or different endcaps. All visible pixels outside the single narrow ribbon must be alpha-transparent. No extra border, no frame, no track, no label or text or number, no background. Preserve the long narrow strip shape and canvas aspect. Output exactly one complete clean transparent strip with safe margin. Do not include any other UI element or alternate states.

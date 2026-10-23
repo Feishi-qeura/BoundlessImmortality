@@ -1,0 +1,5 @@
+tier_id,complete_rounds,anchor_stone,anchor_break_material,guild_visual,grant_final_buff,paid_condition
+G01,1,20,6,开宗入阵记录,false,false
+G03,3,40,12,共修碑第一层,false,false
+G06,6,60,18,开服旗帜,false,false
+G12,12,80,24,问道外显,true,false

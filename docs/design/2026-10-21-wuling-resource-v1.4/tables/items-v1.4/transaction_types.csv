@@ -1,0 +1,11 @@
+﻿transaction_type,idempotency_key,name,direction,amount_rule,rule
+TX_WORLD,world_instance/stage,世界阶段奖励,系统→主播,按world_rewards.csv,按同一原始收据只发一次
+TX_FOCUS,round/anchor/focus_slot,专注定向材料,系统→主播,完整轮每日最多6；只能推进一个选择,达到周期才发所选下品1份，余数保留
+TX_RECIPE,request_id,确定性炼制,主播投入→消耗；产物→声明所有者,按recipes/recipe_inputs,扣料与输出同事务，2合1不形成回环铸币
+TX_BREAK_SUCCESS,break_attempt_id,主播突破成功,材料与修为→消耗,核心1+所选辅材；修为沿原50%阈值,核心炼制已支付的石/钱不能再扣一遍
+TX_BREAK_FAILURE,break_attempt_id,渡劫失败,主播修为→销毁,"min(1500,未花费修为)",不掉境界；材料解锁退还；原料不复制
+TX_GUILD_SUPPLY,round/user/guild,公共资材,系统→武灵,1/正式成员完整轮；6/人/日；100/武灵/日,不产生可提款个人分红
+TX_GUILD_CRAFT,request_id,公库制作,主播绑定投入→消耗；公库产物→入账,四类公库材料总共5份/主播/日,产物直接公库；退出不退回个人
+TX_BUILD,guild/building/target_level,设施建设,武灵资材与公库材料→消耗,20/60/120与两类材料2/6/12,相同目标级并发只成功一次
+TX_MARKET,order_id/version,原型寄售,买家→卖家及销毁,只允许原MAT_HERB_T/MAT_IRON_T；沿原税5%,新增所有材料/书/装备/法宝禁售
+TX_EXPIRE,instance_id/expiry,到期处理,资产→销毁,最早输入到期传递,退款与退货不延长到期；旧礼物不进入新清理器

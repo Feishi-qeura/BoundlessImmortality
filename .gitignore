@@ -1,0 +1,57 @@
+# Unreal Engine generated output
+/Binaries/
+/DerivedDataCache/
+/Intermediate/
+/Saved/
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+
+# Generated IDE files and local editor state
+/.vs/
+/.idea/
+/.superpowers/
+/*.sln
+/*.slnx
+
+# Python bytecode and local caches
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build, analysis, and temporary output
+*.obj
+*.o
+*.lib
+*.exp
+*.ilk
+*.pdb
+*.rsp
+*.sarif
+*.log
+*.tmp
+*.temp
+
+# Backup copies are not source-of-truth project files
+**/backup/
+**/backups/
+**/Backup/
+**/Backups/
+
+# Local secrets and signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,230 @@
+schema_version: 1
+project_id: boundless-ink-ui
+status: generated-pending-visual-review
+visual_review:
+  status: v2-inspection-complete-revisions-required
+  complete: false
+  user_approved: false
+  evidence: evidence/home-9slice-visual-review.json
+  inspected_images: 10
+  required_images: 10
+  next_image: evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png
+  open_issues:
+  - rank-paper-v2-cloud-tips-cross-fixed-endcaps
+  v2_plan_inspection_complete: true
+  visual_acceptance_passed: false
+  successor_review: evidence/home-slice-correction-visual-review.json
+  resolved_in_successor:
+  - top-tile-v2-ornament-crosses-fixed-regions
+numerical_recheck: evidence/home-trim-recheck.json
+candidate_count: 3
+full_fit_count: 15
+source_pack: home-components-trim-v1
+coordinate_order: left-right-top-bottom
+guides:
+- component_id: home-bar-track
+  path: evidence/9slice-review-v2/home-bar-track-guides-v2.png
+  margins:
+  - 260
+  - 260
+  - 60
+  - 60
+  dimensions:
+  - 2046
+  - 226
+  reason: 左右完整菱形端帽与卷角固定，上下金线在60px以内；中心为平直空轨道。
+- component_id: home-top-tile
+  path: evidence/9slice-review-v2/home-top-tile-guides-v2.png
+  margins:
+  - 180
+  - 180
+  - 200
+  - 200
+  dimensions:
+  - 889
+  - 1097
+  reason: 四角金色卷纹固定；伸缩区只穿过平直边与无文字深墨内底。
+- component_id: home-rank-paper
+  path: evidence/9slice-review-v2/home-rank-paper-guides-v2.png
+  margins:
+  - 600
+  - 350
+  - 115
+  - 125
+  dimensions:
+  - 1575
+  - 399
+  reason: 左云尾与下侧云头留在600px端区，右云尾与卷角留在350px端区；中心纸面及直边伸缩。
+tests:
+- component_id: home-bar-track
+  variant: native
+  dimensions:
+  - 2046
+  - 226
+  path: evidence/9slice-review-v2/home-bar-track-native-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: true
+- component_id: home-bar-track
+  variant: wide
+  dimensions:
+  - 2865
+  - 226
+  path: evidence/9slice-review-v2/home-bar-track-wide-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-bar-track
+  variant: narrow
+  dimensions:
+  - 1637
+  - 226
+  path: evidence/9slice-review-v2/home-bar-track-narrow-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-bar-track
+  variant: tall
+  dimensions:
+  - 2046
+  - 306
+  path: evidence/9slice-review-v2/home-bar-track-tall-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: height-locked-centered-in-taller-container
+  art_origin:
+  - 0
+  - 40
+  native_reconstruction_exact: false
+- component_id: home-top-tile
+  variant: native
+  dimensions:
+  - 889
+  - 1097
+  path: evidence/9slice-review-v2/home-top-tile-native-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: null
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: true
+- component_id: home-top-tile
+  variant: wide
+  dimensions:
+  - 1245
+  - 1097
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: null
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-top-tile
+  variant: narrow
+  dimensions:
+  - 712
+  - 1097
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: null
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-top-tile
+  variant: tall
+  dimensions:
+  - 889
+  - 1481
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: null
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-rank-paper
+  variant: native
+  dimensions:
+  - 1575
+  - 399
+  path: evidence/9slice-review-v2/home-rank-paper-native-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: true
+- component_id: home-rank-paper
+  variant: wide
+  dimensions:
+  - 2205
+  - 399
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-rank-paper
+  variant: narrow
+  dimensions:
+  - 1260
+  - 399
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: nine-slice
+  art_origin:
+  - 0
+  - 0
+  native_reconstruction_exact: false
+- component_id: home-rank-paper
+  variant: tall
+  dimensions:
+  - 1575
+  - 539
+  path: evidence/9slice-review-v2/home-rank-paper-tall-v2.png
+  fixed_corner_pixels_identical: true
+  full_endcaps_pixels_identical: true
+  valid_stretch_center: true
+  mode: height-locked-centered-in-taller-container
+  art_origin:
+  - 0
+  - 70
+  native_reconstruction_exact: false
+engine_status: metadata and deterministic previews only; no UE import or Box brush verification
+note: Margins are native trimmed-source pixels, not logical button padding. Preserve border scaling consistently
+  when importing high-DPI art.
+correction_candidate: contracts/home-slice-correction-v4.yaml

@@ -1,0 +1,17 @@
+﻿item_id,name,slot,tier,min_major,stat,additive_value,max_equipped_in_slot,random_affixes,enhancement_system,viewer_equippable,source_id
+EQ_ROBE_T1,青云法衣,robe,1,0,health_add,0.03,1,False,False,False,CH_CRAFT
+EQ_CROWN_T1,青云道冠,crown,1,0,defense_add,0.03,1,False,False,False,CH_CRAFT
+EQ_BOOTS_T1,青云云履,boots,1,0,move_speed_add,0.02,1,False,False,False,CH_CRAFT
+EQ_PENDANT_T1,青云灵佩,pendant,1,0,attack_add,0.02,1,False,False,False,CH_CRAFT
+EQ_ROBE_T2,玄罡法衣,robe,2,3,health_add,0.05,1,False,False,False,CH_CRAFT
+EQ_CROWN_T2,玄罡道冠,crown,2,3,defense_add,0.04,1,False,False,False,CH_CRAFT
+EQ_BOOTS_T2,玄罡云履,boots,2,3,move_speed_add,0.03,1,False,False,False,CH_CRAFT
+EQ_PENDANT_T2,玄罡灵佩,pendant,2,3,attack_add,0.03,1,False,False,False,CH_CRAFT
+EQ_ROBE_T3,太清法衣,robe,3,6,health_add,0.08,1,False,False,False,CH_CRAFT
+EQ_CROWN_T3,太清道冠,crown,3,6,defense_add,0.06,1,False,False,False,CH_CRAFT
+EQ_BOOTS_T3,太清云履,boots,3,6,move_speed_add,0.04,1,False,False,False,CH_CRAFT
+EQ_PENDANT_T3,太清灵佩,pendant,3,6,attack_add,0.05,1,False,False,False,CH_CRAFT
+EQ_ROBE_T4,无极法衣,robe,4,9,health_add,0.12,1,False,False,False,CH_CRAFT
+EQ_CROWN_T4,无极道冠,crown,4,9,defense_add,0.09,1,False,False,False,CH_CRAFT
+EQ_BOOTS_T4,无极云履,boots,4,9,move_speed_add,0.05,1,False,False,False,CH_CRAFT
+EQ_PENDANT_T4,无极灵佩,pendant,4,9,attack_add,0.08,1,False,False,False,CH_CRAFT

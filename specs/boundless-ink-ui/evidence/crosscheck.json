@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "screen_count": 44,
+  "legacy_screens_covered": 39,
+  "current_registered_route_names": 38,
+  "missing_current_routes": [],
+  "brief_count": 44,
+  "all_entry_ids_resolved": true,
+  "components_generated": 0,
+  "home_approved": false,
+  "runtime_tests_run": false
+}

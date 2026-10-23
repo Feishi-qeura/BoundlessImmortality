@@ -1,0 +1,116 @@
+{
+  "stage": "home-trim-and-9slice-v2-numerical-recheck",
+  "python": "3.12.14",
+  "pillow": "12.3.0",
+  "pyyaml": "6.0.3",
+  "component_count": 18,
+  "retained_rgba_comparisons_passed": 18,
+  "source_hashes_unchanged": true,
+  "source_sheet_regions_match": 18,
+  "source_pixels": 28309155,
+  "trimmed_pixels": 17001944,
+  "pixel_area_reduction": 0.39941888057061403,
+  "max_discarded_alpha": 1,
+  "padding": 8,
+  "nine_slice_candidates": 3,
+  "full_fit": 15,
+  "preview_reconstructions": 12,
+  "corner_preservation_checks": 48,
+  "full_endcap_preservation_checks": 16,
+  "guide_pixel_checks": [
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-guides-v2.png",
+      "sha256": "928f155371e5af94d552cd694d1ed7859cacd21aa3982c0d9aa3371223272576"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-top-tile-guides-v2.png",
+      "sha256": "90a45fa1a66b6818ce9b62ee96007514de9e330c2dbd3b7d90b9648edb87daee"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-rank-paper-guides-v2.png",
+      "sha256": "e3578f4a2dd3f8ffb4a38c95fbef3270a379dd38d959bf702c03acc906eb7709"
+    }
+  ],
+  "preview_pixel_checks": [
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-native-v2.png",
+      "sha256": "ad574b0a36f966281a99fbaf3e591e20091df0ce8e5dfa72b7c5eae14db212f0",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-wide-v2.png",
+      "sha256": "d290ccfbeb967601628212d2e07cf63df375f17a8718c57ffca1559edb5ebb72",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-narrow-v2.png",
+      "sha256": "f1a685e6ebee7199ea73dd77afbc0079cb035e149e0008c62de51faeae1de0c4",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-tall-v2.png",
+      "sha256": "f7bddca802d6b7f80c8f7a993f1e0c97dab7f4d85300074c403f53f4ea95b0fe",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-top-tile-native-v2.png",
+      "sha256": "8423af4df7633b5d08d071f2649169c387d31d1247dca67e158a49dc46fc0e51",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "sha256": "afcb38490da591a2017c34faf350a4cc56f045ff23c1d88b2810b8edcb733c5d",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "sha256": "df7cfb7ff6129a5bf5107608b39496fd956f2953e19c01b96235680d782e9ab3",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "sha256": "ee414f6bc4c1c84933a8a0225b41434c97fd575f20723b0f86f0e516b1fa8f09",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-rank-paper-native-v2.png",
+      "sha256": "af6f1063f78d0686a4ef600205b3eca836b44541e5e1680912aa7ea38448141a",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "sha256": "9c87fd938283ace83a2420e3370ce34eb82cebda7ff9607e3e571fb934ca3b85",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png",
+      "sha256": "1cd56f0233d11aedf9248deaf8210adf9f9094cfd26d0cbb39fdeb90a1ee2949",
+      "pixels_match_reconstruction": true
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-rank-paper-tall-v2.png",
+      "sha256": "d9863af732e13f0cd5a453b7bc3af6b1f455dc6d9350bd0796916875de5ae4c3",
+      "pixels_match_reconstruction": true
+    }
+  ],
+  "package": {
+    "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/packages/home-components-trim-v1-png.zip",
+    "entries": 21,
+    "png_count": 18,
+    "sha256": "22c5e48cfa6a51fe565289a013619a79bd59b8d196427db12c110e4b09544f0d",
+    "integrity_passed": true,
+    "unchanged": true
+  },
+  "protected_files": {
+    "checked": 670,
+    "unchanged": 670,
+    "changed": []
+  },
+  "approved_home_hash_unchanged": true,
+  "state_records": 63,
+  "visual_review_complete": false,
+  "note": "Pixel checks do not prove visual acceptance; see home-9slice-visual-review.json.",
+  "runtime_files_written": false,
+  "ue_import_performed": false,
+  "atlas_created": false
+}

@@ -1,0 +1,893 @@
+schema_version: 1
+project_id: boundless-ink-ui
+pack_id: home-components-trim-v2
+status: generated
+source:
+  screen_id: home
+  sheet_asset_id: home-components-source-sheet-v1
+  sheet_path: assets/sprites/home-components-trim-v1/source-sheet-v1.png
+  sheet_dimensions:
+  - 4096
+  - 7130
+  sheet_kind: lossless-provenance-assembly-not-atlas
+  original_inputs:
+  - asset_id: home-identity-ink-default-v1
+    path: assets/components/home-identity-ink-default-v1.png
+    sha256: 782ebb0d486c635fba8a221b9b2b3493fbd16bff831d3351d11fe81aa52bbd55
+  - asset_id: home-avatar-frame-default-v1
+    path: assets/components/home-avatar-frame-default-v1.png
+    sha256: d915c88273f0652197d9e3ab947b06e60fb30ec42f49df78e300e0d065d1c60b
+  - asset_id: home-avatar-portrait-default-v2
+    path: assets/components/home-avatar-portrait-default-v2.png
+    sha256: e7109ca197c805497ea4b42f4c4a46566bf03510bc098cf51b8bb53994f3d022
+  - asset_id: home-realm-plaque-default-v1
+    path: assets/components/home-realm-plaque-default-v1.png
+    sha256: 07fb11e108210c6c4fc9396ba0777fe113ea5ecdea76634822d57bd4ed876cf0
+  - asset_id: home-bar-track-default-v1
+    path: assets/components/home-bar-track-default-v1.png
+    sha256: dc69fd39f235a3bf808ac3941905329326598224db01c97ddc3fd9fecddb0b62
+  - asset_id: home-health-fill-default-v1
+    path: assets/components/home-health-fill-default-v1.png
+    sha256: 981729eb0615fb4495afbe72a0ee61c58a4dcd7ab6c16a61c21e30b757e8cda1
+  - asset_id: home-qi-fill-default-v2
+    path: assets/components/home-qi-fill-default-v2.png
+    sha256: 11fcceb396e0b5e4b40ed572b0be10a536a76cea587c1dc41df51f5f17db3aff
+  - asset_id: home-top-tile-default-v1
+    path: assets/components/home-top-tile-default-v1.png
+    sha256: ede830e8fb2ddb7547e87aa89c72d4fce1dc0108dd53769243f4328399f959bb
+  - asset_id: home-icon-activity-default-v1
+    path: assets/components/home-icon-activity-default-v1.png
+    sha256: ebd501a884521503ae04cdbe8b27a68e12288bde2b8acfa5168424fc884e7fb7
+  - asset_id: home-icon-sign-in-default-v1
+    path: assets/components/home-icon-sign-in-default-v1.png
+    sha256: d22f22f20e30eceff2a91f19ef049fa775fc4d4cc10c82ee1443a515a89cf639
+  - asset_id: home-icon-journey-default-v1
+    path: assets/components/home-icon-journey-default-v1.png
+    sha256: ec1894ab5005dddc14c9011011ef96ccd86ac438ec7ec10bcb6ec28cab0b47de
+  - asset_id: home-icon-bag-default-v1
+    path: assets/components/home-icon-bag-default-v1.png
+    sha256: 5d4aad71f830ee73f114dae94436364e9f4f59c3778fa75ba62e41f94a450ded
+  - asset_id: home-icon-cultivate-default-v1
+    path: assets/components/home-icon-cultivate-default-v1.png
+    sha256: db0ce08b0feeb0d634106a2bbf43b46622a27bd1ef5f86e26c17f6b74026a542
+  - asset_id: home-icon-rank-default-v1
+    path: assets/components/home-icon-rank-default-v1.png
+    sha256: 7f4fa286ee51e3e5e7043d6f911a6784ad7de4b3aebce3840e3d3c4c22004a58
+  - asset_id: home-icon-menu-default-v1
+    path: assets/components/home-icon-menu-default-v1.png
+    sha256: 1ca99c5fc008963aa56be61c4896a709e0910891cc70d84be61f5f75d97c8bd9
+  - asset_id: home-rank-paper-default-v1
+    path: assets/components/home-rank-paper-default-v1.png
+    sha256: 485d61226d8c7070d3ae9c20c54e680dff46fd6a94f91712ee01c221b1493902
+  - asset_id: home-preview-paper-default-v1
+    path: assets/components/home-preview-paper-default-v1.png
+    sha256: 5b71862d10465973831cabd8f7a4374f5fa950d2128854d31a893a980b396ba4
+  - asset_id: home-bottom-cloud-default-v1
+    path: assets/components/home-bottom-cloud-default-v1.png
+    sha256: 5b58360de47d5077cf61e2864a51feb470490668f10938cde0352622cbcc8273
+coordinate_order:
+  bbox: x-y-width-height on source-sheet
+  source_crop: left-top-right-bottom exclusive on original PNG
+  margins: left-right-top-bottom
+trim_policy:
+  alpha_threshold: 1
+  padding: 8
+  color_resampling: false
+  retained_rgba_exact: true
+items:
+- id: home-identity-ink-default-trim-v1
+  semantic_name: home-identity-ink-default-trim-v1
+  component_id: home-identity-ink
+  category: panel
+  state: default
+  source_asset_id: home-identity-ink-default-v1
+  source_path: assets/components/home-identity-ink-default-v1.png
+  source_dimensions:
+  - 2172
+  - 724
+  source_sha256: 782ebb0d486c635fba8a221b9b2b3493fbd16bff831d3351d11fe81aa52bbd55
+  source_crop_bbox:
+  - 37
+  - 60
+  - 2133
+  - 664
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 2112
+  - 620
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-identity-ink-default-trim-v1.png
+  sha256: ccbece91b3580c12b165adcc5af8ae05ab01d514fa3cbd061a9fb8affa49e6d3
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 墨迹收笔与右端干刷没有重复平直伸缩区，保持等比。
+  dev_only: false
+  bbox:
+  - 48
+  - 48
+  - 2112
+  - 620
+- id: home-avatar-frame-default-trim-v1
+  semantic_name: home-avatar-frame-default-trim-v1
+  component_id: home-avatar-frame
+  category: frame
+  state: default
+  source_asset_id: home-avatar-frame-default-v1
+  source_path: assets/components/home-avatar-frame-default-v1.png
+  source_dimensions:
+  - 1254
+  - 1254
+  source_sha256: d915c88273f0652197d9e3ab947b06e60fb30ec42f49df78e300e0d065d1c60b
+  source_crop_bbox:
+  - 33
+  - 46
+  - 1234
+  - 1230
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1217
+  - 1200
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-avatar-frame-default-trim-v1.png
+  sha256: 6ede6fd8950cddbf8a187e194927b41392f0f4128658fe1d98d39b04f6707361
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 2208
+  - 48
+  - 1217
+  - 1200
+- id: home-avatar-portrait-default-trim-v1
+  semantic_name: home-avatar-portrait-default-trim-v1
+  component_id: home-avatar-portrait
+  category: character
+  state: default
+  source_asset_id: home-avatar-portrait-default-v2
+  source_path: assets/components/home-avatar-portrait-default-v2.png
+  source_dimensions:
+  - 1254
+  - 1254
+  source_sha256: e7109ca197c805497ea4b42f4c4a46566bf03510bc098cf51b8bb53994f3d022
+  source_crop_bbox:
+  - 26
+  - 35
+  - 1219
+  - 1232
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1209
+  - 1213
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-avatar-portrait-default-trim-v1.png
+  sha256: 6ed23baab944a4cc8610d29b26b7dbfc4ee60a6fa543f858209354c6e05f9bdb
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 48
+  - 1296
+  - 1209
+  - 1213
+- id: home-realm-plaque-default-trim-v1
+  semantic_name: home-realm-plaque-default-trim-v1
+  component_id: home-realm-plaque
+  category: panel
+  state: default
+  source_asset_id: home-realm-plaque-default-v1
+  source_path: assets/components/home-realm-plaque-default-v1.png
+  source_dimensions:
+  - 2170
+  - 725
+  source_sha256: 07fb11e108210c6c4fc9396ba0777fe113ea5ecdea76634822d57bd4ed876cf0
+  source_crop_bbox:
+  - 98
+  - 134
+  - 2070
+  - 592
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1988
+  - 474
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-realm-plaque-default-trim-v1.png
+  sha256: d4c3f066b27ab7e46320e75f8f8788e7ca9a52747744740b78f485ece9d961e2
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 上下中央有尖饰；普通九宫格会把中央尖饰横向拉宽，因此保持full/Fit。
+  dev_only: false
+  bbox:
+  - 1305
+  - 1296
+  - 1988
+  - 474
+- id: home-bar-track-default-trim-v1
+  semantic_name: home-bar-track-default-trim-v1
+  component_id: home-bar-track
+  category: progress
+  state: default
+  source_asset_id: home-bar-track-default-v1
+  source_path: assets/components/home-bar-track-default-v1.png
+  source_dimensions:
+  - 2172
+  - 724
+  source_sha256: dc69fd39f235a3bf808ac3941905329326598224db01c97ddc3fd9fecddb0b62
+  source_crop_bbox:
+  - 71
+  - 257
+  - 2101
+  - 467
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 2046
+  - 226
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-bar-track-default-trim-v1.png
+  sha256: ad574b0a36f966281a99fbaf3e591e20091df0ce8e5dfa72b7c5eae14db212f0
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: 9-slice
+    margins:
+    - 260
+    - 260
+    - 60
+    - 60
+  slice_review: 左右完整菱形端帽与卷角固定，上下金线在60px以内；中心为平直空轨道。
+  dev_only: false
+  bbox:
+  - 48
+  - 2557
+  - 2046
+  - 226
+  normalized_margins_lrtb:
+  - 0.1270772238514174
+  - 0.1270772238514174
+  - 0.26548672566371684
+  - 0.26548672566371684
+  minimum_source_pixel_size:
+  - 521
+  - 121
+  allowed_stretch_axes:
+  - x
+  height_policy: uniform-scale to intended control height, then lock height and stretch X only
+- id: home-health-fill-default-trim-v1
+  semantic_name: home-health-fill-default-trim-v1
+  component_id: home-health-fill
+  category: progress
+  state: default
+  source_asset_id: home-health-fill-default-v1
+  source_path: assets/components/home-health-fill-default-v1.png
+  source_dimensions:
+  - 1552
+  - 1013
+  source_sha256: 981729eb0615fb4495afbe72a0ee61c58a4dcd7ab6c16a61c21e30b757e8cda1
+  source_crop_bbox:
+  - 69
+  - 448
+  - 1482
+  - 567
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1429
+  - 135
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-health-fill-default-trim-v1.png
+  sha256: c010d36a0639b678e0c5f929baa0475e667ff3f7d13fab49dba31eddd997f18f
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 只在轨道内按fraction遮罩，不用九宫格或拉伸改变边缘。
+  dev_only: false
+  bbox:
+  - 2142
+  - 2557
+  - 1429
+  - 135
+- id: home-qi-fill-default-trim-v1
+  semantic_name: home-qi-fill-default-trim-v1
+  component_id: home-qi-fill
+  category: progress
+  state: default
+  source_asset_id: home-qi-fill-default-v2
+  source_path: assets/components/home-qi-fill-default-v2.png
+  source_dimensions:
+  - 1552
+  - 1013
+  source_sha256: 11fcceb396e0b5e4b40ed572b0be10a536a76cea587c1dc41df51f5f17db3aff
+  source_crop_bbox:
+  - 65
+  - 444
+  - 1485
+  - 571
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1436
+  - 143
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-qi-fill-default-trim-v1.png
+  sha256: 05abf00557807eea365f12203ba5de842cea7bd37a2197940720f4d2972bc4dc
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 只在轨道内按fraction遮罩，与血量共享轨道几何。
+  dev_only: false
+  bbox:
+  - 48
+  - 2831
+  - 1436
+  - 143
+- id: home-top-tile-default-trim-v1
+  semantic_name: home-top-tile-default-trim-v1
+  component_id: home-top-tile
+  category: panel
+  state: default
+  source_asset_id: home-top-tile-default-v1
+  source_path: assets/components/home-top-tile-default-v1.png
+  source_dimensions:
+  - 1122
+  - 1402
+  source_sha256: ede830e8fb2ddb7547e87aa89c72d4fce1dc0108dd53769243f4328399f959bb
+  source_crop_bbox:
+  - 125
+  - 163
+  - 998
+  - 1244
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 889
+  - 1097
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-top-tile-default-trim-v1.png
+  sha256: 8423af4df7633b5d08d071f2649169c387d31d1247dca67e158a49dc46fc0e51
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: v2全轴拉伸导致角饰及云纹变形；改用整图等比Fit，居中留透明余量，不强行填满变比例容器。
+  dev_only: false
+  bbox:
+  - 1532
+  - 2831
+  - 889
+  - 1097
+  allowed_stretch_axes: []
+  height_policy: uniform full/Fit; center art in container; preserve source aspect ratio
+  fit_policy:
+    mode: contain
+    alignment:
+    - 0.5
+    - 0.5
+    preserve_aspect: true
+    source_aspect_ratio: 0.8103919781221514
+    accepts_transparent_remainder: true
+- id: home-icon-activity-default-trim-v1
+  semantic_name: home-icon-activity-default-trim-v1
+  component_id: home-icon-activity
+  category: icon
+  state: default
+  source_asset_id: home-icon-activity-default-v1
+  source_path: assets/components/home-icon-activity-default-v1.png
+  source_dimensions:
+  - 1254
+  - 1254
+  source_sha256: ebd501a884521503ae04cdbe8b27a68e12288bde2b8acfa5168424fc884e7fb7
+  source_crop_bbox:
+  - 235
+  - 29
+  - 1050
+  - 1189
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 831
+  - 1176
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-activity-default-trim-v1.png
+  sha256: 4b870cf4bc266cb902fe4f0255459ce81507012d29691fa165dea19cbe2b9d6c
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 2469
+  - 2831
+  - 831
+  - 1176
+- id: home-icon-sign-in-default-trim-v1
+  semantic_name: home-icon-sign-in-default-trim-v1
+  component_id: home-icon-sign-in
+  category: icon
+  state: default
+  source_asset_id: home-icon-sign-in-default-v1
+  source_path: assets/components/home-icon-sign-in-default-v1.png
+  source_dimensions:
+  - 1480
+  - 1063
+  source_sha256: d22f22f20e30eceff2a91f19ef049fa775fc4d4cc10c82ee1443a515a89cf639
+  source_crop_bbox:
+  - 185
+  - 78
+  - 1311
+  - 1006
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1142
+  - 944
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-sign-in-default-trim-v1.png
+  sha256: 88db0e60111dcc6c037480f6767a4e5300844def108d1147f728669daa91bb53
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 48
+  - 4055
+  - 1142
+  - 944
+- id: home-icon-journey-default-trim-v1
+  semantic_name: home-icon-journey-default-trim-v1
+  component_id: home-icon-journey
+  category: icon
+  state: default
+  source_asset_id: home-icon-journey-default-v1
+  source_path: assets/components/home-icon-journey-default-v1.png
+  source_dimensions:
+  - 1254
+  - 1254
+  source_sha256: ec1894ab5005dddc14c9011011ef96ccd86ac438ec7ec10bcb6ec28cab0b47de
+  source_crop_bbox:
+  - 65
+  - 67
+  - 1206
+  - 1190
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1157
+  - 1139
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-journey-default-trim-v1.png
+  sha256: 403ec97cc820ff38ce040e73cc789e55be7100e193305242ccc949dfda1423a6
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 1238
+  - 4055
+  - 1157
+  - 1139
+- id: home-icon-bag-default-trim-v1
+  semantic_name: home-icon-bag-default-trim-v1
+  component_id: home-icon-bag
+  category: icon
+  state: default
+  source_asset_id: home-icon-bag-default-v1
+  source_path: assets/components/home-icon-bag-default-v1.png
+  source_dimensions:
+  - 1315
+  - 1197
+  source_sha256: 5d4aad71f830ee73f114dae94436364e9f4f59c3778fa75ba62e41f94a450ded
+  source_crop_bbox:
+  - 123
+  - 113
+  - 1245
+  - 1131
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1138
+  - 1034
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-bag-default-trim-v1.png
+  sha256: d77e628db0fabe2dbfa26b0f3818934622224a79d642bd647daa400f04f59d33
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 2443
+  - 4055
+  - 1138
+  - 1034
+- id: home-icon-cultivate-default-trim-v1
+  semantic_name: home-icon-cultivate-default-trim-v1
+  component_id: home-icon-cultivate
+  category: icon
+  state: default
+  source_asset_id: home-icon-cultivate-default-v1
+  source_path: assets/components/home-icon-cultivate-default-v1.png
+  source_dimensions:
+  - 1402
+  - 1122
+  source_sha256: db0ce08b0feeb0d634106a2bbf43b46622a27bd1ef5f86e26c17f6b74026a542
+  source_crop_bbox:
+  - 166
+  - 55
+  - 1276
+  - 1088
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1126
+  - 1049
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-cultivate-default-trim-v1.png
+  sha256: 532e0b83b5cfabf714c92d67a0b6b82891f3c195235c236ffc287e0ac8f4c7e3
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 48
+  - 5242
+  - 1126
+  - 1049
+- id: home-icon-rank-default-trim-v1
+  semantic_name: home-icon-rank-default-trim-v1
+  component_id: home-icon-rank
+  category: icon
+  state: default
+  source_asset_id: home-icon-rank-default-v1
+  source_path: assets/components/home-icon-rank-default-v1.png
+  source_dimensions:
+  - 1316
+  - 1195
+  source_sha256: 7f4fa286ee51e3e5e7043d6f911a6784ad7de4b3aebce3840e3d3c4c22004a58
+  source_crop_bbox:
+  - 99
+  - 138
+  - 1220
+  - 1087
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1137
+  - 965
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-rank-default-trim-v1.png
+  sha256: 09f70b2959dc0a131b03b6bf1d87401fb2de046eeefd6249b67f0da8ba0cfe8c
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 1222
+  - 5242
+  - 1137
+  - 965
+- id: home-icon-menu-default-trim-v1
+  semantic_name: home-icon-menu-default-trim-v1
+  component_id: home-icon-menu
+  category: icon
+  state: default
+  source_asset_id: home-icon-menu-default-v1
+  source_path: assets/components/home-icon-menu-default-v1.png
+  source_dimensions:
+  - 1254
+  - 1254
+  source_sha256: 1ca99c5fc008963aa56be61c4896a709e0910891cc70d84be61f5f75d97c8bd9
+  source_crop_bbox:
+  - 50
+  - 52
+  - 1204
+  - 1177
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1170
+  - 1141
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-icon-menu-default-trim-v1.png
+  sha256: f908798fe3b1a708877041c31f4bc78be582636fd5aa3a28ecdcdaadf8259297
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 头像、镂空框、图标或光效保持完整轮廓，等比Fit，不作九宫格。
+  dev_only: false
+  bbox:
+  - 2407
+  - 5242
+  - 1170
+  - 1141
+- id: home-rank-paper-default-trim-v1
+  semantic_name: home-rank-paper-default-trim-v1
+  component_id: home-rank-paper
+  category: panel
+  state: default
+  source_asset_id: home-rank-paper-default-v1
+  source_path: assets/components/home-rank-paper-default-v1.png
+  source_dimensions:
+  - 2172
+  - 724
+  source_sha256: 485d61226d8c7070d3ae9c20c54e680dff46fd6a94f91712ee01c221b1493902
+  source_crop_bbox:
+  - 307
+  - 176
+  - 1866
+  - 559
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1575
+  - 399
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-rank-paper-default-trim-v1.png
+  sha256: af6f1063f78d0686a4ef600205b3eca836b44541e5e1680912aa7ea38448141a
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: 9-slice
+    margins:
+    - 820
+    - 400
+    - 115
+    - 125
+  slice_review: v3候选扩大完整固定端区至左820/右400px，以覆盖v2跨线云尾；仍须检查分割线和宽窄预览，禁止纵向拉伸。
+  dev_only: false
+  bbox:
+  - 48
+  - 6431
+  - 1575
+  - 399
+  normalized_margins_lrtb:
+  - 0.5206349206349207
+  - 0.25396825396825395
+  - 0.2882205513784461
+  - 0.3132832080200501
+  minimum_source_pixel_size:
+  - 1221
+  - 241
+  allowed_stretch_axes:
+  - x
+  height_policy: uniform-scale to intended control height, then lock height and stretch X only
+- id: home-preview-paper-default-trim-v1
+  semantic_name: home-preview-paper-default-trim-v1
+  component_id: home-preview-paper
+  category: panel
+  state: default
+  source_asset_id: home-preview-paper-default-v1
+  source_path: assets/components/home-preview-paper-default-v1.png
+  source_dimensions:
+  - 1971
+  - 798
+  source_sha256: 5b71862d10465973831cabd8f7a4374f5fa950d2128854d31a893a980b396ba4
+  source_crop_bbox:
+  - 49
+  - 192
+  - 1947
+  - 627
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 1914
+  - 451
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-preview-paper-default-trim-v1.png
+  sha256: 9167e2d191208f04db04c2fa37f5144c3243cee9377ac1b7510bb4602b86ae4e
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 不规则纸边和右侧渐细长尾必须保持轮廓，full/Fit。
+  dev_only: true
+  bbox:
+  - 1671
+  - 6431
+  - 1914
+  - 451
+- id: home-bottom-cloud-default-trim-v1
+  semantic_name: home-bottom-cloud-default-trim-v1
+  component_id: home-bottom-cloud
+  category: decoration
+  state: default
+  source_asset_id: home-bottom-cloud-default-v1
+  source_path: assets/components/home-bottom-cloud-default-v1.png
+  source_dimensions:
+  - 2172
+  - 724
+  source_sha256: 5b58360de47d5077cf61e2864a51feb470490668f10938cde0352622cbcc8273
+  source_crop_bbox:
+  - 0
+  - 315
+  - 2172
+  - 451
+  source_crop_format: left-top-right-bottom-exclusive
+  padding: 8
+  dimensions:
+  - 2188
+  - 152
+  transparent_background: true
+  path: assets/sprites/home-components-trim-v1/items/home-bottom-cloud-default-trim-v1.png
+  sha256: f06bae40cb4e74e896e68675bfaf9f30e6c5d4c3523b19fb32acc95c97fc9220
+  retained_pixels_exact: true
+  max_discarded_alpha: 1
+  pivot:
+  - 0.5
+  - 0.5
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  slice_review: 云团位置与细云尾是整体构图，非无缝纹理；full/Fit且不重复铺贴。
+  dev_only: false
+  bbox:
+  - 48
+  - 6930
+  - 2188
+  - 152
+review:
+  complete: false
+  text_free: true
+  user_approved: false
+  evidence: evidence/home-slice-correction-visual-review.json
+  notes:
+  - Candidate policies only; existing active contract and ZIP remain unchanged.
+supersedes_pack: home-components-trim-v1
+candidate_only: true
+pixel_source_policy: reuse original trimmed PNG paths unchanged; metadata revision only

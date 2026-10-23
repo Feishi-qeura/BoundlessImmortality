@@ -1,0 +1,16 @@
+{
+  "document_version": "1.2",
+  "core_plans": 8,
+  "supporting_numbered_docs": 5,
+  "numeric_checks": 269,
+  "markdown_links_checked": 22,
+  "markdown_issues": [],
+  "game_assets_modified": false,
+  "game_source_modified": false,
+  "ui_planning_checks": 173,
+  "ui_runtime_cases_not_run": 235,
+  "screens": 32,
+  "file_tasks": 71,
+  "unchanged_asset_hashes": 376,
+  "unchanged_source_hashes": 47
+}

@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "check_count": 65,
+  "failed": [],
+  "task_qi_total": 780,
+  "guild_reward_budget": {
+    "CUR_STONE": 200,
+    "MAT_BREAK": 60
+  },
+  "first_hour_no_gift_no_offline_qi": 5040,
+  "first_hour_assumptions": "完整6轮、全部任务、签到一次、新规则档、无礼物无离线",
+  "buff_base_extra_qi_per_member": 120.0,
+  "rank_numeric_enabled": false,
+  "disabled_rank_reward_total_no_ties_30_people": 21986,
+  "runtime_tests_run": false,
+  "scope": "开服策划配置、算术及边界示例，未验证游戏实现、平台或商业效果",
+  "checks": [
+    {
+      "name": "task_ids_unique",
+      "passed": true
+    },
+    {
+      "name": "task_budget_780",
+      "passed": true
+    },
+    {
+      "name": "tasks_have_no_paid_condition",
+      "passed": true
+    },
+    {
+      "name": "all_task_rewards_for_viewer",
+      "passed": true
+    },
+    {
+      "name": "title_requires_all_tasks",
+      "passed": true
+    },
+    {
+      "name": "title_no_payment_no_rank_no_stats",
+      "passed": true
+    },
+    {
+      "name": "title_viewer_only",
+      "passed": true
+    },
+    {
+      "name": "title_free_template",
+      "passed": true
+    },
+    {
+      "name": "title_duration_30days",
+      "passed": true
+    },
+    {
+      "name": "guild_thresholds",
+      "passed": true
+    },
+    {
+      "name": "guild_stone_budget",
+      "passed": true
+    },
+    {
+      "name": "guild_material_budget",
+      "passed": true
+    },
+    {
+      "name": "guild_no_paid_threshold",
+      "passed": true
+    },
+    {
+      "name": "buff_only_last_tier",
+      "passed": true
+    },
+    {
+      "name": "buff_event_qi_cap",
+      "passed": true
+    },
+    {
+      "name": "buff_no_offline_race_or_claim_reset",
+      "passed": true
+    },
+    {
+      "name": "buff_duration",
+      "passed": true
+    },
+    {
+      "name": "window_seven_days",
+      "passed": true
+    },
+    {
+      "name": "launch_round_total_600",
+      "passed": true
+    },
+    {
+      "name": "launch_three_stages",
+      "passed": true
+    },
+    {
+      "name": "free_mechanism_opportunities",
+      "passed": true
+    },
+    {
+      "name": "thirty_runtime_cases_not_claimed",
+      "passed": true
+    },
+    {
+      "name": "unique_launch_acceptance_ids",
+      "passed": true
+    },
+    {
+      "name": "round_start_bucket_declared",
+      "passed": true
+    },
+    {
+      "name": "per_round_twenty",
+      "passed": true
+    },
+    {
+      "name": "daily_120",
+      "passed": true
+    },
+    {
+      "name": "full_window_840",
+      "passed": true
+    },
+    {
+      "name": "no_paid_or_damage_score",
+      "passed": true
+    },
+    {
+      "name": "points_not_currency",
+      "passed": true
+    },
+    {
+      "name": "qualification_1_40",
+      "passed": true
+    },
+    {
+      "name": "qualification_2_29",
+      "passed": true
+    },
+    {
+      "name": "qualification_2_30",
+      "passed": true
+    },
+    {
+      "name": "qualification_6_120",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L01",
+      "passed": true
+    },
+    {
+      "name": "task_item_L01",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L02",
+      "passed": true
+    },
+    {
+      "name": "task_item_L02",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L03",
+      "passed": true
+    },
+    {
+      "name": "task_item_L03",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L04",
+      "passed": true
+    },
+    {
+      "name": "task_item_L04",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L05",
+      "passed": true
+    },
+    {
+      "name": "task_item_L05",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L06",
+      "passed": true
+    },
+    {
+      "name": "task_item_L06",
+      "passed": true
+    },
+    {
+      "name": "six_round_title_L07",
+      "passed": true
+    },
+    {
+      "name": "task_item_L07",
+      "passed": true
+    },
+    {
+      "name": "prototype_full_rank_numbers_closed",
+      "passed": true
+    },
+    {
+      "name": "prototype_full_no_real_payment",
+      "passed": true
+    },
+    {
+      "name": "douyin_release_candidate_rank_numbers_closed",
+      "passed": true
+    },
+    {
+      "name": "douyin_release_candidate_no_real_payment",
+      "passed": true
+    },
+    {
+      "name": "rank_candidates_disabled",
+      "passed": true
+    },
+    {
+      "name": "release_launch_closed",
+      "passed": true
+    },
+    {
+      "name": "exactly_seven_activity_day_buckets",
+      "passed": true
+    },
+    {
+      "name": "round_time_boundary_0",
+      "passed": true
+    },
+    {
+      "name": "round_time_boundary_604200",
+      "passed": true
+    },
+    {
+      "name": "round_time_boundary_604201",
+      "passed": true
+    },
+    {
+      "name": "round_time_boundary_-1",
+      "passed": true
+    },
+    {
+      "name": "candidate_first_five",
+      "passed": true
+    },
+    {
+      "name": "candidate_tail_endpoints",
+      "passed": true
+    },
+    {
+      "name": "candidate_monotonic",
+      "passed": true
+    },
+    {
+      "name": "candidate_round_half_up",
+      "passed": true
+    },
+    {
+      "name": "tie_competition_ranks",
+      "passed": true
+    },
+    {
+      "name": "first_hour_example",
+      "passed": true
+    },
+    {
+      "name": "buff_base_qi_per_member",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "component_id": "home-identity-ink",
+    "prompt_path": "prompts/components/home-identity-ink-default-v1.txt",
+    "output": "assets/components/home-identity-ink-default-v1.png"
+  },
+  {
+    "component_id": "home-avatar-frame",
+    "prompt_path": "prompts/components/home-avatar-frame-default-v1.txt",
+    "output": "assets/components/home-avatar-frame-default-v1.png"
+  },
+  {
+    "component_id": "home-avatar-portrait",
+    "prompt_path": "prompts/components/home-avatar-portrait-default-v1.txt",
+    "output": "assets/components/home-avatar-portrait-default-v1.png"
+  },
+  {
+    "component_id": "home-realm-plaque",
+    "prompt_path": "prompts/components/home-realm-plaque-default-v1.txt",
+    "output": "assets/components/home-realm-plaque-default-v1.png"
+  },
+  {
+    "component_id": "home-bar-track",
+    "prompt_path": "prompts/components/home-bar-track-default-v1.txt",
+    "output": "assets/components/home-bar-track-default-v1.png"
+  },
+  {
+    "component_id": "home-health-fill",
+    "prompt_path": "prompts/components/home-health-fill-default-v1.txt",
+    "output": "assets/components/home-health-fill-default-v1.png"
+  },
+  {
+    "component_id": "home-qi-fill",
+    "prompt_path": "prompts/components/home-qi-fill-default-v1.txt",
+    "output": "assets/components/home-qi-fill-default-v1.png"
+  },
+  {
+    "component_id": "home-top-tile",
+    "prompt_path": "prompts/components/home-top-tile-default-v1.txt",
+    "output": "assets/components/home-top-tile-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-activity",
+    "prompt_path": "prompts/components/home-icon-activity-default-v1.txt",
+    "output": "assets/components/home-icon-activity-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-sign-in",
+    "prompt_path": "prompts/components/home-icon-sign-in-default-v1.txt",
+    "output": "assets/components/home-icon-sign-in-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-journey",
+    "prompt_path": "prompts/components/home-icon-journey-default-v1.txt",
+    "output": "assets/components/home-icon-journey-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-bag",
+    "prompt_path": "prompts/components/home-icon-bag-default-v1.txt",
+    "output": "assets/components/home-icon-bag-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-cultivate",
+    "prompt_path": "prompts/components/home-icon-cultivate-default-v1.txt",
+    "output": "assets/components/home-icon-cultivate-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-rank",
+    "prompt_path": "prompts/components/home-icon-rank-default-v1.txt",
+    "output": "assets/components/home-icon-rank-default-v1.png"
+  },
+  {
+    "component_id": "home-icon-menu",
+    "prompt_path": "prompts/components/home-icon-menu-default-v1.txt",
+    "output": "assets/components/home-icon-menu-default-v1.png"
+  },
+  {
+    "component_id": "home-rank-paper",
+    "prompt_path": "prompts/components/home-rank-paper-default-v1.txt",
+    "output": "assets/components/home-rank-paper-default-v1.png"
+  },
+  {
+    "component_id": "home-preview-paper",
+    "prompt_path": "prompts/components/home-preview-paper-default-v1.txt",
+    "output": "assets/components/home-preview-paper-default-v1.png"
+  },
+  {
+    "component_id": "home-bottom-cloud",
+    "prompt_path": "prompts/components/home-bottom-cloud-default-v1.txt",
+    "output": "assets/components/home-bottom-cloud-default-v1.png"
+  }
+]

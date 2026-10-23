@@ -1,0 +1,198 @@
+schema_version: 1
+project_id: boundless-ink-ui
+revision: v4
+status: author-reviewed-active
+candidate_only: false
+active_sprite_contract_unchanged: false
+base_manifest: assets/sprites/home-components-trim-v1/sprite-manifest.yaml
+candidate_manifest: assets/sprites/home-components-trim-v2/sprite-manifest.yaml
+source_pack: home-components-trim-v1
+candidate_pack: home-components-trim-v2
+coordinate_order: left-right-top-bottom
+nine_slice_candidate_count: 2
+full_fit_count: 16
+changed_components:
+- component_id: home-top-tile
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  reason: v2全轴拉伸导致角饰及云纹变形；改用整图等比Fit，居中留透明余量，不强行填满变比例容器。
+- component_id: home-rank-paper
+  slice:
+    type: 9-slice
+    margins:
+    - 820
+    - 400
+    - 115
+    - 125
+  reason: v4：窄于原生宽高比时整图Fit，避免v3中心纸纹压成竖带；达到原生宽高比才使用820/400px固定端区、锁高X轴九宫格。
+  responsive_render_policy: &id001
+    type: aspect-dependent
+    source_dimensions:
+    - 1575
+    - 399
+    coordinate_space: normalize destination height to 399 source pixels before comparing widths
+    selection: if destination_width/destination_height < 1575/399 use full/Fit; otherwise use height-locked X-only
+      nine-slice
+    narrow:
+      mode: full/Fit
+      alignment:
+      - 0.5
+      - 0.5
+      preserve_aspect: true
+      accepts_transparent_remainder: true
+      art_bounds_define_text_and_hit_layout: true
+    wide:
+      mode: nine-slice-X-only
+      margins_lrtb:
+      - 820
+      - 400
+      - 115
+      - 125
+      minimum_policy_width_at_source_height: 1575
+      tested_widths_at_source_height:
+      - 1575
+      - 2205
+      height_locked: true
+    importer_requirement: A single generic Box margin cannot express this policy; implement the aspect branch before
+      integration.
+carried_unchanged: home-bar-track keeps reviewed v2 X-only policy; other 15 full/Fit items unchanged
+guides:
+- component_id: home-rank-paper
+  path: evidence/slice-correction-v3/home-rank-paper-guides-v3.png
+  dimensions:
+  - 1575
+  - 399
+  margins_lrtb:
+  - 820
+  - 400
+  - 115
+  - 125
+  sha256: 70ef0d424f1e15bc1ad45f67b325d1787eae70959bd511db02b364f28f396183
+tests:
+- component_id: home-top-tile
+  variant: wide
+  mode: full/Fit
+  path: evidence/slice-correction-v3/home-top-tile-wide-fit-v3.png
+  dimensions:
+  - 1245
+  - 1097
+  art_dimensions:
+  - 889
+  - 1097
+  art_origin:
+  - 178
+  - 0
+  scale: 1.0
+  unchanged_art_pixels: true
+  integer_rounding_aspect_error: 0.0
+  sha256: ec6840c7c3297584ea8a8fd9e01a8d75be731bfbd03655ac776ebfc1bb92d195
+  numerical_check_passed: true
+- component_id: home-top-tile
+  variant: narrow
+  mode: full/Fit
+  path: evidence/slice-correction-v3/home-top-tile-narrow-fit-v3.png
+  dimensions:
+  - 712
+  - 1097
+  art_dimensions:
+  - 712
+  - 879
+  art_origin:
+  - 0
+  - 109
+  scale: 0.8008998875140607
+  unchanged_art_pixels: false
+  integer_rounding_aspect_error: 0.00038060155787378314
+  sha256: 3d9c3832bda23c324a2464a9c5781b88ef25debc8fde33c91ae57efe59faf2e2
+  numerical_check_passed: true
+- component_id: home-top-tile
+  variant: tall
+  mode: full/Fit
+  path: evidence/slice-correction-v3/home-top-tile-tall-fit-v3.png
+  dimensions:
+  - 889
+  - 1481
+  art_dimensions:
+  - 889
+  - 1097
+  art_origin:
+  - 0
+  - 192
+  scale: 1.0
+  unchanged_art_pixels: true
+  integer_rounding_aspect_error: 0.0
+  sha256: dcefc50ff088f0b96455750a5b6d8d066d007b88e3aba743c50c0c80258ec420
+  numerical_check_passed: true
+- component_id: home-rank-paper
+  variant: native
+  mode: nine-slice-X-only
+  path: evidence/slice-correction-v3/home-rank-paper-native-v3.png
+  dimensions:
+  - 1575
+  - 399
+  art_origin:
+  - 0
+  - 0
+  margins_lrtb:
+  - 820
+  - 400
+  - 115
+  - 125
+  full_height_endcaps_exact: true
+  center_width: 355
+  center_scale_x: 1.0
+  sha256: af6f1063f78d0686a4ef600205b3eca836b44541e5e1680912aa7ea38448141a
+  numerical_check_passed: true
+- component_id: home-rank-paper
+  variant: wide
+  mode: nine-slice-X-only
+  path: evidence/slice-correction-v3/home-rank-paper-wide-v3.png
+  dimensions:
+  - 2205
+  - 399
+  art_origin:
+  - 0
+  - 0
+  margins_lrtb:
+  - 820
+  - 400
+  - 115
+  - 125
+  full_height_endcaps_exact: true
+  center_width: 985
+  center_scale_x: 2.7746478873239435
+  sha256: 36727f5b39d89986fdf676ded30a17e49dfe8a2ef0a36fef40976ca679ed032e
+  numerical_check_passed: true
+- component_id: home-rank-paper
+  variant: narrow
+  mode: full/Fit-responsive-fallback
+  path: evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png
+  dimensions:
+  - 1260
+  - 399
+  art_dimensions:
+  - 1260
+  - 319
+  art_origin:
+  - 0
+  - 40
+  scale: 0.8
+  integer_rounding_aspect_error: 0.0024748391354565413
+  sha256: 596683dd1d232a4d7c93674ba3d00ae4eb91a2fd86057b7b8de2b800ab5f461e
+  numerical_check_passed: true
+visual_review: evidence/home-slice-correction-v4-visual-review.json
+no_ue_import: true
+no_atlas: true
+fit_layout_limit: Top tile Fit may leave transparent container remainder; future text/hit layout must follow fitted
+  art bounds, without modifying runtime in this stage.
+supersedes: contracts/home-slice-correction-v3.yaml
+responsive_policy: *id001
+policy_scope: Only rank-paper narrow rendering changes from v3; other reviewed art and branches are carried unchanged.
+active_sprite_contract: contracts/sprite-contract.yaml
+user_approved: false
+activation_basis: User requested delivery finalization after review; this is not derived-art approval.

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "source": "direct-user-message",
+  "quote": "确认",
+  "resolves_previous_offer": "确认18个首页组件，并继续切图与九宫格审核",
+  "approved_assets": [
+    "home-identity-ink-default-v1",
+    "home-avatar-frame-default-v1",
+    "home-avatar-portrait-default-v2",
+    "home-realm-plaque-default-v1",
+    "home-bar-track-default-v1",
+    "home-health-fill-default-v1",
+    "home-qi-fill-default-v2",
+    "home-top-tile-default-v1",
+    "home-icon-activity-default-v1",
+    "home-icon-sign-in-default-v1",
+    "home-icon-journey-default-v1",
+    "home-icon-bag-default-v1",
+    "home-icon-cultivate-default-v1",
+    "home-icon-rank-default-v1",
+    "home-icon-menu-default-v1",
+    "home-rank-paper-default-v1",
+    "home-preview-paper-default-v1",
+    "home-bottom-cloud-default-v1"
+  ],
+  "source_page": "home-v2",
+  "authorized_stage": "lossless-individual-trimming-and-9slice-review",
+  "runtime_integration_authorized": false,
+  "atlas_generated": false
+}

@@ -1,0 +1,11 @@
+﻿stage_id,name,from_realm_index,to_realm_index,min_major,region,subarea,core_species,core_count,guard_required,guard_max_count,essence_max_count,treasure_max_count,guard_species_count,essence_species_count,treasure_species_count,old_major_break_material_cost,old_major_stone_cost,major_stone_at_commit,viewer_material_cost,tribulation
+BR01,练气九阶→筑基初期,8,9,0,青云山,凝脉谷,MAT_BR01_C01,1,False,3,3,1,5,5,5,20,60,0,0,False
+BR02,筑基大圆满→结晶一阶,12,13,1,玄铁岭,凝晶地窟,MAT_BR02_C01,1,False,2,4,1,5,5,5,40,120,0,0,False
+BR03,结晶三阶→金丹一阶,15,16,2,赤炎地,五行丹窟,MAT_BR03_C01,1,False,2,5,1,5,5,5,60,180,0,0,False
+BR04,金丹六阶→元婴,21,22,3,妖兽林,古修育婴府,MAT_BR04_C01,1,False,3,4,1,5,5,5,80,240,0,0,True
+BR05,元婴→化神,22,23,4,星陨海,观神古台,MAT_BR05_C01,1,False,1,5,1,5,5,5,120,360,0,0,True
+BR06,化神→元神一阶,23,24,5,星陨海,沉魂古战场,MAT_BR06_C01,1,False,2,6,1,5,5,5,120,360,0,0,True
+BR07,元神二阶→炼虚一阶,25,26,6,太虚境,定界裂隙,MAT_BR07_C01,1,False,2,5,1,5,5,5,120,360,0,0,True
+BR08,炼虚五阶→大乘,30,31,7,太虚境,问道天阙,MAT_BR08_C01,1,False,3,8,1,5,5,5,160,480,0,0,True
+BR09,大乘→飞升,31,32,8,太虚境,九天劫台,MAT_BR09_C01,1,False,3,10,1,5,5,5,200,600,0,0,True
+BR10,飞升→混元无极,32,33,9,太虚境,混沌归一坛,MAT_BR10_C01,1,False,3,10,1,5,5,5,200,600,0,0,True

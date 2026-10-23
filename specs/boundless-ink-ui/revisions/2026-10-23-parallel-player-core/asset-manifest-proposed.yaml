@@ -1,0 +1,61 @@
+schema_version: 1
+project_id: boundless-ink-ui
+revision: 2026-10-23-parallel-player-core
+assets:
+  - id: breakthrough-preparation-v1-parallel-player-core
+    kind: page
+    type: page
+    screen_id: breakthrough
+    path: revisions/2026-10-23-parallel-player-core/breakthrough-preparation-v1.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: candidate
+    approved: false
+    review_status: awaiting-user-visual-review
+    version: 1
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-997857f4-b8d9-4f9f-bc7c-8afe7e6094f4.png
+    source_assets: []
+    sha256: 025b4e5c8f89093f5a4aee2bf3d9f0836da41d89925751985f6f95fb1dc0c3b8
+    mode: RGB
+    notes: Generated from text only; not derived from local project images. Runtime implementation approval does not imply this page image is approved.
+  - id: main-menu-v1-parallel-player-core
+    kind: page
+    type: page
+    screen_id: main
+    path: revisions/2026-10-23-parallel-player-core/main-menu-v1.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: candidate
+    approved: false
+    review_status: awaiting-user-visual-review
+    version: 1
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-374163c3-953e-4593-a17d-6bf604401331.png
+    source_assets: []
+    sha256: aa8924f782a39cd15cc86153242e77faea863a885b7570dc990644138bb8f400
+    mode: RGB
+    notes: Text-only candidate; abstract paper/mountain background is not authorized to replace the protected project scene.
+  - id: tribulation-live-v1-parallel-player-core
+    kind: page
+    type: page
+    screen_id: tribulation
+    path: revisions/2026-10-23-parallel-player-core/tribulation-live-v1.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: candidate
+    approved: false
+    review_status: awaiting-user-visual-review
+    version: 1
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-14fc00aa-552a-4caa-96fe-124ab38f0cd9.png
+    source_assets: []
+    sha256: 67ca77b4f40973471cb88931ad4e2d305d3b10be13fe177202b91e301767897f
+    mode: RGB
+    notes: Text-only candidate with blank authoritative fields; success and failure panels are mutually exclusive state templates.

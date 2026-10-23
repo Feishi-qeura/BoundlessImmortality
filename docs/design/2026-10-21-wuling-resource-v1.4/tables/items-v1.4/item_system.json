@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "design_version": "wuling-items-v1.4",
+  "status": "design_only",
+  "canonical_tables_directory": "tables/items-v1.4",
+  "default_profile": "prototype_full",
+  "profiles": {
+    "prototype_full": {
+      "item_extension": true,
+      "real_payment": false,
+      "player_trade_new_items": false,
+      "tribulation": true
+    },
+    "douyin_release_candidate": {
+      "item_extension": false,
+      "real_payment": false,
+      "player_trade_new_items": false,
+      "tribulation": false
+    }
+  },
+  "ownership": {
+    "breakthrough_materials": "anchor",
+    "method_items": "anchor",
+    "equipment": "anchor",
+    "fabao": "anchor",
+    "props": "anchor",
+    "build_materials": "guild",
+    "viewer_break_materials": false
+  },
+  "breakthrough": {
+    "max_category_slots": 4,
+    "core_count": 1,
+    "all_guard_optional": true,
+    "quality_core": "core_item.grade.core_score",
+    "quality_guard": "floor(sum(grade.guard_weight * quantity) / stage.guard_max_count)",
+    "quality_essence": "floor(sum(grade.essence_weight * quantity) / stage.essence_max_count)",
+    "quality_treasure": "sum(grade.treasure_score * quantity)",
+    "quality_total": "core + guard + essence + treasure",
+    "q_cap": 100,
+    "random_quality": false,
+    "quality_mode": "bounded_additive_major_snapshots",
+    "quality_major_budget_divisor": 10,
+    "quality_total_bonus_cap": 0.1,
+    "quality_stat_rule": "1+min(0.10,sum((band.live_snapshot_factor-1)/10 for highest snapshot of each completed major))",
+    "raw_indie_multiplier_enabled": false,
+    "cumulative_quality_multiply": false,
+    "current_major_quality_rework": true,
+    "rework_probability_roll": false,
+    "rework_requires_core": false,
+    "rework_upgrade_core_consumes_one": true,
+    "rework_only_higher_q": true,
+    "rework_replaces_full_optional_set": true,
+    "highest_quality_state_reset_on_new_major": false,
+    "old_gift_migration": "legacy_preserve",
+    "major_cost_mode": "core_consumed_once_no_extra_old_major_mat_or_stone",
+    "minor_cost_mode": "legacy_v1.3_unchanged",
+    "readiness": {
+      "full_qi_required": true,
+      "min_health_ratio": 0.5,
+      "safe_seconds_since_combat": 15,
+      "weakness_seconds_at_no_guard": 60,
+      "weakness_defense_penalty": 0.05,
+      "weakness_duration_rule": "60-floor(60*guard_score/15)",
+      "affects_probability": false
+    }
+  },
+  "focus_sources": {
+    "full_round_seconds": 600,
+    "eligible_rounds_per_anchor_day": 6,
+    "one_focus_per_round": true,
+    "core_cycle": 1,
+    "guard_cycle": 1,
+    "essence_cycle": 2,
+    "treasure_cycle": 6,
+    "selected_species_not_random": true,
+    "counter_scope": "app/anchor/realm_lane/profile/window",
+    "progress_shared_with_method_focus": true,
+    "optional_additive_budget": true,
+    "no_race_bonus_double_grant": true
+  },
+  "refining": {
+    "input_count": 2,
+    "output_count": 1,
+    "max_grade": 4,
+    "success_rate": 1,
+    "no_reverse_refund": true
+  },
+  "equipment": {
+    "anchor_slots": [
+      "robe",
+      "crown",
+      "boots",
+      "pendant"
+    ],
+    "additional_weapon_slot": false,
+    "viewer_equipment": false,
+    "change_only_safe_preparation": true,
+    "freeze_loadout_on_event_start": true
+  },
+  "fabao": {
+    "anchor_max_equipped": 1,
+    "viewer_equipment": false,
+    "affects_tribulation_probability": false,
+    "cooldown_survives_unequip": true,
+    "cooldown_scope": "anchor/effect_key/profile/window"
+  },
+  "new_property_caps": {
+    "attack_add": 0.2,
+    "defense_add": 0.25,
+    "health_add": 0.25,
+    "move_speed_add": 0.1,
+    "excludes_legacy_paid_entitlements": true,
+    "normalized_race_uses_equipment": false
+  },
+  "guild": {
+    "supply_member_day_cap": 6,
+    "supply_guild_day_cap": 100,
+    "personal_numeric_exchange": false,
+    "currency_donation": false,
+    "public_material_craft_daily_cap": 5,
+    "build_level_supply": [
+      20,
+      60,
+      120
+    ],
+    "replaces_v1_1_flat_supply_cost_100": true,
+    "numeric_build_buffs": false
+  },
+  "props": {
+    "all_new_props_daily_craft_cap": 6,
+    "per_item_daily_craft_cap": 2,
+    "old_prop_caps_unchanged": true
+  },
+  "trade": {
+    "new_item_whitelist": [],
+    "legacy_whitelist": [
+      "MAT_HERB_T",
+      "MAT_IRON_T"
+    ],
+    "guild_personal_transfer": false
+  },
+  "expiry": {
+    "window_days_prototype": 30,
+    "derived_item_earliest_input": true,
+    "gifts_preserved": true
+  }
+}

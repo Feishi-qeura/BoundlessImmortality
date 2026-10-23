@@ -1,0 +1,19 @@
+﻿component_id,name,file,actual_width,actual_height,content_bbox,source_bbox_941x1672,text,slice,approval
+home-identity-ink,身份墨底,assets/components/home-identity-ink-default-v1.png,2172,724,"[40, 62, 2131, 661]","[18, 30, 500, 197]",no-text,full/Fit,pending-user-review
+home-avatar-frame,头像金框,assets/components/home-avatar-frame-default-v1.png,1254,1254,"[38, 48, 1228, 1203]","[27, 40, 150, 151]",no-text,full/Fit,pending-user-review
+home-avatar-portrait,修士头像,assets/components/home-avatar-portrait-default-v2.png,1254,1254,"[28, 37, 1217, 1228]","[43, 61, 120, 114]",no-text,full/Fit,pending-user-review
+home-realm-plaque,境界空白牌,assets/components/home-realm-plaque-default-v1.png,2170,725,"[101, 136, 2068, 590]","[22, 178, 160, 47]",no-text,full/Fit,pending-user-review
+home-bar-track,状态条金框轨道,assets/components/home-bar-track-default-v1.png,2172,724,"[73, 260, 2099, 465]","[166, 97, 321, 39]",no-text,full/Fit,pending-user-review
+home-health-fill,血量红色填充,assets/components/home-health-fill-default-v1.png,1552,1013,"[71, 450, 1481, 565]","[179, 104, 280, 25]",no-text,full/Fit,pending-user-review
+home-qi-fill,修为玉青填充,assets/components/home-qi-fill-default-v2.png,1552,1013,"[67, 446, 1484, 567]","[179, 147, 280, 25]",no-text,full/Fit,pending-user-review
+home-top-tile,顶部入口空白底框,assets/components/home-top-tile-default-v1.png,1122,1402,"[127, 166, 996, 1242]","[542, 55, 115, 144]",no-text,full/Fit,pending-user-review
+home-icon-activity,活动红灯笼,assets/components/home-icon-activity-default-v1.png,1254,1254,"[237, 31, 1048, 1186]","[565, 63, 70, 77]",no-text,full/Fit,pending-user-review
+home-icon-sign-in,签到空白卷轴,assets/components/home-icon-sign-in-default-v1.png,1480,1063,"[187, 80, 1309, 1004]","[696, 66, 66, 75]",no-text,full/Fit,pending-user-review
+home-icon-journey,仙途宝塔,assets/components/home-icon-journey-default-v1.png,1254,1254,"[68, 69, 1199, 1188]","[819, 60, 67, 85]",no-text,full/Fit,pending-user-review
+home-icon-bag,背包锦囊,assets/components/home-icon-bag-default-v1.png,1315,1197,"[125, 116, 1242, 1128]","[232, 1482, 124, 118]",no-text,full/Fit,pending-user-review
+home-icon-cultivate,修炼入定徽记,assets/components/home-icon-cultivate-default-v1.png,1402,1122,"[173, 63, 1271, 1079]","[386, 1449, 178, 162]",no-text,full/Fit,pending-user-review
+home-icon-rank,排行交叉双剑,assets/components/home-icon-rank-default-v1.png,1316,1195,"[103, 142, 1218, 1085]","[584, 1480, 123, 122]",no-text,full/Fit,pending-user-review
+home-icon-menu,菜单古金齿轮,assets/components/home-icon-menu-default-v1.png,1254,1254,"[51, 55, 1200, 1175]","[767, 1494, 117, 105]",no-text,full/Fit,pending-user-review
+home-rank-paper,查看排行空白纸底,assets/components/home-rank-paper-default-v1.png,2172,724,"[308, 176, 1834, 550]","[672, 794, 250, 87]",no-text,full/Fit,pending-user-review
+home-preview-paper,仅预览标签纸底,assets/components/home-preview-paper-default-v1.png,1971,798,"[51, 195, 1939, 623]","[22, 253, 223, 50]",no-text,full/Fit,pending-user-review
+home-bottom-cloud,底栏淡金云带,assets/components/home-bottom-cloud-default-v1.png,2172,724,"[8, 319, 2169, 444]","[0, 1551, 941, 65]",no-text,full/Fit,pending-user-review

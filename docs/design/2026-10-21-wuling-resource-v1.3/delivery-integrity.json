@@ -1,0 +1,22 @@
+{
+  "document_version": "1.3",
+  "generated_at_utc": "2026-10-21T09:31:00.808200+00:00",
+  "core_plans": 8,
+  "supporting_numbered_docs": 6,
+  "numeric_checks": 270,
+  "launch_planning_checks": 65,
+  "ui_planning_checks": 184,
+  "markdown_links_checked": 26,
+  "markdown_issues": [],
+  "screens": 34,
+  "file_tasks": 77,
+  "ui_runtime_cases_not_run": 249,
+  "launch_runtime_cases_not_run": 30,
+  "game_assets_modified_by_this_delivery": false,
+  "game_source_modified_by_this_delivery": false,
+  "asset_hashes_stable_since_audit": 384,
+  "asset_changes_since_audit": [],
+  "source_hashes_stable_since_audit": 47,
+  "source_changes_since_audit": [],
+  "scope": "Documentation and data validation; no UE/service/platform execution"
+}

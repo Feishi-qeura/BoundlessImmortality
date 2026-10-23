@@ -1,0 +1,5 @@
+﻿asset_id,name,owner_type,is_currency,mint_source,spend,personal_transfer,guild_transfer,gift_minted,exchange_ratio,daily_cap
+CUR_STONE,灵石,anchor,True,世界每完整轮80；原NPC回收每日≤50,既有小阶突破/炼制/装备/法宝/道具/原型市场,False,False,False,无现金抖币兑换,按既有各来源限额，不额外新铸币
+CUR_SUPPLY,武灵资材,guild,True,正式成员完整事件每人1，每人每日6，武灵每日100,只用于公共建设外观和入口,False,False,False,不能兑换灵石、个人修为或材料,100/武灵/自然日
+STAT_CONTRIB,个人贡献,viewer,False,有效免费响应，沿原贡献上限,只记录荣誉，不付价兑换数值,False,False,False,不可兑换,沿v1.3：120；开服贡献独立记账
+STAT_REPUTATION,武灵声望,guild,False,共同事件，沿原每日60上限,组织记录，不扣除兑换战斗权利,False,False,False,不可兑换,60/武灵/自然日

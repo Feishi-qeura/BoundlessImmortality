@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "pack_id": "home-components-trim-v2",
+  "policy_revision": "v4",
+  "source_component_count": 18,
+  "retained_rgba_checks": 18,
+  "unchanged_original_source_hashes": 18,
+  "unchanged_trimmed_png_hashes": 18,
+  "source_sheet_region_checks": 18,
+  "deterministic_preview_checks": 10,
+  "guide_pixel_checks": 2,
+  "accepted_visual_images": 7,
+  "open_author_review_issues": 0,
+  "derivative_user_approved": false,
+  "protected_files": {
+    "checked": 670,
+    "unchanged": 670,
+    "changed": []
+  },
+  "package": {
+    "path": "packages/home-components-trim-v2-png.zip",
+    "sha256": "178851e9e1e935243216b57509af5d19c30863593c60a2c3964263f7642cafcb",
+    "bytes": 30805823,
+    "entries": 43,
+    "component_png_count": 18,
+    "preview_png_count": 12,
+    "integrity_passed": true,
+    "all_entry_hashes_verified": true
+  },
+  "old_zip_unchanged": true,
+  "approved_home_hash_unchanged": true,
+  "existing_images_and_packages": {
+    "checked": 90,
+    "unchanged": 90,
+    "changed": [],
+    "evidence": "evidence/pre-finalization-preserved-files.json"
+  },
+  "evidence_reuse": {
+    "current_turn_images_reopened": 0,
+    "prior_reported_v4_pass_reused": true,
+    "evidence": "evidence/v4-review-reuse-provenance.json"
+  },
+  "strict_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "evidence": "evidence/validate-home-trim-final-strict.txt"
+  },
+  "ue_import_performed": false,
+  "runtime_tests_run": false,
+  "atlas_created": false
+}

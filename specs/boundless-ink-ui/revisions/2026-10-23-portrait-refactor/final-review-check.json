@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "asset_files_unchanged_since_inventory": 570,
+  "frontend_sources_unchanged_since_baseline": true,
+  "screen_rows": 44,
+  "redesign_rows": 41,
+  "preserved_rows": 3,
+  "local_document_links_valid": true,
+  "native_build_run": false,
+  "pie_run": false,
+  "asset_migration_executed": false
+}

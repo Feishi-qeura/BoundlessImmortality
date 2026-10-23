@@ -1,0 +1,1419 @@
+{
+  "schema_version": 1,
+  "fields": [
+    {
+      "table": "acceptance.csv",
+      "field": "case_id",
+      "type": "string",
+      "example": "ITEM14-001",
+      "nullable": false
+    },
+    {
+      "table": "acceptance.csv",
+      "field": "area",
+      "type": "string",
+      "example": "材料分类",
+      "nullable": false
+    },
+    {
+      "table": "acceptance.csv",
+      "field": "expected",
+      "type": "string",
+      "example": "每阶段核心1/其余各5种，四个品质均可通过确定渠道获得",
+      "nullable": false
+    },
+    {
+      "table": "acceptance.csv",
+      "field": "current_result",
+      "type": "string",
+      "example": "not_run",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_LEGACY",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "name",
+      "type": "string",
+      "example": "既有来源兼容",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "channel_type",
+      "type": "string",
+      "example": "legacy",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "region",
+      "type": "string",
+      "example": "现有世界",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "unlock_condition",
+      "type": "string",
+      "example": "沿用v1.3收据与权限",
+      "nullable": true
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "quota_group",
+      "type": "string",
+      "example": "none",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "output_rule",
+      "type": "string",
+      "example": "只引用原配置，不追加一份掉落",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "profile",
+      "type": "string",
+      "example": "prototype_full",
+      "nullable": false
+    },
+    {
+      "table": "acquisition_sources.csv",
+      "field": "real_payment",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "MAT_BR01_C01_G1",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "species_id",
+      "type": "string",
+      "example": "MAT_BR01_C01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "name",
+      "type": "string",
+      "example": "下品筑基丹",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "stage_id",
+      "type": "string",
+      "example": "BR01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "category",
+      "type": "string",
+      "example": "core",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "grade_id",
+      "type": "string",
+      "example": "G1",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "quality_weight",
+      "type": "integer",
+      "example": "10",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "trait",
+      "type": "string",
+      "example": "资格",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "owner_type",
+      "type": "string",
+      "example": "anchor",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "binding",
+      "type": "string",
+      "example": "bound",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "tradeable",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_BR01_C",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "alternative_source",
+      "type": "string",
+      "example": "CH_CRAFT",
+      "nullable": true
+    },
+    {
+      "table": "breakthrough_material_items.csv",
+      "field": "use",
+      "type": "string",
+      "example": "主播大境界突破资格；整次只消耗1份",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "species_id",
+      "type": "string",
+      "example": "MAT_BR01_C01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "name",
+      "type": "string",
+      "example": "筑基丹",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "stage_id",
+      "type": "string",
+      "example": "BR01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "category",
+      "type": "string",
+      "example": "core",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "theme",
+      "type": "string",
+      "example": "资格",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "region",
+      "type": "string",
+      "example": "青云山",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "subarea",
+      "type": "string",
+      "example": "凝脉谷",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "base_source_id",
+      "type": "string",
+      "example": "CH_BR01_C",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "base_cycle_rounds",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "baseline_required",
+      "type": "boolean",
+      "example": "True",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_species.csv",
+      "field": "grade_count",
+      "type": "integer",
+      "example": "4",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "stage_id",
+      "type": "string",
+      "example": "BR01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "name",
+      "type": "string",
+      "example": "练气九阶→筑基初期",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "from_realm_index",
+      "type": "integer",
+      "example": "8",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "to_realm_index",
+      "type": "integer",
+      "example": "9",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "region",
+      "type": "string",
+      "example": "青云山",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "subarea",
+      "type": "string",
+      "example": "凝脉谷",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "core_species",
+      "type": "string",
+      "example": "MAT_BR01_C01",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "core_count",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "guard_required",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "guard_max_count",
+      "type": "integer",
+      "example": "3",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "essence_max_count",
+      "type": "integer",
+      "example": "3",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "treasure_max_count",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "guard_species_count",
+      "type": "integer",
+      "example": "5",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "essence_species_count",
+      "type": "integer",
+      "example": "5",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "treasure_species_count",
+      "type": "integer",
+      "example": "5",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "old_major_break_material_cost",
+      "type": "integer",
+      "example": "20",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "old_major_stone_cost",
+      "type": "integer",
+      "example": "60",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "major_stone_at_commit",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "viewer_material_cost",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "breakthrough_stages.csv",
+      "field": "tribulation",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "EQ_ROBE_T1",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "name",
+      "type": "string",
+      "example": "青云法衣",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "slot",
+      "type": "string",
+      "example": "robe",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "tier",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "stat",
+      "type": "string",
+      "example": "health_add",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "additive_value",
+      "type": "decimal",
+      "example": "0.03",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "max_equipped_in_slot",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "random_affixes",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "enhancement_system",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "viewer_equippable",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "equipment_items.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_CRAFT",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "FABAO_01",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "name",
+      "type": "string",
+      "example": "引灵葫芦",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "effect_key",
+      "type": "string",
+      "example": "heal_max_hp",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "magnitude",
+      "type": "decimal",
+      "example": "0.1",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "duration_seconds",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "cooldown_seconds",
+      "type": "integer",
+      "example": "90",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "max_equipped",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "viewer_equippable",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "affects_tribulation_probability",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "allowed_in_normalized_race",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_CRAFT",
+      "nullable": false
+    },
+    {
+      "table": "fabao_items.csv",
+      "field": "description",
+      "type": "string",
+      "example": "恢复主播最大生命10%；满生命不消耗技能冷却",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "GUILD_MAT_01",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "name",
+      "type": "string",
+      "example": "灵纹木",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "owner_type",
+      "type": "string",
+      "example": "guild",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_BUILD",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "donation_origin",
+      "type": "string",
+      "example": "主播绑定原料确定性制作",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "per_anchor_daily_output_cap",
+      "type": "integer",
+      "example": "5",
+      "nullable": false
+    },
+    {
+      "table": "guild_build_materials.csv",
+      "field": "transferable_to_personal",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "building_id",
+      "type": "string",
+      "example": "BUILD_01",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "name",
+      "type": "string",
+      "example": "武灵大殿",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "level",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "prerequisite_level",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "supply_cost",
+      "type": "integer",
+      "example": "20",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "material_1",
+      "type": "string",
+      "example": "GUILD_MAT_01",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "material_1_count",
+      "type": "integer",
+      "example": "2",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "material_2",
+      "type": "string",
+      "example": "GUILD_MAT_02",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "material_2_count",
+      "type": "integer",
+      "example": "2",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "owner_type",
+      "type": "string",
+      "example": "guild",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "numeric_buff",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "benefit",
+      "type": "string",
+      "example": "名称旗帜与组织总览；第1档外观",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_BUILD",
+      "nullable": false
+    },
+    {
+      "table": "guild_buildings.csv",
+      "field": "unlock",
+      "type": "string",
+      "example": "大殿0级免费已有；各设施不锁个人基础制作",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "asset_id",
+      "type": "string",
+      "example": "CUR_STONE",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "name",
+      "type": "string",
+      "example": "灵石",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "owner_type",
+      "type": "string",
+      "example": "anchor",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "is_currency",
+      "type": "boolean",
+      "example": "True",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "mint_source",
+      "type": "string",
+      "example": "世界每完整轮80；原NPC回收每日≤50",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "spend",
+      "type": "string",
+      "example": "既有小阶突破/炼制/装备/法宝/道具/原型市场",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "personal_transfer",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "guild_transfer",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "gift_minted",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "exchange_ratio",
+      "type": "string",
+      "example": "无现金抖币兑换",
+      "nullable": false
+    },
+    {
+      "table": "guild_currency.csv",
+      "field": "daily_cap",
+      "type": "string",
+      "example": "按既有各来源限额，不额外新铸币",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "STAT_QI",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "name",
+      "type": "string",
+      "example": "修为",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "category",
+      "type": "string",
+      "example": "legacy_stat",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "owner_type",
+      "type": "string",
+      "example": "individual",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "max_stack",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "binding",
+      "type": "string",
+      "example": "bound",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "tradeable",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "paid_origin",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "expiry_policy",
+      "type": "string",
+      "example": "profile",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "use",
+      "type": "string",
+      "example": "个人境界",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "icon_key",
+      "type": "string",
+      "example": "legacy_stat",
+      "nullable": false
+    },
+    {
+      "table": "item_master.csv",
+      "field": "implementation_status",
+      "type": "string",
+      "example": "design_only",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "STAT_QI",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_LEGACY",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "quantity",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "required_full_rounds",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "method",
+      "type": "string",
+      "example": "baseline_reference",
+      "nullable": false
+    },
+    {
+      "table": "item_sources.csv",
+      "field": "note",
+      "type": "string",
+      "example": "有效修炼",
+      "nullable": true
+    },
+    {
+      "table": "method_items.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "BOOK_METHOD_EDGE_BOOK",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "name",
+      "type": "string",
+      "example": "疾锋剑诀原典",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "method_id",
+      "type": "string",
+      "example": "METHOD_EDGE",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "item_type",
+      "type": "string",
+      "example": "book",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "route",
+      "type": "string",
+      "example": "剑修",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "max_method_level",
+      "type": "integer",
+      "example": "6",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "study_units",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "main_mechanic",
+      "type": "string",
+      "example": "每5次命中强化至1.8倍",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "support_mechanic",
+      "type": "string",
+      "example": "完整蓄力后下一击增伤10%",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "stacking",
+      "type": "string",
+      "example": "同功法主辅不重复叠加；既有规则优先",
+      "nullable": false
+    },
+    {
+      "table": "method_items.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_METHOD_1",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "PROP_01",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "name",
+      "type": "string",
+      "example": "清心散",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "effect_key",
+      "type": "string",
+      "example": "cleanse_confusion",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "magnitude",
+      "type": "decimal",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "duration_seconds",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "cooldown_seconds",
+      "type": "integer",
+      "example": "60",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "daily_craft_limit",
+      "type": "integer",
+      "example": "2",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "shared_cooldown",
+      "type": "string",
+      "example": "PROP_60",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "affects_tribulation_probability",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "source_id",
+      "type": "string",
+      "example": "CH_CRAFT",
+      "nullable": false
+    },
+    {
+      "table": "prop_items.csv",
+      "field": "description",
+      "type": "string",
+      "example": "清除1层可驱散心惑；无目标不消耗",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "band_id",
+      "type": "string",
+      "example": "QB1",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "name",
+      "type": "string",
+      "example": "凡品",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "q_min",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "q_max",
+      "type": "integer",
+      "example": "39",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "source_indie_multiplier",
+      "type": "decimal",
+      "example": "2.5",
+      "nullable": false
+    },
+    {
+      "table": "quality_bands.csv",
+      "field": "live_snapshot_factor",
+      "type": "decimal",
+      "example": "1.0",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "grade_id",
+      "type": "string",
+      "example": "G1",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "name",
+      "type": "string",
+      "example": "下品",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "core_score",
+      "type": "integer",
+      "example": "10",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "guard_weight",
+      "type": "integer",
+      "example": "3",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "essence_weight",
+      "type": "integer",
+      "example": "6",
+      "nullable": false
+    },
+    {
+      "table": "quality_grades.csv",
+      "field": "treasure_score",
+      "type": "integer",
+      "example": "4",
+      "nullable": false
+    },
+    {
+      "table": "recipe_inputs.csv",
+      "field": "recipe_id",
+      "type": "string",
+      "example": "R_MAT_BR01_C01_G2",
+      "nullable": false
+    },
+    {
+      "table": "recipe_inputs.csv",
+      "field": "item_id",
+      "type": "string",
+      "example": "MAT_BR01_C01_G1",
+      "nullable": false
+    },
+    {
+      "table": "recipe_inputs.csv",
+      "field": "count",
+      "type": "integer",
+      "example": "2",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "recipe_id",
+      "type": "string",
+      "example": "R_MAT_BR01_C01_G2",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "name",
+      "type": "string",
+      "example": "淬炼中品筑基丹",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "output_item",
+      "type": "string",
+      "example": "MAT_BR01_C01_G2",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "output_count",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "output_owner",
+      "type": "string",
+      "example": "anchor",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "stone_cost",
+      "type": "integer",
+      "example": "20",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "min_major",
+      "type": "integer",
+      "example": "0",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "recipe_type",
+      "type": "string",
+      "example": "refine",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "limit_group",
+      "type": "string",
+      "example": "no_extra_limit",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "success_rate",
+      "type": "integer",
+      "example": "1",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "expiry_policy",
+      "type": "string",
+      "example": "earliest_input_and_window",
+      "nullable": false
+    },
+    {
+      "table": "recipes.csv",
+      "field": "paid_input_allowed",
+      "type": "boolean",
+      "example": "False",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "transaction_type",
+      "type": "string",
+      "example": "TX_WORLD",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "idempotency_key",
+      "type": "string",
+      "example": "world_instance/stage",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "name",
+      "type": "string",
+      "example": "世界阶段奖励",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "direction",
+      "type": "string",
+      "example": "系统→主播",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "amount_rule",
+      "type": "string",
+      "example": "按world_rewards.csv",
+      "nullable": false
+    },
+    {
+      "table": "transaction_types.csv",
+      "field": "rule",
+      "type": "string",
+      "example": "按同一原始收据只发一次",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "route",
+      "type": "string",
+      "example": "BreakthroughPrepare",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "title",
+      "type": "string",
+      "example": "突破准备",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "data",
+      "type": "string",
+      "example": "四类材料槽/数量/替换/评分来源/确定品质/材料获取跳转",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "source_header",
+      "type": "string",
+      "example": "Source/BoundlessImmortality/Frontend/UI/InkUiBreakthroughPanels.h",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "source_cpp",
+      "type": "string",
+      "example": "Source/BoundlessImmortality/Frontend/UI/InkUiBreakthroughPanels.cpp",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "native_class",
+      "type": "string",
+      "example": "UInkBreakthroughPreparePanel",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "widget_asset",
+      "type": "string",
+      "example": "Content/UI/Ink/Wuling/Widgets/WBP_InkBreakthroughPrepare.uasset",
+      "nullable": false
+    },
+    {
+      "table": "ui-extension.csv",
+      "field": "status",
+      "type": "string",
+      "example": "planned_only",
+      "nullable": false
+    }
+  ]
+}

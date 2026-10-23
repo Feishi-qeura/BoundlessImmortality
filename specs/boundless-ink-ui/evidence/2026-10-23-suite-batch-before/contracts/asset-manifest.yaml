@@ -1,0 +1,805 @@
+schema_version: 1
+project_id: boundless-ink-ui
+assets:
+- id: home-v1
+  kind: page
+  type: page
+  screen_id: home
+  path: assets/pages/home-v1.png
+  dimensions:
+  - 941
+  - 1672
+  transparent_background: false
+  status: stale
+  approved: false
+  prompt_path: prompts/pages/home-v1.txt
+  brief_path: prompts/pages/home-v1.md
+  source_tool: built-in-image_gen
+  source_file: exec-9ae5cdc6-9f12-4ed1-ac5d-ea17087f2016.png
+  version: 1
+  source_assets: []
+  sha256: ee029d920c1b1c08ba354b61a712d36b60446b531921ccf9e3553055a3d9d6c8
+  mode: RGB
+  review_status: rejected-environment-drift
+- id: home-v2
+  kind: page
+  type: page
+  screen_id: home
+  path: assets/pages/home-v2.png
+  dimensions:
+  - 941
+  - 1672
+  transparent_background: false
+  status: approved
+  approved: true
+  prompt_path: prompts/pages/home-v2.txt
+  brief_path: prompts/pages/home-v2.md
+  source_tool: built-in-image_gen
+  source_file: exec-358ef90f-5c87-431d-929b-000b3c054166.png
+  version: 2
+  source_assets:
+  - home-v1
+  sha256: 8668804bc6506a5905ff775151e5a533f56aff9c67f57c51c497666c036d3c3a
+  mode: RGB
+  review_status: user-approved
+  approval_evidence: evidence/approval-home-v2.json
+- id: home-identity-ink-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-identity-ink
+  state: default
+  path: assets/components/home-identity-ink-default-v1.png
+  dimensions:
+  - 2172
+  - 724
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-identity-ink-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-1bb6871c-b20a-4b38-95ea-5dbc4512a961.png
+  alpha_content_bbox:
+  - 40
+  - 62
+  - 2131
+  - 661
+  content_uv:
+  - 0.01841620626151013
+  - 0.0856353591160221
+  - 0.9811233885819521
+  - 0.9129834254143646
+  sha256: 782ebb0d486c635fba8a221b9b2b3493fbd16bff831d3351d11fe81aa52bbd55
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-avatar-frame-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-avatar-frame
+  state: default
+  path: assets/components/home-avatar-frame-default-v1.png
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-avatar-frame-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-51bcfee2-1514-4717-bba2-8b84b0b9f5fc.png
+  alpha_content_bbox:
+  - 38
+  - 48
+  - 1228
+  - 1203
+  content_uv:
+  - 0.030303030303030304
+  - 0.03827751196172249
+  - 0.9792663476874003
+  - 0.9593301435406698
+  sha256: d915c88273f0652197d9e3ab947b06e60fb30ec42f49df78e300e0d065d1c60b
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-avatar-portrait-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-avatar-portrait
+  state: default
+  path: assets/components/home-avatar-portrait-default-v1.png
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: stale
+  approved: false
+  prompt_path: prompts/components/home-avatar-portrait-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  review_status: replaced-by-v2-safe-padding
+- id: home-realm-plaque-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-realm-plaque
+  state: default
+  path: assets/components/home-realm-plaque-default-v1.png
+  dimensions:
+  - 2170
+  - 725
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-realm-plaque-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-51dce9d4-09c0-4c20-a474-06697cb46d81.png
+  alpha_content_bbox:
+  - 101
+  - 136
+  - 2068
+  - 590
+  content_uv:
+  - 0.046543778801843315
+  - 0.18758620689655173
+  - 0.9529953917050691
+  - 0.8137931034482758
+  sha256: 07fb11e108210c6c4fc9396ba0777fe113ea5ecdea76634822d57bd4ed876cf0
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-bar-track-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-bar-track
+  state: default
+  path: assets/components/home-bar-track-default-v1.png
+  dimensions:
+  - 2172
+  - 724
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-bar-track-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-0e93eb30-2036-45e4-beec-36b629d74a8a.png
+  alpha_content_bbox:
+  - 73
+  - 260
+  - 2099
+  - 465
+  content_uv:
+  - 0.03360957642725598
+  - 0.35911602209944754
+  - 0.966390423572744
+  - 0.6422651933701657
+  sha256: dc69fd39f235a3bf808ac3941905329326598224db01c97ddc3fd9fecddb0b62
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-health-fill-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-health-fill
+  state: default
+  path: assets/components/home-health-fill-default-v1.png
+  dimensions:
+  - 1552
+  - 1013
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-health-fill-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-a65154d6-ca50-41ef-8ad0-c489ff110049.png
+  alpha_content_bbox:
+  - 71
+  - 450
+  - 1481
+  - 565
+  content_uv:
+  - 0.04574742268041237
+  - 0.4442250740375123
+  - 0.9542525773195877
+  - 0.5577492596248766
+  sha256: 981729eb0615fb4495afbe72a0ee61c58a4dcd7ab6c16a61c21e30b757e8cda1
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-qi-fill-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-qi-fill
+  state: default
+  path: assets/components/home-qi-fill-default-v1.png
+  dimensions:
+  - 1536
+  - 1024
+  dimensions_basis: measured
+  transparent_background: true
+  status: stale
+  approved: false
+  prompt_path: prompts/components/home-qi-fill-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  review_status: replaced-by-v2-excess-glow
+- id: home-top-tile-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-top-tile
+  state: default
+  path: assets/components/home-top-tile-default-v1.png
+  dimensions:
+  - 1122
+  - 1402
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-top-tile-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-dda552a8-65a0-4be8-bf39-60a624b5ac93.png
+  alpha_content_bbox:
+  - 127
+  - 166
+  - 996
+  - 1242
+  content_uv:
+  - 0.11319073083778966
+  - 0.11840228245363767
+  - 0.8877005347593583
+  - 0.8858773181169758
+  sha256: ede830e8fb2ddb7547e87aa89c72d4fce1dc0108dd53769243f4328399f959bb
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-activity-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-activity
+  state: default
+  path: assets/components/home-icon-activity-default-v1.png
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-activity-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-67994770-3e5a-493e-93fd-f35a2f686749.png
+  alpha_content_bbox:
+  - 237
+  - 31
+  - 1048
+  - 1186
+  content_uv:
+  - 0.18899521531100477
+  - 0.024720893141945772
+  - 0.835725677830941
+  - 0.9457735247208932
+  sha256: ebd501a884521503ae04cdbe8b27a68e12288bde2b8acfa5168424fc884e7fb7
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-sign-in-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-sign-in
+  state: default
+  path: assets/components/home-icon-sign-in-default-v1.png
+  dimensions:
+  - 1480
+  - 1063
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-sign-in-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-901027be-602a-4147-aef6-88e6ddcbd257.png
+  alpha_content_bbox:
+  - 187
+  - 80
+  - 1309
+  - 1004
+  content_uv:
+  - 0.12635135135135134
+  - 0.07525870178739416
+  - 0.8844594594594595
+  - 0.9444967074317968
+  sha256: d22f22f20e30eceff2a91f19ef049fa775fc4d4cc10c82ee1443a515a89cf639
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-journey-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-journey
+  state: default
+  path: assets/components/home-icon-journey-default-v1.png
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-journey-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-d4d64857-7e9a-4e46-b02f-27dd19d452ef.png
+  alpha_content_bbox:
+  - 68
+  - 69
+  - 1199
+  - 1188
+  content_uv:
+  - 0.05422647527910686
+  - 0.05502392344497608
+  - 0.956140350877193
+  - 0.9473684210526315
+  sha256: ec1894ab5005dddc14c9011011ef96ccd86ac438ec7ec10bcb6ec28cab0b47de
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-bag-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-bag
+  state: default
+  path: assets/components/home-icon-bag-default-v1.png
+  dimensions:
+  - 1315
+  - 1197
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-bag-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-dda67425-9266-4886-babe-262f10d2f7ed.png
+  alpha_content_bbox:
+  - 125
+  - 116
+  - 1242
+  - 1128
+  content_uv:
+  - 0.09505703422053231
+  - 0.09690893901420217
+  - 0.9444866920152091
+  - 0.9423558897243107
+  sha256: 5d4aad71f830ee73f114dae94436364e9f4f59c3778fa75ba62e41f94a450ded
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-cultivate-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-cultivate
+  state: default
+  path: assets/components/home-icon-cultivate-default-v1.png
+  dimensions:
+  - 1402
+  - 1122
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-cultivate-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-b68c991e-8a2f-433e-9e9f-fefd2634dad9.png
+  alpha_content_bbox:
+  - 173
+  - 63
+  - 1271
+  - 1079
+  content_uv:
+  - 0.12339514978601997
+  - 0.05614973262032086
+  - 0.9065620542082738
+  - 0.9616755793226381
+  sha256: db0ce08b0feeb0d634106a2bbf43b46622a27bd1ef5f86e26c17f6b74026a542
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-rank-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-rank
+  state: default
+  path: assets/components/home-icon-rank-default-v1.png
+  dimensions:
+  - 1316
+  - 1195
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-rank-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-bf2f48fb-6356-445a-8cc7-d1f807ce132b.png
+  alpha_content_bbox:
+  - 103
+  - 142
+  - 1218
+  - 1085
+  content_uv:
+  - 0.07826747720364742
+  - 0.11882845188284519
+  - 0.925531914893617
+  - 0.9079497907949791
+  sha256: 7f4fa286ee51e3e5e7043d6f911a6784ad7de4b3aebce3840e3d3c4c22004a58
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-icon-menu-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-icon-menu
+  state: default
+  path: assets/components/home-icon-menu-default-v1.png
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-icon-menu-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-7a10d39f-f524-49d4-8199-e2113891ba80.png
+  alpha_content_bbox:
+  - 51
+  - 55
+  - 1200
+  - 1175
+  content_uv:
+  - 0.04066985645933014
+  - 0.043859649122807015
+  - 0.9569377990430622
+  - 0.9370015948963317
+  sha256: 1ca99c5fc008963aa56be61c4896a709e0910891cc70d84be61f5f75d97c8bd9
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-rank-paper-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-rank-paper
+  state: default
+  path: assets/components/home-rank-paper-default-v1.png
+  dimensions:
+  - 2172
+  - 724
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-rank-paper-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-c3a8b6b2-e3e4-4c02-86c3-c0713ef02922.png
+  alpha_content_bbox:
+  - 308
+  - 176
+  - 1834
+  - 550
+  content_uv:
+  - 0.141804788213628
+  - 0.2430939226519337
+  - 0.8443830570902394
+  - 0.7596685082872928
+  sha256: 485d61226d8c7070d3ae9c20c54e680dff46fd6a94f91712ee01c221b1493902
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-preview-paper-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-preview-paper
+  state: default
+  path: assets/components/home-preview-paper-default-v1.png
+  dimensions:
+  - 1971
+  - 798
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-preview-paper-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-fee7f6a4-1875-43fb-9c3f-8f4cd0028d4b.png
+  alpha_content_bbox:
+  - 51
+  - 195
+  - 1939
+  - 623
+  content_uv:
+  - 0.0258751902587519
+  - 0.24436090225563908
+  - 0.9837645865043125
+  - 0.7807017543859649
+  sha256: 5b71862d10465973831cabd8f7a4374f5fa950d2128854d31a893a980b396ba4
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-bottom-cloud-default-v1
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-bottom-cloud
+  state: default
+  path: assets/components/home-bottom-cloud-default-v1.png
+  dimensions:
+  - 2172
+  - 724
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  approved: true
+  prompt_path: prompts/components/home-bottom-cloud-default-v1.txt
+  source_assets:
+  - home-v2
+  version: 1
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-1bc36cab-1271-4d25-8099-7494d038b8c8.png
+  alpha_content_bbox:
+  - 8
+  - 319
+  - 2169
+  - 444
+  content_uv:
+  - 0.003683241252302026
+  - 0.44060773480662985
+  - 0.9986187845303868
+  - 0.6132596685082873
+  sha256: 5b58360de47d5077cf61e2864a51feb470490668f10938cde0352622cbcc8273
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-avatar-portrait-default-v2
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-avatar-portrait
+  state: default
+  path: assets/components/home-avatar-portrait-default-v2.png
+  prompt_path: prompts/components/home-avatar-portrait-default-v2.txt
+  source_assets:
+  - home-v2
+  - home-avatar-portrait-default-v1
+  version: 2
+  approved: true
+  dimensions:
+  - 1254
+  - 1254
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-f3e4c441-8ebf-45b4-9518-732d7fed2dea.png
+  alpha_content_bbox:
+  - 28
+  - 37
+  - 1217
+  - 1228
+  content_uv:
+  - 0.022328548644338118
+  - 0.029505582137161084
+  - 0.970494417862839
+  - 0.9792663476874003
+  sha256: e7109ca197c805497ea4b42f4c4a46566bf03510bc098cf51b8bb53994f3d022
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-qi-fill-default-v2
+  kind: component
+  type: component
+  screen_id: home
+  component_id: home-qi-fill
+  state: default
+  path: assets/components/home-qi-fill-default-v2.png
+  prompt_path: prompts/components/home-qi-fill-default-v2.txt
+  source_assets:
+  - home-v2
+  - home-qi-fill-default-v1
+  version: 2
+  approved: true
+  dimensions:
+  - 1552
+  - 1013
+  dimensions_basis: measured
+  transparent_background: true
+  status: approved
+  source_tool: built-in-image_gen
+  source_file: C:\Users\zxxuh\.codex\generated_images\01a1633a-428a-7f33-817e-14fb32e9cbf2\exec-1ebc9d86-1760-4f74-acd8-cd51cf2accd9.png
+  alpha_content_bbox:
+  - 67
+  - 446
+  - 1484
+  - 567
+  content_uv:
+  - 0.043170103092783504
+  - 0.44027640671273444
+  - 0.9561855670103093
+  - 0.5597235932872655
+  sha256: 11fcceb396e0b5e4b40ed572b0be10a536a76cea587c1dc41df51f5f17db3aff
+  mode: RGBA
+  review_status: user-approved
+  text_free_visual_check: true
+  approval_evidence: evidence/approval-home-components.json
+- id: home-components-source-sheet-v1
+  kind: sprite-sheet
+  screen_id: home
+  path: assets/sprites/home-components-trim-v1/source-sheet-v1.png
+  status: generated
+  approved: false
+  prompt_path: prompts/pipeline/home-components-trim-v1.md
+  source_tool: deterministic-lossless-trim-pipeline
+  source_assets:
+  - home-identity-ink-default-v1
+  - home-avatar-frame-default-v1
+  - home-avatar-portrait-default-v2
+  - home-realm-plaque-default-v1
+  - home-bar-track-default-v1
+  - home-health-fill-default-v1
+  - home-qi-fill-default-v2
+  - home-top-tile-default-v1
+  - home-icon-activity-default-v1
+  - home-icon-sign-in-default-v1
+  - home-icon-journey-default-v1
+  - home-icon-bag-default-v1
+  - home-icon-cultivate-default-v1
+  - home-icon-rank-default-v1
+  - home-icon-menu-default-v1
+  - home-rank-paper-default-v1
+  - home-preview-paper-default-v1
+  - home-bottom-cloud-default-v1
+  dimensions:
+  - 4096
+  - 7130
+  transparent_background: true
+- id: home-components-trim-v1-package
+  kind: package
+  screen_id: home
+  path: D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/packages/home-components-trim-v1-png.zip
+  status: generated
+  approved: false
+  prompt_path: prompts/pipeline/home-components-trim-v1.md
+  source_tool: deterministic-lossless-trim-pipeline
+  source_assets:
+  - home-identity-ink-default-v1
+  - home-avatar-frame-default-v1
+  - home-avatar-portrait-default-v2
+  - home-realm-plaque-default-v1
+  - home-bar-track-default-v1
+  - home-health-fill-default-v1
+  - home-qi-fill-default-v2
+  - home-top-tile-default-v1
+  - home-icon-activity-default-v1
+  - home-icon-sign-in-default-v1
+  - home-icon-journey-default-v1
+  - home-icon-bag-default-v1
+  - home-icon-cultivate-default-v1
+  - home-icon-rank-default-v1
+  - home-icon-menu-default-v1
+  - home-rank-paper-default-v1
+  - home-preview-paper-default-v1
+  - home-bottom-cloud-default-v1
+- id: home-components-trim-v2-package
+  kind: package
+  screen_id: home
+  path: packages/home-components-trim-v2-png.zip
+  status: approved
+  approved: true
+  prompt_path: prompts/pipeline/home-components-trim-v1.md
+  source_tool: deterministic-reuse-only-metadata-packaging
+  source_assets:
+  - home-identity-ink-default-v1
+  - home-avatar-frame-default-v1
+  - home-avatar-portrait-default-v2
+  - home-realm-plaque-default-v1
+  - home-bar-track-default-v1
+  - home-health-fill-default-v1
+  - home-qi-fill-default-v2
+  - home-top-tile-default-v1
+  - home-icon-activity-default-v1
+  - home-icon-sign-in-default-v1
+  - home-icon-journey-default-v1
+  - home-icon-bag-default-v1
+  - home-icon-cultivate-default-v1
+  - home-icon-rank-default-v1
+  - home-icon-menu-default-v1
+  - home-rank-paper-default-v1
+  - home-preview-paper-default-v1
+  - home-bottom-cloud-default-v1
+  sha256: 178851e9e1e935243216b57509af5d19c30863593c60a2c3964263f7642cafcb
+  policy_revision: v4
+  author_review: passed
+  review_evidence: evidence/home-slice-correction-v4-visual-review.json
+  approval_evidence: evidence/approval-ue-integration-v2-v4.json

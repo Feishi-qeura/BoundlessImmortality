@@ -1,0 +1,333 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-9slice-v2-visual-review",
+  "status": "v2-inspection-complete-revisions-required",
+  "complete": false,
+  "user_approved": false,
+  "reviewer": "Codex visual inspection",
+  "per_reply_image_limit": 1,
+  "numerical_evidence": "evidence/home-trim-recheck.json",
+  "inspected_count": 10,
+  "required_image_count": 10,
+  "inspected": [
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-guides-v2.png",
+      "component_id": "home-bar-track",
+      "variant": "guides",
+      "result": "guide-placement-pass",
+      "scope": "Placement of margins only; wide/narrow seams remain pending.",
+      "findings": "左右260px固定区包含菱形端帽和卷纹，中心为平直金边与深墨轨道。横向分割线位于内底，适用X轴拉伸、锁定高度；此图不能证明纵向拉伸可用。",
+      "height_policy": "uniform-scale to intended control height, then lock height and stretch X only",
+      "sha256": "928f155371e5af94d552cd694d1ed7859cacd21aa3982c0d9aa3371223272576"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-wide-v2.png",
+      "component_id": "home-bar-track",
+      "variant": "wide",
+      "result": "visual-pass-at-review-scale",
+      "dimensions": [
+        2865,
+        226
+      ],
+      "displayed_dimensions": [
+        2048,
+        162
+      ],
+      "scope": "Wide horizontal stretch at displayed review scale; no UE sampling or device verification.",
+      "findings": "横向拉伸后，上下金边连续，左右端帽和卷纹轮廓完整，深墨内底未见明显拼接断层、透明裂缝或装饰变形。显示图由2865×226缩至2048×162，亚像素采样效果留待引擎验证。",
+      "sha256": "d290ccfbeb967601628212d2e07cf63df375f17a8718c57ffca1559edb5ebb72"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-bar-track-narrow-v2.png",
+      "component_id": "home-bar-track",
+      "variant": "narrow",
+      "result": "visual-pass-at-review-scale",
+      "dimensions": [
+        1637,
+        226
+      ],
+      "displayed_dimensions": [
+        1637,
+        226
+      ],
+      "scope": "Narrow horizontal stretch at native image resolution; applies to tested 1637px width with locked 226px height. No engine or device sampling verification.",
+      "findings": "以1637×226原始分辨率检查，缩窄后上下金边连续，左右菱形端帽与卷纹完整，端区未相互挤压；深墨中心未见明显拼接断层或透明裂缝。此结论仅覆盖本测试尺寸，不代表最小允许宽度已获视觉验证。",
+      "sha256": "f1a685e6ebee7199ea73dd77afbc0079cb035e149e0008c62de51faeae1de0c4"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-top-tile-guides-v2.png",
+      "component_id": "home-top-tile",
+      "variant": "guides",
+      "result": "guide-placement-needs-revision",
+      "dimensions": [
+        889,
+        1097
+      ],
+      "displayed_dimensions": [
+        889,
+        1097
+      ],
+      "scope": "Guide placement at native image resolution; actual stretched appearance remains pending.",
+      "findings": "左右180px分割线穿过顶部/底部金色角饰肩部，上下200px分割线穿过左右边框凸起；完整角饰并未全部留在固定角区。当前四角像素一致检查只能证明固定矩形未变，不能证明完整角饰未拉伸。内部云纹与金屑也跨越伸缩线，后续需检查实际变形。",
+      "issue_ids": [
+        "top-tile-v2-ornament-crosses-fixed-regions"
+      ],
+      "sha256": "90a45fa1a66b6818ce9b62ee96007514de9e330c2dbd3b7d90b9648edb87daee"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "component_id": "home-top-tile",
+      "variant": "wide",
+      "result": "visual-fail-ornament-deformation",
+      "dimensions": [
+        1245,
+        1097
+      ],
+      "displayed_dimensions": [
+        1245,
+        1097
+      ],
+      "scope": "Wide horizontal stretch at native image resolution; assesses whole-ornament proportions, not only unchanged corner rectangles. No engine or device verification.",
+      "findings": "顶部和底部金色角饰肩部向中央延伸的部分被横向拉长，固定卷纹与肩部比例发生变化，确认分割线跨越角饰的问题。边框整体连续，未见明显透明裂缝，但不能因此判定视觉通过。内部云纹与金屑也随中心区横向拉伸。",
+      "stretch_center_width_source": 529,
+      "stretch_center_width_destination": 885,
+      "stretch_center_scale_x": 1.6729678638941399,
+      "issue_ids": [
+        "top-tile-v2-ornament-crosses-fixed-regions"
+      ],
+      "sha256": "afcb38490da591a2017c34faf350a4cc56f045ff23c1d88b2810b8edcb733c5d"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "component_id": "home-top-tile",
+      "variant": "narrow",
+      "result": "visual-fail-ornament-deformation",
+      "dimensions": [
+        712,
+        1097
+      ],
+      "displayed_dimensions": [
+        712,
+        1097
+      ],
+      "scope": "Narrow horizontal stretch at native image resolution; whole-ornament proportions assessed at tested 712px width. No engine/device verification.",
+      "findings": "顶部和底部跨越分割线的金色肩部被横向压窄，相对固定卷纹显得尖窄，角饰整体比例未保持；上方及下方跨线云纹也随中心区压缩。外框连续、未见明显透明裂缝，但装饰变形使本图视觉不通过。",
+      "stretch_center_width_source": 529,
+      "stretch_center_width_destination": 352,
+      "stretch_center_scale_x": 0.665406427221172,
+      "issue_ids": [
+        "top-tile-v2-ornament-crosses-fixed-regions"
+      ],
+      "sha256": "df7cfb7ff6129a5bf5107608b39496fd956f2953e19c01b96235680d782e9ab3"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "component_id": "home-top-tile",
+      "variant": "tall",
+      "result": "visual-fail-ornament-deformation",
+      "dimensions": [
+        889,
+        1481
+      ],
+      "displayed_dimensions": [
+        889,
+        1481
+      ],
+      "scope": "Tall vertical stretch at native image resolution; whole-ornament proportions assessed at tested 1481px height. No engine/device verification.",
+      "findings": "左右金色边框凸起跨过上下200px分割线的部分被纵向拉长，侧边云纹和金屑也发生纵向延展；固定角区虽未改像素，完整装饰的比例未保持。边框未见明显透明裂缝，但本图视觉不通过，现有XY伸缩策略不予通过。",
+      "stretch_center_height_source": 697,
+      "stretch_center_height_destination": 1081,
+      "stretch_center_scale_y": 1.550932568149211,
+      "issue_ids": [
+        "top-tile-v2-ornament-crosses-fixed-regions"
+      ],
+      "sha256": "ee414f6bc4c1c84933a8a0225b41434c97fd575f20723b0f86f0e516b1fa8f09"
+    },
+    {
+      "path": "evidence/9slice-review-v2/home-rank-paper-guides-v2.png",
+      "component_id": "home-rank-paper",
+      "variant": "guides",
+      "result": "guide-placement-risk-pending-stretch-review",
+      "dimensions": [
+        1575,
+        399
+      ],
+      "displayed_dimensions": [
+        1575,
+        399
+      ],
+      "scope": "Guide placement at native image resolution for X-only stretch; horizontal guides do not imply permission to stretch height.",
+      "findings": "左右600/350px全高固定端区包含主要云头与卷角，但左下淡金云尾仍伸入x=600右侧，右下云饰起笔也跨越x=1225分割线。中心纸面与主金边较平直，薄云尾跨线仍有变形风险，需wide/narrow预览确认，尚不判定该候选通过或失败。",
+      "height_policy": "uniform-scale to intended control height, then lock height and stretch X only",
+      "issue_ids": [
+        "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+      ],
+      "sha256": "e3578f4a2dd3f8ffb4a38c95fbef3270a379dd38d959bf702c03acc906eb7709"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "component_id": "home-rank-paper",
+      "variant": "wide",
+      "result": "visual-fail-cloud-tail-deformation",
+      "dimensions": [
+        2205,
+        399
+      ],
+      "displayed_dimensions": [
+        2205,
+        399
+      ],
+      "scope": "Wide X-only stretch at native image resolution, height locked to 399px. Whole cloud silhouette assessed separately from fixed endcap pixels. No engine/device verification.",
+      "findings": "纸面与主金边连续，主要云头和卷角形状保持；但左下伸入中心区的淡金云尾被横向拉长，右下云饰起笔向左展开，整段云饰轮廓未保持原比例。未见明显透明裂缝，但固定端区像素一致不能覆盖跨线云尾，本图按装饰保形要求视觉不通过。",
+      "stretch_center_width_source": 625,
+      "stretch_center_width_destination": 1255,
+      "stretch_center_scale_x": 2.008,
+      "issue_ids": [
+        "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+      ],
+      "sha256": "9c87fd938283ace83a2420e3370ce34eb82cebda7ff9607e3e571fb934ca3b85"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png",
+      "component_id": "home-rank-paper",
+      "variant": "narrow",
+      "result": "visual-fail-cloud-tail-deformation",
+      "dimensions": [
+        1260,
+        399
+      ],
+      "displayed_dimensions": [
+        1260,
+        399
+      ],
+      "scope": "Narrow X-only stretch at native image resolution, height locked to 399px; complete cloud silhouette assessed. No engine/device verification.",
+      "findings": "主要云头、卷角与主金边连续，但左下跨线淡金云尾被压短，右下跨线云饰起笔也被压缩；完整云饰比例未保持，因此本图视觉不通过。",
+      "stretch_center_width_source": 625,
+      "stretch_center_width_destination": 310,
+      "stretch_center_scale_x": 0.496,
+      "issue_ids": [
+        "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+      ],
+      "sha256": "1cd56f0233d11aedf9248deaf8210adf9f9094cfd26d0cbb39fdeb90a1ee2949"
+    }
+  ],
+  "pending": [],
+  "numerically_covered_without_redundant_visual_open": [
+    {
+      "variants": "native for all 3 candidates",
+      "reason": "Exact RGBA reconstruction of approved source; no changed pixels."
+    },
+    {
+      "variants": "tall for home-bar-track and home-rank-paper",
+      "reason": "Original art remains byte-identical and centered in transparent taller container; art is not stretched."
+    }
+  ],
+  "limits": "No UE import, runtime, device, Box brush, or final user acceptance. Source-component approval does not approve derived 9-slice policy.",
+  "issues": [
+    {
+      "id": "top-tile-v2-ornament-crosses-fixed-regions",
+      "component_id": "home-top-tile",
+      "status": "resolved-in-v3-author-review",
+      "margins_lrtb": [
+        180,
+        180,
+        200,
+        200
+      ],
+      "evidence": "evidence/9slice-review-v2/home-top-tile-guides-v2.png",
+      "problem": "Fixed corner rectangles do not contain the whole gold corner ornament; cut lines cross shoulders and side protrusions.",
+      "next_check": "Current offline correction accepted; engine sampling and user acceptance remain outside this stage.",
+      "resolution_requirement": "Before acceptance, use a versioned, visually checked correction. Whole-art full/Fit is a reuse-only fallback; revised margins must protect complete gold ornaments and address crossing cloud motifs. Preserve approved source PNGs and existing package.",
+      "acceptance_blocking": false,
+      "evidence_paths": [
+        "evidence/9slice-review-v2/home-top-tile-guides-v2.png",
+        "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+        "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+        "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png"
+      ],
+      "confirmation": "Wide elongates gold shoulders (center X 529 to 885px); narrow compresses them (X 529 to 352px); tall elongates side protrusions and cloud motifs (center Y 697 to 1081px, 1.551x). All three tested deformations fail whole-ornament preservation.",
+      "proposed_remediation": {
+        "status": "author-reviewed-pass-activated-v4",
+        "preferred": "full/Fit with uniform scale and centered transparent remainder",
+        "reason": "Both tested stretch axes deform ornamented art; enlarging corner rectangles alone does not guarantee preservation of cloud motifs crossing the center. Uniform Fit preserves all proportions.",
+        "source_pixels_change_required": false
+      },
+      "resolution": {
+        "policy": "full/Fit",
+        "visual_evidence": "evidence/slice-correction-v3/home-top-tile-narrow-fit-v3.png",
+        "successor_review": "evidence/home-slice-correction-v4-visual-review.json",
+        "original_v2_previews_remain_failed": true,
+        "user_approved": false,
+        "candidate_activated": true
+      }
+    },
+    {
+      "id": "rank-paper-v2-cloud-tips-cross-fixed-endcaps",
+      "component_id": "home-rank-paper",
+      "status": "resolved-in-v4-author-review",
+      "margins_lrtb": [
+        600,
+        350,
+        115,
+        125
+      ],
+      "evidence": "evidence/9slice-review-v2/home-rank-paper-guides-v2.png",
+      "problem": "Major end ornaments are fixed, but faint lower-left cloud tail and beginning of lower-right cloud curl cross the vertical cut lines.",
+      "next_check": "Current offline correction accepted; engine sampling and user acceptance remain outside this stage.",
+      "resolution_requirement": "Resolve the visual risk before acceptance; if deformation is visible, use versioned larger fixed endcaps or whole-art Fit without changing approved source PNGs or overwriting existing ZIP.",
+      "acceptance_blocking": false,
+      "evidence_paths": [
+        "evidence/9slice-review-v2/home-rank-paper-guides-v2.png",
+        "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+        "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png"
+      ],
+      "confirmation": "Wide elongates crossing cloud tips (center 625 to 1255px, 2.008x); narrow compresses them (625 to 310px, 0.496x). Both fail preservation of the complete cloud silhouette.",
+      "proposed_remediation": {
+        "status": "author-reviewed-pass-activated-v4",
+        "margins_lrtb": [
+          820,
+          400,
+          115,
+          125
+        ],
+        "minimum_source_width": 1221,
+        "allowed_stretch_axes": [
+          "x"
+        ],
+        "reason": "Increase fixed endcaps to cover the crossing cloud tips; remaining center is 355px. Keep 399px source-height locked.",
+        "contract": "contracts/home-slice-correction-v4.yaml",
+        "minimum_nine_slice_width_at_source_height": 1575,
+        "narrow_mode": "full/Fit below native aspect ratio"
+      },
+      "correction_progress": {
+        "guide_placement": "passed",
+        "guide_evidence": "evidence/slice-correction-v3/home-rank-paper-guides-v3.png",
+        "wide_review": "passed",
+        "narrow_review": "failed-compressed-paper-texture",
+        "wide_evidence": "evidence/slice-correction-v3/home-rank-paper-wide-v3.png",
+        "narrow_evidence": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+        "v4_correction": "contracts/home-slice-correction-v4.yaml",
+        "v4_review": "passed-reused-prior-report"
+      },
+      "resolution": {
+        "policy": "aspect-dependent Fit / height-locked X-only nine-slice",
+        "successor_review": "evidence/home-slice-correction-v4-visual-review.json",
+        "original_v2_previews_remain_failed": true,
+        "user_approved": false,
+        "candidate_activated": true,
+        "visual_evidence": "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png"
+      }
+    }
+  ],
+  "v2_plan_inspection_complete": true,
+  "visual_acceptance_passed": false,
+  "successor_review": "evidence/home-slice-correction-visual-review.json",
+  "correction_contract": "contracts/home-slice-correction-v3.yaml",
+  "current_corrected_policy": {
+    "revision": "v4",
+    "author_visual_review": "passed",
+    "original_v2_results_preserved": true,
+    "evidence": "evidence/home-slice-correction-v4-visual-review.json"
+  }
+}

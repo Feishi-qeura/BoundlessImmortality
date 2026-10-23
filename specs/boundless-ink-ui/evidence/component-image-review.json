@@ -1,0 +1,893 @@
+{
+  "passed": true,
+  "components": [
+    {
+      "component_id": "home-identity-ink",
+      "name": "身份墨底",
+      "asset_id": "home-identity-ink-default-v1",
+      "path": "assets/components/home-identity-ink-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        40,
+        62,
+        2131,
+        661
+      ],
+      "content_size": [
+        2091,
+        599
+      ],
+      "content_uv": [
+        0.01841620626151013,
+        0.0856353591160221,
+        0.9811233885819521,
+        0.9129834254143646
+      ],
+      "alpha_zero_pixels": 814409,
+      "alpha_partial_pixels": 757987,
+      "center_alpha": 253,
+      "sha256": "782ebb0d486c635fba8a221b9b2b3493fbd16bff831d3351d11fe81aa52bbd55",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-avatar-frame",
+      "name": "头像金框",
+      "asset_id": "home-avatar-frame-default-v1",
+      "path": "assets/components/home-avatar-frame-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        38,
+        48,
+        1228,
+        1203
+      ],
+      "content_size": [
+        1190,
+        1155
+      ],
+      "content_uv": [
+        0.030303030303030304,
+        0.03827751196172249,
+        0.9792663476874003,
+        0.9593301435406698
+      ],
+      "alpha_zero_pixels": 1066257,
+      "alpha_partial_pixels": 506090,
+      "center_alpha": 0,
+      "sha256": "d915c88273f0652197d9e3ab947b06e60fb30ec42f49df78e300e0d065d1c60b",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-avatar-portrait",
+      "name": "修士头像",
+      "asset_id": "home-avatar-portrait-default-v2",
+      "path": "assets/components/home-avatar-portrait-default-v2.png",
+      "dev_only": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        28,
+        37,
+        1217,
+        1228
+      ],
+      "content_size": [
+        1189,
+        1191
+      ],
+      "content_uv": [
+        0.022328548644338118,
+        0.029505582137161084,
+        0.970494417862839,
+        0.9792663476874003
+      ],
+      "alpha_zero_pixels": 653840,
+      "alpha_partial_pixels": 918373,
+      "center_alpha": 253,
+      "sha256": "e7109ca197c805497ea4b42f4c4a46566bf03510bc098cf51b8bb53994f3d022",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-realm-plaque",
+      "name": "境界空白牌",
+      "asset_id": "home-realm-plaque-default-v1",
+      "path": "assets/components/home-realm-plaque-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        2170,
+        725
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        101,
+        136,
+        2068,
+        590
+      ],
+      "content_size": [
+        1967,
+        454
+      ],
+      "content_uv": [
+        0.046543778801843315,
+        0.18758620689655173,
+        0.9529953917050691,
+        0.8137931034482758
+      ],
+      "alpha_zero_pixels": 897803,
+      "alpha_partial_pixels": 674978,
+      "center_alpha": 253,
+      "sha256": "07fb11e108210c6c4fc9396ba0777fe113ea5ecdea76634822d57bd4ed876cf0",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-bar-track",
+      "name": "状态条金框轨道",
+      "asset_id": "home-bar-track-default-v1",
+      "path": "assets/components/home-bar-track-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        73,
+        260,
+        2099,
+        465
+      ],
+      "content_size": [
+        2026,
+        205
+      ],
+      "content_uv": [
+        0.03360957642725598,
+        0.35911602209944754,
+        0.966390423572744,
+        0.6422651933701657
+      ],
+      "alpha_zero_pixels": 1208623,
+      "alpha_partial_pixels": 360954,
+      "center_alpha": 254,
+      "sha256": "dc69fd39f235a3bf808ac3941905329326598224db01c97ddc3fd9fecddb0b62",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-health-fill",
+      "name": "血量红色填充",
+      "asset_id": "home-health-fill-default-v1",
+      "path": "assets/components/home-health-fill-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1552,
+        1013
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        71,
+        450,
+        1481,
+        565
+      ],
+      "content_size": [
+        1410,
+        115
+      ],
+      "content_uv": [
+        0.04574742268041237,
+        0.4442250740375123,
+        0.9542525773195877,
+        0.5577492596248766
+      ],
+      "alpha_zero_pixels": 1413618,
+      "alpha_partial_pixels": 157106,
+      "center_alpha": 253,
+      "sha256": "981729eb0615fb4495afbe72a0ee61c58a4dcd7ab6c16a61c21e30b757e8cda1",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-qi-fill",
+      "name": "修为玉青填充",
+      "asset_id": "home-qi-fill-default-v2",
+      "path": "assets/components/home-qi-fill-default-v2.png",
+      "dev_only": false,
+      "dimensions": [
+        1552,
+        1013
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        67,
+        446,
+        1484,
+        567
+      ],
+      "content_size": [
+        1417,
+        121
+      ],
+      "content_uv": [
+        0.043170103092783504,
+        0.44027640671273444,
+        0.9561855670103093,
+        0.5597235932872655
+      ],
+      "alpha_zero_pixels": 1396471,
+      "alpha_partial_pixels": 175485,
+      "center_alpha": 253,
+      "sha256": "11fcceb396e0b5e4b40ed572b0be10a536a76cea587c1dc41df51f5f17db3aff",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-top-tile",
+      "name": "顶部入口空白底框",
+      "asset_id": "home-top-tile-default-v1",
+      "path": "assets/components/home-top-tile-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        127,
+        166,
+        996,
+        1242
+      ],
+      "content_size": [
+        869,
+        1076
+      ],
+      "content_uv": [
+        0.11319073083778966,
+        0.11840228245363767,
+        0.8877005347593583,
+        0.8858773181169758
+      ],
+      "alpha_zero_pixels": 706286,
+      "alpha_partial_pixels": 865842,
+      "center_alpha": 253,
+      "sha256": "ede830e8fb2ddb7547e87aa89c72d4fce1dc0108dd53769243f4328399f959bb",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-activity",
+      "name": "活动红灯笼",
+      "asset_id": "home-icon-activity-default-v1",
+      "path": "assets/components/home-icon-activity-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        237,
+        31,
+        1048,
+        1186
+      ],
+      "content_size": [
+        811,
+        1155
+      ],
+      "content_uv": [
+        0.18899521531100477,
+        0.024720893141945772,
+        0.835725677830941,
+        0.9457735247208932
+      ],
+      "alpha_zero_pixels": 1179271,
+      "alpha_partial_pixels": 392731,
+      "center_alpha": 253,
+      "sha256": "ebd501a884521503ae04cdbe8b27a68e12288bde2b8acfa5168424fc884e7fb7",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-sign-in",
+      "name": "签到空白卷轴",
+      "asset_id": "home-icon-sign-in-default-v1",
+      "path": "assets/components/home-icon-sign-in-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1480,
+        1063
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        187,
+        80,
+        1309,
+        1004
+      ],
+      "content_size": [
+        1122,
+        924
+      ],
+      "content_uv": [
+        0.12635135135135134,
+        0.07525870178739416,
+        0.8844594594594595,
+        0.9444967074317968
+      ],
+      "alpha_zero_pixels": 869409,
+      "alpha_partial_pixels": 703315,
+      "center_alpha": 253,
+      "sha256": "d22f22f20e30eceff2a91f19ef049fa775fc4d4cc10c82ee1443a515a89cf639",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-journey",
+      "name": "仙途宝塔",
+      "asset_id": "home-icon-journey-default-v1",
+      "path": "assets/components/home-icon-journey-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        68,
+        69,
+        1199,
+        1188
+      ],
+      "content_size": [
+        1131,
+        1119
+      ],
+      "content_uv": [
+        0.05422647527910686,
+        0.05502392344497608,
+        0.956140350877193,
+        0.9473684210526315
+      ],
+      "alpha_zero_pixels": 960710,
+      "alpha_partial_pixels": 611524,
+      "center_alpha": 253,
+      "sha256": "ec1894ab5005dddc14c9011011ef96ccd86ac438ec7ec10bcb6ec28cab0b47de",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-bag",
+      "name": "背包锦囊",
+      "asset_id": "home-icon-bag-default-v1",
+      "path": "assets/components/home-icon-bag-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1315,
+        1197
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        125,
+        116,
+        1242,
+        1128
+      ],
+      "content_size": [
+        1117,
+        1012
+      ],
+      "content_uv": [
+        0.09505703422053231,
+        0.09690893901420217,
+        0.9444866920152091,
+        0.9423558897243107
+      ],
+      "alpha_zero_pixels": 751602,
+      "alpha_partial_pixels": 822111,
+      "center_alpha": 253,
+      "sha256": "5d4aad71f830ee73f114dae94436364e9f4f59c3778fa75ba62e41f94a450ded",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-cultivate",
+      "name": "修炼入定徽记",
+      "asset_id": "home-icon-cultivate-default-v1",
+      "path": "assets/components/home-icon-cultivate-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "content_bbox": [
+        173,
+        63,
+        1271,
+        1079
+      ],
+      "content_size": [
+        1098,
+        1016
+      ],
+      "content_uv": [
+        0.12339514978601997,
+        0.05614973262032086,
+        0.9065620542082738,
+        0.9616755793226381
+      ],
+      "alpha_zero_pixels": 708664,
+      "alpha_partial_pixels": 864374,
+      "center_alpha": 252,
+      "sha256": "db0ce08b0feeb0d634106a2bbf43b46622a27bd1ef5f86e26c17f6b74026a542",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-rank",
+      "name": "排行交叉双剑",
+      "asset_id": "home-icon-rank-default-v1",
+      "path": "assets/components/home-icon-rank-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1316,
+        1195
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        103,
+        142,
+        1218,
+        1085
+      ],
+      "content_size": [
+        1115,
+        943
+      ],
+      "content_uv": [
+        0.07826747720364742,
+        0.11882845188284519,
+        0.925531914893617,
+        0.9079497907949791
+      ],
+      "alpha_zero_pixels": 991064,
+      "alpha_partial_pixels": 580754,
+      "center_alpha": 253,
+      "sha256": "7f4fa286ee51e3e5e7043d6f911a6784ad7de4b3aebce3840e3d3c4c22004a58",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-icon-menu",
+      "name": "菜单古金齿轮",
+      "asset_id": "home-icon-menu-default-v1",
+      "path": "assets/components/home-icon-menu-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        51,
+        55,
+        1200,
+        1175
+      ],
+      "content_size": [
+        1149,
+        1120
+      ],
+      "content_uv": [
+        0.04066985645933014,
+        0.043859649122807015,
+        0.9569377990430622,
+        0.9370015948963317
+      ],
+      "alpha_zero_pixels": 778818,
+      "alpha_partial_pixels": 792855,
+      "center_alpha": 0,
+      "sha256": "1ca99c5fc008963aa56be61c4896a709e0910891cc70d84be61f5f75d97c8bd9",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-rank-paper",
+      "name": "查看排行空白纸底",
+      "asset_id": "home-rank-paper-default-v1",
+      "path": "assets/components/home-rank-paper-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        308,
+        176,
+        1834,
+        550
+      ],
+      "content_size": [
+        1526,
+        374
+      ],
+      "content_uv": [
+        0.141804788213628,
+        0.2430939226519337,
+        0.8443830570902394,
+        0.7596685082872928
+      ],
+      "alpha_zero_pixels": 1126286,
+      "alpha_partial_pixels": 446196,
+      "center_alpha": 253,
+      "sha256": "485d61226d8c7070d3ae9c20c54e680dff46fd6a94f91712ee01c221b1493902",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-preview-paper",
+      "name": "仅预览标签纸底",
+      "asset_id": "home-preview-paper-default-v1",
+      "path": "assets/components/home-preview-paper-default-v1.png",
+      "dev_only": true,
+      "dimensions": [
+        1971,
+        798
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        51,
+        195,
+        1939,
+        623
+      ],
+      "content_size": [
+        1888,
+        428
+      ],
+      "content_uv": [
+        0.0258751902587519,
+        0.24436090225563908,
+        0.9837645865043125,
+        0.7807017543859649
+      ],
+      "alpha_zero_pixels": 1017615,
+      "alpha_partial_pixels": 555064,
+      "center_alpha": 253,
+      "sha256": "5b71862d10465973831cabd8f7a4374f5fa950d2128854d31a893a980b396ba4",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    },
+    {
+      "component_id": "home-bottom-cloud",
+      "name": "底栏淡金云带",
+      "asset_id": "home-bottom-cloud-default-v1",
+      "path": "assets/components/home-bottom-cloud-default-v1.png",
+      "dev_only": false,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "content_bbox": [
+        8,
+        319,
+        2169,
+        444
+      ],
+      "content_size": [
+        2161,
+        125
+      ],
+      "content_uv": [
+        0.003683241252302026,
+        0.44060773480662985,
+        0.9986187845303868,
+        0.6132596685082873
+      ],
+      "alpha_zero_pixels": 1434364,
+      "alpha_partial_pixels": 138154,
+      "center_alpha": 0,
+      "sha256": "5b58360de47d5077cf61e2864a51feb470490668f10938cde0352622cbcc8273",
+      "visual_checks": {
+        "no_text": true,
+        "no_screenshot_background": true,
+        "single_component": true,
+        "complete_silhouette": true
+      },
+      "user_approved": false
+    }
+  ],
+  "active_count": 18,
+  "historical_revisions": 2,
+  "current_art_user_approved": false,
+  "alpha_checks": "all RGBA, nonempty, corner Alpha <=1/255; frame and gear center Alpha=0",
+  "no_raster_postprocessing": true,
+  "runtime_tests_run": false
+}

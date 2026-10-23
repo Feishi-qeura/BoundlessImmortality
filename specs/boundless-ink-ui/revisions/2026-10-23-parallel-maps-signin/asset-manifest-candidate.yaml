@@ -1,0 +1,55 @@
+schema_version: 1
+project_id: boundless-ink-ui
+assets:
+  - id: world-map-v2-candidate
+    screen_id: world
+    path: assets/world-map-v2-candidate.png
+    prompt_path: prompts/world-final-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [941, 1672]
+    dimensions_basis: measured_from_file
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-99488b4a-17f4-47e1-a7ac-56021f95ed17.png
+    sha256: 7912af89ce9dedcf9198394f140514166deab5ad72139b1daeb504b7402a1390
+  - id: resources-map-v1-candidate
+    screen_id: resources
+    path: assets/resources-map-v1-candidate.png
+    prompt_path: prompts/resources-final-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [941, 1672]
+    dimensions_basis: measured_from_file
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-583303e3-b19c-4278-bbec-1f758ad5a5ff.png
+    sha256: 517a6ff150170b4b4790bb1697530064bde64945d3de285c2669c181d8999eb5
+  - id: daily-sign-in-v1-candidate
+    screen_id: sign-in
+    path: assets/daily-sign-in-v1-candidate.png
+    prompt_path: prompts/daily-sign-in-final-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [941, 1672]
+    dimensions_basis: measured_from_file
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-739df008-5a60-4118-a476-158abc2761c1.png
+    sha256: e8cc785139514135cf6d2cbb73a2b46796037558d425981231f35c38a26e0505
+  - id: monthly-sign-in-v1-candidate
+    screen_id: monthly-sign-in
+    path: assets/monthly-sign-in-v1-candidate.png
+    prompt_path: prompts/monthly-sign-in-final-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [941, 1672]
+    dimensions_basis: measured_from_file
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-a37477d5-202f-4339-b9e0-92563ceb6fdf.png
+    sha256: 37b9041200bca28618886a8ca9f9fc7ec94a103a0d585e7d710c5ed5defe6f7c

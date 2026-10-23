@@ -1,0 +1,156 @@
+[
+  {
+    "asset_path": "/Game/UI/Ink/Cohesion20261021/T_CohesionControls",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cohesion20261021\\T_CohesionControls.uasset",
+    "bytes": 2068088,
+    "sha256": "f793214a88a2d8f23390e274102cb7f2f5ed2ec6bd2b97e8dc13ac68a5039211",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 170,
+    "preview": "ui-audit\\T_CohesionControls.png",
+    "offset": 2444
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Cohesion20261021/T_CohesionIcons",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cohesion20261021\\T_CohesionIcons.uasset",
+    "bytes": 2482347,
+    "sha256": "792ad96eba0d6771f99c8eb4adae270217884e96afd0c7178d90580c2598a7a9",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 256,
+    "preview": "ui-audit\\T_CohesionIcons.png",
+    "offset": 2435
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Cohesion20261021/T_CohesionScenes",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cohesion20261021\\T_CohesionScenes.uasset",
+    "bytes": 3620042,
+    "sha256": "5f7f69f6c8d3e476db01d6243878e0e765586508bcc2a347b8f0a8a921a644a6",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 170,
+    "preview": "ui-audit\\T_CohesionScenes.png",
+    "offset": 2438
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Cultivation/T_InkFeatureScenes",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cultivation\\T_InkFeatureScenes.uasset",
+    "bytes": 3835162,
+    "sha256": "250fb6e6a5ac94a2b19da447983eb06c7faa2d674ac10243d7491c97d77aecb4",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Cultivation/T_RealmBanners",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cultivation\\T_RealmBanners.uasset",
+    "bytes": 3704651,
+    "sha256": "44e42d6d5374d3fa4539b513cf1c7a4d6c4a1d3392092157c8047b52af5671e8",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Cultivation/T_RealmChart",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Cultivation\\T_RealmChart.uasset",
+    "bytes": 2784657,
+    "sha256": "6e46c4a7e882a781f3f0a661316e624d2d81bca9ce959895318b8d75c83ee625",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Polish/T_PolishControls",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Polish\\T_PolishControls.uasset",
+    "bytes": 2355571,
+    "sha256": "970edc9eab4d2ca2c3748d9f911805dc19602e7a3aad67ec4f49f28544b5747b",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Polish/T_PolishOrnaments",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Polish\\T_PolishOrnaments.uasset",
+    "bytes": 2681407,
+    "sha256": "df6fcd8e8b491bd30c16d53e4cda8ec360ba37965337d8e6f80a9be7e32be72e",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Portrait20261021/T_PortraitControls",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Portrait20261021\\T_PortraitControls.uasset",
+    "bytes": 2462805,
+    "sha256": "a5ff44c868ff7890fa07dbace027edc1246bc5b562df0d9775d4c085eb93070b",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Portrait20261021/T_PortraitPanel",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Portrait20261021\\T_PortraitPanel.uasset",
+    "bytes": 2303086,
+    "sha256": "729fc5a628f9b6b02715972e4ff60f3d81e0d3cb6c5d771b605f6b5f518228fd",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Provided/T_LeaderboardTitles",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Provided\\T_LeaderboardTitles.uasset",
+    "bytes": 3246626,
+    "sha256": "187281e36abf5b639180f6f045a9037e233621cb49280cb113f712fbd8f42b2f",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 256,
+    "preview": "ui-audit\\T_LeaderboardTitles.png",
+    "offset": 2411
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Provided/T_ProvidedButtons",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Provided\\T_ProvidedButtons.uasset",
+    "bytes": 3029746,
+    "sha256": "2c7550f5fcf70a9ea0e1f4d98afe992217aca419295757ada0bd9742b50c6492",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Provided/T_ProvidedInventory",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Provided\\T_ProvidedInventory.uasset",
+    "bytes": 2392744,
+    "sha256": "8093a3d9a4b5aa2a42df2f612d10df2d1d27b8c1e068bb835ecc3953d15556f6",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 256,
+    "preview": "ui-audit\\T_ProvidedInventory.png",
+    "offset": 2449
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Provided/T_ProvidedRank",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Provided\\T_ProvidedRank.uasset",
+    "bytes": 2424038,
+    "sha256": "942bc94c5dc05b5252f379e1afd95266b93a743513438dd8185eeda8805b5fec",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Provided/T_ProvidedTitle",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Provided\\T_ProvidedTitle.uasset",
+    "bytes": 1922097,
+    "sha256": "0af10042810a4ae66b09201b64268efd90d05474d3217ebf58a74887b87cb156",
+    "pixel_inspection": "not_available"
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Textures/T_InkAttributeIcons",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Textures\\T_InkAttributeIcons.uasset",
+    "bytes": 1247654,
+    "sha256": "d8ee3dbc4d0beb863b234847e27ed1e6c6773107f8ce3d881a375486984fd716",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 192,
+    "preview": "ui-audit\\T_InkAttributeIcons.png",
+    "offset": 2411
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Textures/T_InkMeditation",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Textures\\T_InkMeditation.uasset",
+    "bytes": 1375090,
+    "sha256": "3dd660b7d9e3c27be27da841a8e6d6f254c3b8d03e67f724fb64a3eb07492dbb",
+    "pixel_inspection": "embedded_jpeg_extracted",
+    "width": 256,
+    "height": 256,
+    "preview": "ui-audit\\T_InkMeditation.png",
+    "offset": 2399
+  },
+  {
+    "asset_path": "/Game/UI/Ink/Textures/T_InkTitle",
+    "file": "D:\\demo\\BoundlessImmortality\\Content\\UI\\Ink\\Textures\\T_InkTitle.uasset",
+    "bytes": 1921480,
+    "sha256": "4a9717ea4c1eeb244c92044c950ca3167619cc120683b8df0a1f576c564bf656",
+    "pixel_inspection": "not_available"
+  }
+]

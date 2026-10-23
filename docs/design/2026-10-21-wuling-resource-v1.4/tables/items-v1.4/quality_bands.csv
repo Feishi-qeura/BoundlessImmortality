@@ -1,0 +1,7 @@
+﻿band_id,name,q_min,q_max,source_indie_multiplier,live_snapshot_factor
+QB1,凡品,0,39,2.5,1.0
+QB2,良品,40,59,3.0,1.02
+QB3,上品,60,74,3.5,1.04
+QB4,极品,75,89,4.0,1.06
+QB5,天品,90,97,4.5,1.08
+QB6,完美,98,100,5.0,1.1

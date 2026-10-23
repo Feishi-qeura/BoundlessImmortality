@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "formulaChecks": [
+    "quality_100",
+    "perfect_label",
+    "base_50",
+    "fifty_helpers_100",
+    "pity_100",
+    "no_treasure_q80"
+  ],
+  "worksheetCount": 18,
+  "authoringLibrary": "@oai/artifact-tool",
+  "runtimeTests": false
+}

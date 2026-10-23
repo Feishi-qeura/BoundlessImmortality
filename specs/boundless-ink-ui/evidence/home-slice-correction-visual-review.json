@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-slice-correction-v3-visual-review",
+  "status": "v3-inspection-complete-narrow-revision-required",
+  "complete": false,
+  "user_approved": false,
+  "per_reply_image_limit": 1,
+  "inspected_count": 4,
+  "required_image_count": 4,
+  "inspected": [
+    {
+      "path": "evidence/slice-correction-v3/home-top-tile-narrow-fit-v3.png",
+      "component_id": "home-top-tile",
+      "variant": "narrow-Fit",
+      "result": "visual-pass-at-review-scale",
+      "dimensions": [
+        712,
+        1097
+      ],
+      "displayed_dimensions": [
+        712,
+        1097
+      ],
+      "art_dimensions": [
+        712,
+        879
+      ],
+      "art_origin": [
+        0,
+        109
+      ],
+      "findings": "整图等比Fit后，金色肩部、侧边凸起、角饰及云纹保持整体比例，未见v2的独立拉长或压窄；边框完整。上下各109px透明余量符合contain居中策略，不作为有效图形或文字布局区域。",
+      "scope": "Native-resolution offline Fit preview only; text/hit layout, UE sampling, and device display remain untested. Integer raster rounding is documented in correction contract.",
+      "issue_resolution": "top-tile-v2-ornament-crosses-fixed-regions",
+      "sha256": "3d9c3832bda23c324a2464a9c5781b88ef25debc8fde33c91ae57efe59faf2e2"
+    },
+    {
+      "path": "evidence/slice-correction-v3/home-rank-paper-guides-v3.png",
+      "component_id": "home-rank-paper",
+      "variant": "guides",
+      "result": "guide-placement-pass",
+      "dimensions": [
+        1575,
+        399
+      ],
+      "displayed_dimensions": [
+        1575,
+        399
+      ],
+      "margins_lrtb": [
+        820,
+        400,
+        115,
+        125
+      ],
+      "vertical_cut_lines": [
+        820,
+        1175
+      ],
+      "findings": "扩大后的左右固定端区覆盖主要云头、卷角及此前跨线的可辨云尾轮廓；右下云饰起笔位于右固定区，中央355px主要为纸面与平直金边，切线未穿过可辨云饰转折。外围淡辉光仍属于半透明边缘，宽窄预览需检查接缝和采样。",
+      "scope": "Guide placement only for full-height fixed endcaps with locked height and X-only stretch; wide/narrow visual outcome remains pending.",
+      "sha256": "70ef0d424f1e15bc1ad45f67b325d1787eae70959bd511db02b364f28f396183"
+    },
+    {
+      "path": "evidence/slice-correction-v3/home-rank-paper-wide-v3.png",
+      "component_id": "home-rank-paper",
+      "variant": "wide",
+      "result": "visual-pass-at-review-scale",
+      "dimensions": [
+        2205,
+        399
+      ],
+      "displayed_dimensions": [
+        2205,
+        399
+      ],
+      "margins_lrtb": [
+        820,
+        400,
+        115,
+        125
+      ],
+      "findings": "扩大固定端区后，主要云头、薄云尾及右下云饰起笔保持原形，未见v2的跨线拉长；纸面与上下金边连续，未见明显拼接断层或透明裂缝。中央纸纹横向延展属于当前策略，窄尺寸仍需单独检查。",
+      "scope": "Offline native-resolution wide preview at locked 399px height; applies to tested 2205px width. No engine/device sampling or minimum-width validation.",
+      "full_height_endcaps_numerically_exact": true,
+      "stretch_center_width_source": 355,
+      "stretch_center_width_destination": 985,
+      "sha256": "36727f5b39d89986fdf676ded30a17e49dfe8a2ef0a36fef40976ca679ed032e"
+    },
+    {
+      "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+      "component_id": "home-rank-paper",
+      "variant": "narrow",
+      "result": "visual-fail-compressed-paper-texture",
+      "dimensions": [
+        1260,
+        399
+      ],
+      "displayed_dimensions": [
+        1260,
+        399
+      ],
+      "margins_lrtb": [
+        820,
+        400,
+        115,
+        125
+      ],
+      "findings": "扩大固定端区后云头、云尾和卷角保持原形，但原355px纸纹中心被压至40px，x=820附近的中央窄带出现可见竖向纹理集中，视觉上形成细带，因此窄尺寸仍不通过。",
+      "root_cause": "Native 355px textured center compressed to 40px (0.112676x); pixel-exact reproduction confirms size policy rather than file corruption.",
+      "scope": "Offline native-resolution narrow preview only; no UE or device test.",
+      "sha256": "a71f1cb69a45a1efeffaa6bea92e32ec3600137bc58d347ef2455d81a95a0a4d"
+    }
+  ],
+  "pending": [],
+  "numerically_covered_without_redundant_visual_open": [
+    {
+      "variants": "top tile wide/tall Fit",
+      "reason": "Original art pixels unchanged; only centered transparent remainder added."
+    },
+    {
+      "variants": "rank-paper native",
+      "reason": "Exact RGBA reconstruction of source."
+    }
+  ],
+  "contract": "contracts/home-slice-correction-v3.yaml",
+  "component_outcomes": {
+    "home-top-tile": {
+      "author_visual_review": "passed",
+      "user_approved": false,
+      "mode": "full/Fit",
+      "evidence": "evidence/slice-correction-v3/home-top-tile-narrow-fit-v3.png"
+    },
+    "home-rank-paper": {
+      "author_visual_review": "narrow-revision-required",
+      "user_approved": false,
+      "guide_review": "passed",
+      "guide_evidence": "evidence/slice-correction-v3/home-rank-paper-guides-v3.png",
+      "wide_review": "passed",
+      "wide_evidence": "evidence/slice-correction-v3/home-rank-paper-wide-v3.png",
+      "narrow_review": "failed",
+      "narrow_evidence": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png"
+    }
+  },
+  "inspection_complete": true,
+  "visual_acceptance_passed": false,
+  "successor_review": "evidence/home-slice-correction-v4-visual-review.json"
+}

@@ -1,0 +1,19 @@
+﻿id,source_asset,source_crop_ltrb,trimmed_size,padding,slice_type,margins_lrtb,retained_pixels_exact
+home-identity-ink-default-trim-v1,home-identity-ink-default-v1,"[37, 60, 2133, 664]","[2112, 620]",8,full,"[0, 0, 0, 0]",True
+home-avatar-frame-default-trim-v1,home-avatar-frame-default-v1,"[33, 46, 1234, 1230]","[1217, 1200]",8,full,"[0, 0, 0, 0]",True
+home-avatar-portrait-default-trim-v1,home-avatar-portrait-default-v2,"[26, 35, 1219, 1232]","[1209, 1213]",8,full,"[0, 0, 0, 0]",True
+home-realm-plaque-default-trim-v1,home-realm-plaque-default-v1,"[98, 134, 2070, 592]","[1988, 474]",8,full,"[0, 0, 0, 0]",True
+home-bar-track-default-trim-v1,home-bar-track-default-v1,"[71, 257, 2101, 467]","[2046, 226]",8,9-slice,"[260, 260, 60, 60]",True
+home-health-fill-default-trim-v1,home-health-fill-default-v1,"[69, 448, 1482, 567]","[1429, 135]",8,full,"[0, 0, 0, 0]",True
+home-qi-fill-default-trim-v1,home-qi-fill-default-v2,"[65, 444, 1485, 571]","[1436, 143]",8,full,"[0, 0, 0, 0]",True
+home-top-tile-default-trim-v1,home-top-tile-default-v1,"[125, 163, 998, 1244]","[889, 1097]",8,9-slice,"[180, 180, 200, 200]",True
+home-icon-activity-default-trim-v1,home-icon-activity-default-v1,"[235, 29, 1050, 1189]","[831, 1176]",8,full,"[0, 0, 0, 0]",True
+home-icon-sign-in-default-trim-v1,home-icon-sign-in-default-v1,"[185, 78, 1311, 1006]","[1142, 944]",8,full,"[0, 0, 0, 0]",True
+home-icon-journey-default-trim-v1,home-icon-journey-default-v1,"[65, 67, 1206, 1190]","[1157, 1139]",8,full,"[0, 0, 0, 0]",True
+home-icon-bag-default-trim-v1,home-icon-bag-default-v1,"[123, 113, 1245, 1131]","[1138, 1034]",8,full,"[0, 0, 0, 0]",True
+home-icon-cultivate-default-trim-v1,home-icon-cultivate-default-v1,"[166, 55, 1276, 1088]","[1126, 1049]",8,full,"[0, 0, 0, 0]",True
+home-icon-rank-default-trim-v1,home-icon-rank-default-v1,"[99, 138, 1220, 1087]","[1137, 965]",8,full,"[0, 0, 0, 0]",True
+home-icon-menu-default-trim-v1,home-icon-menu-default-v1,"[50, 52, 1204, 1177]","[1170, 1141]",8,full,"[0, 0, 0, 0]",True
+home-rank-paper-default-trim-v1,home-rank-paper-default-v1,"[307, 176, 1866, 559]","[1575, 399]",8,9-slice,"[600, 350, 115, 125]",True
+home-preview-paper-default-trim-v1,home-preview-paper-default-v1,"[49, 192, 1947, 627]","[1914, 451]",8,full,"[0, 0, 0, 0]",True
+home-bottom-cloud-default-trim-v1,home-bottom-cloud-default-v1,"[0, 315, 2172, 451]","[2188, 152]",8,full,"[0, 0, 0, 0]",True

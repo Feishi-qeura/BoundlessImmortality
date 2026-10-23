@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-23T03:08:13.2932641+08:00",
+  "character_profile_method_region_unchanged": true,
+  "authority_execute_selected_unchanged": true,
+  "market_fee_formula_cases": 1500,
+  "source_checks": [
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "authority_commands_preserved": true,
+      "brace_balance": true,
+      "sha256": "087AA5DDB98D82DAC1594036C57A6E87953CA8682ED17296DAABD5C409A5D80A"
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "authority_commands_preserved": true,
+      "brace_balance": true,
+      "sha256": "B979B39F652066B31E797EFD7F6E9DF1BAF3B450A2B832026B3E58B01E40CEB3"
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "authority_commands_preserved": true,
+      "brace_balance": true,
+      "sha256": "49FC94D251A5CF9240ED05A1B1AA2306637BB0404B8E5FFBAB1843EFBA248F67"
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "authority_commands_preserved": true,
+      "brace_balance": true,
+      "sha256": "B5FA448B3FADF09271DBB6BE7B9F655749657595BE17AFE4E95C862DA2CDC797"
+    }
+  ],
+  "native_build_run": false,
+  "runtime_tests_run": false
+}

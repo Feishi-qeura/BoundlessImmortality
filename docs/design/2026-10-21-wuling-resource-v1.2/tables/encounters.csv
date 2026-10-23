@@ -1,0 +1,5 @@
+preset_id,name,reference_viewers,stage1_waves,stage1_targets_per_wave,normal_health,obstacle_count,obstacle_health,target_defense,enemy_attack,enemy_attack_interval_seconds,enemy_speed,max_normal_targets,boss_health,boss_attack,boss_attack_interval_seconds
+ENC_SOLO,独行历练,0,3,4,20,2,40,10,10,4,55,4,360,20,3
+ENC_SMALL,小型历练,5,3,4,120,2,240,10,10,4,55,4,2160,20,3
+ENC_MEDIUM,中型历练,20,3,4,420,2,840,10,10,4,55,4,7560,20,3
+ENC_LARGE,大型历练,80,3,4,1620,2,3240,10,10,4,55,4,29160,20,3

@@ -1,0 +1,5 @@
+﻿grade_id,name,core_score,guard_weight,essence_weight,treasure_score
+G1,下品,10,3,6,4
+G2,中品,18,6,14,9
+G3,上品,26,10,22,15
+G4,极品,35,15,30,20

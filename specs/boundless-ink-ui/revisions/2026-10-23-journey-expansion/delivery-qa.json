@@ -1,0 +1,625 @@
+{
+  "editor_assets_imported": true,
+  "native_count": 101,
+  "native_failed": [],
+  "native": {
+    "Boundless.InkUI.Launch.AuthorityGuard": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "Boundless.InkUI.Launch.StableViewKey": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "Boundless.InkUI.WulingSect.SnapshotIsolation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "Boundless.UI.HomeV2.Geometry": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.ActualDamageAndStarCharges": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.AllUnlockedCoexist": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.AuraNoRecursion": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.ExpiryAndCooldownBoundaries": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.GiftQuantityAndFiniteTimers": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.GiftStackFormula": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.PotionDepartureMigration": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.RealmFeedbackOnce": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.RealmMaterialGate": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.ReceiptImportReplay": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Cultivation.SharedOutboxRoomRecovery": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.AnchorStatus.RealActionProgress": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.AnchorStatus.SafePresentation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.AttributeRating.MajorRealmAndBoundaries": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.CharacterCultivation.RealmBoundaries": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.CharacterCultivation.SlotBorderBounds": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.CultivationNameplate.Distance": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.CultivationNameplate.Geometry": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Feedback.BufferedProgress": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Feedback.DamageTiers": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Feedback.GMIsolation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Feedback.RegeneratedMeterArtwork": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Feedback.SingleDamageEvent": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Inventory.Actions": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Inventory.Capacity": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Inventory.NewMarker": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Inventory.Quantity1To100": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Inventory.StableIdentity": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Leaderboard.ActivityFade": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Leaderboard.DataChanges": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Leaderboard.ManualFade": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Leaderboard.PortraitRows": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Leaderboard.Rows": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.NiagaraTitles.Assets": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.NiagaraTitles.DestroyedComponentLifecycle": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.NiagaraTitles.Quality": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.NiagaraTitles.VisibilityPolicy": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Refactor.AnnouncementClearance": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation-layout\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Refactor.PortraitHudRail": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation-layout\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Refactor.RequestIdentity": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation-layout\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Refactor.SafeLayout": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation-layout\\index.json"
+    },
+    "BoundlessImmortality.Frontend.SafeReentry.GroundAndVoid": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.SafeReentry.MenuPawnRoles": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.SafeReentry.StageCoordinatesKeepPawnRoles": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 1,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Save.IsolatedSlots": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Save.MemoryIntegrity": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Save.MenuPlayTime": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Save.Validation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.SignIn.ChestProgress": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Frontend.Visual.WheelResultStable": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Alert.NoSceneInteraction": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Alert.OrbitAndParameters": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Alert.PureHeightCurve": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Alert.Regression": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Alert.RunningReturn": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Night.DynamicAttackFrequency": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Night.RunningCatchUp": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Night.WideTempo": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Presentation.InterruptCombat": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Presentation.MenuCycle": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Refinement.DepthAndShadow": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Refinement.FrameSmoothness": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Refinement.IdleDwell": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Refinement.OwnerApproach": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Refinement.SpatialBezier": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.SpatialRanges.IndependentMotion": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.SpatialRanges.LegacyInheritance": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Tempo.IndependentAlert": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.AcknowledgementReconnect": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Anchor": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.AnchorProfileRouting": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.AudienceCommands": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.AudienceRouting": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.AvatarRefresh": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.BezierDynamics": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.CombatClock": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.ComboProbability": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.EligibilityMutation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.FlightCancellation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.GMControls": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.ImpactCallbacks": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.LivingFlight": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.MixedRangeSkillEligibility": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Monster": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.MovingTargetFlight": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.QueuedAttackSwitch": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.RejoinCapacity": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Roster": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.SkillCommitAfterExecution": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Skills": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.LiveWeapons.Swarm": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.AlertLeaseIsolation": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.AuthorityInventory": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.AuthorityProjection": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.FunctionalRoutes": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.HonorKeepsLegacyGift": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    },
+    "BoundlessImmortality.Wuling.RewardReceiptQueue": {
+      "state": "Success",
+      "errors": 0,
+      "warnings": 0,
+      "source": "automation\\index.json"
+    }
+  },
+  "pie_finished": false,
+  "pie_passed": false,
+  "pie_check_count": 14,
+  "pie_failures": [],
+  "pie_error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/revisions/2026-10-23-journey-expansion/verify_pie.py\", line 146, in tick\n    name,fn,delay=STEPS[I];R['current_step']=name;fn();I+=1;NEXT=time.monotonic()+delay;save()\n                                                  ^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/revisions/2026-10-23-journey-expansion/verify_pie.py\", line 32, in name_input\n    panel=F.get_editor_property('extension_pages').get('Wuling');panel.get_editor_property('guild_name_input').set_text('青云测试武灵')\n                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: InkWulingSectPanel: Failed to find property 'guild_name_input' for attribute 'guild_name_input' on 'WBP_WulingSect_C'\n",
+  "screenshots": [
+    "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\JourneyExpansion20261023\\PIE\\hud-portrait.png",
+    "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\JourneyExpansion20261023\\PIE\\launch-unstarted.png",
+    "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\JourneyExpansion20261023\\PIE\\wuling-empty.png"
+  ],
+  "device_tests_run": false,
+  "new_distribution_packaged": false
+}

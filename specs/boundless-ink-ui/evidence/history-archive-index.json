@@ -1,0 +1,98 @@
+{
+  "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2",
+  "migrations": [
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\packages\\home-components-v1-review.zip",
+      "original_relative": "specs/boundless-ink-ui/packages/home-components-v1-review.zip",
+      "design_relative": "packages/home-components-v1-review.zip",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\packages\\home-components-v1-review.zip",
+      "sha256": "30915ffad3762d7744fae4316cfab6e722de3593b07904f5f43561ba70f4af96",
+      "bytes": 24475143,
+      "reason": "Superseded component review package; all 18 approved source PNGs and active v2 package retained."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\packages\\home-components-trim-v1-png.zip",
+      "original_relative": "specs/boundless-ink-ui/packages/home-components-trim-v1-png.zip",
+      "design_relative": "packages/home-components-trim-v1-png.zip",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\packages\\home-components-trim-v1-png.zip",
+      "sha256": "22c5e48cfa6a51fe565289a013619a79bd59b8d196427db12c110e4b09544f0d",
+      "bytes": 21341281,
+      "reason": "Superseded metadata v1 package; current approved rendering policy is v4 in pack v2."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-wide-v2.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "design_relative": "evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-wide-v2.png",
+      "sha256": "afcb38490da591a2017c34faf350a4cc56f045ff23c1d88b2810b8edcb733c5d",
+      "bytes": 1704249,
+      "reason": "Recorded failed all-axis slice; replaced by approved whole-image Fit."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-narrow-v2.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "design_relative": "evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-narrow-v2.png",
+      "sha256": "df7cfb7ff6129a5bf5107608b39496fd956f2953e19c01b96235680d782e9ab3",
+      "bytes": 1126416,
+      "reason": "Recorded failed all-axis slice; replaced by approved whole-image Fit."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-tall-v2.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "design_relative": "evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-top-tile-tall-v2.png",
+      "sha256": "ee414f6bc4c1c84933a8a0225b41434c97fd575f20723b0f86f0e516b1fa8f09",
+      "bytes": 1619157,
+      "reason": "Recorded failed all-axis slice; replaced by approved whole-image Fit."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-rank-paper-wide-v2.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "design_relative": "evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-rank-paper-wide-v2.png",
+      "sha256": "9c87fd938283ace83a2420e3370ce34eb82cebda7ff9607e3e571fb934ca3b85",
+      "bytes": 863116,
+      "reason": "Recorded failed endcap margins; replaced by v3 reviewed wide branch carried into v4."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-rank-paper-narrow-v2.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png",
+      "design_relative": "evidence/9slice-review-v2/home-rank-paper-narrow-v2.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\9slice-review-v2\\home-rank-paper-narrow-v2.png",
+      "sha256": "1cd56f0233d11aedf9248deaf8210adf9f9094cfd26d0cbb39fdeb90a1ee2949",
+      "bytes": 540641,
+      "reason": "Recorded failed slice; replaced by approved v4 narrow Fit."
+    },
+    {
+      "original": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\evidence\\slice-correction-v3\\home-rank-paper-narrow-v3.png",
+      "original_relative": "specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+      "design_relative": "evidence/slice-correction-v3/home-rank-paper-narrow-v3.png",
+      "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\files\\specs\\boundless-ink-ui\\evidence\\slice-correction-v3\\home-rank-paper-narrow-v3.png",
+      "sha256": "a71f1cb69a45a1efeffaa6bea92e32ec3600137bc58d347ef2455d81a95a0a4d",
+      "bytes": 543563,
+      "reason": "Recorded failed center compression; replaced by approved v4 narrow Fit."
+    }
+  ],
+  "updated_references": [
+    "specs/boundless-ink-ui/authoring/build_home_rank_narrow_fallback.py",
+    "specs/boundless-ink-ui/authoring/build_home_slice_corrections.py",
+    "specs/boundless-ink-ui/authoring/finalize_components.py",
+    "specs/boundless-ink-ui/authoring/finalize_home_trim_delivery.py",
+    "specs/boundless-ink-ui/authoring/verify_component_delivery.py",
+    "specs/boundless-ink-ui/authoring/verify_home_trim_delivery.py",
+    "specs/boundless-ink-ui/contracts/asset-manifest.yaml",
+    "specs/boundless-ink-ui/contracts/home-9slice-review.yaml",
+    "specs/boundless-ink-ui/contracts/home-slice-correction-v3.yaml",
+    "specs/boundless-ink-ui/evidence/component-delivery-status.json",
+    "specs/boundless-ink-ui/evidence/component-package.json",
+    "specs/boundless-ink-ui/evidence/delivery-status.json",
+    "specs/boundless-ink-ui/evidence/home-9slice-visual-review.json",
+    "specs/boundless-ink-ui/evidence/home-slice-correction-v4-visual-review.json",
+    "specs/boundless-ink-ui/evidence/home-slice-correction-visual-review.json",
+    "specs/boundless-ink-ui/evidence/home-trim-recheck.json",
+    "specs/boundless-ink-ui/evidence/pre-finalization-preserved-files.json"
+  ],
+  "historical_reference_policy": "Immutable pre-finalization snapshots and ZIPs retain original paths; resolve these through migrations[].design_relative. All current loose metadata uses archive file paths.",
+  "restore": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2\\restore.ps1"
+}

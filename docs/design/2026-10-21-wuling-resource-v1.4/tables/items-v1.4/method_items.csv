@@ -1,0 +1,15 @@
+﻿item_id,name,method_id,item_type,route,min_major,max_method_level,study_units,main_mechanic,support_mechanic,stacking,source_id
+BOOK_METHOD_EDGE_BOOK,疾锋剑诀原典,METHOD_EDGE,book,剑修,0,6,0,每5次命中强化至1.8倍,完整蓄力后下一击增伤10%,同功法主辅不重复叠加；既有规则优先,CH_METHOD_1
+BOOK_METHOD_EDGE_STUDY,疾锋剑诀研习卷,METHOD_EDGE,study,剑修,0,6,1,每5次命中强化至1.8倍,完整蓄力后下一击增伤10%,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_STAR_BOOK,星罗法诀原典,METHOD_STAR,book,法修,1,6,0,每20秒法域6秒增伤20%,范围目标额外伤害5%,同功法主辅不重复叠加；既有规则优先,CH_METHOD_2
+BOOK_METHOD_STAR_STUDY,星罗法诀研习卷,METHOD_STAR,study,法修,1,6,1,每20秒法域6秒增伤20%,范围目标额外伤害5%,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_GUARD_BOOK,玄罡体经原典,METHOD_GUARD,book,护体,0,6,0,每30秒护体6秒减伤20%,低生命防御提高10%,同功法主辅不重复叠加；既有规则优先,CH_METHOD_3
+BOOK_METHOD_GUARD_STUDY,玄罡体经研习卷,METHOD_GUARD,study,护体,0,6,1,每30秒护体6秒减伤20%,低生命防御提高10%,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_ECHO_BOOK,回响诀原典,METHOD_ECHO,book,魂修,0,6,0,每4次命中追加0.5倍延迟伤害,每20秒下一击追加0.1倍延迟伤害,同功法主辅不重复叠加；既有规则优先,CH_METHOD_4
+BOOK_METHOD_ECHO_STUDY,回响诀研习卷,METHOD_ECHO,study,魂修,0,6,1,每4次命中追加0.5倍延迟伤害,每20秒下一击追加0.1倍延迟伤害,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_PACT_BOOK,合契经原典,METHOD_PACT,book,协契,1,6,0,20秒标记成员增伤15%,每20秒标记首击增伤5%,同功法主辅不重复叠加；既有规则优先,CH_METHOD_5
+BOOK_METHOD_PACT_STUDY,合契经研习卷,METHOD_PACT,study,协契,1,6,1,20秒标记成员增伤15%,每20秒标记首击增伤5%,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_SURGE_BOOK,燃脉诀原典,METHOD_SURGE,book,燃息,1,6,0,10%当前生命换25%伤害6秒间隔30秒,低生命本命剑增伤10%,同功法主辅不重复叠加；既有规则优先,CH_METHOD_6
+BOOK_METHOD_SURGE_STUDY,燃脉诀研习卷,METHOD_SURGE,study,燃息,1,6,1,10%当前生命换25%伤害6秒间隔30秒,低生命本命剑增伤10%,同功法主辅不重复叠加；既有规则优先,CH_CRAFT
+BOOK_METHOD_ETHER_BOOK,百蚀经原典,METHOD_ETHER,book,蚀灵,1,6,0,每秒0.05倍最多5层持续5秒,每20秒首次命中加1层,同功法主辅不重复叠加；既有规则优先,CH_METHOD_7
+BOOK_METHOD_ETHER_STUDY,百蚀经研习卷,METHOD_ETHER,study,蚀灵,1,6,1,每秒0.05倍最多5层持续5秒,每20秒首次命中加1层,同功法主辅不重复叠加；既有规则优先,CH_CRAFT

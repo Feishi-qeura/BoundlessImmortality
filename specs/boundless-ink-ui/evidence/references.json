@@ -1,0 +1,24 @@
+[
+  {
+    "source": "C:\\Users\\zxxuh\\Desktop\\UI资源\\3\\ChatGPT 图像 2026年10月22日 18_37_12.jpg",
+    "copy": "references/reference-01.jpg",
+    "dimensions": [
+      1672,
+      1080
+    ],
+    "mode": "RGB",
+    "sha256": "c7eea6e05a9910cff0d9d2c9ba967b8793d317b83535e483a1ca2eebb214ab02",
+    "inspected": true
+  },
+  {
+    "source": "C:\\Users\\zxxuh\\Desktop\\UI资源\\3\\ChatGPT 图像 2026年10月22日 18_38_11.png",
+    "copy": "references/reference-02.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "688ebed20c041df60f70251842ea1ffd51ea8192c6ae29a16f3517e1c5f91a89",
+    "inspected": true
+  }
+]

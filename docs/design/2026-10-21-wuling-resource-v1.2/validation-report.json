@@ -1,0 +1,1509 @@
+{
+  "design_version": "wuling-resource-v1.1",
+  "generated_at_utc": "2026-10-21T06:47:54.102125+00:00",
+  "passed": true,
+  "check_count": 269,
+  "failed": [],
+  "verification_scope": "策划配置引用、边界和算术；未测试游戏实现、网络并发、平台、设备、支付或商业效果",
+  "source_hashes": {
+    "activities.csv": "bbf52d8567706d2478fa779bbffbf9326780917d47dec7e470cfc08f1cb50dd5",
+    "balance.json": "e4ae05c33e260057db8bae0b527031bd0acd230809e7ab414622380c0eae2a70",
+    "encounters.csv": "a5e8cced3100455e6c4b7ed364978975df1aa64fb55fd673c4cdbb1420f208f5",
+    "items.csv": "8aef2415ba8965a01060f637867e1530bda90ebf703bd04289442f2e89d5a5b6",
+    "market.csv": "f3b555ff8a2648eac1c744e2fb68364096f1bc04024e0e1d7aa44a02abc90f0a",
+    "methods.csv": "5a714c1a7817c751d1d1daf418dcfa782e343c3ee778ad77bb1f75b9e70e41dd",
+    "nodes.csv": "1b5a00000c1cb2476a37b867664571427be359dca07202ba595cce3d92790ffd",
+    "realm_targets.csv": "48899c0866910b308e5b5d45421e7a81524ac9eda7224657c4e107db1e61e61f",
+    "shop.csv": "b74d50a54a605d51eb9f5f82158db8626b64c7733cb09a21809a6c43dcfa0bc0",
+    "ui-acceptance.csv": "3a5b2a2b35c7627a9343ae92af9c524c3b44e175476e7bf2c3f12452af07971d",
+    "ui-art-requests.csv": "ed607992ac8b679b395c3670f903ad4e58cbc56cfddb8ee2c180bfab6ae6c0b3",
+    "ui-existing-assets.csv": "896ff92bc7c28d94d2fb495ec174b30233147ad945ea3277594acd570c0b3169",
+    "ui-files.csv": "db34dbc9d249db214e65f388433df3c0a021caad84a3ba97a8bb5b10fb138385",
+    "ui-screens.csv": "476564c3ada3ae0125b6cac041961fb69e7c55b66a4121b29239e380f3e3bf43",
+    "world_rewards.csv": "c3a4f197b150d35611c0a4aa8ac2a27f711d67e840ccfefb740d9eb156e72ad4"
+  },
+  "world_reward_totals": {
+    "CUR_STONE": 80,
+    "MAT_BREAK": 12,
+    "MAT_HERB_B": 5,
+    "MAT_IRON_B": 3,
+    "MAT_PAGE": 2,
+    "MAT_HERB_T": 1,
+    "MAT_IRON_T": 1
+  },
+  "baseline_30m_reward_totals": {
+    "CUR_STONE": 240,
+    "MAT_BREAK": 36,
+    "MAT_HERB_B": 15,
+    "MAT_HERB_T": 3,
+    "MAT_IRON_B": 9,
+    "MAT_IRON_T": 3,
+    "MAT_PAGE": 6
+  },
+  "early_budget_stone_remaining": 40,
+  "market_example": {
+    "buyer_after": 20,
+    "seller_after": 85,
+    "tax": 4,
+    "listing_fee": 1
+  },
+  "node_examples": [
+    {
+      "node_id": "NODE_QI",
+      "max_item_count_30m": 0,
+      "base_extra_qi_30m": 360.0
+    },
+    {
+      "node_id": "NODE_STONE",
+      "max_item_count_30m": 60,
+      "base_extra_qi_30m": 0.0
+    },
+    {
+      "node_id": "NODE_HERB",
+      "max_item_count_30m": 6,
+      "base_extra_qi_30m": 0.0
+    },
+    {
+      "node_id": "NODE_IRON",
+      "max_item_count_30m": 6,
+      "base_extra_qi_30m": 0.0
+    },
+    {
+      "node_id": "NODE_PAGE",
+      "max_item_count_30m": 1,
+      "base_extra_qi_30m": 0.0
+    }
+  ],
+  "combat_examples": [
+    {
+      "preset_id": "ENC_SOLO",
+      "modeled_effective_output": 4.0,
+      "boss_seconds": 90.0,
+      "stage1_damage_seconds": 60.0,
+      "obstacle_damage_seconds": 20.0
+    },
+    {
+      "preset_id": "ENC_SMALL",
+      "modeled_effective_output": 24.0,
+      "boss_seconds": 90.0,
+      "stage1_damage_seconds": 60.0,
+      "obstacle_damage_seconds": 20.0
+    },
+    {
+      "preset_id": "ENC_MEDIUM",
+      "modeled_effective_output": 84.0,
+      "boss_seconds": 90.0,
+      "stage1_damage_seconds": 60.0,
+      "obstacle_damage_seconds": 20.0
+    },
+    {
+      "preset_id": "ENC_LARGE",
+      "modeled_effective_output": 324.0,
+      "boss_seconds": 90.0,
+      "stage1_damage_seconds": 60.0,
+      "obstacle_damage_seconds": 20.0
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "free_30m_offline10",
+      "steady_daily_qi": 5160.0,
+      "steady_daily_standard_minutes": 86.0,
+      "steady_28day_qi": 144480.0,
+      "fresh_account_28day_qi": 141600.0,
+      "fresh_account_realm": "元神二阶",
+      "note": "新账号第1天无离线收益；每天完整参与和签到；药水场景仅是假设全时覆盖"
+    },
+    {
+      "scenario": "free_30m_with_spring",
+      "steady_daily_qi": 5520.0,
+      "steady_daily_standard_minutes": 92.0,
+      "steady_28day_qi": 154560.0,
+      "fresh_account_28day_qi": 151680.0,
+      "fresh_account_realm": "炼虚一阶",
+      "note": "新账号第1天无离线收益；每天完整参与和签到；药水场景仅是假设全时覆盖"
+    },
+    {
+      "scenario": "free_90m_offline10",
+      "steady_daily_qi": 8940.0,
+      "steady_daily_standard_minutes": 149.0,
+      "steady_28day_qi": 250320.0,
+      "fresh_account_28day_qi": 247440.0,
+      "fresh_account_realm": "大乘",
+      "note": "新账号第1天无离线收益；每天完整参与和签到；药水场景仅是假设全时覆盖"
+    },
+    {
+      "scenario": "30m_without_offline",
+      "steady_daily_qi": 2280.0,
+      "steady_daily_standard_minutes": 38.0,
+      "steady_28day_qi": 63840.0,
+      "fresh_account_28day_qi": 63840.0,
+      "fresh_account_realm": "金丹四阶",
+      "note": "新账号第1天无离线收益；每天完整参与和签到；药水场景仅是假设全时覆盖"
+    },
+    {
+      "scenario": "30m_candidate_potion_entire_session",
+      "steady_daily_qi": 9210.0,
+      "steady_daily_standard_minutes": 153.5,
+      "steady_28day_qi": 257880.0,
+      "fresh_account_28day_qi": 255000.0,
+      "fresh_account_realm": "大乘",
+      "note": "新账号第1天无离线收益；每天完整参与和签到；药水场景仅是假设全时覆盖"
+    }
+  ],
+  "checks": [
+    {
+      "name": "unique_realms",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_items",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_nodes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_shop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_market",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_methods",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_activities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_encounters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "34_realms",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "continuous_zero_based_indices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "strictly_increasing_targets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_0_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_0_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_1_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_1_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_2_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_2_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_3_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_3_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_4_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_4_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_5_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_5_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_6_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_6_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_7_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_7_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_8_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_8_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_9_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_9_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_10_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_10_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_11_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_11_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_12_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_12_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_13_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_13_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_14_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_14_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_15_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_15_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_16_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_16_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_17_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_17_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_18_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_18_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_19_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_19_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_20_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_20_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_21_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_21_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_22_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_22_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_23_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_23_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_24_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_24_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_25_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_25_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_26_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_26_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_27_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_27_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_28_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_28_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_29_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_29_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_30_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_30_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_31_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_31_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_32_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_32_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_33_slots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "realm_33_nonnegative_costs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "viewer_costs_telescope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "anchor_costs_telescope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "max_realm_no_next_cost",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_stage_rewards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_1_CUR_STONE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_1_MAT_BREAK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_1_MAT_HERB_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_1_MAT_IRON_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_2_CUR_STONE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_2_MAT_BREAK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_2_MAT_HERB_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_2_MAT_IRON_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_2_MAT_PAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_CUR_STONE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_BREAK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_HERB_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_HERB_T",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_IRON_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_IRON_T",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reward_3_MAT_PAGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "world_reward_budget",
+      "passed": true,
+      "detail": {
+        "CUR_STONE": 80,
+        "MAT_BREAK": 12,
+        "MAT_HERB_B": 5,
+        "MAT_IRON_B": 3,
+        "MAT_PAGE": 2,
+        "MAT_HERB_T": 1,
+        "MAT_IRON_T": 1
+      }
+    },
+    {
+      "name": "node_NODE_QI_qi_cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_599",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_1200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_1799",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_1800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_QI_elapsed_3600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_qi_cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_item",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_599",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_1200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_1799",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_1800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_STONE_elapsed_3600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_qi_cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_item",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_599",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_1200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_1799",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_1800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_HERB_elapsed_3600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_qi_cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_item",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_599",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_1200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_1799",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_1800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_IRON_elapsed_3600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_qi_cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_item",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_59",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_599",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_1200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_1799",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_1800",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_NODE_PAGE_elapsed_3600",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "one_active_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "race_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "race_score_1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "race_real_hosts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_1_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_1_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_1_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_2_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_2_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_2_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_2_3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_2_4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_13",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_17",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_18",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_19",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audience_score_10_20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tie_all_equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tie_dense_groups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "below_threshold_no_lease",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_HEAL_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_HEAL_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_HEAL_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_HEAL_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_HEAL_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_SHIELD_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_SHIELD_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_SHIELD_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_SHIELD_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_SHIELD_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_STUDY_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_STUDY_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_STUDY_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_STUDY_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_STUDY_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BREAK_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BREAK_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BREAK_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BREAK_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BREAK_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_QUALITY_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_QUALITY_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_QUALITY_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_QUALITY_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_QUALITY_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BADGE_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BADGE_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BADGE_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BADGE_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_BADGE_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_PATTERN_output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_PATTERN_nonnegative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_PATTERN_extra_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_PATTERN_extra_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shop_SKU_PATTERN_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "30m_stone_example",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "30m_material_example",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_only_two_raw_materials",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_template_matches_whitelist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_MAT_HERB_T_origin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_MAT_HERB_T_price",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_MAT_IRON_T_origin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trade_MAT_IRON_T_price",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "binding_conversion_MAT_HERB_T",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "binding_conversion_MAT_IRON_T",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "market_example_balances",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "market_currency_conservation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_production_allowed_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_real_payment_allowed_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_cross_host_race_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_offline_cultivation_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_cross_session_numeric_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_economic_inventory_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_npc_shop_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_player_trade_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "release_cross_room_paid_numeric_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prototype_not_production",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "legacy_gift_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seven_method_routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_initial_methods",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_SOLO_boss_90sec",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_SOLO_stages_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_SMALL_boss_90sec",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_SMALL_stages_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_MEDIUM_boss_90sec",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_MEDIUM_stages_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_LARGE_boss_90sec",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encounter_ENC_LARGE_stages_fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_SIGN_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_VERSE_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_WORLD_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_RACE_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_SHARED_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_MONTH_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "activity_ACT_MOON_dates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "baseline_steady_daily_qi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "spring_steady_daily_qi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "active_steady_daily_qi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_free_bonus_gift_cap",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

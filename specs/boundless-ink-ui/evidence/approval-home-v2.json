@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "source": "direct-user-message",
+  "quote": "批准首页v2及规范和屏幕地图，开始拆解首页组件",
+  "approved": [
+    "home-v2",
+    "style-contract",
+    "screen-map",
+    "supporting-ui-planning-documentation"
+  ],
+  "authorized_next_stage": "home-component-breakdown",
+  "new_component_assets_approved": false,
+  "runtime_changes_authorized": false
+}

@@ -1,0 +1,89 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "AVHERD",
+			"instance": "1FFB54464F8771150AA8C0A8DF78A3A7",
+			"instanceName": "AVHERD-29976",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (26H2) [10.0.26300.9711] ",
+			"model": "Default",
+			"gPU": "AMD Radeon RX 7900 XTX",
+			"cPUModel": "13th Gen Intel(R) Core(TM) i5-13600KF",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.23-05.35.35",
+	"succeeded": 4,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.066059097647666931,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "AnnouncementClearance",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.AnnouncementClearance",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"1FFB54464F8771150AA8C0A8DF78A3A7"
+			],
+			"duration": 0.016388699412345886,
+			"dateTime": "2026.10.23-05.35.34",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PortraitHudRail",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.PortraitHudRail",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"1FFB54464F8771150AA8C0A8DF78A3A7"
+			],
+			"duration": 0.016566600650548935,
+			"dateTime": "2026.10.23-05.35.34",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RequestIdentity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.RequestIdentity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"1FFB54464F8771150AA8C0A8DF78A3A7"
+			],
+			"duration": 0.016432899981737137,
+			"dateTime": "2026.10.23-05.35.34",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SafeLayout",
+			"fullTestPath": "BoundlessImmortality.Frontend.Refactor.SafeLayout",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"1FFB54464F8771150AA8C0A8DF78A3A7"
+			],
+			"duration": 0.016670901328325272,
+			"dateTime": "2026.10.23-05.35.35",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

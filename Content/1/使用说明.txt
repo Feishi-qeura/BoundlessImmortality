@@ -1,0 +1,57 @@
+水墨修炼 Niagara 特效
+
+Niagara 资源：/Game/1/NS_InkCultivation
+绑定蓝图：/Game/1/NewBlueprint，组件名称 InkCultivation。
+三个图层：持续旋转并缓慢明暗变化的水墨太极、沿周身上升的墨雾、少量漂浮墨点。
+三个材质 M_InkRing、M_InkMist、M_InkFlecks 也位于 /Game/1。
+
+调节方法：打开 NewBlueprint，选中 InkCultivation 组件，在详情面板的 User Parameters 中覆盖参数；也可以打开 Niagara 系统调节 User 参数默认值。
+蓝图运行时使用 Set Niagara Variable (Float)，变量名称填写下面的完整名称。
+
+参数名称                    系统默认值     用途
+User.Radius                 140            效果半径，单位厘米。
+User.Intensity              1              所有图层的整体强度；0 为全部隐藏。
+User.InkColor               深青黑          所有墨迹的颜色，使用 Set Niagara Variable (Linear Color)。
+User.MistIntensity          1              仅墨雾的浓度/透明度；0 立即隐藏墨雾。
+User.MistSpawnRate          12             每秒生成的墨雾粒子数量。
+User.FleckSpawnRate         8              每秒生成的墨点粒子数量。
+User.TaijiRotationSpeed     12             太极每秒旋转角度；默认约 30 秒一圈，负数反向。
+
+建议在开始播放前设定转速。运行中直接改变转速会根据当前时间重新计算角度。
+生成速率设为 0 时停止生成新粒子，已有墨雾/墨点会在约 4.2/3.6 秒内消散。
+组件 Activate(true) 开始或重新开始；Deactivate 停止生成并让已有粒子消散。
+组件默认自动激活。接入打坐状态时，可取消 Auto Activate，在进入修炼时调用 Activate，退出时调用 Deactivate。
+当前 NewBlueprint 提供特效组件，打坐动画和境界数值应由已有玩法控制。
+若蓝图或关卡实例已经覆盖了 User.Intensity 等参数，它们会优先于 Niagara 系统默认值。
+
+Level_Sky_Temple_Demo_01 的实例优化
+
+原场景 3614 个 Actor，优化后 445 个 Actor。
+3372 个重复静态网格转为 203 组 HISM，位于 OptimizedDecor 文件夹。
+按网格、材质、渲染设置、镜像方向和 20 米空间分区分组，可在 HISM 的 Instances 中调整单个实例。
+全部 3438 处原始网格位置、材质及纳入检查的渲染属性通过重新载入核对。
+地面、台阶等保留查询碰撞，关闭多余的物理模拟碰撞；15 个雕像/符文装饰实例关闭碰撞。
+103 处地面碰撞射线测试通过。草木、水面、动态和被引用的 Actor 保留原形态。
+这里统计的是 Actor/实例减少量，未进行设备帧率基准测试。
+
+备份：Saved/Codex/Backup_BeforeInk_20261014 保存原蓝图、原关卡和项目配置。
+      Saved/Codex/Backup_BeforeTaiji_20261014 保存太极修改前的特效资产。
+两个备份目录均包含 SHA-256 清单。
+
+检查报告：Saved/Codex/verification_report.json、taiji_verification_report.json。
+作者工具：Tools/InkCultivation/update_taiji.py；GPU 检查与预览：Tools/InkCultivation/verify_taiji_editor.py。
+作者工具使用项目的 Editor 模块，生成的特效和 HISM 使用引擎标准组件。
+
+2026-10-15 水墨边缘与 Guard 角色更新
+
+M_InkRing 改为连续二维流场，圆周噪声首尾连续；太极外缘、阴阳分界和鱼眼使用渐变晕染。
+材质参数 InkEdgeSoftness 默认 0.045，越大边缘越柔和；InkFlowStrength 默认 0.05，控制缓慢流动的形状扰动。
+这两个参数属于材质，可创建 M_InkRing 的材质实例后调节，再在 Niagara 的 InkRing 精灵渲染器中指定该实例。
+现有 Niagara 的旋转、呼吸透明度、墨雾和墨点参数保持原有接线。
+水墨公式源文件：Tools/InkCultivation/taiji_water_ink.hlsl；修改后运行 update_taiji.py 才会写入材质资产。
+
+Level_Sky_Temple_Demo_01 继续由 BP_TopDownGameMode 生成 BP_TopDownCharacter。
+该玩家蓝图使用 Guard 原始身体、独立头部和两组 Groom；原有相机、移动与胶囊参数保留。
+CharacterMesh0 是隐藏的动画源，必须持续刷新骨骼；Body 使用 ABP_Guard 从父组件重定向动画。
+Guard_head 在构造脚本中跟随 Body 的 Leader Pose，Groom/Groom1 保持原始头部绑定。
+备份和本次检查输出：Saved/Codex/GuardWaterInk_20261015。

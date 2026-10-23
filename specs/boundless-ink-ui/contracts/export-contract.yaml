@@ -1,0 +1,13 @@
+schema_version: 1
+project_id: boundless-ink-ui
+status: draft
+source_atlas_id: ui-main
+targets:
+- engine: generic
+  format: json-manifest
+  manifest_path: exports/generic/ui-main.json
+  native_project_files: false
+review:
+  complete: false
+  notes:
+  - UE5.8只规划通用JSON交接；未生成UMG、uasset或原生工程。

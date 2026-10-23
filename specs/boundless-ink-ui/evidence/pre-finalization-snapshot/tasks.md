@@ -1,0 +1,25 @@
+# 实际任务状态
+- [x] [research] 查看全部两张参考与五张当前页面截图。
+- [x] [preserve] 记录现有UI源文件/资产哈希与保留范围。
+- [x] [product] 完成三文档映射；本轮随用户规范/屏幕地图批准确认。
+- [x] [specification] 完成配色/字体/布局/状态/软边/适配规范草案。
+- [x] [extension] 完成全页面地图、契约与逐页brief。
+- [x] [page] 实际生成home-v1，检查发现背景漂移；定向生成home-v2并实测登记，v1停用；v2已于本轮由用户批准。
+- [x] [verification] 44屏/39原规划ID/38当前注册路由交叉核对；670/670保护文件哈希一致；校验0错误、1条如实保留的待批准流程警告。
+- [x] [approval] 用户于2026-10-22批准首页v2、规范和屏幕地图；证据见approval-home-v2.json。
+- [x] [component] 18个透明无字当前素材生成并检查，头像/修为各修订一版；9控件×7态共63条共享图层渲染规则。
+- [ ] [page] 按批次扩展其余重制页面视觉。
+- [x] [trim] 18个已批准组件的独立切图、溯源合图与PNG ZIP已落盘。
+- [x] [trim-verification] 续作复核18项保留RGBA、12张测试图重建、48项角区、16项完整端区；ZIP 21项/18PNG完整且哈希未改；保护文件670/670一致。
+- [x] [9slice-v2-audit] 原v2计划图10/10已检查；轨道3图通过，顶部底板3种变形及排行纸底宽窄共5张测试图不通过；审核完成不代表通过验收。
+- [x] [correction-generation] v3候选已生成：顶部底板整图Fit，排行纸底固定端区扩大至820/400px；7张预览、6项数值检查通过，18张原PNG及旧ZIP未改；尚未启用候选。
+- [x] [correction-v3-audit] 修订v3必要图4/4已检查：顶部底板Fit、排行纸底分割线及wide通过；narrow中心355px纸纹压至40px形成竖带，不通过。
+- [x] [correction-v4-generation] 已生成排行纸底窄尺寸整图Fit预览及条件渲染策略；较宽时保留v3九宫格，窄于原生比例时Fit；候选元数据已修订但未启用。
+- [ ] [correction-v4-visual] 只剩1张narrow Fit v4必要图待查；通过后再启用新元数据、打新ZIP并完成交付。
+- [ ] [trim-delivery] 完成视觉审核后整理本阶段最终交付；派生切图/九宫格不冒充用户已批准。
+- [ ] [atlas-export] Atlas及generic引擎导出未执行，不属于本次切图/九宫格审核范围。
+- [ ] [runtime] UE集成、PIE、设备与平台验证，均不属于本轮完成声明。
+
+- [x] [verification] 组件阶段已实测图片尺寸/Alpha与63条状态引用；续作重新运行严格校验，0错误/0警告。视觉审核仍未完成。
+- [x] [component-approval] 18个当前组件已获用户明确批准，证据见evidence/approval-home-components.json。
+- [x] [visual-review] 本地浏览器渲染棋盘/白/墨三底，18/18图片加载，逐图检查；归档包含当前素材、源首页和总览截图。

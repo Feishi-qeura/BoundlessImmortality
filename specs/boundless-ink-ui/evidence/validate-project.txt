@@ -1,0 +1,2 @@
+WARNING: planning docs not approved before visual generation: gdd.md, prd.md, interaction.md (approve gdd.md / prd.md / interaction.md or document an explicit skip)
+OK: D:\demo\BoundlessImmortality\specs\boundless-ink-ui (1 warning(s))

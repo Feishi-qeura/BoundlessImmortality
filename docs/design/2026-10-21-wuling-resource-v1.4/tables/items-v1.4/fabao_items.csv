@@ -1,0 +1,13 @@
+﻿item_id,name,min_major,effect_key,magnitude,duration_seconds,cooldown_seconds,max_equipped,viewer_equippable,affects_tribulation_probability,allowed_in_normalized_race,source_id,description
+FABAO_01,引灵葫芦,0,heal_max_hp,0.1,0,90,1,False,False,False,CH_CRAFT,恢复主播最大生命10%；满生命不消耗技能冷却
+FABAO_02,镇山印,1,next_strike_add,0.3,8,60,1,False,False,False,CH_CRAFT,8秒内下一次本命剑命中增伤30%，最多一次
+FABAO_03,玄罡镜,1,shield_max_hp,0.1,12,90,1,False,False,False,CH_CRAFT,10%最大生命护盾12秒；同类屏障取最高
+FABAO_04,听风铃,2,cue_advance_seconds,1,10,60,1,False,False,False,CH_CRAFT,后续10秒机制提示提前1秒，不自动答题
+FABAO_05,锁云绫,3,npc_slow,0.2,6,60,1,False,False,False,CH_CRAFT,普通世界目标减速20%持续6秒，霸主免控时明确无效
+FABAO_06,归元鼎,4,heal_max_hp,0.12,0,90,1,False,False,False,CH_CRAFT,恢复主播最大生命12%，不复活
+FABAO_07,星河盘,4,next_hits_add,0.1,12,60,1,False,False,False,CH_CRAFT,后续3次本命剑命中增伤10%，12秒到期
+FABAO_08,离火幡,5,burn_attack_per_tick,0.1,5,60,1,False,False,False,CH_CRAFT,每秒0.1倍本命剑基础攻击，共5次，不触发额外触发链
+FABAO_09,定界珠,6,hazard_damage_reduction,0.2,6,90,1,False,False,False,CH_CRAFT,世界环境伤害减免20%持续6秒，受总减伤60%上限
+FABAO_10,镇魂钟,7,negative_duration_reduction,0.1,10,90,1,False,False,False,CH_CRAFT,10秒内新施加的可清除负面时长缩短10%
+FABAO_11,太虚尺,8,next_hit_armor_ignore,0.1,8,60,1,False,False,False,CH_CRAFT,下一次本命剑攻击破甲10%，受破甲总上限60%
+FABAO_12,乾坤图,9,public_route_preview,1,15,60,1,False,False,False,CH_CRAFT,显示已公开的两路线机制预览15秒，无隐藏掉率加成

@@ -1,0 +1,14 @@
+{
+  "tool": "built-in imagegen",
+  "transparent_background": true,
+  "prompt_template": "Use case: stylized-concept. Create ONE production game UI attribute rating badge for a Chinese xianxia ink-and-ivory interface. Exact readable text: \"{grade}\" only. Single compact rounded diamond seal medallion, ivory inlay with {color} enamel and matching metallic edge, strong dark outline, subtle ink-brush grain. Bold upright Latin capitals, impeccably correct spelling, thick simple strokes with high contrast, letters occupy most of the badge. Same restrained elegant badge family as the other ranks D C B A S SS SSS. Entire badge fills 90 percent of square canvas, perfectly centered, generous intact corners. Optimized for legibility when shown at 36 pixels; no tiny ornament, no thin lettering, no extra text, no watermark, no surrounding scene, no drop shadow extending far outside badge. Genuine transparent background and transparent exterior. Deliver only this single \"{grade}\" icon.",
+  "assets": [
+    {"grade":"D","color":"muted slate gray","file":"T_Rating_D.png"},
+    {"grade":"C","color":"jade green","file":"T_Rating_C.png"},
+    {"grade":"B","color":"sapphire blue","file":"T_Rating_B.png"},
+    {"grade":"A","color":"amethyst purple","file":"T_Rating_A.png"},
+    {"grade":"S","color":"warm orange","file":"T_Rating_S.png"},
+    {"grade":"SS","color":"rich antique gold","file":"T_Rating_SS.png"},
+    {"grade":"SSS","color":"crimson and luminous gold","file":"T_Rating_SSS.png"}
+  ]
+}

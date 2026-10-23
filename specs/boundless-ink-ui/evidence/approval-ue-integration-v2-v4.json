@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "source": "direct-user-message",
+  "quote": "我批准采用当前已交付的首页组件切图 v2，以及对应的 v4 渲染策略，并授权完成本批组件的 UE 接入、验证与相关历史资源归档清理。",
+  "pack": "home-components-trim-v2",
+  "render_policy": "v4",
+  "runtime_integration_authorized": true,
+  "cleanup_authorized": true
+}

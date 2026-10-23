@@ -1,0 +1,1108 @@
+schema_version: 1
+project_id: boundless-ink-ui
+source_screen_id: home
+source_asset_id: home-v2
+source_screen_status: approved
+status: approved
+components:
+- id: home-identity-ink
+  name: 身份墨底
+  category: panel
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 18
+  - 30
+  - 500
+  - 197
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 512
+  - 192
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-identity-ink-default-v1.txt
+  output: assets/components/home-identity-ink-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-identity-ink-default-v1
+  actual_dimensions:
+  - 2172
+  - 724
+  content_bbox:
+  - 40
+  - 62
+  - 2131
+  - 661
+  content_uv:
+  - 0.01841620626151013
+  - 0.0856353591160221
+  - 0.9811233885819521
+  - 0.9129834254143646
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-identity-ink-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-identity-ink-default-trim-v1.png
+- id: home-avatar-frame
+  name: 头像金框
+  category: frame
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 27
+  - 40
+  - 150
+  - 151
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 320
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-avatar-frame-default-v1.txt
+  output: assets/components/home-avatar-frame-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-avatar-frame-default-v1
+  actual_dimensions:
+  - 1254
+  - 1254
+  content_bbox:
+  - 38
+  - 48
+  - 1228
+  - 1203
+  content_uv:
+  - 0.030303030303030304
+  - 0.03827751196172249
+  - 0.9792663476874003
+  - 0.9593301435406698
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-avatar-frame-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-avatar-frame-default-trim-v1.png
+- id: home-avatar-portrait
+  name: 修士头像
+  category: character
+  reusable: false
+  source_asset_id: home-v2
+  source_bbox:
+  - 43
+  - 61
+  - 120
+  - 114
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 320
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-avatar-portrait-default-v2.txt
+  output: assets/components/home-avatar-portrait-default-v2.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-avatar-portrait-default-v2
+  actual_dimensions:
+  - 1254
+  - 1254
+  content_bbox:
+  - 28
+  - 37
+  - 1217
+  - 1228
+  content_uv:
+  - 0.022328548644338118
+  - 0.029505582137161084
+  - 0.970494417862839
+  - 0.9792663476874003
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  portrait_mask: runtime circular aperture matching avatar-frame; portrait is a bust, not a full character
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-avatar-portrait-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-avatar-portrait-default-trim-v1.png
+- id: home-realm-plaque
+  name: 境界空白牌
+  category: panel
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 22
+  - 178
+  - 160
+  - 47
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 384
+  - 128
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-realm-plaque-default-v1.txt
+  output: assets/components/home-realm-plaque-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-realm-plaque-default-v1
+  actual_dimensions:
+  - 2170
+  - 725
+  content_bbox:
+  - 101
+  - 136
+  - 2068
+  - 590
+  content_uv:
+  - 0.046543778801843315
+  - 0.18758620689655173
+  - 0.9529953917050691
+  - 0.8137931034482758
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-realm-plaque-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-realm-plaque-default-trim-v1.png
+- id: home-bar-track
+  name: 状态条金框轨道
+  category: progress
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 166
+  - 97
+  - 321
+  - 39
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 768
+  - 96
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-bar-track-default-v1.txt
+  output: assets/components/home-bar-track-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-bar-track-default-v1
+  actual_dimensions:
+  - 2172
+  - 724
+  content_bbox:
+  - 73
+  - 260
+  - 2099
+  - 465
+  content_uv:
+  - 0.03360957642725598
+  - 0.35911602209944754
+  - 0.966390423572744
+  - 0.6422651933701657
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-bar-track-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-bar-track-default-trim-v1.png
+- id: home-health-fill
+  name: 血量红色填充
+  category: progress
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 179
+  - 104
+  - 280
+  - 25
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 768
+  - 72
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-health-fill-default-v1.txt
+  output: assets/components/home-health-fill-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-health-fill-default-v1
+  actual_dimensions:
+  - 1552
+  - 1013
+  content_bbox:
+  - 71
+  - 450
+  - 1481
+  - 565
+  content_uv:
+  - 0.04574742268041237
+  - 0.4442250740375123
+  - 0.9542525773195877
+  - 0.5577492596248766
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-health-fill-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-health-fill-default-trim-v1.png
+- id: home-qi-fill
+  name: 修为玉青填充
+  category: progress
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 179
+  - 147
+  - 280
+  - 25
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 768
+  - 72
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-qi-fill-default-v2.txt
+  output: assets/components/home-qi-fill-default-v2.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-qi-fill-default-v2
+  actual_dimensions:
+  - 1552
+  - 1013
+  content_bbox:
+  - 67
+  - 446
+  - 1484
+  - 567
+  content_uv:
+  - 0.043170103092783504
+  - 0.44027640671273444
+  - 0.9561855670103093
+  - 0.5597235932872655
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-qi-fill-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-qi-fill-default-trim-v1.png
+- id: home-top-tile
+  name: 顶部入口空白底框
+  category: panel
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 542
+  - 55
+  - 115
+  - 144
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 256
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-top-tile-default-v1.txt
+  output: assets/components/home-top-tile-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-top-tile-default-v1
+  actual_dimensions:
+  - 1122
+  - 1402
+  content_bbox:
+  - 127
+  - 166
+  - 996
+  - 1242
+  content_uv:
+  - 0.11319073083778966
+  - 0.11840228245363767
+  - 0.8877005347593583
+  - 0.8858773181169758
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-top-tile-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-top-tile-default-trim-v1.png
+- id: home-icon-activity
+  name: 活动红灯笼
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 565
+  - 63
+  - 70
+  - 77
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 320
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-activity-default-v1.txt
+  output: assets/components/home-icon-activity-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-activity-default-v1
+  actual_dimensions:
+  - 1254
+  - 1254
+  content_bbox:
+  - 237
+  - 31
+  - 1048
+  - 1186
+  content_uv:
+  - 0.18899521531100477
+  - 0.024720893141945772
+  - 0.835725677830941
+  - 0.9457735247208932
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-activity-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-activity-default-trim-v1.png
+- id: home-icon-sign-in
+  name: 签到空白卷轴
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 696
+  - 66
+  - 66
+  - 75
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 320
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-sign-in-default-v1.txt
+  output: assets/components/home-icon-sign-in-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-sign-in-default-v1
+  actual_dimensions:
+  - 1480
+  - 1063
+  content_bbox:
+  - 187
+  - 80
+  - 1309
+  - 1004
+  content_uv:
+  - 0.12635135135135134
+  - 0.07525870178739416
+  - 0.8844594594594595
+  - 0.9444967074317968
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-sign-in-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-sign-in-default-trim-v1.png
+- id: home-icon-journey
+  name: 仙途宝塔
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 819
+  - 60
+  - 67
+  - 85
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 320
+  - 320
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-journey-default-v1.txt
+  output: assets/components/home-icon-journey-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-journey-default-v1
+  actual_dimensions:
+  - 1254
+  - 1254
+  content_bbox:
+  - 68
+  - 69
+  - 1199
+  - 1188
+  content_uv:
+  - 0.05422647527910686
+  - 0.05502392344497608
+  - 0.956140350877193
+  - 0.9473684210526315
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-journey-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-journey-default-trim-v1.png
+- id: home-icon-bag
+  name: 背包锦囊
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 232
+  - 1482
+  - 124
+  - 118
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 384
+  - 384
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-bag-default-v1.txt
+  output: assets/components/home-icon-bag-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-bag-default-v1
+  actual_dimensions:
+  - 1315
+  - 1197
+  content_bbox:
+  - 125
+  - 116
+  - 1242
+  - 1128
+  content_uv:
+  - 0.09505703422053231
+  - 0.09690893901420217
+  - 0.9444866920152091
+  - 0.9423558897243107
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-bag-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-bag-default-trim-v1.png
+- id: home-icon-cultivate
+  name: 修炼入定徽记
+  category: icon
+  reusable: false
+  source_asset_id: home-v2
+  source_bbox:
+  - 386
+  - 1449
+  - 178
+  - 162
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 512
+  - 512
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-cultivate-default-v1.txt
+  output: assets/components/home-icon-cultivate-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-cultivate-default-v1
+  actual_dimensions:
+  - 1402
+  - 1122
+  content_bbox:
+  - 173
+  - 63
+  - 1271
+  - 1079
+  content_uv:
+  - 0.12339514978601997
+  - 0.05614973262032086
+  - 0.9065620542082738
+  - 0.9616755793226381
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-cultivate-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-cultivate-default-trim-v1.png
+- id: home-icon-rank
+  name: 排行交叉双剑
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 584
+  - 1480
+  - 123
+  - 122
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 384
+  - 384
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-rank-default-v1.txt
+  output: assets/components/home-icon-rank-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-rank-default-v1
+  actual_dimensions:
+  - 1316
+  - 1195
+  content_bbox:
+  - 103
+  - 142
+  - 1218
+  - 1085
+  content_uv:
+  - 0.07826747720364742
+  - 0.11882845188284519
+  - 0.925531914893617
+  - 0.9079497907949791
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-rank-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-rank-default-trim-v1.png
+- id: home-icon-menu
+  name: 菜单古金齿轮
+  category: icon
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 767
+  - 1494
+  - 117
+  - 105
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 384
+  - 384
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-icon-menu-default-v1.txt
+  output: assets/components/home-icon-menu-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-icon-menu-default-v1
+  actual_dimensions:
+  - 1254
+  - 1254
+  content_bbox:
+  - 51
+  - 55
+  - 1200
+  - 1175
+  content_uv:
+  - 0.04066985645933014
+  - 0.043859649122807015
+  - 0.9569377990430622
+  - 0.9370015948963317
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-icon-menu-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-icon-menu-default-trim-v1.png
+- id: home-rank-paper
+  name: 查看排行空白纸底
+  category: panel
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 672
+  - 794
+  - 250
+  - 87
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 640
+  - 224
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-rank-paper-default-v1.txt
+  output: assets/components/home-rank-paper-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-rank-paper-default-v1
+  actual_dimensions:
+  - 2172
+  - 724
+  content_bbox:
+  - 308
+  - 176
+  - 1834
+  - 550
+  content_uv:
+  - 0.141804788213628
+  - 0.2430939226519337
+  - 0.8443830570902394
+  - 0.7596685082872928
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-rank-paper-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-rank-paper-default-trim-v1.png
+- id: home-preview-paper
+  name: 仅预览标签纸底
+  category: panel
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 22
+  - 253
+  - 223
+  - 50
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 512
+  - 128
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-preview-paper-default-v1.txt
+  output: assets/components/home-preview-paper-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: true
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-preview-paper-default-v1
+  actual_dimensions:
+  - 1971
+  - 798
+  content_bbox:
+  - 51
+  - 195
+  - 1939
+  - 623
+  content_uv:
+  - 0.0258751902587519
+  - 0.24436090225563908
+  - 0.9837645865043125
+  - 0.7807017543859649
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-preview-paper-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-preview-paper-default-trim-v1.png
+- id: home-bottom-cloud
+  name: 底栏淡金云带
+  category: decoration
+  reusable: true
+  source_asset_id: home-v2
+  source_bbox:
+  - 0
+  - 1551
+  - 941
+  - 65
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 1024
+  - 128
+  states:
+  - default
+  material: paper-ink-aged-gold
+  atlas_group: home-art
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  - visual.lighting
+  prompt: prompts/components/home-bottom-cloud-default-v1.txt
+  output: assets/components/home-bottom-cloud-default-v1.png
+  status: approved
+  review: user-approved
+  dev_only: false
+  layout_rule: Use measured alpha-content bounds for art placement; keep aspect; do not stretch ornamental art.
+  notes: 原始PNG完整保留；content_uv只用于预览/后续UV裁切。不把目标尺寸冒充实际尺寸；Slice保持full，未批准9-slice。
+  current_asset_id: home-bottom-cloud-default-v1
+  actual_dimensions:
+  - 2172
+  - 724
+  content_bbox:
+  - 8
+  - 319
+  - 2169
+  - 444
+  content_uv:
+  - 0.003683241252302026
+  - 0.44060773480662985
+  - 0.9986187845303868
+  - 0.6132596685082873
+  source_to_logical_scale:
+  - 0.7651434643995749
+  - 0.7655502392344498
+  approval_evidence: evidence/approval-home-components.json
+  derived_sprite_id: home-bottom-cloud-default-trim-v1
+  derived_sprite_path: assets/sprites/home-components-trim-v1/items/home-bottom-cloud-default-trim-v1.png
+- id: hud-launch-countdown
+  name: 开服倒计时入口卡
+  category: card
+  reusable: false
+  source_asset_id: home-v2
+  transparent_background: false
+  text_policy: dynamic-text-over-generated-preview
+  target_size:
+  - 600
+  - 240
+  states:
+  - default
+  material: paper-ink-aged-gold
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - visual.materials
+  prompt: revisions/2026-10-23-parallel-activities/hud-launch-countdown-v1-prompt.md
+  output: revisions/2026-10-23-parallel-activities/assets/hud-launch-countdown-v1.png
+  status: generated
+  review: awaiting-user-visual-review
+  dev_only: false
+  layout_rule: Compact optional entry within the existing activity block; keep authoritative countdown and actions as runtime text/widgets.
+  notes: Opaque preview candidate, not approved for direct component import; regenerate with transparency if sliced component use is selected.
+excluded_art:
+- 真实3D场景与主角：复用现有场景，不生成/替换
+- 全部动态文字：TextBlock，不烘焙
+- 状态差异与底栏阅读渐变：state-recipes渲染定义
+review:
+  complete: true
+  user_approved: true
+  scope: 18图逐图视觉+Alpha/元数据检查；不含引擎或设备
+  evidence: evidence/component-image-review.json
+  approval_evidence: evidence/approval-home-components.json
+note: 本阶段只生成18个独立基础图。完整控件交互态是共享图层加确定性状态参数，不冒充已烘焙状态PNG。
+derivative_pack: home-components-trim-v1
+

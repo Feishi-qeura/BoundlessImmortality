@@ -1,0 +1,10 @@
+{
+  "rows": 176,
+  "minor_stage_equality": true,
+  "source_sha256": {
+    "docs/design/2026-10-21-wuling-resource-v1.4/03-数值策划案.md": "0f55e764931e720b0a75aa14a9f85dd43cf739c47d56f7adb984b661954059d1",
+    "docs/design/2026-10-21-wuling-resource-v1.4/15-分类物品与武灵经济扩展策划案.md": "6452ab44834c2e9e05b5dc2e2c2046848b3e7c7d4cc71c6f6333303d7d92c4b3",
+    "docs/design/2026-10-21-wuling-resource-v1.4/tables/realm_targets.csv": "48899c0866910b308e5b5d45421e7a81524ac9eda7224657c4e107db1e61e61f",
+    "docs/design/2026-10-21-wuling-resource-v1.4/tables/items-v1.4/equipment_items.csv": "441c54b334c1e13d79d330216037e4be6ef1b8799b67d28470b2df486193e6ba"
+  }
+}

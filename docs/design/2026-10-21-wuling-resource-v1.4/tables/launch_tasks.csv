@@ -1,0 +1,8 @@
+task_id,condition_type,target,per_round_cap,reward_owner,reward_item,reward_count,title_required,paid_condition
+L01,join_and_free_response,1,1,viewer,STAT_QI,60,true,false
+L02,complete_world_rounds,1,1,viewer,STAT_QI,120,true,false
+L03,complete_world_rounds,3,1,viewer,STAT_QI,180,true,false
+L04,complete_world_rounds,6,1,viewer,STAT_QI,240,true,false
+L05,correct_guard_response,4,2,viewer,STAT_QI,60,true,false
+L06,correct_break_response,4,2,viewer,STAT_QI,60,true,false
+L07,route_vote_in_distinct_rounds,2,1,viewer,STAT_QI,60,true,false

@@ -1,0 +1,9 @@
+activity_id,name,cycle,start_at,end_at,enabled,profile_requirement,reward_budget
+ACT_SIGN,每日签到,daily,,,true,approved_persistence_or_prototype,sign_once_300qi
+ACT_VERSE,每日剑诀,daily,,,true,base,text_only
+ACT_WORLD,世界历练,event,,,true,base,world_stage_budget
+ACT_RACE,灵脉竞采,event,,,true,cross_host_race,stage_budget_plus_lease
+ACT_SHARED,武灵共修,event,,,true,base,online_qi_only
+ACT_MONTH,月度签到历程,monthly,,,true,approved_persistence_or_prototype,cosmetic_only
+ACT_MOON,中秋问月,limited,,,false,approved_materials,replace_world_plus_cosmetic_once
+ACT_QINGYUN_LAUNCH,青云初启,relative_guild_creation,,,true,prototype_or_explicit_launch_manifest,launch_once_budget_rank_numeric_closed

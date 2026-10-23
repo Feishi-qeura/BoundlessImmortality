@@ -1,0 +1,38 @@
+{
+  "policy_revision": "v4",
+  "reused_png_hashes_unchanged": 18,
+  "original_zip_unchanged": true,
+  "active_contract_unchanged": true,
+  "preview": {
+    "component_id": "home-rank-paper",
+    "variant": "narrow",
+    "mode": "full/Fit-responsive-fallback",
+    "path": "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png",
+    "dimensions": [
+      1260,
+      399
+    ],
+    "art_dimensions": [
+      1260,
+      319
+    ],
+    "art_origin": [
+      0,
+      40
+    ],
+    "scale": 0.8,
+    "integer_rounding_aspect_error": 0.0024748391354565413,
+    "sha256": "596683dd1d232a4d7c93674ba3d00ae4eb91a2fd86057b7b8de2b800ab5f461e",
+    "numerical_check_passed": true
+  },
+  "fit_bytes_verified": true,
+  "transparent_top_bottom_rows": [
+    40,
+    40
+  ],
+  "root_cause": "v3 narrow compressed 355px paper center to 40px, producing visible vertical texture band",
+  "policy_fix": "Do not shrink the textured nine-slice center below native width; use whole-art Fit below native aspect ratio.",
+  "visual_review_complete": false,
+  "no_package_created": true,
+  "no_ue_import": true
+}

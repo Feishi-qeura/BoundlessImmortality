@@ -1,0 +1,6 @@
+node_id,name,qi_additive,item_id,item_count,interval_seconds,lease_max_seconds,owner
+NODE_QI,灵泉,0.20,,0,1,1800,guild_present_members_and_anchor
+NODE_STONE,灵石矿,0,CUR_STONE,20,600,1800,anchor
+NODE_HERB,灵草园,0,MAT_HERB_B,2,600,1800,anchor
+NODE_IRON,玄铁脉,0,MAT_IRON_B,2,600,1800,anchor
+NODE_PAGE,残卷遗址,0,MAT_PAGE,1,1200,1800,anchor

@@ -1,0 +1,326 @@
+[
+  {
+    "id": "home-identity-ink",
+    "name": "T_HomeIdentityInk",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-identity-ink-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-identity-ink-default-trim-v1.png",
+    "sha256": "ccbece91b3580c12b165adcc5af8ae05ab01d514fa3cbd061a9fb8affa49e6d3",
+    "size": [
+      2112,
+      620
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIdentityInk"
+  },
+  {
+    "id": "home-avatar-frame",
+    "name": "T_HomeAvatarFrame",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-avatar-frame-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-avatar-frame-default-trim-v1.png",
+    "sha256": "6ede6fd8950cddbf8a187e194927b41392f0f4128658fe1d98d39b04f6707361",
+    "size": [
+      1217,
+      1200
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeAvatarFrame"
+  },
+  {
+    "id": "home-avatar-portrait",
+    "name": "T_HomeAvatarPortrait",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-avatar-portrait-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-avatar-portrait-default-trim-v1.png",
+    "sha256": "6ed23baab944a4cc8610d29b26b7dbfc4ee60a6fa543f858209354c6e05f9bdb",
+    "size": [
+      1209,
+      1213
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeAvatarPortrait"
+  },
+  {
+    "id": "home-realm-plaque",
+    "name": "T_HomeRealmPlaque",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-realm-plaque-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-realm-plaque-default-trim-v1.png",
+    "sha256": "d4c3f066b27ab7e46320e75f8f8788e7ca9a52747744740b78f485ece9d961e2",
+    "size": [
+      1988,
+      474
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeRealmPlaque"
+  },
+  {
+    "id": "home-bar-track",
+    "name": "T_HomeBarTrack",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-bar-track-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-bar-track-default-trim-v1.png",
+    "sha256": "ad574b0a36f966281a99fbaf3e591e20091df0ce8e5dfa72b7c5eae14db212f0",
+    "size": [
+      2046,
+      226
+    ],
+    "margins_lrtb": [
+      260,
+      260,
+      60,
+      60
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeBarTrack"
+  },
+  {
+    "id": "home-health-fill",
+    "name": "T_HomeHealthFill",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-health-fill-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-health-fill-default-trim-v1.png",
+    "sha256": "c010d36a0639b678e0c5f929baa0475e667ff3f7d13fab49dba31eddd997f18f",
+    "size": [
+      1429,
+      135
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeHealthFill"
+  },
+  {
+    "id": "home-qi-fill",
+    "name": "T_HomeQiFill",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-qi-fill-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-qi-fill-default-trim-v1.png",
+    "sha256": "05abf00557807eea365f12203ba5de842cea7bd37a2197940720f4d2972bc4dc",
+    "size": [
+      1436,
+      143
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeQiFill"
+  },
+  {
+    "id": "home-top-tile",
+    "name": "T_HomeTopTile",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-top-tile-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-top-tile-default-trim-v1.png",
+    "sha256": "8423af4df7633b5d08d071f2649169c387d31d1247dca67e158a49dc46fc0e51",
+    "size": [
+      889,
+      1097
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeTopTile"
+  },
+  {
+    "id": "home-icon-activity",
+    "name": "T_HomeIconActivity",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-activity-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-activity-default-trim-v1.png",
+    "sha256": "4b870cf4bc266cb902fe4f0255459ce81507012d29691fa165dea19cbe2b9d6c",
+    "size": [
+      831,
+      1176
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconActivity"
+  },
+  {
+    "id": "home-icon-sign-in",
+    "name": "T_HomeIconSignIn",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-sign-in-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-sign-in-default-trim-v1.png",
+    "sha256": "88db0e60111dcc6c037480f6767a4e5300844def108d1147f728669daa91bb53",
+    "size": [
+      1142,
+      944
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconSignIn"
+  },
+  {
+    "id": "home-icon-journey",
+    "name": "T_HomeIconJourney",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-journey-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-journey-default-trim-v1.png",
+    "sha256": "403ec97cc820ff38ce040e73cc789e55be7100e193305242ccc949dfda1423a6",
+    "size": [
+      1157,
+      1139
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconJourney"
+  },
+  {
+    "id": "home-icon-bag",
+    "name": "T_HomeIconBag",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-bag-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-bag-default-trim-v1.png",
+    "sha256": "d77e628db0fabe2dbfa26b0f3818934622224a79d642bd647daa400f04f59d33",
+    "size": [
+      1138,
+      1034
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconBag"
+  },
+  {
+    "id": "home-icon-cultivate",
+    "name": "T_HomeIconCultivate",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-cultivate-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-cultivate-default-trim-v1.png",
+    "sha256": "532e0b83b5cfabf714c92d67a0b6b82891f3c195235c236ffc287e0ac8f4c7e3",
+    "size": [
+      1126,
+      1049
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconCultivate"
+  },
+  {
+    "id": "home-icon-rank",
+    "name": "T_HomeIconRank",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-rank-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-rank-default-trim-v1.png",
+    "sha256": "09f70b2959dc0a131b03b6bf1d87401fb2de046eeefd6249b67f0da8ba0cfe8c",
+    "size": [
+      1137,
+      965
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconRank"
+  },
+  {
+    "id": "home-icon-menu",
+    "name": "T_HomeIconMenu",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-icon-menu-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-icon-menu-default-trim-v1.png",
+    "sha256": "f908798fe3b1a708877041c31f4bc78be582636fd5aa3a28ecdcdaadf8259297",
+    "size": [
+      1170,
+      1141
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeIconMenu"
+  },
+  {
+    "id": "home-rank-paper",
+    "name": "T_HomeRankPaper",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-rank-paper-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-rank-paper-default-trim-v1.png",
+    "sha256": "af6f1063f78d0686a4ef600205b3eca836b44541e5e1680912aa7ea38448141a",
+    "size": [
+      1575,
+      399
+    ],
+    "margins_lrtb": [
+      820,
+      400,
+      115,
+      125
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeRankPaper"
+  },
+  {
+    "id": "home-preview-paper",
+    "name": "T_HomePreviewPaper",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-preview-paper-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-preview-paper-default-trim-v1.png",
+    "sha256": "9167e2d191208f04db04c2fa37f5144c3243cee9377ac1b7510bb4602b86ae4e",
+    "size": [
+      1914,
+      451
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomePreviewPaper"
+  },
+  {
+    "id": "home-bottom-cloud",
+    "name": "T_HomeBottomCloud",
+    "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\sprites\\home-components-trim-v1\\items\\home-bottom-cloud-default-trim-v1.png",
+    "source_relative": "assets/sprites/home-components-trim-v1/items/home-bottom-cloud-default-trim-v1.png",
+    "sha256": "f06bae40cb4e74e896e68675bfaf9f30e6c5d4c3523b19fb32acc95c97fc9220",
+    "size": [
+      2188,
+      152
+    ],
+    "margins_lrtb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "asset": "/Game/UI/Ink/HomeV2/Textures/T_HomeBottomCloud"
+  }
+]

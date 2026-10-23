@@ -1,0 +1,14 @@
+{
+  "approved": true,
+  "source": "Direct user instructions in this conversation",
+  "instructions": [
+    "确认，实现全部，直接打包发布",
+    "生成 Windows 可分发 ZIP",
+    "特别注意签到，活动，仙途这下的子UI",
+    "主HUD你还没有修改，目前来说以竖屏为主"
+  ],
+  "scope": "Approved portrait UI redesign and HUD v4 direction; preserve character attributes, inventory and leaderboard; migrate all UI assets without content deletion; implement, verify and create Windows distributable ZIP.",
+  "publication_target": "local Windows distributable ZIP",
+  "production_platform_upload": false,
+  "hud_followup": "Implemented compact identity, portrait right shortcut rail, compact rank entry and low dock; actual rendered evidence HUD-final."
+}

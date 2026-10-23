@@ -1,0 +1,349 @@
+{
+  "note": "Fingerprint for subsequent implementation; no claim of pre-session baseline",
+  "files": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "sha256": "54b19ddc9d1324cbdcc0816d4bba66d2f80177e731475f76c44c740158e4975f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.h",
+      "sha256": "26d8301970571a9cae1154ff1cfcb6e2cba2677f7b45660de6859251a66c056a"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+      "sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAttributeRating.h",
+      "sha256": "b7539a8185eebabcc73c4609bbe0e2ff523ddbea4a21ae984ef515c4af94abcf"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkBufferedProgressWidget.cpp",
+      "sha256": "8ee95cd3ff670195f0b2a7e39dae813f85362af28f7d4dc28ef7735dca9f41e4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkBufferedProgressWidget.h",
+      "sha256": "8d7dc77672df94f774c9a4bae8b9ba9d386e172d09e23b6c37e867d3d4e9dcff"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+      "sha256": "5d3985b9f3a9bca085eb2a52c3430ca8d359046d808481b4d73898e79f5d390f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.h",
+      "sha256": "32fd832e3818d05c13eb0a4b27f935a20e8e987a57b1f37f2aef2f2acc2ec420"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "sha256": "57bd643d903b31ddc87f98901de6c2cf73f6391afc6cd6b4f5fac3c32d0cf587"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkDamageFeedbackComponent.cpp",
+      "sha256": "0ed534a08b1d20f33a2787774347e54490c0989d2a0329ce2a543c3edd4b350c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkDamageFeedbackComponent.h",
+      "sha256": "16803dbd80ac7f8cc4b166f8d5af36eed745be69f3c3c4a08407f679045e609e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkDrawPanel.cpp",
+      "sha256": "ad2ce107c24615b6a400d889ef5e940fee6bde8df5202dac086e550115122174"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "sha256": "f923e9b6190b37929c7ed06fbc1a054ad4d4d8849debace3193d277ef5a89da9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.h",
+      "sha256": "168691dc8963df42f1ee2e141b2ac5969f61b19aa483e9a27617355722968df2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "sha256": "554795caca110e9e13f6481d704ce80c6d0a38fe7639bfe9cbd80eb49b852e89"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "sha256": "0071190b6fb6a628505459f9a22a310d01f33dba1f347d195beb16eae7141e40"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+      "sha256": "5c86def880d2253ef1d275e67fcef9b6db57fe4ecb3de03c8f2bdfc37e17d896"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "sha256": "1a29528b6abddc71c0511b317abf538ad6d3e356fb2cd78505055d5dfd9cc12f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "fdc1959fbf616e3bc2ad7722b94aa681da210f75ec093669a6f9f1f6bcbb7e3d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendTypes.h",
+      "sha256": "28ba4e357f7f05e73ad0f0164414a4632f2f5c0776635d13197bab6f0279a8c6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "sha256": "7129b4a6c100ef176a61d3fb1648e830a98ebb480a4e29c5ca7cfdabe039d0ae"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "sha256": "ee88d6b7636405b903510b0e02b783d24e9ec89fcda3cdabf546f21c12329327"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "sha256": "852189c516d61375ca2a3c1e0efda52bb808518227c63f79f146b4fb5e9f866b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkGameplayEncounters.cpp",
+      "sha256": "6706b01e34ffe45b4e7fddfad4e2a7b1ad302bcc0dfec6190a2a9774f7343a80"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHomeArt.cpp",
+      "sha256": "4c2038f1667767c773ff8722f97c9b813a35998dc51c25dea51b3c60d557d2e4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHomeArt.h",
+      "sha256": "6ef0c3d3e0d7ff3f7da51dfa05b488a61289ee4d854334f14bfda535219a8a4c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHomeSpriteTable.inl",
+      "sha256": "972f21cad386a13a1724c000e09201c4152d16cc6c2db03cfea40085bbe73fca"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "sha256": "53cab99532e4f53f15bcaafb033941c32fd626745f6c92a50ff0730f6a4598c4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryModel.cpp",
+      "sha256": "ebffb5db0d0a52f31507f89ca01b2eb5173fc35f7479ece4909cf962ce332fde"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryModel.h",
+      "sha256": "e2c7f6d0956b0fdeb72d54976ee0abc08024b39a6b61277836793f8f0e1c8bc0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryScrollBar.cpp",
+      "sha256": "a4b1fadd84e69b2a0acf90bd803f87a36cc56fc2633a171fb5a294a8b8f1b9ac"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryScrollBar.h",
+      "sha256": "e8e8f6d8678f8de8df286a37c6ae64f612913fd2e6a7a8d1a2c90715acd5538d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "sha256": "7da57fc204d05182cd95511da51e767ba6c67dbabe3a87cf15ffc9c6931d6e9c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardAvatarRequest.cpp",
+      "sha256": "2fe257aaba3bddba62a5766f117c5a356e8725dca0b955c8acef989374f60d05"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardAvatarRequest.h",
+      "sha256": "f57a6e6e2f94d36bb42a73500d18008de730dde0eb49d503e6ae6d8f302c3481"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardPresentation.h",
+      "sha256": "9dbe31109193af74492a21bf13cd196e489ee09365f1c330cf0f86ba3e26d162"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardTheme.cpp",
+      "sha256": "bdbc920492f405a9f8443aa865f70e74d00b870a6c38f8bd5592813e963792fd"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardTheme.h",
+      "sha256": "42b0c81b54520d85a232d7016b0024f0b52fdd9d4ec3eea1b96bbc85f7bcd706"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "sha256": "b07306d1f70e0f0a7cfb9813c04c8f19748842d043f85b27b8f34f991f606933"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "sha256": "09bb38797156eef6115df13f1ea91f09a182f3a60faded4e436755f209ffcd59"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.h",
+      "sha256": "7ace184bf72dbe86819e2c41b2d94ee4a8b7297a6b83a319214d23bf164099b6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.cpp",
+      "sha256": "0bcc7416cd2c8d2c8ad223039b5007b68cb5001449c307535b8d1dd70f73a339"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.h",
+      "sha256": "2cf7fdaf7bee80fd1857a4bfe0b5ce31c22d8fb0b6e4dafc030ef67e09a160ba"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPawnSafety.cpp",
+      "sha256": "cc17ec55bc24b3dd5e7b2602ff35f9a58edd46979e91312bc69fae995f9b5603"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPawnSafety.h",
+      "sha256": "eaedaa2654c8e9d377435eb292c0d4b7220d5af2e11ed1c9bb111331e871120d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.cpp",
+      "sha256": "b4a08900e6b17a5fa5456be03a46592b8f5260301d096e486ab273b66d8c4c9d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.h",
+      "sha256": "9a3cbb830e526ab36b8972acf13e030a19b118034cc45ad68b4c8b598937439d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkProgressState.h",
+      "sha256": "191a393b45c17773b188f1aaa76e1e4b299d127758d9d1b5cdfbcdf67055b0aa"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkRewardsPanels.cpp",
+      "sha256": "d911fd602c27a55ad85a80b3773bcd8ea5365a7e0e1dca414a3e4fb51eb36cad"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.cpp",
+      "sha256": "dabc995baed4036e269029acb8655e81898d4f3fd02dc626f670e734462fcca3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.h",
+      "sha256": "2a44efd7fce95dee941ac3436a70b2f65c736b8f928c93f42fa245f41ac5fb60"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.cpp",
+      "sha256": "b883694e93da5a6512a3cfaceb1956a689a526eba4a03954341ca8e4313cb3a4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.h",
+      "sha256": "144877315f6327044df3da35572f5aad90bff1b76e33b77b59f86091e6073ca2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInPresentation.h",
+      "sha256": "e046545cab3ece8add1e04e1aaa549d34d92fd4abe8087ff107761683e8ce771"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "sha256": "158e5edc126d97a7af7efbe87caff9ebe20d1fd1ec3532638a73226d83925eef"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInShell.cpp",
+      "sha256": "42b01420030a248f94f6ee3f1edcaf58239a26a047bf7498bea54841699cc1f4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "sha256": "bd99c53a66a68f482b5fb41f1c4d143860e4805ed93f3649d10e384a1c297b14"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/WulingFrontendData.h",
+      "sha256": "d71d3c754fc57a370448ef5355cb2c89b73fe3ca64a2ad63c3218beaa715741e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/CultivationNameplateTests.cpp",
+      "sha256": "734f45196399eb7878ca922ad3bb8eda1a361311b700914832841114a547572d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkAnchorStatusTests.cpp",
+      "sha256": "1ecef23c1ac9449cbc06d1676353b6653bba76f7aaec4009157fc671948e1b43"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkAttributeRatingTests.cpp",
+      "sha256": "0bc625482409d0677aae5a25619e9bd1ffdbfff8cd6f2d70a19f14fbe2cb6536"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkCharacterCultivationTests.cpp",
+      "sha256": "c6b206434a9b196176ccd92d0ddfc3bb6c15275b99bd4f5f74dae0611cd8744c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkFeedbackTests.cpp",
+      "sha256": "5575e47e2c49b09c6ae9ada49709d9a969a2fc0b7acfb6982850aa36d1226145"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkHomeArtTests.cpp",
+      "sha256": "7b3ea7ee35fd5a504c58b51594c08fceb41b2dc795ece010e800211c8cfdadd6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkInventoryTests.cpp",
+      "sha256": "9a5bfe9c2b09493e07ffb92957ae69fb9cef3570c09168fdd09551ea4a6c7a13"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkLeaderboardTests.cpp",
+      "sha256": "fae134b03758075822c8012b2a9d176a9b5fe15bcc87eaf9ad519101c28baa69"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkMenuPawnRoleTests.cpp",
+      "sha256": "76a4086b845da1d2011296304aeb6df59cc7b76ec8e61d38990be82cff9e9113"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkNiagaraTitleTests.cpp",
+      "sha256": "85f50bc2db3276ff1cfa4ebbfca63cab4b0c4c77c019bd1131be719662fa0bbe"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkPawnSafetyTests.cpp",
+      "sha256": "8db75e9203049e0ad8f54c70856fad38bafd2237f2731df99fe25d8d9ecc8bc3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkSaveTests.cpp",
+      "sha256": "ab5a27a2971b93e87f7b79745f6963f1a9bf2dc8cfd82ab5d192782e3bfbc76c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkSignInRankTests.cpp",
+      "sha256": "b53e6f7db59bb5b03281fadff04dc82c9e9d574afd2feffd663d54985a5b5421"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkUiLayoutTests.cpp",
+      "sha256": "b63605562f84c728344b263bb9925d11d9a8120c58d44e02c635b4936dd6e946"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkWheelPresentationTests.cpp",
+      "sha256": "1066bcedda591e89e17733c7f05338b5845fca66df7e647b60dd2233c0c62ad5"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.cpp",
+      "sha256": "2f4fd3db9ff1f146518083e4e0a6b30a65bb4d90af3b5be68d605dd5d70632bd"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.h",
+      "sha256": "078233c2dfeb61e95e24a4d3da7e3ad3d7c9c0349370e84ccca00a40a50c0e97"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiResponsiveLayout.cpp",
+      "sha256": "86c5628be68313e753a3e5acaaae55e4aa50836b62dc292998959085ecdba79f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiResponsiveLayout.h",
+      "sha256": "440853a077ee4cb2f35764b506e194b0e32e9e8f458fe52314885f5792c5b320"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.cpp",
+      "sha256": "e35103a8cbcaac1de75ee03950fe36fbd9fa08d6cfdc3e43f8c06868e5cdb27d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.h",
+      "sha256": "1e3956f1a9dc50458f30cd4fbdac87135b568ad1fd06135b8ede62e6b753805e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.cpp",
+      "sha256": "d4a31d4bf0768609e3d7039402d1adafd1dcfec6a41cec40d4e6d2330c25f2e6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.h",
+      "sha256": "f9c4ad4d71ac27d030c2bbf0303ef41e0de1a0d3c6e35f5a84d44ba709e98fe3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWheelPresentation.h",
+      "sha256": "add2cdd49016de80dd5acecc72154d855d6cc4f7d88ff46bbf114e51b694707e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "sha256": "140dbe004d6df54d0382ea0bdbb107d7035ab4f852232e24eb6053b606ea19ae"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.h",
+      "sha256": "5af7f819836c05c0d54b6659c786989acd85d6fa8304679995239d17441017e0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "sha256": "1d21fee407616d56a05437e8a289cd78b0a79a9f26a14c35256f31519eca611b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.h",
+      "sha256": "76021f2d79f1bb013f918736a82491934b0f88fbd1f6e7c5f4df8d89eb1c333b"
+    }
+  ]
+}

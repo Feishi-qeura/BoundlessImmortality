@@ -1,0 +1,74 @@
+{
+  "stage": "home-component-review",
+  "active_components": 18,
+  "historical_component_revisions": 2,
+  "individual_state_records": 63,
+  "home_approved": true,
+  "style_approved": true,
+  "screen_map_approved": true,
+  "current_components_user_approved": false,
+  "protected_hashes_unchanged": 670,
+  "protected_hashes_checked": 670,
+  "approved_home_hash_unchanged": true,
+  "strict_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "browser_qa": {
+    "passed": true,
+    "renderer": "Chrome headless local file; background networking disabled",
+    "browser_plugin_available": false,
+    "fallback_reason": "No browser automation plugin; sandbox browser startup failed; local rendering succeeded with approved escalation",
+    "component_images_loaded": "18/18 visible in rendered page",
+    "screenshots": [
+      {
+        "background": "checker",
+        "path": "evidence/component-review-checker.png",
+        "dimensions": [
+          1400,
+          2250
+        ],
+        "visually_inspected": true
+      },
+      {
+        "background": "light",
+        "path": "evidence/component-review-light.png",
+        "dimensions": [
+          1400,
+          2250
+        ],
+        "visually_inspected": true
+      },
+      {
+        "background": "dark",
+        "path": "evidence/component-review-dark.png",
+        "dimensions": [
+          1400,
+          2250
+        ],
+        "visually_inspected": true
+      }
+    ],
+    "visual_findings": "All current components visible; no baked labels, opaque screenshot rectangles or visible colored edge spill at review scale. Frame and gear centers show selected background.",
+    "interaction_limit": "State dropdown is a visual recipe demonstration; UE interactions and device sampling not tested."
+  },
+  "package": {
+    "path": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/packages/home-components-v1-review.zip",
+    "files": 52,
+    "component_png_count": 18,
+    "source_page_png_count": 1,
+    "review_screenshot_count": 1,
+    "bytes": 24475143,
+    "sha256": "30915ffad3762d7744fae4316cfab6e722de3593b07904f5f43561ba70f4af96",
+    "status": "review-package",
+    "user_approved": false,
+    "not_atlas": true
+  },
+  "no_asset_raster_postprocessing": true,
+  "native_engine_files_created": false,
+  "runtime_tests_run": false,
+  "historical_snapshot": true,
+  "superseded_by": "evidence/delivery-status.json",
+  "snapshot_note": "Component-review stage before approval-home-components.json; current approval and trim progress are in the superseding report."
+}

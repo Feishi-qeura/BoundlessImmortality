@@ -1,0 +1,8 @@
+sku,owner_type,output_item,output_count,stone_cost,extra_item_1,extra_count_1,extra_item_2,extra_count_2,daily_limit,unique_window
+SKU_HEAL,anchor,ITEM_HEAL,1,50,MAT_HERB_B,2,,0,2,false
+SKU_SHIELD,anchor,ITEM_SHIELD,1,40,MAT_IRON_B,2,,0,2,false
+SKU_STUDY,anchor,ITEM_STUDY,1,50,MAT_PAGE,2,,0,1,false
+SKU_BREAK,anchor,MAT_BREAK,1,10,,0,,0,3,false
+SKU_QUALITY,anchor,ITEM_QUALITY,1,200,MAT_BREAK,10,MAT_CORE,2,1,false
+SKU_BADGE,viewer,COS_BADGE,1,0,STAT_CONTRIB,60,,0,1,true
+SKU_PATTERN,viewer,COS_PATTERN,1,0,STAT_CONTRIB,180,,0,1,true

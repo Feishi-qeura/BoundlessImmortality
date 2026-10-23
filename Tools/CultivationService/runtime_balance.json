@@ -1,0 +1,18 @@
+{
+  "version": "windows-regions-20261023",
+  "flight_health_factor": 0.15,
+  "scope": "prototype_full world health calibration and free regional mechanisms; no trajectory, reward or normalized-race changes",
+  "sample": "Saved/Codex/GameplayPlan20261021/WorldFlight/sample-report.json",
+  "sample_hits": 12,
+  "sample_server_seconds": 89.875,
+  "observed_hits_per_second": 0.12239221140472879,
+  "source_model_hits_per_second": 0.8,
+  "target_solo_boss_seconds": 90,
+  "rounding": "ceil(original_health * factor), minimum 1",
+  "map_resource_counts": {"NODE_QI": 1, "NODE_STONE": 1, "NODE_HERB": 1, "NODE_IRON": 1, "NODE_PAGE": 1},
+  "region_mechanics": {
+    "qingyun": {"kind": "guard", "name": "灵泉护阵"},
+    "luoxia": {"kind": "gather_route", "name": "药田采集"},
+    "xuantie": {"kind": "weakpoint", "name": "矿脉破障", "weakpoint_seconds": 8}
+  }
+}

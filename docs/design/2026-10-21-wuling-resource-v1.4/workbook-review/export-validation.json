@@ -1,0 +1,33 @@
+{
+  "xlsx_integrity": true,
+  "sheets": [
+    "配置总览",
+    "品质计算",
+    "天劫计算",
+    "突破材料",
+    "突破阶段",
+    "功法物品",
+    "装备物品",
+    "法宝物品",
+    "道具物品",
+    "武灵货币",
+    "武灵建设",
+    "建设材料",
+    "获取渠道",
+    "物品来源",
+    "炼制配方",
+    "配方耗材",
+    "交易流水",
+    "物品总表"
+  ],
+  "formula_cells": 10,
+  "formula_errors": [],
+  "filterable_tables": 15,
+  "file_bytes": 202405,
+  "visual_review": [
+    "overview",
+    "quality",
+    "tribulation"
+  ],
+  "scope": "XLSX structure, formula caches and three rendered reviews; no desktop Excel or game execution"
+}

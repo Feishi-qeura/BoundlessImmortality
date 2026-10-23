@@ -1,0 +1,34 @@
+{
+  "textures": [
+    {
+      "path": "/Game/UI/Ink/Textures/Journey/T_WorldAtlas_v1.T_WorldAtlas_v1",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-journey-expansion\\assets\\world-map-v1.png"
+    },
+    {
+      "path": "/Game/UI/Ink/Textures/Journey/T_ResourceAtlas_v1.T_ResourceAtlas_v1",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-journey-expansion\\assets\\resource-map-v1.png"
+    }
+  ],
+  "widgets": [
+    {
+      "path": "/Game/UI/Ink/Widgets/Activities/WBP_LaunchEvent.WBP_LaunchEvent",
+      "parent": "/Script/BoundlessImmortality.InkLaunchEventPanel"
+    },
+    {
+      "path": "/Game/UI/Ink/Widgets/Wuling/WBP_WulingSect.WBP_WulingSect",
+      "parent": "/Script/BoundlessImmortality.InkWulingSectPanel"
+    },
+    {
+      "path": "/Game/UI/Ink/Widgets/Journey/WBP_JourneyMap.WBP_JourneyMap",
+      "parent": "/Script/BoundlessImmortality.InkJourneyMapPanel"
+    },
+    {
+      "path": "/Game/UI/Ink/Widgets/Journey/WBP_JourneyDestination.WBP_JourneyDestination",
+      "parent": "/Script/BoundlessImmortality.InkJourneyDestinationPanel"
+    },
+    {
+      "path": "/Game/UI/Ink/Widgets/Shared/WBP_RewardReceipt.WBP_RewardReceipt",
+      "parent": "/Script/BoundlessImmortality.InkRewardReceiptPanel"
+    }
+  ]
+}

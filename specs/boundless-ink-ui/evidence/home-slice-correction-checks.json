@@ -1,0 +1,20 @@
+{
+  "candidate_pack": "home-components-trim-v2",
+  "preview_revision": "v3",
+  "reused_png_hashes_unchanged": 18,
+  "original_zip_unchanged": true,
+  "active_contract_unchanged": true,
+  "preview_count": 7,
+  "test_count": 6,
+  "numerical_checks_passed": true,
+  "visual_review_complete": false,
+  "pending_visual_images": 0,
+  "no_package_created": true,
+  "no_ue_import": true,
+  "no_atlas": true,
+  "inspected_visual_images": 4,
+  "visual_progress_evidence": "evidence/home-slice-correction-visual-review.json",
+  "inspection_complete": true,
+  "visual_acceptance_passed": false,
+  "successor_checks": "evidence/home-slice-correction-v4-checks.json"
+}

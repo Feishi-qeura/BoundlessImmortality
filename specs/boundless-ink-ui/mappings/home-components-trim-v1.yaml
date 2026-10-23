@@ -1,0 +1,289 @@
+items:
+- semantic_name: home-identity-ink-default-trim-v1
+  component_id: home-identity-ink
+  category: panel
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 48
+  - 2112
+  - 620
+- semantic_name: home-avatar-frame-default-trim-v1
+  component_id: home-avatar-frame
+  category: frame
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 2208
+  - 48
+  - 1217
+  - 1200
+- semantic_name: home-avatar-portrait-default-trim-v1
+  component_id: home-avatar-portrait
+  category: character
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 1296
+  - 1209
+  - 1213
+- semantic_name: home-realm-plaque-default-trim-v1
+  component_id: home-realm-plaque
+  category: panel
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 1305
+  - 1296
+  - 1988
+  - 474
+- semantic_name: home-bar-track-default-trim-v1
+  component_id: home-bar-track
+  category: progress
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 260
+    - 260
+    - 60
+    - 60
+  bbox:
+  - 48
+  - 2557
+  - 2046
+  - 226
+- semantic_name: home-health-fill-default-trim-v1
+  component_id: home-health-fill
+  category: progress
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 2142
+  - 2557
+  - 1429
+  - 135
+- semantic_name: home-qi-fill-default-trim-v1
+  component_id: home-qi-fill
+  category: progress
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 2831
+  - 1436
+  - 143
+- semantic_name: home-top-tile-default-trim-v1
+  component_id: home-top-tile
+  category: panel
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 180
+    - 180
+    - 200
+    - 200
+  bbox:
+  - 1532
+  - 2831
+  - 889
+  - 1097
+- semantic_name: home-icon-activity-default-trim-v1
+  component_id: home-icon-activity
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 2469
+  - 2831
+  - 831
+  - 1176
+- semantic_name: home-icon-sign-in-default-trim-v1
+  component_id: home-icon-sign-in
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 4055
+  - 1142
+  - 944
+- semantic_name: home-icon-journey-default-trim-v1
+  component_id: home-icon-journey
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 1238
+  - 4055
+  - 1157
+  - 1139
+- semantic_name: home-icon-bag-default-trim-v1
+  component_id: home-icon-bag
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 2443
+  - 4055
+  - 1138
+  - 1034
+- semantic_name: home-icon-cultivate-default-trim-v1
+  component_id: home-icon-cultivate
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 5242
+  - 1126
+  - 1049
+- semantic_name: home-icon-rank-default-trim-v1
+  component_id: home-icon-rank
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 1222
+  - 5242
+  - 1137
+  - 965
+- semantic_name: home-icon-menu-default-trim-v1
+  component_id: home-icon-menu
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 2407
+  - 5242
+  - 1170
+  - 1141
+- semantic_name: home-rank-paper-default-trim-v1
+  component_id: home-rank-paper
+  category: panel
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 600
+    - 350
+    - 115
+    - 125
+  bbox:
+  - 48
+  - 6431
+  - 1575
+  - 399
+- semantic_name: home-preview-paper-default-trim-v1
+  component_id: home-preview-paper
+  category: panel
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 1671
+  - 6431
+  - 1914
+  - 451
+- semantic_name: home-bottom-cloud-default-trim-v1
+  component_id: home-bottom-cloud
+  category: decoration
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+  bbox:
+  - 48
+  - 6930
+  - 2188
+  - 152

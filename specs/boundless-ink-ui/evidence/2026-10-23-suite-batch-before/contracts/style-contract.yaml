@@ -1,0 +1,165 @@
+schema_version: 1
+project_id: boundless-ink-ui
+status: approved
+platform:
+  target: UE5.8主播端；移动比例作为设计适配目标
+  orientation: responsive
+  aspect_ratio: '9:16'
+  reference_size:
+  - 720
+  - 1280
+  alternate_size:
+  - 1280
+  - 720
+  safe_area:
+    top: 24
+    right: 24
+    bottom: 24
+    left: 24
+  safe_area_rule: 根SafeZone处理设备切口后再加24逻辑单位；此处不是硬编码系统刘海
+  dpi: ShortestSide：360=.5,540=.75,720=1,1080=1.5；不叠加整页ScaleBox
+  breakpoints:
+    portrait: w/h<0.8
+    compact: 0.8<=w/h<1.25
+    landscape: w/h>=1.25
+visual:
+  theme: 修仙水墨传奇；宣纸承字、墨山融边、旧金点睛
+  keywords:
+  - 宣纸
+  - 留白
+  - 墨山
+  - 云气
+  - 旧金
+  - 青玉
+  - 书法
+  mood: 清远、庄重、可读
+  complexity: medium
+  materials:
+  - 低对比宣纸
+  - 干湿墨迹
+  - 细旧金边
+  - 玉石点缀
+  lighting:
+    direction: top-left
+    softness: soft
+  page_families:
+    rewards: 小山水头图+奖励与累计节点
+    world: 等比路线图+阶段详情
+    organization: 组织徽记+总览与名册
+    competition: 阶段与分数主导
+    economy: 商品网格/订单表+精确费用
+  decoration: 普通功能页金色静态覆盖建议<=5%；边框最多两层；装饰图与动态字分层
+colors:
+  primary: '#202823'
+  secondary: '#3D5861'
+  accent: '#B88B45'
+  background: '#F3EBDD'
+  warning: '#AA4937'
+  reward: '#E9CA84'
+  disabled: '#8D8C82'
+  paper_light: '#FBF7EE'
+  jade: '#3A8D83'
+  hover: '#4A91AF'
+typography:
+  language: zh-CN
+  title:
+    family: MaShanZheng
+    size: 44
+    weight: 400
+  section:
+    family: LXGWWenKai
+    size: 32
+    weight: 400
+  body:
+    family: LXGWWenKai
+    size: 28
+    weight: 400
+  number:
+    family: LXGWWenKai
+    size: 28
+    weight: 400
+  button:
+    family: LXGWWenKai
+    size: 30
+    weight: 400
+  hud:
+    family: LXGWWenKai
+    size: 26
+    weight: 400
+  font_sources: docs/design/2026-10-21-ink-ui-standard-v1/fonts；中文数字标点一致，Noto仅缺字回退
+  contrast: 正文4.5:1；360短边目标正文14px、关键数字13px；不以缩小整页通过溢出验收
+  dynamic_text: 动态值必须TextBlock；生图文字只是预览，使用时重新排版
+geometry:
+  radius:
+    small: 4
+    card: 8
+    modal: 12
+  stroke:
+    thin: 1
+    regular: 2
+    strong: 3
+  button_height:
+    small: 64
+    primary: 72
+  icon_size:
+    utility: 56
+    navigation: 80
+    currency: 32
+  touch_min:
+  - 88
+  - 88
+  paper_shell: 有机墨边不能被普通圆角矩形替代
+  slice: 边框可伸；人物/题字/图标/山水等比Fit；9-slice待实际资产测量
+effects:
+  shadow: 墨色低透明软影；正文用稳定阅读底
+  highlight: 仅当前主动作或可领取焦点，禁止全屏闪金
+  selected: 金线+选中标记
+  disabled: 降饱和+原因文字，保持可读
+  motion: hover120ms、切页220ms、弹层180ms；减少动态关闭循环粒子并保留静态状态
+tokens:
+  color:
+    action-primary: '#B88B45'
+    action-danger: '#AA4937'
+    surface-panel: '#F3EBDD'
+    text-primary: '#202823'
+    interaction-hover: '#4A91AF'
+  spacing:
+    xs: 4
+    sm: 8
+    md: 16
+    lg: 24
+    xl: 32
+    xxl: 48
+  motion:
+    fast-ms: 120
+    normal-ms: 220
+control_states:
+  normal: 清晰轮廓
+  hover: 蓝墨微染，仅桌面
+  pressed: 下沉1–2单位
+  focused: 细线焦点框
+  selected: 金色并保持
+  disabled: 可读且有原因
+  pending: 仅锁该提交，保留返回
+  claimable: 金色小光环
+  claimed: 开箱形态+已领取字
+  locked: 锁符+开放条件
+consistency_rules:
+- 先保留当前主菜单、HUD、角色与背包；本规范不得自动覆盖保留页。
+- 所有新页共享纸色、字体、左上柔光与图标视角；不把所有卡片涂金。
+- 中央保护区只约束HUD原态；打开密集功能页时可占据阅读区域。
+- P列表→详情，L列表+详情；切换方向保留筛选、选中和request_id。
+- 来源文档冲突优先：本轮用户保留要求→当前保留页→v1.4专章→旧稿→参考图装饰。
+approval:
+  date: '2026-10-22'
+  timezone: Asia/Hong_Kong
+  source: direct-user-message
+  quote: 批准首页v2及规范和屏幕地图，开始拆解首页组件
+  approved:
+  - home-v2
+  - style-contract
+  - screen-map
+  - supporting-ui-planning-documentation
+  authorized_next_stage: home-component-breakdown
+  new_component_assets_approved: false
+  runtime_changes_authorized: false

@@ -1,0 +1,22 @@
+{
+  "component_count": 18,
+  "source_pixels": 28309155,
+  "trimmed_pixels": 17001944,
+  "pixel_area_reduction": 0.39941888057061403,
+  "retained_pixel_comparisons_passed": 18,
+  "max_discarded_alpha": 1,
+  "padding": 8,
+  "source_hashes_unchanged": true,
+  "source_sheet_dimensions": [
+    4096,
+    7130
+  ],
+  "nine_slice_candidates": 3,
+  "full_fit": 15,
+  "stretch_tests": 12,
+  "corner_preservation_checks": 48,
+  "package": "packages\\home-components-trim-v1-png.zip",
+  "package_sha256": "22c5e48cfa6a51fe565289a013619a79bd59b8d196427db12c110e4b09544f0d",
+  "atlas_created": false,
+  "ue_files_created": false
+}

@@ -1,0 +1,16 @@
+{
+  "material_species": 160,
+  "material_item_variants": 640,
+  "method_items": 14,
+  "equipment_items": 16,
+  "fabao_items": 12,
+  "new_prop_items": 20,
+  "guild_materials": 4,
+  "building_level_rows": 24,
+  "master_items_including_legacy": 730,
+  "acquisition_sources": 51,
+  "source_edges": 747,
+  "recipes": 556,
+  "recipe_input_rows": 608,
+  "pending_runtime_cases": 30
+}

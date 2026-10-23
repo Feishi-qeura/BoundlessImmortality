@@ -1,0 +1,107 @@
+[
+  {
+    "component_id": "home-identity-ink",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-identity-ink-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-1bb6871c-b20a-4b38-95ea-5dbc4512a961.png"
+  },
+  {
+    "component_id": "home-avatar-frame",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-avatar-frame-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-51bcfee2-1514-4717-bba2-8b84b0b9f5fc.png"
+  },
+  {
+    "component_id": "home-avatar-portrait",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-avatar-portrait-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-11c1f6c1-2d35-4750-b011-05e82628bc71.png"
+  },
+  {
+    "component_id": "home-realm-plaque",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-realm-plaque-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-51dce9d4-09c0-4c20-a474-06697cb46d81.png"
+  },
+  {
+    "component_id": "home-bar-track",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-bar-track-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-0e93eb30-2036-45e4-beec-36b629d74a8a.png"
+  },
+  {
+    "component_id": "home-health-fill",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-health-fill-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-a65154d6-ca50-41ef-8ad0-c489ff110049.png"
+  },
+  {
+    "component_id": "home-qi-fill",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-qi-fill-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-950a2bc1-ca64-42bb-9259-2639ef13997f.png"
+  },
+  {
+    "component_id": "home-top-tile",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-top-tile-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-dda552a8-65a0-4be8-bf39-60a624b5ac93.png"
+  },
+  {
+    "component_id": "home-icon-activity",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-activity-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-67994770-3e5a-493e-93fd-f35a2f686749.png"
+  },
+  {
+    "component_id": "home-icon-sign-in",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-sign-in-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-901027be-602a-4147-aef6-88e6ddcbd257.png"
+  },
+  {
+    "component_id": "home-icon-journey",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-journey-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-d4d64857-7e9a-4e46-b02f-27dd19d452ef.png"
+  },
+  {
+    "component_id": "home-icon-bag",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-bag-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-dda67425-9266-4886-babe-262f10d2f7ed.png"
+  },
+  {
+    "component_id": "home-icon-cultivate",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-cultivate-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-b68c991e-8a2f-433e-9e9f-fefd2634dad9.png"
+  },
+  {
+    "component_id": "home-icon-rank",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-rank-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-bf2f48fb-6356-445a-8cc7-d1f807ce132b.png"
+  },
+  {
+    "component_id": "home-icon-menu",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-icon-menu-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-7a10d39f-f524-49d4-8199-e2113891ba80.png"
+  },
+  {
+    "component_id": "home-rank-paper",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-rank-paper-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-c3a8b6b2-e3e4-4c02-86c3-c0713ef02922.png",
+    "isRevision": false
+  },
+  {
+    "component_id": "home-preview-paper",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-preview-paper-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-fee7f6a4-1875-43fb-9c3f-8f4cd0028d4b.png",
+    "isRevision": false
+  },
+  {
+    "component_id": "home-bottom-cloud",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-bottom-cloud-default-v1.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-1bc36cab-1271-4d25-8099-7494d038b8c8.png",
+    "isRevision": false
+  },
+  {
+    "component_id": "home-qi-fill",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-qi-fill-default-v2.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-1ebc9d86-1760-4f74-acd8-cd51cf2accd9.png",
+    "isRevision": true
+  },
+  {
+    "component_id": "home-avatar-portrait",
+    "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\assets\\components\\home-avatar-portrait-default-v2.png",
+    "source": "C:\\Users\\zxxuh\\.codex\\generated_images\\01a1633a-428a-7f33-817e-14fb32e9cbf2\\exec-f3e4c441-8ebf-45b4-9518-732d7fed2dea.png",
+    "isRevision": true
+  }
+]

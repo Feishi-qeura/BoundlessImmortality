@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-slice-correction-v4-review",
+  "stage_complete": false,
+  "active_components": 18,
+  "current_components_user_approved": true,
+  "component_approval_evidence": "evidence/approval-home-components.json",
+  "derivative_pack": "home-components-trim-v1",
+  "derivative_user_approved": false,
+  "individual_state_records": 63,
+  "numerical_checks": {
+    "passed": true,
+    "evidence": "evidence/home-trim-recheck.json",
+    "retained_rgba": 18,
+    "preview_reconstructions": 12,
+    "corner_checks": 48,
+    "full_endcap_checks": 16
+  },
+  "protected_files": {
+    "checked": 670,
+    "unchanged": 670,
+    "changed": []
+  },
+  "approved_home_hash_unchanged": true,
+  "visual_review": {
+    "complete": false,
+    "inspected": 0,
+    "required": 1,
+    "pending": 1,
+    "evidence": "evidence/home-slice-correction-v4-visual-review.json",
+    "next_image": "evidence/slice-correction-v4/home-rank-paper-narrow-fit-v4.png",
+    "status": "pending",
+    "open_issues": [
+      "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+    ],
+    "resolved_issues": [
+      "top-tile-v2-ornament-crosses-fixed-regions"
+    ]
+  },
+  "strict_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "evidence": "evidence/validate-home-trim-strict.txt"
+  },
+  "package": {
+    "path": "packages/home-components-trim-v1-png.zip",
+    "entries": 21,
+    "png_count": 18,
+    "sha256": "22c5e48cfa6a51fe565289a013619a79bd59b8d196427db12c110e4b09544f0d",
+    "integrity_passed": true,
+    "unchanged": true,
+    "status": "generated-review-in-progress",
+    "user_approved": false,
+    "metadata_snapshot": "generation-time; current review state is in disk evidence"
+  },
+  "previous_component_report": "evidence/component-delivery-status.json",
+  "runtime_files_written": false,
+  "ue_import_performed": false,
+  "atlas_created": false,
+  "runtime_tests_run": false,
+  "remaining": [
+    "Review the single v4 rank-paper narrow Fit preview; carry top-tile Fit, rank-paper guide and wide passes from v3",
+    "After resolving narrow-size paper texture, activate reviewed metadata and create a new ZIP preserving original PNGs and old package",
+    "Run final checks and finish current-stage handoff; no UE import or Atlas"
+  ],
+  "candidate_pack": "home-components-trim-v2",
+  "candidate_only": true,
+  "candidate_contract": "contracts/sprite-contract-candidate-v2.yaml",
+  "correction_checks": "evidence/home-slice-correction-v4-checks.json",
+  "v2_review": {
+    "inspected": 10,
+    "required": 10,
+    "inspection_complete": true,
+    "visual_acceptance_passed": false,
+    "confirmed_visual_failures": [
+      "evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "evidence/9slice-review-v2/home-rank-paper-narrow-v2.png"
+    ],
+    "open_issues": [
+      "top-tile-v2-ornament-crosses-fixed-regions",
+      "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+    ],
+    "evidence": "evidence/home-9slice-visual-review.json"
+  },
+  "v3_review": {
+    "inspected": 4,
+    "required": 4,
+    "inspection_complete": true,
+    "visual_acceptance_passed": false,
+    "passed_images": 3,
+    "failed_images": [
+      "evidence/slice-correction-v3/home-rank-paper-narrow-v3.png"
+    ],
+    "evidence": "evidence/home-slice-correction-visual-review.json"
+  }
+}

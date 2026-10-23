@@ -1,0 +1,5 @@
+﻿item_id,name,owner_type,source_id,donation_origin,per_anchor_daily_output_cap,transferable_to_personal
+GUILD_MAT_01,灵纹木,guild,CH_BUILD,主播绑定原料确定性制作,5,False
+GUILD_MAT_02,青罡砖,guild,CH_BUILD,主播绑定原料确定性制作,5,False
+GUILD_MAT_03,云纹绢,guild,CH_BUILD,主播绑定原料确定性制作,5,False
+GUILD_MAT_04,阵纹砂,guild,CH_BUILD,主播绑定原料确定性制作,5,False

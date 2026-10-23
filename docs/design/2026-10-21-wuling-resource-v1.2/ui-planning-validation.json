@@ -1,0 +1,708 @@
+{
+  "document_version": "1.2",
+  "passed": true,
+  "check_count": 173,
+  "failed": [],
+  "screen_count": 32,
+  "planned_file_rows": 71,
+  "planned_art_atlases": 4,
+  "runtime_acceptance_cases": 235,
+  "existing_asset_files": 376,
+  "source_files_inspected": 47,
+  "reference_images_reviewed": 11,
+  "scope": "UI策划清单完整性与当前文件存在性；未执行UE或平台UI测试",
+  "checks": [
+    {
+      "name": "unique_screen_ids",
+      "passed": true
+    },
+    {
+      "name": "unique_routes",
+      "passed": true
+    },
+    {
+      "name": "unique_file_paths",
+      "passed": true
+    },
+    {
+      "name": "four_art_atlases",
+      "passed": true
+    },
+    {
+      "name": "seven_existing_wbp",
+      "passed": true
+    },
+    {
+      "name": "eighteen_existing_texture_files",
+      "passed": true
+    },
+    {
+      "name": "eleven_reference_images",
+      "passed": true
+    },
+    {
+      "name": "thirteen_new_screen_wbp",
+      "passed": true
+    },
+    {
+      "name": "nine_new_component_wbp",
+      "passed": true
+    },
+    {
+      "name": "UI_MAIN_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_MAIN_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_MAIN_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_HUD_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_HUD_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_HUD_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_CHARACTER_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_CHARACTER_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_CHARACTER_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_INVENTORY_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_INVENTORY_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_INVENTORY_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RANK_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RANK_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RANK_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_SAVES_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_SAVES_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_SAVES_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_SETTINGS_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_SETTINGS_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_SETTINGS_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_WULING_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_WULING_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_WULING_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_SWORD_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_SWORD_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_SWORD_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_GIFT_RULES_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_GIFT_RULES_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_GIFT_RULES_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_METHODS_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_METHODS_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_METHODS_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LOBBY_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LOBBY_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LOBBY_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LIVE_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LIVE_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_LIVE_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_RESULT_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_RESULT_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RACE_RESULT_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_LEASE_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_LEASE_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_LEASE_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_ROUND_RESULT_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_ROUND_RESULT_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_ROUND_RESULT_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_OFFLINE_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_OFFLINE_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_OFFLINE_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_SHOP_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_SHOP_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_SHOP_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_MARKET_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_MARKET_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_MARKET_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_ORDERS_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_ORDERS_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_ORDERS_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_WORLD_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_WORLD_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_WORLD_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_REGION_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_REGION_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_REGION_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCES_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCES_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCES_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCE_DETAIL_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCE_DETAIL_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_RESOURCE_DETAIL_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_SIGN_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_SIGN_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_SIGN_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_MONTH_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_MONTH_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_MONTH_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_VERSE_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_VERSE_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_VERSE_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITIES_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITIES_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITIES_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_DAILY_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_DAILY_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_DAILY_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_LIMITED_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_LIMITED_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_LIMITED_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITY_DETAIL_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITY_DETAIL_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_ACTIVITY_DETAIL_gate",
+      "passed": true
+    },
+    {
+      "name": "UI_TIMED_DETAIL_parent",
+      "passed": true
+    },
+    {
+      "name": "UI_TIMED_DETAIL_asset_manifest",
+      "passed": true
+    },
+    {
+      "name": "UI_TIMED_DETAIL_gate",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiScreenRegistry.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiScreenRegistry.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiViewModels.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiCommonWidgets.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiRacePanels.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiRacePanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiSwordPanels.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiSwordPanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiMethodPanel.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiMethodPanel.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiEconomyPanels.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiEconomyPanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiRewardPanels.h",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Source/BoundlessImmortality/Frontend/UI/InkUiRewardPanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkRewardsPanels.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkInventoryModel.h",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkInventoryModel.cpp",
+      "passed": true
+    },
+    {
+      "name": "current_file_Source/BoundlessImmortality/Frontend/InkFrontendTypes.h",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkMainMenu.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkFrontend.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkCharacter.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkInventory.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkLeaderboard.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkSaves.uasset",
+      "passed": true
+    },
+    {
+      "name": "current_file_Content/UI/Ink/Widgets/WBP_InkSettings.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkWulingOverview.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkSwordSpirit.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkGiftRules.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkMethods.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkRaceLobby.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkRaceLive.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkRaceSettlement.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkResourceLease.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkEventSettlement.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkOfflineRewards.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkShop.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkMarket.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Widgets/WBP_InkTradeOrders.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkRequestState.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkConfirmModal.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkMemberRow.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkRewardItem.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkItemTooltip.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkContributionRow.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkLeaseBadge.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkGiftEffectCard.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Components/WBP_InkToast.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Data/DA_InkWulingScreens.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Content/UI/Ink/Wuling/Data/DA_InkWulingTheme.uasset",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_SourceAssets/UI/Wuling/atlas-regions.json",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_SourceAssets/UI/Wuling/art-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Tools/InkFrontend/inspect_wuling_ui_assets.py",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Tools/InkFrontend/verify_wuling_ui_pie.py",
+      "passed": true
+    },
+    {
+      "name": "planned_not_existing_Tools/InkFrontend/wuling-ui-acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "ART_ITEMICONS_geometry",
+      "passed": true
+    },
+    {
+      "name": "ART_RESOURCEICONS_geometry",
+      "passed": true
+    },
+    {
+      "name": "ART_METHODICONS_geometry",
+      "passed": true
+    },
+    {
+      "name": "ART_EMBLEMS_geometry",
+      "passed": true
+    },
+    {
+      "name": "runtime_tests_not_claimed",
+      "passed": true
+    }
+  ]
+}

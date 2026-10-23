@@ -1,0 +1,47 @@
+schema_version: 1
+project_id: boundless-ink-ui
+inherits: ../../contracts/style-contract.yaml
+scope_authorization: user requested new native widgets and Unreal integration on 2026-10-23
+screens:
+  - id: launch-event-native
+    route: LaunchEvent
+    widget: /Game/UI/Ink/Widgets/Activities/WBP_LaunchEvent
+    entry_points: [HUD-OpenLaunchEvent, activities-WulingActivity]
+    primary_actions: [start-launch, view-tasks, view-guild-goals]
+    layout: paper shell with mountain header, four tabs, scrollable tasks and fixed CTA
+    states: [unconnected, no-guild, not-started, active, ended, busy]
+    data_needs: [launch, honors, identity, guild, server_utc]
+  - id: wuling-sect-native
+    route: Wuling
+    widget: /Game/UI/Ink/Widgets/Wuling/WBP_WulingSect
+    entry_points: [HUD-OpenWuling, journey]
+    primary_actions: [create-guild, open-roster, open-construction]
+    layout: sect-gate header, real counters, name entry and organization cards; landscape two columns
+    states: [unconnected, no-guild, created, busy]
+    data_needs: [guild, counts, members, round]
+  - id: reward-receipt-native
+    route: modal-overlay
+    widget: /Game/UI/Ink/Widgets/Shared/WBP_RewardReceipt
+    entry_points: [committed-reward-receipts]
+    primary_actions: [dismiss]
+    layout: centered paper, source, scrollable item icon/name/count rows, fixed close
+    states: [queued, visible, dismissed]
+    edge_cases: [initial-baseline, repeated-receipt, stale-snapshot, transaction-rollback]
+    data_needs: [reward_receipts]
+  - id: journey-atlas-native
+    route: Extensions
+    aliases: [WorldCultivation, ResourceContest]
+    widget: /Game/UI/Ink/Widgets/Journey/WBP_JourneyMap
+    entry_points: [HUD-OpenExtensions, wuling]
+    primary_actions: [world-tab, resource-tab, open-destination]
+    layout: two tabs, original map with separate runtime pins, legend or parameter-driven entries
+    states: [unconnected-world-preview, authoritative, locked-regions, zero-resources]
+    data_needs: [journey.worlds, journey.resources]
+  - id: journey-destination-native
+    routes: [JourneyWorldDetail, JourneyResourceDetail]
+    aliases: [RegionDetail, ResourceDetail]
+    widget: /Game/UI/Ink/Widgets/Journey/WBP_JourneyDestination
+    primary_actions: [travel-intent, confirm-travel, cancel-travel]
+    layout: map vignette and readable details with fixed travel and back; resource sheet omits world difficulty and introduction
+    states: [locked, disconnected, available, confirm, pending, refused, entered]
+    data_needs: [journey.worlds, journey.resources, race_queue, round]

@@ -1,0 +1,506 @@
+{
+  "passed": true,
+  "check_count": 113,
+  "failed": [],
+  "counts": {
+    "material_species": 160,
+    "material_item_variants": 640,
+    "method_items": 14,
+    "equipment_items": 16,
+    "fabao_items": 12,
+    "new_prop_items": 20,
+    "guild_materials": 4,
+    "building_level_rows": 24,
+    "master_items_including_legacy": 730,
+    "acquisition_sources": 51,
+    "source_edges": 747,
+    "recipes": 556,
+    "recipe_input_rows": 608,
+    "pending_runtime_cases": 30
+  },
+  "expected_failures_zero_help": 0.7732,
+  "expected_qi_loss_zero_help": 1159.8,
+  "maximum_qi_loss_before_guaranteed_sixth_attempt": 7500,
+  "source_sha256": {
+    "acceptance.csv": "dd0b60e3abeebb8b05003b3c8034991bc35d2f3f3099dfb321f39a127ab8c6e0",
+    "acquisition_sources.csv": "5f8b2e0fb8f597f625d24e2c3316ff0fe1d037983ff9cc8a16696da94a7665e7",
+    "breakthrough_material_items.csv": "f26c95c48f408ba2751b9bb826d3954dd6275e00f9317ffdb9c81c6881226b05",
+    "breakthrough_species.csv": "68bc9e82d99ed77d2a9d5a44c5384a065e878f39f9bb387cda5680139f534517",
+    "breakthrough_stages.csv": "63fd840ee827647930dbd298146c606bbe11766f9a644e03c6641ea083d12b98",
+    "counts.json": "91ddc823e67237b314288ad7c11571448fa8f28f65e55af93c782b2bce2d2cae",
+    "equipment_items.csv": "441c54b334c1e13d79d330216037e4be6ef1b8799b67d28470b2df486193e6ba",
+    "fabao_items.csv": "6a43fa0eaeb9517317effac3ed5c3debf2de42bee6cd8f61253338fa8c33dbcf",
+    "guild_buildings.csv": "5b8c0551e9e9a14090dfdf350e02f55ebdcb8283da4a82a428f99cdce9522c10",
+    "guild_build_materials.csv": "d90e2147eae46542e8d1631ced31d59ce792b11ce8749ebef61e501d14e213ac",
+    "guild_currency.csv": "4d0ba8abdb1c249b0a30ef14ccac83dca35ba972fb7f339c36bf834a67ff6364",
+    "item_master.csv": "6091b39111d600dd89e4d98c0b66c0db80bf2d55ab3a2c9a50c2f7828917fb50",
+    "item_sources.csv": "c820db1445b83f8ba8f6c8fb9c16cd9d9b31bc2d75203292eed8def2deb28dc2",
+    "item_system.json": "a79373d70049cd392dc01a0926fb55c499663dea291e30476b873300a0c34457",
+    "method_items.csv": "71e49f70c85da9e04c9dc1a371399494c638b8905432ee92fa85b0a31ff52efe",
+    "prop_items.csv": "0bb6b3e713b3f3ec04d46637734aca0e45914388729ff1f308a09dae7ec834a1",
+    "quality_bands.csv": "c5738ed8bb8ba099d9d3f2d9d1077df8923845f05683890ce572f5a4677cbd43",
+    "quality_grades.csv": "3d6422b9a837fdda8e795c0abd3021cb9a33e719d7e8167919a6dc0fbc3fea89",
+    "recipes.csv": "a146b215c444a44f967a79731c530ec5bcd2746e30d1ab9a2538518f4340ddc1",
+    "recipe_inputs.csv": "d8ddbfaafc8ec78f4fecc1d406b92a1ce599fc45b2a3de0ba42809be785bf285",
+    "schema.json": "71c030f0972013b717849e0933610486847309f2d49f719d57209bb6bc653b0e",
+    "transaction_types.csv": "4a255d7ca245013a41584da4854b878a0699b593108b9bd1f1f85fcc03fd8926",
+    "tribulation.json": "ba2ee664f3d8de313eaa731cea4d032b182653a33e528199d466cae0e60b5c46",
+    "ui-extension.csv": "17a0dee591ae80cecf9ededca4bc32075f8764e7033d9c188198fee567d322c2"
+  },
+  "runtime_tests_run": false,
+  "scope": "Design references/reachability/budgets/probability arithmetic; no UE, service, live provider or platform tests",
+  "checks": [
+    {
+      "name": "unique_master_ids",
+      "passed": true
+    },
+    {
+      "name": "unique_source_ids",
+      "passed": true
+    },
+    {
+      "name": "unique_recipe_ids",
+      "passed": true
+    },
+    {
+      "name": "ten_stages",
+      "passed": true
+    },
+    {
+      "name": "160_species_640_variants",
+      "passed": true
+    },
+    {
+      "name": "unique_chinese_species_names",
+      "passed": true
+    },
+    {
+      "name": "four_grades_each_species",
+      "passed": true
+    },
+    {
+      "name": "BR01_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR01_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR02_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR02_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR03_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR03_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR04_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR04_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR05_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR05_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR06_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR06_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR07_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR07_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR08_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR08_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR09_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR09_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "BR10_one_core_five_each_optional",
+      "passed": true
+    },
+    {
+      "name": "BR10_optional_guard",
+      "passed": true
+    },
+    {
+      "name": "variant_master_refs",
+      "passed": true
+    },
+    {
+      "name": "source_item_refs",
+      "passed": true
+    },
+    {
+      "name": "recipes_output_refs",
+      "passed": true
+    },
+    {
+      "name": "recipe_input_refs",
+      "passed": true
+    },
+    {
+      "name": "recipe_positive_output",
+      "passed": true
+    },
+    {
+      "name": "all_730_items_reachable_without_rng_or_new_market",
+      "passed": true
+    },
+    {
+      "name": "all_new_items_have_channel",
+      "passed": true
+    },
+    {
+      "name": "new_materials_bound_anchor_only",
+      "passed": true
+    },
+    {
+      "name": "no_new_trade_whitelist",
+      "passed": true
+    },
+    {
+      "name": "viewer_material_cost_zero",
+      "passed": true
+    },
+    {
+      "name": "minor_cost_preserved",
+      "passed": true
+    },
+    {
+      "name": "major_no_double_charge",
+      "passed": true
+    },
+    {
+      "name": "new_equipment_no_weapon",
+      "passed": true
+    },
+    {
+      "name": "one_fabao_and_no_probability_purchase",
+      "passed": true
+    },
+    {
+      "name": "props_no_probability_purchase",
+      "passed": true
+    },
+    {
+      "name": "perfect_score_100",
+      "passed": true
+    },
+    {
+      "name": "only_core_scores_10_18_26_35",
+      "passed": true
+    },
+    {
+      "name": "floor_once_after_sum",
+      "passed": true
+    },
+    {
+      "name": "quality_0",
+      "passed": true
+    },
+    {
+      "name": "quality_39",
+      "passed": true
+    },
+    {
+      "name": "quality_40",
+      "passed": true
+    },
+    {
+      "name": "quality_59",
+      "passed": true
+    },
+    {
+      "name": "quality_60",
+      "passed": true
+    },
+    {
+      "name": "quality_74",
+      "passed": true
+    },
+    {
+      "name": "quality_75",
+      "passed": true
+    },
+    {
+      "name": "quality_89",
+      "passed": true
+    },
+    {
+      "name": "quality_90",
+      "passed": true
+    },
+    {
+      "name": "quality_97",
+      "passed": true
+    },
+    {
+      "name": "quality_98",
+      "passed": true
+    },
+    {
+      "name": "quality_100",
+      "passed": true
+    },
+    {
+      "name": "all_only_core_min_band",
+      "passed": true
+    },
+    {
+      "name": "all_ten_perfect_budget_10_percent",
+      "passed": true
+    },
+    {
+      "name": "no_random_quality_or_cumulative_multiply",
+      "passed": true
+    },
+    {
+      "name": "quality_monotonic_snapshots",
+      "passed": true
+    },
+    {
+      "name": "guild_24_levels",
+      "passed": true
+    },
+    {
+      "name": "BUILD_01_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_01_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_01_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_02_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_02_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_02_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_03_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_03_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_03_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_04_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_04_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_04_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_05_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_05_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_05_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_06_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_06_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_06_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_07_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_07_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_07_L3_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_08_L1_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_08_L2_references",
+      "passed": true
+    },
+    {
+      "name": "BUILD_08_L3_references",
+      "passed": true
+    },
+    {
+      "name": "two_currencies_two_honor_stats",
+      "passed": true
+    },
+    {
+      "name": "guild_no_withdraw_or_points_for_stats",
+      "passed": true
+    },
+    {
+      "name": "release_extension_all_false",
+      "passed": true
+    },
+    {
+      "name": "probability_0_0",
+      "passed": true
+    },
+    {
+      "name": "probability_1_0",
+      "passed": true
+    },
+    {
+      "name": "probability_25_0",
+      "passed": true
+    },
+    {
+      "name": "probability_49_0",
+      "passed": true
+    },
+    {
+      "name": "probability_50_0",
+      "passed": true
+    },
+    {
+      "name": "probability_51_0",
+      "passed": true
+    },
+    {
+      "name": "probability_0_1",
+      "passed": true
+    },
+    {
+      "name": "probability_0_4",
+      "passed": true
+    },
+    {
+      "name": "probability_0_5",
+      "passed": true
+    },
+    {
+      "name": "probability_1_5",
+      "passed": true
+    },
+    {
+      "name": "one_percent_is_percentage_point",
+      "passed": true
+    },
+    {
+      "name": "failure_loss_5400",
+      "passed": true
+    },
+    {
+      "name": "failure_loss_1500",
+      "passed": true
+    },
+    {
+      "name": "failure_loss_1499",
+      "passed": true
+    },
+    {
+      "name": "failure_loss_0",
+      "passed": true
+    },
+    {
+      "name": "sixth_attempt_without_help_is_guaranteed",
+      "passed": true
+    },
+    {
+      "name": "seven_tribulation_transitions",
+      "passed": true
+    },
+    {
+      "name": "fifty_percent_exact_roll_space",
+      "passed": true
+    },
+    {
+      "name": "full_probability_never_fails",
+      "passed": true
+    },
+    {
+      "name": "failure_materials_preserved_no_realm_loss",
+      "passed": true
+    },
+    {
+      "name": "no_gift_material_or_equipment_probability",
+      "passed": true
+    },
+    {
+      "name": "tribulation_window_exact",
+      "passed": true
+    },
+    {
+      "name": "runtime_not_claimed",
+      "passed": true
+    },
+    {
+      "name": "bounded_expected_failure_loss",
+      "passed": true
+    }
+  ]
+}

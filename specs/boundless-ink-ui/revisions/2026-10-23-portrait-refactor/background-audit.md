@@ -1,0 +1,17 @@
+# 背景发白审计
+
+状态：静态源码和资源元数据证据；尚未用运行绘制层逐层隔离，不能宣称根因已定位或已修复。
+
+1. InkFrontendWidget.cpp的ShowPage通过PageSwitcher选择单个活动页；普通切换不会必然把所有页面同时叠上去。关闭扩展页也会RemoveFromParent，不能仅凭目录很乱就推断重复实例泄漏。
+2. InkSignInShell.cpp的RebuildResponsivePanel创建FeaturePaper，再创建场景装饰并设RenderOpacity(.15)。这是明确存在的两个视觉层，需检查装饰原图是否自带浅色底。
+3. 同文件UsesResponsiveShell当前返回true，所以InkFeaturePanel.cpp里旧的ScaleBox/FeaturePaper分支不应直接当作当前双层纸底根因；嵌入分支只创建内容，不创建独立外壳。
+4. InkPresentationStyle.cpp中Surface(Card,较高尺寸)返回IdentityBackground，后者使用Paper色的RoundedBox。ApplyProvidedArt会重设部分基础页的纸底；这可解释某些纸底材质不一致，但实际是否与专属底板同时可见需查Widget树。
+5. 排行榜有LeaderboardBackground、行底RowBackground以及按品质/名次展示的装饰，空行使用带Alpha的浅色刷。行底是局部层，不能不加区分全部删掉；保留行样式与交互。
+6. 背包InventoryMainFrame是现有图集区域；先查区域Alpha和旧基础页是否可见，再决定外壳背景透明。不能抠坏现有带字图集。
+7. 本轮实际加载M_InkPaperCloud、M_InkWash、M_InkGoldRankPortrait，均为MD_UI与BLEND_TRANSLUCENT，没有发现这三者使用Additive。此结论仅覆盖这三个代表材质，不覆盖所有材质或Niagara。
+8. RebuildLeaderboardSurfaces进入时执行Clear(Page)，所以旧LeaderboardPaper与新的RankAnchorFrame不能直接认定同时存在。重建时也会移除并重命名旧RankHUDScale子树。需要检查运行中真正可见的层，而不是把源码中的所有创建点相加。
+9. import_visual_materials.py记录M_InkPaperCloud创建源码Alpha=.985，即设计上接近不透明的暖纸底；仅从浅色外观不能认定多层累积。该值来自生成脚本，当前材质表达式数值仍需单独读取验证。
+
+拟验证：固定场景、关闭动画变化，逐层开关主纸底/装饰/行底/粒子；比较首次打开与20次开关后的Widget实例和同区域截图。如果只首次也发白，优先查素材与层级；如果逐次变白，再查实例生命周期和重复AddToViewport。修复目标是一页一个主纸底，不是盲目调低整页透明度。
+
+数据来源：registry-audit.json及本次读取的当前源码。引用目录中已有截图仅作历史现状参考，本轮没有重跑PIE。

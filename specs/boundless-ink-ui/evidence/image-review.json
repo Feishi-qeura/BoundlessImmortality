@@ -1,0 +1,62 @@
+[
+  {
+    "asset_id": "home-v1",
+    "dimensions": [
+      941,
+      1672
+    ],
+    "mode": "RGB",
+    "alpha_extrema": null,
+    "ratio": 0.562799,
+    "target_ratio": 0.5625,
+    "pixel_resize_performed": false,
+    "preview_inputs": {
+      "display_name": "主播",
+      "realm": "炼气一阶",
+      "health": "1000/1000",
+      "cultivation": "5/60"
+    },
+    "checks": {
+      "one_portrait_screen": true,
+      "top_labels_readable": true,
+      "bottom_order_preserved": true,
+      "preview_label_visible": true,
+      "side_rank_button_visible": true,
+      "character_not_covered": true,
+      "exact_scene_pixels_preserved": false,
+      "no_invented_distant_mountains": false,
+      "no_components_generated": true
+    },
+    "notes": "v2删除v1新增远山和建筑，保留近似场景构图。生图重绘并非像素不变，不能当成场景替换图或运行截图。中文可读但字体非引擎字体像素，动态字后续独立排版。"
+  },
+  {
+    "asset_id": "home-v2",
+    "dimensions": [
+      941,
+      1672
+    ],
+    "mode": "RGB",
+    "alpha_extrema": null,
+    "ratio": 0.562799,
+    "target_ratio": 0.5625,
+    "pixel_resize_performed": false,
+    "preview_inputs": {
+      "display_name": "主播",
+      "realm": "炼气一阶",
+      "health": "1000/1000",
+      "cultivation": "5/60"
+    },
+    "checks": {
+      "one_portrait_screen": true,
+      "top_labels_readable": true,
+      "bottom_order_preserved": true,
+      "preview_label_visible": true,
+      "side_rank_button_visible": true,
+      "character_not_covered": true,
+      "exact_scene_pixels_preserved": false,
+      "no_invented_distant_mountains": true,
+      "no_components_generated": true
+    },
+    "notes": "v2删除v1新增远山和建筑，保留近似场景构图。生图重绘并非像素不变，不能当成场景替换图或运行截图。中文可读但字体非引擎字体像素，动态字后续独立排版。"
+  }
+]

@@ -1,0 +1,766 @@
+{
+  "checked_utc": "2026-10-21T10:47:47.695498+00:00",
+  "scope": "design_package_integrity_and_written_formula_only",
+  "passed": true,
+  "checks_count": 101,
+  "acceptance_runtime_rows": 70,
+  "runtime_rows_passed": 0,
+  "local_markdown_links_checked": 32,
+  "fonts": [
+    {
+      "path": "fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "name": [
+        "LXGW WenKai",
+        "Regular"
+      ],
+      "role": "body_and_all_numeric"
+    },
+    {
+      "path": "fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "name": [
+        "Ma Shan Zheng",
+        "Regular"
+      ],
+      "role": "display"
+    },
+    {
+      "path": "fonts/NotoSansSC/NotoSansSC[wght].ttf",
+      "name": [
+        "Noto Sans SC",
+        "Thin"
+      ],
+      "role": "legacy_variable_reference"
+    },
+    {
+      "path": "fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "name": [
+        "Noto Sans CJK SC",
+        "Regular"
+      ],
+      "role": "missing_glyph_fallback_only"
+    }
+  ],
+  "glyph_samples": [
+    {
+      "path": "fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "sample": "无极仙道 字体资源试排 签到有礼 云山坊市 仙缘寻宝",
+      "unicode_codepoints": 7015,
+      "missing": []
+    },
+    {
+      "path": "fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "sample": "角色 背包 修炼 排行 菜单 活动 签到 仙途 开始游戏 继续游戏 存档 设置 退出游戏 确认购买 领取奖励 云气连接山水，文字留在安静的纸面。 血量 修为 单价 数量 总价 余额不足 请求确认中 已领取 暂未开放 0123456789,./%×+-()",
+      "unicode_codepoints": 46926,
+      "missing": []
+    },
+    {
+      "path": "fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "sample": "·",
+      "unicode_codepoints": 44810,
+      "missing": []
+    }
+  ],
+  "checks": [
+    {
+      "name": "required:README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:UI开发规范.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:动效与转盘商店专项.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:交给开发AI的执行约束.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:联网参考与取舍.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:设计令牌.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:验收矩阵.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:fonts/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:fonts/font-manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:assets/00-用户选定HUD方向.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:assets/01-转盘与商店风格参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:assets/02-主HUD横竖屏参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:assets/03-字体试排.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:assets/04-360短边文字样张.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "required:evidence/visual-review.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "json:设计令牌.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "json:evidence/noto-provenance.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "json:evidence/reference-review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "json:fonts/font-manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:assets/02-主HUD横竖屏参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:UI开发规范.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:assets/01-转盘与商店风格参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:UI开发规范.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:动效与转盘商店专项.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:交给开发AI的执行约束.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:设计令牌.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:验收矩阵.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:联网参考与取舍.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:fonts/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:assets/03-字体试排.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:assets/04-360短边文字样张.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:fonts/font-manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:evidence/delivery-validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:README.md:assets/00-用户选定HUD方向.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:动效与转盘商店专项.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:设计令牌.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:fonts/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:验收矩阵.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:assets/00-用户选定HUD方向.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:assets/02-主HUD横竖屏参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:UI开发规范.md:assets/01-转盘与商店风格参考.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:动效与转盘商店专项.md:UI开发规范.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:联网参考与取舍.md:fonts/font-manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:evidence/visual-review.md:01-原12屏核对总览.jpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:evidence/visual-review.md:02-补充概念图核对总览.jpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:evidence/visual-review.md:../assets/03-字体试排.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:evidence/visual-review.md:../assets/04-360短边文字样张.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:fonts/README.md:font-manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:fonts/README.md:MaShanZheng/MaShanZheng-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:fonts/README.md:LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "link:fonts/README.md:NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/LXGWWenKai/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/LXGWWenKai/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/LXGWWenKai/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "license:fonts/LXGWWenKai/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/MaShanZheng/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/MaShanZheng/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/MaShanZheng/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "license:fonts/MaShanZheng/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/NotoSansSC/NotoSansSC[wght].ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/NotoSansSC/NotoSansSC[wght].ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/NotoSansSC/NotoSansSC[wght].ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/NotoSansSC/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/NotoSansSC/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/NotoSansSC/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "license:fonts/NotoSansSC/OFL.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_hash:fonts/NotoSansSC/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_size:fonts/NotoSansSC/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_commit:fonts/NotoSansSC/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "license:fonts/NotoSansSC/LICENSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "glyph_coverage:fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "glyph_coverage:fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "glyph_coverage:fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "title_middle_dot_fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "decode:assets/00-用户选定HUD方向.png",
+      "passed": true,
+      "detail": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "decode:assets/01-转盘与商店风格参考.png",
+      "passed": true,
+      "detail": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "decode:assets/02-主HUD横竖屏参考.png",
+      "passed": true,
+      "detail": [
+        1672,
+        941
+      ]
+    },
+    {
+      "name": "decode:assets/03-字体试排.png",
+      "passed": true,
+      "detail": [
+        1440,
+        1200
+      ]
+    },
+    {
+      "name": "decode:assets/04-360短边文字样张.png",
+      "passed": true,
+      "detail": [
+        360,
+        220
+      ]
+    },
+    {
+      "name": "decode:evidence/01-原12屏核对总览.jpg",
+      "passed": true,
+      "detail": [
+        1600,
+        1710
+      ]
+    },
+    {
+      "name": "decode:evidence/02-补充概念图核对总览.jpg",
+      "passed": true,
+      "detail": [
+        1672,
+        1080
+      ]
+    },
+    {
+      "name": "acceptance_unique_ids",
+      "passed": true,
+      "detail": 70
+    },
+    {
+      "name": "acceptance_all_pending",
+      "passed": true,
+      "detail": 70
+    },
+    {
+      "name": "five_navigation_actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "one_cultivation_action",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "subnav_hit_height",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dpi_curve_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_roles_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "xianxia_all_body_and_numeric_roles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "health_display_label",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "written_equal_sector_formula",
+      "passed": true,
+      "detail": {
+        "cases": 2835,
+        "scope": "offline formula only; no UE rendering or authority test"
+      }
+    },
+    {
+      "name": "written_easing_monotonic_endpoints",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/00-用户选定HUD方向.png",
+      "bytes": 3534718,
+      "sha256": "f68b6ad990a1fe133cd55e96baa9b8ae826ae4d9d61dd15688a3eb6885a4092b"
+    },
+    {
+      "path": "assets/01-转盘与商店风格参考.png",
+      "bytes": 3250063,
+      "sha256": "bdc8d21cfc7f5517b112a9bc6c6abedbce51a45005b9a5d2eaebe66dd4aa0eed"
+    },
+    {
+      "path": "assets/02-主HUD横竖屏参考.png",
+      "bytes": 3447577,
+      "sha256": "688ebed20c041df60f70251842ea1ffd51ea8192c6ae29a16f3517e1c5f91a89"
+    },
+    {
+      "path": "assets/03-字体试排.png",
+      "bytes": 219539,
+      "sha256": "48f4ddabba5d72f6afc5f44edac5938b81be490bfa477b1da225b43c9f18f5e3"
+    },
+    {
+      "path": "assets/04-360短边文字样张.png",
+      "bytes": 20235,
+      "sha256": "53a917519b7fed079a55229a127ec80b56d74a4edcc46c25faa5dc4390d23d80"
+    },
+    {
+      "path": "assets/hud-reference-prompt.txt",
+      "bytes": 3739,
+      "sha256": "7612c99d432244570e8cc82856632cef6115fb91db0b06969cdc5d68dcca529b"
+    },
+    {
+      "path": "assets/reference-prompt.txt",
+      "bytes": 3993,
+      "sha256": "514aa03694a0f49d4716e9ae733e0f280fff356e00b6fb59637a31fd141d50b9"
+    },
+    {
+      "path": "evidence/01-原12屏核对总览.jpg",
+      "bytes": 869637,
+      "sha256": "8a0e158faabcc573d264395c60406b11dfcc690ac5793da720616d2c785f6018"
+    },
+    {
+      "path": "evidence/02-补充概念图核对总览.jpg",
+      "bytes": 625051,
+      "sha256": "c7eea6e05a9910cff0d9d2c9ba967b8793d317b83535e483a1ca2eebb214ab02"
+    },
+    {
+      "path": "evidence/noto-provenance.json",
+      "bytes": 243,
+      "sha256": "52bceb606b8d0edbf867890fea15ce0e0beecea0591eaaf486d0a1ca99e60212"
+    },
+    {
+      "path": "evidence/reference-review.json",
+      "bytes": 5046,
+      "sha256": "ad89e89e8d17aef0e3dbd97fba166d40ef22719fa238e4743dad68e5713b0c25"
+    },
+    {
+      "path": "evidence/visual-review.md",
+      "bytes": 1751,
+      "sha256": "8c3881c6c4a899500770752b9c205a1f396f38c505249b6d74aaab659abc67bb"
+    },
+    {
+      "path": "fonts/font-manifest.json",
+      "bytes": 5624,
+      "sha256": "08066cb52bc46d41be79f35774bbaddbb1ab631e8b7b4c536122c4d95b94051a"
+    },
+    {
+      "path": "fonts/LXGWWenKai/LXGWWenKai-Regular.ttf",
+      "bytes": 25928940,
+      "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b"
+    },
+    {
+      "path": "fonts/LXGWWenKai/OFL.txt",
+      "bytes": 5171,
+      "sha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0"
+    },
+    {
+      "path": "fonts/MaShanZheng/MaShanZheng-Regular.ttf",
+      "bytes": 5857936,
+      "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb"
+    },
+    {
+      "path": "fonts/MaShanZheng/OFL.txt",
+      "bytes": 4397,
+      "sha256": "d7bdb1cee215b689e23c2f95672a6084c790542170648267a55114103d756a08"
+    },
+    {
+      "path": "fonts/NotoSansSC/LICENSE",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "fonts/NotoSansSC/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "path": "fonts/NotoSansSC/NotoSansSC[wght].ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    {
+      "path": "fonts/NotoSansSC/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "fonts/README.md",
+      "bytes": 3524,
+      "sha256": "89842d327f517c62d34561142057faf2026b5ac689f0e77d8e0b642e9c787268"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6011,
+      "sha256": "343733aec04b98bbad627e6168a3a9025815c63985c9e9b9657b36ab141baee7"
+    },
+    {
+      "path": "scripts/download-fonts.ps1",
+      "bytes": 1993,
+      "sha256": "5b70a92187d75f2e3ee43e418e109b316a608d38a1b269564886d0c0ed16667f"
+    },
+    {
+      "path": "scripts/prepare-delivery.py",
+      "bytes": 7287,
+      "sha256": "61f2841ecb19affb15db22f0edb68218c532f3b0161872b531d3e5edc5242505"
+    },
+    {
+      "path": "scripts/validate-delivery.py",
+      "bytes": 10177,
+      "sha256": "a50daf9bff82506c5c5af7163e2c92151568de5f5ad84285b95d6c9c8e593829"
+    },
+    {
+      "path": "UI开发规范.md",
+      "bytes": 28911,
+      "sha256": "be1b4712a8a50dcae4cbf856759fe2e7fc22ec5ceed6bbad9acc984407c9dd04"
+    },
+    {
+      "path": "交给开发AI的执行约束.md",
+      "bytes": 5442,
+      "sha256": "96647d7390088281d7ddb83df0b1ad109c3dfbd9818535f71154cef6ed0ae9fe"
+    },
+    {
+      "path": "动效与转盘商店专项.md",
+      "bytes": 19585,
+      "sha256": "0064036ca84bdade110ed8e5e0f756b650072ddda02c52dbfffb7cd95c74fb23"
+    },
+    {
+      "path": "联网参考与取舍.md",
+      "bytes": 5225,
+      "sha256": "eee1569faad0cae6ec082fdb802476accbcda837b28e958daf5a2f0775dc280e"
+    },
+    {
+      "path": "设计令牌.json",
+      "bytes": 6523,
+      "sha256": "09f073f99011a0acaf1d7847198a2f2e43fcd8a4ce68524c65977f23df42bb1d"
+    },
+    {
+      "path": "验收矩阵.csv",
+      "bytes": 9410,
+      "sha256": "88c27f7a5a1f05edc989463fb9cf2919592d7320beeff2146c0cc358eedcc1bc"
+    }
+  ],
+  "not_run": [
+    "Unreal build",
+    "PIE",
+    "Cook",
+    "Android/iOS packaging",
+    "device performance",
+    "Niagara runtime",
+    "commerce authority",
+    "actual wheel renderer"
+  ]
+}

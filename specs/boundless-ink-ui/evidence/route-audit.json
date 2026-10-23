@@ -1,0 +1,422 @@
+[
+  {
+    "route": "Main",
+    "screen_id": "main",
+    "disposition": "preserve-runtime",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "HUD",
+    "screen_id": "home",
+    "disposition": "preserve-runtime",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Character",
+    "screen_id": "character",
+    "disposition": "preserve-runtime",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CharacterProfile",
+    "screen_id": "character",
+    "disposition": "preserve-runtime",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Inventory",
+    "screen_id": "inventory",
+    "disposition": "preserve-runtime",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Leaderboard",
+    "screen_id": "leaderboard",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Saves",
+    "screen_id": "saves",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Settings",
+    "screen_id": "settings",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Wuling",
+    "screen_id": "wuling",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingGuild",
+    "screen_id": "wuling",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "SwordSpirit",
+    "screen_id": "sword-spirit",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingRights",
+    "screen_id": "sword-spirit",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "GiftRules",
+    "screen_id": "gift-rules",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CultivationMethods",
+    "screen_id": "methods",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CharacterSkills",
+    "screen_id": "methods",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingEquipment|methods",
+    "screen_id": "methods",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "RaceLobby",
+    "screen_id": "race-lobby",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingRace|lobby",
+    "screen_id": "race-lobby",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "RaceLive",
+    "screen_id": "race-live",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingRace|live",
+    "screen_id": "race-live",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "RaceSettlement",
+    "screen_id": "race-result",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingRace|result",
+    "screen_id": "race-result",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ResourceLease",
+    "screen_id": "lease",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingRace|lease",
+    "screen_id": "lease",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "EventSettlement",
+    "screen_id": "world-result",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "OfflineRewards",
+    "screen_id": "offline",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingOffline",
+    "screen_id": "offline",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Shop",
+    "screen_id": "shop",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingShop",
+    "screen_id": "shop",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Market",
+    "screen_id": "market",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingMarket",
+    "screen_id": "market",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "TradeOrders",
+    "screen_id": "orders",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingOrders",
+    "screen_id": "orders",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WorldCultivation",
+    "screen_id": "world",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "RegionDetail",
+    "screen_id": "region",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ResourceContest",
+    "screen_id": "resources",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ResourceDetail",
+    "screen_id": "resource-detail",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "SignIn",
+    "screen_id": "sign-in",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "MonthlySignIn",
+    "screen_id": "monthly-sign-in",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "DailyFortune",
+    "screen_id": "daily-verse",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Activities",
+    "screen_id": "activities",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "DailyActivities",
+    "screen_id": "daily-activities",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "TimedActivities",
+    "screen_id": "timed-activities",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "DailyActivityDetail",
+    "screen_id": "daily-detail",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "TimedActivityDetail",
+    "screen_id": "timed-detail",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "LaunchEvent",
+    "screen_id": "launch",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingActivity|launch",
+    "screen_id": "launch",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "LaunchRank",
+    "screen_id": "launch-rank",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "BreakthroughPrepare",
+    "screen_id": "breakthrough",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingBreakthrough",
+    "screen_id": "breakthrough",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Tribulation",
+    "screen_id": "tribulation",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingBreakthrough|trial",
+    "screen_id": "tribulation",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ItemSources",
+    "screen_id": "item-sources",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingSources",
+    "screen_id": "item-sources",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "GuildConstruction",
+    "screen_id": "guild-build",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingConstruction",
+    "screen_id": "guild-build",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "EquipmentFabao",
+    "screen_id": "equipment",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CharacterEquipment",
+    "screen_id": "equipment",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CharacterArtifacts",
+    "screen_id": "equipment",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingEquipment",
+    "screen_id": "equipment",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "Extensions",
+    "screen_id": "journey",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingCraft",
+    "screen_id": "craft",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "CharacterAppearance",
+    "screen_id": "appearance",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ResourceRanking",
+    "screen_id": "resource-rank",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "ResourceRewards",
+    "screen_id": "resource-rewards",
+    "disposition": "redesign-planned",
+    "notes": "语义映射；不是已创建的新原生类"
+  },
+  {
+    "route": "WulingActivity",
+    "screen_id": "activities",
+    "disposition": "merge",
+    "notes": "现有签到与开服合并承载路由；保留事务，再分视图设计"
+  },
+  {
+    "route": "CharacterFate",
+    "screen_id": null,
+    "disposition": "excluded-feature-disabled",
+    "notes": "当前规则未开放额外仙缘配置，不新增获得或付费系统"
+  },
+  {
+    "route": "Draw",
+    "screen_id": null,
+    "disposition": "excluded-from-formal-navigation",
+    "notes": "旧抽奖开发预览；现有v1.4正式业务导航明确排除"
+  },
+  {
+    "route": "Expedition",
+    "screen_id": null,
+    "disposition": "excluded-from-formal-navigation",
+    "notes": "旧行医出诊，与项目当前核心玩法不符；不能误作仙途主入口"
+  },
+  {
+    "route": "ExpeditionDetail",
+    "screen_id": null,
+    "disposition": "excluded-from-formal-navigation",
+    "notes": "旧出诊详情同上，保留开发资产不删除"
+  }
+]

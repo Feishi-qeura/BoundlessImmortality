@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "stage": "home-v2-v4-ue-integrated-cleanup-regression-complete",
+  "stage_complete": true,
+  "active_components": 18,
+  "current_components_user_approved": true,
+  "component_approval_evidence": "evidence/approval-home-components.json",
+  "derivative_pack": "home-components-trim-v2",
+  "derivative_user_approved": true,
+  "individual_state_records": 63,
+  "numerical_checks": {
+    "passed": true,
+    "evidence": "evidence/home-trim-final-checks.json",
+    "retained_rgba": 18,
+    "preview_reconstructions": 10,
+    "guide_pixel_checks": 2
+  },
+  "protected_files": {
+    "checked": 670,
+    "unchanged": 670,
+    "changed": []
+  },
+  "approved_home_hash_unchanged": true,
+  "visual_review": {
+    "complete": true,
+    "inspected": 1,
+    "required": 1,
+    "pending": 0,
+    "evidence": "evidence/home-slice-correction-v4-visual-review.json",
+    "status": "author-visual-review-passed",
+    "accepted_images": 7,
+    "current_turn_images_reopened": 0,
+    "evidence_reused": true,
+    "provenance": "evidence/v4-review-reuse-provenance.json",
+    "open_issues": [],
+    "resolved_issues": [
+      "top-tile-v2-ornament-crosses-fixed-regions",
+      "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+    ],
+    "user_approved": true
+  },
+  "strict_validation": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "evidence": "evidence/validate-home-trim-final-strict.txt"
+  },
+  "package": {
+    "path": "packages/home-components-trim-v2-png.zip",
+    "sha256": "178851e9e1e935243216b57509af5d19c30863593c60a2c3964263f7642cafcb",
+    "bytes": 30805823,
+    "entries": 43,
+    "component_png_count": 18,
+    "preview_png_count": 12,
+    "integrity_passed": true,
+    "all_entry_hashes_verified": true,
+    "status": "user-approved-immutable-design-snapshot",
+    "user_approved": true,
+    "metadata_snapshot": "Original pre-integration metadata bytes retained; current runtime status is this delivery-status.json"
+  },
+  "previous_component_report": "evidence/component-delivery-status.json",
+  "runtime_files_written": true,
+  "ue_import_performed": true,
+  "atlas_created": false,
+  "runtime_tests_run": true,
+  "remaining": [],
+  "candidate_only": false,
+  "correction_checks": "evidence/home-trim-final-checks.json",
+  "v2_review": {
+    "inspected": 10,
+    "required": 10,
+    "inspection_complete": true,
+    "visual_acceptance_passed": false,
+    "confirmed_visual_failures": [
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-wide-v2.png",
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-narrow-v2.png",
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-top-tile-tall-v2.png",
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-wide-v2.png",
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/9slice-review-v2/home-rank-paper-narrow-v2.png"
+    ],
+    "evidence": "evidence/home-9slice-visual-review.json",
+    "historical_snapshot": true,
+    "open_issues_at_v2_review": [
+      "top-tile-v2-ornament-crosses-fixed-regions",
+      "rank-paper-v2-cloud-tips-cross-fixed-endcaps"
+    ],
+    "current_open_issues": []
+  },
+  "v3_review": {
+    "inspected": 4,
+    "required": 4,
+    "inspection_complete": true,
+    "visual_acceptance_passed": false,
+    "passed_images": 3,
+    "failed_images": [
+      "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/evidence/slice-correction-v3/home-rank-paper-narrow-v3.png"
+    ],
+    "evidence": "evidence/home-slice-correction-visual-review.json",
+    "historical_snapshot": true
+  },
+  "active_contract": "contracts/sprite-contract.yaml",
+  "active_manifest": "assets/sprites/home-components-trim-v2/sprite-manifest.yaml",
+  "final_validation": "evidence/home-trim-final-checks.json",
+  "old_packages_preserved": "verified-external-archive",
+  "previous_package": "D:/demo/BoundlessImmortality-UIArchive/20261022-home-v2/files/specs/boundless-ink-ui/packages/home-components-trim-v1-png.zip",
+  "follow_up_outside_current_scope": [
+    "Cook not run",
+    "Android/iOS device verification not run",
+    "Production provider/platform approval not run",
+    "Other page artwork not delivered in this batch"
+  ],
+  "generation_checks_snapshot": "evidence/home-slice-correction-v4-checks.json",
+  "approval_evidence": "evidence/approval-ue-integration-v2-v4.json",
+  "runtime_evidence": "../../Saved/Codex/HomeV2Integration20261022/delivery-validation.json",
+  "cleanup_index": "evidence/history-archive-index.json",
+  "ue_runtime": {
+    "entry": "Existing map InkMenuDirector -> /Game/UI/Ink/Widgets/WBP_InkFrontend -> native HUD",
+    "textures": "/Game/UI/Ink/HomeV2/Textures",
+    "material": "/Game/UI/Ink/HomeV2/Materials/M_HomeAvatarCircle",
+    "pie_checks": 78,
+    "post_cleanup_checks": 98,
+    "screenshots": 15,
+    "native_passed": 93,
+    "native_warnings": 1,
+    "native_failed": 0
+  },
+  "cleanup": {
+    "archived": 8,
+    "bytes": 52213566,
+    "uasset_removed": 0,
+    "archive": "D:\\demo\\BoundlessImmortality-UIArchive\\20261022-home-v2",
+    "pending_assets": 551,
+    "pending_list": "../../Saved/Codex/HomeV2Integration20261022/pending-cleanup.csv"
+  }
+}
