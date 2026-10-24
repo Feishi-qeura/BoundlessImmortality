@@ -1,0 +1,7 @@
+{
+  "failed_at": "2026-10-24T13:22:48.504496+08:00",
+  "error": "Exact dirty package save failed.",
+  "engine_pid": 47604,
+  "preserve_editor_memory": true,
+  "retry_requires_review": true
+}

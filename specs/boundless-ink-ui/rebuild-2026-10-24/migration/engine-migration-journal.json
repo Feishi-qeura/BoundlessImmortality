@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-24T13:53:09.561282+08:00",
+  "state": "renamed_complete",
+  "exact_count": 582,
+  "map_sha256": "2fcf7fcb432a6066a8ecfa880e376129a3bddd9326abed53f86fd2f2168cbdac",
+  "engine_pid": 47604,
+  "recovery_evidence": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\migration-attempts\\05-recovered-save-failure",
+  "note": "Original native582 rename succeeded; same-PID exact source-copy reconciliation completed; canonical582 saved and dirty0. No repeated rename."
+}

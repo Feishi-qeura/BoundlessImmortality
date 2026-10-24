@@ -1,0 +1,36 @@
+{
+  "team_id": "panel-rank",
+  "phase": "handoff-ready",
+  "updated_at": "2026-10-24T09:56:11+08:00",
+  "completed": [
+    "read rollout instructions, GameUI component/splitter/asset-pipeline stages, and rank/Wuling v2 measurement record",
+    "reviewed all four v2 source-page dimensions and inspected damage leaderboard screen semantics",
+    "generated and measured isolated text-free shared paper-panel candidate; produced 9-slice guide",
+    "wrote rank/Wuling component contract, Unreal import script, and reusable native UMG factory API",
+    "mapped assigned pages and current business adapter/route APIs in handoff",
+    "verified all four v2 source-page dimensions, byte sizes, and SHA-256 values against measured-assets-v2.json",
+    "packed the candidate asset and contracts into a ZIP and verified archive integrity"
+  ],
+  "remaining": [
+    "logic-integration to import candidate and verify Texture2D/Asset Registry under engine lease",
+    "logic-integration to attach factory to existing rank and Wuling widget trees",
+    "logic/service owner to confirm anchor spirit leaderboard metric semantics and any contribution route",
+    "run logic acceptance and UE build/PIE through assigned owners",
+    "user visual review; candidate stays approved:false"
+  ],
+  "blockers": [
+    "engine lease is not granted; importer and route wiring are intentionally not executed"
+  ],
+  "owned_files": [
+    "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-rank/",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/"
+  ],
+  "handoff_ready": true,
+  "engine_required": true,
+  "source_ready": true,
+  "assets_ready": true,
+  "import_verified": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "visual_pending_user": true
+}

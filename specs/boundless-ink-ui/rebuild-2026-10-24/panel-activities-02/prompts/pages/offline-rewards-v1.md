@@ -1,0 +1,3 @@
+# Offline Rewards · concept prompt
+
+Create one full portrait mobile game UI composition concept for a Chinese cultivation MMO offline rewards receipt page. Use a quiet ink masthead, a compact received/acknowledged summary strip with blank values, and a scrollable list of receipt rows with empty source/time/Qi values and service-state markers. Clearly distinguish pending synchronization from an authoritative empty receipt list. Reserve a fixed “确认已读” action area that is visually secondary. Shared ink, jade, warm ivory and restrained gold style, readable short labels “离线记录”, “已入账”, “确认已读”, “待同步”. No fabricated Qi totals, elapsed time, source, claim button, reward grant, progress, or currency. Composition reference only; all runtime rows and values are live UMG.

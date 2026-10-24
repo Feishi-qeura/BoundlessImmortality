@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [],
+  "steps": [
+    "main actual entry"
+  ],
+  "finished": false,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-08/Saved/",
+  "passed": false,
+  "current_step": "frame baseline probe",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/verify_countdown_diagnostic.py\", line 165, in tick\n    name,fn,delay=STEPS[I];R['current_step']=name;fn();R['steps'].append(name);I+=1;NEXT=time.monotonic()+delay;save()\n                                                  ^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/verify_countdown_diagnostic.py\", line 118, in probe\n    image=frame_image();geo=image.get_cached_geometry();size=unreal.SlateBlueprintLibrary.get_local_size(geo);pos=unreal.SlateBlueprintLibrary.local_to_absolute(geo,unreal.Vector2D(0,0))\n                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'unreal' has no attribute 'SlateBlueprintLibrary'\n"
+}

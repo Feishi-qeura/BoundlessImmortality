@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-24T07:43:54.651294+00:00",
+  "changed": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_all44_default_pie.py",
+      "captured_sha256": "1ee54ca58ed19651dbb0ea1c2ebe869116647a3b6613434249ad5266222c7046",
+      "current_sha256": "0d36aedf25454b6f0a93bbcd4fb6b5dcbc48f8b60c08a3023b437d6d2ffb1d91"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/status.json",
+      "captured_sha256": "c4ca9b0693575fa52e24f586fe68a5e5b2a647c8dcee54bc1c3500a0ddbe2b7a",
+      "current_sha256": "cfc0ca8b712c026516f684be27bcb6d47e0192b0837527638787f71d940a7771"
+    }
+  ]
+}

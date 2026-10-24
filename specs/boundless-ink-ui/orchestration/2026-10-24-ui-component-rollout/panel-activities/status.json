@@ -1,0 +1,35 @@
+{
+  "team_id": "panel-activities",
+  "phase": "handoff-ready",
+  "updated_at": "2026-10-24T09:59:13+08:00",
+  "completed": [
+    "read rollout README and applicable GameUI stages",
+    "reviewed activity-state-correction-3 and parallel-activities inputs",
+    "generated and measured isolated transparent countdown frame",
+    "created activity overview/cycle shell classes and authority-driven HUD countdown widget",
+    "prepared component contract, asset manifest, import script and measurement preview",
+    "parsed isolated YAML and verified candidate paths, prompt path, hash and approved=false"
+  ],
+  "remaining": [
+    "integration-owned texture import and Asset Registry readback under engine lease",
+    "route mappings and HUD mount by logic-integration",
+    "compile, runtime logic verification with real authority data, PIE interaction and capture",
+    "user visual review; keep candidate approval false"
+  ],
+  "blockers": [
+    "engine lease not granted; Editor, UBT, Content import and shared route/HUD edits are not authorized for this team",
+    "special offer SKU/price/order contract not present in inspected source; entry remains disabled"
+  ],
+  "owned_files": [
+    "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-activities/**",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/**"
+  ],
+  "handoff_ready": true,
+  "engine_required": true,
+  "source_ready": true,
+  "assets_ready": true,
+  "import_verified": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "visual_pending_user": true
+}

@@ -1,0 +1,259 @@
+{
+  "completed_at": "2026-10-24T12:16:50.846184+08:00",
+  "scope": "FIRST FIVE TEXTURES/TWO WBP + bounded source/UI/authority integration; not all44-screen completion",
+  "build": "build-11-result.json",
+  "compiled_module_proof": "compiled-module-proof.json",
+  "native_automation": {
+    "report": "automation-03/index.json",
+    "success": 21,
+    "failed": 0,
+    "warnings": 0,
+    "notRun": 0
+  },
+  "rendered_suites": [
+    {
+      "report": "pie-07/report.json",
+      "binary_scope": "build09 full logic",
+      "checks": 76,
+      "steps": 84,
+      "sha256": "5660672526cc28c7ab2bf185b1eb58889db635482b572a571276a12bf2960449"
+    },
+    {
+      "report": "pie-04-boundaries/report.json",
+      "binary_scope": "build10 stock/replay/responsive",
+      "checks": 30,
+      "steps": 24,
+      "sha256": "82cbe61ce025d7476880b8a2b913b3c11acb9036cdaa645b83c40569bc931352"
+    },
+    {
+      "report": "pie-05-viewer/report.json",
+      "binary_scope": "build11 viewer",
+      "checks": 11,
+      "steps": 6,
+      "sha256": "adaf7599751850278f7e96e944eb7f0b8a7889b11871eeb2d17087137aff074c"
+    },
+    {
+      "report": "pie-10-frame-final/report.json",
+      "binary_scope": "build11 final frame",
+      "checks": 19,
+      "steps": 18,
+      "sha256": "805880491828bc3748506049ec129926461f78eacacdd4a90ac197ef9017bc89"
+    }
+  ],
+  "captures": [
+    {
+      "path": "pie-07/hud.png",
+      "sha256": "a65b35317f1bf1161255b7ae57ef450e6fa20fb3993a3c5d19eaeb3f1880f534",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/activities.png",
+      "sha256": "7559ddc99d9c3b9894faadee5cbd2f32ad3165c9c5bde3237cee6719b0cc2025",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/daily-activities.png",
+      "sha256": "3506701b67b12ddd8b565d957b17cf35cf29a1859a3514f2fd553b71c3e9796c",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/sign-in.png",
+      "sha256": "f54af37c5c45345aac1438032ec3c174ca01682706c9961d21abc1501abcfeda",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/monthly-sign-in.png",
+      "sha256": "145dc18ee512d8eadae6629fc2f94f6110d00c267065532dba874f1ead3757e0",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/leaderboard.png",
+      "sha256": "c76a9a6cd5d4eff3cc32dcdeff7d4b7a38581ee2ca70eff2f5420ad5657b09ca",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/world-map.png",
+      "sha256": "4ef8413d6922c0bd0a9e77e95dc66054759009d61c48d98b4ada984295f8854d",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/world-detail.png",
+      "sha256": "b733b0fb3df55666a7af6e4568db7cc9f96454a49fe71840de9bc74391d29e3c",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/hud-active-launch.png",
+      "sha256": "fde7692e7a4f7fc1e07ff9fe0285fc39d7c535b8a03752e9acdc9fb7e04f1332",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/breakthrough-materials.png",
+      "sha256": "e40aed019fed0994c19c27d9e2427c8bdb823697b2115421added7abc22bf1f2",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/prepare-confirmed.png",
+      "sha256": "427e370bb1126f1d48dc9c9190bd8fca2efb3b1d9503d217e77dea8762376eb7",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/rework-confirmed.png",
+      "sha256": "9b85c92175b99ab25a9996406125d3d073e77dcb006f106bd5437de31ac339bd",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/offline.png",
+      "sha256": "6d602d8a2a02c9670081d1d36449ca72ab581f8652a9940ccab60d6c3d76b4f7",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-07/next-day-sign.png",
+      "sha256": "0b15d48fc21b3f5420978ddb771973c33de12e9e7b0a0dbe8a12d58a73ebea8c",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-04-boundaries/lost-response-recovered.png",
+      "sha256": "9090f6148af706f5bd7431d8679af630d617ddd06e4521d08e30a293fb7d5ac1",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-04-boundaries/active-countdown.png",
+      "sha256": "d73d136aa4e26d9b8a7bf755bcea23657f57112b44f986d1f65ab591e6d57dbc",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-04-boundaries/active-countdown-landscape.png",
+      "sha256": "b758eed5cb5ede1b8b6245afc83deab538067d8a742fd43998dae6b5d3a91705",
+      "actual_png_size": [
+        1280,
+        720
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-04-boundaries/active-countdown-narrow.png",
+      "sha256": "6abff4076e14fd5f7a5dba3dacb0b7fa73ce75c167610430404b8fa0aca3cb8d",
+      "actual_png_size": [
+        680,
+        1280
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-05-viewer/viewer-launch-gated.png",
+      "sha256": "bb9d136eaaf2f767c7cd33acaec442e165eea118ec4d3a78f1c9b12ff90fc11c",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-10-frame-final/frame-portrait.png",
+      "sha256": "b6f1f771ee8d27f7832d0fe107e18dc12d9b0526fcc300412a4b0f2e8fbaa857",
+      "actual_png_size": [
+        720,
+        1282
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-10-frame-final/frame-landscape.png",
+      "sha256": "62594ccfef9032efd35db06677b4bf5f54cd86b79a0e147a9799c0b8be7c84a7",
+      "actual_png_size": [
+        1280,
+        720
+      ],
+      "visual_approved": false
+    },
+    {
+      "path": "pie-10-frame-final/frame-narrow.png",
+      "sha256": "1eeddb3f634e7d857abe68498fc46eb814eedfd8a6b5082c0e698d3133848e74",
+      "actual_png_size": [
+        680,
+        1280
+      ],
+      "visual_approved": false
+    }
+  ],
+  "imported_textures": 5,
+  "preserving_wbp_migrations": 2,
+  "alpha_pixel_equal": true,
+  "route_wired": true,
+  "logic_verified": true,
+  "visual_pending_user": true,
+  "approved": false,
+  "rendering_override": "integration-rendering-override.json",
+  "owned_process_cleanup": "owned-process-cleanup.json",
+  "frozen_source_drift": [],
+  "source_proof": "current-source-proof.json",
+  "deferred": [
+    "Candidate HUD source-pixel nine-slice not UE accepted; measured full-image runtime fallback verified",
+    "44-screen remaining coverage and batch2 staged work remain separate; no promotion performed",
+    "User visual approval and device/Cook/package/platform/production acceptance not performed in this batch"
+  ]
+}

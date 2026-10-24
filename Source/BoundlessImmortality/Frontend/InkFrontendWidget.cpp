@@ -1,4 +1,5 @@
 #include "InkFrontendWidget.h"
+#include "Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h"
 #include "Frontend/UI/InkUiAssetPaths.h"
 #include "InkAnchorStatusWidget.h"
 #include "InkPresentationStyle.h"
@@ -67,7 +68,7 @@ namespace InkFrontend
         if(Texture)
         {
             const FString Name=FString::Printf(TEXT("MI_%s_%d_%d_%d_%d_%s"),*Texture->GetName(),int32(Rect.X),int32(Rect.Y),int32(Rect.Z),int32(Rect.W),bBox?TEXT("Slice"):TEXT("Fit"));
-            const FString Path=TEXT("/Game/UI/Ink/Materials/Atlas/")+Name+TEXT(".")+Name;
+            const FString Path=InkUiAssets::ResolveNamed(Name);
             if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,*Path,nullptr,LOAD_NoWarn|LOAD_Quiet))
             {Brush.SetResourceObject(Material);return Brush;}
         }
@@ -135,15 +136,15 @@ UInkFrontendWidget::UInkFrontendWidget(const FObjectInitializer& ObjectInitializ
     // Optional art uses the existing Slate paper/button surfaces until supplied.
     PanelTexture.Reset();
     ButtonTexture.Reset();
-    TitleTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Shared/T_InkTitle.T_InkTitle")));
-    MeditationTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation")));
-    AttributeIconAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons")));
-    ProvidedButtonAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons")));
-    ProvidedRankAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank")));
-    ProvidedInventoryAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory")));
-    TitleFeatherMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT("/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather")));
-    ScrollEdgeMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT("/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade")));
-    TextFont=TSoftObjectPtr<UFont>(FSoftObjectPath(TEXT("/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody")));
+    TitleTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Shared/T_InkTitle.T_InkTitle")));
+    MeditationTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation")));
+    AttributeIconAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons")));
+    ProvidedButtonAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons")));
+    ProvidedRankAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank")));
+    ProvidedInventoryAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory")));
+    TitleFeatherMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather")));
+    ScrollEdgeMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade")));
+    TextFont=TSoftObjectPtr<UFont>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody")));
     PaperColor=FLinearColor::FromSRGBColor(FColor(238,233,223));
     InkColor=FLinearColor::FromSRGBColor(FColor(32,34,31));
     AccentColor=FLinearColor::FromSRGBColor(FColor(173,150,104));
@@ -180,15 +181,12 @@ UInkFrontendActionButton* UInkFrontendWidget::MakeButton(UWidgetTree* Tree,FName
 UBorder* UInkFrontendWidget::MakeInkCard(UWidgetTree* Tree,UWidget* Content,FMargin CardPadding,bool bSelected)
 {
     auto* Outline=Tree->ConstructWidget<UBorder>();Outline->SetPadding(FMargin(bSelected?2.f:1.f));
-    Outline->SetBrushColor(bSelected?AccentColor:FLinearColor(InkColor.R,InkColor.G,InkColor.B,.24f));
+    auto CardBrush=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard);
+    if(bSelected){CardBrush.OutlineSettings.Color=InkPresentationStyle::Jade();CardBrush.OutlineSettings.Width=2.f;}
+    Outline->SetBrush(CardBrush);Outline->SetBrushColor(FLinearColor::White);
     auto* Paper=Tree->ConstructWidget<UBorder>();Paper->SetPadding(CardPadding);
-    Paper->SetBrushColor(FLinearColor::FromSRGBColor(bSelected?FColor(231,221,201):FColor(232,228,218)));
+    Paper->SetBrushColor(FLinearColor::FromSRGBColor(bSelected?FColor(231,238,229):FColor(251,247,238)));
     Paper->SetContent(Content);Outline->SetContent(Paper);
-    if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/MaterialInstances/Shared/MI_InkCardSoft.MI_InkCardSoft"),nullptr,LOAD_NoWarn|LOAD_Quiet))
-    {
-        FSlateBrush Brush;Brush.SetResourceObject(Material);Brush.DrawAs=ESlateBrushDrawType::Image;
-        Outline->SetBrush(Brush);Outline->SetBrushColor(FLinearColor::White);Paper->SetBrushColor(FLinearColor::Transparent);
-    }
     return Outline;
 }
 
@@ -203,11 +201,6 @@ UBorder* UInkFrontendWidget::MakeLeaderboardRow(UWidgetTree* Tree,const FText& R
     auto* MetricText=AddText(Tree,nullptr,Metric,24,bHeader?FName(TEXT("LeaderboardColumns")):NAME_None);MetricText->SetJustification(ETextJustify::Right);
     auto* MetricLayout=Row->AddChildToHorizontalBox(MetricText);FSlateChildSize MetricSize(ESlateSizeRule::Fill);MetricSize.Value=.75f;MetricLayout->SetSize(MetricSize);MetricLayout->SetVerticalAlignment(VAlign_Center);MetricLayout->SetPadding(FMargin(8,0));
     auto* Card=MakeInkCard(Tree,Row,FMargin(4,4),bHeader);
-    if(auto* Texture=ProvidedRankAtlas.LoadSynchronous())
-    {
-        Card->SetBrush(InkFrontend::AtlasBrush(Texture,bHeader?FVector4(40,935,976,987):FVector4(40,990,976,1041),true));Card->SetBrushColor(FLinearColor::White);
-        if(auto* Inner=Cast<UBorder>(Card->GetContent()))Inner->SetBrushColor(FLinearColor::Transparent);
-    }
     return Card;
 }
 
@@ -226,10 +219,7 @@ void UInkFrontendWidget::BuildDefaultTree(UWidgetTree* Tree)
     auto Paper=[&](FName Name)
     {
         auto* Border=Tree->ConstructWidget<UBorder>(UBorder::StaticClass(),Name);Border->SetPadding(FMargin(28));
-        FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::Box;Brush.Margin=FMargin(.1f);Brush.TintColor=PaperColor;
-        if(auto* Texture=PanelTexture.LoadSynchronous()){Brush.SetResourceObject(Texture);Brush.TintColor=FLinearColor::White;}
-        if(auto* Texture=ProvidedRankAtlas.LoadSynchronous())Brush=InkFrontend::AtlasBrush(Texture,FVector4(28,15,815,443),true);
-        Border->SetBrush(Brush);return Border;
+        Border->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(720,1100)));return Border;
     };
     auto AddRowButton=[&](UHorizontalBox* Row,const TCHAR* Name,const TCHAR* Action,const FText& Text)
     {
@@ -242,15 +232,7 @@ void UInkFrontendWidget::BuildDefaultTree(UWidgetTree* Tree)
         auto* Border=Paper(FName(*(FString(Name)+TEXT("Paper"))));InkFrontend::FillCanvas(PageCanvas->AddChildToCanvas(Border),FMargin(20));
         if(bUsePageSafePadding)Border->SetPadding(PageSafePadding);
         auto* Layout=Tree->ConstructWidget<UVerticalBox>();Border->SetContent(Layout);
-        const bool bRank=FCString::Strcmp(Name,TEXT("Leaderboard"))==0,bInventory=FCString::Strcmp(Name,TEXT("Inventory"))==0;
-        if((bRank&&ProvidedRankAtlas.LoadSynchronous())||(bInventory&&ProvidedInventoryAtlas.LoadSynchronous()))
-        {
-            auto* Art=Tree->ConstructWidget<UImage>(UImage::StaticClass(),bRank?FName(TEXT("LeaderboardArtHeading")):FName(TEXT("InventoryArtHeading")));
-            Art->SetBrush(InkFrontend::AtlasBrush(bRank?ProvidedRankAtlas.LoadSynchronous():ProvidedInventoryAtlas.LoadSynchronous(),bRank?FVector4(16,450,436,584):FVector4(14,0,683,131)));
-            auto* ArtScale=Tree->ConstructWidget<UScaleBox>();ArtScale->SetStretch(EStretch::ScaleToFit);ArtScale->SetContent(Art);
-            auto* ArtSize=Tree->ConstructWidget<USizeBox>();ArtSize->SetHeightOverride(bRank?130:100);ArtSize->SetContent(ArtScale);Layout->AddChildToVerticalBox(ArtSize);
-        }
-        else {auto* Heading=AddText(Tree,Layout,Title,44);Heading->SetColorAndOpacity(InkColor);}
+        auto* Heading=AddText(Tree,Layout,Title,44);Heading->SetColorAndOpacity(InkColor);
         if(!Intro.IsEmpty()){auto* Description=AddText(Tree,Layout,Intro,24);Description->SetColorAndOpacity(FLinearColor(InkColor.R,InkColor.G,InkColor.B,.72f));}
         auto* Rule=Tree->ConstructWidget<UBorder>();Rule->SetBrushColor(AccentColor);Rule->SetPadding(FMargin(0));
         auto* RuleSize=Tree->ConstructWidget<USizeBox>();RuleSize->SetHeightOverride(2);RuleSize->SetContent(Rule);Layout->AddChildToVerticalBox(RuleSize)->SetPadding(FMargin(0,14));
@@ -361,23 +343,26 @@ TSharedRef<SWidget> UInkFrontendWidget::RebuildWidget()
 {
     if(!WidgetTree)WidgetTree=NewObject<UWidgetTree>(this,TEXT("InkWidgetTree"));
     BuildDefaultTree(WidgetTree);
-    if(!WidgetTree->FindWidget(TEXT("InventoryShell")))RebuildInventoryPage(WidgetTree);
-    if(!WidgetTree->FindWidget(TEXT("RankHUDTitleEffect_1")))RebuildLeaderboardSurfaces(WidgetTree);
+    if(!UsesRebuiltPresentation())
+    {
+        if(!WidgetTree->FindWidget(TEXT("InventoryShell")))RebuildInventoryPage(WidgetTree);
+        if(!WidgetTree->FindWidget(TEXT("RankHUDTitleEffect_1")))RebuildLeaderboardSurfaces(WidgetTree);
+    }
     return Super::RebuildWidget();
 }
 
 void UInkFrontendWidget::NativeOnInitialized()
-{ Super::NativeOnInitialized();if(WidgetTree){BuildDefaultTree(WidgetTree);if(!WidgetTree->FindWidget(TEXT("InventoryShell")))RebuildInventoryPage(WidgetTree);if(!WidgetTree->FindWidget(TEXT("RankHUDTitleEffect_1")))RebuildLeaderboardSurfaces(WidgetTree);}EnsureExtensionPages();EnsureLeaderboardControls();BindTree(); }
+{ Super::NativeOnInitialized();if(WidgetTree){BuildDefaultTree(WidgetTree);if(!UsesRebuiltPresentation()){if(!WidgetTree->FindWidget(TEXT("InventoryShell")))RebuildInventoryPage(WidgetTree);if(!WidgetTree->FindWidget(TEXT("RankHUDTitleEffect_1")))RebuildLeaderboardSurfaces(WidgetTree);}}EnsureExtensionPages();if(!UsesRebuiltPresentation())EnsureLeaderboardControls();BindTree(); }
 
 void UInkFrontendWidget::NativePreConstruct()
 {
-    Super::NativePreConstruct();BindTree();ApplyPageSafePadding();ApplyProvidedArt();
+    Super::NativePreConstruct();BindTree();if(!UsesRebuiltPresentation()){ApplyPageSafePadding();ApplyProvidedArt();}
     if(IsDesignTime())ShowPage(DesignerPreviewPage);
 }
 
 void UInkFrontendWidget::NativeConstruct()
 {
-    Super::NativeConstruct();BindTree();ApplyPageSafePadding();ApplyProvidedArt();
+    Super::NativeConstruct();BindTree();if(!UsesRebuiltPresentation()){ApplyPageSafePadding();ApplyProvidedArt();}
     if(auto* Settings=UGameUserSettings::GetGameUserSettings())if(Settings->GetFrameRateLimit()>0&&GEngine)GEngine->bUseFixedFrameRate=false;
     ShowPage(CurrentPage);
 }
@@ -391,12 +376,29 @@ void UInkFrontendWidget::NativeDestruct()
 
 void UInkFrontendWidget::Configure(AInkMenuDirector* InDirector)
 {
-    Director=InDirector;EnsureExtensionPages();EnsureLeaderboardControls();BindTree();ShowPage(Director&&Director->bMenuActive?TEXT("Main"):TEXT("HUD"));
+    Director=InDirector;EnsureExtensionPages();if(!UsesRebuiltPresentation())EnsureLeaderboardControls();BindTree();ShowPage(Director&&Director->bMenuActive?TEXT("Main"):TEXT("HUD"));
 }
 
 void UInkFrontendWidget::BindTree()
 {
     ActionButtons.Reset();if(!WidgetTree)return;
+    if(UsesRebuiltPresentation())
+    {
+        TSet<UUserWidget*> Seen;
+        TFunction<void(UUserWidget*)> Collect=[&](UUserWidget* User)
+        {
+            if(!User||Seen.Contains(User)||!User->WidgetTree)return;Seen.Add(User);
+            TArray<UWidget*> Children;User->WidgetTree->GetAllWidgets(Children);
+            for(auto* Child:Children)
+            {
+                if(auto* Button=Cast<UInkFrontendActionButton>(Child)){Button->BindFrontend(this);ActionButtons.AddUnique(Button);}
+                if(auto* Nested=Cast<UUserWidget>(Child);Nested&&Nested!=User)Collect(Nested);
+            }
+        };
+        Collect(this);
+        for(const auto& Entry:ExtensionPages)if(Entry.Key==CurrentPage)Collect(Entry.Value);
+        return;
+    }
     TArray<UWidget*> Widgets;WidgetTree->GetAllWidgets(Widgets);
     for(auto* Widget:Widgets)if(auto* Button=Cast<UInkFrontendActionButton>(Widget)){Button->BindFrontend(this);ActionButtons.Add(Button);}
     for(const auto& Entry:ExtensionPages)if(Entry.Key==CurrentPage&&Entry.Value&&Entry.Value->WidgetTree)
@@ -447,6 +449,7 @@ void UInkFrontendWidget::ShowPage(FName Page)
 
 void UInkFrontendWidget::RefreshPage()
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();BindTree();return;}
     if(CurrentPage==TEXT("Character"))RefreshCharacter();
     else if(CurrentPage==TEXT("Inventory"))RefreshInventory();
     else if(CurrentPage==TEXT("Leaderboard"))RefreshLeaderboard();
@@ -461,11 +464,19 @@ void UInkFrontendWidget::RefreshPage()
         State->SetColorAndOpacity(InkPresentationStyle::Paper());State->SetJustification(ETextJustify::Center);
     }
     RefreshLiveStatus();BindTree();ApplyProvidedArt();ApplyPageSafePadding();
+    // Reapply live Settings selection after shared button styling is refreshed.
+    if(CurrentPage==TEXT("Settings"))RefreshSettings();
 }
 
 void UInkFrontendWidget::NativeTick(const FGeometry& Geometry,float DeltaSeconds)
 {
     Super::NativeTick(Geometry,DeltaSeconds);StatusRefreshTime+=DeltaSeconds;
+    if(UsesRebuiltPresentation())
+    {
+        TickRebuiltPresentation(Geometry,DeltaSeconds);
+        if(StatusRefreshTime>=.35f){StatusRefreshTime=0;UpdateRewardReceipts();}
+        return;
+    }
     UpdateAdaptiveSurfaceLayout();UpdateAdaptiveHudLayout();UpdateInventoryAdaptiveLayout();UpdateLeaderboardAdaptiveLayout();UpdateGameplayLeaderboard(DeltaSeconds);
     LeaderboardAvatarPoll-=DeltaSeconds;if(LeaderboardAvatarPoll<=0){LeaderboardAvatarPoll=.3f;UpdateLeaderboardAvatars();}
     if(CurrentPage==TEXT("Inventory")){if(bInventoryModelDirty)RefreshInventory();UpdateInventoryTooltip();}
@@ -636,25 +647,11 @@ void UInkFrontendWidget::UpdateAdaptiveMainLayout()
         bMainMenuLayoutAdapted=false;LastMainLayoutRatio=-1;return;
     }
     const FVector2D SafeSize=Canvas->GetCachedGeometry().GetLocalSize();if(SafeSize.X<=0||SafeSize.Y<=0)return;
-    if(!GetWidgetFromName(TEXT("MainSecondaryActions")))
-    {
-        // Upgrade saved WBP trees as well as freshly generated trees.
-        auto* Secondary=WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(),TEXT("MainSecondaryActions"));
-        for(const TCHAR* Name:{TEXT("Main_OpenSettings"),TEXT("Main_RequestQuit")})
-            if(auto* Button=GetWidgetFromName(Name))
-            {
-                Button->RemoveFromParent();auto* PresentationSlot=Secondary->AddChildToHorizontalBox(Button);
-                PresentationSlot->SetSize(FSlateChildSize(ESlateSizeRule::Fill));PresentationSlot->SetPadding(FMargin(4,0));
-            }
-        Body->AddChildToVerticalBox(Secondary)->SetPadding(FMargin(0,8));
-        AddText(WidgetTree,Body,FText::GetEmpty(),20,TEXT("MainContinueState"));
-        RefreshPage();
-    }
     if(!bMainMenuLayoutCached){AuthoredMainMenuLayout=MenuLayout->GetLayout();bMainMenuLayoutCached=true;}
     const float Ratio=SafeSize.X/SafeSize.Y;
     const bool bLandscape=InkUiLayout::IsLandscape(SafeSize);
     const float Width=FMath::Min(SafeSize.X-48.f,bLandscape?400.f:480.f);
-    const float Height=FMath::Min(SafeSize.Y-48.f,360.f);
+    const float Height=FMath::Min(SafeSize.Y-48.f,bLandscape?380.f:448.f);
     const float X=bLandscape?SafeSize.X-24-Width:(SafeSize.X-Width)*.5f;
     const float Y=bLandscape?(SafeSize.Y-Height)*.5f:SafeSize.Y-24-Height;
     FAnchorData ResponsiveLayout=AuthoredMainMenuLayout;
@@ -663,7 +660,7 @@ void UInkFrontendWidget::UpdateAdaptiveMainLayout()
     for(auto Button:ActionButtons)if(Button&&Button->GetName().StartsWith(TEXT("Main_")))
     {
         const bool Primary=Button->Action==TEXT("StartGame")||Button->Action==TEXT("OpenSaves");
-        if(auto* Sizing=Cast<USizeBox>(Button->GetContent())){Sizing->SetMinDesiredHeight(0);Sizing->SetHeightOverride(Primary?96:88);}
+        if(auto* Sizing=Cast<USizeBox>(Button->GetContent())){Sizing->SetMinDesiredHeight(0);Sizing->SetHeightOverride(Primary?88:76);}
         if(auto* Row=Cast<UVerticalBoxSlot>(Button->Slot))Row->SetPadding(FMargin(0,4));
     }
     MenuLayout->SetLayout(ResponsiveLayout);bMainMenuLayoutAdapted=true;LastMainLayoutRatio=Ratio;
@@ -673,8 +670,102 @@ void UInkFrontendWidget::UpdateAdaptiveMainLayout()
     }
 }
 
+void UInkFrontendWidget::ApplyMainMenuPresentation()
+{
+    if(!WidgetTree)return;
+    auto* Menu=InkFrontend::Find<UScrollBox>(this,TEXT("MainMenuScroll"));
+    auto* Body=InkFrontend::Find<UVerticalBox>(this,TEXT("MainMenuButtons"));
+    auto* Surface=InkFrontend::Find<UBorder>(this,TEXT("MainMenuPaperSurface"));
+    if(Menu&&Body&&!Surface)
+    {
+        auto* Start=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("Main_StartGame"));
+        auto* Continue=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("Main_OpenSaves"));
+        auto* Settings=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("Main_OpenSettings"));
+        auto* Quit=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("Main_RequestQuit"));
+        auto* State=InkFrontend::Find<UTextBlock>(this,TEXT("MainContinueState"));
+        auto* Feedback=InkFrontend::Find<UTextBlock>(this,TEXT("MainFeedback"));
+        bool bCreatedContinueAction=false;
+        if(Start&&Settings&&Quit&&!Continue)
+        {
+            Continue=MakeButton(WidgetTree,TEXT("Main_OpenSaves"),TEXT("OpenSaves"),LOCTEXT("ContinueMenuSaves","继续游戏"));
+            bCreatedContinueAction=Continue!=nullptr;
+        }
+        if(Start&&Continue&&Settings&&Quit)
+        {
+            if(!State)State=AddText(WidgetTree,nullptr,FText::GetEmpty(),20,TEXT("MainContinueState"));
+            if(!Feedback)Feedback=AddText(WidgetTree,nullptr,FText::GetEmpty(),20,TEXT("MainFeedback"));
+            Surface=WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(),TEXT("MainMenuPaperSurface"));
+            Surface->SetPadding(FMargin(18,14));
+            auto* Content=WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass(),TEXT("MainMenuPresentationContent"));
+            Surface->SetContent(Content);
+            auto* Heading=AddText(WidgetTree,Content,LOCTEXT("MainMenuHeading","主菜单"),32,TEXT("MainMenuHeading"));
+            Heading->SetJustification(ETextJustify::Center);
+            auto* Rule=WidgetTree->ConstructWidget<UBorder>();FSlateBrush RuleBrush;
+            RuleBrush.DrawAs=ESlateBrushDrawType::Box;RuleBrush.TintColor=FLinearColor::FromSRGBColor(FColor(184,139,69));Rule->SetBrush(RuleBrush);
+            auto* RuleSize=WidgetTree->ConstructWidget<USizeBox>();RuleSize->SetHeightOverride(2);RuleSize->SetContent(Rule);
+            Content->AddChildToVerticalBox(RuleSize)->SetPadding(FMargin(8,0,8,10));
+
+            Start->RemoveFromParent();Continue->RemoveFromParent();Settings->RemoveFromParent();Quit->RemoveFromParent();
+            State->RemoveFromParent();Feedback->RemoveFromParent();Body->ClearChildren();
+            auto AddPrimary=[&](UInkFrontendActionButton* Button)
+            {
+                auto* Row=Body->AddChildToVerticalBox(Button);Row->SetPadding(FMargin(0,3));
+                if(auto* Sizing=Cast<USizeBox>(Button->GetContent()))Sizing->SetHeightOverride(88);
+            };
+            AddPrimary(Start);AddPrimary(Continue);
+            auto* StateRow=Body->AddChildToVerticalBox(State);StateRow->SetPadding(FMargin(4,0,4,4));
+            auto* Secondary=WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(),TEXT("MainSecondaryActions"));
+            for(auto* Button:{Settings,Quit})
+            {
+                auto* SecondaryLayoutSlot=Secondary->AddChildToHorizontalBox(Button);SecondaryLayoutSlot->SetSize(FSlateChildSize(ESlateSizeRule::Fill));SecondaryLayoutSlot->SetPadding(FMargin(4,0));
+                if(auto* Sizing=Cast<USizeBox>(Button->GetContent()))Sizing->SetHeightOverride(76);
+            }
+            Body->AddChildToVerticalBox(Secondary)->SetPadding(FMargin(0,4,0,2));
+            Feedback->SetVisibility(ESlateVisibility::Collapsed);Body->AddChildToVerticalBox(Feedback);
+            Content->AddChildToVerticalBox(Body);Menu->ClearChildren();Menu->AddChild(Surface);
+            if(bCreatedContinueAction)BindTree();
+            UE_LOG(LogTemp,Display,TEXT("InkFrontend main-menu layout revision=native-paper-v1 widget_class=%s"),*GetClass()->GetPathName());
+        }
+    }
+
+    Surface=InkFrontend::Find<UBorder>(this,TEXT("MainMenuPaperSurface"));
+    if(Surface)
+    {
+        FSlateBrush Paper=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(720,440));
+        FLinearColor PaperTint=Paper.TintColor.GetSpecifiedColor();PaperTint.A=.91f;Paper.TintColor=PaperTint;
+        Surface->SetBrush(Paper);Surface->SetBrushColor(FLinearColor::White);
+    }
+    const FLinearColor Ink=FLinearColor::FromSRGBColor(FColor(32,40,35));
+    for(auto Button:ActionButtons)if(Button&&Button->GetName().StartsWith(TEXT("Main_")))
+    {
+        const bool bPrimary=Button->Action==TEXT("StartGame")||Button->Action==TEXT("OpenSaves");
+        auto Style=InkPresentationStyle::FeatureButton(false,bPrimary);
+        Style.SetNormalPadding(FMargin(0)).SetPressedPadding(FMargin(0,2,0,0));Button->SetStyle(Style);
+        if(auto* Sizing=Cast<USizeBox>(Button->GetContent()))
+        {
+            Sizing->SetMinDesiredHeight(0);Sizing->SetHeightOverride(bPrimary?88:76);
+            if(auto* Label=Cast<UTextBlock>(Sizing->GetContent()))
+            {
+                Label->SetAutoWrapText(false);Label->SetJustification(ETextJustify::Center);Label->SetColorAndOpacity(bPrimary?InkPresentationStyle::Paper():Ink);
+                auto Font=Label->GetFont();Font.Size=bPrimary?30:25;Label->SetFont(InkPresentationStyle::ButtonFont(Font,bPrimary));
+                if(Button->Action==TEXT("OpenSaves"))Label->SetText(LOCTEXT("ContinueMenuSaves","继续游戏"));
+                else if(Button->Action==TEXT("RequestQuit"))Label->SetText(LOCTEXT("MenuExit","退出"));
+                else if(Button->Action==TEXT("OpenSettings"))Label->SetText(LOCTEXT("Settings","设置"));
+                else if(Button->Action==TEXT("StartGame"))Label->SetText(LOCTEXT("StartGame","开始游戏"));
+            }
+        }
+    }
+    if(auto* State=InkFrontend::Find<UTextBlock>(this,TEXT("MainContinueState")))
+    {
+        State->SetColorAndOpacity(FLinearColor::FromSRGBColor(FColor(61,88,97)));State->SetJustification(ETextJustify::Center);
+        State->SetFont(InkPresentationStyle::ButtonFont(State->GetFont(),false));
+        if(auto* Layout=Cast<UVerticalBoxSlot>(State->Slot))Layout->SetPadding(FMargin(0,2,0,4));
+    }
+}
+
 void UInkFrontendWidget::ApplyProvidedArt()
 {
+    if(UsesRebuiltPresentation())return;
     if(!WidgetTree)return;
     // Older saved WBP trees retain the direct-resume row. The supplied menu has
     // one Continue entry, routed to the existing save selection page.
@@ -693,13 +784,11 @@ void UInkFrontendWidget::ApplyProvidedArt()
     }
     for(const TCHAR* Name:{TEXT("LeaderboardPaper"),TEXT("CharacterPaper"),TEXT("SavesPaper"),TEXT("SettingsPaper"),TEXT("ConfirmationPaper")})
         if(auto* Paper=InkFrontend::Find<UBorder>(this,Name))Paper->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::Card,FVector2D(720,1100)));
-    if(auto* Heading=InkFrontend::Find<UImage>(this,TEXT("InventoryArtHeading")))if(auto* Texture=ProvidedInventoryAtlas.LoadSynchronous())
-        Heading->SetBrush(InkFrontend::AtlasBrush(Texture,FVector4(14,0,683,131)));
     if(auto* Dialog=InkFrontend::Find<UBorder>(this,TEXT("ConfirmationPaper")))Dialog->SetPadding(FMargin(44,54));
     for(auto Button:ActionButtons)if(Button&&!Button->Action.ToString().StartsWith(TEXT("Item_")))
     {
         if(Button->Action.ToString().StartsWith(TEXT("Inventory"))||Button->Action.ToString().StartsWith(TEXT("Filter"))||Button->Action.ToString().StartsWith(TEXT("Ext_"))||Button->Action==TEXT("RankClose"))continue;
-        if(Button->Action.ToString().StartsWith(TEXT("SelectSave_")))continue;
+        if(Button->Action.ToString().StartsWith(TEXT("SelectSave_"))||Button->Action.ToString().StartsWith(TEXT("LoadSlot_"))||Button->Action.ToString().StartsWith(TEXT("SaveSlot_"))||Button->Action.ToString().StartsWith(TEXT("DeleteSlot_")))continue;
         if(auto* Shell=GetWidgetFromName(TEXT("RankAnchorShell"));Shell&&Button->IsChildOf(Shell))continue;
         if(Button->GetName().StartsWith(TEXT("HUD_"))||Button->Action==TEXT("HUDRankView"))continue;
         const bool bBaked=Button->GetName().StartsWith(TEXT("Main_"));
@@ -720,10 +809,18 @@ void UInkFrontendWidget::ApplyProvidedArt()
             }
         }
     }
+    for(const TCHAR* Name:{TEXT("SavesPaper"),TEXT("SettingsPaper")})
+        if(auto* Paper=InkFrontend::Find<UBorder>(this,Name))
+        {
+            auto FeaturePaper=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(720,1100));
+            Paper->SetBrush(FeaturePaper);Paper->SetBrushColor(FLinearColor::White);
+        }
+    if(!IsDesignTime())ApplyMainMenuPresentation();
 }
 
 void UInkFrontendWidget::ApplyPageSafePadding()
 {
+    if(UsesRebuiltPresentation())return;
     if(!bUsePageSafePadding||!WidgetTree)return;
     // Only these named paper frames participate; Main/HUD and their Designer layout stay untouched.
     const TCHAR* Frames[]={TEXT("SavesPaper"),TEXT("SettingsPaper"),TEXT("CharacterPaper"),TEXT("LeaderboardPaper")};
@@ -764,6 +861,7 @@ FReply UInkFrontendWidget::NativeOnKeyDown(const FGeometry& Geometry,const FKeyE
 
 void UInkFrontendWidget::RefreshLiveStatus()
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();return;}
     auto* Pawn=Director&&Director->bMenuActive?Director->GetPresentationPawn():GetOwningPlayerPawn();
     FText StateText=LOCTEXT("AwaitCharacter","等待角色");
     if(Pawn)
@@ -788,6 +886,8 @@ void UInkFrontendWidget::RefreshLiveStatus()
 void UInkFrontendWidget::SetCharacterData(const FText& Name,const TArray<FInkCharacterAttribute>& Attributes,const TArray<FInkDisciplineEntry>& Disciplines)
 {
     CharacterName=Name;CharacterAttributes=Attributes;CharacterDisciplines=Disciplines;if(CurrentPage==TEXT("Character"))RefreshCharacter();
+    // Collapsed HUD widgets do not tick. Authority publication can reveal a newly started event.
+    if(auto* Countdown=Cast<UInkLaunchHudCountdownWidget>(GetWidgetFromName(TEXT("RolloutHUDLaunchCountdown"))))Countdown->Configure(this);
     TArray<TObjectPtr<UInkExtensionWidget>> LivePanels;ExtensionPages.GenerateValueArray(LivePanels);
     for(const auto& Item:LivePanels)if(auto* Panel=Cast<UInkFeaturePanel>(Item))Panel->RefreshLiveData();
 }
@@ -796,12 +896,20 @@ void UInkFrontendWidget::SetLeaderboardEntries(const TArray<FInkLeaderboardEntry
 { SetLeaderboardEntriesForScope(Entries,TEXT("Local")); }
 
 void UInkFrontendWidget::SetLeaderboardEntriesForScope(const TArray<FInkLeaderboardEntry>& Entries,FName Scope)
-{if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;if(InkLeaderboard::SameEntries(Target,Entries))return;Target=Entries;RefreshLeaderboard();}
+{
+    if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;
+    const bool FirstRoomResponse=Scope==TEXT("Local")&&!bRolloutRoomLeaderboardProvided;
+    if(Scope==TEXT("Local"))bRolloutRoomLeaderboardProvided=true;
+    auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;
+    if(InkLeaderboard::SameEntries(Target,Entries)){if(FirstRoomResponse)RefreshLeaderboard();return;}
+    Target=Entries;RefreshLeaderboard();
+}
 void UInkFrontendWidget::SetGlobalLeaderboardConnection(bool bConnected,const FText& Status)
 {if(bGlobalLeaderboardConnected==bConnected&&GlobalLeaderboardStatus.EqualTo(Status))return;bGlobalLeaderboardConnected=bConnected;GlobalLeaderboardStatus=Status;if(!bConnected)GlobalLeaderboardEntries.Reset();RefreshLeaderboard();}
 
 void UInkFrontendWidget::RefreshCharacter(UWidgetTree* SourceTree)
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();return;}
     UWidgetTree* Tree=SourceTree?SourceTree:WidgetTree.Get();if(!Tree)return;
     if(!SourceTree&&!Tree->FindWidget(TEXT("CharacterIdentityRow")))
     {
@@ -918,6 +1026,7 @@ void UInkFrontendWidget::RefreshCharacter(UWidgetTree* SourceTree)
 
 void UInkFrontendWidget::RefreshSaves()
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();return;}
     auto* List=InkFrontend::Find<UVerticalBox>(this,TEXT("SaveSlotList"));if(!List||!WidgetTree)return;
     int32 Selected=0;
     if(auto* Choice=InkFrontend::Find<UWidgetSwitcher>(this,TEXT("SaveDetailSwitcher")))Selected=Choice->GetActiveWidgetIndex();
@@ -937,10 +1046,13 @@ void UInkFrontendWidget::RefreshSaves()
     {
         const auto& Info=Slots[I];
         auto* Select=MakeButton(WidgetTree,NAME_None,FName(*FString::Printf(TEXT("SelectSave_%d"),I)),FText::Format(LOCTEXT("SaveSlotPicker","存档 {0} · {1}"),FText::AsNumber(Info.SlotIndex+1),Info.bValid?LOCTEXT("SaveReady","可读取"):Info.bExists?LOCTEXT("SaveInvalid","不可读取"):LOCTEXT("SaveEmpty","空位")));
-        Select->SetStyle(InkPresentationStyle::Button(I==Selected));
+        Select->SetStyle(InkPresentationStyle::FeatureButton(I==Selected));
+        if(auto* Sizing=Cast<USizeBox>(Select->GetContent()))if(auto* Label=Cast<UTextBlock>(Sizing->GetContent()))
+            Label->SetColorAndOpacity(I==Selected?InkPresentationStyle::Paper():InkPresentationStyle::Ink());
         Selectors->AddChildToVerticalBox(Select)->SetPadding(FMargin(0,4));
         auto* Body=WidgetTree->ConstructWidget<UVerticalBox>();
-        auto* DetailSlot=CastChecked<UWidgetSwitcherSlot>(Details->AddChild(Body));DetailSlot->SetHorizontalAlignment(HAlign_Fill);DetailSlot->SetVerticalAlignment(VAlign_Top);
+        auto* DetailCard=WidgetTree->ConstructWidget<UBorder>();DetailCard->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(520,560)));DetailCard->SetBrushColor(FLinearColor::White);DetailCard->SetPadding(FMargin(20));DetailCard->SetContent(Body);
+        auto* DetailSlot=CastChecked<UWidgetSwitcherSlot>(Details->AddChild(DetailCard));DetailSlot->SetHorizontalAlignment(HAlign_Fill);DetailSlot->SetVerticalAlignment(VAlign_Top);
         AddText(WidgetTree,Body,FText::Format(LOCTEXT("SaveSlotTitle","存档 {0}"),FText::AsNumber(Info.SlotIndex+1)),32);
         if(!Info.bExists)AddText(WidgetTree,Body,LOCTEXT("EmptySlot","尚未留迹"),24);
         else if(!Info.bValid)AddText(WidgetTree,Body,LOCTEXT("UnavailableSlot","此存档暂不可读取，可删除后重新保存。"),24);
@@ -951,7 +1063,9 @@ void UInkFrontendWidget::RefreshSaves()
         }
         auto Add=[&](const TCHAR* Prefix,const FText& Label,bool bEnabled,bool Primary)
         {
-            auto* Button=MakeButton(WidgetTree,NAME_None,FName(*FString::Printf(TEXT("%s_%d"),Prefix,Info.SlotIndex)),Label);Button->SetIsEnabled(bEnabled);Button->SetStyle(InkPresentationStyle::Button(false,Primary));
+            auto* Button=MakeButton(WidgetTree,NAME_None,FName(*FString::Printf(TEXT("%s_%d"),Prefix,Info.SlotIndex)),Label);Button->SetIsEnabled(bEnabled);Button->SetStyle(InkPresentationStyle::FeatureButton(false,Primary));
+            if(auto* Sizing=Cast<USizeBox>(Button->GetContent()))if(auto* Caption=Cast<UTextBlock>(Sizing->GetContent()))
+                Caption->SetColorAndOpacity(Primary&&bEnabled?InkPresentationStyle::Paper():InkPresentationStyle::Ink());
             Body->AddChildToVerticalBox(Button)->SetPadding(FMargin(0,4));return Button;
         };
         Add(TEXT("LoadSlot"),LOCTEXT("LoadSelectedSlot","读取所选存档"),Save&&Info.bValid,true);
@@ -967,6 +1081,11 @@ void UInkFrontendWidget::RefreshSaves()
 
 void UInkFrontendWidget::RefreshSettings()
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();return;}
+    auto* Settings=UGameUserSettings::GetGameUserSettings();
+    const int32 CurrentQuality=Settings?Settings->GetOverallScalabilityLevel():-1;
+    const float ConfiguredFrameLimit=Settings?Settings->GetFrameRateLimit():0;
+    const float EffectiveFrameLimit=ConfiguredFrameLimit>0?ConfiguredFrameLimit:(GEngine&&GEngine->bUseFixedFrameRate?GEngine->FixedFrameRate:0);
     if(!GetWidgetFromName(TEXT("SettingsPresentationGrid")))
     {
         auto* Scroll=InkFrontend::Find<UScrollBox>(this,TEXT("SettingsScroll"));
@@ -984,7 +1103,9 @@ void UInkFrontendWidget::RefreshSettings()
             int32 SectionIndex=0;
             auto Group=[&](FName GridName,const FText& Title,const TArray<UWidget*>& Controls)
             {
-                auto* Section=WidgetTree->ConstructWidget<UVerticalBox>();auto* SectionLayout=Groups->AddChildToGrid(Section,SectionIndex++,0);SectionLayout->SetPadding(FMargin(0,0,12,20));SectionLayout->SetHorizontalAlignment(HAlign_Fill);SectionLayout->SetVerticalAlignment(VAlign_Top);
+                auto* Section=WidgetTree->ConstructWidget<UVerticalBox>();
+                auto* SectionCard=MakeInkCard(WidgetTree,Section,FMargin(16));
+                auto* SectionLayout=Groups->AddChildToGrid(SectionCard,SectionIndex++,0);SectionLayout->SetPadding(FMargin(0,0,12,20));SectionLayout->SetHorizontalAlignment(HAlign_Fill);SectionLayout->SetVerticalAlignment(VAlign_Top);
                 AddText(WidgetTree,Section,Title,32);
                 auto* Options=WidgetTree->ConstructWidget<UUniformGridPanel>(UUniformGridPanel::StaticClass(),GridName);Options->SetSlotPadding(FMargin(4,6));Section->AddChildToVerticalBox(Options)->SetHorizontalAlignment(HAlign_Fill);
                 int32 Index=0;for(auto* Control:Controls)
@@ -995,7 +1116,9 @@ void UInkFrontendWidget::RefreshSettings()
                 }
             };
             Group(TEXT("SettingsQualityOptions"),LOCTEXT("Quality","画面品质"),QualityControls);Group(TEXT("SettingsFrameOptions"),LOCTEXT("FrameRate","帧率上限"),FrameControls);
-            auto* Motion=WidgetTree->ConstructWidget<UVerticalBox>();auto* MotionLayout=Groups->AddChildToGrid(Motion,2,0);MotionLayout->SetHorizontalAlignment(HAlign_Fill);MotionLayout->SetPadding(FMargin(0,8));
+            auto* Motion=WidgetTree->ConstructWidget<UVerticalBox>();
+            auto* MotionCard=MakeInkCard(WidgetTree,Motion,FMargin(16));
+            auto* MotionLayout=Groups->AddChildToGrid(MotionCard,2,0);MotionLayout->SetHorizontalAlignment(HAlign_Fill);MotionLayout->SetPadding(FMargin(0,8,12,20));
             AddText(WidgetTree,Motion,LOCTEXT("MotionHeading","动态效果"),32);
             if(!Reduced)Reduced=MakeButton(WidgetTree,TEXT("ToggleReducedMotion"),TEXT("ToggleReducedMotion"),FText::GetEmpty());
             Reduced->RemoveFromParent();Motion->AddChildToVerticalBox(Reduced);
@@ -1012,18 +1135,41 @@ void UInkFrontendWidget::RefreshSettings()
     }
     if(auto* B=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("ToggleReducedMotion")))
         if(auto* Size=Cast<USizeBox>(B->GetContent()))if(auto* Text=Cast<UTextBlock>(Size->GetContent()))Text->SetText(FText::FromString(bReducedMotion?TEXT("减少动效：开启"):TEXT("减少动效：关闭")));
-    auto* Settings=UGameUserSettings::GetGameUserSettings();
+    auto ApplyOptionStyle=[this](const TCHAR* Name,bool bSelected)
+    {
+        if(auto* Button=InkFrontend::Find<UInkFrontendActionButton>(this,Name))
+        {
+            auto Style=InkPresentationStyle::FeatureButton(bSelected);
+            Style.SetNormalPadding(FMargin(0));Style.SetPressedPadding(FMargin(0));
+            Button->SetStyle(Style);
+            if(auto* Sizing=Cast<USizeBox>(Button->GetContent()))if(auto* Label=Cast<UTextBlock>(Sizing->GetContent()))
+                Label->SetColorAndOpacity(bSelected?InkPresentationStyle::Paper():InkPresentationStyle::Ink());
+        }
+    };
+    ApplyOptionStyle(TEXT("QualityLow"),CurrentQuality==0);
+    ApplyOptionStyle(TEXT("QualityMedium"),CurrentQuality==1);
+    ApplyOptionStyle(TEXT("QualityHigh"),CurrentQuality==2);
+    ApplyOptionStyle(TEXT("Frame30"),FMath::IsNearlyEqual(EffectiveFrameLimit,30.f));
+    ApplyOptionStyle(TEXT("Frame60"),FMath::IsNearlyEqual(EffectiveFrameLimit,60.f));
+    ApplyOptionStyle(TEXT("ToggleReducedMotion"),bReducedMotion);
+    if(auto* Apply=InkFrontend::Find<UInkFrontendActionButton>(this,TEXT("ApplySettings")))Apply->SetStyle(InkPresentationStyle::FeatureButton(false,true));
+    if(auto* Groups=GetWidgetFromName(TEXT("SettingsSectionsLayout")))
+    {
+        TArray<UWidget*> Widgets;WidgetTree->GetAllWidgets(Widgets);
+        for(auto* Widget:Widgets)if(auto* Card=Cast<UBorder>(Widget);Card&&Card->IsChildOf(Groups))
+        {
+            Card->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(600,220)));
+            Card->SetBrushColor(FLinearColor::White);
+        }
+    }
     if(auto* Quality=InkFrontend::Find<UTextBlock>(this,TEXT("QualityValue")))
     {
-        const int32 Value=Settings?Settings->GetOverallScalabilityLevel():-1;
-        const FText Label=Value==0?LOCTEXT("Low","流畅"):Value==1?LOCTEXT("Medium","均衡"):Value==2?LOCTEXT("High","精致"):LOCTEXT("QualityCustom","自定义");
+        const FText Label=CurrentQuality==0?LOCTEXT("Low","流畅"):CurrentQuality==1?LOCTEXT("Medium","均衡"):CurrentQuality==2?LOCTEXT("High","精致"):LOCTEXT("QualityCustom","自定义");
         Quality->SetText(FText::Format(LOCTEXT("CurrentQuality","当前：{0}"),Label));
     }
     if(auto* Frame=InkFrontend::Find<UTextBlock>(this,TEXT("FrameValue")))
     {
-        const float Limit=Settings?Settings->GetFrameRateLimit():0;
-        const float EffectiveLimit=Limit>0?Limit:(GEngine&&GEngine->bUseFixedFrameRate?GEngine->FixedFrameRate:0);
-        Frame->SetText(EffectiveLimit>0?FText::Format(LOCTEXT("CurrentFrameLimit","当前上限：{0} 帧"),FText::AsNumber(FMath::RoundToInt(EffectiveLimit))):LOCTEXT("UnlimitedFrames","当前：不限制"));
+        Frame->SetText(EffectiveFrameLimit>0?FText::Format(LOCTEXT("CurrentFrameLimit","当前上限：{0} 帧"),FText::AsNumber(FMath::RoundToInt(EffectiveFrameLimit))):LOCTEXT("UnlimitedFrames","当前：不限制"));
     }
 }
 
@@ -1031,11 +1177,16 @@ void UInkFrontendWidget::TriggerAction(FName Action)
 {
     if(IsDesignTime())return;
     if(!PendingConfirmationAction.IsNone()&&Action!=TEXT("ConfirmPending")&&Action!=TEXT("CancelPending"))return;
+#if WITH_EDITOR
+    LastDispatchedAction=Action;
+    ++ActionDispatchSerial;
+#endif
     ExecuteAction(Action);OnActionTriggered.Broadcast(Action);
 }
 
 void UInkFrontendWidget::ExecuteAction(FName Action,bool bConfirmed)
 {
+    if(UsesRebuiltPresentation()&&HandleRebuiltNavigation(Action))return;
     if(Action.ToString().StartsWith(TEXT("SelectSave_")))
     {
         if(auto* Details=InkFrontend::Find<UWidgetSwitcher>(this,TEXT("SaveDetailSwitcher")))Details->SetActiveWidgetIndex(FCString::Atoi(*Action.ToString().Mid(11)));
@@ -1190,6 +1341,7 @@ UTextBlock* UInkFrontendWidget::EnsureHUDFeedback()
 
 void UInkFrontendWidget::SetPageFeedback(const FText& Message)
 {
+    if(UsesRebuiltPresentation()){SetRebuiltFeedback(Message);return;}
     auto* Text=Cast<UTextBlock>(GetWidgetFromName(FName(*(CurrentPage.ToString()+TEXT("Feedback")))));
     if(!Text&&CurrentPage==TEXT("HUD")&&!Message.IsEmpty())Text=EnsureHUDFeedback();
     if(Text)

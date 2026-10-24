@@ -1,0 +1,118 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+assets:
+- id: sign-in-seal-default-v1
+  kind: component
+  component_id: sign-in-seal
+  screen_id: sign-in
+  state: default
+  path: ''
+  prompt_path: contracts/prompts/components/sign-in-seal.md
+  dimensions:
+  - 144
+  - 144
+  dimensions_basis: target-not-measured
+  status: pending-generation
+  approved: false
+  transparent_background: true
+  sha256: null
+  actual_dimensions: null
+  alpha_extrema: null
+  runtime_package: /Game/newUI/Components/Journey/T_NUI_SignInSeal_Default_V1
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+- id: fortune-ornament-default-v1
+  kind: component
+  component_id: fortune-ornament
+  screen_id: sign-in
+  state: default
+  path: ''
+  prompt_path: contracts/prompts/components/fortune-ornament.md
+  dimensions:
+  - 256
+  - 320
+  dimensions_basis: target-not-measured
+  status: pending-generation
+  approved: false
+  transparent_background: true
+  sha256: null
+  actual_dimensions: null
+  alpha_extrema: null
+  runtime_package: /Game/newUI/Components/Journey/T_NUI_FortuneOrnament_Default_V1
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+- id: paper-edge-panel-default-v1
+  kind: component
+  component_id: paper-edge-panel
+  screen_id: main
+  state: default
+  path: ''
+  prompt_path: contracts/prompts/components/paper-edge-panel.md
+  dimensions:
+  - 672
+  - 896
+  dimensions_basis: target-not-measured
+  status: pending-generation
+  approved: false
+  transparent_background: true
+  sha256: null
+  actual_dimensions: null
+  alpha_extrema: null
+  runtime_package: /Game/newUI/Shared/T_NUI_PaperEdgePanel_Default_V1
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 48
+    - 48
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+- id: ink-header-ornament-default-v1
+  kind: component
+  component_id: ink-header-ornament
+  screen_id: main
+  state: default
+  path: ''
+  prompt_path: contracts/prompts/components/ink-header-ornament.md
+  dimensions:
+  - 672
+  - 160
+  dimensions_basis: target-not-measured
+  status: pending-generation
+  approved: false
+  transparent_background: true
+  sha256: null
+  actual_dimensions: null
+  alpha_extrema: null
+  runtime_package: /Game/newUI/Shared/T_NUI_InkHeaderOrnament_Default_V1
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+reference_registry: source-registry.json
+note: Only future new-runtime assets listed here; input candidates are measured separately,
+  not mislabeled as newUI imports.

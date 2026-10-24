@@ -1,0 +1,30 @@
+{
+  "team": "panel-player",
+  "updated_at": "2026-10-24T13:23:00+08:00",
+  "phase": "candidate-slices-staged-integration-open",
+  "approval": "approved:false",
+  "visual_generation": "authorized-semantic-components-generated-and-alpha-verified",
+  "production_source_integrated": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "completed": [
+    "Main menu action surface candidate with real route names and save-derived continue state",
+    "HUD composition candidate with live anchor status fields, existing navigation routes, shortcuts, and runtime menu seam",
+    "Transparent Main ornament and HUD/Character/Inventory semantic glyph atlases measured and hashed",
+    "Independent Character and Inventory page composers staged with real data and existing action seams",
+    "PP-01 staged include convention",
+    "PP-02 saved-time formatting",
+    "PP-03 visible quality and effective frame-rate values",
+    "player-c staged Methods, Equipment, and Appearance composers with typed VM/action seams and isolated transparent component assets",
+    "player-d staged Craft and ItemSources page composers with typed VMs, fixed action footer, and confirmation-gated craft",
+    "player-e staged Breakthrough and Tribulation composers with authority-shaped data, confirmed commands, and phase-gated cancellation/reconciliation"
+  ],
+  "next": [
+    "Logic integration must bind the new composers to provider snapshots, actual page roots/routes, and canonical action adapters",
+    "User-owned final visual acceptance remains pending; candidates stay approved:false",
+    "Build/runtime/cook/package/device/platform evidence remains separate and is not established by this handoff"
+  ],
+  "verification_boundary": "No Unreal build, automation, Editor, PIE, cook, package, device, or platform validation was run; only static file, JSON/YAML, hash, and source checks were performed.",
+  "active_slice": "handoff-reconciliation",
+  "in_progress": []
+}

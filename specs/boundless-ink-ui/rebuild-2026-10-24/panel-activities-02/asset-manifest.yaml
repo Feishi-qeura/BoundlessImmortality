@@ -1,0 +1,45 @@
+schema_version: 1
+slice: panel-activities-02
+approval_state: approved:false
+runtime_root: /Game/newUI/Activities
+production_source_owner: logic-integration
+assets:
+  - id: launch-contribution-rank-v1
+    kind: page-concept
+    file: assets/pages/launch-contribution-rank-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_LaunchContributionRank_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 4c304d6717bc13ef69a065250ee1967ce6cdc8dc3e40280f867035d2aabb4471
+    prompt: prompts/pages/launch-contribution-rank-v1.md
+  - id: launch-special-offer-v1
+    kind: route-less-offer-concept
+    file: assets/pages/launch-special-offer-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_LaunchSpecialOffer_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 9d1e268c3890d7b4e4ce3a8b53f244f1f7b031b3389cb6a60bf6a16b205492ad
+    prompt: prompts/pages/launch-special-offer-v1.md
+  - id: offline-rewards-v1
+    kind: page-concept
+    file: assets/pages/offline-rewards-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_OfflineRewards_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [940, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 7ea703c9cb1623c38f54d8a62a0f5aeecb4f18a80d4335b52d77a9411ae55778
+    prompt: prompts/pages/offline-rewards-v1.md

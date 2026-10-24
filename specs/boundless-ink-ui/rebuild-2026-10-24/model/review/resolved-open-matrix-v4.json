@@ -1,0 +1,124 @@
+{
+  "captured_utc": "2026-10-24T05:45:29.183652+00:00",
+  "parent": "resolved-open-matrix-v3.json",
+  "report": "bounded-v4-review.md",
+  "rows": [
+    {
+      "id": "PC3-01",
+      "owner": "panel-player",
+      "disposition": "satisfied-at-current-exact-frozen-hash",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "sha256": "a6b08dbcc3d449270b21e6da8db3c05f90f1c162136af1e75d7ffba84f615d34",
+      "note": "Retained typed UInkPlayerCActionButton uses AddDynamic. Prior AddLambda report text does not describe this current hash; no redundant change needed.",
+      "runtime_verified": false
+    },
+    {
+      "id": "PC3-02",
+      "owner": "panel-player + integration",
+      "disposition": "minimal-diff-reviewed-apply-check-passed-not-applied",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v4/diff/player-c-pc3-02-03.diff",
+      "sha256": "375f596b199613e12cc24ddbbe2c373a828112410b4d9b20c8be42af06c574ee",
+      "note": "Known selected ID and host learn eligibility survive missing catalog display fields",
+      "runtime_verified": false
+    },
+    {
+      "id": "PC3-03",
+      "owner": "panel-player + integration",
+      "disposition": "minimal-diff-reviewed-apply-check-passed-not-applied",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v4/diff/player-c-pc3-02-03.diff",
+      "sha256": "375f596b199613e12cc24ddbbe2c373a828112410b4d9b20c8be42af06c574ee",
+      "note": "Actual equipped entry with missing name stays unknown-name rather than empty slot",
+      "runtime_verified": false
+    },
+    {
+      "id": "J3-01",
+      "owner": "panel-journey + integration",
+      "disposition": "source-resolved-review-v4-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "894fb63becb47dcf2cbe2a46ff8bad7062de418a6c201a1e80ee148aa0bd3bcd",
+      "note": "Only nonempty-month permission removed; optional captured fingerprint and native day/milestone checks retained",
+      "runtime_verified": false
+    },
+    {
+      "id": "I3-01",
+      "owner": "logic-integration",
+      "disposition": "open-next-source-epoch",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "79418674e005bec2a01c480d88a4971f23e463499c7ea199884ccba58f96d1c8",
+      "note": "Current production hash unchanged; confirmed content disappears under Pending",
+      "runtime_verified": false
+    },
+    {
+      "id": "N05",
+      "owner": "logic-integration",
+      "disposition": "open-production-mounting",
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "note": "Stage inventory now 44/44; production mount/proof remains 6/1/37 and runtime zero",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-API-01-secondary",
+      "owner": "Activities owner",
+      "disposition": "open-P1-independent-TU-include",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "91a37a39542945a492b50db95cdad22e9677a5e1d72bf633ee7e30a702ec4fd2",
+      "note": "Uses UHorizontalBoxSlot.SetPadding without Components/HorizontalBoxSlot.h",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-API-01-economy",
+      "owner": "Activities owner",
+      "disposition": "open-P1-independent-TU-include",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.cpp",
+      "sha256": "7dad58ce15c748fab20354499bcf101bdf9b56b5e8ccfc2685a1ed24e86851ec",
+      "note": "Same missing complete slot type in separate translation unit",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-ACT-01",
+      "owner": "Activities owner",
+      "disposition": "open-P1-native-legal-request-blocked",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "91a37a39542945a492b50db95cdad22e9677a5e1d72bf633ee7e30a702ec4fd2",
+      "note": "Offline ack adds mandatory SourceId absent from native offline_reward schema",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-ACT-02",
+      "owner": "Activities owner",
+      "disposition": "open-P2-confirmed-quote-payload",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "91a37a39542945a492b50db95cdad22e9677a5e1d72bf633ee7e30a702ec4fd2",
+      "note": "Captured offer/quote/price not preserved in final purchase intent",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-ECO-01",
+      "owner": "Activities owner",
+      "disposition": "open-P2-local-confirmation-transition",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.cpp",
+      "sha256": "7dad58ce15c748fab20354499bcf101bdf9b56b5e8ccfc2685a1ed24e86851ec",
+      "note": "Local selected subject changes retain stale confirm state, blocking new subject",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-PD-01",
+      "owner": "panel-player",
+      "disposition": "open-P2-handoff-type-name",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-d/contracts/action-adapter.yaml",
+      "sha256": "69b98d244a2a91d4783704dbc01b010aa9b71a9dddb3f0c22721fbbdb47811ab",
+      "note": "Documented InkPlayerProcessPageWidgets namespace does not match actual InkPlayerCraftSourcesWidgets header",
+      "runtime_verified": false
+    },
+    {
+      "id": "V4-PE-01",
+      "owner": "panel-player + integration",
+      "disposition": "open-P2-host-subject-contract",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-e/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.cpp",
+      "sha256": "762bfa4ccbfd6fc30263ead518771c13bba5857c15a7f00564b43eec60dbbb03",
+      "note": "Need captured stage fingerprint or explicit revision semantics covering stage changes, not selection/mode only",
+      "runtime_verified": false
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "team_id": "panel-journey",
+  "revision": "review-v2",
+  "updated_at": "2026-10-24T13:04:21.000+08:00",
+  "phase": "staged-handoff-ready",
+  "handoff_ready": true,
+  "approved": false,
+  "visual_pending_user": true,
+  "owner": "panel-journey",
+  "integration_owner": "logic-integration",
+  "only_writes_under": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/",
+  "prior_staged_source_mutated": false,
+  "production_source_config_content_mutated": false,
+  "merge_slices": {
+    "journey-a": [
+      "journey",
+      "world",
+      "resources"
+    ],
+    "journey-b": [
+      "sign-in",
+      "monthly-sign-in",
+      "daily-verse"
+    ],
+    "journey-c": [
+      "region",
+      "resource-detail",
+      "world-result"
+    ],
+    "journey-d": [
+      "race-lobby",
+      "race-live"
+    ],
+    "journey-e": [
+      "lease",
+      "race-result"
+    ],
+    "journey-f": [
+      "resource-rank",
+      "resource-rewards"
+    ]
+  },
+  "source_paths": [
+    "review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp"
+  ],
+  "source_sha256": {
+    "InkJourneyNewWidgets.h": "D0011CCB03258A97848CB3FA5A474CFE7D07DBCFF2A4B8D04F566D709553DE1A",
+    "InkJourneyNewWidgets.cpp": "97AEF118830328EAC9EA41B235F0D74D61F0225B96972707F0DF17F6499ACA94"
+  },
+  "completed": [
+    "Fixed C05 by composing map-pin, milestone, and race-action UUserWidgets around reflected child UButtons",
+    "Fixed C06 by concatenating FString before taking its character pointer",
+    "Added Journey hub, region, race lobby/live, and distinct read-only Journey route classes",
+    "Covered all panel-journey route IDs in journey-a through journey-f source and mapping handoffs",
+    "Mapped exact page VM updates, back events, service action IDs, data provenance, and source receipt rules",
+    "Reused approved-candidate map art inputs without generating duplicate full-page art",
+    "Static status JSON parse and C05/C06/path scans completed"
+  ],
+  "remaining": [
+    "logic-integration must review this revision before consumption and wire new-root ownership, exact routes, back stack, and adapters",
+    "Canonical font mapping under /Game/newUI/Shared/Fonts must be settled with cleanup/integration",
+    "Import map backgrounds and any font inputs, then verify AssetRegistry and saved WBP references",
+    "Run UHT/UBT and actual Editor/Slate, action, focus, scroll, and real player-entry checks under the integration owner's engine lease",
+    "Complete visual review with the user; all candidate pages remain unapproved",
+    "Continue only if new panel-journey briefs appear beyond the 15 currently assigned route IDs"
+  ],
+  "blockers": [],
+  "source_only": true,
+  "source_compiled": false,
+  "assets_imported": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "assets_approved": false,
+  "current_source_review": "model/review/current-source-review.md#C05-C06",
+  "verification_limits": [
+    "No UHT/UBT/compiler was run",
+    "No test, Editor, import, service action, or runtime was run",
+    "No visual acceptance was claimed",
+    "The original staged-source and production Source/Config/Content were left unchanged"
+  ]
+}

@@ -2254,6 +2254,8 @@ screens:
     approved: false
   current_route_aliases:
   - Extensions
+  - WorldCultivation
+  - ResourceMap
   specification_approved: true
 - id: craft
   name: 物品炼制

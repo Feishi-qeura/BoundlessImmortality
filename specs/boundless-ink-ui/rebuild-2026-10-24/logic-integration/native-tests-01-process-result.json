@@ -1,0 +1,9 @@
+{
+  "source_records": 118,
+  "started_at": "2026-10-24T14:25:14.4788319+08:00",
+  "build": "build-11-result.json",
+  "exit_code": 0,
+  "scope": "Native NewUI3 Editor-context regressions; NullRHI is not visual proof",
+  "finished_at": "2026-10-24T14:25:35.5852346+08:00",
+  "source_files": 64
+}

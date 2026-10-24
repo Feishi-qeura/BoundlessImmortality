@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-24T17:14:40.2116066+08:00",
+  "scope": "Exact declared owned PID read-only check and existing log tails only",
+  "processes": [
+    {
+      "scope": "default-pie-13",
+      "pid": 6936,
+      "present": false,
+      "name": null,
+      "shutdown_markers": [
+        "[2026.10.24-09.09.50:957][236]LogExit: Exiting.",
+        "[2026.10.24-09.09.50:970][236]Log file closed, 10/24/26 17:09:50"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "default-pie-14",
+      "pid": 6100,
+      "present": false,
+      "name": null,
+      "shutdown_markers": [
+        "[2026.10.24-09.14.05:153][336]LogExit: Exiting.",
+        "[2026.10.24-09.14.05:171][336]Log file closed, 10/24/26 17:14:05"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "service-process-02.json",
+      "pid": 40168,
+      "present": true,
+      "name": "python",
+      "shutdown_markers": [],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "avatar-service-ready-02.json",
+      "pid": 28596,
+      "present": true,
+      "name": "python",
+      "shutdown_markers": [],
+      "exit_code_confirmed": false
+    }
+  ]
+}

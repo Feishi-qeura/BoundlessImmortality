@@ -1,0 +1,34 @@
+{
+  "updated_at": "2026-10-24T14:15:29.281221+08:00",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "final-independent-audit.md",
+      "sha256": "490931463c84ca5af7bcc91bde6976ece9f098f3f1f89fde8372163f84ec6bd5"
+    },
+    {
+      "path": "handoff.md",
+      "sha256": "1c299ea8d810deeb4e7eea20db7b3fb6034884f7ec0f580a2ed8e5755661f2de"
+    },
+    {
+      "path": "status.json",
+      "sha256": "99321c743140c012a31c6f5f1a23da268ef995c94861042df921181d304b32b3"
+    },
+    {
+      "path": "migration-complete.json",
+      "sha256": "31ca514cc1504f8bffd30d709c94d13650f282d66355b141a0bd33141c022c3d"
+    },
+    {
+      "path": "revisions/v5-final-independent-audit/final_owner_audit.py",
+      "sha256": "1ade44badb910fc18845e6b791e8871c93fcc26b04a5d7a67f5da8f222bdae4a"
+    },
+    {
+      "path": "revisions/v5-final-independent-audit/canonical-source-config-audit.json",
+      "sha256": "32d55571bd9911fe63ebef88b9f94185a86e2ddf065e8e02e972548b7282e094"
+    },
+    {
+      "path": "revisions/v5-final-independent-audit/final-owner-audit.json",
+      "sha256": "21c915764d0c55b129309f8414fd446fe460071bf0e0957456e39f4aa499e98b"
+    }
+  ]
+}

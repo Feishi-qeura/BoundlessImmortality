@@ -1,0 +1,120 @@
+{
+  "fresh_process": true,
+  "textures": [
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable.T_Journey_WorldNodeAvailable",
+      "persisted_ui_settings": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked.T_Journey_WorldNodeLocked",
+      "persisted_ui_settings": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "persisted_ui_settings": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "persisted_ui_settings": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1.T_BreakthroughMaterialSlotFrame_Default_v1",
+      "persisted_ui_settings": true
+    }
+  ],
+  "wbps": [
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "compiled_in_fresh_process": true,
+      "dependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/UI/Ink/MaterialInstances/Shared/MI_InkCardSoft",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Slice",
+        "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+        "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+        "/Game/UI/Ink/Fonts/Shared/F_InkDisplay",
+        "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+        "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+        "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+        "/Script/BoundlessImmortality",
+        "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+      "compiled_in_fresh_process": true,
+      "dependencies": [
+        "/Script/SlateCore",
+        "/Script/UMG",
+        "/Script/UMGEditor",
+        "/Game/UI/Ink/MaterialInstances/Shared/MI_InkCardSoft",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit",
+        "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Fit",
+        "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Slice",
+        "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+        "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+        "/Game/UI/Ink/Fonts/Shared/F_InkDisplay",
+        "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+        "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+        "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+        "/Script/BoundlessImmortality",
+        "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1"
+      ]
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,6 @@
+{
+  "recorded_at": "2026-10-24T17:42:48.338578+08:00",
+  "reason": "Supervisor exact additive provider exception; no general Tools authorization",
+  "before_sha256": "de4cda62cf5d80d37b4aefbaf32c5969c116463892ab6787b8f757d9649ab703",
+  "after_sha256": "45d0423f1c1218444282220743fdbd912ac249690468afdc05ed4036b7ffbfe3"
+}

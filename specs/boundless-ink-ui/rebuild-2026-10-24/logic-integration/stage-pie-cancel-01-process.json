@@ -1,0 +1,25 @@
+{
+  "scope": "build24 separate declared stage-cancel actor actual quote prepare cancel",
+  "started_at": "2026-10-24T16:15:37.8014025+08:00",
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIStageAcceptance20261024",
+    "-WulingRoom=newui-stage-cancel-room",
+    "-WulingUser=newui-stage-cancel",
+    "-NewUIStageScenario=cancel",
+    "-NewUIStageAttempt=01",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-stage-cancel01",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/stage-pie-cancel-01.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_stage_service_pie.py"
+  ],
+  "pid": 28860
+}

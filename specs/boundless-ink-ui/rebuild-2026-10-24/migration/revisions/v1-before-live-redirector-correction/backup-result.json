@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-24T12:31:58.462635+08:00",
+  "backup_manifest": "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\UIRebuild20261024\\Backups\\20261024T123117935118\\backup-manifest.json",
+  "backup_manifest_sha256": "625eef06abf776f245406e0991bd8b563bfc6b5c51a206fa8bbb84826a0b0980",
+  "files": 1759,
+  "total_bytes": 1538854456,
+  "old_ui_count": 588,
+  "old_ui_bytes": 214623195,
+  "hash_verified": true,
+  "collision_count": 0,
+  "class_hints": {
+    "Texture2D": 81,
+    "InkUiThemeData": 1,
+    "Font": 3,
+    "FontFace": 3,
+    "MaterialInstanceConstant": 386,
+    "Material": 89,
+    "NiagaraSystem": 12,
+    "WidgetBlueprint": 13
+  },
+  "live_registry_verified": false,
+  "migration_executed": false
+}

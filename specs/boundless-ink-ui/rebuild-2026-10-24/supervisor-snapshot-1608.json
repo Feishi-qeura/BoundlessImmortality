@@ -1,0 +1,100 @@
+{
+  "heartbeat_at": "2026-10-24T08:08:42.885Z",
+  "old_ui_directory_exists": false,
+  "new_ui_assets": 596,
+  "latest_build": {
+    "attempt": 24,
+    "exit_code": 0,
+    "source_files": 88,
+    "ledger_records": 221
+  },
+  "runtime_state": "Full44 final attempt pending; failed05/06 kept, actual Character entries passed, Offline/Activities Back repaired; strict core geometry/paint/culling proved only capturedsubset",
+  "business_progress": "Integration reports actual isolated service successful steps Busy retained browsing, post-commit lost response sameID retry,staleRename0write,viewerJoin,methods,configure,equip,unequip,purchase,signin,remove,build,craft; Core independent request/result/audit review reactivated, no aggregate pass yet",
+  "remaining": [
+    "Market buy/create/withdraw and selection/quote/modal preservation",
+    "Actual HTTPS avatar failure/backoff and explicitlyseededstage guard cases",
+    "Fresh full44 route/back/portrait/landscape strict run",
+    "Equipment finalnewbrush + Appearance sharedatlas realbinding",
+    "Own process normalshutdown and scopedtestsettings proof"
+  ],
+  "native_formal_success": 4,
+  "all44_machine_verified": false,
+  "visual_approved": false,
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:11",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:25",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会核对 service01–07 的请求、权威回包和审计证据，把已证明的业务步骤与入队、截图及 attempt 整体结果分开记录；同时更新 native04、组件绑定和剩余项。只写 review，不启动 UE、UBT 或服务，也不重跑测试。",
+      "last_tool": {
+        "id": "exec-b5b29279-4a3b-44a6-93d9-2fa5ca02bc58",
+        "turnId": "01a16cf5-8504-77e2-a6d5-c63940fcec99",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:43",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "建设和炼制均已收到成功回执，建筑等级也已同步。炼制后的奖励弹窗按预期挡住了寄售页面，后续测试会先关闭弹窗再操作。另外已修正截图中绿底按钮文字偏暗的问题，保留纸面列表的墨色文字。",
+      "last_tool": {
+        "id": "exec-c5ebbf3f-5bb4-4805-ab5c-732eafb57659",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    }
+  ]
+}

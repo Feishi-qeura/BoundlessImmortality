@@ -1,0 +1,126 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+revision: newui-r1
+status: draft
+implementation_status: stable-trial-input
+approved: false
+visual_review: pending_user
+authorization: ../quickstart.md
+canonical_asset_root: /Game/newUI
+replaces_legacy_visual_contract: true
+platform:
+  target: UE5.8 native frontend; portrait touch and Windows pointer/keyboard
+  orientation: responsive
+  aspect_ratio: '9:16'
+  reference_size: [720, 1280]
+  alternate_size: [1280, 720]
+  safe_area: {top: 24, right: 24, bottom: 24, left: 24}
+  safe_area_rule: Device SafeZone first; then these content insets. Never add guessed physical notch pixels.
+  dpi: Shortest-side anchors 360=.5 / 540=.75 / 720=1 / 1080=1.5; root owns scale once.
+  breakpoints: {portrait_max_ratio: 0.8, landscape_min_ratio: 1.25}
+  compact_rule: 0.8 <= width/height < 1.25 uses single column with optional detail sheet.
+  landscape_rule: Reflow to two columns or side rail; never fit a whole portrait page into a landscape ScaleBox.
+visual:
+  theme: 山海修行 · 宣纸墨绿与细旧金
+  mood: 清远、克制、沉浸且可读
+  keywords: [宣纸, 青绿水墨, 空气留白, 细旧金, 玉石焦点, 山水远景]
+  complexity: medium
+  materials: [细纹暖宣纸, 低对比干湿墨, 哑光墨绿, 细旧金边, 少量青玉]
+  lighting: {direction: top-left, softness: soft, specular: restrained}
+  decoration_rule: One meaningful landscape focal area per page; do not box every value. Gold outlines never replace hierarchy.
+  render_separation: All business text is live UMG text; no full-page concept PNG as runtime UI.
+  main_scene: Real gameplay/presentation character scene remains visible; its UI composition is redesigned.
+colors:
+  primary: '#173E37'
+  secondary: '#425F67'
+  accent: '#9A7334'
+  background: '#F4ECDD'
+  warning: '#9C4336'
+  reward: '#765626'
+  disabled: '#706E66'
+  paper: '#FBF7EE'
+  ink: '#1B2925'
+  ink-muted: '#52594F'
+  jade: '#326F63'
+  focus: '#226C83'
+  line: '#B6A382'
+  on-primary: '#FBF7EE'
+typography:
+  language: zh-CN
+  title: {family: MaShanZheng, size: 48, weight: 400}
+  display: {family: MaShanZheng, size: 64, weight: 400}
+  section: {family: LXGWWenKai, size: 32, weight: 400}
+  body: {family: LXGWWenKai, size: 28, weight: 400}
+  number: {family: LXGWWenKai, size: 28, weight: 400}
+  button: {family: LXGWWenKai, size: 30, weight: 400}
+  secondary: {family: LXGWWenKai, size: 24, weight: 400}
+  hud: {family: LXGWWenKai, size: 26, weight: 400}
+  minimum_critical: 26
+  line_height_body: 1.35
+  line_height_title: 1.15
+  numeric_policy: Real provider units; tabular alignment where supported; no invented zero or rounding that changes eligibility.
+  font_inputs: docs/design/2026-10-21-ink-ui-standard-v1/fonts (locate and measure before import)
+  runtime_fonts: /Game/newUI/Shared/Fonts
+  fallback: Noto Sans CJK SC only for missing glyphs; no silent Latin-only default for Chinese.
+  overflow: Wrap labels to two lines, then expand row or scroll; never shrink below minimum to force fit.
+  contrast: Body/action text >=4.5:1 against actual assembled surfaces; large headings >=3:1; measure after raster assembly.
+geometry:
+  radius: {small: 4, card: 8, modal: 12}
+  stroke: {thin: 1, regular: 2, strong: 3}
+  button_height: {primary: 88, secondary: 88, compact: 72}
+  touch_min: [88, 88]
+  touch_rule: Compact visual controls expand a nonoverlapping hit box to 88x88. Calendar uses 88x88 cells.
+  icon_size: {utility: 40, action: 48, navigation: 56, currency: 32}
+  content_padding: 24
+  card_padding: 24
+  row_min_height: 104
+  inventory_cell: [104, 120]
+  decorative_edges: Keep ink bleed outside the text inset. Long scroll panels use native tiled paper plus independent cap art.
+effects:
+  shadow: Soft ink shadow at low opacity; no text glow.
+  selected: Ink-green fill plus old-gold underline/check; state also conveyed by label/shape.
+  disabled: Readable text plus specific reason; do not use texture opacity alone.
+  pending: Inline progress label; retain current confirmed data and stable focus/selection.
+  reduced_motion: No looping pulse/parallax/particles; instant or <=100ms fades; same state and actions remain visible.
+  feedback: Enqueued is pending; only authoritative receipts/results display success/grants.
+tokens:
+  color:
+    action-primary: '#173E37'
+    action-secondary: '#FBF7EE'
+    action-danger: '#9C4336'
+    surface-page: '#F4ECDD'
+    surface-card: '#FBF7EE'
+    text-primary: '#1B2925'
+    text-secondary: '#52594F'
+    text-on-primary: '#FBF7EE'
+    border-quiet: '#B6A382'
+    emphasis-gold: '#9A7334'
+    focus-ring: '#226C83'
+  spacing: {xxs: 4, xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, section: 64}
+  motion: {press-ms: 80, hover-ms: 120, page-ms: 220, modal-ms: 180, reduced-ms: 100}
+control_states:
+  default: Stable geometry and full readable caption.
+  hover: Desktop only; focus-color ink wash without moving labels.
+  pressed: 1-unit visual depression; hit rectangle unchanged.
+  focused: 2-unit focus ring distinct from selected state.
+  selected: Green/old-gold paired with check/underline; one active choice per exclusive set.
+  disabled: Specific action reason, still readable; no misleading success icon.
+  loading: No authoritative response yet; no empty-list claim.
+  pending: Existing request token retained; repeat submit disabled until actual completion/failure.
+  locked: Explicit service/role/profile gate; unknown permission remains unknown.
+  claimed: Only explicit provider confirmation; absence of claim field is not unclaimed.
+  error: Actual failure label and supported retry action; preserve user's draft/selection.
+  offline: Identify stale snapshot; business writes blocked while supported read-only viewing remains available.
+  empty: Only after provider explicitly returns an empty collection/null domain object.
+asset_rules:
+  naming: <component-id>-<state>-v<integer>.png
+  texture_package: /Game/newUI/Components/<Player|RankWuling|Journey|Activities>/T_NUI_<Semantic>_<State>_V1
+  shared_package: /Game/newUI/Shared/T_NUI_<Semantic>_<State>_V1
+  page_package: /Game/newUI/Runtime/Pages/<team>/WBP_NUI_<Page>
+  root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  package_plan_status: Owner architecture fixes root package; per-page package names remain suggestions until actual native/WBP implementation is chosen.
+  non_background: RGBA transparent exterior; no white/gray matte or baked dynamic text.
+  slice_order: [left, right, top, bottom]
+  slice_truth: Target margins are proposals only. Actual PNG dimensions/alpha/hash and unwarped corners must be measured before use.
+  full_only: Icons, portraits, brush stamps, scene pieces and complex landscape decorations preserve aspect ratio.
+  import_evidence: Actual Texture2D/AssetRegistry/readback, saved runtime reference and player-entry evidence are separate from PNG/ZIP/JSON existence.

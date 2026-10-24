@@ -1,0 +1,77 @@
+{
+  "team": "panel-player",
+  "slice": "player-c",
+  "updated_at": "2026-10-24T13:23:00+08:00",
+  "approval": "approved:false",
+  "production_source_modified": false,
+  "production_content_modified": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "files": [
+    {
+      "path": "contracts/action-adapter.yaml",
+      "bytes": 3368,
+      "sha256": "0D21CC05EBE7904C6FC19D8231966BFA367260D7EE0ED0BE6192DD368501DD86"
+    },
+    {
+      "path": "contracts/page-component-map.yaml",
+      "bytes": 3124,
+      "sha256": "0D30E50ABB3988BAC0099E41FF7C6D13FD16DA04E49C6C9B38FEBFCCBF471705"
+    },
+    {
+      "path": "execution-basis.md",
+      "bytes": 3413,
+      "sha256": "F3F139EFE1F1BC5ACA207522A938A2429E8E4EAF053E46E7A3DAFBAC8E13026A"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 4011,
+      "sha256": "B8F5626ED303084ADFD8DA630C7963EFF517B2C1AE80961425D4BEF22640EC91"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "bytes": 34277,
+      "sha256": "A6B08DBCC3D449270B21E6DA8DB3C05F90F1C162136AF1E75D7FFBA84F615D34"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.h",
+      "bytes": 5417,
+      "sha256": "3948AC462ED549DF7E9860E1B166CF86623C71B9748E05295BE1453FBBA0C3ED"
+    },
+    {
+      "path": "visible-entry/assets/components/appearance-preview-ornament-atlas-v1.png",
+      "bytes": 1433395,
+      "sha256": "80A2405958CDE0E6A55DA77A09A683A5FDEAAEEC5ECFBEABD0F0D24AA5F4B331"
+    },
+    {
+      "path": "visible-entry/assets/components/asset-manifest.json",
+      "bytes": 4212,
+      "sha256": "AD36E84ED9D3B8CBA1C20AF5E825C5F31FA535EC8BDAD8219560B395750A0EE7"
+    },
+    {
+      "path": "visible-entry/assets/components/equipment-fabao-glyph-atlas-v1.png",
+      "bytes": 1658321,
+      "sha256": "1A654F979AFEEDD1A7464E397E653B144B3D60BE7629543509D5ACCDC14C07A0"
+    },
+    {
+      "path": "visible-entry/assets/components/method-loadout-glyph-atlas-v1.png",
+      "bytes": 2569283,
+      "sha256": "47AF658D4C50E2692B33A58DA4F3E76DF7CAE02290FC6ACF3C5C3D909590516D"
+    },
+    {
+      "path": "visible-entry/prompts/appearance-preview-ornament-atlas-v1.md",
+      "bytes": 1018,
+      "sha256": "33536C2D958E9504FFF1B503ECBFD12FA9EA5606C47C16C6B54CC03ADE571A87"
+    },
+    {
+      "path": "visible-entry/prompts/equipment-fabao-glyph-atlas-v1.md",
+      "bytes": 1052,
+      "sha256": "1FE2F18F5816B116080F27DA92E634B57D017558F231A38BB3CC4DEF14014A66"
+    },
+    {
+      "path": "visible-entry/prompts/method-loadout-glyph-atlas-v1.md",
+      "bytes": 1090,
+      "sha256": "C7F60386CCCE815A139A37A75CFEC3B04247A1F0FA70A7FDB02A07F4D9338793"
+    }
+  ]
+}

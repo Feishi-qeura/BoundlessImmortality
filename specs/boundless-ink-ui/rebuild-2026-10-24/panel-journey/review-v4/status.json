@@ -1,0 +1,61 @@
+{
+  "team_id": "panel-journey",
+  "revision": "review-v4",
+  "updated_at": "2026-10-24T13:41:05+08:00",
+  "phase": "staged-handoff-ready",
+  "handoff_ready": true,
+  "approved": false,
+  "visual_pending_user": true,
+  "owner": "panel-journey",
+  "integration_owner": "logic-integration",
+  "only_writes_under": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/",
+  "supersedes_source_revision": "review-v3",
+  "review_v3_frozen": true,
+  "review_v2_frozen": true,
+  "prior_staged_source_mutated": false,
+  "production_source_config_content_mutated": false,
+  "source_paths": [
+    "review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp"
+  ],
+  "source_sha256": {
+    "InkJourneyNewWidgets_h": "1B25D7F6B3DF6775AA8A38FF73B577C3AA9402EB5CB3C3A6A764D29287A44464",
+    "InkJourneyNewWidgets_cpp": "894FB63BECB47DCF2CBE2A46FF8BAD7062DE418A6C201A1E80EE148AA0BD3BCD"
+  },
+  "findings_resolved": [
+    "J3-01: missing month string is not an independent MonthlyChest eligibility requirement",
+    "N02 retained: first-click capture, same-identity refresh retention, identity-change invalidation, captured event payload",
+    "N04 retained: canonical migrated font package paths"
+  ],
+  "completed": [
+    "Full v3 source copied to isolated v4 replacement directory",
+    "Removed only the non-empty ServerMonth UI permission gate; retained non-empty ExpectedServiceDay and milestone eligibility checks",
+    "Month remains an exact optional identity fingerprint, including empty-value capture and change invalidation",
+    "Updated host handoff to compare exact day/month/milestone identity and preserve fresh native MonthlyChest evaluation",
+    "Created source diff against frozen v3"
+  ],
+  "remaining": [
+    "Integration must replace both files and update three-parameter event binding and fresh host identity comparison",
+    "Integration/cleanup must verify canonical font import/readback",
+    "UHT/UBT, action wiring, service behavior, Slate, Editor/player-entry, device/package/runtime review remain unrun",
+    "Visual acceptance remains pending and candidate remains unapproved"
+  ],
+  "blockers": [],
+  "source_only": true,
+  "source_compiled": false,
+  "assets_imported": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "assets_approved": false,
+  "verification_limits": [
+    "Static source/hash/JSON checks only",
+    "No build, tests, engine, import, service action, automation, Editor, PIE, device, package, or runtime run"
+  ],
+  "risk_notes": [
+    "Month is only a fingerprint and may be empty; host must compare it exactly without treating absence as a denial",
+    "Existing adapter authority, expected-day, milestone, provider, eligibility, claimed-state, and context gates remain the actual action permission",
+    "Font paths are canonical but imported/readable/rendered state is unverified"
+  ]
+}

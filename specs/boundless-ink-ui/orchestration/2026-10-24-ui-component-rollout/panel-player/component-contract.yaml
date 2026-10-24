@@ -1,0 +1,150 @@
+schema_version: 1
+team_id: panel-player
+project_id: boundless-ink-ui
+revision: 2026-10-24-player-component-rollout
+trial_authorization: User authorized continuous candidate processing; all candidate assets remain approved:false until user visual approval.
+source_candidates:
+  - id: main-menu-v3-player-core-mapping-correction
+    path: revisions/2026-10-23-player-core-mapping-correction/main-menu-v3.png
+    screen_id: main
+    approved: false
+  - id: breakthrough-preparation-v3-player-core-mapping-correction
+    path: revisions/2026-10-23-player-core-mapping-correction/breakthrough-preparation-v3.png
+    screen_id: breakthrough
+    approved: false
+  - id: tribulation-live-v3-player-core-mapping-correction
+    path: revisions/2026-10-23-player-core-mapping-correction/tribulation-live-v3.png
+    screen_id: tribulation
+    approved: false
+components:
+  - id: home-avatar-frame
+    states: [default]
+    category: container
+    source: assets/home-avatar-frame-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: HUD identity avatar border; preserve original aspect ratio.
+  - id: home-avatar-portrait
+    states: [default]
+    category: character
+    source: assets/home-avatar-portrait-default-v2.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Portrait presentation when no live character portrait is available by design; do not substitute character identity data.
+  - id: home-identity-ink
+    states: [default]
+    category: container
+    source: assets/home-identity-ink-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: HUD identity/status visual layer; text remains runtime TextBlock.
+  - id: home-realm-plaque
+    states: [default]
+    category: container
+    source: assets/home-realm-plaque-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: HUD realm label backing; never bake realm text.
+  - id: home-health-fill
+    states: [default]
+    category: decoration
+    source: assets/home-health-fill-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing health bar fill; preserve its source rendering rule.
+  - id: home-bar-track
+    states: [default]
+    category: container
+    source: assets/home-bar-track-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing status bar track; no generated numeric values.
+  - id: home-top-tile
+    states: [default]
+    category: container
+    source: assets/home-top-tile-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Fixed-size HUD top entry token.
+  - id: home-icon-activity
+    states: [default]
+    category: icon
+    source: assets/home-icon-activity-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD activity entry icon.
+  - id: home-icon-sign-in
+    states: [default]
+    category: icon
+    source: assets/home-icon-sign-in-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD sign-in entry icon.
+  - id: home-icon-journey
+    states: [default]
+    category: icon
+    source: assets/home-icon-journey-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD journey entry icon.
+  - id: home-icon-bag
+    states: [default]
+    category: icon
+    source: assets/home-icon-bag-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD and inventory entry icon.
+  - id: home-icon-cultivate
+    states: [default]
+    category: icon
+    source: assets/home-icon-cultivate-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD cultivation entry icon.
+  - id: home-icon-rank
+    states: [default]
+    category: icon
+    source: assets/home-icon-rank-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD leaderboard entry icon.
+  - id: home-icon-menu
+    states: [default]
+    category: icon
+    source: assets/home-icon-menu-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Existing HUD menu entry icon.
+  - id: home-rank-paper
+    states: [default]
+    category: container
+    source: assets/home-rank-paper-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: HUD rank preview paper; dynamic ranking copy and entries remain runtime data.
+  - id: home-bottom-cloud
+    states: [default]
+    category: decoration
+    source: assets/home-bottom-cloud-default-v1.png
+    source_component_status: approved
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: HUD lower decoration; preserve aspect ratio.
+  - id: breakthrough-material-slot-frame
+    states: [default, selected, disabled]
+    category: container
+    source: null
+    source_component_status: pending-export
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    usage: Optional decorative frame for UInkPlayerMaterialSlotWidget; runtime item, name, counts, and selection states are supplied separately. Not in package.
+    prompt: prompts/components/breakthrough-material-slot-frame-default-v1.md
+    approved: false
+    blocker: image tool returned inline data; local export failed on Windows command length. Existing native slot rendering remains usable.
+non_image_controls:
+  - id: breakthrough-material-slot-widget
+    class: UInkPlayerMaterialSlotWidget
+    header: Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.h
+    source: Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.cpp
+    configure_api: ConfigureSlot(SlotId, ItemId, ItemName, OwnedCountText, RequiredCountText, ItemIcon, FrameTexture, bCanSelect)
+    action_api: OnSlotActivated(SlotId, ItemId); presentation only; adapter owns action and authority refresh.
+    import_status: source-only; no route binding.
+    approved: false

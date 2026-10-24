@@ -1,0 +1,20 @@
+{
+  "static_only": true,
+  "source_epoch_sha256": "73d1529a52e427d2f89b1316c57fd682e76705182e1379944729b903cb146114",
+  "canonical_runtime_literal_count": 1798,
+  "exact_compatibility_and_redirect_count": 1151,
+  "intentional_historical_helper_exceptions": [
+    "LegacyUiRedirectorFixupCommandlet.cpp",
+    "NewUiMigrationExactFixup.cpp",
+    "ScopedKnownRenameWarning.cpp"
+  ],
+  "pending_new_default_assets": [
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "package": "/Game/newUI/Runtime/WBP_NewUIFrontend"
+    }
+  ],
+  "problems": [],
+  "passed": true,
+  "runtime_verified": false
+}

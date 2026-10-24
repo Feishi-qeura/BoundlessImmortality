@@ -1,0 +1,8 @@
+{
+  "source_ledger_records": 90,
+  "scope": "Canonical references after582 physical migration plus confirmed-data busy retention",
+  "source_files": 57,
+  "started_at": "2026-10-24T13:58:13.9381174+08:00",
+  "exit_code": 0,
+  "finished_at": "2026-10-24T14:02:06.4057825+08:00"
+}

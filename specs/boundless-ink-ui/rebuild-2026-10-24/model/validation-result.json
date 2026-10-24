@@ -1,0 +1,153 @@
+{
+  "scope": "contract consistency + design token math + GameUI draft schemas; not runtime",
+  "checks": [
+    {
+      "name": "44 unique screens",
+      "passed": true
+    },
+    {
+      "name": "unique semantic components",
+      "passed": true
+    },
+    {
+      "name": "unique action mappings",
+      "passed": true
+    },
+    {
+      "name": "unique VM contracts",
+      "passed": true
+    },
+    {
+      "name": "every page component resolves",
+      "passed": true
+    },
+    {
+      "name": "every page action resolves to real existing handler mapping",
+      "passed": true
+    },
+    {
+      "name": "every page VM resolves",
+      "passed": true
+    },
+    {
+      "name": "owner architecture root consistent",
+      "passed": true
+    },
+    {
+      "name": "owner root package consistent",
+      "passed": true
+    },
+    {
+      "name": "no contract-only page claims actual runtime completion",
+      "passed": true
+    },
+    {
+      "name": "visual review remains pending",
+      "passed": true
+    },
+    {
+      "name": "all screens identify current entry routes",
+      "passed": true
+    },
+    {
+      "name": "44 actionable briefs exist",
+      "passed": true
+    },
+    {
+      "name": "nonbackground components require transparent exterior",
+      "passed": true
+    },
+    {
+      "name": "proposed slice margins never called measured/usable",
+      "passed": true
+    },
+    {
+      "name": "every visual provenance resolves",
+      "passed": true
+    },
+    {
+      "name": "all 13 registered visual inputs inspected",
+      "passed": true
+    },
+    {
+      "name": "source PNG hash readback matches registry",
+      "passed": true
+    },
+    {
+      "name": "candidate inputs not falsely approved",
+      "passed": true
+    },
+    {
+      "name": "JSON schema documents parse and declare required envelopes (not full JSON Schema metavalidation)",
+      "passed": true
+    },
+    {
+      "name": "architecture binding matches latest consumed owner document",
+      "passed": true
+    },
+    {
+      "name": "style-contract.yaml has canonical new runtime paths only",
+      "passed": true
+    },
+    {
+      "name": "screen-contract.yaml has canonical new runtime paths only",
+      "passed": true
+    },
+    {
+      "name": "component-contract.yaml has canonical new runtime paths only",
+      "passed": true
+    },
+    {
+      "name": "asset-manifest.yaml has canonical new runtime paths only",
+      "passed": true
+    },
+    {
+      "name": "token contrast ink/paper >=4.5",
+      "passed": true
+    },
+    {
+      "name": "token contrast ink-muted/paper >=4.5",
+      "passed": true
+    },
+    {
+      "name": "token contrast on-primary/primary >=4.5",
+      "passed": true
+    },
+    {
+      "name": "token contrast warning/paper >=4.5",
+      "passed": true
+    },
+    {
+      "name": "real GameUI validator --strict on owned contract/planning snapshot",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "screens": 44,
+  "components": 36,
+  "models": 25,
+  "actions": 76,
+  "source_images": 13,
+  "token_contrast": {
+    "ink/paper": 14.125,
+    "ink-muted/paper": 6.771,
+    "on-primary/primary": 11.03,
+    "warning/paper": 6.007
+  },
+  "gameui_snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\model\\gameui-validation\\rebuild-2026-10-24",
+  "gameui_exit_code": 0,
+  "root_production_validation_run": false,
+  "ue_build_run": false,
+  "native_tests_run": false,
+  "pie_run": false,
+  "pending_runtime_assets": 4,
+  "approved": false,
+  "visual_pending_user": true,
+  "json_schema_metavalidator_used": false,
+  "contract_sha256": {
+    "style-contract.yaml": "96e6e740a13ee313e84396d9edb4b3d525e51738d51539f0ff3e98b52fc5754e",
+    "screen-contract.yaml": "1c8506172afda60dd8c6e7e207b3028ed6dde4ceb62dfd20c49b277040e6a377",
+    "component-contract.yaml": "08405529e44f74694e26d74f05fddb71d7b69bca2953d5ca789b64a6e3732fb2",
+    "asset-manifest.yaml": "4b4eb5389c38cf57632f776bebbe9d9b4e176997ef5d919e761305665493cd85"
+  }
+}

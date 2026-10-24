@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-24T17:15:05.011019+08:00",
+  "source_build": 26,
+  "source_files": 88,
+  "ledger_records": 224,
+  "source_hash_errors": [],
+  "exact_formal14_epoch_unchanged": true,
+  "migrated_original_packages": 582,
+  "asset_hash_errors": [],
+  "old_ui_directory_exists": false,
+  "newui_package_count": 596,
+  "read_only": true,
+  "passed": true
+}

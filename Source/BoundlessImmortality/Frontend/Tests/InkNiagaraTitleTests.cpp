@@ -99,7 +99,7 @@ bool FInkNiagaraTitleAssetsTest::RunTest(const FString&)
     for(const TCHAR* Kind:{TEXT("Honor"),TEXT("Realm"),TEXT("RealmIcon"),TEXT("AvatarFrame")})
     {
         const FString Name=FString(TEXT("NS_"))+Kind+TEXT("Particles");
-        const FString Path=TEXT("/Game/UI/Ink/NiagaraRevision20261022/Flowing20261022/")+Name+TEXT(".")+Name;
+        const FString Path=InkUiAssets::TitleParticlesPath(Name);
         auto* System=InkUiAssets::Load<UNiagaraSystem>(nullptr,*Path);
         if(!TestNotNull(*FString::Printf(TEXT("%s real Niagara asset is installed"),Kind),System))continue;
         TestTrue(TEXT("All four systems contain an emitter"),System->GetNumEmitters()>0);

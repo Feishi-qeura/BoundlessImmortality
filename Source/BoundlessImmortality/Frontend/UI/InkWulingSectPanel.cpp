@@ -1,4 +1,6 @@
 #include "InkWulingSectPanel.h"
+#include "Frontend/UiRollout20261024/RankWuling/InkRankWulingComponents.h"
+#include "Engine/Texture2D.h"
 #include "Frontend/InkFrontendWidget.h"
 #include "Frontend/WulingFrontendData.h"
 #include "Frontend/UI/InkUiTheme.h"
@@ -86,14 +88,18 @@ void UInkWulingSectPanel::BuildPanelContent()
     const float Gap = 24.f;
     const bool TwoColumns = !bPortraitLayout && BodyWidth >= 800.f;
     const float ColumnWidth = TwoColumns ? (BodyWidth - Gap) * .5f : BodyWidth;
-    const float HeroHeight = FMath::Clamp(ColumnWidth / 3.f, 128.f, 200.f);
-    Scene(BodyCanvas, 0, 0, 0, ColumnWidth, HeroHeight);
+    // The organization snapshot has no banner or identity image field. Do not
+    // reserve an empty hero surface until real artwork is available.
+    const float HeroHeight = 0.f;
     const float IdentityY = HeroHeight + 12.f;
     GuildTitle = Label(BodyCanvas, TEXT("SectGuildName"), TEXT("武灵山门"), 0, IdentityY, ColumnWidth, 64, 40);
     ConnectionText = Label(BodyCanvas, TEXT("SectConnection"), TEXT("等待组织数据"), 0, IdentityY + 72, ColumnWidth, 96, 24);
 
     const float CountsY = IdentityY + 184;
     const float StatWidth = (ColumnWidth - 24.f) / 3.f;
+    InkRankWulingComponents::AddPaperPanel(WidgetTree,BodyCanvas,TEXT("SectStatsCard"),
+        LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1"),nullptr,LOAD_NoWarn|LOAD_Quiet),
+        {0,CountsY-8,ColumnWidth,210,0},FVector4f(136,136,136,136));
     auto Count = [&](const TCHAR* Name, const TCHAR* Caption, int32 Index)
     {
         const float X = Index * (StatWidth + 12.f);
@@ -107,6 +113,8 @@ void UInkWulingSectPanel::BuildPanelContent()
     ReputationText = Label(BodyCanvas, TEXT("SectReputation"), TEXT("武灵声望 —"), 0, CountsY + 156, ColumnWidth, 44, 28);
 
     const float CreateY = CountsY + 228;
+    const float HintY = CreateY + (bBuiltWithGuild ? 60.f : 264.f);
+    Surface(BodyCanvas, TEXT("SectCreationCard"), InkPresentationStyle::ESurface::FeatureCard, 0, CreateY - 8, ColumnWidth, HintY - CreateY + 120);
     CreationTitle = Label(BodyCanvas, TEXT("SectCreationTitle"), TEXT("立下山门"), 0, CreateY, ColumnWidth, 48, 32);
     if (!bBuiltWithGuild)
     {
@@ -122,29 +130,36 @@ void UInkWulingSectPanel::BuildPanelContent()
         InputSlot->SetZOrder(5);
         CreateButton = Action(BodyCanvas, TEXT("SectCreate"), TEXT("创建武灵"), 0, CreateY + 160, ColumnWidth, 88, true);
     }
-    const float HintY = CreateY + (bBuiltWithGuild ? 60.f : 264.f);
     CreationHint = Label(BodyCanvas, TEXT("SectCreationHint"), TEXT("名称由服务校验，创建后同步真实组织状态。"), 0, HintY, ColumnWidth, 112, 24);
 
     const float LeftEnd = HintY + 124.f;
     const float RightX = TwoColumns ? ColumnWidth + Gap : 0;
     const float RightY = TwoColumns ? 0 : LeftEnd + 20;
-    Label(BodyCanvas, TEXT("SectRosterHeading"), TEXT("剑灵名册"), RightX, RightY, ColumnWidth, 48, 32);
+    Surface(BodyCanvas, TEXT("SectRosterCard"), InkPresentationStyle::ESurface::FeatureCard, RightX, RightY, ColumnWidth, 416);
+    Surface(BodyCanvas, TEXT("SectRosterHeadingCard"), InkPresentationStyle::ESurface::FeatureHeading, RightX, RightY, ColumnWidth, 48);
+    Label(BodyCanvas, TEXT("SectRosterHeading"), TEXT("成员名册"), RightX, RightY, ColumnWidth, 48, 32);
     RosterStatus = Label(BodyCanvas, TEXT("SectRosterStatus"), TEXT("等待成员同步"), RightX, RightY + 56, ColumnWidth, 64, 24);
     RosterText = Label(BodyCanvas, TEXT("SectRosterPreview"), TEXT(""), RightX, RightY + 128, ColumnWidth, 176, 26);
     Action(BodyCanvas, TEXT("Open_WulingGuild"), TEXT("查看名册与组织管理"), RightX, RightY + 316, ColumnWidth, 88);
 
+    Surface(BodyCanvas, TEXT("SectOperationsCard"), InkPresentationStyle::ESurface::FeatureCard, RightX, RightY + 420, ColumnWidth, 500);
+    Surface(BodyCanvas, TEXT("SectOperationsHeadingCard"), InkPresentationStyle::ESurface::FeatureHeading, RightX, RightY + 428, ColumnWidth, 48);
     Label(BodyCanvas, TEXT("SectOrganizationHeading"), TEXT("组织事务"), RightX, RightY + 428, ColumnWidth, 48, 32);
     const float HalfWidth = (ColumnWidth - 12) * .5f;
     Action(BodyCanvas, TEXT("Open_WulingConstruction"), TEXT("门派建设"), RightX, RightY + 488, HalfWidth, 88);
     Action(BodyCanvas, TEXT("Open_WulingRights"), TEXT("剑灵权益"), RightX + HalfWidth + 12, RightY + 488, HalfWidth, 88);
     Action(BodyCanvas, TEXT("Open_WulingEquipment"), TEXT("装备成长"), RightX, RightY + 588, HalfWidth, 88);
     Action(BodyCanvas, TEXT("Open_WulingOffline"), TEXT("离线记录"), RightX + HalfWidth + 12, RightY + 588, HalfWidth, 88);
-    Action(BodyCanvas, TEXT("Open_WulingOrders"), TEXT("订单与收据"), RightX, RightY + 688, ColumnWidth, 88);
+    Action(BodyCanvas, TEXT("Open_WulingOrders"), TEXT("订单与收据"), RightX, RightY + 688, HalfWidth, 88);
+    Action(BodyCanvas, TEXT("Open_WulingActivity"), TEXT("活动与签到"), RightX + HalfWidth + 12, RightY + 688, HalfWidth, 88);
+    Action(BodyCanvas, TEXT("Open_GiftRules"), TEXT("礼物效果规则"), RightX, RightY + 788, ColumnWidth, 88);
 
-    Label(BodyCanvas, TEXT("SectWorldHeading"), TEXT("下山历练"), RightX, RightY + 800, ColumnWidth, 48, 32);
-    WorldStatus = Label(BodyCanvas, TEXT("SectWorldStatus"), TEXT(""), RightX, RightY + 856, ColumnWidth, 80, 24);
-    Action(BodyCanvas, TEXT("Open_WorldCultivation"), TEXT("前往仙途地图"), RightX, RightY + 948, ColumnWidth, 88, true);
-    Action(BodyCanvas, TEXT("Open_WulingWorld"), TEXT("历练准备与进度"), RightX, RightY + 1048, ColumnWidth, 88);
+    Surface(BodyCanvas, TEXT("SectWorldCard"), InkPresentationStyle::ESurface::FeatureCard, RightX, RightY + 892, ColumnWidth, 250);
+    Surface(BodyCanvas, TEXT("SectWorldHeadingCard"), InkPresentationStyle::ESurface::FeatureHeading, RightX, RightY + 900, ColumnWidth, 48);
+    Label(BodyCanvas, TEXT("SectWorldHeading"), TEXT("下山历练"), RightX, RightY + 900, ColumnWidth, 48, 32);
+    WorldStatus = Label(BodyCanvas, TEXT("SectWorldStatus"), TEXT(""), RightX, RightY + 956, ColumnWidth, 80, 24);
+    Action(BodyCanvas, TEXT("Open_WorldCultivation"), TEXT("前往仙途地图"), RightX, RightY + 1048, ColumnWidth, 88, true);
+    Action(BodyCanvas, TEXT("Open_WulingWorld"), TEXT("历练准备与进度"), RightX, RightY + 1148, ColumnWidth, 88);
 
     SectStateKey.Reset();
     RefreshLiveData();

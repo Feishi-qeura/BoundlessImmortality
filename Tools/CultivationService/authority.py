@@ -186,7 +186,7 @@ class Authority:
         wallet = {r['currency']: r['amount'] for r in ctx.db.execute('SELECT * FROM wallet WHERE scope=? AND owner=?', (ctx.scope, ctx.user))}
         inventory = {r['item']: r['n'] for r in ctx.db.execute('SELECT item,sum(count) n FROM item_instance WHERE scope=? AND owner=? AND expiry>? AND reserved IS NULL GROUP BY item', (ctx.scope, ctx.user, ctx.now))}
         state = dict(version=scope['version'], server_utc=ctx.now, manifest=dict(rule_version=self.rules.version, rules_hash=self.rules.sha256, profile='prototype_full', window_end=scope['end']),
-                     identity=dict(user=ctx.user, role=ctx.role, room=ctx.room, generation=ctx.session['generation']),
+                     identity=dict(user=ctx.user, role=ctx.role, room=ctx.room, generation=ctx.session['generation'], active=bool(ctx.session['active'])),
                      guild=guild, counts=dict(members=total, participating_members=participating, helpers=helpers),
                      members=members, growth=Growth.snapshot(ctx), wallet=wallet, inventory=inventory,
                      round=ctx.entity('world', (ctx.entity('last_world', ctx.user) or {}).get('id', '')))

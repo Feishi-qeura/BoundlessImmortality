@@ -24,7 +24,7 @@
 ULiveTitleEffectsComponent::ULiveTitleEffectsComponent()
 {
     PrimaryComponentTick.bCanEverTick=true;PrimaryComponentTick.TickGroup=TG_PostUpdateWork;
-    TitleSystem=TSoftObjectPtr<UNiagaraSystem>(FSoftObjectPath(TEXT("/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura")));
+    TitleSystem=TSoftObjectPtr<UNiagaraSystem>(FSoftObjectPath(TEXT("/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura")));
 }
 bool ULiveTitleEffectsComponent::IsPresentationBlocked(UWorld* World,bool IncludeGM)
 {

@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real service connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "authority issued viewer identity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native UE request enqueued for server authorization check",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UE FORBIDDEN response",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "viewer has no attempt",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLaunchEvent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "viewer UI refuses launch click",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "viewer launch request absent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture viewer-launch-gated",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-05-viewer\\viewer-launch-gated.png"
+  ],
+  "steps": [
+    "actual viewer entry",
+    "viewer identity",
+    "viewer direct native request",
+    "actual viewer refusal",
+    "viewer launch entry",
+    "viewer launch gate"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-05/Saved/",
+  "passed": true,
+  "current_step": "viewer launch gate",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLaunchEvent",
+      "slate_handled": true,
+      "page": "LaunchEvent"
+    }
+  ],
+  "countdown_resource_readback": [
+    {
+      "capture": "viewer-launch-gated",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    }
+  ],
+  "countdown_image_readback": [
+    {
+      "capture": "viewer-launch-gated",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.IMAGE: 3>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001B398F2E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    }
+  ]
+}

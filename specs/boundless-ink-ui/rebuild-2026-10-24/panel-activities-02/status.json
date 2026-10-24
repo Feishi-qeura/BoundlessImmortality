@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-24T13:06:58+08:00",
+  "slice": "panel-activities-02",
+  "state": "staged-source-ready",
+  "pages": [
+    "launch-rank",
+    "launch-special-offer-route-less-subview",
+    "offline"
+  ],
+  "approval": "approved:false",
+  "source_promoted": false,
+  "assets_imported": false,
+  "routes_integrated": false,
+  "runtime_verified": false,
+  "next_owner": "logic-integration",
+  "next_slice": [
+    "shop",
+    "consignment",
+    "orders"
+  ]
+}

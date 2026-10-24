@@ -1,0 +1,121 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:46:26.569334+00:00",
+  "passed": false,
+  "scope": [
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+  ],
+  "proof": "No UObject exports in two old containers; both canonical targets saved/hash match partial snapshot; old files still original snapshot bytes",
+  "old_files_deleted": false,
+  "operations": [
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+      "action": "native_unload_proven_empty_container_no_dirty_flag_override"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+      "action": "native_unload_proven_empty_container_no_dirty_flag_override"
+    }
+  ],
+  "unload_result": "(False, Text(\"\u4ee5\u4e0b\u8d44\u4ea7\u5df2\u7ecf\u88ab\u4fee\u6539\u5e76\u4e14\u65e0\u6cd5\u5378\u8f7d\uff1a\n    /Game/UI/Ink/Textures/HUD/T_XianxiaMeters\n    /Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1\n\u4fdd\u5b58\u8fd9\u4e9b\u8d44\u4ea7\u5373\u53ef\u5c06\u5b83\u4eec\u5378\u8f7d\u3002\"))",
+  "dirty_after": [
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+  ],
+  "map_dirty_after": [],
+  "old_registry": [
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/M_InkTitleFeather",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Atlas/M_InkScrollFade",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedButtons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedInventory",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedRank",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    }
+  ]
+}

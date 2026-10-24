@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-24T17:06:29.696867+08:00",
+  "authority": "Direct user instruction: 只考虑竖屏，不是横屏，最终9比16比例上线手机直播互动玩法",
+  "orientation": "portrait_only",
+  "aspect_ratio": "9:16",
+  "reference_viewport": {
+    "width": 720,
+    "height": 1280
+  },
+  "release_target": "mobile_live_interaction",
+  "landscape_required": false,
+  "acceptance_focus": [
+    "Portrait44page layout and navigation",
+    "Touch target placement and phone safe areas",
+    "Readable game state and live interaction entries within9:16"
+  ],
+  "evidence_boundaries": {
+    "editor_pie": "Layout and local gameplay evidence only",
+    "phone": "Actual phone runtime, touch and safe areas require device evidence",
+    "live_platform": "Actual live platform integration and release acceptance require platform evidence"
+  },
+  "platform_and_os": "Not inferred from this instruction",
+  "existing_landscape_assets": "Retained; excluded from current acceptance target"
+}

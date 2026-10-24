@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-10-24T09:16:05.239430+00:00",
+  "scope": "only88 exact files named by frozen build26 Source epoch; metadata hashing only, no recompile/review rerun",
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "files": 88,
+  "matches": 88,
+  "mismatches": []
+}

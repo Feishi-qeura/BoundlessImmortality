@@ -1,0 +1,55 @@
+{
+  "team_id": "logic-core",
+  "phase": "bounded-v8-imports-and-source-repairs-runtime-pending",
+  "latest_report": "bounded-v8-incremental-review.md",
+  "latest_readiness": "readiness-v8.json",
+  "latest_matrix": "resolved-open-matrix-v8.json",
+  "latest_screen_map": "stage-to-runtime-v8.csv",
+  "latest_runtime_evidence": "runtime-evidence-v8.json",
+  "latest_component_application": "runtime-component-application-v8.md",
+  "production_source_mount_counts": {
+    "core": 7,
+    "feature_source_wired_lazy": 37
+  },
+  "unique_component_candidates": 13,
+  "imported_candidates": 13,
+  "missing_imports": 0,
+  "missing_source_references_in_selected_scope": 0,
+  "new_component_brush_runtime_pending": 7,
+  "shared_existing_feature_binding_pending": 1,
+  "actual_default_route_observations": 22,
+  "latest_attempt_passed": false,
+  "all44_runtime_verified": false,
+  "real_service_Busy_flow_validated": false,
+  "service_business_acceptance": false,
+  "visual_approval": false,
+  "engine_started": false,
+  "build_run": false,
+  "tests_run": false,
+  "production_edits_by_this_worker": false,
+  "handoff_ready": true,
+  "captured_utc": "2026-10-24T07:40:51.853603+00:00",
+  "source_drift": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_all44_default_pie.py",
+      "captured_sha256": "1ee54ca58ed19651dbb0ea1c2ebe869116647a3b6613434249ad5266222c7046",
+      "current_sha256": "0d36aedf25454b6f0a93bbcd4fb6b5dcbc48f8b60c08a3023b437d6d2ffb1d91"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/status.json",
+      "captured_sha256": "c4ca9b0693575fa52e24f586fe68a5e5b2a647c8dcee54bc1c3500a0ddbe2b7a",
+      "current_sha256": "cfc0ca8b712c026516f684be27bcb6d47e0192b0837527638787f71d940a7771"
+    }
+  ],
+  "build19": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 88,
+    "source_ledger_records": 212,
+    "started_at": "2026-10-24T15:37:19.8935248+08:00",
+    "finished_at": "2026-10-24T15:37:42.4344135+08:00",
+    "exit_code": 0
+  },
+  "selected_inputs": "selected-inputs-v8.json",
+  "formal_native_tests_success": 3,
+  "formal_native_tests_failed": 0
+}

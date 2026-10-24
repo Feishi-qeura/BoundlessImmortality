@@ -1,0 +1,61 @@
+{
+  "team_id": "logic-core",
+  "phase": "bounded-v9-independent-real-service-proofs-qualified",
+  "latest_report": "bounded-v9-proof-remaining.md",
+  "latest_readiness": "readiness-v9.json",
+  "latest_matrix": "resolved-open-matrix-v9.json",
+  "latest_component_application": "runtime-component-application-v9.md",
+  "latest_runtime_evidence": "runtime-evidence-v9.json",
+  "latest_service_proof": "service-chain-proof-v9.csv",
+  "formal_native_tests_success": 4,
+  "formal_native_tests_failed": 0,
+  "unique_runtime_candidates": 13,
+  "unique_candidate_visible_brush_observed": 13,
+  "shared_appearance_visible_attribute_pending": true,
+  "real_service_success_chains": 15,
+  "real_service_success_commands": [
+    "Build",
+    "BuyListing",
+    "CancelListing",
+    "ConfigureMethods",
+    "Craft",
+    "CreateGuild",
+    "CreateListing",
+    "Equip",
+    "JoinGuild",
+    "LearnMethod",
+    "Purchase",
+    "RemoveMember",
+    "SignIn",
+    "Unequip"
+  ],
+  "real_service_Busy_inventory_browse_observed": true,
+  "all_real_service_flows_complete": false,
+  "latest_default_attempt_passed": false,
+  "all44_runtime_verified": false,
+  "visual_approval": false,
+  "engine_started": false,
+  "build_run": false,
+  "tests_run": false,
+  "service_started": false,
+  "production_edits_by_this_worker": false,
+  "handoff_ready": true,
+  "selected_inputs": "selected-inputs-v9.json",
+  "source_drift": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/status.json",
+      "captured_sha256": "d369078066e6c00705882a969941b89c47893b7641bfcaa5440b664469598404",
+      "current_sha256": "7b3c909cec39e14c592a7da0a3aaddce74d2cd238fc69899c4ccb6f063a6b464"
+    }
+  ],
+  "build24": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 88,
+    "source_ledger_records": 221,
+    "started_at": "2026-10-24T16:06:16.1702265+08:00",
+    "finished_at": "2026-10-24T16:06:26.6140505+08:00",
+    "exit_code": 0
+  },
+  "latest_screen_map": "stage-to-runtime-v9.csv",
+  "actual_default_route_observations": 32
+}

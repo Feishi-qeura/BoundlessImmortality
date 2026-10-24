@@ -1,0 +1,82 @@
+schema_version: 1
+project_id: boundless-ink-ui
+revision: 2026-10-23-player-core-mapping-correction
+assets:
+  - id: main-menu-v3-player-core-mapping-correction
+    kind: page
+    screen_id: main
+    path: main-menu-v3.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    format: PNG
+    mode: RGB
+    alpha: false
+    status: candidate
+    approved: false
+    review_status: remapped-candidate-needs-user-visual-review
+    version: 3
+    sha256: d980a8339ac1304a31b6f608e23a5549001281a87eeb140c51b4fa8679690f21
+    provenance:
+      original_revision: 2026-10-23-parallel-player-core
+      original_path: tribulation-live-v2.png
+      original_sha256: d980a8339ac1304a31b6f608e23a5549001281a87eeb140c51b4fa8679690f21
+      original_source_tool: built-in-image_gen
+      original_source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-1cb862d4-3ec0-43bb-a9a2-d3ca7e403509.png
+      source_association_note: Preserved from original manifest row; external source-file byte identity was not checked.
+    source_assets: []
+    notes: Byte-for-byte copy of the original file whose content is a main menu despite its old tribulation filename. Candidate only; generated scene background must not replace the protected project scene.
+
+  - id: tribulation-live-v3-player-core-mapping-correction
+    kind: page
+    screen_id: tribulation
+    path: tribulation-live-v3.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    format: PNG
+    mode: RGB
+    alpha: false
+    status: candidate
+    approved: false
+    review_status: remapped-candidate-needs-user-visual-review
+    version: 3
+    sha256: 0404447550aa3b0ea5b01288584e1b3839faaa92def0490ee9e056c18105e922
+    provenance:
+      original_revision: 2026-10-23-parallel-player-core
+      original_path: main-menu-v2.png
+      original_sha256: 0404447550aa3b0ea5b01288584e1b3839faaa92def0490ee9e056c18105e922
+      original_source_tool: built-in-image_gen
+      original_source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-fbbd0c86-c4fd-4109-af12-8d9edada6655.png
+      source_association_note: Preserved from original manifest row; external source-file byte identity was not checked.
+    source_assets: []
+    notes: Byte-for-byte copy of the original file whose content is a tribulation screen despite its old main-menu filename. Blank values remain server-fed placeholders; incidental bottom navigation is not approved.
+
+  - id: breakthrough-preparation-v3-player-core-mapping-correction
+    kind: page
+    screen_id: breakthrough
+    path: breakthrough-preparation-v3.png
+    dimensions: [940, 1672]
+    dimensions_basis: measured
+    format: PNG
+    mode: RGB
+    alpha: false
+    status: candidate
+    approved: false
+    review_status: placeholder-contract-incomplete
+    version: 3
+    sha256: 82fd74b5b5d6f2cd60a048d03bdac13e33141d76fd1a7409d06a9013bd0f8e06
+    provenance:
+      original_revision: 2026-10-23-parallel-player-core
+      original_path: breakthrough-preparation-v2.png
+      original_sha256: 82fd74b5b5d6f2cd60a048d03bdac13e33141d76fd1a7409d06a9013bd0f8e06
+      original_source_tool: built-in-image_gen
+      original_source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-38d1f7b2-c9df-4230-be09-6a150b24c337.png
+      source_association_note: Preserved from original manifest row; external source-file byte identity was not checked.
+    source_assets: []
+    placeholders:
+      material_categories: visible-labels-only
+      material_owned_and_required_quantities: blank-placeholders
+      material_sources: missing-placeholder
+      readiness: missing-placeholder
+      predicted_outcome: blank-placeholder-untyped
+      q_quality_growth_and_tribulation_chance: blank-service-fed-fields
+    notes: Visually mapped to breakthrough preparation. The image does not supply authoritative values and several required field meanings remain unspecified.

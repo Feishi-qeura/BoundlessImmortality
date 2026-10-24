@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-24T17:27:10.452308+08:00",
+  "source_build": 26,
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "report": "native-tests-07-report/index.json",
+  "summary": {
+    "succeeded": 48,
+    "succeededWithWarnings": 1,
+    "failed": 0,
+    "notRun": 0,
+    "inProcess": 0
+  },
+  "warnings": [],
+  "passed": true
+}

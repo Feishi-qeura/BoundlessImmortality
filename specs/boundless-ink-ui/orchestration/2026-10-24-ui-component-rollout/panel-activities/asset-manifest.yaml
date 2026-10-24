@@ -1,0 +1,62 @@
+schema_version: 1
+team_id: panel-activities
+revision: rollout-2026-10-24
+assets:
+  - id: hud-launch-countdown-frame-neutral-v1
+    kind: component
+    screen_id: home
+    component_id: hud-launch-countdown-frame
+    category: container
+    path: assets/hud-launch-countdown-frame-neutral-v1.png
+    dimensions: [2172, 724]
+    dimensions_basis: measured
+    aspect_ratio: 3.0
+    mode: RGBA
+    transparent_background: true
+    alpha_extrema: [0, 255]
+    prompt_path: prompts/components/hud-launch-countdown-frame.md
+    source_tool: image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4/exec-8ec6d558-210e-4bf8-9469-c0366c20d640.png
+    source_assets:
+      - revisions/2026-10-23-activity-state-correction-3/assets/pages/activities-empty-v3.png
+    sha256: 5ED2166752C6E891874CA9318D1BA74887D62A8DB32CBD15BCCD7541AE4B9985
+    status: candidate
+    approved: false
+    import_target: /Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1
+    slice: {type: 9-slice, margins: [140, 140, 90, 90], unit: source-pixels, preview_status: local-qa-passed-ue-preview-pending}
+  - id: activity-category-controls-and-cards
+    kind: runtime-widget-components
+    screen_ids: [activities, daily-activities, timed-activities, permanent-activities]
+    component_ids: [activities-category-tabs, activity-authority-state-card, activity-template-card, activity-empty-state-card, launch-special-offer-entry]
+    source_files:
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.h
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp
+    source_input: WulingFrontendData::Activity
+    import_required: false
+    status: source-candidate
+    approved: false
+  - id: launch-runtime-components
+    kind: existing-runtime-widgets
+    screen_ids: [launch, launch-rank]
+    component_ids: [launch-event-tabs, launch-task-card, launch-contribution-rank-row]
+    source_files:
+      - Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.h
+      - Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp
+    status: existing-reuse-pending-integration-review
+    approved: false
+  - id: hud-countdown-runtime-widget
+    kind: runtime-widget-component
+    screen_id: home
+    component_id: hud-launch-countdown-entry
+    source_files:
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h
+      - Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp
+    source_input: UWulingPrototypeSubsystem::Snapshot
+    import_required: true
+    frame_asset: hud-launch-countdown-frame-neutral-v1
+    status: source-candidate
+    approved: false
+
+

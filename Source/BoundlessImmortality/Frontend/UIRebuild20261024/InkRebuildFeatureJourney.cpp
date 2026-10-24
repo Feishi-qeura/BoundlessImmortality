@@ -1,0 +1,114 @@
+#include "InkRebuildFeatureHost.h"
+#include "InkRebuildFeatureData.h"
+#include "Journey/InkJourneyNewWidgets.h"
+#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+#include "Wuling/WulingPrototypeSubsystem.h"
+namespace D=InkNewFeatureData;
+namespace J=InkJourneyAdapter;
+namespace
+{
+FString ServiceMonth(const J::FView& View)
+{const auto Explicit=D::String(View.Activities,TEXT("month"));if(!Explicit.IsEmpty())return Explicit;FDateTime Day;return FDateTime::ParseIso8601(*(View.ServiceDay+TEXT("T00:00:00Z")),Day)?View.ServiceDay.Left(7):FString();}
+TArray<FInkJourneyNewDisplayRow> JourneyFacts(const D::FObject& O)
+{
+    TArray<FInkJourneyNewDisplayRow> Out;
+    const TPair<const TCHAR*,const TCHAR*> Fields[]={{TEXT("name"),TEXT("名称")},{TEXT("status"),TEXT("状态")},{TEXT("node_id"),TEXT("资源节点")},{TEXT("region"),TEXT("地域")},{TEXT("description"),TEXT("说明")},{TEXT("rank"),TEXT("名次")},{TEXT("score"),TEXT("积分")},{TEXT("reward"),TEXT("奖励")},{TEXT("start"),TEXT("开始时间")},{TEXT("end"),TEXT("结束时间")},{TEXT("online_seconds"),TEXT("在线秒数")},{TEXT("output"),TEXT("产出")},{TEXT("verse"),TEXT("今日签文")}};
+    for(const auto& Field:Fields){const auto Value=D::Text(O,Field.Key);if(!Value.IsEmpty()){FInkJourneyNewDisplayRow Row;Row.Label=FText::FromString(Field.Value);Row.Value=Value;Out.Add(Row);}}
+    return Out;
+}
+D::FObject JourneyEntry(const J::FView& View,bool Resource,const FString& Id)
+{for(const auto& Row:(Resource?View.Resources:View.Worlds).Items)if(D::String(Row,TEXT("id"))==Id)return Row;return nullptr;}
+FString RaceDenied(const D::FObject& State,UWulingPrototypeSubsystem* W,bool Active,const FString& RaceId,const FString& Kind)
+{
+    if(!Active||!W||!W->IsEnabled()||!W->IsConnected()||W->IsBusy())return TEXT("当前页面或服务未就绪");
+    const auto Race=D::Object(State,TEXT("race")),Identity=D::Object(State,TEXT("identity"));D::FObject Team;
+    for(const auto& Candidate:D::Rows(Race,TEXT("teams")))if(D::String(Candidate,TEXT("room"))==D::String(Identity,TEXT("room"))&&(D::String(Candidate,TEXT("anchor"))==D::String(Identity,TEXT("user"))||D::Names(Candidate,TEXT("representatives")).Contains(FName(*D::String(Identity,TEXT("user")))))){Team=Candidate;break;}
+    if(RaceId.IsEmpty()||D::String(Race,TEXT("id"))!=RaceId||D::String(Race,TEXT("status"))!=TEXT("Running"))return TEXT("竞采编号或阶段已变化");
+    if(!D::Has(Team,TEXT("eligible"))||!D::Boolean(Team,TEXT("eligible")))return TEXT("本队资格尚未确认");
+    if(!D::Has(Identity,TEXT("active"))||!D::Boolean(Identity,TEXT("active")))return TEXT("当前会话活跃资格尚未确认");
+    const FString User=D::String(Identity,TEXT("user")),Role=D::String(Identity,TEXT("role"));
+    if(User.IsEmpty())return TEXT("身份尚未同步");
+    if(Kind==TEXT("anchor")&&Role!=TEXT("anchor"))return TEXT("仅主播可提交");
+    if(Kind==TEXT("representative")&&Role!=TEXT("viewer"))return TEXT("仅正式代表可提交");
+    if(Kind!=TEXT("anchor")&&User!=D::String(Team,TEXT("anchor"))&&!D::Names(Team,TEXT("representatives")).Contains(FName(*User)))return TEXT("当前用户不是本队主播或代表");
+    double Now=0,Start=0;if(!D::Number(State,TEXT("server_utc"),Now)||!D::Number(Race,TEXT("start"),Start))return TEXT("服务时间尚未同步");const double Elapsed=Now-Start-120;
+    if(Kind==TEXT("anchor"))return FMath::Abs(Elapsed-90)<=10||FMath::Abs(Elapsed-270)<=10?FString():FString(TEXT("当前不在主播时机窗口"));
+    if(Kind==TEXT("representative"))return (Elapsed>=60&&Elapsed<80)||(Elapsed>=240&&Elapsed<260)?FString():FString(TEXT("当前不在代表响应窗口"));
+    if(Kind!=TEXT("guard")&&Kind!=TEXT("break"))return TEXT("未知竞采操作");
+    if(Elapsed<0||Elapsed>=360)return TEXT("当前不在挑战期");const bool Guard=FMath::Min(5,int32(Elapsed/60))%2==0;
+    return Guard==(Kind==TEXT("guard"))?FString():FString(TEXT("当前轮次要求另一项共同任务"));
+}
+}
+void UInkRebuildFeatureHost::RefreshJourney()
+{
+    if(!OwnerPage)return;auto* W=Service();const auto Context=J::Capture(W,IsActivePage());const auto View=J::Read(Context);
+    const FText Status=FText::FromString(W?W->GetStatus():TEXT("服务未启用"));
+    if(auto* Hub=Cast<UInkJourneyHubPageWidget>(OwnerPage))Hub->SetAuthorityState(Status,D::Text(D::Object(DisplaySnapshot,TEXT("guild")),TEXT("name")));
+    if(auto* Map=Cast<UInkJourneyMapPageWidget>(OwnerPage))
+    {
+        const bool Resource=PageId==TEXT("ResourceContest");TArray<FInkJourneyNewMapEntry> Entries;
+        for(const auto& Row:(Resource?View.Resources:View.Worlds).Items)
+        {
+            FInkJourneyNewMapEntry Entry;Entry.EntryId=D::String(Row,TEXT("id"));if(Entry.EntryId.IsEmpty())continue;Entry.GroupId=D::String(Row,TEXT("node_id"));Entry.Name=D::Named(Row,TEXT("name"),Entry.EntryId);Entry.Details=JourneyFacts(Row);
+            Entry.State=!D::Has(Row,TEXT("open"))?EInkJourneyNewEntryState::Unknown:D::Boolean(Row,TEXT("open"))?EInkJourneyNewEntryState::Available:EInkJourneyNewEntryState::Locked;
+            Entry.StateText=FText::FromString(Entry.State==EInkJourneyNewEntryState::Available?TEXT("已开放"):Entry.State==EInkJourneyNewEntryState::Locked?TEXT("未开放"):TEXT("开放状态待同步"));
+            double X=0,Y=0;const bool Coordinates=(D::Number(Row,TEXT("map_x"),X)&&D::Number(Row,TEXT("map_y"),Y))||(D::Number(Row,TEXT("x"),X)&&D::Number(Row,TEXT("y"),Y));Entry.bPositionKnown=Coordinates&&X>=0&&X<=1&&Y>=0&&Y<=1;if(Entry.bPositionKnown)Entry.NormalizedPosition=FVector2D(X,Y);Entries.Add(Entry);
+        }
+        Map->SetAuthorityData(Status,Entries,SelectedEntry);Map->SetTravelFeedback(FText::FromString(PreviewFeedback),W&&W->IsBusy());
+    }
+    if(auto* Region=Cast<UInkJourneyRegionPageWidget>(OwnerPage))
+    {const auto Row=JourneyEntry(View,false,SelectedEntry);J::FRequest Request;Request.Action=J::EAction::WorldTravel;Request.EntryId=SelectedEntry;Request.bConfirmed=true;Region->SetAuthorityData(SelectedEntry,D::Named(Row,TEXT("name"),SelectedEntry),Status,JourneyFacts(Row),J::Evaluate(Context,Request).bAllowed);Region->SetTravelFeedback(FText::FromString(PreviewFeedback),W&&W->IsBusy());}
+    if(auto* Result=Cast<UInkJourneyDetailResultPageWidget>(OwnerPage))
+    {
+        const bool Resource=PageId==TEXT("ResourceDetail");const auto Row=Resource?JourneyEntry(View,true,SelectedEntry):D::Object(DisplaySnapshot,PageId==TEXT("RaceSettlement")?TEXT("race"):TEXT("round"));
+        J::FRequest Request;Request.Action=J::EAction::ResourceTravel;Request.EntryId=SelectedEntry;Request.bConfirmed=true;
+        Result->SetPageData(FText::FromString(Resource?TEXT("资源详情"):PageId==TEXT("RaceSettlement")?TEXT("竞采结算"):TEXT("事件结算")),Resource?SelectedEntry:D::String(Row,TEXT("id")),Status,JourneyFacts(Row),Resource&&J::Evaluate(Context,Request).bAllowed);Result->SetTravelFeedback(FText::FromString(PreviewFeedback),W&&W->IsBusy());
+    }
+    if(auto* Daily=Cast<UInkJourneyDailySignInPageWidget>(OwnerPage))
+    {
+        J::FRequest Request;Request.ExpectedDay=View.ServiceDay;const auto Gate=J::Evaluate(Context,Request);
+        const auto State=!Context.bEnabled?EInkJourneyNewClaimState::Disabled:!Context.bConnected?EInkJourneyNewClaimState::Offline:Context.bBusy?EInkJourneyNewClaimState::Pending:View.Signed.IsSet()&&View.Signed.GetValue()?EInkJourneyNewClaimState::Claimed:Gate.bAllowed?EInkJourneyNewClaimState::Available:EInkJourneyNewClaimState::Unknown;
+        Daily->SetPresentation(View.ServiceDay,State,Gate.bAllowed?Status:FText::FromString(Gate.Reason),View.MonthSignCount.IsSet(),View.MonthSignCount.IsSet()?int32(View.MonthSignCount.GetValue()):0,!View.Verse.IsEmpty(),FText::FromString(View.Verse));Daily->SetClaimFeedback(FText::FromString(PreviewFeedback),Context.bBusy);
+    }
+    if(auto* Monthly=Cast<UInkJourneyMonthlySignInPageWidget>(OwnerPage))
+    {
+        TArray<FInkJourneyNewMilestone> Milestones;
+        for(const auto& Row:View.MonthlyChests.Items){FInkJourneyNewMilestone M;if(!D::Integer(Row,TEXT("milestone"),M.Milestone))continue;M.bKnown=D::Has(Row,TEXT("eligible"))&&D::Has(Row,TEXT("claimed"));M.bEligible=CalendarOffset==0&&CanDispatch()&&D::Boolean(Row,TEXT("eligible"));M.bClaimed=D::Boolean(Row,TEXT("claimed"));M.Status=D::Text(Row,TEXT("status"));M.Rewards=JourneyFacts(D::Object(Row,TEXT("reward")));const auto RewardText=D::Text(Row,TEXT("reward"));if(!RewardText.IsEmpty()){FInkJourneyNewDisplayRow Reward;Reward.Label=FText::FromString(TEXT("奖励说明"));Reward.Value=RewardText;M.Rewards.Add(Reward);}if(CalendarOffset==0)Milestones.Add(M);}
+        int32 CalendarDays=0,ServerDay=0;FString Month=ServiceMonth(View);FDateTime Date;
+        if(FDateTime::ParseIso8601(*(Month+TEXT("-01T00:00:00Z")),Date)){const int32 Index=Date.GetYear()*12+Date.GetMonth()-1+FMath::Clamp(CalendarOffset,-12,12);const int32 Year=Index/12,MonthIndex=Index%12+1;CalendarDays=FDateTime::DaysInMonth(Year,MonthIndex);Month=FString::Printf(TEXT("%04d-%02d"),Year,MonthIndex);FDateTime Today;if(CalendarOffset==0&&FDateTime::ParseIso8601(*(View.ServiceDay+TEXT("T00:00:00Z")),Today))ServerDay=Today.GetDay();}
+        Monthly->SetPresentation(View.ServiceDay,Month,CalendarDays,ServerDay,CalendarOffset==0&&View.MonthSignCount.IsSet(),View.MonthSignCount.IsSet()?int32(View.MonthSignCount.GetValue()):0,Milestones,CalendarOffset==0?Status:FText::FromString(TEXT("仅浏览日期，历史签到与奖励状态未提供")));Monthly->SetMilestoneFeedback(FText::FromString(PreviewFeedback),Context.bBusy);
+    }
+    const auto Race=D::Object(DisplaySnapshot,TEXT("race")),Queue=D::Object(DisplaySnapshot,TEXT("race_queue"));
+    if(auto* Lobby=Cast<UInkJourneyRaceLobbyPageWidget>(OwnerPage)){Lobby->SetAuthorityData(D::String(Queue,TEXT("id")),D::Text(Queue,TEXT("status")),JourneyFacts(Queue),CanDispatch()&&D::String(Queue,TEXT("status"))==TEXT("Queued"));Lobby->SetCancelFeedback(FText::FromString(PreviewFeedback),Context.bBusy);}
+    if(auto* Live=Cast<UInkJourneyRaceLivePageWidget>(OwnerPage))
+    {
+        TArray<FInkJourneyNewRaceActionOption> Actions;const TPair<const TCHAR*,const TCHAR*> Kinds[]={{TEXT("anchor"),TEXT("主播时机")},{TEXT("representative"),TEXT("代表响应")},{TEXT("guard"),TEXT("护阵")},{TEXT("break"),TEXT("破障")}};
+        for(const auto& Kind:Kinds){FInkJourneyNewRaceActionOption Action;Action.Kind=Kind.Key;Action.Caption=FText::FromString(Kind.Value);const auto Reason=RaceDenied(DisplaySnapshot,W,IsActivePage(),D::String(Race,TEXT("id")),Action.Kind);Action.bKnown=Race.IsValid();Action.bEnabled=Reason.IsEmpty();Action.Reason=FText::FromString(Reason);Actions.Add(Action);}
+        Live->SetAuthorityData(D::String(Race,TEXT("id")),D::Text(Race,TEXT("status")),JourneyFacts(Race),Actions);Live->SetActionFeedback(FText::FromString(PreviewFeedback),Context.bBusy);
+    }
+    if(auto* ReadOnly=Cast<UInkJourneyReadOnlyDataPageWidget>(OwnerPage))
+    {
+        const auto Object=PageId==TEXT("DailyFortune")?View.Activities:PageId==TEXT("ResourceLease")?D::Object(DisplaySnapshot,TEXT("lease")):D::Object(DisplaySnapshot,PageId==TEXT("ResourceRanking")?TEXT("resource_ranking"):TEXT("resource_rewards"));
+        auto Facts=JourneyFacts(Object);bool RowsProvided=false;for(const auto& Row:D::Rows(Object,TEXT("rows"),&RowsProvided))Facts.Append(JourneyFacts(Row));ReadOnly->SetAuthorityData(Status,PageId==TEXT("DailyFortune")?D::Has(Object,TEXT("verse")):RowsProvided,D::String(Object,TEXT("id")),Facts);
+    }
+}
+void UInkRebuildFeatureHost::HandleHubNavigation(const FString& Action)
+{if(Action==TEXT("open-world"))Navigate(TEXT("WorldCultivation"));else if(Action==TEXT("open-resources"))Navigate(TEXT("ResourceContest"));else if(Action==TEXT("open-wuling"))Navigate(TEXT("Wuling"));}
+void UInkRebuildFeatureHost::HandleJourneySelected(const FString& EntryId){SelectedEntry=EntryId;}
+void UInkRebuildFeatureHost::HandleJourneyTravel(const FString& EntryId)
+{
+    if(EntryId!=SelectedEntry)return;J::FRequest Request;Request.Action=PageId==TEXT("WorldCultivation")||PageId==TEXT("RegionDetail")?J::EAction::WorldTravel:J::EAction::ResourceTravel;Request.EntryId=EntryId;Request.bConfirmed=true;FString Message;J::Submit(Service(),IsActivePage(),Request,Message);Feedback(Message);RefreshAuthority(true);
+}
+void UInkRebuildFeatureHost::HandleSignIn(const FString& Day)
+{J::FRequest Request;Request.ExpectedDay=Day;FString Message;J::Submit(Service(),IsActivePage(),Request,Message);Feedback(Message);RefreshAuthority(true);}
+void UInkRebuildFeatureHost::HandleMilestone(const FString& Day,const FString& Month,int32 Milestone)
+{
+    const auto Current=J::Read(J::Capture(Service(),IsActivePage()));const auto CurrentMonth=ServiceMonth(Current);if(CalendarOffset!=0||Month!=CurrentMonth){Feedback(TEXT("服务月份已变化，请重新确认"));return;}J::FRequest Request;Request.Action=J::EAction::MonthlyChest;Request.ExpectedDay=Day;Request.Milestone=Milestone;Request.bConfirmed=true;FString Message;J::Submit(Service(),IsActivePage(),Request,Message);Feedback(Message);RefreshAuthority(true);
+}
+void UInkRebuildFeatureHost::HandleCancelQueue()
+{if(D::String(D::Object(Service()?Service()->Snapshot():nullptr,TEXT("race_queue")),TEXT("status"))!=TEXT("Queued"))return;Submit(TEXT("CancelRaceQueue"),MakeShared<FJsonObject>());RefreshAuthority(true);}
+void UInkRebuildFeatureHost::HandleRaceAction(const FString& RaceId,const FString& Kind)
+{
+    auto* W=Service();const FString Reason=RaceDenied(W?W->Snapshot():nullptr,W,IsActivePage(),RaceId,Kind);if(!Reason.IsEmpty()){Feedback(Reason);return;}
+    auto Args=MakeShared<FJsonObject>();Args->SetStringField(TEXT("race_id"),RaceId);Args->SetStringField(TEXT("kind"),Kind==TEXT("guard")||Kind==TEXT("break")?TEXT("common"):Kind);Args->SetStringField(TEXT("action"),Kind==TEXT("guard")?TEXT("护阵"):Kind==TEXT("break")?TEXT("破障"):TEXT("响应"));const bool Accepted=W->SubmitPrototypeCommand(TEXT("SubmitRaceAction"),D::Json(Args));Feedback(Accepted?TEXT("请求已提交，等待确认"):W->GetStatus());RefreshAuthority(true);
+}

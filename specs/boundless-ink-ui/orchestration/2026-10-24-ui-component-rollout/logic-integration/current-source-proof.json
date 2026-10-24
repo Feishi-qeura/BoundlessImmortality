@@ -1,0 +1,728 @@
+{
+  "updated_at": "2026-10-24T12:13:39.669197+08:00",
+  "assets": [
+    {
+      "component_id": "world-node-available",
+      "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-journey/assets/sprites/world-node-available-v1.png",
+      "sha256": "080a6d45502f62e050fc1f8b07f9d14e32df3a37fc27de207f998ddc059a3268",
+      "width": 348,
+      "height": 359,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        340,
+        351
+      ],
+      "approved": false,
+      "slice": null,
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable.T_Journey_WorldNodeAvailable"
+    },
+    {
+      "component_id": "world-node-locked",
+      "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-journey/assets/sprites/world-node-locked-v1.png",
+      "sha256": "eef23ab7ce887ffec7daf10b3080b986a6afce70cd580b30b0fda628e2cb3b2d",
+      "width": 342,
+      "height": 358,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        334,
+        350
+      ],
+      "approved": false,
+      "slice": null,
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked.T_Journey_WorldNodeLocked"
+    },
+    {
+      "component_id": "rank-wuling-paper-panel",
+      "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-rank/assets/rank-wuling-paper-panel-default-v1.png",
+      "sha256": "9b243e6844d92ff182d88b3bd28807583e2ff1cf51f7884b9326a36a0f4ad293",
+      "width": 1448,
+      "height": 1086,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        27,
+        1410,
+        1068
+      ],
+      "approved": false,
+      "slice": null,
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1"
+    },
+    {
+      "component_id": "hud-launch-countdown-frame",
+      "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-activities/assets/hud-launch-countdown-frame-neutral-v1.png",
+      "sha256": "5ed2166752c6e891874ca9318d1ba74887d62a8db32cbd15bccd7541ae4b9985",
+      "width": 2172,
+      "height": 724,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        13,
+        21,
+        2162,
+        698
+      ],
+      "approved": false,
+      "slice": null,
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "component_id": "breakthrough-material-slot-frame-default-v1",
+      "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-player/assets/breakthrough-material-slot-frame-default-v1.png",
+      "sha256": "8b93fa72780f31737ca5fc7926b5c79f7f796bcaf14c773cb2ba47b62193d9e3",
+      "width": 1254,
+      "height": 1254,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        13,
+        1234,
+        1254
+      ],
+      "approved": false,
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nine_slice": false
+      },
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1.T_BreakthroughMaterialSlotFrame_Default_v1"
+    }
+  ],
+  "public_source": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "before_sha256": "31e63d3dd2872ba4bd03d315977d38b8f706cb603a20316c76736b440e0148cd",
+      "after_sha256": "4948f58bf3a5b15d62bf06875529e606709fef53dfd5e86cc032dd40dca17fb9",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "before_sha256": "47dcb72a43b716d609721e2ea843bf03a9724373ef1e439094917d2acd8019f8",
+      "after_sha256": "14c121def662130e64ec2512079076cc062bcf92570c0e4f1112a07bc2bd02de",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+      "before_sha256": "81ba285dbf703e2130fb05f3e235b005c5a7087ce261b278a9ea4a948ee7878b",
+      "after_sha256": "358b22712b73f44122f065b3a39fcc7f907002cb9f81bc872143b182dca4021f",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "before_sha256": "f396c4f91173f1211a7a9e9a35d96da21654e252e535a469da973206fcc8882f",
+      "after_sha256": "b4f59b2a1f17c2c1243ff80eb6db886cf729d3ee10ba1d807f29042656deda6c",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "before_sha256": "3ea549de479c0a1f41442d5b20f41381d9196c0e306578d52a322668930a600f",
+      "after_sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "before_sha256": "c1bf9282b59cb08fcc767eebbc7a84d7af4b5c44b288412904628d97fded9ee7",
+      "after_sha256": "4b19973d09470e57b480c097f8ea293f5a4572275eb08cad7819d7051ff40163",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInShell.cpp",
+      "before_sha256": "1dac4eb4cd621566b756d73bf53f0cb79edd5a95ef7bb6098febb0f1909009bd",
+      "after_sha256": "25236679237d23ca36cb57d92a87eecfc07e5b6cd5ef68367bdd4bc24e4921bd",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "before_sha256": "663a42c254e5a7ac0c63eba889f37e3b38498d0e2c202eb2b53df50592d0c383",
+      "after_sha256": "3ac7b5d8bd28cfeffc4d7ab9a56969a7048d43b4938b6cc94b523dbf9a38e2c5",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "before_sha256": "48041c803496f175b03b95fb07406b396720df85ed4d9bff313d54a385520fcb",
+      "after_sha256": "a68e6a6885124236e070919bc54b8ccbeb8af097302ef0c5a8d4e8a92d84d01e",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "before_sha256": "e5eb86247027349449dc512bb6cfffdff171d8e312747b4f1b49ab1e3d9ca0f6",
+      "after_sha256": "5cd908a77635008b88d3d92555ea34751f5744b58db6e54c2fbcb73e7800042f",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "before_sha256": "cbdf7e11fc3593453b55a5ce3be286666ed6dc684e1b8a6cc6fcd4edc51f1965",
+      "after_sha256": "b781700cf8ff761994d8b04bc4fe06bda72dc89e297321659e70b17c52b1a307",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "before_sha256": "060194682ed7d85e39f39e916d78acb6b02d07e3775af2f08901d98813d215d0",
+      "after_sha256": "4c68bb869ee130fd602766d911a505c475dbf068bd5b591cc7eb61e9e5a89f1c",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.h",
+      "before_sha256": "5d8921d6017f86286930f262636cccd0d25178ca0f48b2dfc7e7df9db6aecee3",
+      "after_sha256": "5d8921d6017f86286930f262636cccd0d25178ca0f48b2dfc7e7df9db6aecee3",
+      "changed": false
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.h",
+      "before_sha256": "a6afe9d700c126dbb59f37da14f5cbc13f26f85df781b94d7f1724b43eac561c",
+      "after_sha256": "a00d9e248808b99969ee2f6e5a271b5b1d4c7a87a76334519d886db3b5d460d6",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "before_sha256": "d8a533439f620cc0396c2aa4fb6d51ae1923a713c7c9ae7564a72ef905f0da5e",
+      "after_sha256": "61704c98eb1cbe97cb0e0b64c60e9bf019086993d6cc800bc992a2de8441176a",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "before_sha256": "e752f51167c5d4d8f5c5704f808625a718e4487d0024730e4d545319e50ddff0",
+      "after_sha256": "009ceedf240b6cc5c197bb896377000de9945c9c2ac8c6624c2e075f873977d1",
+      "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "before_sha256": "1da70ec75c122dc1c18f1a6fdfc4ce2a90c1ae4c92a9eb4cb49917a6a97063b7",
+      "after_sha256": "9b580f2a62e3181c45c74a99273e0051499fc73cab9aa924c505720ff408cc29",
+      "changed": true
+    }
+  ],
+  "frozen_panel_source_drift": [],
+  "authorized_frozen_source_corrections": [
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkActivityRolloutPanels.cpp",
+      "before_sha256": "474b78c7cd1e402e95c1cdf512b767a8ec33eb12aceeec71866adf4746203dbb",
+      "after_sha256": "4b56e511689be47022b5c04de87289d118510f96028e2d0a2736eaa95ff5bbc3",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkActivityRolloutPanels.h",
+      "before_sha256": "923168e2dc9b59d4c165916a9f04352dfafd102c252fad2707864fb4112620be",
+      "after_sha256": "02eb15f57c147a582924e043d9620b64ba5aa7fbd3205d083b8db6808bb705e5",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "4cbc1efd430265b133cd27d0e93adb1f3f3e0967cbd2b3e4f32b3f3f0349a002",
+      "after_sha256": "cfdcaa6afba605c463c2636583d8b0fcf99b6586083f1de900f4220b20a09f27",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkLaunchHudCountdownWidget.h",
+      "before_sha256": "98d635ed9d4dc3519a272a3c13c9d6fe2f381fca18cb46f9a0ca4d7ded615247",
+      "after_sha256": "c26af70c15afaddbde9667dd7d7f8a3c85d95478192154a2437683eae06fc1ab",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Journey\\JourneyRolloutWidgets.cpp",
+      "before_sha256": "89d1b5018acc53525c157eb1c57eda57701a94fee97c78a1fb289fc813405580",
+      "after_sha256": "eb45f6f47af844b0ac2306a811da62f6eb000c689901e2a55222bd468cd3b6f6",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Journey\\JourneyRolloutWidgets.h",
+      "before_sha256": "916add47f80e7cf4f161a3a77b4aedf38ddb98f70eec74e88ad30f00772ea94c",
+      "after_sha256": "7a4a0b175d54b9db61eaac1edcb499ac98aae0d8877c2420aa589ee8957571e6",
+      "reason": "exact diagnostic engine repair chain"
+    },
+    {
+      "before_sha256": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa",
+      "after_sha256": "e0c9738519cafa3050b7f99d607a84aaa95c7f70cea1c8b69507e11e9e35dbb9",
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp"
+    },
+    {
+      "before_sha256": "9c175c4fc41fdab82efc5de4796d424f60ab068f7ef7da0b94abfdf44eac0e91",
+      "after_sha256": "a3fe55cb95416025c3f16643e9a91a4fc3457241b94b0b89671e4ba6e2ecb126",
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Player\\InkPlayerMaterialSlotWidget.cpp",
+      "before_sha256": "d0c80272a5a8f0895741b9b19a4facb54a3edd9ba8714b00b9e8fdb06f5bbbb3",
+      "after_sha256": "908f764257f2ba7341788811e8fbdaae2dc3b8ef20cb13f4460d2ef939e96180",
+      "reason": "exact diagnostic engine repair chain"
+    }
+  ],
+  "correction_ledger_sha256": "0b69dcbef29078b0a501d77242bd2ec2769987ae5324fc0fd27e5fc6019d9cd0",
+  "new_source": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp",
+      "sha256": "4b56e511689be47022b5c04de87289d118510f96028e2d0a2736eaa95ff5bbc3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.h",
+      "sha256": "02eb15f57c147a582924e043d9620b64ba5aa7fbd3205d083b8db6808bb705e5"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "sha256": "cfdcaa6afba605c463c2636583d8b0fcf99b6586083f1de900f4220b20a09f27"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h",
+      "sha256": "c26af70c15afaddbde9667dd7d7f8a3c85d95478192154a2437683eae06fc1ab"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "sha256": "eb45f6f47af844b0ac2306a811da62f6eb000c689901e2a55222bd468cd3b6f6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h",
+      "sha256": "7a4a0b175d54b9db61eaac1edcb499ac98aae0d8877c2420aa589ee8957571e6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp",
+      "sha256": "e0c9738519cafa3050b7f99d607a84aaa95c7f70cea1c8b69507e11e9e35dbb9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h",
+      "sha256": "f38f5ff999b38ca71b78303266246384add3076511b30c5ffd665105c33be473"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp",
+      "sha256": "a3fe55cb95416025c3f16643e9a91a4fc3457241b94b0b89671e4ba6e2ecb126"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.cpp",
+      "sha256": "71fd4888eab446a8682957e00ec6ba79fa8a3ab54754fad07ed8c1ff4a5f5f41"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.h",
+      "sha256": "95805e449828fdbf33fa95d1dc1f27144c266dbde7ab17bd164cd511d7b63b75"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCorePolicy.h",
+      "sha256": "d835ab9cba35056a5fe5bf55290340f873226984a94e01ac36cad73af29a02e3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "sha256": "fdab0e8aad0047e412b094763c450e3d229e7d57e2235bc15e2af0bbae43fea2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h",
+      "sha256": "0b1ad1fbbc7f9ab8caa49657cf73cf5f53e8407c021b11e88a3df016a57c97eb"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedJourneyWidgets.cpp",
+      "sha256": "cca92c5f53305c62688700d2de523bbea2596df213f89b36e7e0cdb23f8e7d67"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedJourneyWidgets.h",
+      "sha256": "369ea2905f49a3e1428262bafa24ca29b253bf82965fdee2b288a6fe4ec1ca34"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.cpp",
+      "sha256": "8de61c7320aec7c81430e8f8eeea073a9f93a8040b7d6c0a4109f2025d6a031b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h",
+      "sha256": "ea04e67e5c49cc4670f8f35926ccd647bc052bfb099617691e81ed74483010c2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapterTests.cpp",
+      "sha256": "4d7cfc7fc7181f27c317188d3c76497cc1e0a2c9fc443ae3be7234bcf41c772d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.cpp",
+      "sha256": "43202b429c56885248e63a946f83ff1978b34d8c89971d5a671f1ec242342801"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.h",
+      "sha256": "e0d24d3f74bef2817299f944aad28439bf5b075ba9e82945ddf19d1d4756f632"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.cpp",
+      "sha256": "908f764257f2ba7341788811e8fbdaae2dc3b8ef20cb13f4460d2ef939e96180"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.h",
+      "sha256": "7a1369e944a2b47b15358e0520a54aa2b52682cd3869abaa4e1756ed22ab09ad"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingComponents.cpp",
+      "sha256": "d7a4652812711553988b23ead7ca99de3ab8e145f0f58bcc1520cd709612f2e0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingComponents.h",
+      "sha256": "3b26b3b0ddadeed25b545a74b5c0240fdc6f6ec9e262476a33947f4faac7f0e2"
+    }
+  ],
+  "wbp_baseline": [
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "file": "Content/UI/Ink/Widgets/Shared/WBP_InkFrontend.uasset",
+      "sha256": "f4e75ffcd587700ee997e2ec64eaa28a0bb1f8661159334805755e48e8669444"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+      "file": "Content/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard.uasset",
+      "sha256": "16de1ec9001e4355a7ac8f7b056e84674f99baef0fcfaf430c75decbfb97afc3"
+    }
+  ],
+  "diagnostic_engine_repairs": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.cpp",
+      "before_sha256": "d0c80272a5a8f0895741b9b19a4facb54a3edd9ba8714b00b9e8fdb06f5bbbb3",
+      "after_sha256": "908f764257f2ba7341788811e8fbdaae2dc3b8ef20cb13f4460d2ef939e96180",
+      "backup": "engine-source-before/0/Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.cpp",
+      "diagnostic": "build-02.log C2039 UButton::SetIsFocusable; same unsupported UButton API in delivered Journey widgets",
+      "authority": "engine-source-before/0/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.127449+08:00",
+      "finished_at": "2026-10-24T11:33:45.485996+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "89d1b5018acc53525c157eb1c57eda57701a94fee97c78a1fb289fc813405580",
+      "after_sha256": "77cf247d1e86c83139dfe66253fae35dabd47fcf4ada0aea99e4dabe2cdd8868",
+      "backup": "engine-source-before/1/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "diagnostic": "build-02.log C2039 UButton::SetIsFocusable; same unsupported UButton API in delivered Journey widgets",
+      "authority": "engine-source-before/1/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.291654+08:00",
+      "finished_at": "2026-10-24T11:33:45.618793+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "before_sha256": "9d33648e02d7ba0df0dc3287d6345810e582bb0a89164341d5891aae30353fa2",
+      "after_sha256": "7ac2c9538799f754260a344a1c011b78de1291d5d681772b6fab95afa6854186",
+      "backup": "engine-source-before/2/Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "diagnostic": "build-02.log C4458 Feedback hides UInkExtensionWidget::Feedback; identical inherited-local collision in current integration methods",
+      "authority": "engine-source-before/2/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.429560+08:00",
+      "finished_at": "2026-10-24T11:33:45.768915+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "before_sha256": "04be00aa8551faa39f42561322590502b709c0eaf429711497672df92c613246",
+      "after_sha256": "3ac7b5d8bd28cfeffc4d7ab9a56969a7048d43b4938b6cc94b523dbf9a38e2c5",
+      "backup": "engine-source-before/3/Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "diagnostic": "build-02.log C4458 Feedback hides UInkExtensionWidget::Feedback; identical inherited-local collision in current integration methods",
+      "authority": "engine-source-before/3/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.568810+08:00",
+      "finished_at": "2026-10-24T11:33:45.912758+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "before_sha256": "477191d6fa4e3be3295edf5fdaf32b289e00ba72cba1582bec635e80dba1a686",
+      "after_sha256": "4c68bb869ee130fd602766d911a505c475dbf068bd5b591cc7eb61e9e5a89f1c",
+      "backup": "engine-source-before/4/Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "diagnostic": "build-02.log C4458 Feedback hides UInkExtensionWidget::Feedback; identical inherited-local collision in current integration methods",
+      "authority": "engine-source-before/4/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.706679+08:00",
+      "finished_at": "2026-10-24T11:33:46.062296+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "before_sha256": "9c9286abe905fcfadbb741eed5246cf576b313bfc55fa73eb0da1566943071fe",
+      "after_sha256": "ca16fcc474b83661bc0e05f61fc83c39805cfc28a15b06aab2026ec50a43c1cc",
+      "backup": "engine-source-before/5/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "diagnostic": "build-02.log C4458 Feedback hides UInkExtensionWidget::Feedback; identical inherited-local collision in current integration methods",
+      "authority": "engine-source-before/5/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:33:31.859238+08:00",
+      "finished_at": "2026-10-24T11:33:46.212239+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.h",
+      "before_sha256": "923168e2dc9b59d4c165916a9f04352dfafd102c252fad2707864fb4112620be",
+      "after_sha256": "02eb15f57c147a582924e043d9620b64ba5aa7fbd3205d083b8db6808bb705e5",
+      "backup": "engine-source-before/6/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.h",
+      "diagnostic": "build-03.log: C2143 PURE_VIRTUAL return missing semicolon; C1083 unqualified InkPresentationStyle include; C2440/C2039 JsonObject vs JsonValue and C4458 Slot hiding UWidget::Slot",
+      "authority": "engine-source-before/6/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:36:52.428243+08:00",
+      "finished_at": "2026-10-24T11:36:54.935590+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp",
+      "before_sha256": "474b78c7cd1e402e95c1cdf512b767a8ec33eb12aceeec71866adf4746203dbb",
+      "after_sha256": "4b56e511689be47022b5c04de87289d118510f96028e2d0a2736eaa95ff5bbc3",
+      "backup": "engine-source-before/7/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp",
+      "diagnostic": "build-03.log: C2143 PURE_VIRTUAL return missing semicolon; C1083 unqualified InkPresentationStyle include; C2440/C2039 JsonObject vs JsonValue and C4458 Slot hiding UWidget::Slot",
+      "authority": "engine-source-before/7/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:36:52.572242+08:00",
+      "finished_at": "2026-10-24T11:36:55.064310+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "4cbc1efd430265b133cd27d0e93adb1f3f3e0967cbd2b3e4f32b3f3f0349a002",
+      "after_sha256": "95dd15bd82a28db3325c64b1aa318f371cabbf0ef724bf22669658c9202402a6",
+      "backup": "engine-source-before/8/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "diagnostic": "build-03.log: C2143 PURE_VIRTUAL return missing semicolon; C1083 unqualified InkPresentationStyle include; C2440/C2039 JsonObject vs JsonValue and C4458 Slot hiding UWidget::Slot",
+      "authority": "engine-source-before/8/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:36:52.708278+08:00",
+      "finished_at": "2026-10-24T11:36:55.207336+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Public/InkFrontendEditorLibrary.h",
+      "before_sha256": "6b124bb6960a9f44eaac406abba8c4ecb9758ac2e47e4c0d122485cf7a2897db",
+      "after_sha256": "7f99c0b3aa20f113cc4d4c26955be3cecdb704893d8148170183bc707bde6539",
+      "backup": "engine-source-before/9/Source/BoundlessImmortalityEditor/Public/InkFrontendEditorLibrary.h",
+      "diagnostic": "Necessary leased PIE validation helper: existing ClickAction only enumerates UInkFrontendActionButton; material/calendar/claim use ordinary UButton. Add gated real Slate click for these visible components, not delegate dispatch.",
+      "authority": "engine-source-before/9/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:36:52.847861+08:00",
+      "finished_at": "2026-10-24T11:36:55.335362+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "before_sha256": "96df89460fc931131084d226e8a831ae300e92c8ea8d4ee188b48219435f6e64",
+      "after_sha256": "93470847f62c0fff8a28ae520913126df5b72d7038b9cd5ba79b335b05a18b5e",
+      "backup": "engine-source-before/10/Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "diagnostic": "Necessary leased PIE validation helper: existing ClickAction only enumerates UInkFrontendActionButton; material/calendar/claim use ordinary UButton. Add gated real Slate click for these visible components, not delegate dispatch.",
+      "authority": "engine-source-before/10/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:36:52.990843+08:00",
+      "finished_at": "2026-10-24T11:36:55.475565+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h",
+      "before_sha256": "916add47f80e7cf4f161a3a77b4aedf38ddb98f70eec74e88ad30f00772ea94c",
+      "after_sha256": "7a4a0b175d54b9db61eaac1edcb499ac98aae0d8877c2420aa589ee8957571e6",
+      "backup": "engine-source-before/11/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h",
+      "diagnostic": "Rendered PIE-01: native claim/calendar/glyph root widgets created after Slate RebuildWidget in NativeConstruct; claim label exists but no rendered CTA and actual Slate click false. Build roots during NativeOnInitialized.",
+      "authority": "engine-source-before/11/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:40.526574+08:00",
+      "finished_at": "2026-10-24T11:50:43.339180+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "77cf247d1e86c83139dfe66253fae35dabd47fcf4ada0aea99e4dabe2cdd8868",
+      "after_sha256": "9875c4b02b6a0f8e7f6160289bd0d76daa89b027f83719b36b346c5dcc2311d6",
+      "backup": "engine-source-before/12/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "diagnostic": "Rendered PIE-01: native claim/calendar/glyph root widgets created after Slate RebuildWidget in NativeConstruct; claim label exists but no rendered CTA and actual Slate click false. Build roots during NativeOnInitialized.",
+      "authority": "engine-source-before/12/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:40.672489+08:00",
+      "finished_at": "2026-10-24T11:50:43.479165+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h",
+      "before_sha256": "98d635ed9d4dc3519a272a3c13c9d6fe2f381fca18cb46f9a0ca4d7ded615247",
+      "after_sha256": "c26af70c15afaddbde9667dd7d7f8a3c85d95478192154a2437683eae06fc1ab",
+      "backup": "engine-source-before/13/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h",
+      "diagnostic": "Rendered PIE-01: native claim/calendar/glyph root widgets created after Slate RebuildWidget in NativeConstruct; claim label exists but no rendered CTA and actual Slate click false. Build roots during NativeOnInitialized.",
+      "authority": "engine-source-before/13/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:40.820014+08:00",
+      "finished_at": "2026-10-24T11:50:43.613782+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "95dd15bd82a28db3325c64b1aa318f371cabbf0ef724bf22669658c9202402a6",
+      "after_sha256": "7eb8da7b59a7556b7d84ff7fde2d82a9e3856f973f5da09656d3fea8997dd6b6",
+      "backup": "engine-source-before/14/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "diagnostic": "Rendered PIE-01: native claim/calendar/glyph root widgets created after Slate RebuildWidget in NativeConstruct; claim label exists but no rendered CTA and actual Slate click false. Build roots during NativeOnInitialized.",
+      "authority": "engine-source-before/14/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:40.977576+08:00",
+      "finished_at": "2026-10-24T11:50:43.746795+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+      "before_sha256": "1451e5bce0797580f477ac4ad514491f62eb7dc0f48fdba057539ac44439a3a3",
+      "after_sha256": "358b22712b73f44122f065b3a39fcc7f907002cb9f81bc872143b182dca4021f",
+      "backup": "engine-source-before/15/Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+      "diagnostic": "Rendered PIE-01 monthly chest inspection/claim Slate clicks false: embedded child Canvas clipped by fixed-height parent WidgetSwitcher. Propagate real child extent to the single outer scroll and recompute after selected-child actions.",
+      "authority": "engine-source-before/15/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:41.111969+08:00",
+      "finished_at": "2026-10-24T11:50:43.879625+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "before_sha256": "7ac2c9538799f754260a344a1c011b78de1291d5d681772b6fab95afa6854186",
+      "after_sha256": "b4f59b2a1f17c2c1243ff80eb6db886cf729d3ee10ba1d807f29042656deda6c",
+      "backup": "engine-source-before/16/Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "diagnostic": "Rendered PIE-01 monthly chest inspection/claim Slate clicks false: embedded child Canvas clipped by fixed-height parent WidgetSwitcher. Propagate real child extent to the single outer scroll and recompute after selected-child actions.",
+      "authority": "engine-source-before/16/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:41.251258+08:00",
+      "finished_at": "2026-10-24T11:50:44.028959+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "before_sha256": "79868580fc4a00d0e3e6394121e36ca55324c0ca1eff31d1d0c243a9100630d8",
+      "after_sha256": "4b19973d09470e57b480c097f8ea293f5a4572275eb08cad7819d7051ff40163",
+      "backup": "engine-source-before/17/Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "diagnostic": "Rendered PIE-01 monthly chest inspection/claim Slate clicks false: embedded child Canvas clipped by fixed-height parent WidgetSwitcher. Propagate real child extent to the single outer scroll and recompute after selected-child actions.",
+      "authority": "engine-source-before/17/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:50:41.391755+08:00",
+      "finished_at": "2026-10-24T11:50:44.158392+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "9875c4b02b6a0f8e7f6160289bd0d76daa89b027f83719b36b346c5dcc2311d6",
+      "after_sha256": "3083ae9deccfa7622e24fcfa6d1157372af88bf26a0e43d451337c5c68b71580",
+      "backup": "engine-source-before/18/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "diagnostic": "PIE02 monthly-sign-in.png: default UButton gray fill/padding constricts 80px calendar cell causing number and state labels to overlap; use zero-padding transparent hit target and existing CalendarFill background",
+      "authority": "engine-source-before/18/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:56:39.772230+08:00",
+      "finished_at": "2026-10-24T11:56:40.477539+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "3083ae9deccfa7622e24fcfa6d1157372af88bf26a0e43d451337c5c68b71580",
+      "after_sha256": "50d8ffdf645bc0d9034b02a179df897ce09fabad983486d30f2cb49835dddfef",
+      "backup": "engine-source-before/19/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "diagnostic": "build06 C2039 UButton has no SetPadding; use actual UButtonSlot padding API for the calendar child",
+      "authority": "engine-source-before/19/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:57:00.667339+08:00",
+      "finished_at": "2026-10-24T11:57:03.217730+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "50d8ffdf645bc0d9034b02a179df897ce09fabad983486d30f2cb49835dddfef",
+      "after_sha256": "eb45f6f47af844b0ac2306a811da62f6eb000c689901e2a55222bd468cd3b6f6",
+      "backup": "engine-source-before/20/Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "diagnostic": "PIE03 monthly-sign-in.png text still overlaps: UButtonSlot child centered at text desired size; fill calendar overlay in the full 80px hit target",
+      "authority": "engine-source-before/20/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:59:40.696607+08:00",
+      "finished_at": "2026-10-24T11:59:42.049232+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "before_sha256": "bc7d3e878ffbee1c18290c95fa95d545815c387912420797feb302d5c80889c6",
+      "after_sha256": "d863d70f9339b17176e79a534bdda15a0ea0fe3132b1916a0bb69972debcacf7",
+      "backup": "engine-source-before/21/Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "diagnostic": "PIE03 hud-active-launch.png and actual Slate OpenWuling failure: countdown bounds overlap HUD_OpenWuling; position beside launch entry instead",
+      "authority": "engine-source-before/21/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:59:40.830653+08:00",
+      "finished_at": "2026-10-24T11:59:42.183519+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "7eb8da7b59a7556b7d84ff7fde2d82a9e3856f973f5da09656d3fea8997dd6b6",
+      "after_sha256": "9ba15332068e8654c44c252d8e6115add46b2c1c887ad0c929c52729263f71d2",
+      "backup": "engine-source-before/22/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "diagnostic": "PIE03 active countdown text wraps to three lines and overflows 80px; use full-width inset text and explicit 20px game font",
+      "authority": "engine-source-before/22/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T11:59:40.975833+08:00",
+      "finished_at": "2026-10-24T11:59:42.336431+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "before_sha256": "ca16fcc474b83661bc0e05f61fc83c39805cfc28a15b06aab2026ec50a43c1cc",
+      "after_sha256": "61704c98eb1cbe97cb0e0b64c60e9bf019086993d6cc800bc992a2de8441176a",
+      "backup": "engine-source-before/23/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "diagnostic": "PIE06 native subsystem busy true, real duplicate Slate button still accepts input before periodic refresh though adapter prevents duplicate network command; refresh panel immediately on submit",
+      "authority": "engine-source-before/23/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:03:00.128458+08:00",
+      "finished_at": "2026-10-24T12:03:03.411565+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "before_sha256": "d863d70f9339b17176e79a534bdda15a0ea0fe3132b1916a0bb69972debcacf7",
+      "after_sha256": "5cd908a77635008b88d3d92555ea34751f5744b58db6e54c2fbcb73e7800042f",
+      "backup": "engine-source-before/24/Source/BoundlessImmortality/Frontend/InkHudLayout.cpp",
+      "diagnostic": "Follow-up to actual PIE03 overlap: left-of-launch rectangle also intersects existing shortcut row in landscape and announcement; derive free region below announcement and all shortcuts if narrow",
+      "authority": "engine-source-before/24/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:03:00.273868+08:00",
+      "finished_at": "2026-10-24T12:03:03.547840+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "before_sha256": "d23b221309be70359bbfea3baf5681307ce97d77d4a2473b68493c526dc39aec",
+      "after_sha256": "b0f73dd41dc160a93b89f26ea692b33bdade794444c8c6b98a00eafa6ecc058a",
+      "backup": "engine-source-before/25/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "diagnostic": "PIE07 image readback proves texture/Box/Visible/opacity1 but rendered frame absent: source-pixel Brush.ImageSize2172x724 with 140/90px borders collapses 200x80 Box center. Set logical ImageSize200x80 while retaining normalized source slice margins",
+      "authority": "engine-source-before/25/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:06:13.013745+08:00",
+      "finished_at": "2026-10-24T12:06:16.096978+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "9ba15332068e8654c44c252d8e6115add46b2c1c887ad0c929c52729263f71d2",
+      "after_sha256": "aea64983f7c57c3560e530a41110f052d0d88af1c307f4690bcc067abed3350c",
+      "backup": "engine-source-before/26/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "diagnostic": "Readable dark ink required on restored light paper frame; prior white caption was only visible because nine-slice image failed to paint",
+      "authority": "engine-source-before/26/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:06:13.158841+08:00",
+      "finished_at": "2026-10-24T12:06:16.264538+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "before_sha256": "b0f73dd41dc160a93b89f26ea692b33bdade794444c8c6b98a00eafa6ecc058a",
+      "after_sha256": "fdab0e8aad0047e412b094763c450e3d229e7d57e2235bc15e2af0bbae43fea2",
+      "backup": "engine-source-before/27/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "diagnostic": "Actual PIE09 box-baseline.png vs full-image-preview.png: same texture/color/opacity, transient BOX to IMAGE restores paper. Candidate source-pixel nine-slice failed UE at compact size; use measured full-image fallback and record override without changing candidate manifest",
+      "authority": "engine-source-before/27/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:12:46.748872+08:00",
+      "finished_at": "2026-10-24T12:12:49.618750+08:00"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "aea64983f7c57c3560e530a41110f052d0d88af1c307f4690bcc067abed3350c",
+      "after_sha256": "cfdcaa6afba605c463c2636583d8b0fcf99b6586083f1de900f4220b20a09f27",
+      "backup": "engine-source-before/28/Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "diagnostic": "Actual full-image-preview.png restored paper has transparent top/bottom inset; fit two caption lines into visible paper area using 18px font and 14px vertical inset",
+      "authority": "engine-source-before/28/lease.json",
+      "authority_sha256": "1010f648a0992cde6cac335a1d6ded23ef1406c19e7b34d08f351838eeb4be8f",
+      "started_at": "2026-10-24T12:12:46.895267+08:00",
+      "finished_at": "2026-10-24T12:12:49.803960+08:00"
+    }
+  ],
+  "deferred_assets": "Player copied HUD pack, explored/resource/fortune glyphs: no first-batch consumer/authority state; do not import unused assets",
+  "engine_executed": false,
+  "compiled": false,
+  "import_verified": false,
+  "route_wired": false,
+  "visual_pending_user": true,
+  "purpose": "Current static source/hash verification after diagnostic repair; original import batch and WBP pre-migration baseline preserved",
+  "wbp_current": [
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "file": "Content/UI/Ink/Widgets/Shared/WBP_InkFrontend.uasset",
+      "sha256": "ddc3152757cd7f0660ed15d34a172154043a46e06ae67a0f31ccf8e9281e91bb"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+      "file": "Content/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard.uasset",
+      "sha256": "7a2aabb419fa56b4179519ba7061ea2f0d58a65a88e3c40a684a87ef6b4d1044"
+    }
+  ]
+}

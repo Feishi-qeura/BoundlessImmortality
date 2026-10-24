@@ -1,0 +1,20 @@
+{
+  "team_id": "cleanup",
+  "checked_at": "2026-10-24T14:13:17.582522+08:00",
+  "status_updated_at": "2026-10-24T14:15:29.281221+08:00",
+  "migration_complete": true,
+  "old_directory_exists": false,
+  "actual_engine_old_registry_count": 0,
+  "current582output_hashes_verified": true,
+  "current_newUI_asset_count": 587,
+  "extra_new_assets": 5,
+  "actual_original_rewrites_covered": 589,
+  "exact_remaining_fixup_count": 29,
+  "source_config_static_passed": true,
+  "source_config_cpp_ini_aliases_each": 1151,
+  "actual_engine_report_time": "2026-10-24T13:54:46.537023+08:00",
+  "owner_audit": "revisions/v5-final-independent-audit/final-owner-audit.json",
+  "owner_audit_sha256": "21c915764d0c55b129309f8414fd446fe460071bf0e0957456e39f4aa499e98b",
+  "ui_full_pie_visual_acceptance": "separate integration/user verification",
+  "unchanged_full_archives_rehashed": false
+}

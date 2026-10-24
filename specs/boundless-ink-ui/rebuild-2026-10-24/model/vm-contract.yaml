@@ -1,0 +1,410 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+kind: declarative-view-model-not-production-cpp
+architecture: ../architecture-and-interfaces.md
+common:
+  field_representation: KnownField status/value/provenance; null for unavailable value,
+    never zero-default
+  collection: provided=false -> items unknown; provided=true and empty -> authoritative
+    empty
+  stable_ids:
+  - EntryId
+  - participant_id
+  - guild_id
+  - user
+  - listing_id
+  - recipe_id
+  - activity_id
+  - attempt_id
+  - round_id
+  - race_id
+  - node_id
+  time: service day key for eligibility; server_utc/monotonic elapsed for countdown;
+    HK is display timezone only
+models:
+- id: FrontendVm
+  owner: UInkFrontendWidget + AInkMenuDirector
+  source_paths:
+  - CurrentPage
+  - Director gameplay/menu state
+  - UInkSaveSubsystem::FindLatestSlot
+  fields:
+  - currentRoute
+  - canContinue
+  - continueReason
+  - inputContext
+  rule: Do not fabricate a profile/login/server flow.
+  missing_fields: unknown
+  production_type: null
+- id: SaveVm
+  owner: UInkSaveSubsystem::GetSlots
+  source_paths:
+  - FInkSaveSlotInfo.SlotIndex,bExists,bValid,ValidationError,SavedAt,DisplayName,MapName,PlayedSeconds
+  fields:
+  - slots
+  - canSave
+  - lastError
+  rule: Exactly 3 manual slots; actual empty vs unreadable distinct; SavedAt UTC formatted
+    once.
+  missing_fields: unknown
+  production_type: null
+- id: SettingsVm
+  owner: UGameUserSettings + frontend reduced motion
+  source_paths:
+  - GetOverallScalabilityLevel
+  - GetFrameRateLimit
+  - GEngine fixed-frame effective fallback
+  - bReducedMotion
+  fields:
+  - quality
+  - configuredFrameLimit
+  - effectiveFrameLimit
+  - reducedMotion
+  rule: Retain custom/unsupported actual values; no implicit conversion to 30/60.
+  missing_fields: unknown
+  production_type: null
+- id: AnchorVm
+  owner: UCultivationSubsystem mirror + existing character publisher
+  source_paths:
+  - GetParticipantSnapshot(GetAnchorId())
+  - Frontend.GetPresentedCharacterAttributes
+  - GetPresentedCharacterDisciplines
+  fields:
+  - identity
+  - realm
+  - attributes
+  - health
+  - qi
+  - cultivationState
+  rule: Only typed real numeric inputs; missing score/attributes unknown. Keep gameplay
+    pawn/scene.
+  missing_fields: unknown
+  production_type: null
+- id: InventoryVm
+  owner: UInkInventoryModel + WulingInventoryProjection
+  source_paths:
+  - GetEntriesView
+  - EntryId
+  - AuthorityInstanceId
+  - ExpiresUtc
+  - Item.ItemId,Count
+  - bEquipped
+  - snapshot.item_instances[].reserved
+  fields:
+  - entries
+  - selectedEntryId
+  - filters
+  - search
+  - capacity
+  - actionQuantity
+  rule: Read-only remote projection; no optimistic remove, reward, or temporary identity
+    replacement.
+  missing_fields: unknown
+  production_type: null
+- id: LeaderboardVm
+  owner: Existing room publisher + UCultivationPrototypeClient
+  source_paths:
+  - Frontend room entries
+  - GetLeaderboardEntries
+  - InkCore::ReadBoard
+  fields:
+  - scope
+  - category
+  - provided
+  - entries
+  - selfPosition
+  rule: Preserve real Rank and ties/gaps; selfPosition unknown unless explicitly provided.
+    Anchor is sword count, not guild growth.
+  missing_fields: unknown
+  production_type: null
+- id: GuildVm
+  owner: UWulingPrototypeSubsystem::Snapshot
+  source_paths:
+  - guild
+  - counts.members,participating_members,helpers
+  - members[].user,name
+  - member_cursor
+  - identity.role
+  fields:
+  - guild
+  - counts
+  - members
+  - cursor
+  - selectedMemberId
+  - permissions
+  rule: Keep RecordRow_i -> Rows -> SelectedMember -> RecordRemove path. Unknown permission
+    never means allowed.
+  missing_fields: unknown
+  production_type: null
+- id: SwordVm
+  owner: UCultivationSubsystem participant + actual authority records
+  source_paths:
+  - GetParticipantSnapshot(exact participant id)
+  - snapshot.records[]
+  fields:
+  - participantId
+  - displayName
+  - realm
+  - attributes
+  - honor
+  rule: A viewer sword spirit is not the guild or anchor. Personal page coverage remains
+    partial when only rights records exist.
+  missing_fields: unknown
+  production_type: null
+- id: GiftEffectVm
+  owner: Existing live gift domain; synced rules catalog not confirmed
+  source_paths:
+  - UCultivationSubsystem participant/gift effects where actually exposed
+  - UInkGiftRulesPanel currently unavailable
+  fields:
+  - activeEffects
+  - rules
+  rule: No invented gift prices, durations, passive descriptions, or unsupported grants.
+    Catalog absence is a business gap.
+  missing_fields: unknown
+  production_type: null
+- id: MethodVm
+  owner: Authority loadout + actual catalog
+  source_paths:
+  - snapshot.loadout.methods,main,supports,method_names
+  - catalog kind=methods
+  fields:
+  - ownedMethods
+  - main
+  - supports
+  - catalog
+  rule: Learning and configuring are original commands; do not invent support-slot
+    entitlement.
+  missing_fields: unknown
+  production_type: null
+- id: EquipmentVm
+  owner: Authority loadout + inventory/catalog
+  source_paths:
+  - snapshot.loadout.equipment,fabao
+  - catalog kind=equipment
+  - snapshot.item_instances
+  fields:
+  - slots
+  - fabao
+  - ownedItems
+  - catalog
+  rule: Authority checks major realm, ownership, activity lock and slot validity.
+  missing_fields: unknown
+  production_type: null
+- id: WorldVm
+  owner: Authority journey/world snapshot
+  source_paths:
+  - snapshot.journey.worlds[]
+  - snapshot.round
+  - snapshot.growth
+  - snapshot.identity
+  fields:
+  - destinations
+  - selectedEntryId
+  - round
+  - mechanic
+  - resultSource
+  rule: Do not infer map locations/recommended realms or completed stages from decoration.
+  missing_fields: unknown
+  production_type: null
+- id: RaceVm
+  owner: Authority race/queue state
+  source_paths:
+  - snapshot.race_queue
+  - snapshot.race.teams[]
+  - snapshot.identity
+  - journey.resources[]
+  fields:
+  - queue
+  - race
+  - currentTeam
+  - phase
+  - scores
+  - eligibleActions
+  rule: Match actual anchor/guild/room identity; queued is not matched. Server decides
+    scoring, qualification and tie outcome.
+  missing_fields: unknown
+  production_type: null
+- id: LeaseVm
+  owner: Authority lease and selected node
+  source_paths:
+  - snapshot.lease
+  - snapshot.journey.resources[]
+  fields:
+  - nodeId
+  - status
+  - owner
+  - onlineSeconds
+  - endUtc
+  rule: Expiry uses server time. Never locally grant tier, extend lease or infer ownership
+    from winning art.
+  missing_fields: unknown
+  production_type: null
+- id: RewardVm
+  owner: Confirmed authority reward receipts and offline object
+  source_paths:
+  - snapshot.reward_receipts
+  - snapshot.offline_reward
+  - exact receipt source identity
+  fields:
+  - confirmedReceipts
+  - sourceId
+  - offlineTotalQi
+  - acknowledgedQi
+  rule: Only root owns global dequeue. Pages filter by exact event/node/actor source
+    without draining inbox; acknowledge is read acknowledgement, not claim.
+  missing_fields: unknown
+  production_type: null
+- id: EconomyVm
+  owner: Authority catalog/market/wallet
+  source_paths:
+  - snapshot.catalog(kind shop/market/items)
+  - snapshot.market.own_listings
+  - snapshot.wallet
+  fields:
+  - catalog
+  - costs
+  - listings
+  - selectedListingId
+  - listingVersion
+  - userDraftPrice
+  rule: No hardcoded cyclic price or fabricated reward. Unknown SKU/cost disables
+    only that purchase, not unrelated page navigation.
+  missing_fields: unknown
+  production_type: null
+- id: ActivityVm
+  owner: InkJourneyAdapter::Read
+  source_paths:
+  - snapshot.activities.day,signed,verse
+  - templates[].activity_id,cycle,enabled
+  - weekly_chests,monthly_chests
+  - month_sign_count
+  fields:
+  - serviceDay
+  - signed
+  - verse
+  - templates
+  - weeklyChests
+  - monthlyChests
+  - monthCount
+  rule: The date key is supplied by service, not reconstructed from local HK date.
+    Missing is not false/unclaimed.
+  missing_fields: unknown
+  production_type: null
+- id: LaunchVm
+  owner: Authority launch snapshot
+  source_paths:
+  - launch.id,start,end,status,personal,leaderboard,tasks,guild_milestones,permissions
+  - launch.complete_rounds[]
+  fields:
+  - event
+  - personal
+  - tasks
+  - leaders
+  - milestones
+  - confirmedRoundCount
+  rule: confirmedRoundCount=length only after array provided. Rank ties remain returned
+    ranks; numeric rewards only when real permission and reward fields exist.
+  missing_fields: unknown
+  production_type: null
+- id: BreakthroughVm
+  owner: Authority preview + InkCore gate
+  source_paths:
+  - breakthrough_quote.stage.stage_id,from_realm_index,to_realm_index
+  - breakthrough_quote.selection,q,band
+  - breakthrough_quote.kind
+  - growth.realm_index
+  - tribulation.status
+  fields:
+  - stage
+  - selection
+  - quote
+  - quality
+  - optionalForecast
+  - canSendValidationRequest
+  rule: 'q_normalized/readiness/slots/sources/growth range absent: remain unavailable;
+    never manufacture them or require them for native submit. Quote success is not
+    execution authorization.'
+  missing_fields: unknown
+  production_type: null
+- id: TribulationVm
+  owner: Authority attempt
+  source_paths:
+  - tribulation.id,status,trial_start,deadline,cleanup_at,helper_count,probability_basis_points,receipt_id
+  - snapshot.server_utc
+  fields:
+  - attempt
+  - phase
+  - timers
+  - helpers
+  - probability
+  - exclusiveOutcome
+  rule: Never synthesize three UI stages/roll/helper count. Viewer assist path remains
+    actor-verified live comment, not anchor self-assist.
+  missing_fields: unknown
+  production_type: null
+- id: ItemSourceVm
+  owner: Authority sources catalog
+  source_paths:
+  - catalog kind=sources rows[].source_id,item_id,method,source
+  fields:
+  - itemId
+  - sources
+  - selectedSourceId
+  rule: Only method=fixed_selected_reward supports existing ChooseFocus; source information
+    is not a claim entitlement.
+  missing_fields: unknown
+  production_type: null
+- id: GuildBuildVm
+  owner: Authority building catalog/current guild state
+  source_paths:
+  - catalog kind=buildings rows[].building_id,level
+  - snapshot.buildings
+  - guild identity
+  fields:
+  - buildings
+  - targetLevel
+  - costs
+  rule: Render only actual catalog fields; send exact building_id/target_level; authority
+    checks supply/contribution/caps.
+  missing_fields: unknown
+  production_type: null
+- id: RecipeVm
+  owner: Authority recipe catalog
+  source_paths:
+  - catalog kind=recipes rows[].recipe_id,ingredients,output_item,output_count
+  - inventory
+  fields:
+  - recipes
+  - selectedRecipeId
+  - ingredients
+  - output
+  rule: No generated recipe or consumption formula; Craft and server atomically decide
+    ownership/cost/output.
+  missing_fields: unknown
+  production_type: null
+- id: AppearanceVm
+  owner: Existing explicit frontend preview state
+  source_paths:
+  - Frame_ / Bar_ local preview actions
+  - actual current player identity when available
+  fields:
+  - previewFrame
+  - previewBar
+  - identity
+  - previewOnly
+  rule: Preview is labeled preview. No fabricated unlock, no fixed .72 progress as
+    account progress, no persistence claim.
+  missing_fields: unknown
+  production_type: null
+- id: ResourceRankVm
+  owner: No distinct provider contract confirmed
+  source_paths:
+  - current UInkResourceRankingPanel unavailable domain
+  fields:
+  - providerState
+  - entries
+  rule: Keep unavailable with true reason; do not use race team score as resource
+    contribution rank without contract.
+  missing_fields: unknown
+  production_type: null

@@ -1,0 +1,89 @@
+schema_version: 1
+team_id: panel-rank
+project_id: boundless-ink-ui
+source_revision: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling
+source_approval: false
+trial_authorization: user-authorized-continuation-2026-10-24
+style_contract: specs/boundless-ink-ui/contracts/style-contract.yaml
+approved: false
+components:
+  - id: rank-wuling-paper-panel
+    name: 排行与武灵共用宣纸面板
+    category: container
+    reusable: true
+    source_asset_id: rw-leaderboard-damage-candidate-v2
+    source_bbox: null
+    transparent_background: true
+    text_policy: no-text
+    target_size: [1024, 768]
+    actual_size: [1448, 1086]
+    actual_size_basis: measured-png
+    states: [default]
+    output: assets/rank-wuling-paper-panel-default-v1.png
+    slice:
+      type: 9-slice
+      margins: [136, 136, 136, 136]
+      status: candidate-awaiting-preview
+      note: corner flourishes and edge wash need UE preview; never stretch character or text over the source image
+    review:
+      text_free: true
+      alpha_verified: true
+      visual_status: awaiting-user-review
+      approved: false
+  - id: leaderboard-title-rail
+    name: 榜单标题栏
+    category: container
+    reusable: true
+    implementation: InkPresentationStyle::ESurface::FeatureHeading
+    status: existing-native-widget-reuse
+    dynamic_text: UTextBlock
+    slice: native-surface
+  - id: leaderboard-category-tab
+    name: 榜单分类页签
+    category: control
+    reusable: true
+    states: [normal, selected, pending, disabled]
+    implementation: InkPresentationStyle::FeatureButton plus UInkFrontendActionButton
+    actions: [RankDamage, RankCultivation, RankAnchor]
+    dynamic_text: UTextBlock
+  - id: leaderboard-column-heading
+    name: 榜单字段标题条
+    category: container
+    reusable: true
+    implementation: InkPresentationStyle::ESurface::FeatureHeading
+    dynamic_text: UTextBlock
+    values: [rank, identity, service_metric]
+  - id: leaderboard-entry-row
+    name: 榜单成员行
+    category: container
+    reusable: true
+    implementation: InkPresentationStyle::ESurface::FeatureCard and existing UInkLeaderboardWidget row layout
+    dynamic_text: UTextBlock
+    data_authority: leaderboard-entry-provider
+  - id: leaderboard-self-position
+    name: 本人排名固定条
+    category: container
+    reusable: true
+    states: [ranked, self-unranked, no-data, disconnected, error]
+    implementation: existing frontend leaderboard presentation
+    dynamic_text: UTextBlock
+  - id: wuling-identity-card
+    name: 武灵组织身份卡
+    category: container
+    reusable: true
+    implementation: UInkWulingSectPanel native canvas components
+    dynamic_text: [GuildTitle, ConnectionText]
+    data_authority: UWulingPrototypeSubsystem
+  - id: wuling-summary-card
+    name: 武灵组织摘要卡
+    category: container
+    reusable: true
+    implementation: InkPresentationStyle::ESurface::FeatureCard
+    dynamic_text: [SectMembersCount, SectParticipatingCount, SectHelpersCount, SectSupply, SectReputation]
+    data_authority: UWulingPrototypeSubsystem
+  - id: wuling-local-navigation
+    name: 武灵局部导航
+    category: control
+    reusable: true
+    implementation: UInkFeaturePanel action buttons and existing local route APIs
+    note: existing management, contribution, member, and overview pages remain route-driven; do not imply service pages exist if route does not

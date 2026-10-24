@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "last_write": "2026-10-24T12:12:59.8770989+08:00",
+      "path": "D:/demo/BoundlessImmortality/Binaries/Win64/UnrealEditor-BoundlessImmortality.dll",
+      "sha256": "02377361b26f7fb580f2605960d3b3f3ada93b17b38a327046aec779702cea9b"
+    },
+    {
+      "last_write": "2026-10-24T11:53:25.2284451+08:00",
+      "path": "D:/demo/BoundlessImmortality/Binaries/Win64/UnrealEditor-BoundlessImmortalityEditor.dll",
+      "sha256": "9dd50e81abdc90e0c0ab67837a62279067ee6c6d1592b86b08b24e62d5beee19"
+    }
+  ],
+  "build": "build-11-result.json",
+  "completed_at": "2026-10-24T12:13:39.7786605+08:00",
+  "exit_code": 0,
+  "source_proof_sha256": "fc69e626ba5497d3a53bbc3313bb64864facc1630c8704afc6b619074e0add3a",
+  "source_proof": "current-source-proof.json"
+}

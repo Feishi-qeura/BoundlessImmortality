@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-24T13:14:01.132814+08:00",
+  "root_cause": "Known source/config rename warning returned Cancel under -unattended",
+  "log": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\migration-editor-04.log",
+  "dialog_lines": [
+    2374,
+    2389
+  ],
+  "observed_names": [
+    "T_HudLaunchCountdownFrame_v1",
+    "T_InkTitle",
+    "T_InkMeditation",
+    "T_InkAttributeIcons",
+    "T_ProvidedButtons",
+    "T_ProvidedRank",
+    "T_ProvidedInventory",
+    "M_InkTitleFeather",
+    "M_InkScrollFade",
+    "F_InkBody",
+    "NS_InkTitleAura"
+  ],
+  "all_names_in_exact582": true,
+  "owner_active_script_unchanged": true,
+  "owner_active_script_sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155",
+  "scope": "diagnostic and native suggestion only; no engine or asset action",
+  "diagnostic_syntax_passed": true,
+  "cpp_compiled": false,
+  "controlled_ack_executed": false,
+  "observed_message_type": "Not captured by current log; staged guard accepts only OkCancel; other types cancel"
+}

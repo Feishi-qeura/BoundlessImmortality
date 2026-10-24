@@ -1,0 +1,3 @@
+# Permanent activity semantic icon · prompt
+
+One isolated transparent PNG game UI component icon, no text, no letters, no numbers, no background. Semantics: permanent cultivation activities, a lotus bud growing from a small ink-wash stone with two celadon leaves. Chinese cultivation water-ink game UI style, dark pine ink outlines, warm ivory and restrained celadon with a small antique-gold center, clean compact silhouette and legible at 64px, centered front view with generous clear margins. No scenery, no enclosing card, no external shadow. Treat as a visual candidate only; all labels and state remain live UMG.

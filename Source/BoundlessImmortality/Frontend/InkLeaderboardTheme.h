@@ -4,10 +4,8 @@
 
 namespace InkLeaderboardTheme
 {
-    FSlateBrush Header(FName Category);
-    FSlateBrush Row(FName Category,int32 Rank);
-    FVector4 FitRowArt(FVector2D SourceSize,FVector2D RowSize);
+    FString CategoryTitle(FName Category);
+    FString CategoryLabel(FName Category);
+    FString MetricLabel(FName Category);
     FLinearColor Color(FName Category);
-    int32 Quality(int32 Rank);
-    float Strength(int32 Rank);
 }

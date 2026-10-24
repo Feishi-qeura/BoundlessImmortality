@@ -1,0 +1,25 @@
+{
+  "owner_team": "logic-integration",
+  "phase": "applied-source-only",
+  "grant": "source-correction-grant-quote.json",
+  "grant_sha256": "3b011ec3a59260d3794562a44477be626b5740c6573063de93705131c4769e54",
+  "first_source_freeze_sha256": "7d3fcb07b1a93373601a3a448fb59718ddd20e95bd6825f4d37e80125492bf5d",
+  "files": [
+    {
+      "before_sha256": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa",
+      "after_sha256": "e0c9738519cafa3050b7f99d607a84aaa95c7f70cea1c8b69507e11e9e35dbb9",
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp"
+    },
+    {
+      "before_sha256": "dd13037251bbfecb3d2023f6ad3f9ab3ec694f3f1eb3bb3b2984ac8928a576b0",
+      "after_sha256": "9c9286abe905fcfadbb741eed5246cf576b313bfc55fa73eb0da1566943071fe",
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp"
+    },
+    {
+      "before_sha256": "9c175c4fc41fdab82efc5de4796d424f60ab068f7ef7da0b94abfdf44eac0e91",
+      "after_sha256": "a3fe55cb95416025c3f16643e9a91a4fc3457241b94b0b89671e4ba6e2ecb126",
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp"
+    }
+  ],
+  "updated_at": "2026-10-24T11:11:52+08:00"
+}

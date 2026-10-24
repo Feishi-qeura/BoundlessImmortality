@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-10-24T16:30:32.199340+08:00",
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+  "read_only": true,
+  "declared_unearned_fixture": true,
+  "scope": "Actual native UI command outcomes in separate stage app namespace; preconditions are declared fixture realm/qi/material, not earned growth",
+  "states": [
+    {
+      "user": "newui-stage-cancel",
+      "growth": {
+        "realm": 21,
+        "qi": 5417.001865148544
+      },
+      "inventory": {
+        "MAT_BR04_C01_G1": 2
+      },
+      "attempt_status": "Cancelled",
+      "quality_q": null
+    },
+    {
+      "user": "newui-stage-rework",
+      "growth": {
+        "realm": 9,
+        "qi": 35.426817417144775
+      },
+      "inventory": {
+        "MAT_BR01_C01_G1": 1,
+        "MAT_BR01_C01_G2": 1
+      },
+      "attempt_status": "Succeeded",
+      "quality_q": 18
+    }
+  ],
+  "checks": [
+    {
+      "name": "actual cancelled attempt persisted",
+      "passed": true,
+      "actual": "Cancelled"
+    },
+    {
+      "name": "cancel preserved original realm and returned real core",
+      "passed": true,
+      "actual": {
+        "growth": {
+          "realm": 21,
+          "qi": 5417.001865148544
+        },
+        "inventory": {
+          "MAT_BR04_C01_G1": 2
+        }
+      }
+    },
+    {
+      "name": "no outstanding reserved test material newui-stage-cancel",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "actual successful transition persisted",
+      "passed": true,
+      "actual": {
+        "status": "Succeeded",
+        "growth": {
+          "realm": 9,
+          "qi": 35.426817417144775
+        }
+      }
+    },
+    {
+      "name": "actual rework increased persisted quality from committed quote",
+      "passed": true,
+      "actual": {
+        "before": 10,
+        "after": 18
+      }
+    },
+    {
+      "name": "actual normal and higher core each consumed once",
+      "passed": true,
+      "actual": {
+        "MAT_BR01_C01_G1": 1,
+        "MAT_BR01_C01_G2": 1
+      }
+    },
+    {
+      "name": "no outstanding reserved test material newui-stage-rework",
+      "passed": true,
+      "actual": 0
+    }
+  ],
+  "passed": true
+}

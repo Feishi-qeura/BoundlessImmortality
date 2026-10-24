@@ -1,0 +1,72 @@
+{
+  "findings": [
+    {
+      "id": "V7-ASSET-01-import",
+      "state": "closed-static",
+      "detail": "Seven exact PNG/uasset hashes match new import receipt; 13/13 unique candidates now imported; no missing import."
+    },
+    {
+      "id": "V7-ASSET-01-reference",
+      "state": "closed-source-runtime-pending",
+      "detail": "Rank Insignia, Activities CategoryBadge canonical textures, Player-c three atlases and existing shared CharacterAttribute now assigned/loaded; seven new live brush bindings and shared Feature Appearance reuse pending."
+    },
+    {
+      "id": "V7-CONFIRM-01",
+      "state": "source-repaired-runtime-pending",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "frozen_lines": [
+        132,
+        200,
+        201,
+        212,
+        213,
+        216
+      ],
+      "detail": "Both request-confirmation and prepare/rework compare latest StageSubjectIdentity against displayed StageFingerprint; confirm captures fresh fingerprint; final submit also ConfirmedStageMatches. Native quote gate unchanged."
+    },
+    {
+      "id": "V7-CYCLE-01",
+      "state": "source-repaired-runtime-pending",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "frozen_lines": [
+        33
+      ],
+      "detail": "DailyActivities=>daily, TimedActivities=>limited; filter Categories by explicit RouteCycle; consumer selects cycle and titles route; actual category binding/cycle readback pending."
+    },
+    {
+      "id": "ECONOMY-SELECTION",
+      "state": "bounded-source-chain-qualified-runtime-pending",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.cpp",
+      "frozen_lines": [
+        172,
+        188,
+        199,
+        200,
+        375,
+        388,
+        418,
+        438,
+        659
+      ],
+      "detail": "Shop/listing/order local selection broadcasts to host; host persists ID and clears semantic key without synchronous remount; refreshed VMs return same ID. Confirmed SKU/version/price and listing ID/version/price are rechecked and invalidated on disappearance/change/not-allowed. Actual refresh/service regression not executed."
+    },
+    {
+      "id": "V7-ENTRY-01",
+      "state": "specific-character-entry-passed-PIE05-overall-still-failed",
+      "detail": "Real scroll + click before capture for all four Character feature routes; failed04 retained. PIE05 later fails typed back OfflineRewards."
+    },
+    {
+      "id": "V8-ENTRY-01",
+      "state": "observed-open",
+      "priority": "P1",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-05/report.json",
+      "detail": "PIE05 479 checks/31 captures, finished=false passed=false, typed back OfflineRewards real Slate labeled 返回 returns None. Fix actual return path/scroll/layout according to live evidence; record a new attempt, preserve04/05."
+    },
+    {
+      "id": "GEOMETRY-SERVICE-VISUAL",
+      "state": "scope-gates-open",
+      "detail": "No all44/current-epoch strict geometry proof; Native Busy fixture does not prove real service Busy, ServiceDisabled display does not prove mutations; no user visual acceptance."
+    }
+  ],
+  "previous": "resolved-open-matrix-v7.json"
+}

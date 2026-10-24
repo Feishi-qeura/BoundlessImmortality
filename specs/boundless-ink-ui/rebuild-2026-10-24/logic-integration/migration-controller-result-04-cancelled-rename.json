@@ -1,0 +1,8 @@
+{
+  "engine_pid": 9420,
+  "sequence": 2,
+  "phase": "migrate",
+  "state": "failed",
+  "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/migration_editor_controller.py\", line 88, in tick\n    NAMESPACE['main'](phase)\n  File \"D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\migration\\migrate_ui_ue.py\", line 301, in main\n    migrate(unreal, m, b)\n  File \"D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\migration\\migrate_ui_ue.py\", line 211, in migrate\n    raise RuntimeError('RenameAssets returned false; partial results preserved for recovery.')\nRuntimeError: RenameAssets returned false; partial results preserved for recovery.\n",
+  "preserve_editor_memory": true
+}

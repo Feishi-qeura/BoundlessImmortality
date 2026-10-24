@@ -44,3 +44,22 @@ Create one portrait mobile game UI mockup, a dedicated Chinese xianxia tribulati
 反向限制：不引用本地图片或线上 UI 图；不填概率/助力人数/截止时间/倒计时/奖励/扣修/材料消耗；不把 UI 端重算当服务结果；成功与失败结果卡互斥显示；当前阶段状态由服务端确定。实际规则的时长、概率与失败处理按权威配置和 `TribulationVm`，不把数值硬编码入静态图。
 
 记录：生成并人工查看 `tribulation-live-v1.png`。实测941×1672 RGB；SHA256 `67ca77b4f40973471cb88931ad4e2d305d3b10be13fe177202b91e301767897f`。三阶段、剩余时间占位、助力摘要、服务端结局和底部动作区可辨；成功/失败并列卡仅代表互斥模板区域，运行态仅展示与权威 `outcome` 相符的一种。approved=false。
+
+## 修订版 v2 候选提示词
+
+### 主菜单 v2
+```text
+Create one portrait 9:16 Chinese xianxia cultivation game main menu UI concept, 720x1280 target, no device frame. Text-only prompt, do not reference any local image or existing game screenshot. Premium restrained ink-and-paper style: warm ivory, ink green, muted jade, limited antique gold. At the top create a compact clear title hierarchy: a large blank title lettering area and one smaller subtitle line area. In the center place a clearly bounded, tall, empty character-display window occupying roughly half the screen height, with subtle jade outline and soft paper-mist interior; this is an explicit placeholder for the real project character to be inserted later. Do not draw any person, silhouette, weapon, architecture or scene inside it. At the lower area place two large thumb-friendly controls, primary 开始游戏 and secondary 继续游戏, followed by a compact secondary row 存档 / 设置 / 退出. Keep labels legible, 24-unit safe margins, consistent spacing, and calm contrast. Do not show save slots, timestamps or fictional state. Background should be mostly plain warm paper with only minimal corner ink texture, not a landscape scene. Candidate UI layout only.
+```
+
+### 突破准备 v2（空配置态）
+```text
+Create one portrait 9:16 Chinese xianxia breakthrough preparation UI, 720x1280 target, no device frame. Text-only prompt; no reference images. Restrained warm ivory xuan paper, ink-green text, muted jade dividers, sparse antique-gold accents. Header back and title 境界突破; current/target realm fields are blank placeholders. A quality panel has blank placeholders for Q score, quality band and growth range. Show four material rows 核心 / 护道 / 精华 / 奇珍 with empty icon wells and blank owned/required values. Add a readiness section marked 配置状态：等待配置. Add separate 天劫概率 field left blank and labeled 由服务端规则提供. This is explicitly an empty-data/config-unavailable state: fixed bottom action 准备突破 is visibly disabled, muted, and accompanied by clear reason text 等待突破配置，暂不可操作. The cost summary is blank and says 待配置. No active gold button, no fake numbers, costs, material names, probabilities, rewards, multiplier or success implication. Scrollable middle, fixed header/footer, 24-unit safe margins, touch targets at least 88x88. Flat orthographic UI, crisp Chinese labels.
+```
+
+### 天劫现场 v2（单一运行态）
+```text
+Create one portrait 9:16 Chinese xianxia live tribulation UI, 720x1280 target, no device frame. Text-only prompt, no screenshots or local image references. Restrained ink-and-paper style, ivory paper, ink green, jade, tiny antique gold; minimal thunder-cloud decoration only in header. Show exactly one current live event state, not a preparation/results montage. Header back and 天劫现场 with a blank server phase field. A three-stage timeline 第一重 / 第二重 / 第三重 has neutral uncompleted markers and no implied completed stage. Show a blank server remaining-time field. Include clearly labeled server-fed fields 基础成功率, 助力加成, 连续失败保底, 本次成功率, all blank placeholders, and distinct from one another. Include different eligible helpers count, viewer's own assistance status, and server deadline as blank fields. A large action area has one conditional button slot labeled 助力，仅当服务端确认资格且阶段为进行中可启用; show a neutral rule note that the action is unavailable outside the active assistance window, while frozen or submitting. Include one status panel 对账状态：等待服务端结果. Do not show success and failure outcome cards together; no outcome panel content in this live state. No fake values, rewards, loot, item costs, characters or percentage numbers. Fixed header and footer, scrollable center, 24-unit safe margins, 88x88 minimum touch areas, readable orthographic UI.
+```
+
+提示词均为纯文字条件；最终画面不引用本地素材。v1 保留为历史候选，v2 单独登记并标记 approved=false。

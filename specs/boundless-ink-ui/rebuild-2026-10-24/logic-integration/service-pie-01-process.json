@@ -1,0 +1,24 @@
+{
+  "pid": 932,
+  "scope": "actual default service fixture test; expected equipment regression isolated before bounded repair",
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:62235",
+    "-WulingApp=NewUIHostAcceptance20261024",
+    "-WulingRoom=newui-room-01",
+    "-WulingUser=newui-anchor-01",
+    "-ini:Engine:[HTTP.Curl]:bVerifyPeer=False",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-service-pie01",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/service-pie-01.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_service_default_pie.py"
+  ],
+  "started_at": "2026-10-24T15:48:21.5743494+08:00"
+}

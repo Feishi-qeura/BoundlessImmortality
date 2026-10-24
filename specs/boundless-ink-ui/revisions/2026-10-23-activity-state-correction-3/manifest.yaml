@@ -1,0 +1,38 @@
+schema_version: 1
+project_id: boundless-ink-ui
+revision_id: activity-state-correction-3
+assets:
+  - id: activities-empty-v3
+    kind: page
+    screen_id: activities
+    path: assets/pages/activities-empty-v3.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    aspect_ratio: 0.562799
+    transparent_background: false
+    mode: RGB
+    status: generated-candidate
+    approved: false
+    prompt_path: prompts/pages/activities-empty-v3.md
+    source_tool: image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a1691c-72a7-7962-abb2-01beed429b6f/exec-e0eb254a-d27d-4907-9f2d-f379e6a13edf.png
+    source_assets: []
+    version: 3
+    sha256: 0896129F9B0C91F04FDF25495B630A9640303132713D17781FB63E5DD0E73338
+  - id: launch-milestone-pending-v3
+    kind: page
+    screen_id: launch
+    path: assets/pages/launch-milestone-pending-v3.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    aspect_ratio: 0.562799
+    transparent_background: false
+    mode: RGB
+    status: generated-candidate
+    approved: false
+    prompt_path: prompts/pages/launch-milestone-pending-v3.md
+    source_tool: image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a1691c-72a7-7962-abb2-01beed429b6f/exec-3c1ae1e4-2388-4d29-a1ae-f7c081517bc8.png
+    source_assets: []
+    version: 3
+    sha256: 1E7BD5B9DEC1AE860F03A300760499FD0CB8A47ECFCC2ADC4FE7C3BF27FFE538

@@ -1,0 +1,70 @@
+{
+  "captured_utc": "2026-10-24T07:13:40.180070+00:00",
+  "PIE04": {
+    "scope": "Actual default player startup, no direct component construction",
+    "finished": false,
+    "passed": false,
+    "engine_pid": 17164,
+    "started_at": "2026-10-24T07:04:44.033373+00:00",
+    "finished_at": "2026-10-24T07:06:04.846503+00:00",
+    "source_epoch_sha256": "0dcb0b209794661e4563a337a94fb6f09c6e4e2882c610cf80f4a11f1585a403",
+    "current_step": "Character native feature entry EquipmentFabao"
+  },
+  "checks": 229,
+  "captures": 17,
+  "failed_checks": [
+    {
+      "name": "real Slate click OpenEquipmentFabao",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "observed_default_routes": [
+    "Character",
+    "Extensions",
+    "HUD",
+    "Inventory",
+    "Leaderboard",
+    "Main",
+    "Saves",
+    "Settings",
+    "WorldCultivation"
+  ],
+  "core_routes_observed": 7,
+  "feature_routes_observed": [
+    "Extensions",
+    "WorldCultivation"
+  ],
+  "geometry": {
+    "producer": "Editor independently ArrangeChildren from valid Slate root paint geometry; finite ancestor bounds+clip culling evidence independent of tested UWidget cached metrics",
+    "validator": "visible nonfinite fails unless independently finite positive-area ancestor disjoint proof; unknown/fake/invalid proof fails",
+    "five_standalone_fixtures": "five assertions present in validator source; dispatch reports execution recorded; no separate persisted fixture receipt located in bounded integration root, not rerun",
+    "PIE04_deliberate_expected_painted_rejection_checks": 17,
+    "PIE04_strict_geometry_capture_checks": 17,
+    "landscape_nonfinite_culled_counts": [
+      40,
+      8
+    ],
+    "overall_acceptance": "provisional; PIE04 failed at entry; next passing attempt required",
+    "limitations": "root uses current paint-space geometry; this is independent expected layout/culling evidence, not a renderer pixel or OnPaint callback witness"
+  },
+  "formal_native_tests": "prior tests01 3 Success, 0 failed retained; no rerun; build11 fixture epoch only",
+  "build14": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 86,
+    "source_ledger_records": 176,
+    "started_at": "2026-10-24T14:57:39.4981263+08:00",
+    "finished_at": "2026-10-24T14:58:48.1896087+08:00",
+    "exit_code": 0,
+    "record_count_basis": "Matching frozen epoch confirmed by exact ledger hash chain; reporting field was absent from static epoch schema"
+  },
+  "build15": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 86,
+    "source_ledger_records": 178,
+    "started_at": "2026-10-24T14:59:53.8273273+08:00",
+    "finished_at": "2026-10-24T15:00:05.9797516+08:00",
+    "exit_code": 0
+  },
+  "service_display_is_not_business_acceptance": true
+}

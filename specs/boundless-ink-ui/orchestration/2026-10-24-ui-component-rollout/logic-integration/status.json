@@ -1,0 +1,62 @@
+{
+  "team_id": "logic-integration",
+  "phase": "full_newUI_root_theme_navigation_source_refactor",
+  "updated_at": "2026-10-24T12:31:33.1690756+08:00",
+  "completed": [
+    "Four panel/Core source integration and all44 screen coverage/gap ledger written",
+    "Exact quote grant applied; native missing display fields do not block server validation; original outbox/final authority checks retained",
+    "Five actual Texture2D imports and pixel-identical alpha readback; two preserving WBP migrations plus fresh process compile/dependency proof",
+    "Actual diagnostic repairs backed up with hash chains; original freeze/import baselines unchanged and unexpected drift empty",
+    "Final build11 Editor Development passed exit0; final automation03 current binary21/21 zero warnings/failures/notRun",
+    "PIE07 actual Slate/HTTP full route76 checks passed; PIE04 stock/idempotent/three-window30 checks passed",
+    "PIE05 current build11 viewer authorization11 checks passed; PIE10 current build11 final frame/three-window native clicks19 checks passed",
+    "Owned Editors/services closed normally; Git whitespace check exit0 and Config unchanged; next batch request written without promoting it"
+  ],
+  "remaining": [
+    "Implement new default root/nav/theme/presentation hooks and actual Director path",
+    "Consume corrected owner components into actual new page routes",
+    "Canonical newUI source/config paths plus bounded migration helper for cleanup",
+    "Future exclusive engine build/migration/import/player-entry screenshot acceptance"
+  ],
+  "blockers": [],
+  "owned_files": [
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/**",
+    "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/**",
+    "Public files individually recorded in source-integration-baseline.json; 16 changed, original backups retained",
+    "Exact quote-only correction grant: LogicCore/InkCoreAdapter.cpp and InkCoreAdapterTests.cpp; grant and before/after hashes in quote-source-correction-ledger.json"
+  ],
+  "handoff_ready": false,
+  "engine_required": true,
+  "source_ready": false,
+  "assets_ready": true,
+  "import_verified": true,
+  "route_wired": false,
+  "logic_verified": false,
+  "visual_pending_user": true,
+  "source_compiled": false,
+  "authority_tests_passed": 18,
+  "source_route_wired": true,
+  "actual_wbp_migrated": true,
+  "source_integration_report": "logic-integration/source-integration-result.md",
+  "source_only": false,
+  "quote_correction_report": "logic-integration/quote-source-correction-result.md",
+  "prepared_texture_count": 5,
+  "quote_tests_executed": true,
+  "engine_lease_state": "source_only_granted_no_engine_actions",
+  "owned_engine_pids": [],
+  "owned_service_pids": [],
+  "verification_scope": "Full newUI source refactor per latest user authorization; no current engine/runtime proof",
+  "verification_report": "engine-final-verification.json",
+  "native_tests_current": 21,
+  "next_batch_promotion_requested": true,
+  "acceptance_report": "engine-acceptance.md",
+  "user_editor_pids": [
+    36400
+  ],
+  "user_livecoding_pids": [
+    46212
+  ],
+  "source_target_request": "visible-source-integration/source-target-request.json",
+  "rebuild_contract": "specs/boundless-ink-ui/rebuild-2026-10-24/quickstart.md",
+  "architecture": "specs/boundless-ink-ui/rebuild-2026-10-24/architecture-and-interfaces.md"
+}

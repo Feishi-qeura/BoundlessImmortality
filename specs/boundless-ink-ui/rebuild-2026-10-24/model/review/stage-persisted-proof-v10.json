@@ -1,0 +1,1757 @@
+{
+  "extracted_utc": "2026-10-24T08:44:01.058504+00:00",
+  "read_only": true,
+  "stage_scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+  "declared_unearned_fixture": true,
+  "natural_growth_or_production_player_acceptance": false,
+  "receipts": [
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-cancel",
+      "request": "8698D64E4471A46609A299B5ABB25DB7",
+      "payload_hash": "ffbf40845065f4edc2a0f45d20b282234de32242474cde17de99a6c05f77ef99",
+      "command": "QuoteBreakthrough",
+      "request_payload": {
+        "request_id": "8698D64E4471A46609A299B5ABB25DB7",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 0,
+        "command": "QuoteBreakthrough",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR04_C01_G1",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "b0ee7815280d4ec4aad51736280acded",
+      "authoritative_version": 1,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:15a8e148a99cafdff755fad564aa6a16db66412117e31641c94ac67a261f207d",
+          "kind": "command_audit",
+          "user": "newui-stage-cancel",
+          "data": "{\"operation\":\"QuoteBreakthrough\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 80,
+          "name": "金丹六阶",
+          "qi": 5404.8360714912415,
+          "qi_to_next": 5400,
+          "realm_index": 21,
+          "stone_to_next": 240,
+          "total_qi": 4.836071491241455
+        },
+        "inventory": {
+          "MAT_BR04_C01_G1": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 10,
+          "probability_basis_points": 5000,
+          "q": 10,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR04_C01_G1"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR04_C01",
+            "essence_max_count": 4,
+            "essence_species_count": 5,
+            "from_realm_index": 21,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 3,
+            "name": "金丹六阶→元婴",
+            "old_major_break_material_cost": 80,
+            "old_major_stone_cost": 240,
+            "region": "妖兽林",
+            "stage_id": "BR04",
+            "subarea": "古修育婴府",
+            "to_realm_index": 22,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": true,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": null
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-cancel",
+      "request": "45F33A5B44DE3F66F3D4658756750043",
+      "payload_hash": "ea7d791ee55e06587a9c8a472f327630bba4c88e37cb27f951ee95c8b6cc1380",
+      "command": "PrepareBreakthrough",
+      "request_payload": {
+        "request_id": "45F33A5B44DE3F66F3D4658756750043",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 1,
+        "command": "PrepareBreakthrough",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR04_C01_G1",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "ca71192c42574ec89a6b0524b6135801",
+      "authoritative_version": 2,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:354044a20b0f6bf3dcdd3efd1cb2b61158d4b15a959233735db6a8d29eea20d5",
+          "kind": "command_audit",
+          "user": "newui-stage-cancel",
+          "data": "{\"operation\":\"PrepareBreakthrough\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 80,
+          "name": "金丹六阶",
+          "qi": 5408.661014318466,
+          "qi_to_next": 5400,
+          "realm_index": 21,
+          "stone_to_next": 240,
+          "total_qi": 8.661014318466187
+        },
+        "inventory": {
+          "MAT_BR04_C01_G1": 1
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 10,
+          "probability_basis_points": 5000,
+          "q": 10,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR04_C01_G1"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR04_C01",
+            "essence_max_count": 4,
+            "essence_species_count": 5,
+            "from_realm_index": 21,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 3,
+            "name": "金丹六阶→元婴",
+            "old_major_break_material_cost": 80,
+            "old_major_stone_cost": 240,
+            "region": "妖兽林",
+            "stage_id": "BR04",
+            "subarea": "古修育婴府",
+            "to_realm_index": 22,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": true,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-cancel",
+          "cleanup_at": 1792829864.0641758,
+          "deadline": 1792829856.0641758,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "cffaafa8227340b4a7f8db0571a36ab0",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR04_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR04_C01",
+              "essence_max_count": 4,
+              "essence_species_count": 5,
+              "from_realm_index": 21,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 3,
+              "name": "金丹六阶→元婴",
+              "old_major_break_material_cost": 80,
+              "old_major_stone_cost": 240,
+              "region": "妖兽林",
+              "stage_id": "BR04",
+              "subarea": "古修育婴府",
+              "to_realm_index": 22,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": true,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": null,
+          "reserved_qi": 5400,
+          "roll": null,
+          "room": "newui-stage-cancel-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "stage": "BR04",
+          "start": 1792829781.0641758,
+          "status": "Prepare",
+          "trial_start": 1792829796.0641758
+        }
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-cancel",
+      "request": "0A2A21904F0E9A9456CC79B23B31F3BD",
+      "payload_hash": "59f5a6073829d5cef67c715f8b8c6df2e96f18e764f9ce6ed22dbca1216cdf98",
+      "command": "CancelBreakthrough",
+      "request_payload": {
+        "request_id": "0A2A21904F0E9A9456CC79B23B31F3BD",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 2,
+        "command": "CancelBreakthrough",
+        "args": {
+          "attempt_id": "cffaafa8227340b4a7f8db0571a36ab0"
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "34a607bffded4adf8767d4ba646a47ec",
+      "authoritative_version": 3,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:3e117e62e61d2e9190efb9299feb343909874e9d79ec6e673e8f93745390a3f3",
+          "kind": "command_audit",
+          "user": "newui-stage-cancel",
+          "data": "{\"operation\":\"CancelBreakthrough\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 80,
+          "name": "金丹六阶",
+          "qi": 5411.0508325099945,
+          "qi_to_next": 5400,
+          "realm_index": 21,
+          "stone_to_next": 240,
+          "total_qi": 11.050832509994507
+        },
+        "inventory": {
+          "MAT_BR04_C01_G1": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 10,
+          "probability_basis_points": 5000,
+          "q": 10,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR04_C01_G1"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR04_C01",
+            "essence_max_count": 4,
+            "essence_species_count": 5,
+            "from_realm_index": 21,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 3,
+            "name": "金丹六阶→元婴",
+            "old_major_break_material_cost": 80,
+            "old_major_stone_cost": 240,
+            "region": "妖兽林",
+            "stage_id": "BR04",
+            "subarea": "古修育婴府",
+            "to_realm_index": 22,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": true,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-cancel",
+          "cleanup_at": 1792829864.0641758,
+          "deadline": 1792829856.0641758,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "cffaafa8227340b4a7f8db0571a36ab0",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR04_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR04_C01",
+              "essence_max_count": 4,
+              "essence_species_count": 5,
+              "from_realm_index": 21,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 3,
+              "name": "金丹六阶→元婴",
+              "old_major_break_material_cost": 80,
+              "old_major_stone_cost": 240,
+              "region": "妖兽林",
+              "stage_id": "BR04",
+              "subarea": "古修育婴府",
+              "to_realm_index": 22,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": true,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": null,
+          "reserved_qi": 5400,
+          "roll": null,
+          "room": "newui-stage-cancel-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "stage": "BR04",
+          "start": 1792829781.0641758,
+          "status": "Cancelled",
+          "trial_start": 1792829796.0641758
+        }
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-rework",
+      "request": "B57CB232487142BBBBC8D39501122AF0",
+      "payload_hash": "79196029bf887cc0d7d93bed8b760dc4f8491d0fd8f37c231d85dbd8eebac32d",
+      "command": "QuoteBreakthrough",
+      "request_payload": {
+        "request_id": "B57CB232487142BBBBC8D39501122AF0",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 3,
+        "command": "QuoteBreakthrough",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR01_C01_G1",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "daaa1d1b375447b5aa0631e209f47c9f",
+      "authoritative_version": 4,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:3a78ebbd4759dcc0a61b3ad141d49dad5dc3f2693e1f4e667497f16f856690c3",
+          "kind": "command_audit",
+          "user": "newui-stage-rework",
+          "data": "{\"operation\":\"QuoteBreakthrough\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 20,
+          "name": "练气九阶",
+          "qi": 664.7775688171387,
+          "qi_to_next": 660,
+          "realm_index": 8,
+          "stone_to_next": 60,
+          "total_qi": 4.777568817138672
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 2,
+          "MAT_BR01_C01_G2": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 10,
+          "probability_basis_points": 10000,
+          "q": 10,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR01_C01_G1"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR01_C01",
+            "essence_max_count": 3,
+            "essence_species_count": 5,
+            "from_realm_index": 8,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 0,
+            "name": "练气九阶→筑基初期",
+            "old_major_break_material_cost": 20,
+            "old_major_stone_cost": 60,
+            "region": "青云山",
+            "stage_id": "BR01",
+            "subarea": "凝脉谷",
+            "to_realm_index": 9,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": false,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": null
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-rework",
+      "request": "75B9D49642ECBF521C5527B24DD6566C",
+      "payload_hash": "ba3f43f46fe50a70ba6e55b7edb8ff40f9eeaee09e16f9d0b3455064abb2f885",
+      "command": "PrepareBreakthrough",
+      "request_payload": {
+        "request_id": "75B9D49642ECBF521C5527B24DD6566C",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 4,
+        "command": "PrepareBreakthrough",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR01_C01_G1",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "6cdb4ca1b64e4c02896a0478c9f6dcbe",
+      "authoritative_version": 5,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:7bf76c7bf2852850aa75ac35c35dcbdfc1b087650a817a0dfde645675608862e",
+          "kind": "command_audit",
+          "user": "newui-stage-rework",
+          "data": "{\"operation\":\"PrepareBreakthrough\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 40,
+          "name": "筑基初期",
+          "qi": 8.631067037582397,
+          "qi_to_next": 1200,
+          "realm_index": 9,
+          "stone_to_next": 120,
+          "total_qi": 8.631067037582397
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 10,
+          "probability_basis_points": 10000,
+          "q": 10,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR01_C01_G1"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR01_C01",
+            "essence_max_count": 3,
+            "essence_species_count": 5,
+            "from_realm_index": 8,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 0,
+            "name": "练气九阶→筑基初期",
+            "old_major_break_material_cost": 20,
+            "old_major_stone_cost": 60,
+            "region": "青云山",
+            "stage_id": "BR01",
+            "subarea": "凝脉谷",
+            "to_realm_index": 9,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": false,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        }
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-rework",
+      "request": "2B6A882F4ADC026DD3D256899A4FAC6B",
+      "payload_hash": "8d8fa589195f91368911b9e0ac9f40357f10f0d67777d8ab4e170bf427e47b54",
+      "command": "QuoteReworkQuality",
+      "request_payload": {
+        "request_id": "2B6A882F4ADC026DD3D256899A4FAC6B",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 5,
+        "command": "QuoteReworkQuality",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR01_C01_G2",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "af7609e4ce0e4a6fa7c47d202873c747",
+      "authoritative_version": 6,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:640b806e7a58e050007261f6659a565725d4fa68af78825558098fc9afaab115",
+          "kind": "command_audit",
+          "user": "newui-stage-rework",
+          "data": "{\"operation\":\"QuoteReworkQuality\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 40,
+          "name": "筑基初期",
+          "qi": 14.55851697921753,
+          "qi_to_next": 1200,
+          "realm_index": 9,
+          "stone_to_next": 120,
+          "total_qi": 14.55851697921753
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 18,
+          "kind": "rework",
+          "q": 18,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR01_C01_G2"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR01_C01",
+            "essence_max_count": 3,
+            "essence_species_count": 5,
+            "from_realm_index": 8,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 0,
+            "name": "练气九阶→筑基初期",
+            "old_major_break_material_cost": 20,
+            "old_major_stone_cost": 60,
+            "region": "青云山",
+            "stage_id": "BR01",
+            "subarea": "凝脉谷",
+            "to_realm_index": 9,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": false,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        }
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-rework",
+      "request": "D241494C4C7C692D2B23C6BDB701C775",
+      "payload_hash": "d084586b8fad29abb208228fc5f4fd45258de3fcf18c0b2fba1871fb27a1cccd",
+      "command": "QuoteReworkQuality",
+      "request_payload": {
+        "request_id": "D241494C4C7C692D2B23C6BDB701C775",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 6,
+        "command": "QuoteReworkQuality",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR01_C01_G2",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "92904692bb8a438e9c2ad1c3e38d7773",
+      "authoritative_version": 7,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:e71fd0f975e12547f49cade7e459cc72e852cdd24f4a8a4a39cc330af2fae143",
+          "kind": "command_audit",
+          "user": "newui-stage-rework",
+          "data": "{\"operation\":\"QuoteReworkQuality\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 40,
+          "name": "筑基初期",
+          "qi": 25.401687383651733,
+          "qi_to_next": 1200,
+          "realm_index": 9,
+          "stone_to_next": 120,
+          "total_qi": 25.401687383651733
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 2
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 18,
+          "kind": "rework",
+          "q": 18,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR01_C01_G2"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR01_C01",
+            "essence_max_count": 3,
+            "essence_species_count": 5,
+            "from_realm_index": 8,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 0,
+            "name": "练气九阶→筑基初期",
+            "old_major_break_material_cost": 20,
+            "old_major_stone_cost": 60,
+            "region": "青云山",
+            "stage_id": "BR01",
+            "subarea": "凝脉谷",
+            "to_realm_index": 9,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": false,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        }
+      },
+      "proof_qualified": true
+    },
+    {
+      "scope": "090c938b2689834614e3269e0db4609ca5e708fde3b04167fd8abcbfca5a7669",
+      "user": "newui-stage-rework",
+      "request": "1556B76F412EB3F7AEC46B9D366E6973",
+      "payload_hash": "1a9083bd992735970a110b0693c50c247726611f2aa20215b076878c08a9d1ad",
+      "command": "ReworkQuality",
+      "request_payload": {
+        "request_id": "1556B76F412EB3F7AEC46B9D366E6973",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 7,
+        "command": "ReworkQuality",
+        "args": {
+          "selection": [
+            {
+              "item_id": "MAT_BR01_C01_G2",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "error_code": "",
+      "receipt_id": "a5938835b2c44b8f95e04c58b4079d6c",
+      "authoritative_version": 8,
+      "authority_payload_hash_matches": true,
+      "command_audits": [
+        {
+          "id": "command-audit:command:b6843381a5af4d1d45baad41907c607163d7d05a683db17ce2eff32622e00e66",
+          "kind": "command_audit",
+          "user": "newui-stage-rework",
+          "data": "{\"operation\":\"ReworkQuality\"}"
+        }
+      ],
+      "state_projection": {
+        "growth": {
+          "material_to_next": 40,
+          "name": "筑基初期",
+          "qi": 29.50337839126587,
+          "qi_to_next": 1200,
+          "realm_index": 9,
+          "stone_to_next": 120,
+          "total_qi": 29.50337839126587
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 1
+        },
+        "breakthrough_quote": {
+          "band": {
+            "band_id": "QB1",
+            "live_snapshot_factor": 1.0,
+            "name": "凡品",
+            "q_max": 39,
+            "q_min": 0,
+            "source_indie_multiplier": 2.5
+          },
+          "core_score": 18,
+          "kind": "rework",
+          "q": 18,
+          "selection": [
+            {
+              "count": 1,
+              "item_id": "MAT_BR01_C01_G2"
+            }
+          ],
+          "stage": {
+            "core_count": 1,
+            "core_species": "MAT_BR01_C01",
+            "essence_max_count": 3,
+            "essence_species_count": 5,
+            "from_realm_index": 8,
+            "guard_max_count": 3,
+            "guard_required": false,
+            "guard_species_count": 5,
+            "major_stone_at_commit": 0,
+            "min_major": 0,
+            "name": "练气九阶→筑基初期",
+            "old_major_break_material_cost": 20,
+            "old_major_stone_cost": 60,
+            "region": "青云山",
+            "stage_id": "BR01",
+            "subarea": "凝脉谷",
+            "to_realm_index": 9,
+            "treasure_max_count": 1,
+            "treasure_species_count": 5,
+            "tribulation": false,
+            "viewer_material_cost": 0
+          },
+          "weakness_seconds": 60
+        },
+        "tribulation": {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        }
+      },
+      "proof_qualified": true
+    }
+  ],
+  "latest_stage_state": [
+    {
+      "user": "newui-stage-cancel",
+      "growth": {
+        "realm": 21,
+        "qi": 5417.001865148544
+      },
+      "inventory": {
+        "MAT_BR04_C01_G1": 2
+      },
+      "reserved_rows": 0,
+      "quality": null,
+      "attempts": [
+        {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        },
+        {
+          "anchor": "newui-stage-cancel",
+          "cleanup_at": 1792829864.0641758,
+          "deadline": 1792829856.0641758,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "cffaafa8227340b4a7f8db0571a36ab0",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR04_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR04_C01",
+              "essence_max_count": 4,
+              "essence_species_count": 5,
+              "from_realm_index": 21,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 3,
+              "name": "金丹六阶→元婴",
+              "old_major_break_material_cost": 80,
+              "old_major_stone_cost": 240,
+              "region": "妖兽林",
+              "stage_id": "BR04",
+              "subarea": "古修育婴府",
+              "to_realm_index": 22,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": true,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": null,
+          "reserved_qi": 5400,
+          "roll": null,
+          "room": "newui-stage-cancel-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "stage": "BR04",
+          "start": 1792829781.0641758,
+          "status": "Cancelled",
+          "trial_start": 1792829796.0641758
+        }
+      ]
+    },
+    {
+      "user": "newui-stage-rework",
+      "growth": {
+        "realm": 9,
+        "qi": 35.426817417144775
+      },
+      "inventory": {
+        "MAT_BR01_C01_G1": 1,
+        "MAT_BR01_C01_G2": 1
+      },
+      "reserved_rows": 0,
+      "quality": {
+        "band": {
+          "band_id": "QB1",
+          "live_snapshot_factor": 1.0,
+          "name": "凡品",
+          "q_max": 39,
+          "q_min": 0,
+          "source_indie_multiplier": 2.5
+        },
+        "core_score": 18,
+        "q": 18,
+        "selection": [
+          {
+            "count": 1,
+            "item_id": "MAT_BR01_C01_G2"
+          }
+        ],
+        "stage": {
+          "core_count": 1,
+          "core_species": "MAT_BR01_C01",
+          "essence_max_count": 3,
+          "essence_species_count": 5,
+          "from_realm_index": 8,
+          "guard_max_count": 3,
+          "guard_required": false,
+          "guard_species_count": 5,
+          "major_stone_at_commit": 0,
+          "min_major": 0,
+          "name": "练气九阶→筑基初期",
+          "old_major_break_material_cost": 20,
+          "old_major_stone_cost": 60,
+          "region": "青云山",
+          "stage_id": "BR01",
+          "subarea": "凝脉谷",
+          "to_realm_index": 9,
+          "treasure_max_count": 1,
+          "treasure_species_count": 5,
+          "tribulation": false,
+          "viewer_material_cost": 0
+        },
+        "weakness_seconds": 60
+      },
+      "attempts": [
+        {
+          "anchor": "newui-stage-rework",
+          "cleanup_at": 1792829896.09541,
+          "deadline": 1792829971.09541,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "7f738d9942074472aa5a5f0ac2e46653",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR01_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR01_C01",
+              "essence_max_count": 3,
+              "essence_species_count": 5,
+              "from_realm_index": 8,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 0,
+              "name": "练气九阶→筑基初期",
+              "old_major_break_material_cost": 20,
+              "old_major_stone_cost": 60,
+              "region": "青云山",
+              "stage_id": "BR01",
+              "subarea": "凝脉谷",
+              "to_realm_index": 9,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": false,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+          "reserved_qi": 0,
+          "roll": null,
+          "room": "newui-stage-rework-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "settled_at": 1792829896.09541,
+          "stage": "BR01",
+          "start": 1792829896.09541,
+          "status": "Succeeded",
+          "trial_start": 1792829911.09541
+        },
+        {
+          "anchor": "newui-stage-cancel",
+          "cleanup_at": 1792829864.0641758,
+          "deadline": 1792829856.0641758,
+          "failures": 0,
+          "helper_count": 0,
+          "helper_ids": [],
+          "id": "cffaafa8227340b4a7f8db0571a36ab0",
+          "probability_basis_points": 5000,
+          "quote": {
+            "band": {
+              "band_id": "QB1",
+              "live_snapshot_factor": 1.0,
+              "name": "凡品",
+              "q_max": 39,
+              "q_min": 0,
+              "source_indie_multiplier": 2.5
+            },
+            "core_score": 10,
+            "q": 10,
+            "selection": [
+              {
+                "count": 1,
+                "item_id": "MAT_BR04_C01_G1"
+              }
+            ],
+            "stage": {
+              "core_count": 1,
+              "core_species": "MAT_BR04_C01",
+              "essence_max_count": 4,
+              "essence_species_count": 5,
+              "from_realm_index": 21,
+              "guard_max_count": 3,
+              "guard_required": false,
+              "guard_species_count": 5,
+              "major_stone_at_commit": 0,
+              "min_major": 3,
+              "name": "金丹六阶→元婴",
+              "old_major_break_material_cost": 80,
+              "old_major_stone_cost": 240,
+              "region": "妖兽林",
+              "stage_id": "BR04",
+              "subarea": "古修育婴府",
+              "to_realm_index": 22,
+              "treasure_max_count": 1,
+              "treasure_species_count": 5,
+              "tribulation": true,
+              "viewer_material_cost": 0
+            },
+            "weakness_seconds": 60
+          },
+          "receipt_id": null,
+          "reserved_qi": 5400,
+          "roll": null,
+          "room": "newui-stage-cancel-room",
+          "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+          "stage": "BR04",
+          "start": 1792829781.0641758,
+          "status": "Cancelled",
+          "trial_start": 1792829796.0641758
+        }
+      ]
+    }
+  ],
+  "reported_stage_audit": {
+    "checked_at": "2026-10-24T16:30:32.199340+08:00",
+    "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+    "read_only": true,
+    "declared_unearned_fixture": true,
+    "scope": "Actual native UI command outcomes in separate stage app namespace; preconditions are declared fixture realm/qi/material, not earned growth",
+    "states": [
+      {
+        "user": "newui-stage-cancel",
+        "growth": {
+          "realm": 21,
+          "qi": 5417.001865148544
+        },
+        "inventory": {
+          "MAT_BR04_C01_G1": 2
+        },
+        "attempt_status": "Cancelled",
+        "quality_q": null
+      },
+      {
+        "user": "newui-stage-rework",
+        "growth": {
+          "realm": 9,
+          "qi": 35.426817417144775
+        },
+        "inventory": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 1
+        },
+        "attempt_status": "Succeeded",
+        "quality_q": 18
+      }
+    ],
+    "checks": [
+      {
+        "name": "actual cancelled attempt persisted",
+        "passed": true,
+        "actual": "Cancelled"
+      },
+      {
+        "name": "cancel preserved original realm and returned real core",
+        "passed": true,
+        "actual": {
+          "growth": {
+            "realm": 21,
+            "qi": 5417.001865148544
+          },
+          "inventory": {
+            "MAT_BR04_C01_G1": 2
+          }
+        }
+      },
+      {
+        "name": "no outstanding reserved test material newui-stage-cancel",
+        "passed": true,
+        "actual": 0
+      },
+      {
+        "name": "actual successful transition persisted",
+        "passed": true,
+        "actual": {
+          "status": "Succeeded",
+          "growth": {
+            "realm": 9,
+            "qi": 35.426817417144775
+          }
+        }
+      },
+      {
+        "name": "actual rework increased persisted quality from committed quote",
+        "passed": true,
+        "actual": {
+          "before": 10,
+          "after": 18
+        }
+      },
+      {
+        "name": "actual normal and higher core each consumed once",
+        "passed": true,
+        "actual": {
+          "MAT_BR01_C01_G1": 1,
+          "MAT_BR01_C01_G2": 1
+        }
+      },
+      {
+        "name": "no outstanding reserved test material newui-stage-rework",
+        "passed": true,
+        "actual": 0
+      }
+    ],
+    "passed": true
+  },
+  "actual_stale_commit_negative_checks": [
+    {
+      "name": "actual committed realm invalidates prior stage permission",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "previous stage confirmation no longer has a real Slate hit path",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "fresh current realm disables reusing old normal-stage quote",
+      "passed": true,
+      "actual": [
+        {
+          "name": "InkPlayerEActionButton_191",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.VerticalBox_91",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.InkPlayerEActionButton_191",
+          "object_id": 95910,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 48,
+          "y": 1027,
+          "width": 611,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 51,
+          "independent_top": 1062,
+          "independent_right": 662,
+          "independent_bottom": 1180,
+          "independent_clip_left": 27,
+          "independent_clip_top": 59,
+          "independent_clip_right": 686,
+          "independent_clip_bottom": 1204,
+          "painted_width": 611,
+          "painted_height": 118,
+          "widget_class": "/Script/BoundlessImmortality.InkPlayerEActionButton",
+          "enabled": false,
+          "label": "申请突破\n报价身份、阶段或材料选择无效，或服务明确拒绝；缺少展示字段不影响发送校验请求"
+        }
+      ]
+    },
+    {
+      "name": "stale confirmation enqueues no extra prepare",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "ordinary_current_projection": {
+    "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+    "user": "newui-anchor-02",
+    "wallet": {
+      "CUR_STONE": 461
+    },
+    "inventory": {
+      "EQ_ROBE_T1": 1,
+      "FABAO_01": 1,
+      "MAT_BR01_C01_G1": 4,
+      "MAT_BR01_C01_G2": 1,
+      "MAT_BREAK": 1,
+      "MAT_HERB_T": 14,
+      "MAT_IRON_T": 12
+    },
+    "guilds": [
+      {
+        "id": "755de4e04edd434cbfa30ae0cd9a1993",
+        "name": "验证武灵",
+        "dissolved": 0
+      }
+    ],
+    "loadout": {
+      "equipment": {},
+      "fabao": "",
+      "main": "METHOD_EDGE",
+      "methods": {
+        "METHOD_EDGE": {
+          "level": 1,
+          "progress": 0
+        }
+      },
+      "supports": []
+    },
+    "listing_states": [
+      {
+        "id": "1ed0489e02e641c5b67179edbb8a169d",
+        "status": "Sold",
+        "version": 1
+      },
+      {
+        "id": "4e26ede714c94aec8c8a32c2dbb03dae",
+        "status": "Cancelled",
+        "version": 1
+      }
+    ]
+  },
+  "reported_ordinary_audit": {
+    "checked_at": "2026-10-24T08:15:37.407360+00:00",
+    "read_only": true,
+    "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+    "declared_test_fixtures": true,
+    "naturally_earned": false,
+    "checks": [
+      {
+        "name": "one persisted guild despite dropped post-commit reply",
+        "passed": true,
+        "actual": [
+          {
+            "id": "755de4e04edd434cbfa30ae0cd9a1993",
+            "anchor": "newui-anchor-02",
+            "name": "验证武灵",
+            "dissolved": 0
+          }
+        ]
+      },
+      {
+        "name": "actual wallet matches declared fixture less actual shop/recipe/market/listing costs",
+        "passed": true,
+        "actual": {
+          "wallet": {
+            "CUR_STONE": 461
+          },
+          "actual_recipe_stone_cost": 20
+        }
+      },
+      {
+        "name": "actual tradeable herb12 fixture plus2 purchased restored after withdrawal",
+        "passed": true,
+        "actual": {
+          "EQ_ROBE_T1": 1,
+          "FABAO_01": 1,
+          "MAT_BR01_C01_G1": 4,
+          "MAT_BR01_C01_G2": 1,
+          "MAT_BREAK": 1,
+          "MAT_HERB_T": 14,
+          "MAT_IRON_T": 12
+        }
+      },
+      {
+        "name": "actual book consumed once and craft core consumed twice",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual method learned and configured; equipment unequipped",
+        "passed": true,
+        "actual": {
+          "equipment": {},
+          "fabao": "",
+          "main": "METHOD_EDGE",
+          "methods": {
+            "METHOD_EDGE": {
+              "level": 1,
+              "progress": 0
+            }
+          },
+          "supports": []
+        }
+      },
+      {
+        "name": "actual building target1 persisted",
+        "passed": true,
+        "actual": {
+          "building_id": "BUILD_01",
+          "completed": 1792829004.814027,
+          "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+          "level": 1
+        }
+      },
+      {
+        "name": "actual guild material and supply costs debited once",
+        "passed": true,
+        "actual": {
+          "materials": {
+            "GUILD_MAT_01": 6,
+            "GUILD_MAT_02": 6
+          },
+          "supply": 80
+        }
+      },
+      {
+        "name": "actual removed member remains unassigned",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual seller listing sold and own listing cancelled",
+        "passed": true,
+        "actual": [
+          {
+            "id": "1ed0489e02e641c5b67179edbb8a169d",
+            "status": "Sold",
+            "version": 1
+          },
+          {
+            "id": "4e26ede714c94aec8c8a32c2dbb03dae",
+            "status": "Cancelled",
+            "version": 1
+          }
+        ]
+      },
+      {
+        "name": "actual repeated create uses one request and payload hash",
+        "passed": true,
+        "actual": {
+          "attempts": 2,
+          "unique_pairs": 1
+        }
+      },
+      {
+        "name": "one authoritative persisted idempotency receipt",
+        "passed": true,
+        "actual": 1
+      }
+    ],
+    "passed": true
+  },
+  "prior_independent_ordinary_receipt_audit_proof": "service-chain-proof-v9.json"
+}

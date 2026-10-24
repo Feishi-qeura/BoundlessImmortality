@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-24T12:37:20.221039+08:00",
+  "passed": 6,
+  "failures": 0,
+  "checks": [
+    "All migration Python scripts parse; no Unreal import/execution",
+    "588 exact path-preserving, case-fold unique mapped packages; object names preserved",
+    "All 1759 archived files freshly rehashed; all 588 UI source bytes match map",
+    "569 historical old-name keys distinguished from 588 relocated canonical keys",
+    "Recovery rejects all tested non-Content paths without modifying files",
+    "Static destructive-scope review: UE rename + exact raw redirector fixup; empty-only directory removal"
+  ],
+  "archived_file_count": 1759,
+  "archive_bytes": 1538854456,
+  "source_files_present_at_check": 588,
+  "target_files_present_at_check": 0,
+  "engine_started": false,
+  "assets_changed_by_verification": false,
+  "cpp_compiled": false,
+  "unreal_api_execution_verified": false,
+  "migration_executed": false,
+  "backup_manifest_sha256": "625eef06abf776f245406e0991bd8b563bfc6b5c51a206fa8bbb84826a0b0980"
+}

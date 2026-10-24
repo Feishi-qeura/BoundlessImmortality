@@ -1,0 +1,29 @@
+{
+  "path": "assets/rank-wuling-paper-panel-default-v1.png",
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "alpha_content_bbox": [
+    0,
+    27,
+    1410,
+    1068
+  ],
+  "sha256": "9b243e6844d92ff182d88b3bd28807583e2ff1cf51f7884b9326a36a0f4ad293",
+  "slice_margins_pixels": [
+    136,
+    136,
+    136,
+    136
+  ],
+  "slice_status": "candidate-awaiting-UE-preview-and-user-visual-review",
+  "text_free_visual_check": true,
+  "visual_approval": false,
+  "guide": "evidence/rank-wuling-paper-panel-9slice-guide-v1.png"
+}

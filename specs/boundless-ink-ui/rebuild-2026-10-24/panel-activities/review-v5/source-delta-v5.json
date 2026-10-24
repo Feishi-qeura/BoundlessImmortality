@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "captured_local_date": "2026-10-24",
+  "review_input": "model/review/bounded-v4-review.md",
+  "evidence": "source-only",
+  "frozen_source_epoch_verified": true,
+  "files": [
+    {
+      "frozen_input": "panel-activities/review-v3/staged-source/RebuildActivityWidgets.h",
+      "frozen_sha256": "183597f79cb2afd171daed3cae258d8c0c181dc1533ab26954c34ff53843ab8a",
+      "frozen_bytes": 10959,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildActivityWidgets.h",
+      "replacement_sha256": "77a3112d21aec1e5b2aa3d019d73b6852bee43fe0baf9d928df50c5cff11f3a8",
+      "replacement_bytes": 11007
+    },
+    {
+      "frozen_input": "panel-activities/review-v3/staged-source/RebuildActivityWidgets.cpp",
+      "frozen_sha256": "535ac0ba0d98e054fc43b920e8e887f74d7307699ff6cdca013ab90f119f0be8",
+      "frozen_bytes": 33066,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildActivityWidgets.cpp",
+      "replacement_sha256": "535ac0ba0d98e054fc43b920e8e887f74d7307699ff6cdca013ab90f119f0be8",
+      "replacement_bytes": 33066
+    },
+    {
+      "frozen_input": "panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.h",
+      "frozen_sha256": "ae3fa5c93d975be96f133a3af4cfa1466c2b861d8d0bd5a0f95b7402a68d736b",
+      "frozen_bytes": 6880,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.h",
+      "replacement_sha256": "9d3cfbf12a06732c0df2c6dba6159af9aa7630fdedd53fd7bb6f6576bc4d8ca3",
+      "replacement_bytes": 6780
+    },
+    {
+      "frozen_input": "panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "frozen_sha256": "91a37a39542945a492b50db95cdad22e9677a5e1d72bf633ee7e30a702ec4fd2",
+      "frozen_bytes": 22318,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "replacement_sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "replacement_bytes": 22652
+    },
+    {
+      "frozen_input": "panel-economy-03/staged-source/RebuildEconomyWidgets.h",
+      "frozen_sha256": "7fc31ba14e2da0ab84791c3620064bfebca8f35b67df28a3a92e76541837d295",
+      "frozen_bytes": 8543,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildEconomyWidgets.h",
+      "replacement_sha256": "24527a98e09499ad81a0347a95bc71ba2a6994aae2b37b12663bfbe5ec1804c4",
+      "replacement_bytes": 8578
+    },
+    {
+      "frozen_input": "panel-economy-03/staged-source/RebuildEconomyWidgets.cpp",
+      "frozen_sha256": "7dad58ce15c748fab20354499bcf101bdf9b56b5e8ccfc2685a1ed24e86851ec",
+      "frozen_bytes": 39689,
+      "replacement": "panel-activities/review-v5/staged-source/RebuildEconomyWidgets.cpp",
+      "replacement_sha256": "a5e714676a1c889f1dc8de4934e2e83c86d8aa068120f7e0399c6f5a3fa3bb81",
+      "replacement_bytes": 41358
+    }
+  ]
+}

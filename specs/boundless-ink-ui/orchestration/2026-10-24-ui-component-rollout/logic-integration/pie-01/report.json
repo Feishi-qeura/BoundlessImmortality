@@ -1,0 +1,597 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real authority connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "rendered capture hud",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenActivities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ActivityCycle_daily",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route DailyActivities",
+      "passed": true,
+      "actual": "DailyActivities"
+    },
+    {
+      "name": "rendered capture daily-activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native claim via real Slate",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "authority signed after UI claim",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "signed native button refuses duplicate Slate click",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_GroupTab_MonthlySignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture monthly-sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestPreview_0",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestRewardClaim",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "real monthly transaction",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLeaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankAnchor",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture leaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankClose",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenExtensions",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture world-map",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_AtlasNode_qingyun",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route JourneyWorldDetail",
+      "passed": true,
+      "actual": "JourneyWorldDetail"
+    },
+    {
+      "name": "rendered capture world-detail",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_SectCreate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Open_WulingConstruction",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolNavigation",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolRoute_2",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route WulingBreakthrough",
+      "passed": true,
+      "actual": "WulingBreakthrough"
+    },
+    {
+      "name": "rendered capture breakthrough-materials",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real material Slate selection MAT_BR04_C01_G1",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native quote arrived with display gaps",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UE request rejected NOT_SAFE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UE request rejected STALE_VERSION",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "UE subsystem reports pending busy",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "busy UI refuses duplicate prepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UI prepare succeeded",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "authority entered Prepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture prepare-confirmed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real deterministic fixture settled success",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolReworkMode",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "real material Slate selection MAT_BR04_C01_G4",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "actual rework quote kind",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "actual UI ReworkQuality succeeded",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "rendered capture rework-confirmed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real HTTP offline observed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture offline",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real service reconnects",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "server cross-day reflected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "new day sign state unsigned",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture next-day-sign",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\hud.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\daily-activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\monthly-sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\leaderboard.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\world-map.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\world-detail.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\breakthrough-materials.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\prepare-confirmed.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\rework-confirmed.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\offline.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-01\\next-day-sign.png"
+  ],
+  "steps": [
+    "main start via actual button",
+    "connected",
+    "hud",
+    "activities entry",
+    "activities capture",
+    "daily category",
+    "daily actual page",
+    "close daily",
+    "sign entry",
+    "sign native claim",
+    "sign confirmed",
+    "duplicate claim gated",
+    "sign capture",
+    "month tab",
+    "month capture",
+    "monthly chest reveal",
+    "monthly chest inspect",
+    "monthly claim reveal",
+    "monthly claim",
+    "monthly real receipt",
+    "receipt dismiss",
+    "close sign",
+    "rank entry",
+    "anchor rank",
+    "rank capture",
+    "rank close",
+    "map entry",
+    "map capture",
+    "map real node",
+    "world detail",
+    "map close",
+    "wuling entry",
+    "guild create reveal",
+    "guild actual create",
+    "construction reveal",
+    "construction player entry",
+    "tools menu",
+    "break route reveal",
+    "break route actual click",
+    "break actual page",
+    "material reveal",
+    "material real quote",
+    "native quote no display fields",
+    "unsafe declared fixture",
+    "unsafe prepare",
+    "unsafe authority refusal",
+    "safe and concurrent version fixture",
+    "stale prepare",
+    "stale authority refusal",
+    "pending delay fixture",
+    "valid prepare",
+    "pending native gate",
+    "pending duplicate click",
+    "prepare response",
+    "advance actual trial fixture",
+    "actual settled trial",
+    "dismiss result receipt",
+    "grant rework fixture",
+    "rework mode",
+    "upgrade material reveal",
+    "upgrade material quote",
+    "rework quote native",
+    "rework real submit",
+    "rework confirmed",
+    "offline fixture",
+    "offline service observed",
+    "restore fixture",
+    "reconnected",
+    "capture old day",
+    "advance day",
+    "server day changes",
+    "close tools",
+    "sign after day",
+    "day new unsigned"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user/Saved/",
+  "passed": false,
+  "current_step": "day new unsigned",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenActivities",
+      "slate_handled": true,
+      "page": "Activities"
+    },
+    {
+      "action": "Ext_ActivityCycle_daily",
+      "slate_handled": true,
+      "page": "DailyActivities"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_GroupTab_MonthlySignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestPreview_0",
+      "slate_handled": false,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestRewardClaim",
+      "slate_handled": false,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLeaderboard",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankAnchor",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankClose",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenExtensions",
+      "slate_handled": true,
+      "page": "Extensions"
+    },
+    {
+      "action": "Ext_AtlasNode_qingyun",
+      "slate_handled": true,
+      "page": "JourneyWorldDetail"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_SectCreate",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Open_WulingConstruction",
+      "slate_handled": true,
+      "page": "WulingConstruction"
+    },
+    {
+      "action": "Ext_ToolNavigation",
+      "slate_handled": true,
+      "page": "WulingConstruction"
+    },
+    {
+      "action": "Ext_ToolRoute_2",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": false,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolReworkMode",
+      "slate_handled": false,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": false,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    }
+  ],
+  "fixture_controls": [
+    {
+      "safe": false
+    },
+    {
+      "safe": true,
+      "bump_next": "PrepareBreakthrough"
+    },
+    {
+      "delay": 2
+    },
+    {
+      "delay": 0
+    },
+    {
+      "advance_seconds": 84
+    },
+    {
+      "upgrade_core": true
+    },
+    {
+      "offline": true
+    },
+    {
+      "offline": false
+    },
+    {
+      "advance_seconds": 86400
+    }
+  ]
+}

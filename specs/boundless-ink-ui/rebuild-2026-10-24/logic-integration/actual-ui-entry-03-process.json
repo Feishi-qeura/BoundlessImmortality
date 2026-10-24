@@ -1,0 +1,24 @@
+{
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIHostAcceptance20261024",
+    "-WulingRoom=newui-room-02",
+    "-WulingUser=newui-anchor-02",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-actual-ui-entry03",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/actual-ui-entry-03.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_actual_ui_entries_03.py",
+    "-NewUIDefaultPIEAttempt=14"
+  ],
+  "started_at": "2026-10-24T17:16:28.5269611+08:00",
+  "scope": "Actual UI entry: actual caption traversal and UObject identity, no direct router calls",
+  "pid": 24964
+}

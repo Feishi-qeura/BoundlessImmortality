@@ -1,0 +1,35 @@
+[
+  {
+    "hwnd": 10694434,
+    "title": "重定向器更新报告",
+    "rect": [
+      777,
+      300,
+      1783,
+      1140
+    ],
+    "image": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\owned-editor-window-10694434.png"
+  },
+  {
+    "hwnd": 8259650,
+    "title": "",
+    "rect": [
+      2193,
+      1269,
+      2545,
+      1388
+    ],
+    "image": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\owned-editor-window-8259650.png"
+  },
+  {
+    "hwnd": 2830072,
+    "title": "BoundlessImmortality - 虚幻编辑器",
+    "rect": [
+      1224,
+      85,
+      2510,
+      1531
+    ],
+    "image": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\owned-editor-window-2830072.png"
+  }
+]

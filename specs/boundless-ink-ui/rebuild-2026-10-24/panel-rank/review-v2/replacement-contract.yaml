@@ -1,0 +1,23 @@
+schema_version: 1
+source_of_truth: review-v2 isolated slice; original panel-rank/staged-source and handoff.md frozen
+review: ../model/review/current-source-review.md
+approved: false
+production_write: false
+pages:
+  - {id: leaderboard, variants: [Damage, CultivationSpeed, Anchor], vm: LeaderboardVm, actions: [board-category, board-scope]}
+  - {id: wuling-overview, vm: GuildVm, actions: [host-supplied existing operations]}
+  - {id: wuling-members, vm: GuildVm, actions: [guild-member-select, remove-member], confirmation_key: selected stable user_id}
+  - {id: guild-build, vm: GuildBuildVm, actions: [query-buildings, Build], confirmation_key: [building_id, target_level, snapshot_version]}
+  - {id: sword-spirit, vm: SwordVm, actions: [open-gift-rules]}
+  - {id: gift-rules, vm: GiftEffectVm, actions: []}
+corrections:
+  C01: UInkRankWulingCallbackButton binds HandleClicked by AddUniqueDynamic; the button owns its native action closure.
+  C02: text padding uses UButtonSlot::SetPadding after adding button content; UButton::SetPadding removed.
+  C03: FSlateChildSize uses valid one-argument rule constructor then sets Value before SetSize.
+  C04: SetSharedThemeFonts injects title/body UFont assets; FCoreStyle composite font remains only a pre-injection fallback.
+  L02: each page keeps one StableRoot and persistent Content child; refresh rebuilds children under Content only.
+  L03: avatar request, cache and current UImage map use ParticipantId; rank/index are never keys. Null SetParticipantAvatar clears the in-flight marker for retry.
+layout:
+  touch_target_min: [88, 88]
+  responsive_reflow: UWrapBox controls and width-constrained cards wrap from one portrait column to multiple landscape columns.
+  root_owner: newUI integration root supplies SafeZone and viewport scale

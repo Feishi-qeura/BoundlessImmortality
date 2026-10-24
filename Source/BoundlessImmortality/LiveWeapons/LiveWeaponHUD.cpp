@@ -33,11 +33,14 @@
 
 namespace
 {
-    bool HasVisibleAnchorStatus(UWorld* World,APlayerController* Player)
+    bool HasVisibleAnchorStatusForWeaponHUD(UWorld* World,APlayerController* Player)
     {
         for(TActorIterator<AInkMenuDirector> It(World);It;++It)
         {
             const auto* Frontend=It->FrontendWidget.Get();
+            if(Frontend&&Frontend->UsesRebuiltPresentation()&&Frontend->GetOwningPlayer()==Player
+                &&Frontend->IsInViewport()&&Frontend->IsVisible()&&Frontend->GetRenderOpacity()>0
+                &&!Frontend->GetRuntimePageLayoutVersion(TEXT("HUD")).IsNone())return true;
             const auto* StatusWidget=Frontend?Frontend->AnchorStatusWidget.Get():nullptr;
             if(Frontend&&Frontend->GetOwningPlayer()==Player&&Frontend->IsInViewport()&&Frontend->IsVisible()&&Frontend->GetRenderOpacity()>0&&Frontend->CurrentPage==TEXT("HUD")
                 &&IsValid(StatusWidget)&&StatusWidget->IsVisible()&&StatusWidget->GetRenderOpacity()>0&&StatusWidget->bHasAnchor)return true;
@@ -45,21 +48,23 @@ namespace
         return false;
     }
 }
+BOUNDLESSIMMORTALITY_API bool InkNewUiSuppressesLegacyWeaponHud(UWorld* World,APlayerController* Player){return HasVisibleAnchorStatusForWeaponHUD(World,Player);}
+
 void ALiveWeaponHUD::DrawHUD()
 {
     Super::DrawHUD();auto* Mode=GetWorld()->GetAuthGameMode<ALiveWeaponGameMode>();if(!Canvas||!Mode||!Mode->Swarm||!PlayerOwner||!PlayerOwner->GetPawn())return;
-    if(!NameFont||NameFont->GetPathName()==TEXT("/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames"))NameFont=LoadObject<UFont>(nullptr,TEXT("/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!NameFont||NameFont->GetPathName()==TEXT("/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames"))NameFont=LoadObject<UFont>(nullptr,TEXT("/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     if(Cultivation.Get()!=(GetGameInstance()?GetGameInstance()->GetSubsystem<UCultivationSubsystem>():nullptr))
     {
         if(auto* Old=Cultivation.Get())Old->OnAnnouncement.RemoveDynamic(this,&ThisClass::HandleAnnouncement);
         Cultivation=GetGameInstance()?GetGameInstance()->GetSubsystem<UCultivationSubsystem>():nullptr;
         if(auto* State=Cultivation.Get())State->OnAnnouncement.AddDynamic(this,&ThisClass::HandleAnnouncement);
     }
-    if(!RealmBanners)RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet);
-    if(!RealmChart)RealmChart=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
-    if(!WeaponTitles)WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!RealmBanners)RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!RealmChart)RealmChart=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!WeaponTitles)WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     auto* Swarm=Mode->Swarm.Get();auto* Adapter=Mode->Audience.Get();const APawn* Pawn=PlayerOwner->GetPawn();const double Now=GetWorld()->GetTimeSeconds();
-    const bool NewAnchorHUD=HasVisibleAnchorStatus(GetWorld(),PlayerOwner);
+    const bool NewAnchorHUD=HasVisibleAnchorStatusForWeaponHUD(GetWorld(),PlayerOwner);
     const float UIScale=FMath::Max(.01f,UWidgetLayoutLibrary::GetViewportScale(this));
     if(!NewAnchorHUD)DrawRect(FLinearColor(.025,.04,.035,.88),18,18,300,112);
     if(auto* State=NewAnchorHUD?nullptr:Cultivation.Get())
@@ -101,7 +106,7 @@ void ALiveWeaponHUD::DrawHUD()
         DrawText(Caption,FLinearColor(.95f,.88f,.65f,1),Position.X+10*UIScale,Position.Y+10*UIScale,AnnouncementFont,TextScale);
     }
 #if !UE_BUILD_SHIPPING
-    if(Adapter->GetStatus()==TEXT("本地模拟")){DrawRect(FLinearColor(0,0,0,.7),18,Canvas->SizeY-62,630,44);DrawText(TEXT("本地测试：F1 / F2 / F3 加入 100 / 500 / 1000 人 · F4 补怪 · 1–4 切换首位观众武器"),FLinearColor(.7,.85,1),30,Canvas->SizeY-49,GEngine->GetSmallFont());}
+    if(!NewAnchorHUD&&Adapter->GetStatus()==TEXT("本地模拟")){DrawRect(FLinearColor(0,0,0,.7),18,Canvas->SizeY-62,630,44);DrawText(TEXT("本地测试：F1 / F2 / F3 加入 100 / 500 / 1000 人 · F4 补怪 · 1–4 切换首位观众武器"),FLinearColor(.7,.85,1),30,Canvas->SizeY-49,GEngine->GetSmallFont());}
 #endif
     Samples.Reset();if(!ULiveTitleEffectsComponent::IsPresentationBlocked(GetWorld())&&!Swarm->IsHidden()&&Swarm->GetPresentationMode()==ELiveWeaponPresentationMode::Gameplay)Swarm->GetPresentationSamples(Samples);
     DrawnNameplates=0;

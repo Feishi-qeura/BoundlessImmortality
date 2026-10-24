@@ -1,0 +1,69 @@
+--- a/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h
++++ b/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h
+@@ -142,6 +142,8 @@
+     void CompleteLeaderboardAvatar(const FString& Key,UTexture2D* Texture);
+     const TArray<FInkCharacterAttribute>& GetPresentedCharacterAttributes()const{return CharacterAttributes;}
+     const FText& GetPresentedCharacterName()const{return CharacterName;}
++    const TArray<FInkLeaderboardEntry>& GetPresentedRoomLeaderboard()const{return LeaderboardEntries;}
++    bool HasPresentedRoomLeaderboard()const{return bRolloutRoomLeaderboardProvided;}
+     const TArray<FInkDisciplineEntry>& GetPresentedCharacterDisciplines()const{return CharacterDisciplines;}
+     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeInSeconds=.4f;
+     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeOutSeconds=.5f;
+@@ -177,6 +179,7 @@
+     UPROPERTY(Transient) TObjectPtr<UBorder> RuntimeHUDFeedbackPanel;
+     UPROPERTY(Transient) TArray<FInkCharacterAttribute> CharacterAttributes;
+     UPROPERTY(Transient) TArray<FInkDisciplineEntry> CharacterDisciplines;
++    bool bRolloutRoomLeaderboardProvided=false;
+     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> LeaderboardEntries;
+     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> GlobalLeaderboardEntries;
+     FText CharacterName;
+--- a/Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp
++++ b/Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp
+@@ -863,7 +863,7 @@
+ { SetLeaderboardEntriesForScope(Entries,TEXT("Local")); }
+ 
+ void UInkFrontendWidget::SetLeaderboardEntriesForScope(const TArray<FInkLeaderboardEntry>& Entries,FName Scope)
+-{if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;if(InkLeaderboard::SameEntries(Target,Entries))return;Target=Entries;RefreshLeaderboard();}
++{if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;if(Scope==TEXT("Local"))bRolloutRoomLeaderboardProvided=true;auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;if(InkLeaderboard::SameEntries(Target,Entries))return;Target=Entries;RefreshLeaderboard();}
+ void UInkFrontendWidget::SetGlobalLeaderboardConnection(bool bConnected,const FText& Status)
+ {if(bGlobalLeaderboardConnected==bConnected&&GlobalLeaderboardStatus.EqualTo(Status))return;bGlobalLeaderboardConnected=bConnected;GlobalLeaderboardStatus=Status;if(!bConnected)GlobalLeaderboardEntries.Reset();RefreshLeaderboard();}
+ 
+--- a/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
++++ b/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
+@@ -1,4 +1,5 @@
+ #include "InkWulingToolsPanel.h"
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
+ #include "Frontend/InkFrontendWidget.h"
+ #include "Wuling/WulingPrototypeSubsystem.h"
+ #include "Dom/JsonObject.h"
+@@ -604,7 +605,7 @@
+     if(Id==TEXT("ToolRankPrevious")||Id==TEXT("ToolRankNext")){RankOffset=FMath::Max(0,RankOffset+(Id==TEXT("ToolRankNext")?8:-8));RebuildPanel();return;}
+     if(Id.StartsWith(TEXT("ToolActivityTab_"))){ActivityTab=Id.Mid(16);RebuildPanel();return;}
+     if(Id==TEXT("ToolSign")){W->SignIn();return;}if(Id==TEXT("ToolLaunch")){W->StartLaunchEvent();return;}
+-    if(Id==TEXT("ToolPrepare")){if(bRework)W->SubmitPrototypeCommand(TEXT("ReworkQuality"),TEXT("{\"selection\":")+SelectionJson()+TEXT("}"));else W->PrepareBreakthrough(SelectionJson());return;}
++    if(Id==TEXT("ToolPrepare")){const auto Result=InkCore::PrepareBreakthrough(this,MaterialSelection,bRework,FrontendOwner&&FrontendOwner->CurrentPage==PageId);FeedbackMessage(Result.Message);return;}
+     if(Id==TEXT("ToolReworkMode")){bRework=!bRework;MaterialSelection.Reset();RebuildPanel();return;}
+     if(Id==TEXT("ToolCancelBreak"))
+     {
+--- a/Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp
++++ b/Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp
+@@ -1,3 +1,4 @@
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "InkFrontendWidget.h"
+ #include "InkInventoryModel.h"
+@@ -531,10 +532,10 @@
+             const auto* E=Model->FindEntry(SelectedInventoryEntry);
+             if(!W||!E||bInventoryMultiSelect){SetPageFeedback(LOCTEXT("AuthoritySingle","请选中一项物品后提交，批量操作尚未开放"));return true;}
+             if(Action==TEXT("InventoryDecompose")){SetPageFeedback(LOCTEXT("AuthorityNoDecompose","此规则档未开放分解"));return true;}
+-            auto Args=MakeShared<FJsonObject>();Args->SetStringField(TEXT("item_id"),E->Item.ItemId.ToString());Args->SetNumberField(TEXT("count"),FMath::Clamp(InventoryActionQuantity,1,E->Item.Count));
+-            FString Json;FJsonSerializer::Serialize(Args,TJsonWriterFactory<>::Create(&Json));
+-            const FString Op=Action==TEXT("InventoryEquip")?(E->bEquipped?TEXT("Unequip"):TEXT("Equip")):(Action==TEXT("InventorySell")?TEXT("Recycle"):(E->Item.ItemId.ToString().StartsWith(TEXT("BOOK_"))?TEXT("LearnMethod"):TEXT("UseProp")));
+-            SetPageFeedback(FText::FromString(W->SubmitPrototypeCommand(Op,Json)?TEXT("请求已记录，等待服务确认"):W->GetStatus()));return true;
++            const auto CoreAction=Action==TEXT("InventoryEquip")?(E->bEquipped?InkCorePolicy::EInventoryAction::Unequip:InkCorePolicy::EInventoryAction::Equip):
++                Action==TEXT("InventorySell")?InkCorePolicy::EInventoryAction::Sell:InkCorePolicy::EInventoryAction::Use;
++            const auto Result=InkCore::InventoryAction(this,SelectedInventoryEntry,CoreAction,InventoryActionQuantity,CurrentPage==TEXT("Inventory"));
++            SetPageFeedback(FText::FromString(Result.Message));return true;
+         }
+         int32 Changed=0;
+         if(bInventoryMultiSelect&&!InventoryBatchSelection.IsEmpty()&&(Action==TEXT("InventorySell")||Action==TEXT("InventoryDecompose")))

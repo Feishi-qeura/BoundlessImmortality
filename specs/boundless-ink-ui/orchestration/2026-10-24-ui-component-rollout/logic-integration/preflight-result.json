@@ -1,0 +1,103 @@
+{
+  "updated_at": "2026-10-24T10:21:57.828739+08:00",
+  "scope": "disk-only inventory; not compile, import, route or runtime verification",
+  "lease": {
+    "owner_team": "logic-integration",
+    "state": "not_granted",
+    "scope": "No Editor, UBT, import, or asset mutation until coordinator grants a bounded batch",
+    "cleanup_state": "audit_only",
+    "source_integration_authorized": true,
+    "source_batch": "All four first panel handoffs and LogicCore frozen source; seven chats observed idle on 2026-10-24 heartbeat",
+    "engine_blocker": "Project UnrealEditor PID 35164 remains running and has loaded this project game/editor modules. No stop/restart. Save and close the editor before a later bounded engine grant. CIM command line access denied; module paths verified.",
+    "observed_at": "2026-10-24T10:10:08.7986483+08:00"
+  },
+  "dependencies": {
+    "panel-player": {
+      "phase": "handoff_ready",
+      "handoff_ready": true,
+      "source_ready": true,
+      "assets_ready": true,
+      "handoff_exists": true,
+      "handoff_sha256": "02239410c1eefdbe366aceb20e0a339668f50189351a3e9e19685a42a71fc563"
+    },
+    "panel-rank": {
+      "phase": "handoff-ready",
+      "handoff_ready": true,
+      "source_ready": true,
+      "assets_ready": true,
+      "handoff_exists": true,
+      "handoff_sha256": "7b8288b99efecad94ebac93231afaa696bb86f305c767f2bd1b9d9b1521bcac3"
+    },
+    "panel-journey": {
+      "phase": "handoff-ready",
+      "handoff_ready": true,
+      "source_ready": true,
+      "assets_ready": true,
+      "handoff_exists": true,
+      "handoff_sha256": "c4d9d07cb96e1d4753cff3d7a28a8b5a3a6c57ece4f748ace9c9b9a94dc21a8a"
+    },
+    "panel-activities": {
+      "phase": "handoff-ready",
+      "handoff_ready": true,
+      "source_ready": true,
+      "assets_ready": true,
+      "handoff_exists": true,
+      "handoff_sha256": "fb1f7bf9e0328d1c5b4755cadb9f2e3f1fe139cbaa3af24b0ffa04bd850a3a6d"
+    },
+    "logic-core": {
+      "phase": "handoff-ready-source-frozen",
+      "handoff_ready": true,
+      "source_ready": true,
+      "assets_ready": false,
+      "handoff_exists": true,
+      "handoff_sha256": "1b5a65c3e9bbd3b11eb086fc35cebd1dc652fd14a12608ddcaba57a616be9b78"
+    }
+  },
+  "source_inventory": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.cpp",
+      "sha256": "d23b221309be70359bbfea3baf5681307ce97d77d4a2473b68493c526dc39aec",
+      "bytes": 6465
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h",
+      "sha256": "0b1ad1fbbc7f9ab8caa49657cf73cf5f53e8407c021b11e88a3df016a57c97eb",
+      "bytes": 2080
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedJourneyWidgets.cpp",
+      "sha256": "cca92c5f53305c62688700d2de523bbea2596df213f89b36e7e0cdb23f8e7d67",
+      "bytes": 342
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkIntegratedJourneyWidgets.h",
+      "sha256": "369ea2905f49a3e1428262bafa24ca29b253bf82965fdee2b288a6fe4ec1ca34",
+      "bytes": 540
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.cpp",
+      "sha256": "8de61c7320aec7c81430e8f8eeea073a9f93a8040b7d6c0a4109f2025d6a031b",
+      "bytes": 9422
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h",
+      "sha256": "ea04e67e5c49cc4670f8f35926ccd647bc052bfb099617691e81ed74483010c2",
+      "bytes": 2111
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapterTests.cpp",
+      "sha256": "4d7cfc7fc7181f27c317188d3c76497cc1e0a2c9fc443ae3be7234bcf41c772d",
+      "bytes": 7951
+    }
+  ],
+  "public_files_changed_since_baseline": [
+    "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+    "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+    "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+    "Source/BoundlessImmortality/Frontend/InkSignInShell.cpp",
+    "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+    "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp"
+  ],
+  "any_panel_batch_ready": true,
+  "engine_started": false
+}

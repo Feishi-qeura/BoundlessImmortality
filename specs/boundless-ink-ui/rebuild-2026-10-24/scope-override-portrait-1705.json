@@ -1,0 +1,15 @@
+{
+  "recorded_by": "supervisor",
+  "verified_via": "read_thread userMessage, not an agent handoff assertion",
+  "source_thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+  "source_message_id": "01a16d26-2364-7de1-81e8-c690503a517e",
+  "exact_user_text": "只考虑竖屏，不是横屏，最终9比16比例上线手机直播互动玩法\n",
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "reference_verification_resolution": [720, 1280],
+  "landscape_acceptance_required": false,
+  "source_changes_required_by_this_record": false,
+  "preserve_existing_landscape_assets_and_support": true,
+  "visual_approval": "pending_user",
+  "physical_phone_and_platform_acceptance": "separate; not established by desktop PIE"
+}

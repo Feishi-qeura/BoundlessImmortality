@@ -22,7 +22,7 @@ namespace InkHomeArt
     {
         FSlateBrush B;const auto* S=Find(Id);if(!S)return B;
         B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=S->Size;
-        const FString Path=FString(TEXT("/Game/UI/Ink/HomeV2/Textures/"))+S->Name+TEXT(".")+S->Name;
+        const FString Path=InkUiAssets::ResolveNamed(S->Name);
         B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,*Path));return B;
     }
     FSlateRect Fit(FVector2D Source,FSlateRect Bounds)

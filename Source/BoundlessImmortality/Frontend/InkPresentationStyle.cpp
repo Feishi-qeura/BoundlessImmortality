@@ -10,17 +10,8 @@ namespace InkPresentationStyle
         FSlateBrush Atlas(const TCHAR* Name,const FBox2f& UV,FVector2D Size)
         {
             FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=Size;
-            const FString Path=FString(TEXT("/Game/UI/Ink/NiagaraRevision20261022/Textures/"))+Name+TEXT(".")+Name;
+            const FString Path=InkUiAssets::ResolveNamed(Name);
             B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,*Path,nullptr,LOAD_NoWarn|LOAD_Quiet));B.SetUVRegion(UV);return B;
-        }
-        FSlateBrush ButtonArt(int32 State)
-        {
-            const TCHAR* Names[]={TEXT("Normal"),TEXT("Selected"),TEXT("Hover"),TEXT("Pressed")};
-            const FString Name=FString(TEXT("M_XianxiaButton"))+Names[FMath::Clamp(State,0,3)]+TEXT("Slice");
-            // The material expands only the center of the original atlas crop.
-            // Its end ornaments retain their aspect at every control size.
-            FSlateBrush B;B.ImageSize=FVector2D(240,68);B.DrawAs=ESlateBrushDrawType::Image;
-            B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(TEXT("/Game/UI/Ink/NiagaraRevision20261022/")+Name+TEXT(".")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet));return B;
         }
     }
     FSlateBrush IdentityBackground()
@@ -30,22 +21,20 @@ namespace InkPresentationStyle
     }
     FSlateBrush InkWash()
     {
-        FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Shared/M_InkWash.M_InkWash")));return B;
+        FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/Shared/M_InkWash.M_InkWash")));return B;
     }
     FSlateBrush NamecardBackground()
     {
         FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=FVector2D(368,184);
-        B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/HUD/M_InkGoldNamecard.M_InkGoldNamecard")));return B;
+        B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/HUD/M_InkGoldNamecard.M_InkGoldNamecard")));return B;
     }
     FSlateBrush LeaderboardBackground(FVector2D Size)
     {
-        const TCHAR* Name=Size.X<400?TEXT("M_InkGoldRankCompact"):Size.X<Size.Y?TEXT("M_InkGoldRankPortrait"):TEXT("M_InkGoldRankLandscape");
-        const FString Path=FString(TEXT("/Game/UI/Ink/NiagaraRevision20261022/"))+Name+TEXT(".")+Name;
-        FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=Size;B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*Path));return B;
+        return Surface(ESurface::FeaturePaper,Size);
     }
     FSlateBrush NavigationFade()
     {
-        FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/HUD/M_InkNavigationFade.M_InkNavigationFade")));return B;
+        FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/HUD/M_InkNavigationFade.M_InkNavigationFade")));return B;
     }
     FSlateBrush Meter(int32 Kind,bool bFill)
     {
@@ -63,18 +52,45 @@ namespace InkPresentationStyle
         {
             return Meter(1,Part==ESurface::BarFill);
         }
-        if(Part==ESurface::PaperButton||Part==ESurface::GoldButton||Part==ESurface::BlueButton||Part==ESurface::SelectedTab||Part==ESurface::Heading)
-            return ButtonArt(Part==ESurface::SelectedTab||Part==ESurface::GoldButton||Part==ESurface::BlueButton?1:0);
-        Brush.DrawAs=ESlateBrushDrawType::RoundedBox;
-        const bool Selected=Part==ESurface::SelectedTab,Blue=Part==ESurface::BlueButton;
-        Brush.TintColor=Selected?Ink():Blue?FLinearColor::FromSRGBColor(FColor(61,88,97)):Part==ESurface::GoldButton?Gold():Paper();
-        Brush.OutlineSettings.CornerRadii=FVector4(6,6,6,6);Brush.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
-        Brush.OutlineSettings.Color=Gold();Brush.OutlineSettings.Width=Selected?1:Part==ESurface::Card?0:.6f;
-        if(Part==ESurface::Card&&Size.Y>300)
+        if(Part==ESurface::Card)return Surface(Size.Y>300.f?ESurface::FeaturePaper:ESurface::FeatureCard,Size);
+        if(Part==ESurface::FeaturePaper||Part==ESurface::FeatureHeading||Part==ESurface::FeatureCard||Part==ESurface::FeatureTab)
         {
-            return IdentityBackground();
+            Brush.DrawAs=ESlateBrushDrawType::RoundedBox;
+            Brush.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
+            Brush.OutlineSettings.CornerRadii=Part==ESurface::FeaturePaper?FVector4(12,12,12,12):FVector4(8,8,8,8);
+            if(Part==ESurface::FeaturePaper)
+            {
+                Brush.TintColor=Paper();
+                Brush.OutlineSettings.Color=FLinearColor::FromSRGBColor(FColor(191,203,191));
+                Brush.OutlineSettings.Width=1.5f;
+            }
+            else if(Part==ESurface::FeatureHeading)
+            {
+                Brush.TintColor=FLinearColor::FromSRGBColor(FColor(231,238,229));
+                Brush.OutlineSettings.Color=FLinearColor::FromSRGBColor(FColor(196,210,197));
+                Brush.OutlineSettings.Width=1.f;
+            }
+            else if(Part==ESurface::FeatureCard)
+            {
+                Brush.TintColor=PaperLight();
+                Brush.OutlineSettings.Color=FLinearColor::FromSRGBColor(FColor(210,220,207));
+                Brush.OutlineSettings.Width=1.f;
+            }
+            else
+            {
+                Brush.TintColor=Jade();
+                Brush.OutlineSettings.Color=FLinearColor::FromSRGBColor(FColor(47,102,88));
+                Brush.OutlineSettings.Width=1.f;
+            }
+            return Brush;
         }
-        return Brush;
+        if(Part==ESurface::Heading)return Surface(ESurface::FeatureHeading,Size);
+        if(Part==ESurface::PaperButton||Part==ESurface::GoldButton||Part==ESurface::BlueButton||Part==ESurface::SelectedTab)
+        {
+            auto Native=FeatureButton(Part==ESurface::SelectedTab,Part==ESurface::GoldButton,Part==ESurface::BlueButton).Normal;
+            Native.ImageSize=Size;return Native;
+        }
+        return Surface(ESurface::FeatureCard,Size);
     }
     FSlateBrush Icon(EIcon Part,FVector2D Size)
     {
@@ -82,7 +98,7 @@ namespace InkPresentationStyle
         const int32 Tile=Part==EIcon::Activities?7:Part==EIcon::Cultivation?5:Part==EIcon::Crystal?8:Part==EIcon::Jade?9:Part==EIcon::Chest?12:Part==EIcon::Manual?9:Part==EIcon::Sword?6:INDEX_NONE;
         if(Tile!=INDEX_NONE)return CohesionIcon(Tile,Size);
         FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::Image;Brush.ImageSize=Size;
-        auto* Atlas=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments"),nullptr,LOAD_NoWarn|LOAD_Quiet);Brush.SetResourceObject(Atlas);
+        auto* Atlas=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments"),nullptr,LOAD_NoWarn|LOAD_Quiet);Brush.SetResourceObject(Atlas);
         const int32 I=static_cast<uint8>(Part);
         Brush.SetUVRegion(FBox2f(FVector2f((I%4)*.25f,(I/4)*.25f),FVector2f((I%4+1)*.25f,(I/4+1)*.25f)));
         return Brush;
@@ -90,7 +106,7 @@ namespace InkPresentationStyle
     FSlateBrush CohesionIcon(int32 Tile,FVector2D Size)
     {
         Tile=FMath::Clamp(Tile,0,15);FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=Size;
-        B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet));
+        B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet));
         B.SetUVRegion(FBox2f(FVector2f((Tile%4)*.25f,(Tile/4)*.25f),FVector2f((Tile%4+1)*.25f,(Tile/4+1)*.25f)));return B;
     }
     FSlateBrush NavigationIcon(int32 Tile,FVector2D Size)
@@ -104,7 +120,7 @@ namespace InkPresentationStyle
             auto B=Atlas(TEXT("T_CultivationPadded"),FBox2f(FVector2f(0),FVector2f(1)),Size);
             if(B.GetResourceObject())return B;
         }
-        auto* Texture=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/HUD/T_NavigationAtlas.T_NavigationAtlas"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+        auto* Texture=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/HUD/T_NavigationAtlas.T_NavigationAtlas"),nullptr,LOAD_NoWarn|LOAD_Quiet);
         if(!Texture)return CohesionIcon(Tile,Size);
         Tile=FMath::Clamp(Tile,0,7);FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=Size;B.SetResourceObject(Texture);
         const float U=1.f/Texture->GetSizeX(),V=1.f/Texture->GetSizeY();
@@ -112,12 +128,31 @@ namespace InkPresentationStyle
     }
     FButtonStyle Button(bool bSelected,bool bPrimary,bool bBlue)
     {
-        FButtonStyle Style;auto Normal=Surface(bSelected?ESurface::SelectedTab:bBlue?ESurface::BlueButton:bPrimary?ESurface::GoldButton:ESurface::PaperButton);
-        auto Hover=ButtonArt(bSelected||bPrimary||bBlue?1:2);Hover.TintColor=FLinearColor(1.05f,1.05f,1.f,1);
-        auto Pressed=ButtonArt(3);
-        auto Disabled=Surface(ESurface::PaperButton);Disabled.TintColor=FLinearColor(.65f,.66f,.64f,.65f);
-        Style.SetNormal(Normal).SetHovered(Hover).SetPressed(Pressed).SetDisabled(Disabled);
-        Style.SetNormalPadding(FMargin(15,7)).SetPressedPadding(FMargin(15,8,15,6));
+        return FeatureButton(bSelected,bPrimary,bBlue);
+    }
+    FButtonStyle FeatureButton(bool bSelected,bool bPrimary,bool bBlue)
+    {
+        auto Native=[](FLinearColor Fill,FLinearColor Outline,float Width=1.f)
+        {
+            FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::RoundedBox;
+            Brush.TintColor=Fill;Brush.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
+            Brush.OutlineSettings.CornerRadii=FVector4(8,8,8,8);
+            Brush.OutlineSettings.Color=Outline;Brush.OutlineSettings.Width=Width;return Brush;
+        };
+        const FLinearColor JadeDeep=FLinearColor::FromSRGBColor(FColor(47,102,88));
+        const FLinearColor JadeHover=FLinearColor::FromSRGBColor(FColor(64,122,103));
+        const FLinearColor SlateBlue=FLinearColor::FromSRGBColor(FColor(61,88,97));
+        const FLinearColor Border=FLinearColor::FromSRGBColor(FColor(183,200,185));
+        const bool Emphasized=bSelected||bPrimary;
+        const FLinearColor Fill=bSelected?JadeDeep:bBlue?SlateBlue:bPrimary?JadeDeep:PaperLight();
+        const FLinearColor HoverFill=Emphasized?JadeHover:bBlue?FLinearColor::FromSRGBColor(FColor(77,108,116)):FLinearColor::FromSRGBColor(FColor(238,242,233));
+        const FLinearColor PressedFill=Emphasized?(bBlue?FLinearColor::FromSRGBColor(FColor(48,72,79)):JadeDeep):FLinearColor::FromSRGBColor(FColor(238,242,233));
+        FButtonStyle Style;
+        Style.SetNormal(Native(Fill,Emphasized?JadeDeep:Border,Emphasized?1.5f:1.f));
+        Style.SetHovered(Native(HoverFill,Emphasized?JadeHover:Border,1.5f));
+        Style.SetPressed(Native(PressedFill,Emphasized?JadeDeep:Border,Emphasized?1.5f:1.f));
+        Style.SetDisabled(Native(FLinearColor::FromSRGBColor(FColor(226,228,219)),FLinearColor::FromSRGBColor(FColor(192,199,187))));
+        Style.SetNormalPadding(FMargin(12,6)).SetPressedPadding(FMargin(12,7,12,5));
         return Style;
     }
     FButtonStyle CloseButton()
@@ -138,19 +173,6 @@ namespace InkPresentationStyle
         // Light captions must remain legible on the pale gold hover/pressed art.
         Font.OutlineSettings.OutlineSize=bLight?1:0;
         Font.OutlineSettings.OutlineColor=Ink();return Font;
-    }
-    FButtonStyle MainMenuButton(FName Action)
-    {
-        const TCHAR* Key=Action==TEXT("StartGame")?TEXT("Start"):Action==TEXT("OpenSaves")?TEXT("Continue"):Action==TEXT("OpenSettings")?TEXT("Settings"):TEXT("Exit");
-        auto Art=[&](const TCHAR* State)
-        {
-            const FString Name=FString(TEXT("M_ProvidedMenu"))+Key+State+((Action==TEXT("OpenSettings")||Action==TEXT("RequestQuit"))?TEXT("Clean"):TEXT(""));
-            FSlateBrush B;B.ImageSize=FVector2D(208,94);B.DrawAs=ESlateBrushDrawType::Image;
-            B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(TEXT("/Game/UI/Ink/NiagaraRevision20261022/")+Name+TEXT(".")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet));return B;
-        };
-        FButtonStyle S;auto Hover=Art(TEXT("Hover")),Pressed=Hover;Pressed.TintColor=FLinearColor(.9f,.86f,.74f,1);
-        S.SetNormal(Art(TEXT("Normal"))).SetHovered(Hover).SetPressed(Pressed).SetDisabled(Art(TEXT("Disabled")));
-        S.SetNormalPadding(FMargin(0));S.SetPressedPadding(FMargin(0));return S;
     }
     FProgressBarStyle Progress()
     {

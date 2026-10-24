@@ -1,3 +1,4 @@
+#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
 #include "Frontend/UI/InkUiAssetPaths.h"
 #include "InkFrontendWidget.h"
 #include "InkInventoryModel.h"
@@ -6,6 +7,7 @@
 #include "Dom/JsonObject.h"
 #include "Serialization/JsonSerializer.h"
 #include "InkInventoryScrollBar.h"
+#include "InkPresentationStyle.h"
 #include "UI/InkUiTheme.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/Border.h"
@@ -54,21 +56,35 @@ namespace InkInventoryUI
         if(Texture)
         {
             FString N=FString::Printf(TEXT("MI_%s_%d_%d_%d_%d_%s"),*Texture->GetName(),int32(Rect.X),int32(Rect.Y),int32(Rect.Z),int32(Rect.W),bSlice?TEXT("Slice"):TEXT("Fit"));
-            if(auto* M=InkUiAssets::Load<UMaterialInterface>(nullptr,*(TEXT("/Game/UI/Ink/Materials/Atlas/")+N+TEXT(".")+N),nullptr,LOAD_NoWarn|LOAD_Quiet))B.SetResourceObject(M);
+            if(auto* M=InkUiAssets::Load<UMaterialInterface>(nullptr,*(InkUiAssets::ResolveNamed(N)),nullptr,LOAD_NoWarn|LOAD_Quiet))B.SetResourceObject(M);
             else B.SetUVRegion(FBox2f(FVector2f(Rect.X/1254.f,Rect.Y/1254.f),FVector2f(Rect.Z/1254.f,Rect.W/1254.f)));
         }
         return B;
     }
     void Place(UCanvasPanel* Canvas,UWidget* Widget,float X,float Y,float W,float H,int32 Z=0)
     {auto* S=Canvas->AddChildToCanvas(Widget);S->SetOffsets(FMargin(X,Y,W,H));S->SetZOrder(Z);}
-    void Fill(UOverlaySlot* S){S->SetHorizontalAlignment(HAlign_Fill);S->SetVerticalAlignment(VAlign_Fill);}
+    void SetFeatureButtonState(UInkFrontendActionButton* Button,bool bSelected,bool bBlue=false)
+    {
+        if(!Button)return;
+        const auto Previous=Button->GetStyle();auto Style=InkPresentationStyle::FeatureButton(bSelected,false,bBlue);
+        Style.SetNormalPadding(Previous.NormalPadding).SetPressedPadding(Previous.PressedPadding);Button->SetStyle(Style);
+        if(auto* Caption=Cast<UTextBlock>(Button->GetContent()))
+            Caption->SetColorAndOpacity(bSelected?InkPresentationStyle::PaperLight():InkPresentationStyle::Ink());
+    }
+    void SetListFrameState(UImage* Frame,bool bSelected,bool bHovered,bool bLocked=false)
+    {
+        if(!Frame)return;
+        Frame->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(72,72)));
+        Frame->SetColorAndOpacity(bHovered?FLinearColor(.66f,.82f,.87f,.72f):bSelected?FLinearColor(.84f,.69f,.42f,.42f):bLocked?FLinearColor(.46f,.46f,.42f,.26f):FLinearColor::White);
+    }
     UImage* Image(UWidgetTree* Tree,UTexture2D* Atlas,UCanvasPanel* Canvas,FName Name,FVector4 Rect,float X,float Y,float W,float H)
-    {auto* I=Tree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(Art(Atlas,Rect));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Canvas,I,X,Y,W,H);return I;}
+    {static_cast<void>(Atlas);static_cast<void>(Rect);auto* I=Tree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(W,H)));I->SetColorAndOpacity(FLinearColor(.9f,.86f,.77f,.8f));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Canvas,I,X,Y,W,H);return I;}
     UInkFrontendActionButton* Button(UWidgetTree* Tree,UInkFrontendWidget* Frontend,UTexture2D* Atlas,UCanvasPanel* Canvas,FName Name,FVector4 Rect,UTextBlock* Label,float X,float Y,float W,float H)
     {
+        static_cast<void>(Atlas);static_cast<void>(Rect);
         auto* B=Tree->ConstructWidget<UInkFrontendActionButton>(UInkFrontendActionButton::StaticClass(),Name);B->Action=Name;
-        FButtonStyle S;auto Brush=Art(Atlas,Rect);S.SetNormal(Brush);auto Hov=Brush;Hov.TintColor=FLinearColor(1.12f,1.06f,.90f,1);S.SetHovered(Hov);S.SetPressed(Hov);Brush.TintColor=FLinearColor(.36f,.36f,.36f,1);S.SetDisabled(Brush);S.SetNormalPadding(FMargin(0));S.SetPressedPadding(FMargin(0));B->SetStyle(S);
-        if(Label){Label->SetJustification(ETextJustify::Center);Label->SetAutoWrapText(false);B->SetContent(Label);auto* Layout=Cast<UButtonSlot>(Label->Slot);Layout->SetVerticalAlignment(VAlign_Center);Layout->SetHorizontalAlignment(HAlign_Fill);Layout->SetPadding(FMargin(2));}
+        auto S=InkPresentationStyle::FeatureButton();S.SetNormalPadding(FMargin(4));S.SetPressedPadding(FMargin(4));B->SetStyle(S);
+        if(Label){Label->SetJustification(ETextJustify::Center);Label->SetAutoWrapText(false);Label->SetColorAndOpacity(InkPresentationStyle::Ink());B->SetContent(Label);auto* Layout=Cast<UButtonSlot>(Label->Slot);Layout->SetVerticalAlignment(VAlign_Center);Layout->SetHorizontalAlignment(HAlign_Fill);Layout->SetPadding(FMargin(2));}
         Place(Canvas,B,X,Y,W,H);B->BindFrontend(Frontend);return B;
     }
     FText CategoryLabel(FName Category)
@@ -126,6 +142,9 @@ FReply UInkFrontendWidget::NativeOnPreviewKeyDown(const FGeometry& Geometry,cons
 void UInkFrontendWidget::RebuildInventoryPage(UWidgetTree* Tree)
 {
     if(!Tree)return;
+    // Rebuilding or migrating the saved WBP invalidates the remembered
+    // orientation even when the new shell has the same widget names.
+    bInventoryLayoutInitialized=false;InventoryGridColumns=5;
     auto* Page=InkInventoryUI::Find<UCanvasPanel>(Tree,TEXT("Inventory"));
     if(Page)
     {
@@ -146,54 +165,56 @@ void UInkFrontendWidget::RebuildInventoryPage(UWidgetTree* Tree)
 void UInkFrontendWidget::BuildInventorySurface(UWidgetTree* Tree,UCanvasPanel* Page)
 {
     using namespace InkInventoryUI;
-    auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();
+    auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous(); // Item icons remain content; all frame/button art is native.
+    static_cast<void>(Atlas);
     auto* Scale=Tree->ConstructWidget<UScaleBox>(UScaleBox::StaticClass(),TEXT("InventoryScale"));Scale->SetStretch(EStretch::ScaleToFit);
     auto* Outer=Page->AddChildToCanvas(Scale);Outer->SetAnchors(FAnchors(0,0,1,1));Outer->SetOffsets(FMargin(24));
     auto* DesignSize=Tree->ConstructWidget<USizeBox>();DesignSize->SetWidthOverride(1440);DesignSize->SetHeightOverride(950);Scale->SetContent(DesignSize);
     auto* Canvas=Tree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("InventoryShell"));DesignSize->SetContent(Canvas);
+    auto* Version=Tree->ConstructWidget<USizeBox>(USizeBox::StaticClass(),TEXT("InventoryPaperStyleV2"));Version->SetVisibility(ESlateVisibility::Collapsed);Place(Canvas,Version,0,0,0,0,-10);
     auto Image=[&](UCanvasPanel* C,FName Name,FVector4 Rect,float X,float Y,float W,float H)
-    {auto* I=Tree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(Art(Atlas,Rect));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(C,I,X,Y,W,H);return I;};
+    {static_cast<void>(Rect);auto* I=Tree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(InkPresentationStyle::Surface(Name==TEXT("InventoryMainFrame")?InkPresentationStyle::ESurface::FeaturePaper:InkPresentationStyle::ESurface::FeatureCard,FVector2D(W,H)));I->SetColorAndOpacity(FLinearColor::White);I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(C,I,X,Y,W,H);return I;};
     auto Label=[&](UCanvasPanel* C,FName Name,const FText& Text,int32 Font,float X,float Y,float W,float H)
     {auto* L=AddText(Tree,nullptr,Text,Font,Name);Place(C,L,X,Y,W,H);return L;};
-    auto Button=[&](UCanvasPanel* C,FName Name,FVector4 Rect,const FText& Text,float X,float Y,float W,float H)
+    auto Button=[&](UCanvasPanel* C,FName Name,FVector4 Rect,const FText& Text,float X,float Y,float W,float H,bool bSelected=false)
     {
+        static_cast<void>(Rect);
         auto* B=Tree->ConstructWidget<UInkFrontendActionButton>(UInkFrontendActionButton::StaticClass(),Name);B->Action=Name;
-        FButtonStyle S;auto NormalBrush=Art(Atlas,Rect);S.SetNormal(NormalBrush);auto Highlight=NormalBrush;Highlight.TintColor=FLinearColor(1.12f,1.06f,.90f,1);S.SetHovered(Highlight);S.SetPressed(Highlight);
-        auto Disabled=NormalBrush;Disabled.TintColor=FLinearColor(.36f,.36f,.36f,1);S.SetDisabled(Disabled);S.SetNormalPadding(FMargin(0));S.SetPressedPadding(FMargin(0));B->SetStyle(S);
-        // This atlas already contains the button lettering. Keep the original art.
+        SetFeatureButtonState(B,bSelected);
+        auto* Caption=AddText(Tree,nullptr,Text,Name==TEXT("InventoryCloseIcon")?30:20);
+        Caption->SetColorAndOpacity(bSelected?InkPresentationStyle::PaperLight():InkPresentationStyle::Ink());Caption->SetJustification(ETextJustify::Center);Caption->SetAutoWrapText(false);
+        B->SetContent(Caption);if(auto* BS=Cast<UButtonSlot>(Caption->Slot)){BS->SetHorizontalAlignment(HAlign_Fill);BS->SetVerticalAlignment(VAlign_Center);BS->SetPadding(FMargin(2));}
         Place(C,B,X,Y,W,H);B->BindFrontend(this);return B;
     };
     Image(Canvas,TEXT("InventoryMainFrame"),Main,20,20,1020,1020.f*549.f/663.f);
-    auto* TopClose=Button(Canvas,TEXT("InventoryCloseIcon"),CloseNormal,FText::GetEmpty(),956,182,44,44);
-    auto CS=TopClose->GetStyle();CS.SetHovered(Art(Atlas,CloseHover));CS.SetPressed(Art(Atlas,ClosePressed));TopClose->SetStyle(CS);
-    Label(Canvas,TEXT("InventoryCount"),FText::GetEmpty(),18,520,202,180,34);
-    Button(Canvas,TEXT("InventoryGrid"),FVector4(1037,1043,1102,1111),FText::GetEmpty(),724,198,38,40);
-    Button(Canvas,TEXT("InventoryList"),FVector4(1104,1043,1166,1111),FText::GetEmpty(),780,198,38,40);
-    Button(Canvas,TEXT("InventorySortDirection"),FVector4(1173,1043,1211,1111),FText::GetEmpty(),836,198,30,40);
+    Label(Canvas,TEXT("InventoryTitle"),LOCTEXT("InventoryHeading","背包"),34,70,56,360,60);
+    Button(Canvas,TEXT("InventoryCloseIcon"),CloseNormal,LOCTEXT("CloseGlyph","×"),956,182,52,52);
+    Label(Canvas,TEXT("InventoryCount"),FText::GetEmpty(),20,520,202,180,34);
+    Button(Canvas,TEXT("InventoryGrid"),FVector4(0,0,0,0),LOCTEXT("GridMode","格子"),724,198,72,44,!bInventoryListView);
+    Button(Canvas,TEXT("InventoryList"),FVector4(0,0,0,0),LOCTEXT("ListMode","列表"),804,198,72,44,bInventoryListView);
+    Button(Canvas,TEXT("InventorySortDirection"),FVector4(0,0,0,0),LOCTEXT("SortDirection","排序"),884,198,80,44);
     auto* Scroll=Tree->ConstructWidget<UScrollBox>(UScrollBox::StaticClass(),TEXT("InventoryScroll"));Scroll->SetScrollBarVisibility(ESlateVisibility::Collapsed);Place(Canvas,Scroll,74,242,888,364);
     auto ScrollStyle=Scroll->GetWidgetStyle();ScrollStyle.SetTopShadowBrush(FSlateNoResource());ScrollStyle.SetBottomShadowBrush(FSlateNoResource());Scroll->SetWidgetStyle(ScrollStyle);
-    Image(Canvas,TEXT("InventoryScrollTrack"),FVector4(1198,584,1238,951),968,242,34,350);
+    auto* Track=Image(Canvas,TEXT("InventoryScrollTrack"),FVector4(0,0,0,0),968,242,34,350);Track->SetColorAndOpacity(FLinearColor(.24f,.29f,.27f,.20f));
     auto* Handle=Tree->ConstructWidget<UInkInventoryScrollBar>(UInkInventoryScrollBar::StaticClass(),TEXT("InventoryScrollThumb"));
     Handle->TargetScrollBox=Scroll;Handle->SetThickness(FVector2D(24,24));Handle->SetPadding(FMargin(0));
     FScrollBarStyle HandleStyle;
     const FSlateNoResource NoRail;
     HandleStyle.SetVerticalBackgroundImage(NoRail);HandleStyle.SetVerticalTopSlotImage(NoRail);HandleStyle.SetVerticalBottomSlotImage(NoRail);
-    auto HandleArt=Art(Atlas,FVector4(1158,685,1186,804));
+    FSlateBrush HandleArt=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureTab,FVector2D(24,228));
     HandleStyle.SetNormalThumbImage(HandleArt);HandleStyle.SetHoveredThumbImage(HandleArt);HandleStyle.SetDraggedThumbImage(HandleArt);
     Handle->SetWidgetStyle(HandleStyle);Place(Canvas,Handle,973,300,24,228);
     auto* Grid=Tree->ConstructWidget<UUniformGridPanel>(UUniformGridPanel::StaticClass(),TEXT("InventoryItemList"));Grid->SetSlotPadding(FMargin(3));Cast<UScrollBoxSlot>(Scroll->AddChild(Grid))->SetHorizontalAlignment(HAlign_Center);
     Label(Canvas,TEXT("InventoryEmptyState"),FText::GetEmpty(),20,106,550,800,30);
+    const FText FilterLabels[]={LOCTEXT("FilterAll","全部"),LOCTEXT("FilterEquipment","装备"),LOCTEXT("FilterMaterial","材料"),LOCTEXT("FilterConsumable","丹药"),LOCTEXT("FilterTreasure","法宝")};
     for(int32 I=0;I<5;++I)
     {
-        const FName N(*(TEXT("Filter")+Categories[I].ToString()));auto* B=Button(Canvas,N,Tabs[I],FText::GetEmpty(),92+I*174,610,166,50);
-        auto* Content=Tree->ConstructWidget<UCanvasPanel>();B->SetContent(Content);
-        InkInventoryUI::Image(Tree,Atlas,Content,FName(*(TEXT("InventoryCategoryIcon_")+Categories[I].ToString())),CategoryIcons[I],10,8,28,34);
-        if(auto* BS=Cast<UButtonSlot>(Content->Slot)){BS->SetHorizontalAlignment(HAlign_Fill);BS->SetVerticalAlignment(VAlign_Fill);BS->SetPadding(FMargin(0));}
+        const FName N(*(TEXT("Filter")+Categories[I].ToString()));Button(Canvas,N,Tabs[I],FilterLabels[I],92+I*174,610,166,50,InventoryCategory==Categories[I]);
     }
     Button(Canvas,TEXT("InventoryPrevious"),FVector4(17,1041,222,1110),LOCTEXT("Previous","上一页"),96,665,174,48);
     auto* PageLabel=Label(Canvas,TEXT("InventoryPageNumber"),FText::GetEmpty(),22,290,675,174,36);PageLabel->SetJustification(ETextJustify::Center);
     Button(Canvas,TEXT("InventoryNext"),FVector4(229,1041,434,1110),LOCTEXT("Next","下一页"),484,665,174,48);
-    Button(Canvas,TEXT("InventoryMultiSelect"),FVector4(840,864,906,933),FText::GetEmpty(),758,672,34,34);
+    Button(Canvas,TEXT("InventoryMultiSelect"),FVector4(0,0,0,0),LOCTEXT("SelectToggle","○"),758,672,42,42,bInventoryMultiSelect);
     Label(Canvas,TEXT("InventoryMultiSelectLabel"),LOCTEXT("MultiSelect","多选"),20,808,677,130,34);
     Button(Canvas,TEXT("InventorySell"),Actions[2],LOCTEXT("Sell","出售"),145,735,200,60);
     Button(Canvas,TEXT("InventoryDecompose"),Actions[3],LOCTEXT("Decompose","分解"),435,735,200,60);
@@ -218,33 +239,31 @@ void UInkFrontendWidget::EnsureInventoryDetailWindow()
     auto* Panel=Tree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("InventoryDetailPanel"));Place(Shell,Panel,bInventoryPortrait?109:1070,bInventoryPortrait?152:112,334,610,5);
     if(bInventoryPortrait){Panel->SetRenderTransformPivot(FVector2D::ZeroVector);Panel->SetRenderScale(FVector2D(1.5f));}
     Panel->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
-    Image(Tree,Atlas,Panel,TEXT("InventoryDetailFrame"),Detail,0,0,320,320.f*513.f/271.f);
+    auto* DetailSurface=Tree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT("InventoryDetailFrame"));DetailSurface->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(320,320.f*513.f/271.f)));DetailSurface->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Panel,DetailSurface,0,0,320,320.f*513.f/271.f);
     Image(Tree,Atlas,Panel,TEXT("InventoryDetailIcon"),Empty,42,82,88,88);
     auto Label=[&](FName N,const FText& T,int32 Font,float X,float Y,float W,float H)
     {auto* L=AddText(Tree,nullptr,T,Font,N);Place(Panel,L,X,Y,W,H);return L;};
     auto Make=[&](FName N,FVector4 R,const FText& T,float X,float Y,float W,float H)
-    {return Button(Tree,this,Atlas,Panel,N,R,nullptr,X,Y,W,H);};
+    {auto* Caption=AddText(Tree,nullptr,T,18);return Button(Tree,this,Atlas,Panel,N,R,Caption,X,Y,W,H);};
     Label(TEXT("InventoryDetailName"),FText::GetEmpty(),23,150,78,144,60);
     Label(TEXT("InventoryDetailType"),FText::GetEmpty(),20,150,141,144,32);
     Label(TEXT("InventoryDetailCount"),FText::GetEmpty(),18,36,174,270,28);
     Label(TEXT("InventoryDescriptionHeading"),LOCTEXT("Description","物品描述"),20,36,223,250,30);
     auto* Description=Tree->ConstructWidget<UScrollBox>(UScrollBox::StaticClass(),TEXT("InventoryDescriptionScroll"));Place(Panel,Description,42,266,238,136);Description->AddChild(AddText(Tree,nullptr,FText::GetEmpty(),20,TEXT("InventoryDetail")));
-    auto* QuantityFrame=Image(Tree,Atlas,Panel,TEXT("InventoryQuantityFrame"),FVector4(91,1185,238,1242),70,420,180,34);
-    QuantityFrame->SetBrush(Art(Atlas,FVector4(91,1185,238,1242),true));
-    Make(TEXT("InventoryQuantityMinus"),FVector4(32,1185,91,1242),FText::GetEmpty(),30,420,34,34);
-    Make(TEXT("InventoryQuantityPlus"),FVector4(240,1185,294,1242),FText::GetEmpty(),256,420,34,34);
+    Image(Tree,Atlas,Panel,TEXT("InventoryQuantityFrame"),FVector4(0,0,0,0),70,420,180,34);
+    Make(TEXT("InventoryQuantityMinus"),FVector4(0,0,0,0),LOCTEXT("QuantityMinus","−"),30,420,34,34);
+    Make(TEXT("InventoryQuantityPlus"),FVector4(0,0,0,0),LOCTEXT("QuantityPlus","+"),256,420,34,34);
     Label(TEXT("InventoryQuantity"),FText::GetEmpty(),21,70,422,180,32)->SetJustification(ETextJustify::Center);
-    const FVector4 Badges[]={FVector4(847,759,916,831),FVector4(918,759,987,831),FVector4(991,759,1061,831),FVector4(1062,757,1137,833)};
     const TCHAR* Presets[]={TEXT("1"),TEXT("10"),TEXT("99"),TEXT("Max")};
     for(int32 I=0;I<4;++I)
     {
-        const FString S=Presets[I];auto* B=Make(FName(*(TEXT("InventoryQuantityPreset_")+S)),Badges[I],I==3?LOCTEXT("AllQuantity","全"):FText::FromString(S),35+I*64,462,44,44);
-        auto* Radio=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*(TEXT("InventoryQuantityRadio_")+S)));Radio->SetBrush(Art(Atlas,FVector4(988,864,1059,933)));Radio->SetVisibility(ESlateVisibility::HitTestInvisible);
+        const FString S=Presets[I];Make(FName(*(TEXT("InventoryQuantityPreset_")+S)),FVector4(0,0,0,0),I==3?LOCTEXT("AllQuantity","全"):FText::FromString(S),35+I*64,462,44,44);
+        auto* Radio=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*(TEXT("InventoryQuantityRadio_")+S)));Radio->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureTab,FVector2D(14,14)));Radio->SetVisibility(ESlateVisibility::HitTestInvisible);
         Place(Panel,Radio,81+I*64,477,14,14);
     }
     Make(TEXT("InventoryUse"),Actions[0],LOCTEXT("Use","使用"),16,512,138,40);
     Make(TEXT("InventoryEquip"),Actions[1],LOCTEXT("Equip","装备"),166,512,138,40);
-    auto* CloseLabel=Make(TEXT("InventoryClose"),Actions[5],LOCTEXT("CloseDetails","关闭"),75,559,170,38);if(auto* Text=Cast<UTextBlock>(CloseLabel->GetContent()))Text->SetColorAndOpacity(PaperColor);
+    Make(TEXT("InventoryClose"),Actions[5],LOCTEXT("CloseDetails","关闭"),75,559,170,38);
     BindTree();
 }
 
@@ -253,9 +272,9 @@ void UInkFrontendWidget::EnsureInventoryTooltipWindow()
     using namespace InkInventoryUI;if(!WidgetTree||Find<UCanvasPanel>(WidgetTree,TEXT("InventoryTooltip")))return;
     auto* Shell=Find<UCanvasPanel>(WidgetTree,TEXT("InventoryShell"));if(!Shell)return;auto* Tree=WidgetTree.Get();auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();
     auto* Tip=Tree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("InventoryTooltip"));Place(Shell,Tip,0,0,310,310.f*212.f/262.f,20);Tip->SetVisibility(ESlateVisibility::HitTestInvisible);
-    Image(Tree,Atlas,Tip,TEXT("InventoryTooltipFrame"),Tooltip,0,0,310,310.f*212.f/262.f);
+    auto* TooltipSurface=Tree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT("InventoryTooltipFrame"));TooltipSurface->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(310,310.f*212.f/262.f)));TooltipSurface->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Tip,TooltipSurface,0,0,310,310.f*212.f/262.f);
     Image(Tree,Atlas,Tip,TEXT("InventoryTooltipIcon"),Empty,36,42,76,76);
-    auto Label=[&](FName N,int32 Font,float X,float Y,float W,float H){auto* L=AddText(Tree,nullptr,FText::GetEmpty(),Font,N);L->SetColorAndOpacity(PaperColor);Place(Tip,L,X,Y,W,H);return L;};
+    auto Label=[&](FName N,int32 Font,float X,float Y,float W,float H){auto* L=AddText(Tree,nullptr,FText::GetEmpty(),Font,N);L->SetColorAndOpacity(InkPresentationStyle::Ink());Place(Tip,L,X,Y,W,H);return L;};
     Label(TEXT("InventoryTooltipName"),22,128,36,162,56);Label(TEXT("InventoryTooltipType"),20,128,92,162,30);
     Label(TEXT("InventoryTooltipDescription"),20,24,150,264,78)->SetClipping(EWidgetClipping::ClipToBounds);
 }
@@ -265,8 +284,19 @@ void UInkFrontendWidget::HandleInventorySearchChanged(const FText& Text)
 
 void UInkFrontendWidget::RefreshInventory(UWidgetTree* SourceTree)
 {
+    if(UsesRebuiltPresentation()&&!SourceTree){RefreshRebuiltPresentation();return;}
     using namespace InkInventoryUI;
-    UWidgetTree* Tree=SourceTree?SourceTree:WidgetTree.Get();auto* Grid=Find<UUniformGridPanel>(Tree,TEXT("InventoryItemList"));if(!Grid)return;
+    UWidgetTree* Tree=SourceTree?SourceTree:WidgetTree.Get();if(!Tree)return;
+    // Saved WBP instances already contain InventoryShell, so the frontend's
+    // empty-tree initializer skips RebuildInventoryPage. Migrate that tree on
+    // its first real refresh; the marker makes this safe and idempotent.
+    if(!SourceTree&&Tree==WidgetTree.Get()&&Find<UCanvasPanel>(Tree,TEXT("InventoryShell"))&&!Tree->FindWidget(TEXT("InventoryPaperStyleV2")))
+    {
+        RebuildInventoryPage(Tree);
+        BindTree();
+        return;
+    }
+    auto* Grid=Find<UUniformGridPanel>(Tree,TEXT("InventoryItemList"));if(!Grid)return;
     bInventoryModelDirty=false;
     auto* Model=GetInventoryModel();auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();
     for(auto It=InventoryBatchSelection.CreateIterator();It;++It)if(!Model->FindEntry(*It))It.RemoveCurrent();
@@ -292,38 +322,50 @@ void UInkFrontendWidget::RefreshInventory(UWidgetTree* SourceTree)
         while(Slots.Num()<PaddedCount)Slots.Add(-1-Slots.Num());
     }
     const int32 Pages=FMath::Max(1,FMath::DivideAndRoundUp(Slots.Num(),SlotsPerPage));InventoryPageIndex=FMath::Clamp(InventoryPageIndex,0,Pages-1);
-    Grid->SetMinDesiredSlotWidth(bInventoryListView?850:88);Grid->SetMinDesiredSlotHeight(bInventoryListView?76:86);
+    Grid->SetMinDesiredSlotWidth(bInventoryListView?(bInventoryPortrait?550:850):(bInventoryPortrait?104:88));
+    Grid->SetMinDesiredSlotHeight(bInventoryListView?(bInventoryPortrait?92:76):(bInventoryPortrait?100:86));
     const int32 Start=InventoryPageIndex*SlotsPerPage,End=FMath::Min(Start+SlotsPerPage,Slots.Num());
     for(int32 N=Start;N<End;++N)
     {
         const int32 Index=Slots[N];const auto* Entry=Model->FindEntryAtSlot(Index);const bool bLocked=Index>=Model->GetUnlockedSlotCount()||(Index<0&&N>=Model->GetUnlockedSlotCount());
         auto* Button=Tree->ConstructWidget<UInkFrontendActionButton>(UInkFrontendActionButton::StaticClass(),FName(*FString::Printf(TEXT("InventorySlot_%d"),Index)));Button->Action=FName(*FString::Printf(TEXT("InventorySelect_%d"),Index));
-        FButtonStyle S;S.SetNormal(Art(Atlas,bLocked?Locked:Entry?(Entry->EntryId==SelectedInventoryEntry?Selected:Normal):Empty));S.SetHovered(Art(Atlas,Entry?Hover:(bLocked?Locked:Empty)));S.SetPressed(Art(Atlas,Entry?Selected:Empty));S.SetDisabled(Art(Atlas,Locked));S.SetNormalPadding(FMargin(0));S.SetPressedPadding(FMargin(0));Button->SetStyle(S);
-        // Locked cells retain the locked artwork and cannot receive pointer input.
+        const bool bSelected=Entry&&Entry->EntryId==SelectedInventoryEntry;
+        FButtonStyle S=InkPresentationStyle::FeatureButton(bSelected);S.SetDisabled(InkPresentationStyle::FeatureButton().Disabled);S.SetNormalPadding(FMargin(0));S.SetPressedPadding(FMargin(0));Button->SetStyle(S);
+        // Locked cells keep their disabled state and cannot receive pointer input.
         if(bLocked){Button->SetIsEnabled(false);Button->SetVisibility(ESlateVisibility::HitTestInvisible);}
         auto* Content=Tree->ConstructWidget<UCanvasPanel>();Button->SetContent(Content);if(auto* BS=Cast<UButtonSlot>(Content->Slot)){BS->SetPadding(FMargin(0));BS->SetHorizontalAlignment(HAlign_Fill);BS->SetVerticalAlignment(VAlign_Fill);}
+        if(bLocked)
+        {
+            auto* LockedLabel=AddText(Tree,nullptr,LOCTEXT("InventorySlotLocked","未解锁"),bInventoryListView?16:12);
+            LockedLabel->SetColorAndOpacity(FLinearColor(.43f,.46f,.41f,1.f));LockedLabel->SetJustification(ETextJustify::Center);
+            Place(Content,LockedLabel,bInventoryListView?80:2,bInventoryListView?24:22,bInventoryListView?(bInventoryPortrait?450:700):100,bInventoryListView?28:20,2);
+        }
         if(bInventoryListView)
         {
-            InkInventoryUI::Image(Tree,Atlas,Content,FName(*FString::Printf(TEXT("InventoryListFrame_%d"),Index)),bLocked?Locked:Entry?(Entry->EntryId==SelectedInventoryEntry?Selected:Normal):Empty,0,0,72,72);
+            auto* Frame=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*FString::Printf(TEXT("InventoryListFrame_%d"),Index)));
+            SetListFrameState(Frame,bSelected,Entry&&Entry->EntryId==HoveredInventoryEntry,bLocked);
+            Frame->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Content,Frame,0,0,72,72);
             const FSlateColorBrush Clear(FLinearColor::Transparent);S.SetNormal(Clear);S.SetHovered(Clear);S.SetPressed(Clear);S.SetDisabled(Clear);Button->SetStyle(S);
         }
         if(Entry)
         {
             auto* Icon=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*FString::Printf(TEXT("InventoryIcon_%d"),Index)));
             if(auto* T=Entry->Item.Icon.LoadSynchronous())Icon->SetBrushFromTexture(T,true);else Icon->SetBrush(Art(Atlas,ItemIcon(Entry->Item)));Icon->SetVisibility(ESlateVisibility::HitTestInvisible);
-            Place(Content,Icon,bInventoryPortrait&&!bInventoryListView?12:9,7,bInventoryListView?52:(bInventoryPortrait?80:64),bInventoryListView?52:(bInventoryPortrait?80:64));
+            Place(Content,Icon,bInventoryPortrait&&!bInventoryListView?26:9,bInventoryPortrait&&!bInventoryListView?3:7,bInventoryListView?52:(bInventoryPortrait?48:64),bInventoryListView?52:(bInventoryPortrait?48:64));
             if(bInventoryListView){auto* Name=AddText(Tree,nullptr,Entry->Item.Name,25);Place(Content,Name,80,18,bInventoryPortrait?360:600,42);}
-            auto* New=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*FString::Printf(TEXT("InventoryNew_%d"),Index)));New->SetBrush(Art(Atlas,FVector4(869,666,971,742)));Place(Content,New,0,0,44,32,5);New->SetVisibility(Entry->bIsNew?ESlateVisibility::HitTestInvisible:ESlateVisibility::Collapsed);
-            auto* Count=Tree->ConstructWidget<UOverlay>();auto* Badge=Tree->ConstructWidget<UImage>();Badge->SetBrush(Art(Atlas,FVector4(987,669,1107,737)));Fill(Count->AddChildToOverlay(Badge));
-            auto* Number=AddText(Tree,nullptr,FText::AsNumber(Entry->Item.Count),bInventoryPortrait?20:(bInventoryListView?16:13));Number->SetColorAndOpacity(PaperColor);Number->SetJustification(ETextJustify::Center);auto* NS=Count->AddChildToOverlay(Number);NS->SetHorizontalAlignment(HAlign_Fill);NS->SetVerticalAlignment(VAlign_Center);Place(Content,Count,bInventoryListView?(bInventoryPortrait?476:750):(bInventoryPortrait?43:26),bInventoryListView?24:(bInventoryPortrait?77:58),56,24,6);Count->SetVisibility(ESlateVisibility::HitTestInvisible);
-            if(Entry->bEquipped){auto* Equipped=AddText(Tree,nullptr,LOCTEXT("Equipped","已装备"),bInventoryPortrait?18:(bInventoryListView?15:12));Equipped->SetColorAndOpacity(AccentColor);Place(Content,Equipped,bInventoryListView?(bInventoryPortrait?370:655):4,bInventoryListView?24:(bInventoryPortrait?55:45),74,25,7);}
+            auto* New=AddText(Tree,nullptr,LOCTEXT("NewItemTag","新"),13,FName(*FString::Printf(TEXT("InventoryNew_%d"),Index)));New->SetColorAndOpacity(InkPresentationStyle::Gold());New->SetJustification(ETextJustify::Center);Place(Content,New,0,0,30,24,5);New->SetVisibility(Entry->bIsNew?ESlateVisibility::HitTestInvisible:ESlateVisibility::Collapsed);
+            auto* Count=Tree->ConstructWidget<UBorder>();Count->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureTab,FVector2D(bInventoryPortrait&&!bInventoryListView?44:56,bInventoryPortrait&&!bInventoryListView?20:24)));Count->SetBrushColor(FLinearColor(.18f,.21f,.19f,.82f));
+            auto* Number=AddText(Tree,nullptr,FText::AsNumber(Entry->Item.Count),bInventoryPortrait&&!bInventoryListView?15:(bInventoryListView?16:13));Number->SetColorAndOpacity(InkPresentationStyle::PaperLight());Number->SetJustification(ETextJustify::Center);Count->SetContent(Number);Place(Content,Count,bInventoryListView?(bInventoryPortrait?476:750):(bInventoryPortrait?58:26),bInventoryListView?24:(bInventoryPortrait?40:58),bInventoryPortrait&&!bInventoryListView?44:56,bInventoryPortrait&&!bInventoryListView?20:24,6);Count->SetVisibility(ESlateVisibility::HitTestInvisible);
+            if(Entry->bEquipped){auto* Equipped=AddText(Tree,nullptr,LOCTEXT("Equipped","已装备"),bInventoryPortrait?14:(bInventoryListView?15:12));Equipped->SetColorAndOpacity(InkPresentationStyle::Gold());Place(Content,Equipped,bInventoryListView?(bInventoryPortrait?370:655):2,bInventoryListView?24:(bInventoryPortrait?44:45),bInventoryPortrait&&!bInventoryListView?50:74,bInventoryPortrait&&!bInventoryListView?18:25,7);}
             if(bInventoryMultiSelect)
             {
-                const auto Rect=InventoryBatchSelection.Contains(Entry->EntryId)?FVector4(913,864,980,933):FVector4(840,864,906,933);
-                InkInventoryUI::Button(Tree,this,Atlas,Content,FName(*FString::Printf(TEXT("InventoryToggle_%d"),Index)),Rect,nullptr,bInventoryListView?(bInventoryPortrait?526:808):4,bInventoryListView?24:60,20,20);
+                const bool bBatchSelected=InventoryBatchSelection.Contains(Entry->EntryId);
+                auto* BatchCaption=AddText(Tree,nullptr,FText::FromString(bBatchSelected?TEXT("✓"):TEXT("○")),18);
+                auto* BatchToggle=InkInventoryUI::Button(Tree,this,Atlas,Content,FName(*FString::Printf(TEXT("InventoryToggle_%d"),Index)),FVector4(0,0,0,0),BatchCaption,bInventoryListView?(bInventoryPortrait?526:808):4,bInventoryListView?24:(bInventoryPortrait?34:60),bInventoryPortrait&&!bInventoryListView?26:30,bInventoryPortrait&&!bInventoryListView?26:30);
+                SetFeatureButtonState(BatchToggle,bBatchSelected);
             }
         }
-        auto* Size=Tree->ConstructWidget<USizeBox>();Size->SetWidthOverride(bInventoryListView?(bInventoryPortrait?550:850):(bInventoryPortrait?104:82));Size->SetHeightOverride(bInventoryListView?(bInventoryPortrait?92:72):(bInventoryPortrait?104:82));Size->SetContent(Button);
+        auto* Size=Tree->ConstructWidget<USizeBox>();Size->SetWidthOverride(bInventoryListView?(bInventoryPortrait?550:850):(bInventoryPortrait?104:82));Size->SetHeightOverride(bInventoryListView?(bInventoryPortrait?92:72):(bInventoryPortrait?100:82));Size->SetContent(Button);
         const int32 Local=N-Start;auto* GS=Grid->AddChildToUniformGrid(Size,bInventoryListView?Local:Local/InventoryGridColumns,bInventoryListView?0:Local%InventoryGridColumns);GS->SetHorizontalAlignment(HAlign_Center);GS->SetVerticalAlignment(VAlign_Center);Button->BindFrontend(this);
     }
     auto Text=[&](const TCHAR* N,const FText& T){if(auto* L=Find<UTextBlock>(Tree,N))L->SetText(T);};
@@ -332,15 +374,20 @@ void UInkFrontendWidget::RefreshInventory(UWidgetTree* SourceTree)
     Text(TEXT("InventoryEmptyState"),bNoMatches?LOCTEXT("NoMatch","没有符合条件的物品"):FText::GetEmpty());
     if(auto* B=Find<UInkFrontendActionButton>(Tree,TEXT("InventoryPrevious")))B->SetIsEnabled(InventoryPageIndex>0);
     if(auto* B=Find<UInkFrontendActionButton>(Tree,TEXT("InventoryNext")))B->SetIsEnabled(InventoryPageIndex+1<Pages);
-    for(int32 I=0;I<5;++I)if(auto* B=Find<UInkFrontendActionButton>(Tree,*(TEXT("Filter")+Categories[I].ToString())))
-    {auto S=B->GetStyle();auto BArt=Art(Atlas,Tabs[I]);BArt.TintColor=InventoryCategory==Categories[I]?FLinearColor(1.12f,1.03f,.82f,1):FLinearColor::White;S.SetNormal(BArt);BArt.TintColor=FLinearColor(1.16f,1.08f,.88f,1);S.SetHovered(BArt);B->SetStyle(S);}
-    auto Check=[&](const TCHAR* N,bool Checked,bool Radio=false){if(auto* B=Find<UInkFrontendActionButton>(Tree,N)){auto S=B->GetStyle();auto R=Radio?(Checked?FVector4(1061,864,1134,933):FVector4(988,864,1059,933)):(Checked?FVector4(913,864,980,933):FVector4(840,864,906,933));S.SetNormal(Art(Atlas,R));S.SetHovered(Art(Atlas,R));S.SetPressed(Art(Atlas,R));B->SetStyle(S);}};
-    Check(TEXT("InventoryMultiSelect"),bInventoryMultiSelect);
+    for(int32 I=0;I<5;++I)if(auto* B=Find<UInkFrontendActionButton>(Tree,*(TEXT("Filter")+Categories[I].ToString())))SetFeatureButtonState(B,InventoryCategory==Categories[I]);
+    if(auto* B=Find<UInkFrontendActionButton>(Tree,TEXT("InventoryGrid")))SetFeatureButtonState(B,!bInventoryListView);
+    if(auto* B=Find<UInkFrontendActionButton>(Tree,TEXT("InventoryList")))SetFeatureButtonState(B,bInventoryListView);
+    if(auto* B=Find<UInkFrontendActionButton>(Tree,TEXT("InventoryMultiSelect")))
+    {
+        if(auto* Caption=Cast<UTextBlock>(B->GetContent()))Caption->SetText(bInventoryMultiSelect?LOCTEXT("MultiSelectedGlyph","✓"):LOCTEXT("MultiUnselectedGlyph","○"));
+        SetFeatureButtonState(B,bInventoryMultiSelect);
+    }
     RefreshInventoryDetails(Tree);if(!SourceTree){BindTree();UpdateInventoryTooltip();}
 }
 
 void UInkFrontendWidget::RefreshInventoryDetails(UWidgetTree* Tree)
 {
+    if(UsesRebuiltPresentation()){RefreshRebuiltPresentation();return;}
     using namespace InkInventoryUI;auto* Model=GetInventoryModel();const auto* Entry=Model->FindEntry(SelectedInventoryEntry);auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();
     if(!Entry){SelectedInventoryEntry.Invalidate();if(Tree==WidgetTree.Get())RemoveInventoryWindow(TEXT("InventoryDetailPanel"));}
     else if(Tree==WidgetTree.Get()&&CurrentPage==TEXT("Inventory"))EnsureInventoryDetailWindow();
@@ -350,7 +397,12 @@ void UInkFrontendWidget::RefreshInventoryDetails(UWidgetTree* Tree)
         if(auto* I=Find<UImage>(Tree,TEXT("InventoryDetailIcon"))){if(auto* T=Entry->Item.Icon.LoadSynchronous())I->SetBrushFromTexture(T,true);else I->SetBrush(Art(Atlas,ItemIcon(Entry->Item)));}
         auto Set=[&](const TCHAR* N,const FText& T){if(auto* L=Find<UTextBlock>(Tree,N))L->SetText(T);};
         Set(TEXT("InventoryDetailName"),Entry->Item.Name);Set(TEXT("InventoryDetailType"),CategoryLabel(Entry->Item.Category));Set(TEXT("InventoryDetailCount"),FText::Format(LOCTEXT("Owned","拥有数量：{0}"),Entry->Item.Count));Set(TEXT("InventoryDetail"),Entry->Item.Description);Set(TEXT("InventoryQuantity"),FText::AsNumber(InventoryActionQuantity));
-        for(const TCHAR* Preset:{TEXT("1"),TEXT("10"),TEXT("99"),TEXT("Max")})if(auto* Radio=Find<UImage>(Tree,*(FString(TEXT("InventoryQuantityRadio_"))+Preset)))Radio->SetBrush(Art(Atlas,InventoryQuantityPreset==FName(Preset)?FVector4(1061,864,1134,933):FVector4(988,864,1059,933)));
+        for(const TCHAR* Preset:{TEXT("1"),TEXT("10"),TEXT("99"),TEXT("Max")})
+        {
+            const bool bSelected=InventoryQuantityPreset==FName(Preset);
+            if(auto* Radio=Find<UImage>(Tree,*(FString(TEXT("InventoryQuantityRadio_"))+Preset)))Radio->SetColorAndOpacity(bSelected?InkPresentationStyle::Gold():InkPresentationStyle::Ink());
+            if(auto* PresetButton=Find<UInkFrontendActionButton>(Tree,*(FString(TEXT("InventoryQuantityPreset_"))+Preset)))SetFeatureButtonState(PresetButton,bSelected);
+        }
     }
     auto Enable=[&](const TCHAR* N,bool b){if(auto* B=Find<UInkFrontendActionButton>(Tree,N))B->SetIsEnabled(b);};
     Enable(TEXT("InventoryUse"),Entry&&Model->CanUseEntry(Entry->EntryId));Enable(TEXT("InventoryEquip"),Entry&&(Entry->bEquipped||Model->CanEquipEntry(Entry->EntryId)));
@@ -364,15 +416,17 @@ void UInkFrontendWidget::RefreshInventoryDetails(UWidgetTree* Tree)
 void UInkFrontendWidget::HoverInventorySlot(int32 SlotIndex,bool bHovered)
 {
     const auto* E=GetInventoryModel()->FindEntryAtSlot(SlotIndex);
-    if(E&&bInventoryListView)if(auto* Frame=InkInventoryUI::Find<UImage>(WidgetTree,*FString::Printf(TEXT("InventoryListFrame_%d"),SlotIndex)))Frame->SetBrush(InkInventoryUI::Art(ProvidedInventoryAtlas.LoadSynchronous(),bHovered?InkInventoryUI::Hover:(E->EntryId==SelectedInventoryEntry?InkInventoryUI::Selected:InkInventoryUI::Normal)));
+    const FGuid HoveredId=E?E->EntryId:FGuid();const bool bLocked=E&&E->SlotIndex>=GetInventoryModel()->GetUnlockedSlotCount();
     if(bHovered&&E)
-    {HoveredInventoryEntry=E->EntryId;bInventoryReadingHover=true;GetInventoryModel()->MarkSeen(E->EntryId);bInventoryReadingHover=false;if(auto* W=GetWidgetFromName(FName(*FString::Printf(TEXT("InventoryNew_%d"),SlotIndex))))W->SetVisibility(ESlateVisibility::Collapsed);}
-    else if(!bHovered&&E&&HoveredInventoryEntry==E->EntryId)HoveredInventoryEntry.Invalidate();
+    {HoveredInventoryEntry=HoveredId;bInventoryReadingHover=true;GetInventoryModel()->MarkSeen(HoveredId);bInventoryReadingHover=false;if(auto* W=GetWidgetFromName(FName(*FString::Printf(TEXT("InventoryNew_%d"),SlotIndex))))W->SetVisibility(ESlateVisibility::Collapsed);}
+    else if(!bHovered&&E&&HoveredInventoryEntry==HoveredId)HoveredInventoryEntry.Invalidate();
+    if(HoveredId.IsValid()&&bInventoryListView)if(auto* Frame=InkInventoryUI::Find<UImage>(WidgetTree,*FString::Printf(TEXT("InventoryListFrame_%d"),SlotIndex)))InkInventoryUI::SetListFrameState(Frame,HoveredId==SelectedInventoryEntry,bHovered,bLocked);
     UpdateInventoryTooltip();
 }
 
 void UInkFrontendWidget::UpdateInventoryTooltip()
 {
+    if(UsesRebuiltPresentation())return;
     using namespace InkInventoryUI;if(!WidgetTree)return;
     if(auto* Handle=Find<UInkInventoryScrollBar>(WidgetTree,TEXT("InventoryScrollThumb")))Handle->SynchronizeScrollPosition();
     const auto* E=GetInventoryModel()->FindEntry(HoveredInventoryEntry);const bool bShow=E&&CurrentPage==TEXT("Inventory")&&!(bInventoryPortrait&&SelectedInventoryEntry.IsValid());
@@ -397,31 +451,28 @@ void UInkFrontendWidget::UpdateInventoryAdaptiveLayout()
         auto* Search=WidgetTree->ConstructWidget<UEditableTextBox>(UEditableTextBox::StaticClass(),TEXT("InventorySearch"));
         Search->SetHintText(LOCTEXT("SearchHint","搜索物品"));Search->SetText(FText::FromString(InventorySearchText));
         auto Style=Search->GetWidgetStyle();Style.SetFont(InkUiTypography::MakeFont(EInkUiTextRole::Body));
-        FSlateBrush Background;Background.DrawAs=ESlateBrushDrawType::RoundedBox;Background.TintColor=PaperColor;
-        Background.OutlineSettings.CornerRadii=FVector4(4,4,4,4);Background.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
-        Background.OutlineSettings.Color=InkColor;Background.OutlineSettings.Width=1;
+        FSlateBrush Background=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(380,44));
         Style.SetBackgroundImageNormal(Background).SetBackgroundImageHovered(Background).SetBackgroundImageFocused(Background);
-        Style.SetForegroundColor(InkColor);Search->SetWidgetStyle(Style);
+        Style.SetForegroundColor(InkPresentationStyle::Ink());Search->SetWidgetStyle(Style);
         Place(Shell,Search,106,192,380,44,2);
         Search->OnTextChanged.AddUniqueDynamic(this,&ThisClass::HandleInventorySearchChanged);
     }
     const bool Portrait=SafeSize.X<SafeSize.Y;
     if(bInventoryLayoutInitialized&&Portrait==bInventoryPortrait)return;
-    bInventoryLayoutInitialized=true;bInventoryPortrait=Portrait;InventoryGridColumns=Portrait?4:8;
+    bInventoryLayoutInitialized=true;bInventoryPortrait=Portrait;InventoryGridColumns=5;
     if(auto* Size=Cast<USizeBox>(Scale->GetContent())){Size->SetWidthOverride(Portrait?720:1440);Size->SetHeightOverride(Portrait?1220:950);}
     auto Move=[&](const TCHAR* Name,float X,float Y,float W,float H)
     {if(auto* Widget=GetWidgetFromName(Name))if(auto* LayoutSlot=Cast<UCanvasPanelSlot>(Widget->Slot))LayoutSlot->SetOffsets(FMargin(X,Y,W,H));};
-    auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();
-    if(auto* Frame=Find<UImage>(WidgetTree,TEXT("InventoryMainFrame")))Frame->SetBrush(Art(Atlas,Main,Portrait));
+    if(auto* Frame=Find<UImage>(WidgetTree,TEXT("InventoryMainFrame")))Frame->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(Portrait?680:1020,Portrait?1170:1020.f*549.f/663.f)));
     Move(TEXT("InventoryMainFrame"),20,20,Portrait?680:1020,Portrait?1170:1020.f*549.f/663.f);
-    Move(TEXT("InventoryCloseIcon"),Portrait?626:956,Portrait?94:182,44,44);
-    Move(TEXT("InventoryCount"),Portrait?64:520,Portrait?140:202,Portrait?260:180,34);
-    Move(TEXT("InventoryGrid"),Portrait?432:724,Portrait?137:198,38,40);Move(TEXT("InventoryList"),Portrait?490:780,Portrait?137:198,38,40);
-    Move(TEXT("InventorySortDirection"),Portrait?550:836,Portrait?137:198,30,40);
-    Move(TEXT("InventorySearch"),Portrait?64:106,Portrait?184:192,Portrait?560:380,Portrait?64:44);
-    Move(TEXT("InventoryScroll"),Portrait?58:74,Portrait?264:242,Portrait?570:888,Portrait?592:364);
-    Move(TEXT("InventoryScrollTrack"),Portrait?640:968,Portrait?264:242,34,Portrait?592:350);
-    Move(TEXT("InventoryScrollThumb"),Portrait?645:973,Portrait?322:300,24,Portrait?470:228);
+    Move(TEXT("InventoryCloseIcon"),Portrait?592:956,Portrait?32:182,Portrait?88:44,Portrait?88:44);
+    Move(TEXT("InventoryCount"),Portrait?58:520,Portrait?150:202,Portrait?250:180,34);
+    Move(TEXT("InventoryGrid"),Portrait?376:724,Portrait?126:198,Portrait?88:38,Portrait?88:40);Move(TEXT("InventoryList"),Portrait?472:780,Portrait?126:198,Portrait?88:38,Portrait?88:40);
+    Move(TEXT("InventorySortDirection"),Portrait?568:836,Portrait?126:198,Portrait?88:30,Portrait?88:40);
+    Move(TEXT("InventorySearch"),Portrait?58:106,Portrait?230:192,Portrait?604:380,Portrait?64:44);
+    Move(TEXT("InventoryScroll"),Portrait?58:74,Portrait?306:242,Portrait?570:888,Portrait?550:364);
+    Move(TEXT("InventoryScrollTrack"),Portrait?640:968,Portrait?306:242,34,Portrait?550:350);
+    Move(TEXT("InventoryScrollThumb"),Portrait?645:973,Portrait?360:300,24,Portrait?438:228);
     Move(TEXT("InventoryEmptyState"),Portrait?60:106,Portrait?780:550,Portrait?560:800,30);
     for(int32 I=0;I<5;++I)
     {
@@ -449,12 +500,28 @@ bool UInkFrontendWidget::ExecuteInventoryAction(FName Action)
     {const FName C(*A.Mid(6));for(const auto& Category:Categories)if(C==Category){InventoryCategory=C;InventoryPageIndex=0;HoveredInventoryEntry.Invalidate();RefreshInventory();return true;}return false;}
     if(!A.StartsWith(TEXT("Inventory")))return false;
     auto* Model=GetInventoryModel();
+    if(A.StartsWith(TEXT("InventorySelectId_")))
+    {
+        FGuid VisibleId;
+        if(!FGuid::Parse(A.Mid(18),VisibleId)||!Model->FindEntry(VisibleId))
+        {SetPageFeedback(LOCTEXT("VisibleItemChanged","物品记录已变化，请重新选择"));RefreshInventory();return true;}
+        SelectedInventoryEntry=VisibleId;InventoryActionQuantity=1;InventoryQuantityPreset=TEXT("1");
+        RefreshInventoryDetails(WidgetTree);return true;
+    }
+    if(A.StartsWith(TEXT("InventorySelectEmpty_")))
+    {
+        const int32 EmptySlot=FCString::Atoi(*A.Mid(21));
+        if(EmptySlot<0||EmptySlot>=Model->GetTotalSlotCount()||Model->FindEntryAtSlot(EmptySlot))
+        {SetPageFeedback(LOCTEXT("VisibleSlotChanged","槽位内容已变化，请重新选择"));RefreshInventory();return true;}
+        SelectedInventoryEntry.Invalidate();InventoryActionQuantity=1;RefreshInventory();return true;
+    }
     if(A.StartsWith(TEXT("InventorySelect_")))
     {
         const int32 SlotIndex=FCString::Atoi(*A.Mid(16));const auto* E=Model->FindEntryAtSlot(SlotIndex);
         SelectedInventoryEntry=E?E->EntryId:FGuid();InventoryActionQuantity=1;InventoryQuantityPreset=TEXT("1");RefreshInventoryDetails(WidgetTree);
+        if(UsesRebuiltPresentation())return true;
         for(auto B:ActionButtons)if(B&&B->Action.ToString().StartsWith(TEXT("InventorySelect_")))
-        {const int32 Index=FCString::Atoi(*B->Action.ToString().Mid(16));const auto* Other=Model->FindEntryAtSlot(Index);if(Other){const auto Brush=Art(ProvidedInventoryAtlas.LoadSynchronous(),Other->EntryId==SelectedInventoryEntry?Selected:Normal);if(bInventoryListView){if(auto* Frame=Find<UImage>(WidgetTree,*FString::Printf(TEXT("InventoryListFrame_%d"),Index)))Frame->SetBrush(Brush);}else{auto Style=B->GetStyle();Style.SetNormal(Brush);B->SetStyle(Style);}}}
+        {const int32 Index=FCString::Atoi(*B->Action.ToString().Mid(16));const auto* Other=Model->FindEntryAtSlot(Index);if(Other){const bool bOtherSelected=Other->EntryId==SelectedInventoryEntry;if(bInventoryListView){if(auto* Frame=Find<UImage>(WidgetTree,*FString::Printf(TEXT("InventoryListFrame_%d"),Index)))SetListFrameState(Frame,bOtherSelected,Other->EntryId==HoveredInventoryEntry,Other->SlotIndex>=Model->GetUnlockedSlotCount());}else SetFeatureButtonState(B,bOtherSelected,true);}}
         return true;
     }
     if(Action==TEXT("InventoryCloseIcon")){TriggerAction(TEXT("Back"));return true;}
@@ -484,10 +551,10 @@ bool UInkFrontendWidget::ExecuteInventoryAction(FName Action)
             const auto* E=Model->FindEntry(SelectedInventoryEntry);
             if(!W||!E||bInventoryMultiSelect){SetPageFeedback(LOCTEXT("AuthoritySingle","请选中一项物品后提交，批量操作尚未开放"));return true;}
             if(Action==TEXT("InventoryDecompose")){SetPageFeedback(LOCTEXT("AuthorityNoDecompose","此规则档未开放分解"));return true;}
-            auto Args=MakeShared<FJsonObject>();Args->SetStringField(TEXT("item_id"),E->Item.ItemId.ToString());Args->SetNumberField(TEXT("count"),FMath::Clamp(InventoryActionQuantity,1,E->Item.Count));
-            FString Json;FJsonSerializer::Serialize(Args,TJsonWriterFactory<>::Create(&Json));
-            const FString Op=Action==TEXT("InventoryEquip")?(E->bEquipped?TEXT("Unequip"):TEXT("Equip")):(Action==TEXT("InventorySell")?TEXT("Recycle"):(E->Item.ItemId.ToString().StartsWith(TEXT("BOOK_"))?TEXT("LearnMethod"):TEXT("UseProp")));
-            SetPageFeedback(FText::FromString(W->SubmitPrototypeCommand(Op,Json)?TEXT("请求已记录，等待服务确认"):W->GetStatus()));return true;
+            const auto CoreAction=Action==TEXT("InventoryEquip")?(E->bEquipped?InkCorePolicy::EInventoryAction::Unequip:InkCorePolicy::EInventoryAction::Equip):
+                Action==TEXT("InventorySell")?InkCorePolicy::EInventoryAction::Sell:InkCorePolicy::EInventoryAction::Use;
+            const auto Result=InkCore::InventoryAction(this,SelectedInventoryEntry,CoreAction,InventoryActionQuantity,CurrentPage==TEXT("Inventory"));
+            SetPageFeedback(FText::FromString(Result.Message));return true;
         }
         int32 Changed=0;
         if(bInventoryMultiSelect&&!InventoryBatchSelection.IsEmpty()&&(Action==TEXT("InventorySell")||Action==TEXT("InventoryDecompose")))

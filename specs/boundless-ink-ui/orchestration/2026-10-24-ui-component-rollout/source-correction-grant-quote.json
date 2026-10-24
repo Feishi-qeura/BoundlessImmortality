@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "granted_at": "2026-10-24T11:09:41.9368436+08:00",
+  "owner_team": "logic-integration",
+  "scope": "Source-only quote submission regression correction; original first-source-freeze stays immutable",
+  "allowed_files": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp",
+      "before_sha256": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "before_sha256": "dd13037251bbfecb3d2023f6ad3f9ab3ec694f3f1eb3bb3b2984ac8928a576b0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp",
+      "before_sha256": "9c175c4fc41fdab82efc5de4796d424f60ab068f7ef7da0b94abfdf44eac0e91"
+    }
+  ],
+  "engine_operations_authorized": false,
+  "other_teams_source_writes_authorized": false,
+  "reason": "Readonly authority reconciliation confirms display-only missing fields wrongly block native Prepare/Rework requests",
+  "frame_scope": "May add real recovered Player frame consumer in integration-owned LogicJourney files and prepared batch only; no Content writes"
+}

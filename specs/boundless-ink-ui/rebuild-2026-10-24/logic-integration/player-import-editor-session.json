@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-10-24T14:02:37.4948843+08:00",
+  "source_records": 90,
+  "source_files": 57,
+  "scope": "Import exact four transparent Player components and new independent defaultWBP only",
+  "engine_pid": 39268,
+  "build": "build-07-result.json"
+}

@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-10-24T17:46:00+08:00",
+  "status": "reopened_race_provider_P1_and_five_contextual_triggers",
+  "engine_lease": "granted",
+  "engine_blocker": null,
+  "automation_id": "boundlessimmortality-ui",
+  "automation_interval_minutes": 30,
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:12",
+      "thread_status": "notLoaded",
+      "turn_status": "completed",
+      "last_message": "review-v3 已完成，review-v2 保持冻结。改动仅限三个文件：补充头像失败后的宿主退避重试 API、为 base 源文件显式包含 Engine/Font.h，并从内层按钮的 GetContent() 读取 tab 文字。 N07 报告中的空指针早退问题在当前 v2 哈希里已经修复；v3 保留这项修复，并补上显式重试入口。归档审阅快照比当前 v2 旧，差异已记入交接。 精确差异 · 短交接 · 状态 静态核对通过，v2 哈希保持一致，v3 仅改三项登记文件。未编译、未启动引擎/UBT/PIE，未写生产目录或生成图片。Rank/Wuling 后续工作等待 integration owner。",
+      "last_tool": {
+        "id": "exec-243994fe-6952-4881-ab2d-753280db51c5",
+        "turnId": "01a16c50-35e0-7e92-a560-83f75d6cf234",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:17",
+      "thread_status": "notLoaded",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:33",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会先核对新增真实入口、native07、组件与退出证据，关闭已有证明的项；再逐页区分五个详情/结果页是缺测试、缺导航，还是当前backend缺少数据。Race活跃资格P1会保留，直到真实provider修复及适用证据到位；不因汇总“完成”而结案。",
+      "last_tool": {
+        "id": "exec-daf63fcf-81b2-45a1-90a9-581c3c45f33f",
+        "turnId": "01a16d48-ec59-7f63-9544-92e5c40da315",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:52",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "已复现：新会话、活跃会话和退出参与状态的快照都缺少 identity.active，新增的 7 项回归因此全部失败。我会只补出真实的会话活跃标记，保留服务端现有的心跳时效、资格和时间窗口校验。",
+      "last_tool": {
+        "id": "exec-1c2e49fc-f01b-4d96-b133-22a69435aa9a",
+        "turnId": "01a16d48-dede-7a41-bc6e-1f3c12ba9b42",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    }
+  ],
+  "notes": [
+    "Content/UI absent/newUI596现场17:44; migrationcomplete no rerun. Formal14portrait44renderBack906checks56exact720x1280 retained, visualpendinguser.",
+    "New110physicalviewnavigationedges/native07build26 48Success+1SuccessWithWarning/merchant02negative45/componentgeometryhash/shutdown reports delivered; Core independent latestreview active.",
+    "Five genuine subject/result triggers unverified: RegionDetail, ResourceDetail, EventSettlement, RaceSettlement, ResourceRewards. Generic popup entry is insufficient.",
+    "CoreV11-RACE-ACTIVE-01 sourceprotocol mismatch independently confirmed: RaceDenied needs identity.active absent authority._snapshot. Integration reproduced7failing regressions17:44 for new/active/inactive snapshots.",
+    "Integration resumed solewriter; exactTools/CultivationService/authority.py bounded additive real-session projection exception recorded in sourcegrant. Backup/hash/recorder required, no assumedtrue/heartbeat/eligibility/rewardrule changes.",
+    "Prior worker machine_scope_complete not accepted. Scoped provider/UI and genuine upstream context/action evidence remain; do not repeat unchanged full906render/ordinaryservice/migration.",
+    "Other5teams normalidle/delivered, no contextfailure/newchat. Lease18:32valid with freshperbatchprocesschecks, only normalownshutdown. Visual/device/platform scopes distinct."
+  ],
+  "last_notified_reason": "race_active_protocol_gap_reproduced_and_contextual_trigger_gaps_reopened",
+  "last_snapshot_file": "supervisor-snapshot-1738.json",
+  "engine_lease_expires_at": "2026-10-24T18:32:33.7348276+08:00",
+  "machine_complete": false,
+  "visual_approved": false,
+  "physical_old_UI_exists": false,
+  "newUI_uassets": 596
+}

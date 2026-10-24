@@ -1,0 +1,7 @@
+{
+  "warning_log": "git-diff-check.log",
+  "config_status": [],
+  "checked_at": "2026-10-24T12:16:44.6924376+08:00",
+  "diff_check_exit_code": 0,
+  "scope": "Read-only shared worktree; no commit/push/reset/cleanup"
+}

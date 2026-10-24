@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "id": "V11-RACE-ACTIVE-01",
+      "priority": "P1",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureJourney.cpp:28",
+      "backend_source": "Tools/CultivationService/authority.py:189;Tools/CultivationService/races.py:85",
+      "status": "Source schema mismatch; not dismissed as absent current live race",
+      "evidence": "RaceDenied requires Has(identity.active) and true. Authority._snapshot exports only user/role/room/generation; latest actual receipt projection confirms missing active. Native Races.submit correctly checks server session.active/heartbeat. Thus a valid native race action can never pass this extra Host gate with current snapshot schema.",
+      "minimal_fix": "Unique integration must bridge a truthful existing active-session entitlement/provider or expose authoritative active state, preserve unknown=>deny, and validate one applicable eligible/unknown/refused case. Do not default unknown active=true.",
+      "client_provider_evidence": "UWulingPrototypeSubsystem.h Snapshot returns State; cpp GetSnapshotJson encodes State; incoming state/result assigned without identity.active enrichment. Outgoing heartbeat active does not add it to snapshot."
+    }
+  ],
+  "source_bytes": "selected-inputs-v11.json exact functional Source supplement",
+  "withdrawn_findings": [
+    {
+      "id": "V11-ACTIVITY-CARD-01",
+      "priority": "withdrawn",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp:30",
+      "backend_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp:400;Tools/CultivationService/authority.py:62",
+      "status": "withdrawn reviewer missed selected-detail VM override",
+      "evidence": "Same frozen/current Source hash: InkRebuildFeatureActivities.cpp:37 assigns SelectedActivity.AllowedAction/ActionLabel/bActionAllowed for ACT_SHARED/WEEK_GUARD/WEEK_IRON after selection. Consumer receives this final VM. Original no-intent diagnosis was incorrect.",
+      "minimal_fix": "No production fix for this withdrawn claim. Actual Start/End receipt proof not yet found; combine with genuine selected detail entry."
+    }
+  ]
+}

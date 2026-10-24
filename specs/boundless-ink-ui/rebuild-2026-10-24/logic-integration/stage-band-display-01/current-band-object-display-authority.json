@@ -1,0 +1,783 @@
+{
+  "activities": {
+    "day": "2026-10-24",
+    "month_sign_count": 0,
+    "monthly_chests": [
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 3,
+        "reward": "3日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 7,
+        "reward": "7日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 14,
+        "reward": "14日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 21,
+        "reward": "21日签到纪念外观"
+      }
+    ],
+    "monthly_milestones": [
+      3,
+      7,
+      14,
+      21
+    ],
+    "sign_in_qi_reward": 0,
+    "sign_in_reward_mode": "placeholder",
+    "signed": false,
+    "signed_days": [],
+    "templates": [
+      {
+        "activity_id": "ACT_SIGN",
+        "cycle": "daily",
+        "enabled": true,
+        "end_at": "",
+        "name": "每日签到",
+        "profile_requirement": "approved_persistence_or_prototype",
+        "reward_budget": "seven_daily_placeholders_no_grant",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_VERSE",
+        "cycle": "daily",
+        "enabled": true,
+        "end_at": "",
+        "name": "每日剑诀",
+        "profile_requirement": "base",
+        "reward_budget": "text_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_WORLD",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "世界历练",
+        "profile_requirement": "base",
+        "reward_budget": "world_stage_budget",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_RACE",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "灵脉竞采",
+        "profile_requirement": "cross_host_race",
+        "reward_budget": "stage_budget_plus_lease",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_SHARED",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "武灵共修",
+        "profile_requirement": "base",
+        "reward_budget": "online_qi_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_MONTH",
+        "cycle": "monthly",
+        "enabled": true,
+        "end_at": "",
+        "name": "月度签到历程",
+        "profile_requirement": "approved_persistence_or_prototype",
+        "reward_budget": "cosmetic_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_MOON",
+        "cycle": "limited",
+        "enabled": false,
+        "end_at": "",
+        "name": "中秋问月",
+        "profile_requirement": "approved_materials",
+        "reward_budget": "replace_world_plus_cosmetic_once",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_QINGYUN_LAUNCH",
+        "cycle": "relative_guild_creation",
+        "enabled": true,
+        "end_at": "",
+        "name": "青云初启",
+        "profile_requirement": "prototype_or_explicit_launch_manifest",
+        "reward_budget": "launch_once_budget_rank_numeric_closed",
+        "start_at": ""
+      }
+    ],
+    "verse": "护阵同心，破障同行",
+    "weekly_chests": [
+      {
+        "claimed": false,
+        "day": "2026-10-19",
+        "eligible": false,
+        "milestone": 1,
+        "placeholder": true,
+        "reward": "灵石（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_1"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-20",
+        "eligible": false,
+        "milestone": 2,
+        "placeholder": true,
+        "reward": "灵草（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_2"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-21",
+        "eligible": false,
+        "milestone": 3,
+        "placeholder": true,
+        "reward": "玄铁（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_3"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-22",
+        "eligible": false,
+        "milestone": 4,
+        "placeholder": true,
+        "reward": "丹药（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_4"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-23",
+        "eligible": false,
+        "milestone": 5,
+        "placeholder": true,
+        "reward": "残卷（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_5"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-24",
+        "eligible": true,
+        "milestone": 6,
+        "placeholder": true,
+        "reward": "玉简（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_6"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-25",
+        "eligible": false,
+        "milestone": 7,
+        "placeholder": true,
+        "reward": "锦囊（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_7"
+      }
+    ]
+  },
+  "breakthrough_quote": {
+    "band": {
+      "band_id": "QB1",
+      "live_snapshot_factor": 1,
+      "name": "凡品",
+      "q_max": 39,
+      "q_min": 0,
+      "source_indie_multiplier": 2.5
+    },
+    "core_score": 18,
+    "kind": "rework",
+    "q": 18,
+    "selection": [
+      {
+        "count": 1,
+        "item_id": "MAT_BR01_C01_G2"
+      }
+    ],
+    "stage": {
+      "core_count": 1,
+      "core_species": "MAT_BR01_C01",
+      "essence_max_count": 3,
+      "essence_species_count": 5,
+      "from_realm_index": 8,
+      "guard_max_count": 3,
+      "guard_required": false,
+      "guard_species_count": 5,
+      "major_stone_at_commit": 0,
+      "min_major": 0,
+      "name": "练气九阶→筑基初期",
+      "old_major_break_material_cost": 20,
+      "old_major_stone_cost": 60,
+      "region": "青云山",
+      "stage_id": "BR01",
+      "subarea": "凝脉谷",
+      "to_realm_index": 9,
+      "treasure_max_count": 1,
+      "treasure_species_count": 5,
+      "tribulation": false,
+      "viewer_material_cost": 0
+    },
+    "weakness_seconds": 60
+  },
+  "buildings": [],
+  "catalog": {
+    "kind": "items",
+    "offset": 0,
+    "rows": [
+      {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "earliest_expiry": 1792835993.6365864,
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G1",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "下品筑基丹",
+        "owned_count": 1,
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      },
+      {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "earliest_expiry": 1792835993.6365864,
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G2",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "中品筑基丹",
+        "owned_count": 1,
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      }
+    ],
+    "total": 2
+  },
+  "combat": {
+    "cooldowns": {},
+    "effects": {},
+    "health": 2349.9999999999995,
+    "last_combat": 0,
+    "max_health": 2349.9999999999995,
+    "safe": true,
+    "statuses": {},
+    "weakness_until": 1792829956.09541
+  },
+  "counts": {
+    "helpers": 0,
+    "members": 0,
+    "participating_members": 0
+  },
+  "focus": null,
+  "growth": {
+    "material_to_next": 40,
+    "name": "筑基初期",
+    "qi": 36.3997106552124,
+    "qi_to_next": 1200,
+    "realm_index": 9,
+    "stone_to_next": 120,
+    "total_qi": 36.3997106552124
+  },
+  "guild": null,
+  "guild_inventory": {},
+  "honors": {
+    "owned": [],
+    "selected": ""
+  },
+  "identity": {
+    "generation": 4,
+    "role": "anchor",
+    "room": "newui-stage-rework-room",
+    "user": "newui-stage-rework"
+  },
+  "inventory": {
+    "MAT_BR01_C01_G1": 1,
+    "MAT_BR01_C01_G2": 1
+  },
+  "item_instances": [
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G2",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "中品筑基丹",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      },
+      "expiry": 1792835993.6365864,
+      "id": "252d6f9084f5499a82725e91d6d99808",
+      "item": "MAT_BR01_C01_G2",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835993.6365864,\"id\":\"declared-stage-test-fixture\"}"
+    },
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G1",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "下品筑基丹",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      },
+      "expiry": 1792835993.6365864,
+      "id": "c2cc59172706443cbe4eadb15346c950",
+      "item": "MAT_BR01_C01_G1",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835993.6365864,\"id\":\"declared-stage-test-fixture\"}"
+    }
+  ],
+  "journey": {
+    "resources": [
+      {
+        "entry_count": 1,
+        "id": "NODE_QI:1",
+        "index": 1,
+        "interval_seconds": 1,
+        "item_id": "",
+        "item_name": "",
+        "lease_max_seconds": 1800,
+        "name": "灵泉",
+        "node_id": "NODE_QI",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0.2,
+        "quantity": 0,
+        "x": 0.23,
+        "y": 0.72
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_STONE:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "CUR_STONE",
+        "item_name": "灵石",
+        "lease_max_seconds": 1800,
+        "name": "灵石矿",
+        "node_id": "NODE_STONE",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 20,
+        "x": 0.75,
+        "y": 0.22
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_HERB:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "MAT_HERB_B",
+        "item_name": "绑定灵草",
+        "lease_max_seconds": 1800,
+        "name": "灵草园",
+        "node_id": "NODE_HERB",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 2,
+        "x": 0.22,
+        "y": 0.23
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_IRON:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "MAT_IRON_B",
+        "item_name": "绑定玄铁",
+        "lease_max_seconds": 1800,
+        "name": "玄铁脉",
+        "node_id": "NODE_IRON",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 2,
+        "x": 0.77,
+        "y": 0.6
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_PAGE:1",
+        "index": 1,
+        "interval_seconds": 1200,
+        "item_id": "MAT_PAGE",
+        "item_name": "功法残页",
+        "lease_max_seconds": 1800,
+        "name": "残卷遗址",
+        "node_id": "NODE_PAGE",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 1,
+        "x": 0.48,
+        "y": 0.48
+      }
+    ],
+    "worlds": [
+      {
+        "description": "青山灵泉，守护阵眼。与剑灵一同完成三阶段历练，积累修为与破境资材。",
+        "difficulty": "护阵 · 常规",
+        "id": "qingyun",
+        "name": "青云山",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.22,
+        "y": 0.65
+      },
+      {
+        "description": "霞谷药田被灵障封锁。第一阶段选择免费采集路线解封，再完成三阶段历练。",
+        "difficulty": "采集封印 · 进阶",
+        "id": "luoxia",
+        "name": "落霞谷",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.5,
+        "y": 0.48
+      },
+      {
+        "description": "玄铁矿脉盘踞山岭。第二阶段回应破障，打开限时弱点，合力完成历练。",
+        "difficulty": "限时弱点 · 挑战",
+        "id": "xuantie",
+        "name": "玄铁岭",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.32,
+        "y": 0.22
+      },
+      {
+        "description": "冰封北域，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "xuanbing",
+        "name": "玄冰原",
+        "open": false,
+        "rewards": [],
+        "x": 0.76,
+        "y": 0.18
+      },
+      {
+        "description": "林海深处，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "yaoshou",
+        "name": "妖兽林",
+        "open": false,
+        "rewards": [],
+        "x": 0.84,
+        "y": 0.72
+      },
+      {
+        "description": "赤炎诸岛，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "chiyan",
+        "name": "赤炎洲",
+        "open": false,
+        "rewards": [],
+        "x": 0.72,
+        "y": 0.43
+      },
+      {
+        "description": "星光遗址，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "xingyun",
+        "name": "星陨台",
+        "open": false,
+        "rewards": [],
+        "x": 0.9,
+        "y": 0.4
+      },
+      {
+        "description": "太虚秘境，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "taixu",
+        "name": "太虚境",
+        "open": false,
+        "rewards": [],
+        "x": 0.67,
+        "y": 0.88
+      }
+    ]
+  },
+  "launch": null,
+  "lease": null,
+  "loadout": {
+    "equipment": {},
+    "fabao": "",
+    "main": "",
+    "method_names": {
+      "METHOD_ECHO": "回响诀",
+      "METHOD_EDGE": "疾锋剑诀",
+      "METHOD_ETHER": "百蚀经",
+      "METHOD_GUARD": "玄罡体经",
+      "METHOD_PACT": "合契经",
+      "METHOD_STAR": "星罗法诀",
+      "METHOD_SURGE": "燃脉诀"
+    },
+    "methods": {},
+    "supports": []
+  },
+  "manifest": {
+    "profile": "prototype_full",
+    "rule_version": "wuling-prototype-v1.4.0",
+    "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+    "window_end": 1795420793.6153524
+  },
+  "market": {
+    "listings": [],
+    "own_listings": []
+  },
+  "member_cursor": 0,
+  "members": [],
+  "offline_reward": null,
+  "presentation": {
+    "effects": [],
+    "message": "",
+    "next_cue": "",
+    "route_preview": [],
+    "weakness_remaining": 0
+  },
+  "race": null,
+  "race_queue": null,
+  "records": [
+    {
+      "attributes": {
+        "attack": 20.8,
+        "defense": 38,
+        "max_health": 2349.9999999999995,
+        "move_speed_add": 0,
+        "quality_factor": 1
+      },
+      "honor_title": "",
+      "material_cost": 40,
+      "material_count": 0,
+      "name": "newui-stage-rework",
+      "offline_reward": null,
+      "qi": 36.3997106552124,
+      "qi_to_next": 1200,
+      "rate": 1,
+      "realm_index": 9,
+      "realm_name": "筑基初期",
+      "role": "anchor",
+      "user": "newui-stage-rework"
+    }
+  ],
+  "revoked_participants": [],
+  "reward_receipts": {
+    "entries": [],
+    "high_watermark": 0
+  },
+  "round": null,
+  "server_utc": 1792833931.2361548,
+  "tribulation": {
+    "anchor": "newui-stage-rework",
+    "cleanup_at": 1792829896.09541,
+    "deadline": 1792829971.09541,
+    "failures": 0,
+    "helper_count": 0,
+    "helper_ids": [],
+    "id": "7f738d9942074472aa5a5f0ac2e46653",
+    "probability_basis_points": 5000,
+    "quote": {
+      "band": {
+        "band_id": "QB1",
+        "live_snapshot_factor": 1,
+        "name": "凡品",
+        "q_max": 39,
+        "q_min": 0,
+        "source_indie_multiplier": 2.5
+      },
+      "core_score": 10,
+      "q": 10,
+      "selection": [
+        {
+          "count": 1,
+          "item_id": "MAT_BR01_C01_G1"
+        }
+      ],
+      "stage": {
+        "core_count": 1,
+        "core_species": "MAT_BR01_C01",
+        "essence_max_count": 3,
+        "essence_species_count": 5,
+        "from_realm_index": 8,
+        "guard_max_count": 3,
+        "guard_required": false,
+        "guard_species_count": 5,
+        "major_stone_at_commit": 0,
+        "min_major": 0,
+        "name": "练气九阶→筑基初期",
+        "old_major_break_material_cost": 20,
+        "old_major_stone_cost": 60,
+        "region": "青云山",
+        "stage_id": "BR01",
+        "subarea": "凝脉谷",
+        "to_realm_index": 9,
+        "treasure_max_count": 1,
+        "treasure_species_count": 5,
+        "tribulation": false,
+        "viewer_material_cost": 0
+      },
+      "weakness_seconds": 60
+    },
+    "receipt_id": "0dc8339247674bfe848b494fa811ab1f",
+    "reserved_qi": 0,
+    "roll": null,
+    "room": "newui-stage-rework-room",
+    "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+    "settled_at": 1792829896.09541,
+    "stage": "BR01",
+    "start": 1792829896.09541,
+    "status": "Succeeded",
+    "trial_start": 1792829911.09541
+  },
+  "version": 8,
+  "wallet": {
+    "CUR_STONE": 500
+  }
+}

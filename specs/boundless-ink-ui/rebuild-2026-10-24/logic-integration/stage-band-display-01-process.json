@@ -1,0 +1,25 @@
+{
+  "scope": "Current source26 authoritative band.name display, view only/no repeat prepare or rework",
+  "started_at": "2026-10-24T17:24:50.8368628+08:00",
+  "pid": 31964,
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIStageAcceptance20261024",
+    "-WulingRoom=newui-stage-rework-room",
+    "-WulingUser=newui-stage-rework",
+    "-NewUIStageScenario=rework",
+    "-NewUIStageAttempt=01",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-stage-band-display01",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/stage-band-display-01.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_stage_band_display_pie.py"
+  ]
+}

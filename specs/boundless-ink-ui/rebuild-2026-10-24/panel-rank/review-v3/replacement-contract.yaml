@@ -1,0 +1,21 @@
+schema_version: 1
+revision: review-v3
+parent_revision: review-v2
+source_of_truth: isolated replacement-v3; review-v2 remains frozen
+review: ../model/review/remaining-v2.md
+approved: false
+production_write: false
+findings:
+  N07:
+    current_v2_state: SetParticipantAvatar removes AvatarRequestsInFlight before returning on nullptr; this already fixes the reviewed null-release line at the current review-v2 hash.
+    v3_addition: explicit RetryParticipantAvatarAfterHostBackoff API; host calls it only after its retry/backoff policy; method checks current visible ParticipantId, Data state, cache, delegate and in-flight guard.
+    success_identity: ParticipantId-keyed cache and image map unchanged.
+  N08: InkRankWulingPageBase.cpp explicitly includes Engine/Font.h before using UFont.
+  N09: ButtonLabel unwraps the SizeBox, then gets UTextBlock from the inner UButton::GetContent.
+changed_files: [InkRankWulingPages.h, InkRankWulingPages.cpp, InkRankWulingPageBase.cpp]
+verification:
+  installed_ue58_headers_checked: true
+  current_review_v2_hashes_match_status: true
+  compile: false
+  engine_or_ubt_started: false
+  pie_or_screenshot: false

@@ -143,10 +143,10 @@ void ULiveGMControlPanel::Rebuild()
         Button(TEXT("QA_Follow"),TEXT("关注"),28,366);Button(TEXT("Sword"),TEXT("全体换剑"),316,366);
         const TCHAR* Gifts[]={TEXT("仙女棒"),TEXT("爱的爆炸"),TEXT("稀有宝箱"),TEXT("超能喷射"),TEXT("神秘空投"),TEXT("草莓甜点"),TEXT("超级空投"),TEXT("生命药水")};
         // Keep the event names and Gift0..Gift7 actions intact; two supplied filenames are aliases.
-        const TCHAR* Icons[]={TEXT("Wand"),TEXT("LoveExplosion"),TEXT("RareChest"),TEXT("SuperJet"),TEXT("MysteryAirdrop"),TEXT("StrawberryDessert"),TEXT("SuperAirdrop"),TEXT("LifePotion")};
+        const TCHAR* IconPaths[]={TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_Wand.T_Gift_Wand"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_LoveExplosion.T_Gift_LoveExplosion"),TEXT("/Game/newUI/Ink/Textures/Rewards/T_Gift_RareChest.T_Gift_RareChest"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_SuperJet.T_Gift_SuperJet"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_MysteryAirdrop.T_Gift_MysteryAirdrop"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_StrawberryDessert.T_Gift_StrawberryDessert"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_SuperAirdrop.T_Gift_SuperAirdrop"),TEXT("/Game/newUI/Ink/Textures/Gifts/T_Gift_LifePotion.T_Gift_LifePotion")};
         for(int32 I=0;I<UE_ARRAY_COUNT(Gifts);++I)
         {
-            const FString Path=FString::Printf(TEXT("/Game/UI/Ink/Gifts/T_Gift_%s.T_Gift_%s"),Icons[I],Icons[I]);
+            const FString Path=IconPaths[I];
             Button(FName(*FString::Printf(TEXT("Gift%d"),I)),Gifts[I],28+(I%2)*288,430+(I/2)*80,244,76,*Path,TEXT(" "));
         }
         RefreshGiftDescriptions();
@@ -168,7 +168,7 @@ void ULiveGMControlPanel::Rebuild()
     }
     else if(SelectedTab==TEXT("Layout"))
     {
-        const TCHAR* Routes[]={TEXT("SignIn"),TEXT("Activities"),TEXT("Draw"),TEXT("CharacterProfile"),TEXT("CharacterAppearance"),TEXT("ResourceContest")};const TCHAR* Names[]={TEXT("签到页签"),TEXT("活动页签"),TEXT("抽奖网格"),TEXT("真实属性"),TEXT("头像框预览"),TEXT("资源页签")};
+        const TCHAR* Routes[]={TEXT("SignIn"),TEXT("Activities"),TEXT("Draw"),TEXT("CharacterProfile"),TEXT("CharacterAppearance"),TEXT("ResourceMap")};const TCHAR* Names[]={TEXT("签到页签"),TEXT("活动页签"),TEXT("抽奖网格"),TEXT("真实属性"),TEXT("头像框预览"),TEXT("资源地图")};
         for(int32 I=0;I<6;++I)Button(FName(*(FString(TEXT("QA_Layout_"))+Routes[I])),Names[I],28+(I%2)*288,270+(I/2)*64);
         Text(TEXT("打开页面后按 F10 收起 GM，检查边界。\n自动验收脚本会导出多分辨率截图与断言。\n视觉协调结果须结合截图审阅，未运行不显示通过。"),28,500,540,180,20);
     }

@@ -1,0 +1,862 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real authority connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "rendered capture hud",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenActivities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ActivityCycle_daily",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route DailyActivities",
+      "passed": true,
+      "actual": "DailyActivities"
+    },
+    {
+      "name": "rendered capture daily-activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native claim via real Slate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "authority signed after UI claim",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "signed native button refuses duplicate Slate click",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_GroupTab_MonthlySignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture monthly-sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "calendar cell via real Slate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestPreview_0",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestRewardClaim",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real monthly transaction",
+      "passed": true,
+      "actual": ""
+    },
+    {
+      "name": "receipt close by keyboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLeaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankAnchor",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture leaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankClose",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenExtensions",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture world-map",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_AtlasNode_qingyun",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route JourneyWorldDetail",
+      "passed": true,
+      "actual": "JourneyWorldDetail"
+    },
+    {
+      "name": "rendered capture world-detail",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_SectCreate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real guild from UI create",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLaunchEvent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_LaunchPrimary",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real UI launch start",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture hud-active-launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Open_WulingConstruction",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolNavigation",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolRoute_2",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route WulingBreakthrough",
+      "passed": true,
+      "actual": "WulingBreakthrough"
+    },
+    {
+      "name": "rendered capture breakthrough-materials",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real material Slate selection MAT_BR04_C01_G1",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native quote arrived with display gaps",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UE request rejected NOT_SAFE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "UE subsystem reports pending busy",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "busy UI refuses duplicate prepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UI prepare succeeded",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "authority entered Prepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture prepare-confirmed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "UE stale rejection and same request-id retry",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real deterministic fixture settled success",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolReworkMode",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real material Slate selection MAT_BR04_C01_G4",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual rework quote kind",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UI ReworkQuality succeeded",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture rework-confirmed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real HTTP offline observed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture offline",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real service reconnects",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "server cross-day reflected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "server month boundary reflected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "new day sign state unsigned",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture next-day-sign",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\hud.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\daily-activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\monthly-sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\leaderboard.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\world-map.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\world-detail.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\hud-active-launch.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\breakthrough-materials.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\prepare-confirmed.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\rework-confirmed.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\offline.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-07\\next-day-sign.png"
+  ],
+  "steps": [
+    "main start via actual button",
+    "connected",
+    "hud",
+    "activities entry",
+    "activities capture",
+    "daily category",
+    "daily actual page",
+    "close daily",
+    "sign entry",
+    "sign native claim",
+    "sign confirmed",
+    "duplicate claim gated",
+    "sign capture",
+    "month tab",
+    "month capture",
+    "native calendar inspect",
+    "monthly chest reveal",
+    "monthly chest inspect",
+    "monthly claim reveal",
+    "monthly claim",
+    "monthly real receipt",
+    "receipt dismiss",
+    "close sign",
+    "rank entry",
+    "anchor rank",
+    "rank capture",
+    "rank close",
+    "map entry",
+    "map capture",
+    "map real node",
+    "world detail",
+    "map close",
+    "wuling entry",
+    "guild name player input fixture",
+    "guild create reveal",
+    "guild actual create",
+    "guild confirmed",
+    "guild close for launch",
+    "launch real entry",
+    "launch primary reveal",
+    "launch real start",
+    "launch confirmed",
+    "launch close",
+    "active HUD frame capture",
+    "wuling reopen",
+    "construction reveal",
+    "construction player entry",
+    "tools menu",
+    "break route reveal",
+    "break route actual click",
+    "break actual page",
+    "material reveal",
+    "material real quote",
+    "native quote no display fields",
+    "unsafe declared fixture",
+    "unsafe prepare",
+    "unsafe authority refusal",
+    "safe pending and concurrent version fixture",
+    "valid prepare",
+    "pending native gate",
+    "pending duplicate click",
+    "prepare response",
+    "stale same-id recovery",
+    "advance actual trial fixture",
+    "actual settled trial",
+    "dismiss result receipt",
+    "grant rework fixture",
+    "rework mode reveal",
+    "rework mode",
+    "upgrade material reveal",
+    "upgrade material quote",
+    "rework quote native",
+    "rework real submit",
+    "rework confirmed",
+    "offline fixture",
+    "offline service observed",
+    "restore fixture",
+    "reconnected",
+    "capture old day",
+    "advance day",
+    "server day changes",
+    "close tools",
+    "sign after day",
+    "day new unsigned"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-07/Saved/",
+  "passed": true,
+  "current_step": "day new unsigned",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenActivities",
+      "slate_handled": true,
+      "page": "Activities"
+    },
+    {
+      "action": "Ext_ActivityCycle_daily",
+      "slate_handled": true,
+      "page": "DailyActivities"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_GroupTab_MonthlySignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestPreview_0",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestRewardClaim",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLeaderboard",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankAnchor",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankClose",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenExtensions",
+      "slate_handled": true,
+      "page": "Extensions"
+    },
+    {
+      "action": "Ext_AtlasNode_qingyun",
+      "slate_handled": true,
+      "page": "JourneyWorldDetail"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_SectCreate",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLaunchEvent",
+      "slate_handled": true,
+      "page": "LaunchEvent"
+    },
+    {
+      "action": "Ext_LaunchPrimary",
+      "slate_handled": true,
+      "page": "LaunchEvent"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Open_WulingConstruction",
+      "slate_handled": true,
+      "page": "WulingConstruction"
+    },
+    {
+      "action": "Ext_ToolNavigation",
+      "slate_handled": true,
+      "page": "WulingConstruction"
+    },
+    {
+      "action": "Ext_ToolRoute_2",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolReworkMode",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": true,
+      "page": "WulingBreakthrough"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    }
+  ],
+  "countdown_resource_readback": [
+    {
+      "capture": "hud",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "activities",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "daily-activities",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "sign-in",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "monthly-sign-in",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "leaderboard",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "world-map",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "world-detail",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "hud-active-launch",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "breakthrough-materials",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "prepare-confirmed",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "rework-confirmed",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "offline",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "next-day-sign",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    }
+  ],
+  "countdown_image_readback": [
+    {
+      "capture": "hud",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "activities",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "daily-activities",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "sign-in",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "monthly-sign-in",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "leaderboard",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "world-map",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "world-detail",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "hud-active-launch",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "breakthrough-materials",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "prepare-confirmed",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "rework-confirmed",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "offline",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "next-day-sign",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    }
+  ],
+  "fixture_controls": [
+    {
+      "safe": false
+    },
+    {
+      "safe": true,
+      "delay": 2,
+      "bump_next": "PrepareBreakthrough"
+    },
+    {
+      "delay": 0
+    },
+    {
+      "advance_seconds": 84
+    },
+    {
+      "upgrade_core": true
+    },
+    {
+      "offline": true
+    },
+    {
+      "offline": false
+    },
+    {
+      "advance_seconds": 86400
+    }
+  ]
+}

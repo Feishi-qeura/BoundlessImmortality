@@ -1,0 +1,2034 @@
+{
+  "sites": [
+    {
+      "file": "Plugins/DouyinLiveProvider/Source/DouyinLiveProvider/Private/DouyinLiveProvider.cpp",
+      "line": 159,
+      "text": "FString Result;for(const auto& Pair:Values)Result+=FString::Printf(TEXT(\" %s %d\"),*Pair.Key,Pair.Value);return Result;",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveBridgeTests.cpp",
+      "line": 66,
+      "text": "TestFalse(FString::Printf(TEXT(\"Invalid like count %s rejected\"),Invalid),Decode(LikePrefix+Invalid+TEXT(\"}]}\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveGiftTests.cpp",
+      "line": 14,
+      "text": "return FString::Printf(TEXT(\"{\\\"msg_id\\\":\\\"%s\\\",\\\"sec_openid\\\":\\\" viewer-1 \\\",\\\"nickname\\\":\\\"阿白\\\",\\\"gift_name\\\":\\\"%s\\\",\\\"count\\\":%s}\"),*Id,*Name,*Count);",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveGiftTests.cpp",
+      "line": 27,
+      "text": "for(int32 I=0;I<5;++I){if(I)Records+=TEXT(\",\");Records+=GiftRecord(FString::Printf(TEXT(\" gift-%d \"),I),Names[I],FString::FromInt(I+1));}",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveGiftTests.cpp",
+      "line": 34,
+      "text": "TestEqual(TEXT(\"Gift event ID is trimmed\"),Gifts[I].MessageId,FString::Printf(TEXT(\"gift-%d\"),I));",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveGiftTests.cpp",
+      "line": 43,
+      "text": "TestFalse(FString::Printf(TEXT(\"Invalid gift delta %s rejected\"),Invalid),Decode(GiftEnvelope(GiftRecord(TEXT(\"bad\"),TEXT(\"魔法镜\"),Invalid))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/LiveInteraction/Source/LiveInteraction/Private/LiveGiftTests.cpp",
+      "line": 97,
+      "text": "Gift.MessageId=FString::Printf(TEXT(\"invalid-count-%d\"),Invalid);Gift.Count=Invalid;",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/NiagaraUIRenderer/Source/NiagaraUIRendererEditor/Private/NiagaraWidgetDetailCustomization.cpp",
+      "line": 241,
+      "text": "AddWarning(FString::Printf(TEXT(\"Incompatible sim target set in the %s emitter in the '%s' Niagara System. Only the 'CPUSim' sim target is supported. GPU emitters will NOT be rendered\"), *EmitterNames, *CachedNiagaraWidget->NiagaraSystemReference->GetName()));",
+      "ink_specific": false
+    },
+    {
+      "file": "Plugins/NiagaraUIRenderer/Source/NiagaraUIRendererEditor/Private/NiagaraWidgetDetailCustomization.cpp",
+      "line": 256,
+      "text": "AddWarning(FString::Printf(TEXT(\"Incompatible material domain set on the %s in the '%s' niagara system. Please use 'Material Remap List' in the widget properties to remap those materials to ones with the 'User Interface' material domain\")",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Cultivation/CultivationPrototypeClient.cpp",
+      "line": 208,
+      "text": "auto R=Value->AsObject();FInkLeaderboardEntry E;E.ParticipantId=Text(R,TEXT(\"participant_id\"));E.DisplayName=FText::FromString(Text(R,TEXT(\"display_name\")));E.Category=FName(Category);E.Rank=int32(Number(R,TEXT(\"rank\")));E.NumericMetric=Number(R,TEXT(\"value\"));E.Metric=FText::FromString(E.Category==TEXT(\"Anchor\")?FString::Printf(TEXT(\"%.0f 把\"),E.NumericMetric):FString::Printf(TEXT(\"%.2f /秒\"),E.NumericMetric));E.AvatarUrl=Text(R,TEXT(\"avatar_url\"));E.TitleId=FName(*Text(R,TEXT(\"title_id\")));E.RealmIndex=int32(Number(R,TEXT(\"realm_index\")));E.Realm=Cultivation->GetRealmName(E.RealmIndex);Leaderboards.Add(E);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Cultivation/CultivationSubsystem.cpp",
+      "line": 139,
+      "text": "const FString Text=Count>1?FString::Printf(TEXT(\"%s 连破 %d 重境界 · %s\"),*Name,Count,*Realm.ToString()):Name+TEXT(\" 突破 · \")+Realm.ToString();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/CultivationGameplayComponent.cpp",
+      "line": 30,
+      "text": "InkTransitionMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT(\"/Game/1/QiCultivation/M_MeditationInkTransition.M_MeditationInkTransition\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/CultivationGameplayComponent.cpp",
+      "line": 358,
+      "text": "auto* Material=InkTransitionMaterial.LoadSynchronous();",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/CultivationGameplayComponent.cpp",
+      "line": 359,
+      "text": "auto* Plane=LoadObject<UStaticMesh>(nullptr,TEXT(\"/Engine/BasicShapes/Plane.Plane\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/CultivationGameplayComponent.cpp",
+      "line": 411,
+      "text": "CaptionFont=LoadObject<UFont>(nullptr,TEXT(\"/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 95,
+      "text": "TextFont=InFrontend?InFrontend->TextFont.LoadSynchronous():InkUiAssets::Load<UFont>(nullptr,TEXT(\"/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody\"));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 102,
+      "text": "PortraitFallback=PlaceholderPortrait.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 200,
+      "text": "RequestedAvatarId=TEXT(\"anchorhud:\")+AnchorId+TEXT(\":\")+FString::Printf(TEXT(\"%08x\"),GetTypeHash(AvatarUrl));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 268,
+      "text": "if(FMath::Abs(V)>=1.e8)return FString::Printf(TEXT(\"%.2f亿\"),V/1.e8);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 269,
+      "text": "if(FMath::Abs(V)>=1.e4)return FString::Printf(TEXT(\"%.1f万\"),V/1.e4);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "line": 270,
+      "text": "return FString::Printf(TEXT(\"%.0f\"),V);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+      "line": 51,
+      "text": "auto* Frame=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),*FString::Printf(TEXT(\"ProfileSlotGlow_%d\"),I));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+      "line": 55,
+      "text": "auto* Border=Add(*FString::Printf(TEXT(\"ProfileBorder_%d\"),I),TEXT(\"/Game/UI/Ink/Niagara/Shared/NS_NodeBorder.NS_NodeBorder\"));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 105,
+      "text": "BuildSlot(FString::Printf(TEXT(\"ProfileMethod_%d\"),I),FName(*FString::Printf(TEXT(\"ProfileMethodName_%d\"),I)),I==2?TEXT(\"主修功法\"):TEXT(\"功法\"),I==2?TEXT(\"已解锁\"):TEXT(\"锁定\"),9,X,52*S,100*S,104*S,I==2);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 112,
+      "text": "const FString Id=I<4?FString::Printf(TEXT(\"ProfileEquipment_%d\"),I):I==4?TEXT(\"ProfileFabao\"):TEXT(\"ProfileItem\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 113,
+      "text": "BuildSlot(Id,FName(*FString::Printf(TEXT(\"ProfileEquip_%d\"),I)),EquipNames[I],TEXT(\"空槽\"),I==5?10:I==4?15:5+I%3,X,Y,92*S,104*S,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 121,
+      "text": "BuildSlot(SkillIds[I],FName(*FString::Printf(TEXT(\"ProfileDiscipline_%d\"),I)),SkillNames[I],TEXT(\"未配置\"),SkillIcons[I],X,560*S,112*S,104*S,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 139,
+      "text": "if(auto* Texture=Attribute.Icon.LoadSynchronous())IconImage->SetBrushFromTexture(Texture);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 173,
+      "text": "SetLabel(FString::Printf(TEXT(\"ProfileEquip_%dState\"),I),Caption);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 180,
+      "text": "for(int32 I=0;I<3;++I)SetLabel(FString::Printf(TEXT(\"ProfileDiscipline_%dState\"),I),DisciplineName(FrontendOwner,Categories[I]));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 191,
+      "text": "{RatingTextures.Reset();for(int32 I=0;I<7;++I)RatingTextures.Add(InkUiAssets::Load<UTexture2D>(nullptr,*FString::Printf(TEXT(\"/Game/UI/Ink/CharacterRating20261022/T_Rating_%s.T_Rating_%s\"),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)))));}",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 202,
+      "text": "FString Tip=FString::Printf(TEXT(\"%s · %s %s\\n同一大境界采用相同标准\"),*UInkAttributeRatingLibrary::MajorName(Realm),*A.Label.ToString(),*UInkAttributeRatingLibrary::GradeName(Grade));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 203,
+      "text": "for(int32 I=0;I<Bounds.Num();++I)Tip+=FString::Printf(TEXT(\"\\n%s ≥ %.4g\"),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)),Bounds[I]);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 208,
+      "text": "if(bPreviewRealm)SetLabel(TEXT(\"ProfileRealm\"),FString::Printf(TEXT(\"%s · 预览\"),State?*State->GetRealmName(Realm).ToString():TEXT(\"境界\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 277,
+      "text": "for(int32 I=0;I<Count;++I)Entries.Emplace(FString::Printf(TEXT(\"%s槽位 %d\"),*Section,I+1),TEXT(\"配置空槽 · 尚未开放\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 315,
+      "text": "AtlasIcon(SectionCanvas,NAME_None,4,X+(CellW-88)/2,Y+6,88);AtlasIcon(SectionCanvas,FName(*FString::Printf(TEXT(\"FramePreview_%d\"),I)),I,X+(CellW-100)/2,Y,100);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "line": 326,
+      "text": "const float X=I*(ContextW+12);Label(SectionCanvas,FName(*FString::Printf(TEXT(\"AppearanceContext_%d\"),I)),Contexts[I],X,788,ContextW,64,24,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 55,
+      "text": "FSlateFontInfo Font;Font.FontObject=Frontend?Frontend->TextFont.LoadSynchronous():nullptr;Font.Size=Size;T->SetFont(Font);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 68,
+      "text": "auto* T=WidgetTree->ConstructWidget<UTextBlock>();T->SetText(FText::FromString(Label));FSlateFontInfo Font;Font.FontObject=Frontend?Frontend->TextFont.LoadSynchronous():nullptr;Font.Size=bCompact?19:21;T->SetFont(Font);T->SetColorAndOpacity(bSelected?FLinearColor(.96f,.88f,.64f,1):Ink);T->SetAutoWrapText(!bCompact);T->SetJustification(ETextJustify::Center);Size->SetContent(T);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 143,
+      "text": "const FString EntryName=FString::Printf(TEXT(\"%s %d · 空位\"),*Label,I);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 144,
+      "text": "auto* Inner=Card(Cell,FString::Printf(TEXT(\"%02d\"),I),TEXT(\"未配置\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 161,
+      "text": "Progress(CardBody,FString::Printf(TEXT(\"当前修为  %.0f / %.0f\"),Snapshot.Cultivation,Snapshot.RequiredCultivation),Snapshot.RequiredCultivation>0?float(Snapshot.Cultivation/Snapshot.RequiredCultivation):0.f);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 181,
+      "text": "if(Frontend)if(auto* Texture=Frontend->PanelTexture.LoadSynchronous())Paper->SetBrushFromTexture(Texture);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 232,
+      "text": "auto* MonthCard=Card(Box,FString::Printf(TEXT(\"%d 年 %d 月  ·  仙历\"),Year,Month),TEXT(\"日历依据本机日期排列；签到记录尚未接入\"),0);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 260,
+      "text": "auto* Pool=Card(Box,FString::Printf(TEXT(\"奖池预览 · 第 %d 页\"),PrizePage+1),TEXT(\"空位用于展示奖池布局；不代表可获得物品\"),-1,TEXT(\"ExtensionPrizePool\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 304,
+      "text": "auto* IconTexture=Attribute.Icon.LoadSynchronous();const bool bCustomIcon=IconTexture!=nullptr;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "line": 306,
+      "text": "if(!IconTexture&&IconIndex!=INDEX_NONE)IconTexture=Frontend->AttributeIconAtlas.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 50,
+      "text": "{if(auto* Class=LoadClass<UInkFeaturePanel>(nullptr,Path,nullptr,LOAD_NoWarn|LOAD_Quiet))return Class;return Fallback;};",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 52,
+      "text": "if(auto* Class=LoadClass<UInkFeaturePanel>(nullptr,TEXT(\"/Game/UI/Ink/Widgets/Character/WBP_CharacterProfile.WBP_CharacterProfile_C\"),nullptr,LOAD_NoWarn|LOAD_Quiet))return Class;",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 205,
+      "text": "const FString Name=FString::Printf(TEXT(\"MI_InkSceneSoft_%d\"),Tile);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 290,
+      "text": "const FString ActivityState=FString::Printf(TEXT(\"%d:%s\"),SignedState,*Day);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 291,
+      "text": "const FString Key=FString::Printf(TEXT(\"activity|%.0f|%d|%d|%d|%s|%s\"),Version,Service->IsEnabled(),Service->IsConnected(),Service->IsBusy(),*Service->GetStatus(),*ActivityState);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "line": 297,
+      "text": "double Version=0;W->Snapshot()->TryGetNumberField(TEXT(\"version\"),Version);const FString Key=FString::Printf(TEXT(\"%.0f|%d\"),Version,W->IsConnected());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "line": 187,
+      "text": "if(auto* Text=Cast<UTextBlock>(WidgetTree->FindWidget(TEXT(\"WorldLiveValues\"))))Text->SetText(FText::FromString(FString::Printf(TEXT(\"修为 %.1f / %.1f · %.1f /秒\"),S.Cultivation,S.RequiredCultivation,S.EffectiveCultivationPerSecond)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "line": 206,
+      "text": "if(W->Snapshot()&&W->Snapshot()->TryGetObjectField(TEXT(\"lease\"),Lease))Status=W->GetStatus()+TEXT(\"\\n节点：\")+WulingFrontendData::String(*Lease,TEXT(\"node_id\"))+TEXT(\"\\n状态：\")+WulingFrontendData::String(*Lease,TEXT(\"status\"))+FString::Printf(TEXT(\"\\n有效在线：%d秒\"),WulingFrontendData::Number(*Lease,TEXT(\"online_seconds\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "line": 367,
+      "text": "State=FString::Printf(TEXT(\"已连接 · 当前竞采状态：%s\\n当前服务仅提供单轮竞采快照，未提供资源周期榜的周期、分项、名次或个人位置。单轮分数不作为周期贡献榜。\"),*RaceStatus);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "line": 374,
+      "text": "AuthorityStateKey=FString::Printf(TEXT(\"%d|%d|%d|%s|%d|%s\"),Service&&Service->IsEnabled(),Service&&Service->IsConnected(),Service&&Service->IsBusy(),*ServiceStatus,WulingFrontendData::Number(Snapshot,TEXT(\"version\")),*RaceStatus);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp",
+      "line": 383,
+      "text": "const FString Key=FString::Printf(TEXT(\"%d|%d|%d|%s|%d|%s\"),Service&&Service->IsEnabled(),Service&&Service->IsConnected(),Service&&Service->IsBusy(),*ServiceStatus,WulingFrontendData::Number(Snapshot,TEXT(\"version\")),*WulingFrontendData::String(Race,TEXT(\"status\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "line": 36,
+      "text": "auto* ReceiptClass=LoadClass<UInkRewardReceiptPanel>(nullptr,TEXT(\"/Game/UI/Ink/Widgets/Shared/WBP_RewardReceipt.WBP_RewardReceipt_C\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 69,
+      "text": "const FString Name=FString::Printf(TEXT(\"MI_%s_%d_%d_%d_%d_%s\"),*Texture->GetName(),int32(Rect.X),int32(Rect.Y),int32(Rect.Z),int32(Rect.W),bBox?TEXT(\"Slice\"):TEXT(\"Fit\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 138,
+      "text": "TitleTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Shared/T_InkTitle.T_InkTitle\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 139,
+      "text": "MeditationTexture=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 140,
+      "text": "AttributeIconAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 141,
+      "text": "ProvidedButtonAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 142,
+      "text": "ProvidedRankAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 143,
+      "text": "ProvidedInventoryAtlas=TSoftObjectPtr<UTexture2D>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 144,
+      "text": "TitleFeatherMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 145,
+      "text": "ScrollEdgeMaterial=TSoftObjectPtr<UMaterialInterface>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 146,
+      "text": "TextFont=TSoftObjectPtr<UFont>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 158,
+      "text": "if(Size<40)if(auto* LoadedFont=TextFont.LoadSynchronous())Font.FontObject=LoadedFont;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 241,
+      "text": "if(auto* Material=ScrollEdgeMaterial.LoadSynchronous())",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 255,
+      "text": "auto* TitleImage=Tree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT(\"MainTitleImage\"));TitleImage->SetBrushFromTexture(TitleTexture.LoadSynchronous(),true);TitleImage->SetVisibility(ESlateVisibility::HitTestInvisible);TitleScale->SetContent(TitleImage);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 300,
+      "text": "auto* MeditationImage=Tree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT(\"CharacterMeditationImage\"));MeditationImage->SetBrushFromTexture(MeditationTexture.LoadSynchronous(),true);MeditationImage->SetVisibility(ESlateVisibility::HitTestInvisible);MeditationScale->SetContent(MeditationImage);MeditationSize->SetContent(MeditationScale);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 751,
+      "text": "if(auto* Image=InkFrontend::Find<UImage>(this,TEXT(\"MainTitleImage\")))if(auto* Material=TitleFeatherMaterial.LoadSynchronous())",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 929,
+      "text": "auto* CustomIcon=Attributes[I].Icon.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 930,
+      "text": "auto* IconTexture=CustomIcon?CustomIcon:(IconIndex!=INDEX_NONE?AttributeIconAtlas.LoadSynchronous():nullptr);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 943,
+      "text": "auto* Icon=Tree->ConstructWidget<UImage>(UImage::StaticClass(),MakeUniqueObjectName(Tree,UImage::StaticClass(),FName(*FString::Printf(TEXT(\"AttributeIcon_%d\"),I))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 949,
+      "text": "auto* Label=AddText(Tree,TextColumn,Attributes[I].Label,21,FName(*FString::Printf(TEXT(\"CharacterAttributeLabel_%d\"),I)));Label->SetAutoWrapText(false);Label->SetColorAndOpacity(InkPresentationStyle::Gold());",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 950,
+      "text": "auto* Value=AddText(Tree,TextColumn,Attributes[I].Value.IsEmpty()?LOCTEXT(\"UnknownValue\",\"—\"):Attributes[I].Value,25,FName(*FString::Printf(TEXT(\"CharacterAttributeValue_%d\"),I)));Value->SetJustification(ETextJustify::Left);Value->SetAutoWrapText(false);Value->SetColorAndOpacity(InkPresentationStyle::Ink());",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 1006,
+      "text": "auto* Select=MakeButton(WidgetTree,NAME_None,FName(*FString::Printf(TEXT(\"SelectSave_%d\"),I)),FText::Format(LOCTEXT(\"SaveSlotPicker\",\"存档 {0} · {1}\"),FText::AsNumber(Info.SlotIndex+1),Info.bValid?LOCTEXT(\"SaveReady\",\"可读取\"):Info.bExists?LOCTEXT(\"SaveInvalid\",\"不可读取\"):LOCTEXT(\"SaveEmpty\",\"空位\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 1024,
+      "text": "auto* Button=MakeButton(WidgetTree,NAME_None,FName(*FString::Printf(TEXT(\"%s_%d\"),Prefix,Info.SlotIndex)),Label);Button->SetIsEnabled(bEnabled);Button->SetStyle(InkPresentationStyle::FeatureButton(false,Primary));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "line": 1226,
+      "text": "ExecuteAction(FName(*FString::Printf(TEXT(\"LoadSlot_%d\"),SlotIndex)));return;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "line": 198,
+      "text": "TSet<FSoftObjectPath> RequestedLeaderboardAvatars;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 182,
+      "text": "Add(TEXT(\"Health\"),TEXT(\"血量\"),FString::Printf(TEXT(\"%.0f / %.0f\"),Health?Health->Health:A.MaxHealth,A.MaxHealth),A.MaxHealth);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 183,
+      "text": "Add(TEXT(\"Attack\"),TEXT(\"剑灵攻击\"),FString::Printf(TEXT(\"%.0f\"),A.Attack),A.Attack);Add(TEXT(\"Defense\"),TEXT(\"防御\"),FString::Printf(TEXT(\"%.0f\"),A.Defense),A.Defense);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 184,
+      "text": "Add(TEXT(\"SpiritDamage\"),TEXT(\"剑灵伤害\"),FString::Printf(TEXT(\"%.0f\"),A.SpiritDamage),A.SpiritDamage);Add(TEXT(\"Critical\"),TEXT(\"会心一击\"),FString::Printf(TEXT(\"%.1f%%\"),A.CriticalChance*100),A.CriticalChance);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 185,
+      "text": "Add(TEXT(\"Evasion\"),TEXT(\"闪避\"),FString::Printf(TEXT(\"%.1f%%\"),A.EvasionChance*100),A.EvasionChance);Add(TEXT(\"Luck\"),TEXT(\"幸运（预留）\"),FString::Printf(TEXT(\"%.1f\"),A.Luck));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 189,
+      "text": "Add(TEXT(\"MoveSpeed\"),TEXT(\"实际移速上限\"),Movement?FString::Printf(TEXT(\"%.0f 厘米/秒\"),Movement->MaxWalkSpeed):TEXT(\"—\"),Movement?Movement->MaxWalkSpeed:std::numeric_limits<double>::quiet_NaN(),BaseSpeed);Add(TEXT(\"Swordsmanship\"),TEXT(\"剑法（预留）\"),FString::Printf(TEXT(\"%.1f\"),A.Swordsmanship));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 190,
+      "text": "Add(TEXT(\"CultivationSpeed\"),TEXT(\"修炼速度\"),FString::Printf(TEXT(\"%.2f /秒\"),Anchor.EffectiveCultivationPerSecond),Anchor.EffectiveCultivationPerSecond);Add(TEXT(\"Realm\"),TEXT(\"境界\"),Anchor.RealmName.ToString());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 191,
+      "text": "Add(TEXT(\"Cultivation\"),TEXT(\"修为\"),FString::Printf(TEXT(\"%.0f / %.0f\"),Anchor.Cultivation,Anchor.RequiredCultivation));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkGameplayBridge.cpp",
+      "line": 204,
+      "text": "Entry.Metric=FText::FromString(Category==TEXT(\"Anchor\")?FString::Printf(TEXT(\"%.0f 把\"),Entry.NumericMetric):FString::Printf(TEXT(\"%.2f /秒\"),Entry.NumericMetric));Entry.TitleId=P.TitleId;Entry.Realm=P.RealmName;Entry.RealmIndex=P.RealmIndex;Entry.AvatarUrl=P.AvatarUrl;Boards.Add(Entry);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 57,
+      "text": "FString N=FString::Printf(TEXT(\"MI_%s_%d_%d_%d_%d_%s\"),*Texture->GetName(),int32(Rect.X),int32(Rect.Y),int32(Rect.Z),int32(Rect.W),bSlice?TEXT(\"Slice\"):TEXT(\"Fit\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 167,
+      "text": "auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous(); // Item icons remain content; all frame/button art is native.",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 236,
+      "text": "auto* Shell=Find<UCanvasPanel>(WidgetTree,TEXT(\"InventoryShell\"));if(!Shell)return;auto* Tree=WidgetTree.Get();auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 272,
+      "text": "auto* Shell=Find<UCanvasPanel>(WidgetTree,TEXT(\"InventoryShell\"));if(!Shell)return;auto* Tree=WidgetTree.Get();auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 299,
+      "text": "auto* Model=GetInventoryModel();auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 329,
+      "text": "auto* Button=Tree->ConstructWidget<UInkFrontendActionButton>(UInkFrontendActionButton::StaticClass(),FName(*FString::Printf(TEXT(\"InventorySlot_%d\"),Index)));Button->Action=FName(*FString::Printf(TEXT(\"InventorySelect_%d\"),Index));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 343,
+      "text": "auto* Frame=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*FString::Printf(TEXT(\"InventoryListFrame_%d\"),Index)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 350,
+      "text": "auto* Icon=Tree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*FString::Printf(TEXT(\"InventoryIcon_%d\"),Index)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 351,
+      "text": "if(auto* T=Entry->Item.Icon.LoadSynchronous())Icon->SetBrushFromTexture(T,true);else Icon->SetBrush(Art(Atlas,ItemIcon(Entry->Item)));Icon->SetVisibility(ESlateVisibility::HitTestInvisible);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 354,
+      "text": "auto* New=AddText(Tree,nullptr,LOCTEXT(\"NewItemTag\",\"新\"),13,FName(*FString::Printf(TEXT(\"InventoryNew_%d\"),Index)));New->SetColorAndOpacity(InkPresentationStyle::Gold());New->SetJustification(ETextJustify::Center);Place(Content,New,0,0,30,24,5);New->SetVisibility(Entry->bIsNew?ESlateVisibility::HitTestInvisible:ESlateVisibility::Collapsed);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 362,
+      "text": "auto* BatchToggle=InkInventoryUI::Button(Tree,this,Atlas,Content,FName(*FString::Printf(TEXT(\"InventoryToggle_%d\"),Index)),FVector4(0,0,0,0),BatchCaption,bInventoryListView?(bInventoryPortrait?526:808):4,bInventoryListView?24:(bInventoryPortrait?34:60),bInventoryPortrait&&!bInventoryListView?26:30,bInventoryPortrait&&!bInventoryListView?26:30);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 388,
+      "text": "using namespace InkInventoryUI;auto* Model=GetInventoryModel();const auto* Entry=Model->FindEntry(SelectedInventoryEntry);auto* Atlas=ProvidedInventoryAtlas.LoadSynchronous();",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 394,
+      "text": "if(auto* I=Find<UImage>(Tree,TEXT(\"InventoryDetailIcon\"))){if(auto* T=Entry->Item.Icon.LoadSynchronous())I->SetBrushFromTexture(T,true);else I->SetBrush(Art(Atlas,ItemIcon(Entry->Item)));}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 418,
+      "text": "{HoveredInventoryEntry=HoveredId;bInventoryReadingHover=true;GetInventoryModel()->MarkSeen(HoveredId);bInventoryReadingHover=false;if(auto* W=GetWidgetFromName(FName(*FString::Printf(TEXT(\"InventoryNew_%d\"),SlotIndex))))W->SetVisibility(ESlateVisibility::Collapsed);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 420,
+      "text": "if(HoveredId.IsValid()&&bInventoryListView)if(auto* Frame=InkInventoryUI::Find<UImage>(WidgetTree,*FString::Printf(TEXT(\"InventoryListFrame_%d\"),SlotIndex)))InkInventoryUI::SetListFrameState(Frame,HoveredId==SelectedInventoryEntry,bHovered,bLocked);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 434,
+      "text": "if(auto* I=Find<UImage>(WidgetTree,TEXT(\"InventoryTooltipIcon\"))){if(auto* T=E->Item.Icon.LoadSynchronous())I->SetBrushFromTexture(T,true);else I->SetBrush(Art(ProvidedInventoryAtlas.LoadSynchronous(),ItemIcon(E->Item)));}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "line": 504,
+      "text": "{const int32 Index=FCString::Atoi(*B->Action.ToString().Mid(16));const auto* Other=Model->FindEntryAtSlot(Index);if(Other){const bool bOtherSelected=Other->EntryId==SelectedInventoryEntry;if(bInventoryListView){if(auto* Frame=Find<UImage>(WidgetTree,*FString::Printf(TEXT(\"InventoryListFrame_%d\"),Index)))SetListFrameState(Frame,bOtherSelected,Other->EntryId==HoveredInventoryEntry,Other->SlotIndex>=Model->GetUnlockedSlotCount());}else SetFeatureButtonState(B,bOtherSelected,true);}}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "line": 311,
+      "text": "if(auto* Value=Find<UTextBlock>(Tree,Named(TEXT(\"Metric_\"))))Value->SetText(E.Metric.IsEmpty()?FText::FromString(Empty?TEXT(\"—\"):FString::Printf(TEXT(\"%.2f\"),E.NumericMetric)):E.Metric);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "line": 351,
+      "text": "CountText->SetText(bHasEntries?FText::FromString(FString::Printf(TEXT(\"本页 %d 名修士\"),VisibleEntryCount)):FText::GetEmpty());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "line": 514,
+      "text": "UAssetManager::GetStreamableManager().RequestAsyncLoad(Path,FStreamableDelegate::CreateWeakLambda(this,[this,Path](){if(Path.ResolveObject())RequestedLeaderboardAvatars.Remove(Path);LeaderboardAvatarPoll=0;}));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "line": 28,
+      "text": "#include \"UObject/ConstructorHelpers.h\"",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "line": 37,
+      "text": "static ConstructorHelpers::FObjectFinder<UStaticMesh> Sword(TEXT(\"/Game/Isometric_World/Sky_Temple/Meshes/Sculptures/SM_Scultpture_Sword_01.SM_Scultpture_Sword_01\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "line": 215,
+      "text": "PresentationSwarm->AddParticipant({FString::Printf(TEXT(\"MenuPresentation_%02d\"),I),TEXT(\"\"),TEXT(\"\")});",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.cpp",
+      "line": 46,
+      "text": "const FString Name=FString::Printf(TEXT(\"MI_RealmIconStage_%02d\"),FMath::Clamp(Index,0,33));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 33,
+      "text": "if ((*Value)->Type == EJson::Number) return FString::Printf(TEXT(\"%s：%.0f\"), Label, (*Value)->AsNumber());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 122,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityTitle_%d\"), Index)), ReadText(Row, TEXT(\"title\"), ReadText(Row, TEXT(\"name\"), TEXT(\"活动名称待同步\"))), 24, Y + 16, Width - 48, 44, 30);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 125,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityState_%d\"), Index)), OpenState, 20, Y + 74, Width - 40, 36, 22);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 126,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityParticipation_%d\"), Index)), ReadAuthorityBool(Row, TEXT(\"participation_eligible\"), TEXT(\"可参与\"), TEXT(\"暂不可参与\")), 20, Y + 112, Width - 40, 36, 22);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 127,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityClaim_%d\"), Index)), ReadAuthorityBool(Row, TEXT(\"claim_eligible\"), TEXT(\"可领取\"), TEXT(\"暂不可领取\")), 20, Y + 150, Width - 40, 36, 22);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 128,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityObjective_%d\"), Index)), ReadDisplayField(Row, TEXT(\"objective\"), TEXT(\"目标\")), 20, Y + 188, Width - 40, 44, 21);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 129,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityProgress_%d\"), Index)), ReadDisplayField(Row, TEXT(\"progress\"), TEXT(\"当前进度\")) + TEXT(\" / \") + ReadDisplayField(Row, TEXT(\"target\"), TEXT(\"目标进度\")), 20, Y + 232, Width - 40, 44, 21);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 130,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityReward_%d\"), Index)), ReadDisplayField(Row, TEXT(\"reward_summary\"), TEXT(\"奖励摘要\")), 20, Y + 276, Width - 40, 44, 21);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 131,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivitySource_%d\"), Index)), ReadDisplayField(Row, TEXT(\"source\"), TEXT(\"来源\")), 20, Y + 320, Width - 40, 44, 21);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkPermanentActivitiesPanel.cpp",
+      "line": 134,
+      "text": "Label(BodyCanvas, FName(*FString::Printf(TEXT(\"PermanentActivityDeadline_%d\"), Index)), Deadline, 20, Y + 368, Width - 40, 36, 20);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkRewardsPanels.cpp",
+      "line": 82,
+      "text": "for(int32 I=0;I<2;++I){FString Vertical;for(int32 C=0;C<Lines[I].Len();++C){if(C)Vertical+=TEXT(\"\\n\");Vertical.AppendChar(Lines[I][C]);}Label(BodyCanvas,FName(*FString::Printf(TEXT(\"FortuneVerticalVerse_%d\"),I)),Vertical,SealX+24+(1-I)*96,16,76,320,40,true);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.cpp",
+      "line": 132,
+      "text": "return IsValidSlotIndex(Slot) ? FString::Printf(TEXT(\"%s%d\"), *SlotPrefix, Slot + 1) : FString();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSaveSubsystem.cpp",
+      "line": 364,
+      "text": "Info.DisplayName = FString::Printf(TEXT(\"存档 %d\"), Slot + 1);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 100,
+      "text": "double MilestoneValue=0;if(Monthly&&R&&R->TryGetNumberField(TEXT(\"milestone\"),MilestoneValue))DayLabel=FString::Printf(TEXT(\"累计 %d 日\"),int32(MilestoneValue));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 107,
+      "text": "Label(BodyCanvas,TEXT(\"WeeklyConfirmedCount\"),Records.Num()?FString::Printf(TEXT(\"已确认签到 %d / %d 条服务记录\"),ClaimedCount,Records.Num()):FString(TEXT(\"本周签到记录\"))+AwaitingAuthority,X,Y+572,W,48,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 118,
+      "text": "double ChestMilestone=0;const FString ChestTitle=Monthly?(R&&R->TryGetNumberField(TEXT(\"milestone\"),ChestMilestone)?FString::Printf(TEXT(\"月签 · 累计 %d 日\"),int32(ChestMilestone)):FString(TEXT(\"月签 · \"))+AwaitingAuthority):AuthorityString(R,TEXT(\"day\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 169,
+      "text": "const bool Submitted=Monthly?Service->SubmitPrototypeCommand(TEXT(\"ClaimSignInChest\"),FString::Printf(TEXT(\"{\\\"milestone\\\":%d}\"),static_cast<int32>(Milestone))):Service->SignIn();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 201,
+      "text": "Label(BodyCanvas,TEXT(\"CalendarMonth\"),Valid?FString::Printf(TEXT(\"%d 年 %d 月\"),Year,Month):TEXT(\"月签日历 · 待同步\"),96,12,CalendarW-192,64,32,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 205,
+      "text": "Label(BodyCanvas,TEXT(\"CalendarStatus\"),CalendarMonthOffset==0?(HasMonthSignCount?FString::Printf(TEXT(\"本月累计 %d 日 · 已确认签到记录\"),int32(MonthSignCount)):TEXT(\"本月累计签到记录尚未同步\")):TEXT(\"历史月份 · 仅标记服务提供的已签记录\"),0,108,CalendarW,84,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 213,
+      "text": "const int I=Offset+Day-1;const FString Key=FString::Printf(TEXT(\"%04d-%02d-%02d\"),Year,Month,Day);const bool Confirmed=Dates.Contains(Key),Today=Key==Date;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 236,
+      "text": "auto* DayNumber=Label(BodyCanvas,FName(*FString::Printf(TEXT(\"CalendarDay_%d\"),Day)),FString::Printf(TEXT(\"%d\"),Day),X,Y+3,Cell,34,25,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+      "line": 239,
+      "text": "auto* State=Label(BodyCanvas,FName(*FString::Printf(TEXT(\"CalendarState_%d\"),Day)),DayState,X,Y+37,Cell,24,17,true);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 19,
+      "text": "FString DisplayNum(const TSharedPtr<FJsonObject>& O,const TCHAR* K){double V=0;return O&&O->TryGetNumberField(K,V)?FString::Printf(TEXT(\"%.0f\"),V):FString(TEXT(\"—\"));}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 41,
+      "text": "FSlateFontInfo Font;Font.FontObject=FrontendOwner?FrontendOwner->TextFont.LoadSynchronous():nullptr;Font.Size=24;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 82,
+      "text": "Set(TEXT(\"WulingCounts\"),FString::Printf(TEXT(\"成员 %s · 参与成员 %s · 临时助战 %s\\n公共资材 %s · 声望 %s\"),*DisplayNum(Counts,TEXT(\"members\")),*DisplayNum(Counts,TEXT(\"participating_members\")),*DisplayNum(Counts,TEXT(\"helpers\")),*DisplayNum(Guild,TEXT(\"supply\")),*DisplayNum(Guild,TEXT(\"reputation\"))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 86,
+      "text": "{const auto Member=(*Rows)[I]->AsObject();FString Name=Str(Member,TEXT(\"name\"));Members+=FString::Printf(TEXT(\"%02d  %s\\n\"),Cursor+I+1,Name.IsEmpty()?TEXT(\"名称待同步\"):*Name);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 93,
+      "text": "FString Current=FString::Printf(TEXT(\"%s · %02d:%02d / 10:00\"),*PhaseName(Phase),Elapsed/60,Elapsed%60);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 94,
+      "text": "if(Phase==TEXT(\"Running\"))Current+=FString::Printf(TEXT(\"\\n阶段 %.0f · 护阵血量 %.0f\"),Num(Round,TEXT(\"stage\")),Num(Round,TEXT(\"anchor_health\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 99,
+      "text": "else if(Kind==TEXT(\"weakpoint\")){MechanicCaption=FString::Printf(TEXT(\"破障 · 开启矿脉弱点 %.0f 秒\"),Num(Obj(Round,TEXT(\"region_mechanic\")),TEXT(\"weakpoint_seconds\")));MechanicReady=Phase==TEXT(\"Running\")&&Stage==2;}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/InkWulingPanel.cpp",
+      "line": 103,
+      "text": "Set(TEXT(\"WulingGrowth\"),FString::Printf(TEXT(\"%s · 修为 %s / %s\\n灵石 %s · 破境石 %s\\n本次突破需 %s 灵石 / %s 破境石\"),*Str(Growth,TEXT(\"name\")),*DisplayNum(Growth,TEXT(\"qi\")),*DisplayNum(Growth,TEXT(\"qi_to_next\")),*DisplayNum(Wallet,TEXT(\"CUR_STONE\")),*DisplayNum(Inventory,TEXT(\"MAT_BREAK\")),*DisplayNum(Growth,TEXT(\"stone_to_next\")),*DisplayNum(Growth,TEXT(\"material_to_next\"))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/Tests/InkCharacterCultivationTests.cpp",
+      "line": 12,
+      "text": "TestEqual(FString::Printf(TEXT(\"Authoritative realm %d uses its major stage\"),I),int32(StageForRealm(I)),int32(Expected));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/Tests/InkFeedbackTests.cpp",
+      "line": 48,
+      "text": "for(int32 I=0;I<8;++I)TestEqual(*FString::Printf(TEXT(\"Damage ratio %.3f\"),Values[I]),InkFeedback::DamageTier(Values[I]),Expected[I]);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/Tests/InkNiagaraTitleTests.cpp",
+      "line": 104,
+      "text": "if(!TestNotNull(*FString::Printf(TEXT(\"%s real Niagara asset is installed\"),Kind),System))continue;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/Tests/InkSaveTests.cpp",
+      "line": 87,
+      "text": "Subsystem->SlotPrefix = FString::Printf(TEXT(\"InkSaveAutomation_%s_\"), *FGuid::NewGuid().ToString(EGuidFormats::Digits));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyData.h",
+      "line": 45,
+      "text": "if(Qi>0)return FString::Printf(TEXT(\"修炼倍率加成 +%.0f%%\"),Qi*100);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyData.h",
+      "line": 46,
+      "text": "return FString::Printf(TEXT(\"%s × %.0f / %.0f分钟\"),*WulingFrontendData::String(Row,TEXT(\"item_name\")),Number(Row,TEXT(\"quantity\")),Number(Row,TEXT(\"interval_seconds\"))/60);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 28,
+      "text": "auto* Texture=bResourceMap?ResourceMapTexture.LoadSynchronous():WorldMapTexture.LoadSynchronous();",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 29,
+      "text": "if(!Texture)Texture=LoadObject<UTexture2D>(nullptr,bResourceMap?TEXT(\"/Game/UI/Ink/Textures/Journey/T_ResourceAtlas_v1.T_ResourceAtlas_v1\"):TEXT(\"/Game/UI/Ink/Textures/Journey/T_WorldAtlas_v1.T_WorldAtlas_v1\"));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 69,
+      "text": "const FString Caption=String(Entry,TEXT(\"name\"))+(Number(Entry,TEXT(\"entry_count\"))>1?FString::Printf(TEXT(\" · %d\"),Number(Entry,TEXT(\"index\"))):TEXT(\"\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 118,
+      "text": "Image->SetBrushFromTexture(LoadObject<UTexture2D>(nullptr,Resource?TEXT(\"/Game/UI/Ink/Textures/Journey/T_ResourceAtlas_v1.T_ResourceAtlas_v1\"):TEXT(\"/Game/UI/Ink/Textures/Journey/T_WorldAtlas_v1.T_WorldAtlas_v1\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 127,
+      "text": "Label(BodyCanvas,TEXT(\"DestinationQuantity\"),Entry?FString::Printf(TEXT(\"同类地点数量：%d · 当前第%d处\"),Number(Entry,TEXT(\"entry_count\")),Number(Entry,TEXT(\"index\"))):TEXT(\"地点数量待同步\"),X,RowY,W,72,26);RowY+=88;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 128,
+      "text": "Label(BodyCanvas,TEXT(\"DestinationYield\"),Entry?InkJourneyData::Yield(Entry)+FString::Printf(TEXT(\"\\n开采权最长 %.0f 分钟 · 按有效在线结算\"),InkJourneyData::Number(Entry,TEXT(\"lease_max_seconds\"))/60):TEXT(\"产出等待权威数据\"),X,RowY,W,112,26);RowY+=132;",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "line": 143,
+      "text": "for(int32 I=0;I<Rewards->Num();++I){auto R=(*Rewards)[I]->AsObject();AtlasIcon(BodyCanvas,NAME_None,8+I%4,X,RowY,40);Label(BodyCanvas,NAME_None,String(R,TEXT(\"name\"))+FString::Printf(TEXT(\" × %d\"),Number(R,TEXT(\"quantity\"))),X+52,RowY,W-52,44,26);RowY+=52;}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 85,
+      "text": "if(Minutes>=1440)return FString::Printf(TEXT(\"%lld天 %lld小时\"),Minutes/1440,(Minutes%1440)/60);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 86,
+      "text": "if(Minutes>=60)return FString::Printf(TEXT(\"%lld小时 %lld分钟\"),Minutes/60,Minutes%60);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 87,
+      "text": "return FString::Printf(TEXT(\"%lld分钟\"),Minutes);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 135,
+      "text": "return FString::Printf(TEXT(\"%d|%d|%d|%d|\"),Enabled,Connected,Busy,ActivePage)+Json;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 249,
+      "text": "const FString ProgressText=HasProgress?FString::Printf(TEXT(\"%s  ·  %.0f / %.0f\"),*TaskState,Current,Target):TaskState+TEXT(\"  ·  进度待同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 258,
+      "text": "Reward=FString::Printf(TEXT(\"%s %.0f · %s\"),Item==TEXT(\"STAT_QI\")?TEXT(\"修为\"):*Item,Number(Task,TEXT(\"reward_count\")),Confirmed?TEXT(\"服务已确认\"):TEXT(\"达成后自动结算\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 269,
+      "text": "Y+=Text(FString::Printf(TEXT(\"已确认共同完成 %d 轮。主播与正式成员完整、免费参与后，由服务计入。\"),Count),0,Y,W,26)+20;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 281,
+      "text": "Label(BodyCanvas,NAME_None,HasTarget?FString::Printf(TEXT(\"共修 %.0f 轮 · %s\"),Target,Confirmed?TEXT(\"已确认\"):TEXT(\"待达成\")):TEXT(\"目标轮次待同步\"),X+16,Top+16,CardW-32,48,28);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 282,
+      "text": "Label(BodyCanvas,NAME_None,HasTarget?FString::Printf(TEXT(\"%d / %.0f 轮\"),Count,Target):TEXT(\"当前轮次待同步\"),X+16,Top+76,CardW-32,40,26);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 289,
+      "text": "Reward+=FString::Printf(TEXT(\"\\n主播：灵石 %.0f · 破境石 %.0f\"),Number(Tier,TEXT(\"anchor_stone\")),Number(Tier,TEXT(\"anchor_break_material\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 313,
+      "text": "Y+=Text(FString::Printf(TEXT(\"完成本期 %d 项指定任务，经服务确认后授予称号。称号没有数值加成。\"),RequiredTasks),0,Y,W,26)+20;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 325,
+      "text": "const FString Rank=HasNumber(Entry,TEXT(\"rank\"))?FString::Printf(TEXT(\"第%.0f名\"),Number(Entry,TEXT(\"rank\"))):TEXT(\"名次待同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 326,
+      "text": "const FString Score=HasNumber(Entry,TEXT(\"score\"))?FString::Printf(TEXT(\"%.0f分\"),Number(Entry,TEXT(\"score\"))):TEXT(\"贡献值待同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 328,
+      "text": "Y+=Text(FString::Printf(TEXT(\"%s  ·  %s  ·  %s\"),*Rank,*Name,*Score),12,Y+8,W-24,24,48)+20;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 341,
+      "text": "const FString Score=HasNumber(Personal,TEXT(\"score\"))?FString::Printf(TEXT(\"%.0f\"),Number(Personal,TEXT(\"score\"))):TEXT(\"待同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 342,
+      "text": "const FString Complete=HasNumber(Personal,TEXT(\"complete_count\"))?FString::Printf(TEXT(\"%.0f\"),Number(Personal,TEXT(\"complete_count\"))):TEXT(\"待同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 343,
+      "text": "Y+=Text(FString::Printf(TEXT(\"任务确认 %d / %d  ·  个人贡献 %s\\n完整历练 %s 轮\"),Confirmed,Tasks.Num(),*Score,*Complete),0,Y,W,28)+20;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+      "line": 399,
+      "text": "Time=FString::Printf(TEXT(\"截止 %s\\n%s%s\"),*Date(End),Service&&Service->IsConnected()?TEXT(\"服务剩余 \"):TEXT(\"上次确认剩余 \"),*Remaining(End-Now));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkRewardReceiptPanel.cpp",
+      "line": 89,
+      "text": "auto* Row=WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(),FName(*FString::Printf(TEXT(\"RewardRow_%d\"),Index++)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkRewardReceiptPanel.cpp",
+      "line": 101,
+      "text": "auto* Count=WidgetTree->ConstructWidget<UTextBlock>();Count->SetText(FText::FromString(FString::Printf(TEXT(\"× %s\"),*FText::AsNumber(Quantity).ToString())));Count->SetFont(InkUiTypography::MakeFont(EInkUiTextRole::Data,27));Count->SetColorAndOpacity(InkUiTypography::Theme()->GoldTint);Details->AddChildToVerticalBox(Count)->SetPadding(FMargin(0,8,0,0));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.cpp",
+      "line": 2,
+      "text": "FString InkUiAssets::Resolve(const TCHAR* Path)",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.h",
+      "line": 10,
+      "text": "{const FString Canonical=Resolve(Path);return LoadObject<T>(Outer,*Canonical,Forward<Args>(Arguments)...);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 51,
+      "text": "FSlateFontInfo Font;Font.FontObject=FrontendOwner?FrontendOwner->TextFont.LoadSynchronous():nullptr;Font.Size=24;auto InputStyle=NameInput->GetWidgetStyle();InputStyle.SetFont(Font);NameInput->SetWidgetStyle(InputStyle);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 60,
+      "text": "Label(List,NAME_None,FString::Printf(TEXT(\"成员 %d\"),Offset+I+1),8,ListTop+I*120+88,ListW-32,32,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 73,
+      "text": "Label(List,NAME_None,FString::Printf(TEXT(\"×%d · 单价%d · %s\"),Number(O,TEXT(\"count\")),Number(O,TEXT(\"unit_price\")),*Status.FindRef(String(O,TEXT(\"status\")))),8,Y+88,ListW-32,32,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 86,
+      "text": "if(Offline->TryGetNumberField(TEXT(\"total_qi\"),TotalQi))TotalLabel=FString::Printf(TEXT(\"%.0f\"),TotalQi);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 87,
+      "text": "if(Offline->TryGetNumberField(TEXT(\"acknowledged_qi\"),AcknowledgedQi))AcknowledgedLabel=FString::Printf(TEXT(\"%.0f\"),AcknowledgedQi);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 88,
+      "text": "Label(Summary,TEXT(\"OfflineActual\"),FString::Printf(TEXT(\"已入账离线修为 %s\\n已确认阅读 %s\\n离线记录与确认状态以已同步数据为准。\"),*TotalLabel,*AcknowledgedLabel),0,0,TextW,160,26);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 92,
+      "text": "if(Reward->TryGetNumberField(TEXT(\"total_qi\"),Qi))QiLabel=FString::Printf(TEXT(\"%.0f\"),Qi);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingRecordsPanel.cpp",
+      "line": 93,
+      "text": "Label(List,NAME_None,String(O,TEXT(\"name\"))+FString::Printf(TEXT(\"\\n离线已入账 %s 修为\"),*QiLabel),8,ListTop+I++*120,ListW-32,104,26);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "line": 23,
+      "text": "? FString::Printf(TEXT(\"%.0f\"), Value) : FString(TEXT(\"—\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "line": 46,
+      "text": "Append(Service ? FString::Printf(TEXT(\"%d%d%d\"), Service->IsEnabled(), Service->IsConnected(), Service->IsBusy()) : TEXT(\"none\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "line": 230,
+      "text": "Roster += FString::Printf(TEXT(\"%02d  %s\"), MemberOffset + Index + 1, *MemberName);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 26,
+      "text": "if(Kind==TEXT(\"buildings\"))return Str(O,TEXT(\"building_id\"))+FString::Printf(TEXT(\"|%.0f\"),Num(O,TEXT(\"level\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 33,
+      "text": "FString Text=FString::Printf(TEXT(\"%d灵石\"),int32(Num(O,TEXT(\"stone_cost\"))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 37,
+      "text": "const FString Item=Str(O,*FString::Printf(TEXT(\"extra_item_%d\"),I));const int32 Count=Num(O,*FString::Printf(TEXT(\"extra_count_%d\"),I));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 38,
+      "text": "if(Count>0)Text+=FString::Printf(TEXT(\" · %s×%d\"),*Names.FindRef(Item),Count);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 46,
+      "text": "return FString::Printf(TEXT(\"%.0f|%s|%.0f|%.0f|%d|%s|%s|%.0f\"),Num(S,TEXT(\"version\")),*Str(C,TEXT(\"kind\")),Num(C,TEXT(\"offset\")),Num(T,TEXT(\"helper_count\")),Busy,*Phase,*Race,Live?FMath::FloorToDouble(Num(S,TEXT(\"server_utc\"))):0);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 114,
+      "text": "if(L&&L->TryGetArrayField(TEXT(\"tasks\"),Rows))for(const auto& V:*Rows){auto O=V->AsObject();bool Confirmed=false;const bool HasConfirmed=O&&O->TryGetBoolField(TEXT(\"confirmed\"),Confirmed);const FString Progress=HasNum(O,TEXT(\"progress\"))&&HasNum(O,TEXT(\"target\"))?FString::Printf(TEXT(\"%.0f/%.0f\"),Num(O,TEXT(\"progress\")),Num(O,TEXT(\"target\"))):TEXT(\"进度待服务提供\");const auto Permissions=Obj(L,TEXT(\"permissions\"));bool RewardsAllowed=false;const bool HasRewardPermission=Permissions&&Permissions->TryGetBoolField(TEXT(\"task_numeric_rewards\"),RewardsAllowed);const FString Reward=HasRewardPermission&&RewardsAllowed&&HasNum(O,TEXT(\"reward_count\"))?FString::Printf(TEXT(\" · 服务奖励 %.0f\"),Num(O,TEXT(\"reward_count\"))):TEXT(\" · 奖励资料待服务提供\");const FString StateText=HasConfirmed&&Confirmed?TEXT(\" · 已结算\"):HasConfirmed?TEXT(\" · 待服务确认\"):TEXT(\" · 状态待服务提供\");const FString Condition=Conditions.FindRef(Str(O,TEXT(\"condition_type\")));Detail+=FString::Printf(TEXT(\"%s %s · %s%s%s\\n\"),*Str(O,TEXT(\"task_id\")),Condition.IsEmpty()?TEXT(\"任务条件待服务提供\"):*Condition,*Progress,*Reward,*StateText);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 120,
+      "text": "Detail=HasCompleted?FString::Printf(TEXT(\"服务端确认完整共同轮次：%d\\n里程碑与奖励（服务配置）\\n\"),Completed->Num()):TEXT(\"完整共同轮次：待服务提供\\n里程碑与奖励（服务配置）\\n\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 154,
+      "text": "else if(L&&L->HasField(TEXT(\"buff_start\"))&&L->HasField(TEXT(\"buff_end\")))FinalBuffState=FString::Printf(TEXT(\"已触发，%.0f–%.0f\"),Num(L,TEXT(\"buff_start\")),Num(L,TEXT(\"buff_end\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 156,
+      "text": "Detail+=FString::Printf(TEXT(\"%s · %s轮 · %s · %s · 配置奖励 %s灵石/%s破境石；%s · 最终增益：%s\\n\"),*Tier,*Threshold,*Str(Row,TEXT(\"guild_visual\")),*Completion,*Stone,*Material,*NumericRewardOutcome,*FinalBuffState);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 162,
+      "text": "if(L&&L->HasField(TEXT(\"buff_start\"))&&L->HasField(TEXT(\"buff_end\")))Detail+=FString::Printf(TEXT(\"最终增益服务时间：开始 %.0f · 结束 %.0f\\n\"),Num(L,TEXT(\"buff_start\")),Num(L,TEXT(\"buff_end\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 168,
+      "text": "if(L&&L->TryGetArrayField(TEXT(\"leaderboard\"),Rows)&&Rows->Num())for(int32 I=RankOffset;I<FMath::Min(Rows->Num(),RankOffset+8);++I){auto O=(*Rows)[I]->AsObject();const FString Rank=HasNum(O,TEXT(\"rank\"))?FString::Printf(TEXT(\"第%.0f名\"),Num(O,TEXT(\"rank\"))):TEXT(\"名次待服务提供\");const FString Score=HasNum(O,TEXT(\"score\"))?FString::Printf(TEXT(\"%.0f分\"),Num(O,TEXT(\"score\"))):TEXT(\"贡献待服务提供\");Detail+=FString::Printf(TEXT(\"%s · %s · %s\\n\"),*Rank,*Str(O,TEXT(\"name\")),*Score);}else Detail+=TEXT(\"暂无荣誉榜条目；入榜资格由服务端确认。\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 173,
+      "text": "const FString SignCount=HasNum(A,TEXT(\"month_sign_count\"))?FString::Printf(TEXT(\"%.0f\"),Num(A,TEXT(\"month_sign_count\"))):TEXT(\"待服务提供\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 174,
+      "text": "const FString Remaining=HasNum(L,TEXT(\"end\"))&&HasNum(State,TEXT(\"server_utc\"))?FString::Printf(TEXT(\"%.0f 分钟\"),FMath::Max(0.,(Num(L,TEXT(\"end\"))-Num(State,TEXT(\"server_utc\")))/60)):TEXT(\"待服务时间同步\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 175,
+      "text": "const FString Score=HasNum(Personal,TEXT(\"score\"))?FString::Printf(TEXT(\"%.0f\"),Num(Personal,TEXT(\"score\"))):TEXT(\"待服务提供\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 176,
+      "text": "const FString Complete=HasNum(Personal,TEXT(\"complete_count\"))?FString::Printf(TEXT(\"%.0f\"),Num(Personal,TEXT(\"complete_count\"))):TEXT(\"待服务提供\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 177,
+      "text": "Detail=FString::Printf(TEXT(\"服务日期：%s · 本月签到 %s 日\\n%s\\n开服剩余 %s · 个人贡献 %s / 完整轮次 %s\\n称号与活动期限以服务快照为准。\"),*Day,*SignCount,*Str(A,TEXT(\"verse\")),*Remaining,*Score,*Complete);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 263,
+      "text": "return RequiredAction==Expected?FString():FString::Printf(TEXT(\"当前轮次要求：%s\"),*Expected);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 270,
+      "text": "Label(Summary,TEXT(\"WulingRaceData\"),FString::Printf(TEXT(\"阶段：%s\\n排队：%s\\n排队条件：%s\\n原型固定计分：共同任务上限600 / 主播时机上限200 / 代表响应上限200\\n挑战期：第2至8分钟\\n共同任务槽：每60秒交替护阵/破障\\n主播时机：挑战开始后第90 / 270秒前后10秒\\n代表窗口：挑战开始后第60–80 / 240–260秒\\n开采权剩余 %.0f 分钟 · 在线 %.0f 秒\\n共同任务：%s\"),*(RaceStatus.IsEmpty()?FString(TEXT(\"服务未提供\")):RaceStatus),*QueueStatus,*(QueueReason.IsEmpty()?FString(TEXT(\"服务条件通过；节点仍需在允许列表中\")):QueueReason),FMath::Max(0.,Num(L,TEXT(\"end\"))-ServerNow)/60,Num(L,TEXT(\"online_seconds\")),*(RaceActionStatus.IsEmpty()?FString(TEXT(\"可提交\")):RaceActionStatus)),0,0,LW-16,520,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 400,
+      "text": "if(HasQ)Details+=FString::Printf(TEXT(\"服务报价 Q：%.0f\\n\"),Num(Q,TEXT(\"q\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 404,
+      "text": "if(HasGrowth)Details+=FString::Printf(TEXT(\"成长预估：%.0f – %.0f\\n\"),Num(Q,TEXT(\"growth_min\")),Num(Q,TEXT(\"growth_max\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 417,
+      "text": "Details+=FString::Printf(TEXT(\"%s：%s ×%d\\n\"),*CategoryDisplay,*(ItemName.IsEmpty()?Str(SlotObject,TEXT(\"item_id\")):ItemName),Count);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 440,
+      "text": "Details+=FString::Printf(TEXT(\"材料类别待同步：%s ×%d\"),*ItemName,Quoted.Value);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 441,
+      "text": "Details+=HasOwnedCount?FString::Printf(TEXT(\" · 目录库存 %.0f\\n\"),OwnedCount):FString(TEXT(\" · 库存待同步\\n\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 456,
+      "text": "Details+=HasNormalizedQ?FString::Printf(TEXT(\"标准化评分 Q：%.0f\\n\"),Num(Q,TEXT(\"q_normalized\"))):TEXT(\"标准化评分待同步\\n\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 458,
+      "text": "if(HasTribulationChance)Details+=FString::Printf(TEXT(\"天劫成功率：%.0f%%\\n\"),T&&T->HasField(TEXT(\"tribulation_chance\"))?Num(T,TEXT(\"tribulation_chance\")):Num(Q,TEXT(\"tribulation_chance\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 462,
+      "text": "Details+=FString::Printf(TEXT(\"天劫成功率（服务端）：%.0f%%\\n\"),ChanceBasisPoints/100.0);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 468,
+      "text": "if(T)Details+=FString::Printf(TEXT(\"天劫服务状态：%s · 助力 %.0f 人 · 剩余 %.0f 秒\\n\"),*Str(T,TEXT(\"status\")),Num(T,TEXT(\"helper_count\")),FMath::Max(0.,Num(T,TEXT(\"deadline\"))-Num(State,TEXT(\"server_utc\"))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 494,
+      "text": "Details+=FString::Printf(TEXT(\"本次炼制一份 · %.0f 灵石\\n所需材料\\n\"),Num(SelectedData,TEXT(\"stone_cost\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 495,
+      "text": "for(const auto& V:*Inputs){auto O=V->AsObject();Details+=Str(O,TEXT(\"name\"))+FString::Printf(TEXT(\" ×%.0f\\n\"),Num(O,TEXT(\"count\")));}Primary=TEXT(\"确认炼制\");",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 497,
+      "text": "else if(Kind==TEXT(\"sources\")){const auto Source=Obj(SelectedData,TEXT(\"source\"));Details+=TEXT(\"可达来源：\")+Str(Source,TEXT(\"region\"))+TEXT(\" · \")+Str(Source,TEXT(\"name\"))+FString::Printf(TEXT(\"\\n每份需要 %.0f 完整轮次\\n\"),Num(SelectedData,TEXT(\"required_full_rounds\")))+TEXT(\"开放条件：\")+Str(Source,TEXT(\"unlock_condition\"))+TEXT(\"\\n配方来源可查阅说明；固定奖励可设为专注目标。\");Primary=TEXT(\"设为专注目标\");}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 498,
+      "text": "else if(Kind==TEXT(\"shop\")){Details+=TEXT(\"本次精确消耗：\")+ShopCosts(SelectedData)+FString::Printf(TEXT(\"\\n获得 %.0f 份 · 每日上限 %.0f\\n\"),Num(SelectedData,TEXT(\"output_count\")),Num(SelectedData,TEXT(\"daily_limit\")))+TEXT(\"余额、购买资格和限额以服务确认结果为准。\");Primary=TEXT(\"确认购买一份\");}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 499,
+      "text": "else if(Kind==TEXT(\"buildings\")){Details+=FString::Printf(TEXT(\"设施等级 %.0f → %.0f\\n公库资材 %.0f\\n公库材料：%s ×%.0f\\n%s ×%.0f\\n仅主播可建设，服务核验当前等级与公库库存。\"),Num(SelectedData,TEXT(\"prerequisite_level\")),Num(SelectedData,TEXT(\"level\")),Num(SelectedData,TEXT(\"supply_cost\")),*Str(SelectedData,TEXT(\"material_1\")),Num(SelectedData,TEXT(\"material_1_count\")),*Str(SelectedData,TEXT(\"material_2\")),Num(SelectedData,TEXT(\"material_2_count\")));Details+=TEXT(\"\\n建设收益：\")+Str(SelectedData,TEXT(\"benefit\"))+TEXT(\"\\n开放条件：\")+Str(SelectedData,TEXT(\"unlock\"));Primary=TEXT(\"确认建设\");}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 500,
+      "text": "else if(Kind==TEXT(\"market\")){bool Own=false;SelectedData->TryGetBoolField(TEXT(\"is_own\"),Own);Details+=FString::Printf(TEXT(\"数量 %.0f · 单价 %.0f 灵石\\n成交总价 %.0f 灵石\\n手续费与实际到账以成交记录为准。\"),Num(SelectedData,TEXT(\"count\")),Num(SelectedData,TEXT(\"unit_price\")),Num(SelectedData,TEXT(\"count\"))*Num(SelectedData,TEXT(\"unit_price\")));Primary=Own?TEXT(\"撤回自己的寄售\"):TEXT(\"确认购买寄售\");}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 501,
+      "text": "else if(PageId==TEXT(\"WulingMarket\")){Details+=FString::Printf(TEXT(\"上架数量 %d · 单价 %d 灵石\\n标价合计 %d 灵石\\n可用库存 %.0f\\n费用与实际到账以成交记录为准。\"),ListingQuantity,ListingPrice,ListingQuantity*ListingPrice,Num(SelectedData,TEXT(\"owned_count\")));Primary=TEXT(\"确认上架\");}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 504,
+      "text": "Details+=FString::Printf(TEXT(\"可用库存 %.0f\\n\"),Num(SelectedData,TEXT(\"owned_count\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 511,
+      "text": "if(!EquipmentSlot.IsEmpty())Details+=Stats.FindRef(Str(SelectedData,TEXT(\"stat\")))+FString::Printf(TEXT(\" +%.0f%%\\n\"),Num(SelectedData,TEXT(\"additive_value\"))*100);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 512,
+      "text": "else Details+=Str(SelectedData,TEXT(\"description\"))+FString::Printf(TEXT(\"\\n冷却 %.0f 秒\"),Num(SelectedData,TEXT(\"cooldown_seconds\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 521,
+      "text": "Details+=FString::Printf(TEXT(\"\\n第 %d 页 · 目录共 %.0f 项\"),Offset/8+1,CatalogTotal);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 547,
+      "text": "Action(DetailsCanvas,TEXT(\"ToolQuantity\"),FString::Printf(TEXT(\"数量 %d ＋\"),ListingQuantity),0,TextHeight+12,DetailW-16,Hit);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 548,
+      "text": "Action(DetailsCanvas,TEXT(\"ToolPrice\"),FString::Printf(TEXT(\"单价 %d ＋\"),ListingPrice),0,TextHeight+112,DetailW-16,Hit);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 566,
+      "text": "Label(List,NAME_None,ShopCosts(O)+FString::Printf(TEXT(\"\\n每日上限 %.0f\"),Num(O,TEXT(\"daily_limit\"))),X+8,Y+88,CW-16,104,24);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 575,
+      "text": "FString Hint=Kind==TEXT(\"sources\")?Str(Obj(O,TEXT(\"source\")),TEXT(\"name\")):Kind==TEXT(\"buildings\")?FString::Printf(TEXT(\"目标等级 %.0f · 资材 %.0f\"),Num(O,TEXT(\"level\")),Num(O,TEXT(\"supply_cost\"))):Kind==TEXT(\"recipes\")?FString::Printf(TEXT(\"炼制消耗 %.0f 灵石\"),Num(O,TEXT(\"stone_cost\"))):FString::Printf(TEXT(\"可用 %.0f\"),Num(O,TEXT(\"owned_count\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+      "line": 576,
+      "text": "if(BreakPage)Hint+=FString::Printf(TEXT(\" · 已选 %d\"),MaterialSelection.FindRef(Str(O,TEXT(\"item_id\"))));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp",
+      "line": 119,
+      "text": "const FString Prefix = FString::Printf(TEXT(\"ActivityRollout_%d_\"), Index);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivityRolloutPanels.cpp",
+      "line": 193,
+      "text": "const FString Prefix = FString::Printf(TEXT(\"ActivityCycle_%d_\"), Index);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "line": 39,
+      "text": "? FString::Printf(TEXT(\"/Game/UI/Ink/ComponentRollout20261024/Journey/%s.%s\"), TextureName, TextureName)",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "line": 137,
+      "text": "UTexture2D* Texture = Path.IsEmpty() ? nullptr : LoadObject<UTexture2D>(nullptr, *Path);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.cpp",
+      "line": 175,
+      "text": "bSent = Service->SubmitPrototypeCommand(TEXT(\"ClaimSignInChest\"),FString::Printf(TEXT(\"{\\\"milestone\\\":%d}\"),R.Milestone)); break;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveAudienceAdapterComponent.cpp",
+      "line": 173,
+      "text": "for(int I=0;I<Count;++I){const FString Id=FString::Printf(TEXT(\"viewer_%04d\"),I);const FString Name=FString::Printf(TEXT(\"观众%04d\"),I+1);SimulateComment(Id,Name,TEXT(\"加入\"));SimulateComment(Id,Name,FString::FromInt(I%4+1));}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveAudienceAdapterComponent.cpp",
+      "line": 188,
+      "text": "const FString RawId=FString::Printf(TEXT(\"viewer_%04d\"),I);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveAudienceAdapterComponent.cpp",
+      "line": 190,
+      "text": "if(SimulateComment(RawId,FString::Printf(TEXT(\"观众%04d\"),I+1),TEXT(\"加入\")))++Added;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 80,
+      "text": "if(IconPath)if(auto* Texture=LoadObject<UTexture2D>(nullptr,IconPath))",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 149,
+      "text": "const FString Path=FString::Printf(TEXT(\"/Game/UI/Ink/Gifts/T_Gift_%s.T_Gift_%s\"),Icons[I],Icons[I]);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 150,
+      "text": "Button(FName(*FString::Printf(TEXT(\"Gift%d\"),I)),Gifts[I],28+(I%2)*288,430+(I/2)*80,244,76,*Path,TEXT(\" \"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 194,
+      "text": "FLiveGMCheckResult R;R.Name=TEXT(\"护盾/修为双层样本\");R.Expected=TEXT(\"前景即时，暗层保留上次位置\");R.Actual=FString::Printf(TEXT(\"护盾 %.2f / %.2f，修为 %.2f / %.2f\"),ShieldSample->Fraction,ShieldSample->TrailFraction,CultivationSample->Fraction,CultivationSample->TrailFraction);R.Status=FMath::Abs(ShieldSample->Fraction-ShieldSample->TrailFraction)>.1f?TEXT(\"通过\"):TEXT(\"失败\");R.Source=TEXT(\"本地展示样本\");R.Time=FDateTime::UtcNow().ToIso8601();Session->Results.Add(R);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 203,
+      "text": "FString State=Session->DescribeSession()+FString::Printf(TEXT(\"\\n已接收 %d 个事件 · \"),Session->ReceivedEvents)+Session->LastEvent.Left(14);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "line": 204,
+      "text": "if(Host->Swarm)State+=FString::Printf(TEXT(\"\\n剑灵 %d · 称号动效 %d\"),Host->Swarm->GetParticipantCount(),Host->Swarm->TitleEffects?Host->Swarm->TitleEffects->ActiveEffectCount:0);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 184,
+      "text": "if(InHost&&(!InHost->NameFont||InHost->NameFont->GetPathName()==TEXT(\"/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames\")))InHost->NameFont=LoadObject<UFont>(nullptr,TEXT(\"/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 193,
+      "text": "RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 194,
+      "text": "RealmChart=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 195,
+      "text": "WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 227,
+      "text": "if(Status)Status->SetText(FText::FromString(Local?FString::Printf(TEXT(\"本地模拟 · 剑灵 %d / 1000\"),Owner->Swarm->GetParticipantCount()):TEXT(\"开启本地模拟，再添加剑灵\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 290,
+      "text": "Text(FString::Printf(TEXT(\"血量 %.0f / %.0f\"),Health->Health,Health->MaxHealth),FVector2D(28,58));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "line": 294,
+      "text": "Text(FString::Printf(TEXT(\"修为 %.0f / %.0f · %.1f/秒\"),Anchor.Cultivation,Anchor.RequiredCultivation,Anchor.EffectiveCultivationPerSecond),FVector2D(28,91));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMTestSession.cpp",
+      "line": 67,
+      "text": "const bool Applied=Host->DeliverPresence(E);if(Duplicate){const int32 Before=ReceivedEvents;const bool Again=Host->DeliverPresence(E);Record(TEXT(\"重复进场去重\"),TEXT(\"重复事件被拒绝且不重复接收\"),FString::Printf(TEXT(\"accepted=%d received_delta=%d\"),Again,ReceivedEvents-Before),!Again&&ReceivedEvents==Before);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMTestSession.cpp",
+      "line": 105,
+      "text": "const double Applied=Health->ApplyIncomingDamage(Health->MaxHealth*.35);Record(TEXT(\"实际战斗损血\"),TEXT(\"按防御/闪避后实际结算\"),FString::Printf(TEXT(\"%.1f 生命\"),Applied),true);return true;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMTestSession.cpp",
+      "line": 139,
+      "text": "{FLiveGMCheckResult R;R.Name=Name;R.Expected=TEXT(\"全部断言通过\");R.Actual=FString::Printf(TEXT(\"%d / %d\"),Passed,Total);R.Status=Total==0?TEXT(\"未运行\"):Passed==Total?TEXT(\"通过\"):TEXT(\"失败\");R.Source=TEXT(\"Windows PIE · 本机记录\");R.Time=IFileManager::Get().GetTimeStamp(*Path).ToIso8601();Results.Add(R);};",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMTestSession.cpp",
+      "line": 164,
+      "text": "Record(TEXT(\"连续受击实际结算\"),TEXT(\"单次结算，不累加震屏档位\"),FString::Printf(TEXT(\"实际损血 %.1f / %.1f\"),Applied,Health->MaxHealth),Applied/Health->MaxHealth<.2);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveMonster.cpp",
+      "line": 10,
+      "text": "#include \"UObject/ConstructorHelpers.h\"",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveMonster.cpp",
+      "line": 17,
+      "text": "static ConstructorHelpers::FObjectFinder<UStaticMesh> Cube(TEXT(\"/Engine/BasicShapes/Cube.Cube\"));Body->SetStaticMesh(Cube.Object);Body->SetRelativeScale3D(FVector(.7,.7,.85));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveTitleEffectsComponent.cpp",
+      "line": 27,
+      "text": "TitleSystem=TSoftObjectPtr<UNiagaraSystem>(FSoftObjectPath(TEXT(\"/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura\")));",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 51,
+      "text": "if(!NameFont||NameFont->GetPathName()==TEXT(\"/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames\"))NameFont=LoadObject<UFont>(nullptr,TEXT(\"/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 58,
+      "text": "if(!RealmBanners)RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 59,
+      "text": "if(!RealmChart)RealmChart=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 60,
+      "text": "if(!WeaponTitles)WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT(\"/Game/UI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles\"),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 72,
+      "text": "if(Health){AnchorHealthProgress.SetTarget(Health->GetHealthFraction());AnchorHealthProgress.Tick(GetWorld()->GetDeltaSeconds());DrawRect(FLinearColor(.12f,.14f,.13f,1),28,47,278,10);DrawRect(FLinearColor(.25f,.09f,.07f,1),28,47,278*AnchorHealthProgress.Trail,10);DrawRect(FLinearColor(.72f,.26f,.20f,1),28,47,278*AnchorHealthProgress.Value,10);DrawText(FString::Printf(TEXT(\"血量 %.0f / %.0f\"),Health->Health,Health->MaxHealth),FLinearColor::White,28,60,Font,.75f);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 76,
+      "text": "DrawText(FString::Printf(TEXT(\"修为 %.0f / %.0f · %.1f/秒\"),Snapshot.Cultivation,Snapshot.RequiredCultivation,Snapshot.EffectiveCultivationPerSecond),FLinearColor::White,28,94,Font,.7f);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 79,
+      "text": "DrawText(FString::Printf(TEXT(\"WASD 移动   空格推怪  %s\"),Ability&&Ability->GetRemainingCooldown()>0?*FString::Printf(TEXT(\"%.1fs\"),Ability->GetRemainingCooldown()):TEXT(\"就绪\")),FLinearColor::White,28,NewAnchorHUD?210*UIScale:137,GEngine->GetSmallFont(),.75f);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "line": 165,
+      "text": "for(int32 I=0;I<8;++I)Button(FName(*FString::Printf(TEXT(\"Gift%d\"),I)),GiftLabels[I],X+16+(I%2)*156,Y+378+(I/2)*36,148,Local);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponPerformanceComponent.cpp",
+      "line": 59,
+      "text": "Rows+=FString::Printf(TEXT(\"%.4f,%.4f,%.4f,%.4f,%.4f,%.2f,%d,%d,%lld,%d,%d,%lld,%lld,%d,%d\\n\"),Elapsed,FrameMs,FPlatformTime::ToMilliseconds(GGameThreadTime),FPlatformTime::ToMilliseconds(GRenderThreadTime),GpuMs,double(MemoryBytes)/1048576,Mode->Swarm->GetParticipantCount(),Mode->Swarm->GetRenderedCount(),Mode->Swarm->TotalAttacks,HUD?HUD->DrawnNameplates:0,Mode->Audience->GetReadyAvatarCount(),Mode->Swarm->TotalPrimaryLaunched,Mode->Swarm->TotalFollowUpHits,Mode->Swarm->MaxComboHitsObserved,Mode->Swarm->GetActiveArrowCount());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponPerformanceComponent.cpp",
+      "line": 62,
+      "text": "NextSwitch=Elapsed+.5;const int32 Count=Mode->Swarm->GetParticipantCount();for(int I=0;I<32&&Count>0;++I){const int32 Viewer=(SwitchBatch*32+I)%Count;Mode->Audience->SimulateComment(FString::Printf(TEXT(\"viewer_%04d\"),Viewer),FString::Printf(TEXT(\"观众%04d\"),Viewer+1),FString::FromInt((SwitchBatch+I)%4+1));}++SwitchBatch;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponPerformanceComponent.cpp",
+      "line": 68,
+      "text": "FString Hardware=FString::Printf(TEXT(\"CPU=%s\\nGPU=%s\\nDurationSeconds=%d\\nHighHealthMonsters=true (1 million HP; 1-damage float subtraction remains exact)\\nFixedFrameRate=false for throughput capture only\\nAvatarSource=generated local thumbnails; real HTTP not load-tested\\n\"),*FPlatformMisc::GetCPUBrand(),*FPlatformMisc::GetPrimaryGPUBrand(),Seconds);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponSwarm.cpp",
+      "line": 25,
+      "text": "#include \"UObject/ConstructorHelpers.h\"",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponSwarm.cpp",
+      "line": 72,
+      "text": "static ConstructorHelpers::FObjectFinder<UStaticMesh> Cube(TEXT(\"/Engine/BasicShapes/Cube.Cube\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponSwarm.cpp",
+      "line": 73,
+      "text": "static ConstructorHelpers::FObjectFinder<UStaticMesh> Cylinder(TEXT(\"/Engine/BasicShapes/Cylinder.Cylinder\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponSwarm.cpp",
+      "line": 76,
+      "text": "auto* Mesh=CreateDefaultSubobject<UInstancedStaticMeshComponent>(*FString::Printf(TEXT(\"Weapon%d\"),I));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveImpactRegressionSkill.cpp",
+      "line": 23,
+      "text": "if(Behavior==2)for(int I=0;I<256;++I)Swarm->AddParticipant({FString::Printf(TEXT(\"callback-%d\"),I),TEXT(\"x\"),TEXT(\"\")});",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponAlertTests.cpp",
+      "line": 125,
+      "text": "TestTrue(FString::Printf(TEXT(\"moving owner must allow subsequent sorties, observed %lld\"),Swarm->TotalPrimaryLaunched),Swarm->TotalPrimaryLaunched>=3);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponAlertTests.cpp",
+      "line": 139,
+      "text": "Mesh->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT(\"/Engine/BasicShapes/Cube.Cube\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponAlertTests.cpp",
+      "line": 153,
+      "text": "TestTrue(FString::Printf(TEXT(\"collidable scene geometry must not change the flight at all (difference=%f)\"),MaxDifference),MaxDifference<.01);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponPresentationTests.cpp",
+      "line": 17,
+      "text": "TestTrue(TEXT(\"anonymous demonstration sword joins\"),Swarm->AddParticipant({FString::Printf(TEXT(\"menu_%02d\"),I),TEXT(\"\"),TEXT(\"\")}));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponPresentationTests.cpp",
+      "line": 43,
+      "text": "const auto Current=Swarm->GetWeaponPhase(FString::Printf(TEXT(\"menu_%02d\"),I));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponTempoTests.cpp",
+      "line": 33,
+      "text": "TestTrue(FString::Printf(TEXT(\"spirits have distinct speeds; spread %.4f\"),Maximum-Minimum),Maximum-Minimum>.5);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponTempoTests.cpp",
+      "line": 57,
+      "text": "TestTrue(FString::Printf(TEXT(\"tempo visibly spans below 0.7 and above 1.3: %.3f %.3f\"),Low,High),Low<.7f&&High>1.3f);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponTempoTests.cpp",
+      "line": 81,
+      "text": "TestTrue(FString::Printf(TEXT(\"participants use different attack intervals: %.3f %.3f\"),Low,High),High-Low>.2);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponTempoTests.cpp",
+      "line": 105,
+      "text": "TestTrue(FString::Printf(TEXT(\"all spirits catch a player running at 600 cm/s, farthest %.1f\"),Farthest),Farthest<400);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/LiveWeapons/Tests/LiveWeaponTempoTests.cpp",
+      "line": 106,
+      "text": "TestTrue(FString::Printf(TEXT(\"moving returns preserve separate orbit phases, angular bins %d\"),Bins.Num()),Bins.Num()>=6);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/QiCultivationComponent.cpp",
+      "line": 95,
+      "text": "for(const TCHAR* Type:Types)Effect->SetVariableFloat(FName(FString::Printf(TEXT(\"User.%sCount\"),Type)),0);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/QiCultivationComponent.cpp",
+      "line": 131,
+      "text": "if(Effect){Effect->SetVariableFloat(FName(FString::Printf(TEXT(\"User.%sCount\"),Types[I])),bDraining?0:S->Count);Effect->SetVariableFloat(FName(FString::Printf(TEXT(\"User.%sRange\"),Types[I])),S->Range);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/QiCultivationComponent.cpp",
+      "line": 158,
+      "text": "for(int32 I=0;I<7;++I){Total+=LiveCounts[I];Aura->SetScalarParameterValue(FName(FString::Printf(TEXT(\"Weight%d\"),I)),LiveCounts[I]);}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/Tests/WulingPrototypeTests.cpp",
+      "line": 38,
+      "text": "TestNotNull(*FString::Printf(TEXT(\"functional route %s exists\"),Route),UInkFeaturePanel::ClassForRoute(FName(Route)).Get());",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/WulingEffectPresentation.cpp",
+      "line": 46,
+      "text": "if((*Data)->TryGetObjectField(TEXT(\"local_replay\"),Marker)){FString Status;(*Marker)->TryGetStringField(TEXT(\"status\"),Status);double Q=0;(*Marker)->TryGetNumberField(TEXT(\"q\"),Q);const FString Caption=FString::Printf(TEXT(\"本机突破记录：%s · Q%.0f\"),*Status,Q);if(Caption!=Replay){Replay=Caption;Announce(Caption);}}",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/WulingInventoryProjection.cpp",
+      "line": 27,
+      "text": "E.Item.Description=FText::FromString(FString::Printf(TEXT(\"%s\\n%s · 到期UTC：%s\\n来源：%s%s\"),*S(*Def,TEXT(\"use\")),S(O,TEXT(\"binding\"))==TEXT(\"unbound\")?TEXT(\"未绑定\"):TEXT(\"已绑定\"),*FDateTime::FromUnixTimestamp(int64(E.ExpiresUtc)).ToIso8601(),*Origin,Reserved?TEXT(\"\\n已预留，暂不可操作\"):TEXT(\"\\n操作按服务端最早到期实例结算\")));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/WulingPackageAcceptance.cpp",
+      "line": 154,
+      "text": "const double Now=FPlatformTime::Seconds();if(Now-Started>300){Check(FString::Printf(TEXT(\"acceptance timeout at step %d page %d\"),Step,Page),false);Finish();return;}if(Now<Next)return;Next=Now+.5;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/WulingPackageAcceptance.cpp",
+      "line": 159,
+      "text": "UI=Frontend.Get();if(!UI)return;Check(TEXT(\"packaged frontend main menu\"),UI->CurrentPage==TEXT(\"Main\"));Check(TEXT(\"cooked text font\"),UI->TextFont.LoadSynchronous()!=nullptr);Capture(TEXT(\"01-main\"));++Step;Next=Now+3;return;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortality/Wuling/WulingPackageAcceptance.cpp",
+      "line": 272,
+      "text": "Capture(FString::Printf(TEXT(\"page-%02d-%s\"),Page,*UI->CurrentPage.ToString()));++Page;Step=11;Next=Now+2;return;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 151,
+      "text": "FNiagaraMeshRendererMeshProperties Mesh;Mesh.Mesh=LoadObject<UStaticMesh>(nullptr,TEXT(\"/Engine/BasicShapes/Sphere.Sphere\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 183,
+      "text": "const FString T=FString::Printf(TEXT(\"saturate((%s-%.4f)/%.4f)\"),*Age,Start,End-Start);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 184,
+      "text": "return FString::Printf(TEXT(\"(%s*%s*(3.0-2.0*%s))\"),*T,*T,*T);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 230,
+      "text": "Code=FString::Printf(TEXT(\"lerp(Map.Transient.QiOrigin + float3(cos(float(Map.Particles.UniqueID)*2.399963)*clamp(Map.Transient.QiRange,20.0,2000.0)*(0.65+0.35*frac(float(Map.Particles.UniqueID)*0.618034)),sin(float(Map.Particles.UniqueID)*2.399963)*clamp(Map.Transient.QiRange,20.0,2000.0)*(0.65+0.35*frac(float(Map.Particles.UniqueID)*0.618034)),-Map.Transient.QiHeight*0.65+Map.Transient.QiHeight*%s),Map.Engine.Owner.Position,%s)\"),*Rise,*Absorb);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 232,
+      "text": "Code=FString::Printf(TEXT(\"float4(frac(float(Map.Particles.UniqueID)*0.618034),1.0,1.0,%s*(1.0-%s))\"),*FadeIn,*FadeOut);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 259,
+      "text": "auto* Template=LoadObject<UNiagaraEmitter>(nullptr,TEXT(\"/Niagara/DefaultAssets/Templates/Emitters/Fountain.Fountain\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 331,
+      "text": "const FString Theta=FString::Printf(TEXT(\"(float(Map.Particles.UniqueID)*2.399963+%.4f+Map.Particles.NormalizedAge*2.8)\"),I*.8976);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 333,
+      "text": "FString Pos=FString::Printf(TEXT(\"float3(cos(%s)*%s,sin(%s)*%s,(sin(float(Map.Particles.UniqueID)*1.73+%.4f)*Map.Transient.QiHeight)*(1.0-Map.Particles.NormalizedAge))\"),*Theta,*R,*Theta,*R,I*.7);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 347,
+      "text": "auto* Template=LoadObject<UNiagaraEmitter>(nullptr,TEXT(\"/Niagara/DefaultAssets/Templates/Emitters/SingleLoopingParticle.SingleLoopingParticle\"));if(!Template)return nullptr;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 374,
+      "text": "auto* Template=LoadObject<UNiagaraEmitter>(nullptr,TEXT(\"/Niagara/DefaultAssets/Templates/Emitters/Fountain.Fountain\"));if(!Template)return nullptr;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 450,
+      "text": "Position=FString::Printf(TEXT(\"float3(Map.Transient.CharacterSource.x+clamp(cos(%s)*1.414214,-1.0,1.0)*Map.Transient.TitleExtent.x,0.0,Map.Transient.CharacterSource.y+clamp(sin(%s)*1.414214,-1.0,1.0)*Map.Transient.TitleExtent.y)\"),*Theta,*Theta);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 455,
+      "text": "Position=FString::Printf(TEXT(\"float3(Map.Transient.CharacterTarget.x+cos(%s)*%s,0.0,Map.Transient.CharacterTarget.y+sin(%s)*%s)\"),*Theta,*R,*Theta,*R);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 462,
+      "text": "!Write(Float,TEXT(\"Particles.SpriteRotation\"),FString::Printf(TEXT(\"%s*57.29578\"),*Theta)))return nullptr;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 523,
+      "text": "UNiagaraEmitter* Template = LoadObject<UNiagaraEmitter>(nullptr, Templates[Index]);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 806,
+      "text": "const FString Theta = FString::Printf(TEXT(\"(float(Map.Particles.UniqueID)*2.399963+Map.Particles.Age*%s)\"), Index==1 ? TEXT(\"0.48\") : TEXT(\"-0.32\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 807,
+      "text": "const FString Radius = FString::Printf(TEXT(\"(Map.User.Radius*(%s+0.12*sin(float(Map.Particles.UniqueID)*2.399963)))\"), Index==1 ? TEXT(\"0.44\") : TEXT(\"0.58\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "line": 808,
+      "text": "Position = FString::Printf(TEXT(\"float3(cos(%s)*%s,sin(%s)*%s,8+Map.Particles.Age*%s)\"), *Theta,*Radius,*Theta,*Radius,Index==1 ? TEXT(\"28.0\") : TEXT(\"38.0\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "line": 130,
+      "text": "if(auto* Existing=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(\".\")+Name)))return Existing;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "line": 174,
+      "text": "auto* Blueprint=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(\".\")+FPackageName::GetLongPackageAssetName(Path)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "line": 470,
+      "text": "auto* Blueprint=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(\".\")+FPackageName::GetLongPackageAssetName(Path)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "line": 508,
+      "text": "auto* Blueprint=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(\".\")+FPackageName::GetLongPackageAssetName(Path)));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 521,
+      "text": "Result.Detail = FString::Printf(TEXT(\"matrix safety=%s; deny-by-default policy refuses player action sequence '%s' (including StartGame and routes that may issue automatic authority requests)\"), *Entry->Safety, *Entry->Actions);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 583,
+      "text": "Result.Detail = FString::Printf(TEXT(\"Slate click for '%s' observed %u TriggerAction dispatch(es), last='%s'\"), *Run.PendingActionId, DispatchDelta, *UI->LastDispatchedAction.ToString());",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 597,
+      "text": "Result.Detail = FString::Printf(TEXT(\"Slate hit-test/mouse-down handled '%s', but UInkFrontendWidget::TriggerAction did not observe its callback\"), *Run.PendingActionId);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 623,
+      "text": "Result.Detail = FString::Printf(TEXT(\"action '%s' has no audited safe Slate button or required dynamic entry id is unavailable\"), *Logical);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 635,
+      "text": "Result.Detail = FString::Printf(TEXT(\"visible player action '%s' could not be Slate-hit-tested from page '%s'; no direct route fallback was attempted\"), *ButtonAction, *FromPage);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 674,
+      "text": "Result.Detail = FString::Printf(TEXT(\"real player click path ended page=%s expected=%s panel=%s group=%s\"), *Result.ActualPage, *Entry->FinalPage, bPanelMatches ? TEXT(\"ok\") : TEXT(\"mismatch\"), bGroupMatches ? TEXT(\"ok\") : TEXT(\"mismatch\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 698,
+      "text": "const FString Stem = FString::Printf(TEXT(\"%02d-%s-720x1280\"), Run.RouteIndex + 1, Route.ContractId);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 1018,
+      "text": "Result.Failure = FString::Printf(TEXT(\"direct route did not resolve as expected (opened=%s, page=%s, panel=%s, group=%s)\"), VisualRun.bRouteOpened ? TEXT(\"true\") : TEXT(\"false\"), bPageMatches ? TEXT(\"ok\") : TEXT(\"mismatch\"), bPanelMatches ? TEXT(\"ok\") : TEXT(\"mismatch\"), bGroupMatches ? TEXT(\"ok\") : TEXT(\"mismatch\"));",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkSafePieRouteAcceptance.cpp",
+      "line": 1022,
+      "text": "const FString Stem = FString::Printf(TEXT(\"%02d-%s-720x1280\"), VisualRun.RouteIndex + 1, Route.ContractId);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "line": 53,
+      "text": "if(auto* Existing=LoadObject<UFontFace>(nullptr,*(Path+TEXT(\".\")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet))return Existing;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "line": 65,
+      "text": "if(auto* Existing=LoadObject<UFont>(nullptr,*(Path+TEXT(\".\")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet))return Existing;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "line": 86,
+      "text": "auto* Theme=LoadObject<UInkUiThemeData>(nullptr,*(ThemePath+TEXT(\".DA_InkUITheme_v1\")),nullptr,LOAD_NoWarn|LOAD_Quiet);",
+      "ink_specific": true
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "line": 122,
+      "text": "auto* B=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(\".\")+Name));if(!B||!B->GeneratedClass||!B->WidgetTree)return TEXT(\"Missing WBP: \")+Path;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "line": 138,
+      "text": "return FString::Printf(TEXT(\"Migrated %d WBP font references; %d TextBlocks; trees retained\"),Assets,Texts);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/LegacyUiRedirectorFixupCommandlet.cpp",
+      "line": 146,
+      "text": "const FString ObjectPath = FString::Printf(TEXT(\"%s.%s\"), Target.PackageName, Target.ObjectName);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/LegacyUiRedirectorFixupCommandlet.cpp",
+      "line": 161,
+      "text": "UObjectRedirector* Redirector = LoadObject<UObjectRedirector>(nullptr, *ObjectPath, nullptr, LOAD_NoWarn | LOAD_Quiet | LOAD_NoRedirects);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/LegacyUiRedirectorFixupCommandlet.cpp",
+      "line": 167,
+      "text": "const FString ExpectedDestinationPath = FString::Printf(TEXT(\"%s.%s\"), Target.CanonicalPackageName, Target.ObjectName);",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/LiveWeaponEditorLibrary.cpp",
+      "line": 96,
+      "text": "if(auto* Existing=LoadObject<UStaticMesh>(nullptr,*(PackagePath+TEXT(\".\")+FPackageName::GetLongPackageAssetName(PackagePath))))return Existing;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/LiveWeaponEditorLibrary.cpp",
+      "line": 125,
+      "text": "if(auto* Existing=LoadObject<UFont>(nullptr,*(FontPath+TEXT(\".F_LiveNames\"))))return Existing;",
+      "ink_specific": false
+    },
+    {
+      "file": "Source/BoundlessImmortalityEditor/Private/Tests/LegacyUiRedirectorModeTests.cpp",
+      "line": 18,
+      "text": "TestFalse(FString::Printf(TEXT(\"Reject %s\"),Invalid),ULegacyUiRedirectorFixupCommandlet::ParseMode(Invalid,Preflight));",
+      "ink_specific": false
+    }
+  ],
+  "unresolved_dynamic_behavior": true,
+  "note": "Call-site leads only; formatted paths, Blueprint and external runtime data require owner review."
+}

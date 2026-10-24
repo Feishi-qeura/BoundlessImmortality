@@ -1,0 +1,25 @@
+{
+  "declared_test_fixture": true,
+  "naturally_earned": false,
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+  "app": "NewUIHostAcceptance20261024",
+  "room": "newui-room-02",
+  "user": "newui-anchor-02",
+  "rules_version": "wuling-prototype-v1.4.0",
+  "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+  "anchor_stone": 500,
+  "anchor_items": {
+    "MAT_HERB_T": 12,
+    "MAT_IRON_T": 12,
+    "MAT_BR01_C01_G1": 6,
+    "BOOK_METHOD_EDGE_BOOK": 1,
+    "EQ_ROBE_T1": 1,
+    "FABAO_01": 1
+  },
+  "book": "BOOK_METHOD_EDGE_BOOK",
+  "method": "METHOD_EDGE",
+  "equipment": "EQ_ROBE_T1",
+  "fabao": "FABAO_01",
+  "recipe": "R_MAT_BR01_C01_G2",
+  "fixture_seller_listing": true
+}

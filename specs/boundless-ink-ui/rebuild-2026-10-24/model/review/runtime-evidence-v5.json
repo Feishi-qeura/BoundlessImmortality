@@ -1,0 +1,888 @@
+{
+  "captured_utc": "2026-10-24T06:14:35.742931+00:00",
+  "builds": [
+    {
+      "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-07-result.json",
+      "source_ledger_records": 90,
+      "scope": "Canonical references after582 physical migration plus confirmed-data busy retention",
+      "source_files": 57,
+      "started_at": "2026-10-24T13:58:13.9381174+08:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-24T14:02:06.4057825+08:00"
+    },
+    {
+      "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-08-result.json",
+      "source_files": 57,
+      "started_at": "2026-10-24T14:09:15.4929501+08:00",
+      "scope": "Actual PIE01 style/geometry/readback repairs; extra GM overlay presentation predicate pending exact scope",
+      "finished_at": "2026-10-24T14:09:49.3821025+08:00",
+      "source_ledger_records": 96,
+      "exit_code": 0
+    },
+    {
+      "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-09-result.json",
+      "source_files": 57,
+      "exit_code": 0,
+      "finished_at": "2026-10-24T14:11:01.3295026+08:00",
+      "scope": "Exact GM fallback presentation ownership; all prior actual PIE01 repairs",
+      "source_ledger_records": 97,
+      "started_at": "2026-10-24T14:10:52.6108573+08:00"
+    }
+  ],
+  "epoch": {
+    "sha256": "2365c56c015c086543e14191090ef1f17e5a914c527b79ac3c3cab7bee0384c6",
+    "static_flags": {
+      "checked_at": "2026-10-24T14:10:38.347781+08:00",
+      "scope": "static source/backup/hash/Python parsing only",
+      "compiled": false,
+      "runtime_verified": false
+    },
+    "selected_source_matches": [
+      {
+        "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+        "sha256": "b649cd2245c5ddbc94074640e7723c53b49c5f301d5e181241831adbc29c27ba",
+        "recorded_epoch_sha256": "b649cd2245c5ddbc94074640e7723c53b49c5f301d5e181241831adbc29c27ba",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+        "sha256": "93b1268d0bf879574fa748fb97a2ddff1a14f862fc65f07192246e7760b1e8e1",
+        "recorded_epoch_sha256": "93b1268d0bf879574fa748fb97a2ddff1a14f862fc65f07192246e7760b1e8e1",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+        "sha256": "c670c03ad1be7223186cde390cbf9b93c790025eef9d041bb961d7e9dc7bb7ca",
+        "recorded_epoch_sha256": "c670c03ad1be7223186cde390cbf9b93c790025eef9d041bb961d7e9dc7bb7ca",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+        "sha256": "e48a29e6449c5f0b231206d1a8ec8f86a0a8a463b2f66a8ecf482ea007487cf6",
+        "recorded_epoch_sha256": "e48a29e6449c5f0b231206d1a8ec8f86a0a8a463b2f66a8ecf482ea007487cf6",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp",
+        "sha256": "62b4dc029c8359e10f11948bd4946290d188fa0e1e18b9ade6c42c1473e55a70",
+        "recorded_epoch_sha256": "aef71a153d255186b701813e099dac991c808b0e3066686df1edbe3078c983c4",
+        "matches_recorded_epoch": false
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.h",
+        "sha256": "977e9da48dc31a39fbac5f10312dc94e3b5e7cc2f72cadf6d76d559f8842985c",
+        "recorded_epoch_sha256": "977e9da48dc31a39fbac5f10312dc94e3b5e7cc2f72cadf6d76d559f8842985c",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildCanonicalAndBusyTests.cpp",
+        "sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd",
+        "recorded_epoch_sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildInventoryIdentityTests.cpp",
+        "sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900",
+        "recorded_epoch_sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+        "sha256": "2972e58d5c142ee9a1967ca93fcf23186e26054cd396fce44d47693ee6e98577",
+        "recorded_epoch_sha256": "2972e58d5c142ee9a1967ca93fcf23186e26054cd396fce44d47693ee6e98577",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+        "sha256": "96db49d195b0bee4fa92213a46a912cfc8c3594dc3a8d03198be7ac451c9a8db",
+        "recorded_epoch_sha256": "96db49d195b0bee4fa92213a46a912cfc8c3594dc3a8d03198be7ac451c9a8db",
+        "matches_recorded_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+        "sha256": "3384453aac410586ee54877751bbc76e24f673399a981fb9d6c216d27e2072b3",
+        "recorded_epoch_sha256": "3384453aac410586ee54877751bbc76e24f673399a981fb9d6c216d27e2072b3",
+        "matches_recorded_epoch": true
+      }
+    ],
+    "PIE02_epoch_hash_matches_selected_epoch": true
+  },
+  "migration": {
+    "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/migration/engine-final-verification.json",
+    "checked_at": "2026-10-24T13:54:46.537023+08:00",
+    "canonical_verified": 582,
+    "preexisting_redirectors_removed": 6,
+    "reported_old_registry_packages": 0,
+    "reported_old_directory_exists": false,
+    "current_Content_UI_exists": false,
+    "full_asset_rehash_performed": false
+  },
+  "imported_textures": [
+    {
+      "object": "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1",
+      "width": 1254,
+      "height": 1254,
+      "reported_uasset_sha256": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee",
+      "current_uasset_sha256": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee",
+      "disk_matches_report": true,
+      "runtime_texture_readback_reported": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+      "width": 1536,
+      "height": 1024,
+      "reported_uasset_sha256": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d",
+      "current_uasset_sha256": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d",
+      "disk_matches_report": true,
+      "runtime_texture_readback_reported": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+      "width": 1254,
+      "height": 1254,
+      "reported_uasset_sha256": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "current_uasset_sha256": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "disk_matches_report": true,
+      "runtime_texture_readback_reported": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+      "width": 1536,
+      "height": 1024,
+      "reported_uasset_sha256": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86",
+      "current_uasset_sha256": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86",
+      "disk_matches_report": true,
+      "runtime_texture_readback_reported": true
+    }
+  ],
+  "saved_default_wbp": {
+    "package": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+    "reported_saved_object": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend",
+    "disk_exists": true,
+    "bytes": 496585,
+    "current_sha256": "9344de61336c07f8fc496d05e997c1868f1438a41d3c0d2169cef54bd2343e8e",
+    "creation_helper_parent_and_generated_class_checks": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp:133-145",
+    "runtime_class_assertion_observed": true,
+    "overall_player_entry_accepted": false
+  },
+  "default_pie_attempts": [
+    {
+      "attempt": "01",
+      "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-01/report.json",
+      "sha256": "3e7e371b8f58bd2191fb933ea17f0b8408ef6f82a472fe9b19c6fc43b5ecc3df",
+      "report_strict_json_valid": true,
+      "engine_pid": 46744,
+      "started_at": "2026-10-24T06:04:27.858551+00:00",
+      "finished_at": "2026-10-24T06:05:08.741223+00:00",
+      "finished": false,
+      "passed": false,
+      "current_step": "landscape inventory",
+      "source_epoch_sha256": "73d1529a52e427d2f89b1316c57fd682e76705182e1379944729b903cb146114",
+      "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 104, in tick\n    REPORT['current_step']=name;action();STATE.update(index=index+1,next=time.monotonic()+delay);save()\n                                ^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 65, in <lambda>\n    ('landscape inventory',lambda:capture('Inventory','inventory-landscape'),1),\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 30, in capture\n    snapshot=describe()\n             ^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 27, in describe\n    def describe():return json.loads(LIB.describe_widget(FRONTEND))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\json\\__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\json\\decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\json\\decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1538 column 9 (char 43241)\n",
+      "failed_checks": [],
+      "finite_checks": [],
+      "real_slate_actions": [
+        "real Slate click OpenSaves",
+        "real Slate click Back",
+        "real Slate click OpenSettings",
+        "real Slate click Back",
+        "real Slate click StartGame",
+        "real Slate click OpenCharacter",
+        "real Slate click Back",
+        "real Slate click OpenInventory"
+      ],
+      "page_observations": [
+        {
+          "page": "Main",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Main",
+            "actual page Main",
+            "independent root Main",
+            "new root runtime version Main",
+            "owner page version Main"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Saves",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Saves",
+            "actual page Saves",
+            "independent root Saves",
+            "new root runtime version Saves",
+            "owner page version Saves"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Settings",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Settings",
+            "actual page Settings",
+            "independent root Settings",
+            "new root runtime version Settings",
+            "owner page version Settings"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "HUD",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP HUD",
+            "actual page HUD",
+            "independent root HUD",
+            "new root runtime version HUD",
+            "owner page version HUD"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Character",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Character",
+            "actual page Character",
+            "independent root Character",
+            "new root runtime version Character",
+            "owner page version Character"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Inventory",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Inventory",
+            "actual page Inventory",
+            "independent root Inventory",
+            "new root runtime version Inventory",
+            "owner page version Inventory"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        }
+      ],
+      "overall_acceptance": false
+    },
+    {
+      "attempt": "02",
+      "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-02/report.json",
+      "sha256": "509ec7282070002121ae0a4087a871b81bdcf2281fe785dee1c55abc6092220c",
+      "report_strict_json_valid": true,
+      "engine_pid": 46288,
+      "started_at": "2026-10-24T06:11:30.687479+00:00",
+      "finished_at": "2026-10-24T06:12:12.876156+00:00",
+      "finished": false,
+      "passed": false,
+      "current_step": "landscape inventory",
+      "source_epoch_sha256": "2365c56c015c086543e14191090ef1f17e5a914c527b79ac3c3cab7bee0384c6",
+      "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 111, in tick\n    REPORT['current_step']=name;action();STATE.update(index=index+1,next=time.monotonic()+delay);save()\n                                ^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 72, in <lambda>\n    ('landscape inventory',lambda:capture('Inventory','inventory-landscape'),1),\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 54, in capture\n    check('finite metrics for visible widgets '+tag,not any(x['visible'] for x in invalid),invalid)\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py\", line 26, in check\n    if not passed: raise AssertionError(name+': '+str(actual))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: finite metrics for visible widgets inventory-landscape: [{'kind': 'images', 'name': 'Image_105', 'visible': True}, {'kind': 'images', 'name': 'Image_106', 'visible': True}, {'kind': 'images', 'name': 'Image_107', 'visible': True}, {'kind': 'images', 'name': 'Image_108', 'visible': True}, {'kind': 'images', 'name': 'Image_109', 'visible': True}, {'kind': 'images', 'name': 'Image_110', 'visible': True}, {'kind': 'images', 'name': 'Image_111', 'visible': True}, {'kind': 'images', 'name': 'Image_112', 'visible': True}, {'kind': 'images', 'name': 'Image_113', 'visible': True}, {'kind': 'images', 'name': 'Image_114', 'visible': True}, {'kind': 'images', 'name': 'Image_115', 'visible': True}, {'kind': 'images', 'name': 'Image_116', 'visible': True}, {'kind': 'images', 'name': 'Image_117', 'visible': True}, {'kind': 'images', 'name': 'Image_118', 'visible': True}, {'kind': 'images', 'name': 'Image_119', 'visible': True}, {'kind': 'images', 'name': 'Image_120', 'visible': True}, {'kind': 'images', 'name': 'Image_121', 'visible': True}, {'kind': 'images', 'name': 'Image_122', 'visible': True}, {'kind': 'images', 'name': 'Image_123', 'visible': True}, {'kind': 'images', 'name': 'Image_124', 'visible': True}, {'kind': 'images', 'name': 'Image_125', 'visible': True}, {'kind': 'images', 'name': 'Image_126', 'visible': True}, {'kind': 'images', 'name': 'Image_127', 'visible': True}, {'kind': 'images', 'name': 'Image_128', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_24', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_25', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_26', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_27', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_28', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_29', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_30', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_31', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_32', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_33', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_34', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_35', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_36', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_37', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_38', 'visible': True}, {'kind': 'buttons', 'name': 'Rebuild_InventorySlot_39', 'visible': True}]\n",
+      "failed_checks": [
+        {
+          "name": "finite metrics for visible widgets inventory-landscape",
+          "passed": false
+        }
+      ],
+      "finite_checks": [
+        {
+          "name": "finite metrics for visible widgets main",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets saves",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets settings",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets hud",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets character",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets inventory",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets inventory-search",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets inventory-cleared",
+          "passed": true
+        },
+        {
+          "name": "finite metrics for visible widgets inventory-landscape",
+          "passed": false
+        }
+      ],
+      "real_slate_actions": [
+        "real Slate click OpenSaves",
+        "real Slate click Back",
+        "real Slate click OpenSettings",
+        "real Slate click Back",
+        "real Slate click StartGame",
+        "real Slate click OpenCharacter",
+        "real Slate click Back",
+        "real Slate click OpenInventory"
+      ],
+      "page_observations": [
+        {
+          "page": "Main",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Main",
+            "actual page Main",
+            "independent root Main",
+            "new root runtime version Main",
+            "owner page version Main"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Saves",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Saves",
+            "actual page Saves",
+            "independent root Saves",
+            "new root runtime version Saves",
+            "owner page version Saves"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Settings",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Settings",
+            "actual page Settings",
+            "independent root Settings",
+            "new root runtime version Settings",
+            "owner page version Settings"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "HUD",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP HUD",
+            "actual page HUD",
+            "independent root HUD",
+            "new root runtime version HUD",
+            "owner page version HUD"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Character",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Character",
+            "actual page Character",
+            "independent root Character",
+            "new root runtime version Character",
+            "owner page version Character"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        },
+        {
+          "page": "Inventory",
+          "all_five_assertions_recorded_passed": true,
+          "checked_names": [
+            "actual new WBP Inventory",
+            "actual page Inventory",
+            "independent root Inventory",
+            "new root runtime version Inventory",
+            "owner page version Inventory"
+          ],
+          "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+        }
+      ],
+      "overall_acceptance": false
+    }
+  ],
+  "json_and_geometry": {
+    "first_attempt_describe_json_failed": true,
+    "first_attempt_raw_failure_payload_not_available_in_selected_inputs": true,
+    "second_attempt_raw_evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-02/raw-snapshot-19.txt",
+    "second_attempt_raw_sha256": "1b2742cd3b92e84c764742b76fc46a5376ef7a499996df2b65378103f31a7ff8",
+    "second_attempt_raw_strict_json_valid": true,
+    "nonfinite_widgets": 40,
+    "visible_nonfinite_widgets": 40,
+    "visible_geometry_passed": false,
+    "nonfinite_records": [
+      {
+        "kind": "images",
+        "name": "Image_105",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_106",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_107",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_108",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_109",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_110",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_111",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_112",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_113",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_114",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_115",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_116",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_117",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_118",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_119",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_120",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_121",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_122",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_123",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_124",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_125",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_126",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_127",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "images",
+        "name": "Image_128",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_24",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_25",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_26",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_27",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_28",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_29",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_30",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_31",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_32",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_33",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_34",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_35",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_36",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_37",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_38",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      },
+      {
+        "kind": "buttons",
+        "name": "Rebuild_InventorySlot_39",
+        "visible": true,
+        "null_fields": [
+          "x",
+          "y",
+          "painted_width",
+          "painted_height"
+        ]
+      }
+    ],
+    "note": "null plus explicit diagnostic fixes serialization; it does not turn invalid visible geometry into valid numbers"
+  },
+  "native_regressions": {
+    "source_files": [
+      "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildInventoryIdentityTests.cpp",
+      "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildCanonicalAndBusyTests.cpp"
+    ],
+    "current_build07_compile_lines": [
+      {
+        "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-07.log",
+        "line": 38,
+        "text": "[19/44] Compile [x64] InkRebuildCanonicalAndBusyTests.cpp [NoUba]"
+      }
+    ],
+    "execution_name_hits_in_two_reviewed_logs": [],
+    "execution_pass_record_found": false,
+    "N03_scope": "native model reorder/removal and TriggerAction identity fixture; not actual Slate default entry",
+    "Busy_scope": "native builder given Data and Busy=false/true; not real service transport Busy in default PIE",
+    "no_execution_claim": "Sources/compilation do not establish test execution; default PIE script does not run these tests"
+  },
+  "visuals_inspected": false,
+  "visual_approval": false,
+  "overall_runtime_acceptance": false
+}

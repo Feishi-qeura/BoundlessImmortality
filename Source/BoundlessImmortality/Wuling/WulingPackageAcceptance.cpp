@@ -3,10 +3,13 @@
 #include "Cultivation/CultivationSubsystem.h"
 #include "Frontend/InkFrontendWidget.h"
 #include "Frontend/InkFeaturePanel.h"
+#include "Frontend/UI/InkLaunchEventPanel.h"
 #include "Frontend/InkSignInChestWidget.h"
 #include "Frontend/InkMenuDirector.h"
+#include "Frontend/UI/InkWulingToolsPanel.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/ScrollBox.h"
+#include "Components/TextBlock.h"
 #include "Dom/JsonObject.h"
 #include "Engine/GameInstance.h"
 #include "Engine/Engine.h"
@@ -31,6 +34,72 @@ FString Field(const TSharedPtr<FJsonObject>& Object,const TCHAR* Key)
 {FString Value;if(Object)Object->TryGetStringField(Key,Value);return Value;}
 TSharedPtr<FJsonObject> Object(const TSharedPtr<FJsonObject>& Parent,const TCHAR* Key)
 {const TSharedPtr<FJsonObject>* Value=nullptr;return Parent&&Parent->TryGetObjectField(Key,Value)?*Value:nullptr;}
+FString ActivityIdForCycle(const UWulingPrototypeSubsystem* Service,const TCHAR* Cycle)
+{
+    if(!Service)return FString();
+    const auto Activities=Object(Service->Snapshot(),TEXT("activities"));
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities||!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return FString();
+    for(const auto& Value:*Templates)
+    {
+        const auto Row=Value.IsValid()?Value->AsObject():nullptr;
+        if(!Row)continue;
+        FString RowCycle,Id;
+        if(Row->TryGetStringField(TEXT("cycle"),RowCycle)&&RowCycle==Cycle&&Row->TryGetStringField(TEXT("activity_id"),Id)&&!Id.IsEmpty())return Id;
+    }
+    return FString();
+}
+bool HasActivityCycle(const UWulingPrototypeSubsystem* Service,const TCHAR* Cycle)
+{return !ActivityIdForCycle(Service,Cycle).IsEmpty();}
+FString FirstPermanentActivityTitle(const UWulingPrototypeSubsystem* Service)
+{
+    if(!Service)return FString();
+    const auto Activities=Object(Service->Snapshot(),TEXT("activities"));
+    auto Title=[](const TSharedPtr<FJsonObject>& Row)
+    {
+        const FString Value=Field(Row,TEXT("title"));
+        if(!Value.IsEmpty())return Value;
+        const FString Name=Field(Row,TEXT("name"));
+        return Name.IsEmpty()?FString(TEXT("活动名称未提供")):Name;
+    };
+    const TArray<TSharedPtr<FJsonValue>>* Categories=nullptr;
+    if(Activities&&Activities->TryGetArrayField(TEXT("categories"),Categories))
+    {
+        for(const auto& Value:*Categories)
+        {
+            const auto Category=Value.IsValid()?Value->AsObject():nullptr;
+            FString Id=Field(Category,TEXT("id"));
+            if(Id.IsEmpty())Id=Field(Category,TEXT("type"));
+            if(Id.IsEmpty())Id=Field(Category,TEXT("key"));
+            if(!Id.Equals(TEXT("permanent"),ESearchCase::IgnoreCase)&&!Id.Equals(TEXT("常驻"),ESearchCase::CaseSensitive))continue;
+            const TArray<TSharedPtr<FJsonValue>>* Rows=nullptr;
+            if(Category&&(Category->TryGetArrayField(TEXT("items"),Rows)||Category->TryGetArrayField(TEXT("activities"),Rows)))
+                for(const auto& RowValue:*Rows)if(RowValue.IsValid()&&RowValue->AsObject())return Title(RowValue->AsObject());
+            return FString();
+        }
+    }
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(Activities&&Activities->TryGetArrayField(TEXT("templates"),Templates))
+        for(const auto& RowValue:*Templates)
+        {
+            const auto Row=RowValue.IsValid()?RowValue->AsObject():nullptr;
+            if(Row&&Field(Row,TEXT("cycle")).Equals(TEXT("permanent"),ESearchCase::IgnoreCase))return Title(Row);
+        }
+    return FString();
+}
+bool HasVisibleWidget(const UInkFeaturePanel* Panel,const TCHAR* Name)
+{
+    const UWidget* Widget=Panel&&Panel->WidgetTree?Panel->WidgetTree->FindWidget(Name):nullptr;
+    return Widget&&Widget->GetVisibility()!=ESlateVisibility::Collapsed&&Widget->GetVisibility()!=ESlateVisibility::Hidden;
+}
+FString ActivityDetailCycle(const UInkFrontendWidget* UI,FName Route)
+{
+    const auto Panel=UI?Cast<UInkFeaturePanel>(UI->ExtensionPages.FindRef(Route).Get()):nullptr;
+    const auto Text=Panel&&Panel->WidgetTree?Cast<UTextBlock>(Panel->WidgetTree->FindWidget(TEXT("DetailActivityCycle"))):nullptr;
+    return Text?Text->GetText().ToString():FString();
+}
+UInkFeaturePanel* FeaturePanel(UInkFrontendWidget* UI,FName Route)
+{return UI?Cast<UInkFeaturePanel>(UI->ExtensionPages.FindRef(Route).Get()):nullptr;}
 }
 
 void UWulingPackageAcceptance::Initialize(FSubsystemCollectionBase& Collection)
@@ -125,10 +194,74 @@ void UWulingPackageAcceptance::Tick(float)
     if(Step==10){if(W->IsBusy())return;Check(TEXT("third region confirmed"),Field(Object(W->Snapshot(),TEXT("round")),TEXT("region_id"))==TEXT("xuantie"));Check(TEXT("third region interruption submitted"),W->InterruptWorldRound());Capture(TEXT("05-xuantie"));++Step;Next=Now+3;return;}
     if(Step==11)
     {
-        const TCHAR* Routes[]={TEXT("WulingCraft"),TEXT("WulingSources"),TEXT("WulingBreakthrough"),TEXT("WulingEquipment"),TEXT("WulingConstruction"),TEXT("WulingActivity"),TEXT("WulingRace"),TEXT("WulingShop"),TEXT("WulingMarket"),TEXT("WulingGuild"),TEXT("WulingOrders"),TEXT("WulingOffline"),TEXT("WulingRights"),TEXT("SignIn"),TEXT("MonthlySignIn"),TEXT("DailyFortune"),TEXT("Activities"),TEXT("DailyActivities"),TEXT("TimedActivities"),TEXT("Extensions"),TEXT("ResourceContest"),TEXT("WorldCultivation"),TEXT("CharacterAppearance"),TEXT("CharacterEquipment"),TEXT("CharacterSkills"),TEXT("CharacterArtifacts"),TEXT("CharacterFate"),TEXT("CharacterProfile")};
+        const TCHAR* Routes[]={TEXT("WulingCraft"),TEXT("WulingSources"),TEXT("WulingBreakthrough"),TEXT("BreakthroughPrepare"),TEXT("Tribulation"),TEXT("WulingEquipment"),TEXT("CultivationMethods"),TEXT("EquipmentFabao"),TEXT("WulingConstruction"),TEXT("GuildConstruction"),TEXT("Wuling"),TEXT("WulingActivity"),TEXT("WulingRace"),TEXT("RaceLobby"),TEXT("RaceLive"),TEXT("RaceSettlement"),TEXT("ResourceLease"),TEXT("WulingShop"),TEXT("Shop"),TEXT("WulingMarket"),TEXT("Market"),TEXT("WulingGuild"),TEXT("WulingOrders"),TEXT("TradeOrders"),TEXT("WulingOffline"),TEXT("OfflineRewards"),TEXT("WulingRights"),TEXT("SwordSpirit"),TEXT("SignIn"),TEXT("MonthlySignIn"),TEXT("DailyFortune"),TEXT("Activities"),TEXT("DailyActivities"),TEXT("TimedActivities"),TEXT("PermanentActivities"),TEXT("Extensions"),TEXT("ResourceMap"),TEXT("ResourceContest"),TEXT("WorldCultivation"),TEXT("EventSettlement"),TEXT("CharacterAppearance"),TEXT("CharacterEquipment"),TEXT("CharacterSkills"),TEXT("CharacterArtifacts"),TEXT("CharacterFate"),TEXT("CharacterProfile"),TEXT("LaunchRank")};
         if(W->IsBusy())return;
-        if(Page<UE_ARRAY_COUNT(Routes)){Check(FString(TEXT("open packaged page "))+Routes[Page],UI->OpenFeaturePanel(Routes[Page],TEXT("")));++Step;Next=Now+2;return;}
+        if(Page<UE_ARRAY_COUNT(Routes))
+        {
+            const FName Route(Routes[Page]);
+            Check(FString(TEXT("open packaged page "))+Routes[Page],UI->OpenFeaturePanel(Route,TEXT("")));
+            if(Route==TEXT("WulingActivity"))
+            {
+                const auto Panel=FeaturePanel(UI,Route);
+                Check(TEXT("WulingActivity opens the organization activity tools panel"),Panel&&Panel->IsA<UInkWulingToolsPanel>());
+            }
+            if(Route==TEXT("BreakthroughPrepare")||Route==TEXT("Tribulation"))
+                Check(FString(TEXT("contract alias resolves to breakthrough authority panel: "))+Route.ToString(),UI->CurrentPage==TEXT("WulingBreakthrough")&&FeaturePanel(UI,TEXT("WulingBreakthrough"))&&FeaturePanel(UI,TEXT("WulingBreakthrough"))->IsA<UInkWulingToolsPanel>());
+            if(Route==TEXT("CultivationMethods"))
+                Check(TEXT("contract methods alias resolves to WulingEquipment method catalog"),UI->CurrentPage==TEXT("WulingEquipment")&&FeaturePanel(UI,TEXT("WulingEquipment"))&&FeaturePanel(UI,TEXT("WulingEquipment"))->SelectedEntry==TEXT("methods"));
+            if(Route==TEXT("RaceLobby")||Route==TEXT("RaceLive")||Route==TEXT("RaceSettlement")||Route==TEXT("ResourceLease"))
+                Check(FString(TEXT("contract race-state alias resolves to authority race panel: "))+Route.ToString(),UI->CurrentPage==TEXT("WulingRace")&&FeaturePanel(UI,TEXT("WulingRace"))&&FeaturePanel(UI,TEXT("WulingRace"))->IsA<UInkWulingToolsPanel>());
+            if(Route==TEXT("ItemSources")||Route==TEXT("GuildConstruction")||Route==TEXT("EquipmentFabao")||Route==TEXT("OfflineRewards")||Route==TEXT("Shop")||Route==TEXT("Market")||Route==TEXT("TradeOrders")||Route==TEXT("SwordSpirit")||Route==TEXT("EventSettlement"))
+            {
+                FName Expected=TEXT("WulingWorld");
+                if(Route==TEXT("ItemSources"))Expected=TEXT("WulingSources");
+                else if(Route==TEXT("GuildConstruction"))Expected=TEXT("WulingConstruction");
+                else if(Route==TEXT("EquipmentFabao"))Expected=TEXT("CharacterEquipment");
+                else if(Route==TEXT("OfflineRewards"))Expected=TEXT("WulingOffline");
+                else if(Route==TEXT("Shop"))Expected=TEXT("WulingShop");
+                else if(Route==TEXT("Market"))Expected=TEXT("WulingMarket");
+                else if(Route==TEXT("TradeOrders"))Expected=TEXT("WulingOrders");
+                else if(Route==TEXT("SwordSpirit"))Expected=TEXT("WulingRights");
+                Check(FString(TEXT("contract route alias resolves to "))+Expected.ToString(),UI->CurrentPage==Expected&&FeaturePanel(UI,Expected)!=nullptr);
+                if(Route==TEXT("EquipmentFabao"))
+                    Check(TEXT("EquipmentFabao opens the authority-backed character equipment panel"),FeaturePanel(UI,Expected)&&FeaturePanel(UI,Expected)->IsA<UInkCharacterEquipmentPanel>()&&HasVisibleWidget(FeaturePanel(UI,Expected),TEXT("CharacterAuthorityLoadout")));
+            }
+            if(Route==TEXT("LaunchRank"))
+                Check(TEXT("LaunchRank resolves to its authority-backed panel"),UI->CurrentPage==TEXT("LaunchRank")&&FeaturePanel(UI,Route)&&FeaturePanel(UI,Route)->IsA<UInkLaunchEventPanel>()&&HasVisibleWidget(FeaturePanel(UI,Route),TEXT("LaunchHonorExpiry")));
+            if(Route==TEXT("Wuling")){Step=111;Next=Now+1;return;}
+            if(Route==TEXT("ResourceMap")){Step=112;Next=Now+1;return;}
+            ++Step;Next=Now+2;return;
+        }
         UI->ShowPage(TEXT("Inventory"));Check(TEXT("packaged inventory opens"),UI->CurrentPage==TEXT("Inventory"));Step=39;Next=Now+3;return;
+    }
+    if(Step==111)
+    {
+        if(!Click(TEXT("Ext_Open_WulingActivity")))return;
+        const auto Panel=FeaturePanel(UI,TEXT("WulingActivity"));
+        Check(TEXT("Wuling organization activity entry opens its tools route"),UI->CurrentPage==TEXT("WulingActivity")&&Panel&&Panel->IsA<UInkWulingToolsPanel>());
+        Step=12;Next=Now+2;return;
+    }
+    if(Step==112)
+    {
+        if(!Click(TEXT("Ext_Open_ResourceContest")))return;
+        const auto Panel=FeaturePanel(UI,TEXT("ResourceContest"));
+        Check(TEXT("resource map CTA opens ResourceContest route and mapped panel"),UI->CurrentPage==TEXT("ResourceContest")&&Panel&&Panel->IsA<UInkResourceContestPanel>());
+        Step=113;Next=Now+1;return;
+    }
+    if(Step==113)
+    {
+        if(!Click(TEXT("Ext_Open_ResourceRanking")))return;
+        const auto Panel=FeaturePanel(UI,TEXT("ResourceRanking"));
+        Check(TEXT("resource contest ranking CTA opens ResourceRanking route and mapped panel"),UI->CurrentPage==TEXT("ResourceRanking")&&Panel&&Panel->IsA<UInkResourceRankingPanel>());
+        Step=114;Next=Now+1;return;
+    }
+    if(Step==114)
+    {
+        UI->CloseFeaturePanel(false);
+        Check(TEXT("resource ranking returns to ResourceContest"),UI->CurrentPage==TEXT("ResourceContest"));
+        UI->CloseFeaturePanel(false);
+        Check(TEXT("resource contest returns to ResourceMap"),UI->CurrentPage==TEXT("ResourceMap"));
+        Step=12;Next=Now+2;return;
     }
     if(Step==12)
     {
@@ -147,10 +280,80 @@ void UWulingPackageAcceptance::Tick(float)
     if(Step==43){Capture(TEXT("signin-month-tab"));++Step;Next=Now+2;return;}
     if(Step==44){if(!Click(TEXT("Ext_GroupTab_DailyFortune")))return;Check(TEXT("Slate daily verse tab"),true);++Step;Next=Now+2;return;}
     if(Step==45){Capture(TEXT("signin-verse-tab"));Step=450;Next=Now+2;return;}
-    if(Step==450){Check(TEXT("activity group opens for tabs"),UI->OpenFeaturePanel(TEXT("Activities"),TEXT("")));Step=46;Next=Now+2;return;}
+    if(Step==450){Check(TEXT("activity group opens for tabs"),UI->OpenFeaturePanel(TEXT("Activities"),TEXT("")));Step=451;Next=Now+2;return;}
+    if(Step==451)
+    {
+        const FString Id=ActivityIdForCycle(W,TEXT("daily"));
+        if(Id.IsEmpty()){Check(TEXT("daily authority template available for CTA validation"),false);Step=46;Next=Now+1;return;}
+        if(!Click(FName(*(TEXT("Ext_Open_DailyActivityDetail|")+Id))))return;
+        const auto DailyPanel=FeaturePanel(UI,TEXT("DailyActivityDetail"));
+        Check(TEXT("daily CTA opens matching detail route and context"),UI->CurrentPage==TEXT("DailyActivityDetail")&&DailyPanel&&DailyPanel->SelectedEntry==Id);
+        Step=452;Next=Now+1;return;
+    }
+    if(Step==452)
+    {
+        const auto Panel=FeaturePanel(UI,TEXT("DailyActivityDetail"));
+        Check(TEXT("daily detail displays daily cycle"),ActivityDetailCycle(UI,TEXT("DailyActivityDetail")).Contains(TEXT("daily"))&&!HasVisibleWidget(Panel,TEXT("DetailActivityEmpty")));
+        const FString Id=Panel?Panel->SelectedEntry:FString();
+        const bool OpenedMismatch=UI->OpenFeaturePanel(TEXT("TimedActivityDetail"),Id);
+        Check(TEXT("daily id rejected by timed detail route"),OpenedMismatch&&UI->CurrentPage==TEXT("TimedActivityDetail")&&HasVisibleWidget(FeaturePanel(UI,TEXT("TimedActivityDetail")),TEXT("DetailActivityEmpty")));
+        Check(TEXT("return to activity group after cycle mismatch"),UI->OpenFeaturePanel(TEXT("Activities"),TEXT(""))&&UI->CurrentPage==TEXT("Activities"));
+        Step=46;Next=Now+1;return;
+    }
     if(Step==46){if(!Click(TEXT("Ext_GroupTab_TimedActivities")))return;Check(TEXT("Slate timed activity tab"),true);++Step;Next=Now+2;return;}
-    if(Step==47){Capture(TEXT("activities-timed-tab"));Step=470;Next=Now+2;return;}
-    if(Step==470){if(!Click(TEXT("Ext_Open_WulingActivity")))return;Check(TEXT("Slate launch activity entry"),UI->CurrentPage==TEXT("WulingActivity"));Step=48;Next=Now+2;return;}
+    if(Step==47){Capture(TEXT("activities-timed-tab"));Step=473;Next=Now+2;return;}
+    if(Step==473)
+    {
+        const FString Id=ActivityIdForCycle(W,TEXT("limited"));
+        if(Id.IsEmpty()){Check(TEXT("limited authority template available for CTA validation"),false);Step=471;Next=Now+1;return;}
+        if(!Click(FName(*(TEXT("Ext_Open_TimedActivityDetail|")+Id))))return;
+        const auto TimedPanel=FeaturePanel(UI,TEXT("TimedActivityDetail"));
+        Check(TEXT("limited CTA opens matching detail route and context"),UI->CurrentPage==TEXT("TimedActivityDetail")&&TimedPanel&&TimedPanel->SelectedEntry==Id);
+        Step=474;Next=Now+1;return;
+    }
+    if(Step==474)
+    {
+        const auto Panel=FeaturePanel(UI,TEXT("TimedActivityDetail"));
+        Check(TEXT("timed detail displays limited cycle"),ActivityDetailCycle(UI,TEXT("TimedActivityDetail")).Contains(TEXT("limited"))&&!HasVisibleWidget(Panel,TEXT("DetailActivityEmpty")));
+        const FString Id=Panel?Panel->SelectedEntry:FString();
+        const bool OpenedMismatch=UI->OpenFeaturePanel(TEXT("DailyActivityDetail"),Id);
+        Check(TEXT("limited id rejected by daily detail route"),OpenedMismatch&&UI->CurrentPage==TEXT("DailyActivityDetail")&&HasVisibleWidget(FeaturePanel(UI,TEXT("DailyActivityDetail")),TEXT("DetailActivityEmpty")));
+        Check(TEXT("return to activity group after cycle mismatch"),UI->OpenFeaturePanel(TEXT("Activities"),TEXT(""))&&UI->CurrentPage==TEXT("Activities"));
+        Step=471;Next=Now+1;return;
+    }
+    if(Step==471)
+    {
+        if(!Click(TEXT("Ext_GroupTab_PermanentActivities")))return;
+        Check(TEXT("Slate permanent activity tab"),true);
+        const auto Group=Cast<UInkFeatureGroupPanel>(UI->ExtensionPages.FindRef(TEXT("Activities")).Get());
+        const auto Permanent=Group?Group->ContentPanels.FindRef(TEXT("PermanentActivities")).Get():nullptr;
+        const FString ExpectedTitle=FirstPermanentActivityTitle(W);
+        if(ExpectedTitle.IsEmpty())
+            Check(TEXT("permanent page shows empty state when authority has no permanent rows"),HasVisibleWidget(Permanent,TEXT("PermanentActivitiesEmpty")));
+        else
+        {
+            const auto Title=Permanent&&Permanent->WidgetTree?Cast<UTextBlock>(Permanent->WidgetTree->FindWidget(TEXT("PermanentActivityTitle_0"))):nullptr;
+            Check(TEXT("permanent page shows the first authority row title"),Title&&HasVisibleWidget(Permanent,TEXT("PermanentActivityTitle_0"))&&Title->GetText().ToString()==ExpectedTitle&&!HasVisibleWidget(Permanent,TEXT("PermanentActivitiesEmpty")));
+        }
+        Step=472;Next=Now+2;return;
+    }
+    if(Step==472){Capture(TEXT("activities-permanent-tab"));Step=470;Next=Now+2;return;}
+    if(Step==470)
+    {
+        if(!Click(TEXT("Ext_Open_LaunchEvent")))return;
+        const auto Panel=FeaturePanel(UI,TEXT("LaunchEvent"));
+        Check(TEXT("Slate launch activity entry opens LaunchEvent"),UI->CurrentPage==TEXT("LaunchEvent")&&Panel&&Panel->IsA<UInkLaunchEventPanel>());
+        Step=475;Next=Now+1;return;
+    }
+    if(Step==475){if(!Click(TEXT("Ext_LaunchTab_honors")))return;Check(TEXT("Slate launch honors tab opens the service leaderboard section"),HasVisibleWidget(FeaturePanel(UI,TEXT("LaunchEvent")),TEXT("LaunchHonorExpiry")));Step=476;Next=Now+1;return;}
+    if(Step==476)
+    {
+        if(!Click(TEXT("Ext_Open_LaunchRank")))return;
+        const auto Panel=FeaturePanel(UI,TEXT("LaunchRank"));
+        Check(TEXT("Slate launch honors CTA opens LaunchRank route and mapped panel"),UI->CurrentPage==TEXT("LaunchRank")&&Panel&&Panel->IsA<UInkLaunchEventPanel>()&&HasVisibleWidget(Panel,TEXT("LaunchHonorExpiry")));
+        Step=477;Next=Now+1;return;
+    }
+    if(Step==477){UI->CloseFeaturePanel(false);Check(TEXT("LaunchRank returns to LaunchEvent"),UI->CurrentPage==TEXT("LaunchEvent"));Step=48;Next=Now+2;return;}
     if(Step==48){Capture(TEXT("activities-launch-entry"));Step=200;Next=Now+2;return;}
     if(Step==200){Check(TEXT("GC regression reopen monthly sign-in"),UI->OpenFeaturePanel(TEXT("MonthlySignIn"),TEXT("")));Step=201;Next=Now+1;return;}
     if(Step==201)

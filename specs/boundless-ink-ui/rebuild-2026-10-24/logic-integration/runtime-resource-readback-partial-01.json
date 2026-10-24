@@ -1,0 +1,1106 @@
+{
+  "checked_at": "2026-10-24T15:51:57.583665+08:00",
+  "scope": "Actual runtime UImage brush resources in current build19 captured pages; partial proof only; later build20 pending",
+  "resources": {
+    "/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1.T_DailyActivityScroll_v1": [
+      {
+        "snapshot": "default-root-pie-06\\activities-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_6",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1.T_LimitedActivityCalendar_v1": [
+      {
+        "snapshot": "default-root-pie-06\\activities-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_7",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1.T_PermanentActivityLotus_v1": [
+      {
+        "snapshot": "default-root-pie-06\\activities-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_8",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1": [
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_0",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_1",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_2",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_3",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_4",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_5",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_6",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_7",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\character.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_8",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1.T_AppearancePreviewOrnamentAtlas_v1": [
+      {
+        "snapshot": "default-root-pie-06\\characterappearance-character-entry.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_5.WidgetTree.Image_2",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1": [
+      {
+        "snapshot": "default-root-pie-06\\hud-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenCharacter",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenInventory",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleCultivation",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenLeaderboard",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleHUDMenu",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenCharacter",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenInventory",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleCultivation",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenLeaderboard",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\hud.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleHUDMenu",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\hud-connected.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenCharacter",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\hud-connected.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenInventory",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\hud-connected.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleCultivation",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\hud-connected.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenLeaderboard",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\hud-connected.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleHUDMenu",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1": [
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_49",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_50",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_51",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_52",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_53",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_54",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_55",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_56",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_57",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_58",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_59",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_60",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_61",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_62",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_63",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_64",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_65",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_66",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_67",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_68",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_69",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_70",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_71",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_72",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_73",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_74",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_75",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_76",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_77",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_78",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_79",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_80",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_81",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_82",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_83",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_84",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_85",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_86",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_87",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-cleared.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_88",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_89",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_90",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_91",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_92",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_93",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_94",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_95",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_96",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_97",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_98",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_99",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_100",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_101",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_102",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_103",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_104",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_105",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_106",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_107",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_108",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_109",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_110",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_111",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_112",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_113",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_114",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_115",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_116",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_117",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_118",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_119",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_120",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_121",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_122",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_123",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_124",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_125",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_126",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_127",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape-end.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_128",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_89",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_90",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_91",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_92",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_93",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_94",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_95",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_96",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_97",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_98",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_99",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_100",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_101",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_102",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_103",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_104",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_105",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_106",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_107",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_108",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_109",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_110",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_111",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_112",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_113",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_114",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_115",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_116",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_117",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_118",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_119",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_120",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_121",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_122",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_123",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_124",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_125",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_126",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_127",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory-landscape.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_128",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_9",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_10",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_11",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_12",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_13",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_14",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_15",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_16",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_17",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_18",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_19",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_20",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_21",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_22",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_23",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_24",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_25",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_26",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_27",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_28",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_29",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_30",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_31",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_32",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_33",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_34",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_35",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_36",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_37",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_38",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_39",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_40",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_41",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_42",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_43",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_44",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_45",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_46",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_47",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "default-root-pie-06\\inventory.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_48",
+        "paint_expectation": "culled"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_12",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_13",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_14",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_15",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_16",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-after-confirmed-guild.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_17",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_0",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_1",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_2",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_3",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_4",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\inventory-real-pending.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_5",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1": [
+      {
+        "snapshot": "default-root-pie-06\\main.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIMainOrnament",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1": [
+      {
+        "snapshot": "default-root-pie-06\\resourcecontest-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.JourneyPortraitMapArt",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "default-root-pie-06\\worldcultivation-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.JourneyPortraitMapArt",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1": [
+      {
+        "snapshot": "default-root-pie-06\\world-player-entry.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_0.WidgetTree.JourneyLandscapeMapArt",
+        "paint_expectation": "expected"
+      }
+    ],
+    "/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1.T_NUI_Wuling_SectInsignia_Normal_V1": [
+      {
+        "snapshot": "default-root-pie-06\\wuling-portrait.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkWulingOverviewPage_0.WidgetTree.Image_3",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\guild-stale-confirmation.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkWulingOverviewPage_1.WidgetTree.Image_9",
+        "paint_expectation": "culled"
+      }
+    ],
+    "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1": [
+      {
+        "snapshot": "service-pie-01\\failure-current.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_34",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\failure-current.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_35",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\failure-current.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_36",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\failure-current.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_37",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\failure-current.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_38",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\methods-native-data.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_4",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\methods-native-data.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_5",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\methods-native-data.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_6",
+        "paint_expectation": "expected"
+      },
+      {
+        "snapshot": "service-pie-01\\methods-native-data.json",
+        "image_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_7",
+        "paint_expectation": "expected"
+      }
+    ]
+  },
+  "completion": false
+}

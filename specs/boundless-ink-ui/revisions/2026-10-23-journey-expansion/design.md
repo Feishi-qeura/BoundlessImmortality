@@ -8,7 +8,7 @@
 - 新 UInkLaunchEventPanel：青云初启，卷轴头图，个人任务/武灵目标/荣誉规则，读取 launch 权威状态；未开启/断线/忙碌明确显示，沿用 StartLaunchEvent，不伪造任务或奖励。
 - 新 UInkWulingSectPanel：门派山门总览、组织名称、公共资材、成员/参与成员/临时助战分开；创建武灵、名册、建设、权益与历练入口。原 UInkWulingPanel 保留为世界历练准备与运行页，以 WulingWorld 路由接入。
 - 新 UInkRewardReceiptPanel：独立覆盖层，获得物品图标/数量/来源，支持多条收据排队、关闭回原页面。仅消费权威入账记录，重试/旧快照/切页不得重复弹或发奖。签到占位无奖时不显示获得奖励。
-- 新 UInkJourneyMapPanel 接管 Extensions/WorldCultivation/ResourceContest：世界/资源两页签；两张原创无文字地图，UE 叠加真实可点击节点。世界前三域接现有历练，后续域黑墨锁区；资源五类节点的数量/可用/归属主播来自服务参数与快照。
+- 新 UInkJourneyMapPanel 接管 Extensions/WorldCultivation/ResourceMap：世界/资源两页签；两张原创无文字地图，UE 叠加真实可点击节点。世界前三域接现有历练，后续域黑墨锁区；资源五类节点的数量/可用/归属主播来自服务参数与快照。ResourceContest 保留为资源中心页路由。
 - 新 UInkJourneyDestinationPanel：世界展示名称、难度、简介、奖励、前往确认；资源展示名称、数量、产出、当前归属主播，不显示难度/关卡简介。前往调用现有权威世界开始/资源排队，不用地图背景冒充新关卡。
 - 设置改为可伸缩分组，选项同排等宽，窄屏自动换行；保持即时生效、应用保存与减少动效行为。
 

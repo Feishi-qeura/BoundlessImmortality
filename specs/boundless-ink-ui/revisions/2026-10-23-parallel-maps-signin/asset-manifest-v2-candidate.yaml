@@ -1,0 +1,51 @@
+schema_version: 1
+project_id: boundless-ink-ui
+assets:
+  - id: daily-sign-in-v2-candidate
+    screen_id: sign-in
+    path: assets/daily-sign-in-v2-candidate.png
+    prompt_path: prompts/daily-sign-in-v2-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [940, 1672]
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-c31fdb9d-fe49-405c-a62b-121ffff0d3b4.png
+    sha256: 7a4a805c7f056ddf10004c867f5ab4bfc31f6a266f6b3aaa2c99ec90ff8abf4f
+  - id: monthly-sign-in-v2-candidate
+    screen_id: monthly-sign-in
+    path: assets/monthly-sign-in-v2-candidate.png
+    prompt_path: prompts/monthly-sign-in-v2-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [940, 1672]
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-9dcc4054-c990-48b3-a782-a6d429933bc7.png
+    sha256: 233230b8908123c65ae81852a78ac6d8276cd4340ea76b6e922d949e24c211dc
+  - id: world-map-v3-candidate
+    screen_id: world
+    path: assets/world-map-v3-candidate.png
+    prompt_path: prompts/world-map-v3-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [940, 1672]
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-2f97b791-abfe-4f01-a7a9-db6423e00806.png
+    sha256: 904000ae83881c0402679b5d81975b5da6625f7f1e8381373fb075d6d7ce4f47
+  - id: resources-map-v2-candidate
+    screen_id: resources
+    path: assets/resources-map-v2-candidate.png
+    prompt_path: prompts/resources-map-v2-generation.txt
+    status: candidate
+    approved: false
+    dimensions: [941, 1672]
+    color_mode: Format24bppRgb
+    format: PNG
+    source_tool: image_gen
+    source_file: exec-b83ac294-7ea7-4680-96f7-5e3341649b12.png
+    sha256: 5ff704edbd20c7039728b121fda0c0fa5910b2c8bb0265e65b41625d69cfedbd

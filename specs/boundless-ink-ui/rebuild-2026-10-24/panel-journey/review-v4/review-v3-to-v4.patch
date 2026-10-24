@@ -1,0 +1,22 @@
+diff --git "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp" "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
+index 3f80f11..b6f5ddd 100644
+--- "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
++++ "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
+@@ -220,7 +220,7 @@ void UInkJourneyMonthlySignInPageWidget::RefreshMilestones()
+     }
+ 
+     const auto* Selected=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==SelectedMilestone;});
+-    const bool bHasSubject=!ExpectedServiceDay.IsEmpty()&&!ServerMonth.IsEmpty();
++    const bool bHasSubject=!ExpectedServiceDay.IsEmpty();
+     const bool bCan=bHasSubject&&Selected&&Selected->bKnown&&Selected->bEligible&&!Selected->bClaimed&&!bRequestPending;
+     if (ConfirmButton)
+     {
+@@ -245,7 +245,7 @@ void UInkJourneyMonthlySignInPageWidget::HandleConfirmClaim()
+ 
+     if (!bConfirmationOpen)
+     {
+-        if (ExpectedServiceDay.IsEmpty() || ServerMonth.IsEmpty()) return;
++        if (ExpectedServiceDay.IsEmpty()) return;
+         const auto* Selected=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==SelectedMilestone;});
+         if (!Selected || !Selected->bKnown || !Selected->bEligible || Selected->bClaimed) return;
+ 

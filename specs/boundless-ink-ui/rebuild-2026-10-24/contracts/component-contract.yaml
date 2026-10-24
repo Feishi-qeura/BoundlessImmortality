@@ -1,0 +1,1465 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+source_screen_id: main
+source_screen_status: authorized-trial-pending-user
+authority: ../quickstart.md
+components:
+- id: page-frame
+  name: page-frame
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 1232
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: header/body/footer/overlay slots
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: paper-card
+  name: paper-card
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 320
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: heading/body/status/action slots
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: section-heading
+  name: section-heading
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 56
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: live heading and optional count
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: primary-button
+  name: primary-button
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Shared
+  data_event_slots: caption/reason/pending; OnActivate
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: secondary-button
+  name: secondary-button
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 304
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Shared
+  data_event_slots: caption/reason; OnActivate
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: danger-confirm
+  name: danger-confirm
+  category: popup
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 440
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: exact action/subject/cost/current version; Confirm/Cancel
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: back-button
+  name: back-button
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 88
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Shared
+  data_event_slots: Back to stack frame; do not reconstruct parent route
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: tab-strip
+  name: tab-strip
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 80
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Shared
+  data_event_slots: stable choice keys and actual selected key
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: bottom-navigation
+  name: bottom-navigation
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 112
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Shared
+  data_event_slots: five live action entries; selected route key
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: state-panel
+  name: state-panel
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 256
+  dimensions_basis: design-target-not-measured
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  rendering: native
+  owner: Shared
+  data_event_slots: exclusive transport/domain state plus supported retry
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: data-row
+  name: data-row
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 104
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: typed known/unknown value and unit; stable entity key
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: progress-track
+  name: progress-track
+  category: progress
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 32
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: optional known numerator/denominator; indeterminate if unknown
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: receipt-row
+  name: receipt-row
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 112
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Shared
+  data_event_slots: source identity/item/count/confirmed fact, no grant callback
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: main-scene-window
+  name: main-scene-window
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 552
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Player
+  data_event_slots: transparent scene aperture, no baked scene character
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: anchor-status
+  name: anchor-status
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 320
+  - 112
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Player
+  data_event_slots: real identity/health/qi/realm, optional fields
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: character-attribute-group
+  name: character-attribute-group
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 320
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Player
+  data_event_slots: typed attribute rows with real unit/rating inputs
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: inventory-slot
+  name: inventory-slot
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 104
+  - 120
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Player
+  data_event_slots: EntryId/item/count/equipped/reserved; Select/Hover
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: item-detail-sheet
+  name: item-detail-sheet
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 544
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Player
+  data_event_slots: stable instance state and supported actions
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: material-slot
+  name: material-slot
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 144
+  - 152
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Player
+  data_event_slots: real item/count/local selection; RequestQuote
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: trial-phase-strip
+  name: trial-phase-strip
+  category: progress
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Player
+  data_event_slots: provider stage/deadline; never synthesize 3 phases
+  material: paper-ink-jade
+  atlas_group: player
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: rank-row
+  name: rank-row
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 120
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: RankWuling
+  data_event_slots: provider rank/participant/metric/title/avatar key
+  material: paper-ink-jade
+  atlas_group: rankwuling
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: rank-scope-strip
+  name: rank-scope-strip
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: RankWuling
+  data_event_slots: category and Local/Global keys; self rank optional
+  material: paper-ink-jade
+  atlas_group: rankwuling
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: guild-member-row
+  name: guild-member-row
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 112
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: RankWuling
+  data_event_slots: real user id; RecordRow selection; permission gate
+  material: paper-ink-jade
+  atlas_group: rankwuling
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: guild-identity-card
+  name: guild-identity-card
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 248
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: RankWuling
+  data_event_slots: guild name/counts/supply/reputation; creation separate
+  material: paper-ink-jade
+  atlas_group: rankwuling
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: map-viewport
+  name: map-viewport
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 672
+  - 720
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Journey
+  data_event_slots: fit map art plus independent keyed nodes; pan/zoom
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: map-node
+  name: map-node
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 88
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Journey
+  data_event_slots: real destination id/state/selected; open detail
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: calendar-cell
+  name: calendar-cell
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 88
+  - 88
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Journey
+  data_event_slots: service day/date/known state; inspect date
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: sign-in-seal
+  name: sign-in-seal
+  category: badge
+  reusable: true
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 144
+  - 144
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: raster
+  owner: Journey
+  data_event_slots: state visual only; actual state text separate
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: contracts/prompts/components/sign-in-seal.md
+  output: ''
+  approved: false
+  runtime_package_suggestion: /Game/newUI/Components/Journey/T_NUI_SignInSeal_Default_V1
+- id: fortune-ornament
+  name: fortune-ornament
+  category: decoration
+  reusable: true
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 256
+  - 320
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: raster
+  owner: Journey
+  data_event_slots: empty text area; no generated fortune or reward
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: contracts/prompts/components/fortune-ornament.md
+  output: ''
+  approved: false
+  runtime_package_suggestion: /Game/newUI/Components/Journey/T_NUI_FortuneOrnament_Default_V1
+- id: settlement-card
+  name: settlement-card
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 480
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Journey
+  data_event_slots: one outcome, exact event source and known rows
+  material: paper-ink-jade
+  atlas_group: journey
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: activity-entry
+  name: activity-entry
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 176
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Activities
+  data_event_slots: template id/cycle/name/optional time and progress
+  material: paper-ink-jade
+  atlas_group: activities
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: launch-task-row
+  name: launch-task-row
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 152
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: native
+  owner: Activities
+  data_event_slots: real condition/progress/target/confirmation/reward permission
+  material: paper-ink-jade
+  atlas_group: activities
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: catalog-card
+  name: catalog-card
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 300
+  - 256
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Activities
+  data_event_slots: real sku/item/recipe identity and exact known costs
+  material: paper-ink-jade
+  atlas_group: activities
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: order-row
+  name: order-row
+  category: control
+  reusable: true
+  transparent_background: true
+  text_policy: live-umg-only
+  target_size:
+  - 624
+  - 152
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  - hover
+  - pressed
+  - focused
+  - selected
+  - disabled
+  - pending
+  rendering: native
+  owner: Activities
+  data_event_slots: listing id/version/status; supported confirm action
+  material: paper-ink-jade
+  atlas_group: activities
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: ''
+  output: ''
+  approved: false
+  runtime_package_suggestion: null
+- id: paper-edge-panel
+  name: paper-edge-panel
+  category: container
+  reusable: true
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 672
+  - 896
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: raster
+  owner: Shared
+  data_event_slots: text-free paper frame with unwarped end caps
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 48
+    - 48
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: contracts/prompts/components/paper-edge-panel.md
+  output: ''
+  approved: false
+  runtime_package_suggestion: /Game/newUI/Shared/T_NUI_PaperEdgePanel_Default_V1
+- id: ink-header-ornament
+  name: ink-header-ornament
+  category: decoration
+  reusable: true
+  transparent_background: true
+  text_policy: no-text
+  target_size:
+  - 672
+  - 160
+  dimensions_basis: design-target-not-measured
+  states:
+  - default
+  rendering: raster
+  owner: Shared
+  data_event_slots: isolated landscape edge; no controls/text
+  material: paper-ink-jade
+  atlas_group: shared
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+    measured: false
+    usable_for_import: false
+    rule: Proposal only; measure actual PNG and preserve corner geometry.
+  export_targets:
+  - generic
+  style_dependencies:
+  - colors
+  - typography
+  - geometry
+  - control_states
+  prompt: contracts/prompts/components/ink-header-ornament.md
+  output: ''
+  approved: false
+  runtime_package_suggestion: /Game/newUI/Shared/T_NUI_InkHeaderOrnament_Default_V1

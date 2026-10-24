@@ -1,0 +1,7 @@
+{
+  "scope": "Current binary affected native suites plus existing responsive safe-layout test",
+  "report": "automation-02/index.json",
+  "completed_at": "2026-10-24T12:07:03.8500687+08:00",
+  "user_dir": "engine-user-automation-02",
+  "exit_code": 0
+}

@@ -1,5 +1,6 @@
 #include "Frontend/InkMenuDirector.h"
 #include "Frontend/InkFrontendWidget.h"
+#include "Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h"
 #include "Frontend/InkSaveSubsystem.h"
 #include "CultivationGameplayComponent.h"
 #include "QiCultivationComponent.h"
@@ -31,7 +32,7 @@ AInkMenuDirector::AInkMenuDirector()
 {
     PrimaryActorTick.bCanEverTick=true;
     SwarmClass=ALiveWeaponSwarm::StaticClass();
-    WidgetClass=UInkFrontendWidget::StaticClass();
+    WidgetClass=UInkRebuildFrontendWidget::StaticClass();
     DirectorAudience=CreateDefaultSubobject<ULiveAudienceAdapterComponent>(TEXT("GameplayAudience"));
     EncounterMonsterClass=ALiveMonster::StaticClass();
     static ConstructorHelpers::FObjectFinder<UStaticMesh> Sword(TEXT("/Game/Isometric_World/Sky_Temple/Meshes/Sculptures/SM_Scultpture_Sword_01.SM_Scultpture_Sword_01"));
@@ -90,11 +91,20 @@ bool AInkMenuDirector::EnsureFrontend()
 {
     if(IsValid(FrontendWidget))return true;
     auto* PC=LocalController.Get();
-    if(!PC||!WidgetClass)return false;
-    FrontendWidget=CreateWidget<UInkFrontendWidget>(PC,WidgetClass);
+    if(!PC)return false;
+    // Existing map instances may serialize the old WidgetClass. The rebuilt
+    // runtime always starts from the independent tree, including native fallback.
+    UClass* RuntimeClass=LoadClass<UInkFrontendWidget>(nullptr,
+        TEXT("/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!RuntimeClass||!RuntimeClass->IsChildOf(UInkRebuildFrontendWidget::StaticClass()))
+        RuntimeClass=UInkRebuildFrontendWidget::StaticClass();
+    WidgetClass=RuntimeClass;
+    FrontendWidget=CreateWidget<UInkFrontendWidget>(PC,RuntimeClass);
     if(!FrontendWidget)return false;
     FrontendWidget->Configure(this);
     FrontendWidget->AddToViewport(200);
+    UE_LOG(LogTemp,Display,TEXT("InkFrontend.Created widget=%s class=%s director=%s"),
+        *FrontendWidget->GetPathName(),*FrontendWidget->GetClass()->GetPathName(),*GetPathName());
     return true;
 }
 

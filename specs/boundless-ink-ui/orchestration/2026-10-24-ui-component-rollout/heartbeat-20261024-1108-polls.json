@@ -1,0 +1,23 @@
+[
+  {
+    "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+    "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:5",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "已从本聊天的图像生成缓存找回材料槽框，没有重新生图。新增 PNG、来源记录、测量清单和补充交接： 材料槽框 PNG 补充交接 来源记录 新增素材清单 实测为 1254×1254 RGBA，SHA-256 8b93fa72…21b62193d9e3。中心开口中心像素透明；开口和外沿有少量 alpha=1 的淡像素，已记录供审阅。素材保持 approved:false，采用 full 切片，不适用 9-slice。 原组件 ZIP 和清单未修改；未写 Source/Content，也未运行 Unreal、UBT 或路由接入。"
+  },
+  {
+    "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+    "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:6",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "已确认退化：适配器和面板把缺失的展示字段误设为提交前提，会持续阻断服务允许的突破/重炼请求。 核对报告 已交付，含逐字段证据和未应用的最小补丁。窄探针 21 项断言通过；9 个冻结源码/服务文件哈希未变。未启动 UE/UBT，等待监督转交。"
+  },
+  {
+    "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+    "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:6",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "我会先核对报价协议诊断、未应用补丁和本次文件授权，修正“缺少展示字段就禁止提交”的两层门控，再给实际材料槽绑定新增框纹理。Editor 与 Live Coding 仍占用项目，本轮只改授权源码和交接文件，不运行引擎或写入 Content。"
+  }
+]

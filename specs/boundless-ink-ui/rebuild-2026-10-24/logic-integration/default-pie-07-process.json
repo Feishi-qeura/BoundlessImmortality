@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-24T16:28:28.6006917+08:00",
+  "scope": "build25 actual default main actor service enabled full44 portrait landscape strict geometry; no TLS override",
+  "pid": 21416,
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIHostAcceptance20261024",
+    "-WulingRoom=newui-room-02",
+    "-WulingUser=newui-anchor-02",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-default-pie07",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/default-root-pie-07.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_all44_default_pie_07.py",
+    "-NewUIDefaultPIEAttempt=07"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "team_id": "panel-journey",
+  "revision": "review-v3",
+  "updated_at": "2026-10-24T13:13:04+08:00",
+  "phase": "staged-handoff-ready",
+  "handoff_ready": true,
+  "approved": false,
+  "visual_pending_user": true,
+  "owner": "panel-journey",
+  "integration_owner": "logic-integration",
+  "only_writes_under": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/",
+  "supersedes_source_revision": "review-v2",
+  "review_v2_frozen": true,
+  "prior_staged_source_mutated": false,
+  "production_source_config_content_mutated": false,
+  "source_paths": [
+    "review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp"
+  ],
+  "source_sha256": {
+    "InkJourneyNewWidgets_h": "1B25D7F6B3DF6775AA8A38FF73B577C3AA9402EB5CB3C3A6A764D29287A44464",
+    "InkJourneyNewWidgets_cpp": "1DC84B428388CDC36E57E1EFB91AB2896A0124BC43E86E2C681E6A967699D378"
+  },
+  "findings_resolved": [
+    "N02: capture service day, month, and milestone on first confirmation click; preserve on same identity refresh; invalidate on identity change; emit captured tuple",
+    "N04: use canonical migration-map font package paths"
+  ],
+  "completed": [
+    "Full replacement source copied from frozen review-v2 into review-v3",
+    "Updated monthly claim delegate to carry captured day/month/milestone",
+    "Added same-subject retention, identity invalidation, and eligibility revalidation",
+    "Changed font loads to /Game/newUI/Ink/Fonts/Shared/F_InkDisplay and F_InkBody",
+    "Documented exact integration-host adapter and font follow-up",
+    "Generated filesystem source diff against frozen review-v2",
+    "Static source/hash/JSON checks only"
+  ],
+  "remaining": [
+    "Integration owner must review and wire the three-parameter delegate with fresh current-subject validation",
+    "Integration/cleanup owner must import and verify canonical font packages",
+    "UHT/UBT, route binding, service behavior, Slate, Editor/player-entry visual, device/package/runtime verification remain unrun",
+    "Visual acceptance remains with user; candidate is unapproved"
+  ],
+  "blockers": [],
+  "source_only": true,
+  "source_compiled": false,
+  "assets_imported": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "assets_approved": false,
+  "verification_limits": [
+    "No compile or tests run",
+    "No engine, import, AssetRegistry, service action, automation, Editor, PIE, device, package, or runtime run",
+    "Source inspection and static text/hash/JSON checks do not establish runtime behavior"
+  ],
+  "risk_notes": [
+    "Default font fallback is source-only tolerance; canonical font packages were not verified imported/readable/displayed",
+    "Delegate signature change requires all host bindings/call sites to update atomically",
+    "MonthlyChest contract has no month field; host must compare captured month as an identity fingerprint before adapter evaluation"
+  ]
+}

@@ -1,0 +1,84 @@
+schema_version: 1
+slice: panel-activities-01
+approval_state: approved:false
+runtime_root: /Game/newUI/Activities
+production_source_owner: logic-integration
+assets:
+  - id: activities-hub-v1
+    kind: page-concept
+    file: assets/pages/activities-hub-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_ActivitiesHub_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 526a05d8eb95c2ce6bb37937448e79df79c76f40b9cefda1d1958ee0b3245aaf
+    prompt: prompts/pages/activities-hub-v1.md
+  - id: activity-category-detail-v1
+    kind: page-concept
+    file: assets/pages/activity-category-detail-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_ActivityCategoryDetail_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: c29f684f40cbd80b18e59444b6f5ddb422be9445f5f36fd1a09d2556eb0ea449
+    prompt: prompts/pages/activity-category-detail-v1.md
+  - id: launch-activity-v1
+    kind: page-concept
+    file: assets/pages/launch-activity-v1.png
+    intended_object_path: /Game/newUI/Activities/Concepts/T_LaunchActivity_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 27e576ba8fad50541b39fe618ec95e907dc84747af1dd8f8e4fec0355eb5a790
+    prompt: prompts/pages/launch-activity-v1.md
+  - id: daily-activity-scroll-v1
+    kind: semantic-component-candidate
+    file: assets/components/daily-activity-scroll-v1.png
+    intended_object_path: /Game/newUI/Activities/Icons/T_DailyActivityScroll_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: fit
+    dimensions_px: [1254, 1254]
+    mode: RGBA
+    alpha: [0, 255]
+    sha256: fdb9da51762a9521fcf5147f4bd52edd1f0fe453bf13866d4789461234f7f3af
+    prompt: prompts/components/daily-activity-scroll-v1.md
+  - id: limited-activity-calendar-v1
+    kind: semantic-component-candidate
+    file: assets/components/limited-activity-calendar-v1.png
+    intended_object_path: /Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: fit
+    dimensions_px: [1312, 1199]
+    mode: RGBA
+    alpha: [0, 255]
+    sha256: 3647d5a63c613b92054077c3fe4e482b7ede471f430904dc5100c7c039641343
+    prompt: prompts/components/limited-activity-calendar-v1.md
+  - id: permanent-activity-lotus-v1
+    kind: semantic-component-candidate
+    file: assets/components/permanent-activity-lotus-v1.png
+    intended_object_path: /Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: fit
+    dimensions_px: [1320, 1192]
+    mode: RGBA
+    alpha: [0, 255]
+    sha256: b9dcab0cd9ce4ec0604ac7830781c422fef82fb4ac368da46c632cbe521d5f73
+    prompt: prompts/components/permanent-activity-lotus-v1.md

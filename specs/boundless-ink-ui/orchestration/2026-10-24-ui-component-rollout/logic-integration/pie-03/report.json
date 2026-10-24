@@ -1,0 +1,549 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real authority connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "rendered capture hud",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenActivities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ActivityCycle_daily",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route DailyActivities",
+      "passed": true,
+      "actual": "DailyActivities"
+    },
+    {
+      "name": "rendered capture daily-activities",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native claim via real Slate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "authority signed after UI claim",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "signed native button refuses duplicate Slate click",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_GroupTab_MonthlySignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture monthly-sign-in",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "calendar cell via real Slate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestPreview_0",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ChestRewardClaim",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real monthly transaction",
+      "passed": true,
+      "actual": ""
+    },
+    {
+      "name": "receipt close by keyboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLeaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankAnchor",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture leaderboard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate RankClose",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenExtensions",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture world-map",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_AtlasNode_qingyun",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route JourneyWorldDetail",
+      "passed": true,
+      "actual": "JourneyWorldDetail"
+    },
+    {
+      "name": "rendered capture world-detail",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_SectCreate",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real guild from UI create",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenLaunchEvent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_LaunchPrimary",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real UI launch start",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture hud-active-launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Open_WulingConstruction",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolNavigation",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolRoute_2",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "actual player route WulingBreakthrough",
+      "passed": false,
+      "actual": "HUD"
+    },
+    {
+      "name": "rendered capture breakthrough-materials",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real material Slate selection MAT_BR04_C01_G1",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "native quote arrived with display gaps",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "actual UE request rejected NOT_SAFE",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_ToolPrepare",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "UE subsystem reports pending busy",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "busy UI refuses duplicate prepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual UI prepare succeeded",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "authority entered Prepare",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "rendered capture prepare-confirmed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "UE stale rejection and same request-id retry",
+      "passed": false,
+      "actual": null
+    },
+    {
+      "name": "real deterministic fixture settled success",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\hud.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\daily-activities.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\monthly-sign-in.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\leaderboard.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\world-map.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\world-detail.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\hud-active-launch.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\breakthrough-materials.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-03\\prepare-confirmed.png"
+  ],
+  "steps": [
+    "main start via actual button",
+    "connected",
+    "hud",
+    "activities entry",
+    "activities capture",
+    "daily category",
+    "daily actual page",
+    "close daily",
+    "sign entry",
+    "sign native claim",
+    "sign confirmed",
+    "duplicate claim gated",
+    "sign capture",
+    "month tab",
+    "month capture",
+    "native calendar inspect",
+    "monthly chest reveal",
+    "monthly chest inspect",
+    "monthly claim reveal",
+    "monthly claim",
+    "monthly real receipt",
+    "receipt dismiss",
+    "close sign",
+    "rank entry",
+    "anchor rank",
+    "rank capture",
+    "rank close",
+    "map entry",
+    "map capture",
+    "map real node",
+    "world detail",
+    "map close",
+    "wuling entry",
+    "guild name player input fixture",
+    "guild create reveal",
+    "guild actual create",
+    "guild confirmed",
+    "guild close for launch",
+    "launch real entry",
+    "launch primary reveal",
+    "launch real start",
+    "launch confirmed",
+    "launch close",
+    "active HUD frame capture",
+    "wuling reopen",
+    "construction reveal",
+    "construction player entry",
+    "tools menu",
+    "break route reveal",
+    "break route actual click",
+    "break actual page",
+    "material reveal",
+    "material real quote",
+    "native quote no display fields",
+    "unsafe declared fixture",
+    "unsafe prepare",
+    "unsafe authority refusal",
+    "safe pending and concurrent version fixture",
+    "valid prepare",
+    "pending native gate",
+    "pending duplicate click",
+    "prepare response",
+    "stale same-id recovery",
+    "advance actual trial fixture",
+    "actual settled trial",
+    "dismiss result receipt"
+  ],
+  "finished": false,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-03/Saved/",
+  "passed": false,
+  "current_step": "grant rework fixture",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenActivities",
+      "slate_handled": true,
+      "page": "Activities"
+    },
+    {
+      "action": "Ext_ActivityCycle_daily",
+      "slate_handled": true,
+      "page": "DailyActivities"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_GroupTab_MonthlySignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestPreview_0",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_ChestRewardClaim",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLeaderboard",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankAnchor",
+      "slate_handled": true,
+      "page": "Leaderboard"
+    },
+    {
+      "action": "RankClose",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenExtensions",
+      "slate_handled": true,
+      "page": "Extensions"
+    },
+    {
+      "action": "Ext_AtlasNode_qingyun",
+      "slate_handled": true,
+      "page": "JourneyWorldDetail"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_SectCreate",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenLaunchEvent",
+      "slate_handled": true,
+      "page": "LaunchEvent"
+    },
+    {
+      "action": "Ext_LaunchPrimary",
+      "slate_handled": true,
+      "page": "LaunchEvent"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": false,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_Open_WulingConstruction",
+      "slate_handled": false,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_ToolNavigation",
+      "slate_handled": false,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_ToolRoute_2",
+      "slate_handled": false,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": false,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_ToolPrepare",
+      "slate_handled": false,
+      "page": "HUD"
+    }
+  ],
+  "fixture_controls": [
+    {
+      "safe": false
+    },
+    {
+      "safe": true,
+      "delay": 2,
+      "bump_next": "PrepareBreakthrough"
+    },
+    {
+      "delay": 0
+    },
+    {
+      "advance_seconds": 84
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/verify_engine_pie.py\", line 219, in tick\n    name,fn,delay=STEPS[I];R['current_step']=name;fn();R['steps'].append(name);I+=1;NEXT=time.monotonic()+delay;save()\n                                                  ^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/verify_engine_pie.py\", line 169, in <lambda>\n    step('grant rework fixture',lambda:control(upgrade_core=True),2)\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/verify_engine_pie.py\", line 28, in control\n    response=json.loads(urlopen(Request('http://127.0.0.1:18789/qa/control',data=json.dumps(kwargs).encode(),headers={'Content-Type':'application/json'}),timeout=8).read())\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 519, in open\n    response = self._open(req, data)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 536, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 1377, in http_open\n    return self.do_open(http.client.HTTPConnection, req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\urllib\\request.py\", line 1352, in do_open\n    r = h.getresponse()\n        ^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\http\\client.py\", line 1390, in getresponse\n    response.begin()\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\http\\client.py\", line 325, in begin\n    version, status, reason = self._read_status()\n                              ^^^^^^^^^^^^^^^^^^^\n  File \"F:\\UNREAL\\UE_5.8\\UE_5.8\\Engine\\Binaries\\ThirdParty\\Python3\\Win64\\Lib\\http\\client.py\", line 294, in _read_status\n    raise RemoteDisconnected(\"Remote end closed connection without\"\nhttp.client.RemoteDisconnected: Remote end closed connection without response\n"
+}

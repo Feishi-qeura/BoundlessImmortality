@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-24T17:25:45.1429221+08:00",
+  "pid": 46488,
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NullRHI",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-native-tests07",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-07.log",
+    "-ReportOutputPath=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-07-report",
+    "\"-ExecCmds=Automation RunTests BoundlessImmortality.Frontend\"",
+    "\"-TestExit=Automation Test Queue Empty\""
+  ],
+  "scope": "Source26 current49frontend native regressions; plain automation queue, no preflight Python exit"
+}

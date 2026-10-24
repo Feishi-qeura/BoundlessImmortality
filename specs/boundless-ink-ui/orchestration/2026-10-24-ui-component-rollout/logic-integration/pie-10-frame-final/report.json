@@ -1,0 +1,202 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual launch active",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture frame-portrait",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native countdown Slate opens launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route Wuling",
+      "passed": true,
+      "actual": "Wuling"
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual landscape resize",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture frame-landscape",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "landscape countdown opens launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual narrow portrait resize",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture frame-narrow",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "narrow countdown opens launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-10-frame-final\\frame-portrait.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-10-frame-final\\frame-landscape.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-10-frame-final\\frame-narrow.png"
+  ],
+  "steps": [
+    "real main entry",
+    "active authority event",
+    "final frame portrait capture",
+    "native frame actual Slate click",
+    "actual countdown route",
+    "return to HUD",
+    "Wuling remains accessible",
+    "actual Wuling route",
+    "close Wuling",
+    "landscape actual viewport",
+    "final frame landscape capture",
+    "landscape countdown Slate click",
+    "landscape actual route",
+    "close launch for narrow",
+    "narrow actual viewport",
+    "final frame narrow capture",
+    "narrow countdown Slate click",
+    "narrow actual route"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-10/Saved/",
+  "passed": true,
+  "current_step": "narrow actual route",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    }
+  ],
+  "countdown_resource_readback": [
+    {
+      "capture": "frame-portrait",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "frame-landscape",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "frame-narrow",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    }
+  ],
+  "countdown_image_readback": [
+    {
+      "capture": "frame-portrait",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.IMAGE: 3>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001DC3CE3E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "frame-landscape",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.IMAGE: 3>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001DC3CE3E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "frame-narrow",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.IMAGE: 3>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001DC3CE3E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    }
+  ]
+}

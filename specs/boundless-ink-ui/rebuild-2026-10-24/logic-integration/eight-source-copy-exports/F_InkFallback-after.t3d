@@ -1,0 +1,4 @@
+Begin Object Class=/Script/Engine.Font Name="F_InkFallback" ExportPath="/Script/Engine.Font'/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback'"
+   FontCacheType=Runtime
+   CompositeFont=(DefaultTypeface=(Fonts=((Name="Regular",Font=(FontFaceAsset="/Script/Engine.FontFace'/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback'")))),FallbackTypeface=(Typeface=(Fonts=((Name="Regular",Font=(FontFaceAsset="/Script/Engine.FontFace'/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback'"))))))
+End Object

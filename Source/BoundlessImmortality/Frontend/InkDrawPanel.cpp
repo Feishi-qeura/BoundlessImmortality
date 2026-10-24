@@ -18,7 +18,7 @@ void UInkDrawPanel::BuildPanelContent()
     auto* S=BodyCanvas->AddChildToCanvas(Disc);S->SetPosition({X,18});S->SetSize({D,D});
     Disc->SetVisibility(ESlateVisibility::HitTestInvisible);Disc->SetRenderTransformPivot(FVector2D(.5));Disc->SetRenderTransformAngle(Wheel.Angle);
     auto* Art=WidgetTree->ConstructWidget<UImage>();FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::Image;
-    Brush.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Shared/M_InkWheel.M_InkWheel")));
+    Brush.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/Shared/M_InkWheel.M_InkWheel")));
     Art->SetBrush(Brush);auto* A=Disc->AddChildToCanvas(Art);A->SetPosition({0,0});A->SetSize({D,D});
     const float IconSize=D*.13f;
     for(int32 I=0;I<8;++I)

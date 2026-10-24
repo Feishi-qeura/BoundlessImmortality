@@ -1,0 +1,8 @@
+{
+  "pid": 28596,
+  "port": 56535,
+  "url": "https://127.0.0.1:56535/avatar.png",
+  "self_signed_declared_fixture": true,
+  "stopped": true,
+  "requests": 2
+}

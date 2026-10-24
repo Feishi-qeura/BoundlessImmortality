@@ -1,0 +1,56 @@
+slice: player-c
+status: candidate
+approved: false
+canonical_inputs:
+  style: ../../../contracts/style-contract.yaml
+  screens: ../../../contracts/screen-contract.yaml
+  briefs:
+    methods: ../../../contracts/screen-briefs/methods.md
+    equipment: ../../../contracts/screen-briefs/equipment.md
+    appearance: ../../../contracts/screen-briefs/appearance.md
+  models: ../../../model/vm-contract.yaml
+  actions: ../../../model/action-contract.yaml
+  bindings: ../../../model/screen-bindings.json
+shared_contracts_modified: false
+pages:
+  methods:
+    page_id: methods
+    layout_version: newui-r1-methods
+    vm: [MethodVm, InventoryVm]
+    actions: [learn-method, configure-methods]
+    tree: [page-frame, state-panel, back-button, inventory-slot, item-detail-sheet, data-row]
+    data_rules:
+      - Unknown, loading, empty, pending, offline, error, and disabled are distinct provider states.
+      - Catalog, ownedMethods, main, supports, and inventory each retain independent provider state.
+      - supports only renders provider-supplied values; support-slot entitlement is never inferred.
+      - LearnMethod carries the selected actual item_id; ConfigureMethods carries the actual main and supports draft.
+  equipment:
+    page_id: equipment
+    layout_version: newui-r1-equipment
+    vm: [EquipmentVm, InventoryVm]
+    actions: [inventory-equip, inventory-unequip, activate-fabao]
+    tree: [page-frame, state-panel, back-button, inventory-slot, item-detail-sheet, data-row]
+    data_rules:
+      - Render only provider-supplied equipment slots, fabao, owned item instances, and catalog fields.
+      - Inventory equip/unequip carries stable EntryId and quantity; never dispatches a visible slot index as identity.
+      - Action availability and eligibility reason come from the host/authority adapter.
+      - ActivateFabao has no client-invented parameters and never guesses the active artifact.
+  appearance:
+    page_id: appearance
+    layout_version: newui-r1-appearance
+    vm: [AppearanceVm]
+    supplemental_read_only_projection: CharacterVm.attributes (optional, field-state preserved; never affects appearance command eligibility)
+    actions: [preview-appearance]
+    tree: [page-frame, state-panel, back-button, character-attribute-group, tab-strip]
+    data_rules:
+      - Identity, optional actual portrait, previewFrame, previewBar, and option lists are host-supplied; missing fields remain unknown.
+      - Authored local-preview options are UI presentation choices, never unlock or ownership records.
+      - Preview actions are local-only and retain the explicit preview-only label.
+      - No unlock, purchase, equip persistence, or account progress is displayed or inferred.
+layout:
+  portrait: 720x1280; fixed header/footer; middle scrolls; safe inset 24; minimum hit area 88x88
+  landscape: 1280x720 reflow to two-column list/detail; never scale a portrait page
+style_injection:
+  colors: canonical style-contract palette
+  fonts: title=MaShanZheng; section/body/button= LXGWWenKai; injected by newUI host
+  texture_assets: optional semantic atlases; runtime UI text and values remain widgets

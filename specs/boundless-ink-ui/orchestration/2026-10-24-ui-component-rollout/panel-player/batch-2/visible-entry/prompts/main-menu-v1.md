@@ -1,0 +1,7 @@
+# Main menu visible-entry concept prompt
+
+Create a portrait 9:16 overlay layout concept for an Unreal game front end. This is a component layout study, not a full-screen background. Preserve a very large, completely clear center viewport from roughly 24% to 63% screen height for the existing live 3D character and scene; do not draw a character, environment, scenery, illustration, or replacement camera image. Keep the already existing game title area at the top as an empty title plaque. At the bottom, show one compact warm-paper and ink-green menu surface with exactly two large stacked primary control silhouettes, one slim blank status line, and a final row of three smaller equal control silhouettes. Use understated parchment, dark jade-green buttons, thin antique-gold details, 24-unit safe margins, 88-unit minimum control hit boxes, restrained border work, and enough contrast for live TextBlocks. All controls must be blank silhouettes with no readable text, letters, icons, numbers, badges, save status, progress, or invented game facts. Leave the screen edges and center viewport open. The visual will guide native UMG composition only; no pixel from this image will be mounted as the game menu.
+
+## Mapping
+
+The two stacked primary controls map to `StartGame` and `ContinueGame`. The lower three controls map, from left to right, to `OpenSaves`, `OpenSettings`, and `RequestQuit`. Labels and enabled state are rendered from the existing UMG action/data path.

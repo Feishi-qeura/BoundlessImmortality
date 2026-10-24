@@ -34,6 +34,15 @@ namespace InkLaunchEventView
     {
         bool Value=false;if(O)O->TryGetBoolField(Field,Value);return Value;
     }
+    bool HasFlag(const FObject& O,const TCHAR* Field)
+    {
+        bool Value=false;return O&&O->TryGetBoolField(Field,Value);
+    }
+    bool HasNumber(const FObject& O,const TCHAR* Field)
+    {
+        const auto* Value=O?O->Values.Find(Field):nullptr;
+        return Value&&Value->IsValid()&&(*Value)->Type==EJson::Number;
+    }
     TArray<TSharedPtr<FJsonValue>> Rows(const FObject& O,const TCHAR* Field)
     {
         const TArray<TSharedPtr<FJsonValue>>* Value=nullptr;
@@ -147,12 +156,13 @@ namespace InkLaunchEventView
 
 FText UInkLaunchEventPanel::PanelTitle() const
 {
-    return FText::FromString(TEXT("青云初启"));
+    return FText::FromString(PageId==TEXT("LaunchRank")?TEXT("青云初启 · 荣誉榜"):TEXT("青云初启"));
 }
 
 void UInkLaunchEventPanel::BuildPanelContent()
 {
     using namespace InkLaunchEventView;
+    if(PageId==TEXT("LaunchRank")&&SelectedTab==TEXT("overview"))SelectedTab=TEXT("honors");
     ConnectionLabel=nullptr;TimeLabel=nullptr;HonorExpiryLabel=nullptr;
     auto* Service=WulingFrontendData::Service(this);
     const auto State=Service?Service->Snapshot():nullptr,Event=Object(State,TEXT("launch"));
@@ -177,10 +187,17 @@ void UInkLaunchEventPanel::BuildPanelContent()
         auto* Slot=BodyCanvas->AddChildToCanvas(Bar);Slot->SetPosition({X,Y});Slot->SetSize({Width,12});Slot->SetZOrder(3);
     };
     const float HeroTextWidth=Wide?W*.57f:W;
-    Label(BodyCanvas,TEXT("LaunchHeroTitle"),TEXT("开服七日 · 同道共修"),0,0,HeroTextWidth,52,40);
-    Text(TEXT("踏青云，聚同道。每一次免费参与，皆有迹可循。"),0,58,HeroTextWidth,26,Wide?64:72);
-    Scene(BodyCanvas,0,Wide?W*.62f:0,Wide?0:134,Wide?W*.38f:W,Wide?112:120);
-    const float MetaY=Wide?128:270;
+    Surface(BodyCanvas,TEXT("LaunchHeroPaper"),InkPresentationStyle::ESurface::FeatureCard,0,0,HeroTextWidth,118);
+    Surface(BodyCanvas,TEXT("LaunchHeroHeading"),InkPresentationStyle::ESurface::FeatureHeading,8,8,HeroTextWidth-16,48);
+    Label(BodyCanvas,TEXT("LaunchHeroTitle"),TEXT("青云初启 · 同道共修"),16,8,HeroTextWidth-32,46,32);
+    Text(TEXT("踏青云，聚同道。每一次免费参与，皆有迹可循。"),16,60,HeroTextWidth-32,24,Wide?48:52);
+    const float MetaY=Wide?128:134;
+    if(Wide)
+    {
+        Surface(BodyCanvas,TEXT("LaunchConnectionPaper"),InkPresentationStyle::ESurface::FeatureCard,0,MetaY-8,(W-Gap)/2,88);
+        Surface(BodyCanvas,TEXT("LaunchTimePaper"),InkPresentationStyle::ESurface::FeatureCard,(W+Gap)/2,MetaY-8,(W-Gap)/2,88);
+    }
+    else Surface(BodyCanvas,TEXT("LaunchServiceStatePaper"),InkPresentationStyle::ESurface::FeatureCard,0,MetaY-8,W,152);
     ConnectionLabel=Label(BodyCanvas,TEXT("LaunchConnection"),TEXT(""),0,MetaY,Wide?(W-Gap)/2:W,68,26);
     TimeLabel=Label(BodyCanvas,TEXT("LaunchServerTime"),TEXT(""),Wide?(W+Gap)/2:0,Wide?MetaY:MetaY+76,Wide?(W-Gap)/2:W,76,24);
     const float TabY=Wide?MetaY+88:MetaY+164;
@@ -188,6 +205,7 @@ void UInkLaunchEventPanel::BuildPanelContent()
     const TCHAR* TabNames[]={TEXT("活动总览"),TEXT("个人任务"),TEXT("武灵目标"),TEXT("荣誉规则")};
     const int32 TabColumns=Wide?4:2;
     const float TabWidth=(W-(TabColumns-1)*12)/TabColumns;
+    Surface(BodyCanvas,TEXT("LaunchTabsHeadingPaper"),InkPresentationStyle::ESurface::FeatureHeading,0,TabY,W,Wide?88:188);
     for(int32 I=0;I<4;++I)
         Action(BodyCanvas,TEXT("LaunchTab_")+FString(TabIds[I]),TabNames[I],(I%TabColumns)*(TabWidth+12),TabY+(I/TabColumns)*100,TabWidth,Hit,false,false,SelectedTab==TabIds[I]);
     float Y=TabY+(Wide?100:200)+20;
@@ -202,9 +220,13 @@ void UInkLaunchEventPanel::BuildPanelContent()
         else if(!Object(State,TEXT("guild"))){Title=TEXT("先立山门，再赴青云");Message=TEXT("当前尚未加入武灵。主播创建武灵后可开启本期活动，正式成员通过免费响应参与。");}
         else if(String(Object(State,TEXT("identity")),TEXT("role"))==TEXT("anchor")){Title=TEXT("青云待启 · 静候君来");Message=TEXT("由本武灵主播开启本期活动。开启后，任务、进度与截止时间将由服务同步。");}
         else {Title=TEXT("等待主播开启活动");Message=TEXT("本武灵尚未开启青云初启。开启后，在本房世界历练中免费响应即可参与。");}
-        Y+=Text(Title,0,Y,W,32)+18;Y+=Text(Message,0,Y,W,28)+24;
-        if(Connected&&Enabled&&AllowedProfile(State)&&State&&!Object(State,TEXT("guild")))
-        {Action(BodyCanvas,TEXT("LaunchSect"),TEXT("前往武灵山门"),0,Y,W,Hit);Y+=Hit+16;}
+        const bool ShowSectButton=Connected&&Enabled&&AllowedProfile(State)&&State&&!Object(State,TEXT("guild"));
+        Surface(BodyCanvas,TEXT("LaunchStateCard"),InkPresentationStyle::ESurface::FeatureCard,0,Y,W,ShowSectButton?344.f:260.f);
+        Surface(BodyCanvas,TEXT("LaunchStateHeading"),InkPresentationStyle::ESurface::FeatureHeading,8,Y+8,W-16,54);
+        Label(BodyCanvas,TEXT("LaunchStateTitle"),Title,16,Y+16,W-32,44,28);
+        Y+=84;
+        Y+=Text(Message,16,Y,W-32,24,48)+20;
+        if(ShowSectButton){Action(BodyCanvas,TEXT("LaunchSect"),TEXT("前往武灵山门"),0,Y,W,Hit);Y+=Hit+16;}
     }
     else if(SelectedTab==TEXT("tasks"))
     {
@@ -218,17 +240,22 @@ void UInkLaunchEventPanel::BuildPanelContent()
             const auto Task=Value&&Value->Type==EJson::Object?Value->AsObject():nullptr;if(!Task)continue;
             const float X=(Index%Columns)*(CardW+Gap),Top=Y+(Index/Columns)*(CardH+Gap);
             const double Current=Number(Task,TEXT("progress")),Target=Number(Task,TEXT("target"));
+            const bool HasProgress=HasNumber(Task,TEXT("progress"))&&HasNumber(Task,TEXT("target"));
             const bool Confirmed=Flag(Task,TEXT("confirmed"));
-            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::Card,X,Top,CardW,CardH);
+            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::FeatureCard,X,Top,CardW,CardH);
+            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::FeatureHeading,X+8,Top+8,CardW-16,54);
             Label(BodyCanvas,NAME_None,Condition(String(Task,TEXT("condition_type"))),X+16,Top+16,CardW-32,50,28);
-            auto* Status=Label(BodyCanvas,NAME_None,FString::Printf(TEXT("%s  ·  %.0f / %.0f"),Confirmed?TEXT("已确认"):Current>=Target&&Target>0?TEXT("等待结算"):TEXT("进行中"),Current,Target),X+16,Top+76,CardW-32,40,26);
+            const FString TaskState=Confirmed?TEXT("服务已确认"):HasProgress?(Target>0&&Current>=Target?TEXT("等待服务结算"):TEXT("进行中")):TEXT("任务状态待同步");
+            const FString ProgressText=HasProgress?FString::Printf(TEXT("%s  ·  %.0f / %.0f"),*TaskState,Current,Target):TaskState+TEXT("  ·  进度待同步");
+            auto* Status=Label(BodyCanvas,NAME_None,ProgressText,X+16,Top+72,CardW-32,40,24);
             if(Confirmed)Status->SetColorAndOpacity(InkPresentationStyle::Jade());
-            Progress(Current,Target,X+16,Top+124,CardW-32);
-            FString Reward=TEXT("本期未开放数值奖励");
+            if(HasProgress)Progress(Current,Target,X+16,Top+124,CardW-32);
+            FString Reward=TEXT("奖励信息待同步");
             if(Flag(Permissions,TEXT("task_numeric_rewards")))
             {
                 const FString Item=String(Task,TEXT("reward_item"));
-                Reward=FString::Printf(TEXT("%s %.0f · %s"),Item==TEXT("STAT_QI")?TEXT("修为"):*Item,Number(Task,TEXT("reward_count")),Confirmed?TEXT("服务已确认"):TEXT("达成后自动结算"));
+                if(!Item.IsEmpty()&&HasNumber(Task,TEXT("reward_count")))
+                    Reward=FString::Printf(TEXT("%s %.0f · %s"),Item==TEXT("STAT_QI")?TEXT("修为"):*Item,Number(Task,TEXT("reward_count")),Confirmed?TEXT("服务已确认"):TEXT("达成后自动结算"));
             }
             Text(Reward,X+16,Top+152,CardW-32,24,64);++Index;
         }
@@ -246,15 +273,23 @@ void UInkLaunchEventPanel::BuildPanelContent()
         {
             const auto Tier=Value&&Value->Type==EJson::Object?Value->AsObject():nullptr;if(!Tier)continue;
             const double Target=Number(Tier,TEXT("complete_rounds"));
+            const bool HasTarget=HasNumber(Tier,TEXT("complete_rounds"));
             const bool Confirmed=Contains(Event,TEXT("milestones"),String(Tier,TEXT("tier_id")));
             const float X=(Index%Columns)*(CardW+Gap),Top=Y+(Index/Columns)*(CardH+Gap);
-            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::Card,X,Top,CardW,CardH);
-            Label(BodyCanvas,NAME_None,FString::Printf(TEXT("共修 %.0f 轮 · %s"),Target,Confirmed?TEXT("已确认"):TEXT("待达成")),X+16,Top+16,CardW-32,48,28);
-            Label(BodyCanvas,NAME_None,FString::Printf(TEXT("%d / %.0f 轮"),Count,Target),X+16,Top+76,CardW-32,40,26);
-            Progress(Count,Target,X+16,Top+124,CardW-32);
+            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::FeatureCard,X,Top,CardW,CardH);
+            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::FeatureHeading,X+8,Top+8,CardW-16,54);
+            Label(BodyCanvas,NAME_None,HasTarget?FString::Printf(TEXT("共修 %.0f 轮 · %s"),Target,Confirmed?TEXT("已确认"):TEXT("待达成")):TEXT("目标轮次待同步"),X+16,Top+16,CardW-32,48,28);
+            Label(BodyCanvas,NAME_None,HasTarget?FString::Printf(TEXT("%d / %.0f 轮"),Count,Target):TEXT("当前轮次待同步"),X+16,Top+76,CardW-32,40,26);
+            if(HasTarget&&HasNumber(Event,TEXT("complete_rounds")))Progress(Count,Target,X+16,Top+124,CardW-32);
             FString Reward=String(Tier,TEXT("guild_visual"));
-            if(Flag(Permissions,TEXT("guild_numeric_rewards")))Reward+=FString::Printf(TEXT("\n主播：灵石 %.0f · 破境石 %.0f"),Number(Tier,TEXT("anchor_stone")),Number(Tier,TEXT("anchor_break_material")));
-            else Reward+=TEXT("\n本期未开放数值奖励");
+            if(Reward.IsEmpty())Reward=TEXT("目标与奖励信息待同步");
+            if(Flag(Permissions,TEXT("guild_numeric_rewards")))
+            {
+                if(HasNumber(Tier,TEXT("anchor_stone"))&&HasNumber(Tier,TEXT("anchor_break_material")))
+                    Reward+=FString::Printf(TEXT("\n主播：灵石 %.0f · 破境石 %.0f"),Number(Tier,TEXT("anchor_stone")),Number(Tier,TEXT("anchor_break_material")));
+                else Reward+=TEXT("\n奖励详情待同步");
+            }
+            else Reward+=HasFlag(Permissions,TEXT("guild_numeric_rewards"))?TEXT("\n本期未开放数值奖励"):TEXT("\n奖励权限待同步");
             Text(Reward,X+16,Top+150,CardW-32,24,96);++Index;
         }
         if(Index)Y+=FMath::DivideAndRoundUp(Index,Columns)*(CardH+Gap);
@@ -282,13 +317,17 @@ void UInkLaunchEventPanel::BuildPanelContent()
         Y+=Text(TEXT("同分同名次。荣誉榜不提供数值排行奖励；贡献不按礼物金额、伤害或境界计分。"),0,Y,W,26)+28;
         Y+=Text(TEXT("同道荣誉榜"),0,Y,W,32)+16;
         const auto Board=Rows(Event,TEXT("leaderboard"));
-        if(!Board.Num())Y+=Text(TEXT("暂无符合荣誉榜条件的成员。需贡献达到30分，并完整参与至少2轮。"),0,Y,W,26);
+        if(!Board.Num())Y+=Text(TEXT("暂无符合荣誉榜条件的成员。入榜资格由服务端确认。"),0,Y,W,26);
         for(const auto& Value:Board)
         {
             const auto Entry=Value&&Value->Type==EJson::Object?Value->AsObject():nullptr;if(!Entry)continue;
             const FString Name=String(Entry,TEXT("name"));
-            Y+=Text(FString::Printf(TEXT("第%.0f名  ·  %s  ·  %.0f分"),Number(Entry,TEXT("rank")),*Name,Number(Entry,TEXT("score"))),0,Y,W,26,52)+12;
+            const FString Rank=HasNumber(Entry,TEXT("rank"))?FString::Printf(TEXT("第%.0f名"),Number(Entry,TEXT("rank"))):TEXT("名次待同步");
+            const FString Score=HasNumber(Entry,TEXT("score"))?FString::Printf(TEXT("%.0f分"),Number(Entry,TEXT("score"))):TEXT("贡献值待同步");
+            Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::FeatureCard,0,Y,W,64);
+            Y+=Text(FString::Printf(TEXT("%s  ·  %s  ·  %s"),*Rank,*Name,*Score),12,Y+8,W-24,24,48)+20;
         }
+        if(PageId==TEXT("LaunchEvent"))Action(BodyCanvas,TEXT("Open_LaunchRank"),TEXT("单独查看完整贡献榜"),0,Y+12,W,Hit,true);
     }
     else
     {
@@ -299,7 +338,9 @@ void UInkLaunchEventPanel::BuildPanelContent()
         {
             int32 Confirmed=0;const auto Tasks=Rows(Event,TEXT("tasks"));
             for(const auto& Value:Tasks)if(Value&&Value->Type==EJson::Object&&Flag(Value->AsObject(),TEXT("confirmed")))++Confirmed;
-            Y+=Text(FString::Printf(TEXT("任务确认 %d / %d  ·  个人贡献 %.0f\n完整历练 %.0f 轮"),Confirmed,Tasks.Num(),Number(Personal,TEXT("score")),Number(Personal,TEXT("complete_count"))),0,Y,W,28)+20;
+            const FString Score=HasNumber(Personal,TEXT("score"))?FString::Printf(TEXT("%.0f"),Number(Personal,TEXT("score"))):TEXT("待同步");
+            const FString Complete=HasNumber(Personal,TEXT("complete_count"))?FString::Printf(TEXT("%.0f"),Number(Personal,TEXT("complete_count"))):TEXT("待同步");
+            Y+=Text(FString::Printf(TEXT("任务确认 %d / %d  ·  个人贡献 %s\n完整历练 %s 轮"),Confirmed,Tasks.Num(),*Score,*Complete),0,Y,W,28)+20;
         }
         else
         {
@@ -352,8 +393,12 @@ void UInkLaunchEventPanel::UpdateLiveLabels()
         FString Time=TEXT("开启后同步服务截止时间");
         if(Event)
         {
-            const double End=Number(Event,TEXT("end")),Now=Number(State,TEXT("server_utc"));
-            Time=FString::Printf(TEXT("截止 %s\n%s%s"),*Date(End),Service&&Service->IsConnected()?TEXT("服务剩余 "):TEXT("上次确认剩余 "),*Remaining(End-Now));
+            if(HasNumber(Event,TEXT("end"))&&HasNumber(State,TEXT("server_utc")))
+            {
+                const double End=Number(Event,TEXT("end")),Now=Number(State,TEXT("server_utc"));
+                Time=FString::Printf(TEXT("截止 %s\n%s%s"),*Date(End),Service&&Service->IsConnected()?TEXT("服务剩余 "):TEXT("上次确认剩余 "),*Remaining(End-Now));
+            }
+            else Time=TEXT("截止时间或服务时间待同步");
         }
         TimeLabel->SetText(FText::FromString(Time));
     }

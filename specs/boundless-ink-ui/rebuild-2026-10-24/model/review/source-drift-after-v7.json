@@ -1,0 +1,41 @@
+{
+  "checked_utc": "2026-10-24T07:17:19.249310+00:00",
+  "scope": "only selected inputs; no full source sweep",
+  "changed": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "captured_sha256": "f55a6a5c85d8dd5cee2f9a07e525dfab4223ef43db5a15931e2b28703682d7c2",
+      "current_sha256": "3dfc31c609d28e56dbaad8e7bd546d6b20137904ebbe9f57241c925ab9a44205"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.cpp",
+      "captured_sha256": "1c394a33a34bcde9fefc45a5a212656114c2e466dad6fcf379d391087317d0d9",
+      "current_sha256": "970b81863d7cf9a3afe626e2051e14f61d0f49584b8fc3e0a238704a1ee3f784"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureJourney.cpp",
+      "captured_sha256": "9ddaa7073f7443aa57967357a2de698140381d6b41faee59ac006aba1e7f5d49",
+      "current_sha256": "27c3b321bb17e59708353c4015dd3dffc242cba547543e321c976f1bc798c7e7"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "captured_sha256": "bbf05682587ccd18af6562c273ecfbe0693f7cae01a78ac48f335aa92af80519",
+      "current_sha256": "a79d3d133419e27295bf08a85044e1764e9b40d37bf061e8a9e5d6513387d4e5"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "captured_sha256": "4b9980772bd333e0c7bee572bbc85dcbc75851170593c64841b0926bf43ba829",
+      "current_sha256": "fa168847e6466cba89b4560641ee9e38e21f8a283cb4d00cbdb61e0d632f536c"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/source-epoch.json",
+      "captured_sha256": "864ca798a89750a36fa9f9d9f2a1b602e2376b4473d8dd42eb86021664aa1c31",
+      "current_sha256": "7609762589a88043453be3afe4765bc26cf5c9e60073679c267fe592e2101200"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_all44_default_pie.py",
+      "captured_sha256": "72bff22a735a98cdeeb47abc53c5cb00ee5d61c9048169cba21cd1a2247e1ed5",
+      "current_sha256": "c756405df8ce5dce36fc616b52cde6d979defb9db69bf38a0ef8488ccc444f93"
+    }
+  ]
+}

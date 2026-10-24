@@ -1,0 +1,649 @@
+{
+  "schema_version": 1,
+  "team_id": "panel-player",
+  "revision": "2026-10-24-player-component-rollout",
+  "approved_page_candidates": false,
+  "asset_count": 16,
+  "assets": [
+    {
+      "id": "home-avatar-frame",
+      "file": "assets/home-avatar-frame-default-v1.png",
+      "sha256": "d915c88273f0652197d9e3ab947b06e60fb30ec42f49df78e300e0d065d1c60b",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        17,
+        1253,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-avatar-frame-default-v1.png"
+    },
+    {
+      "id": "home-avatar-portrait",
+      "file": "assets/home-avatar-portrait-default-v2.png",
+      "sha256": "e7109ca197c805497ea4b42f4c4a46566bf03510bc098cf51b8bb53994f3d022",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        23,
+        34,
+        1224,
+        1238
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-avatar-portrait-default-v2.png"
+    },
+    {
+      "id": "home-identity-ink",
+      "file": "assets/home-identity-ink-default-v1.png",
+      "sha256": "782ebb0d486c635fba8a221b9b2b3493fbd16bff831d3351d11fe81aa52bbd55",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        0,
+        2162,
+        724
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-identity-ink-default-v1.png"
+    },
+    {
+      "id": "home-realm-plaque",
+      "file": "assets/home-realm-plaque-default-v1.png",
+      "sha256": "07fb11e108210c6c4fc9396ba0777fe113ea5ecdea76634822d57bd4ed876cf0",
+      "dimensions_px": [
+        2170,
+        725
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        0,
+        2150,
+        725
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-realm-plaque-default-v1.png"
+    },
+    {
+      "id": "home-health-fill",
+      "file": "assets/home-health-fill-default-v1.png",
+      "sha256": "981729eb0615fb4495afbe72a0ee61c58a4dcd7ab6c16a61c21e30b757e8cda1",
+      "dimensions_px": [
+        1552,
+        1013
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        33,
+        152,
+        1500,
+        956
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-health-fill-default-v1.png"
+    },
+    {
+      "id": "home-bar-track",
+      "file": "assets/home-bar-track-default-v1.png",
+      "sha256": "dc69fd39f235a3bf808ac3941905329326598224db01c97ddc3fd9fecddb0b62",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        70,
+        19,
+        2162,
+        706
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-bar-track-default-v1.png"
+    },
+    {
+      "id": "home-icon-sign-in",
+      "file": "assets/home-icon-sign-in-default-v1.png",
+      "sha256": "d22f22f20e30eceff2a91f19ef049fa775fc4d4cc10c82ee1443a515a89cf639",
+      "dimensions_px": [
+        1480,
+        1063
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        23,
+        1442,
+        1063
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-sign-in-default-v1.png"
+    },
+    {
+      "id": "home-icon-rank",
+      "file": "assets/home-icon-rank-default-v1.png",
+      "sha256": "7f4fa286ee51e3e5e7043d6f911a6784ad7de4b3aebce3840e3d3c4c22004a58",
+      "dimensions_px": [
+        1316,
+        1195
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        19,
+        1302,
+        1179
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-rank-default-v1.png"
+    },
+    {
+      "id": "home-icon-menu",
+      "file": "assets/home-icon-menu-default-v1.png",
+      "sha256": "1ca99c5fc008963aa56be61c4896a709e0910891cc70d84be61f5f75d97c8bd9",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        47,
+        49,
+        1253,
+        1230
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-menu-default-v1.png"
+    },
+    {
+      "id": "home-icon-journey",
+      "file": "assets/home-icon-journey-default-v1.png",
+      "sha256": "ec1894ab5005dddc14c9011011ef96ccd86ac438ec7ec10bcb6ec28cab0b47de",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        17,
+        1240,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-journey-default-v1.png"
+    },
+    {
+      "id": "home-icon-cultivate",
+      "file": "assets/home-icon-cultivate-default-v1.png",
+      "sha256": "db0ce08b0feeb0d634106a2bbf43b46622a27bd1ef5f86e26c17f6b74026a542",
+      "dimensions_px": [
+        1402,
+        1122
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        8,
+        1392,
+        1122
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-cultivate-default-v1.png"
+    },
+    {
+      "id": "home-icon-bag",
+      "file": "assets/home-icon-bag-default-v1.png",
+      "sha256": "5d4aad71f830ee73f114dae94436364e9f4f59c3778fa75ba62e41f94a450ded",
+      "dimensions_px": [
+        1315,
+        1197
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        19,
+        1269,
+        1134
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-bag-default-v1.png"
+    },
+    {
+      "id": "home-icon-activity",
+      "file": "assets/home-icon-activity-default-v1.png",
+      "sha256": "ebd501a884521503ae04cdbe8b27a68e12288bde2b8acfa5168424fc884e7fb7",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        21,
+        1240,
+        1234
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-icon-activity-default-v1.png"
+    },
+    {
+      "id": "home-rank-paper",
+      "file": "assets/home-rank-paper-default-v1.png",
+      "sha256": "485d61226d8c7070d3ae9c20c54e680dff46fd6a94f91712ee01c221b1493902",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        21,
+        2120,
+        724
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-rank-paper-default-v1.png"
+    },
+    {
+      "id": "home-top-tile",
+      "file": "assets/home-top-tile-default-v1.png",
+      "sha256": "ede830e8fb2ddb7547e87aa89c72d4fce1dc0108dd53769243f4328399f959bb",
+      "dimensions_px": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        4,
+        1094,
+        1402
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-top-tile-default-v1.png"
+    },
+    {
+      "id": "home-bottom-cloud",
+      "file": "assets/home-bottom-cloud-default-v1.png",
+      "sha256": "5b58360de47d5077cf61e2864a51feb470490668f10938cde0352622cbcc8273",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "has_alpha_channel": true,
+      "alpha_bbox_px": [
+        0,
+        23,
+        2172,
+        668
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "slice_status": "full-fixed-ratio-no-nine-slice",
+      "states": [
+        "default"
+      ],
+      "source_status": "approved",
+      "source_review": "user-approved",
+      "approved": true,
+      "source_contract_path": "specs/boundless-ink-ui/contracts/component-contract.yaml",
+      "source_output": "assets/components/home-bottom-cloud-default-v1.png"
+    }
+  ]
+}

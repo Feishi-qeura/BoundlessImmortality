@@ -92,7 +92,7 @@ TSharedRef<SWidget> UInkAnchorStatusWidget::RebuildWidget()
 void UInkAnchorStatusWidget::Configure(UInkFrontendWidget* InFrontend)
 {
     Frontend=InFrontend;
-    TextFont=InFrontend?InFrontend->TextFont.LoadSynchronous():InkUiAssets::Load<UFont>(nullptr,TEXT("/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody"));
+    TextFont=InFrontend?InFrontend->TextFont.LoadSynchronous():InkUiAssets::Load<UFont>(nullptr,TEXT("/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"));
     RefreshFromWorld();
 }
 
@@ -101,7 +101,7 @@ void UInkAnchorStatusWidget::NativeConstruct()
     Super::NativeConstruct();SetVisibility(ESlateVisibility::SelfHitTestInvisible);SetIsFocusable(false);
     PortraitFallback=PlaceholderPortrait.LoadSynchronous();
     CachePresentationArt();
-    if(!TextFont)TextFont=InkUiAssets::Load<UFont>(nullptr,TEXT("/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody"));
+    if(!TextFont)TextFont=InkUiAssets::Load<UFont>(nullptr,TEXT("/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"));
     AvatarHost=GetGameInstance()?GetGameInstance()->GetSubsystem<ULiveInteractionSubsystem>():nullptr;
     if(auto* Host=AvatarHost.Get())Host->OnAvatarReady.AddUniqueDynamic(this,&ThisClass::HandleAvatarReady);
     if(DesiredSizeBox)
@@ -315,7 +315,7 @@ void UInkAnchorStatusWidget::NativeTick(const FGeometry& Geometry,float DeltaSec
     Super::NativeTick(Geometry,DeltaSeconds);RefreshFromWorld();
     if(AvatarTexture&&!bAvatarPlaceholder&&MaskedPortrait!=AvatarTexture.Get())
     {
-        if(!PortraitMask)if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/HUD/M_HomeAvatarCircle.M_HomeAvatarCircle")))PortraitMask=UMaterialInstanceDynamic::Create(Material,this);
+        if(!PortraitMask)if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/HUD/M_HomeAvatarCircle.M_HomeAvatarCircle")))PortraitMask=UMaterialInstanceDynamic::Create(Material,this);
         if(PortraitMask){PortraitMask->SetTextureParameterValue(TEXT("Avatar"),AvatarTexture);MaskedPortrait=AvatarTexture;}
     }
     const float Delta=FMath::IsFinite(DeltaSeconds)?FMath::Clamp(DeltaSeconds,0.f,.25f):0;

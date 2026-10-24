@@ -1,0 +1,10 @@
+batch,component,control,source,behavior,approval
+2,UInkResourceDetailBatch2Widget,TitleText,journey.resources[].name,display selected authority row name as live FText,false
+2,UInkResourceDetailBatch2Widget,RowsText,journey.resources[].item_name|quantity|interval_seconds|qi_additive|lease_max_seconds|owners[],show only supplied selected-row facts,false
+2,UInkResourceDetailBatch2Widget,PrimaryButton,selected journey.resources[].id,confirm then emit OnTravelRequested; host re-captures and evaluates InkJourneyAdapter before submit,false
+2,UInkResourceDetailBatch2Widget,StatusText,adapter/service feedback,show confirmation pending enqueue result or unavailable state,false
+2,UInkResourceDetailBatch2Widget,BackButton,navigation stack,emit OnBackRequested,false
+2,UInkJourneySettlementCardWidget,HeadingText|StatusText|Rows,host authority projection,render live text only; no grants or state reads,false
+2,UInkWorldResultBatch2Widget,SettlementCard,snapshot.round plus exact-source reward receipts,show completed stages and individually sourced result rows,false
+2,UInkRaceResultBatch2Widget,SettlementCard,snapshot.race plus matching team and snapshot.lease,show server result and lease separately; no local award,false
+2,UInkJourneyOutcomeBatch2Widget,BackButton,navigation stack,emit OnBackRequested,false

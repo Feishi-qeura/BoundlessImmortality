@@ -1,0 +1,24 @@
+{
+  "assets": [
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\assets\\runtime-source\\journey-map-background-v1.png",
+      "source_sha256": "ecbba015b0f9100ea85eed749af7db5a3796ab73553c82dba29861289d4699a2",
+      "name": "T_NUI_JourneyMapPortrait_V1",
+      "package": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1",
+      "width": 1024,
+      "height": 1536,
+      "approved": false,
+      "usage": "unlabelled map background; all controls and data remain live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\assets\\runtime-source\\journey-map-background-landscape-v1.png",
+      "source_sha256": "6fe816646da0368fe56d3760ae40cc845607f4db1dc8568d23a9089d32a15d62",
+      "name": "T_NUI_JourneyMapLandscape_V1",
+      "package": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1",
+      "width": 1536,
+      "height": 1024,
+      "approved": false,
+      "usage": "unlabelled map background; all controls and data remain live widgets"
+    }
+  ]
+}

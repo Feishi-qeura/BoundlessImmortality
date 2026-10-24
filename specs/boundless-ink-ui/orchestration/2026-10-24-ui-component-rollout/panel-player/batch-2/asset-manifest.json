@@ -1,0 +1,37 @@
+{
+  "revision": "panel-player/batch-2",
+  "approved": false,
+  "generated_at": "2026-10-24T11:35:18+08:00",
+  "assets": [
+    {
+      "id": "saves-page-layout-v1",
+      "path": "assets/pages/saves-v1.png",
+      "page": "Saves",
+      "semantics": "Text-free portrait layout concept with three neutral save cards, blank action controls, and a fixed footer. Not a runtime background.",
+      "width": 941,
+      "height": 1672,
+      "format": "PNG",
+      "bit_depth": 8,
+      "color_type": "RGB",
+      "alpha": false,
+      "sha256": "1C39CCE5537CFB557AC78D215D2C1E74D09F8A055FA1D14ADDA05D718B7D418B",
+      "prompt": "prompts/pages/saves.md",
+      "visual_approval": false
+    },
+    {
+      "id": "settings-page-layout-v1",
+      "path": "assets/pages/settings-v1.png",
+      "page": "Settings",
+      "semantics": "Text-free portrait layout concept with three quality options, two frame-cap options, one reduced-motion toggle, and a fixed footer. Not a runtime background.",
+      "width": 941,
+      "height": 1672,
+      "format": "PNG",
+      "bit_depth": 8,
+      "color_type": "RGB",
+      "alpha": false,
+      "sha256": "C32CCB52D631BFF551C5CB6CDECD53FFE85157E77A5CD1049626560F647C1FAA",
+      "prompt": "prompts/pages/settings.md",
+      "visual_approval": false
+    }
+  ]
+}

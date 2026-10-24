@@ -1,0 +1,34 @@
+{
+  "team": "panel-player",
+  "slice": "review-v4",
+  "updated_at": "2026-10-24T13:42:52+08:00",
+  "approval": "approved:false",
+  "frozen_slices_modified": false,
+  "production_source_modified": false,
+  "production_content_modified": false,
+  "source_patch_applied": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "files": [
+    {
+      "path": "diff/player-c-pc3-02-03.diff",
+      "bytes": 5455,
+      "sha256": "375F596B199613E12CC24DDBBE2C373A828112410B4D9B20C8BE42AF06C574EE"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 575,
+      "sha256": "6BC3CF2A366B2CB380B8BECCEF89EAED658CB59D029FA396BA1EABC5889B46C3"
+    },
+    {
+      "path": "receipt.md",
+      "bytes": 4210,
+      "sha256": "5240085FA70F9B2A203B81A57012BDE3B1471B4580848EB6B179B0D6814B8C39"
+    },
+    {
+      "path": "replacements/player-c-pc3-02-03-slices.md",
+      "bytes": 3422,
+      "sha256": "3D3CA8C6E6B59B51D08302607B6F95C444D1F4B879E046FA4893929E8D7957AA"
+    }
+  ]
+}

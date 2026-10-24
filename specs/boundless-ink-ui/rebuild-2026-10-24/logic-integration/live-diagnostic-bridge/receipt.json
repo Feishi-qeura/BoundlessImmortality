@@ -1,0 +1,12 @@
+{
+  "reason": "Read-only samePID importdata diagnosis; no asset loads/saves; temporary runtime module seam",
+  "owner_before_sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155",
+  "after_sha256": "a3b8022dd936b6c35e7621f94c2e3a82fef522b370e947dd3132627ecf08745c",
+  "restore_required": false,
+  "phase_verify_is_diagnostic_only": true,
+  "recovery_after_sha256": "f5f0bf55c2cba8c93aebc9f4a016fc7b24066081fe0c2f9797830cd1a6ee26a7",
+  "recovery_scope": "Four proven equal-payload real Texture2D objects to exact moved canonical counterparts; full partial-output backup",
+  "two_save_after_sha256": "6c0a68b552f56d0182a74b9ef6f16c44d622d1f35f246eb3f1120cb05034fdcb",
+  "empty_retire_after_sha256": "95cf0b1b7e5f2f77e1c08a005255860fd269bb7f71a32abf1d2a15066fb61b64",
+  "restored_at": "2026-10-24T13:55:08.6185468+08:00"
+}

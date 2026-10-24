@@ -1,0 +1,84 @@
+schema_version: 1
+team_id: panel-activities
+revision: rollout-2026-10-24
+approved: false
+source_page:
+  path: revisions/2026-10-23-activity-state-correction-3/assets/pages/activities-empty-v3.png
+  source_revision_approved: false
+  use: user-authorized candidate processing input and visual continuity only
+components:
+  - component_id: activities-category-tabs
+    kind: control
+    states: [normal, selected, disabled]
+    implementation: UInkActivitiesRolloutPanel::BuildPanelContent / UInkFeaturePanel::Action
+    text_rendering: Unreal TextBlock
+    min_hit_size: [88, 88]
+    responsive: 4 equal columns portrait; wrap/reflow through existing feature panel responsive shell
+    slice: {type: full}
+  - component_id: activity-authority-state-card
+    kind: container
+    states: [loading, disconnected, error, ready]
+    implementation: UInkActivitiesRolloutPanel and UInkActivityCycleRolloutPanel using Surface + TextBlock
+    text_rendering: Unreal TextBlock
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: activity-template-card
+    kind: container
+    states: [configured, disabled, pending-fields]
+    implementation: UInkActivitiesRolloutPanel and UInkActivityCycleRolloutPanel using Surface + TextBlock
+    text_rendering: Unreal TextBlock
+    visible_fields: [name, activity_id, enabled, start_at, end_at]
+    forbidden_inference: [progress, rewards, claim_eligibility, countdown, activity_period]
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: activity-empty-state-card
+    kind: container
+    states: [empty]
+    implementation: UInkActivitiesRolloutPanel and UInkActivityCycleRolloutPanel using Surface + TextBlock
+    text_rendering: Unreal TextBlock
+    mutual_exclusion: empty is rendered only after ready snapshot and zero explicitly classified rows
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: launch-special-offer-entry
+    kind: control
+    states: [feature-disabled, ready-only-with-authoritative-sku-and-price]
+    implementation: UInkActivitiesRolloutPanel shows a truthful disabled entry; route into UInkLaunchEventPanel for activity data; no current SKU/price source found
+    current_behavior: show honest unavailable reason and disabled action while required fields are absent
+    action: no purchase request from this component
+    text_rendering: Unreal TextBlock
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: hud-launch-countdown-frame
+    kind: container
+    source_image: assets/hud-launch-countdown-frame-neutral-v1.png
+    source_prompt: prompts/components/hud-launch-countdown-frame.md
+    states: [neutral]
+    target_logical_size: [200, 80]
+    text_rendering: Unreal TextBlock; frame contains no baked copy
+    slice: {type: 9-slice, margins: [140, 140, 90, 90], unit: source-pixels, preview: pending}
+    approved: false
+  - component_id: launch-event-tabs
+    kind: control
+    states: [normal, selected, disabled]
+    implementation: existing UInkLaunchEventPanel with tabs overview/tasks/guild/honors
+    text_rendering: Unreal TextBlock
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: launch-task-card
+    kind: container
+    states: [authority-data, empty, pending, expired]
+    implementation: existing UInkLaunchEventPanel::BuildPanelContent tab tasks and `LaunchRank` route
+    fields: authority tasks and status only; no local progress fabrication
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: launch-contribution-rank-row
+    kind: container
+    states: [ranked, tied, unranked, empty, disconnected]
+    implementation: existing UInkLaunchEventPanel::BuildPanelContent tab honors and LaunchRank route; only authority leaderboard rows
+    fields: authority leaderboard only; existing fields and privacy rules retained
+    slice: {type: native-layout, renderer: InkPresentationStyle, nine_slice: not-applicable}
+  - component_id: hud-launch-countdown-entry
+    kind: control
+    states: [visible-active-authority-snapshot, hidden-no-active-or-expired, stale-last-confirmed-disconnected]
+    implementation: UInkLaunchHudCountdownWidget::RefreshFromAuthority and HandleOpenLaunchEvent
+    data: WulingPrototypeSubsystem::Snapshot fields launch.status, launch.end, server_utc, manifest.profile
+    action: UInkFrontendWidget::OpenFeaturePanel(LaunchEvent)
+    timer: local monotonic elapsed is added to last server_utc sample; text refreshes once per second
+    text_rendering: Unreal TextBlock
+    red_dot: none; no authoritative unread/claim source is wired
+    slice: {type: 9-slice, margins: [140, 140, 90, 90], unit: source-pixels}
+

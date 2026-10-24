@@ -1,0 +1,53 @@
+{
+  "team_id": "panel-rank",
+  "revision": "rebuild-2026-10-24",
+  "phase": "six-page-components-staged",
+  "updated_at": "2026-10-24T12:50:00+08:00",
+  "scope": [
+    "rank-board:Damage",
+    "rank-board:CultivationSpeed",
+    "rank-board:Anchor",
+    "wuling-overview",
+    "wuling-members",
+    "guild-build",
+    "sword-spirit",
+    "gift-rules"
+  ],
+  "completed": [
+    "read rebuild quickstart and migration authorization; kept all production writes out of Source, Config, and Content",
+    "inspected candidate compositions and consumed shared style, screen, component, VM, action, and binding contracts",
+    "staged independent UUserWidget source for leaderboard variants, Wuling overview/member list, guild construction, sword spirit, and gift rules",
+    "defined data inputs, host-owned callbacks, explicit state handling, stable-id member removal confirmation, catalog version checks, and offline read-only behavior",
+    "generated a text-free transparent Wuling insignia candidate with measured dimensions, alpha, byte count, and SHA-256",
+    "wrote screen, component, asset, page-prompt, and host integration contracts"
+  ],
+  "remaining": [
+    "bind shared font/style tokens; staged C++ still uses fallback fonts pending actual shared font injection",
+    "promote source through the sole logic-integration writer",
+    "import insignia under /Game/newUI/Components/RankWuling and read back texture metadata",
+    "create actual WBP assets under /Game/newUI/Runtime/Pages/Rank and wire routes/root",
+    "verify live service data, pending/error results, permission gates, portrait/landscape layout, and callbacks in PIE",
+    "capture real player-entry screenshots for final visual acceptance"
+  ],
+  "evidence": {
+    "design_source_images_inspected": true,
+    "asset_dimensions_checked": true,
+    "asset_alpha_channel_checked": true,
+    "asset_hash_recorded": true,
+    "static_contract_parse": true,
+    "source_compile": false,
+    "import_verified": false,
+    "route_verified": false,
+    "pie_verified": false,
+    "runtime_screenshot": false,
+    "visual_review": "pending_user"
+  },
+  "approved": false,
+  "production_source_written": false,
+  "content_written": false,
+  "runtime_asset_root": "/Game/newUI",
+  "forbidden_runtime_asset_root": "/Game/UI",
+  "owned_files": [
+    "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/"
+  ]
+}

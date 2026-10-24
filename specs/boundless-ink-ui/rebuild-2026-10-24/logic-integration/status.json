@@ -1,0 +1,182 @@
+{
+  "team": "logic-integration",
+  "updated_at": "2026-10-24T17:47:25.826233+08:00",
+  "phase": "actual_functional_journey_launch_race_provider_UI_running",
+  "source_writer": "unique",
+  "source_change_ledger": "../../orchestration/2026-10-24-ui-component-rollout/logic-integration/visible-source-integration/source-change-ledger.json",
+  "source_epoch_files": 88,
+  "source_ledger_records": 225,
+  "source_compiled": true,
+  "latest_build": {
+    "attempt": 26,
+    "exit_code": 0,
+    "files": 88,
+    "ledger_records": 224,
+    "report": "build-26-result.json"
+  },
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "engine_lease": "../engine-lease.json",
+  "engine_lease_expires": "2026-10-24T18:32:33.7348276+08:00",
+  "own_engine_pids": [
+    39700
+  ],
+  "own_service_pids": [
+    35712
+  ],
+  "runtime_verified": false,
+  "core_runtime_verified": true,
+  "all44_runtime_verified": false,
+  "geometry_provisional": false,
+  "visual_pending_user": true,
+  "migration_executed": true,
+  "migration_final_verification": "../migration/engine-final-verification.json",
+  "post_import_migration_rehash": "post-import-migration-rehash.json",
+  "canonical_packages": 582,
+  "current_newUI_packages": 596,
+  "old_Content_UI_absent": true,
+  "new_default_wbp_saved": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+  "component_imported_count": 13,
+  "component_runtime_reads": "Composite actual snapshots:13 unique; appearance-shared-attribute-runtime-readback.json",
+  "appearance_shared_attribute_runtime_readback": true,
+  "native_NewUI_regressions": {
+    "succeeded": 48,
+    "succeeded_with_warnings": 1,
+    "failed": 0,
+    "not_run": 0,
+    "total": 49,
+    "source_build": 26,
+    "report": "native-tests-07-report/index.json",
+    "warning": "Existing transient automation test world DestroyActor has no context; SafeReentry.StageCoordinatesKeepPawnRoles"
+  },
+  "service_confirmed_operations": [
+    "CreateGuild with dropped-reply sameID/hash retry",
+    "QueryCatalog",
+    "JoinGuild declared fixture",
+    "LearnMethod",
+    "ConfigureMethods",
+    "Equip",
+    "Unequip",
+    "Purchase",
+    "SignIn (placeholder,0Qi)",
+    "RemoveMember",
+    "Build (actual level1)",
+    "Craft",
+    "BuyListing (actual item and stone transfer)",
+    "CreateListing",
+    "CancelListing",
+    "QuoteBreakthrough",
+    "PrepareBreakthrough (BR04 reserve/cancel,BR01 actual8to9 commit)",
+    "CancelBreakthrough (reservation restored)",
+    "QuoteReworkQuality",
+    "ReworkQuality (persisted Q10to18)"
+  ],
+  "service_pending": [],
+  "all44_latest_attempt": {
+    "attempt": 14,
+    "running": false,
+    "passed": true,
+    "scope": "All44 route/render and typedBack; core/Journey/Character physical entries distinguished",
+    "checks": 906,
+    "captures": 56,
+    "strict_exact_aspect_ratio": "9:16",
+    "report": "current44-formal-audit.json"
+  },
+  "remaining": [
+    "Human visual approval",
+    "Physical phone touch/safe-area/performance acceptance",
+    "Live platform integration and release acceptance",
+    "Five contextual or earned-result trigger gaps listed explicitly"
+  ],
+  "current_pie": "functional-journey-pie-01",
+  "avatar_https_regression": {
+    "passed": true,
+    "report": "service-pie-10/report.json",
+    "actual_http_statuses": [
+      503,
+      200
+    ],
+    "actual_request_gap_seconds": 72.265,
+    "decoded_resource": "/Engine/Transient.Texture2D_6",
+    "scope": "default root temporary declared display-only row; normal provider resumed, dirty0"
+  },
+  "authority_persisted_audits": [
+    "actual-service-persisted-audit.json:11passed",
+    "actual-stage-persisted-audit.json:7passed"
+  ],
+  "stage_actual_negative": "actual realm8to9 change disabled old stage submit and old confirmation had no physical Slate hit path; native tuple individual-field tests separate",
+  "reflection_preflight": {
+    "report": "native-negative-request-preflight.json",
+    "passed": true,
+    "executed_business_action": false,
+    "note": "Native06 with ExecutePythonScript exited after preflight before automation queue; NOT a formal49test result"
+  },
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "target_platform": "mobile_live_interaction",
+  "landscape_acceptance_required": false,
+  "device_platform_acceptance": false,
+  "all44_route_render_verified": true,
+  "all44_player_entry_verified": false,
+  "component_painted_current_portrait": {
+    "passed": true,
+    "count": 12,
+    "total_imported": 13,
+    "landscape_map_out_of_scope": true,
+    "report": "current-runtime-component-paint-audit.json"
+  },
+  "ui_entry_attempt01": {
+    "passed": false,
+    "product_failure": false,
+    "reason": "Selector counted two traversal records of exactly the same OpenWuling UObject as two controls;02 uses object identity only, retaining all raw metrics"
+  },
+  "ui_entry_attempt02": {
+    "passed": false,
+    "product_failure": false,
+    "reason": "Snapshot omits caption field for action-style Ext_Back; actual button exists.03 reads real UTextBlock descendants, same physical Slate path, no filtering of metrics."
+  },
+  "all44_player_view_entries_verified": true,
+  "all44_contextual_business_triggers_verified": false,
+  "player_entry_matrix": "current44-player-entry-matrix.json",
+  "business_subject_or_earned_result_trigger_gaps": [
+    "RegionDetail",
+    "ResourceDetail",
+    "EventSettlement",
+    "RaceSettlement",
+    "ResourceRewards"
+  ],
+  "merchant_appearance_final_audit": "merchant-appearance-final-audit.json",
+  "band_display_current": {
+    "passed": true,
+    "checks": 12,
+    "report": "stage-band-display-01/report.json",
+    "business_mutation": false
+  },
+  "expanded_appearance_shared_attribute_unique_painted": 9,
+  "machine_scope_complete": false,
+  "ready_for_supervisor_closeout": false,
+  "all44_view_navigation_runtime_verified": true,
+  "production_release_accepted": false,
+  "final_verification": "final-portrait-machine-verification.json",
+  "normal_shutdown": "final-owned-process-shutdown.json",
+  "remaining_machine_tasks": [
+    "Repair actual session.active additive provider with exact exception ledger and red/green tests",
+    "Actual UI applicable world travel, selected detail context, resource queue/cancel, eligible StartLaunch",
+    "Investigate actual settlement/source correlation; exact backend gaps for supervisor decision"
+  ],
+  "ready_for_supervisor_review": false,
+  "reopened_at": "2026-10-24T17:41:48.347286+08:00",
+  "reopened_reason": "Core V11-RACE-ACTIVE-01 P1 actual identity.active authority projection omission; applicable functional chains still required",
+  "total_recorded_production_files": 89,
+  "backend_provider_projection": {
+    "path": "Tools/CultivationService/authority.py",
+    "ledger_record": 224,
+    "sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+    "change": "Only identity.active=bool(ctx.session[active]) additive export",
+    "new_regression_tests": 7,
+    "new_regression_passed": true,
+    "existing_service_tests": 102,
+    "existing_service_tests_passed": true,
+    "cpp_unchanged": true,
+    "source26_44render_evidence_retained": true
+  }
+}

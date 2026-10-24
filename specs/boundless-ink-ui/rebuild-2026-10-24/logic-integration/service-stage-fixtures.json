@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-10-24T07:59:53.638592+00:00",
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+  "declared_test_preconditions": true,
+  "naturally_earned": false,
+  "scope": "Separate app namespace and two synthetic users. Real rule stage realm and qi threshold; backend actions remain unchanged.",
+  "actors": [
+    {
+      "app": "NewUIStageAcceptance20261024",
+      "room": "newui-stage-cancel-room",
+      "user": "newui-stage-cancel",
+      "stage": {
+        "stage_id": "BR04",
+        "name": "金丹六阶→元婴",
+        "from_realm_index": 21,
+        "to_realm_index": 22,
+        "min_major": 3,
+        "region": "妖兽林",
+        "subarea": "古修育婴府",
+        "core_species": "MAT_BR04_C01",
+        "core_count": 1,
+        "guard_required": false,
+        "guard_max_count": 3,
+        "essence_max_count": 4,
+        "treasure_max_count": 1,
+        "guard_species_count": 5,
+        "essence_species_count": 5,
+        "treasure_species_count": 5,
+        "old_major_break_material_cost": 80,
+        "old_major_stone_cost": 240,
+        "major_stone_at_commit": 0,
+        "viewer_material_cost": 0,
+        "tribulation": true
+      },
+      "before": {
+        "realm_index": 0,
+        "name": "练气一阶",
+        "qi": 0.0,
+        "total_qi": 0.0,
+        "qi_to_next": 60,
+        "stone_to_next": 60,
+        "material_to_next": 20
+      },
+      "after": {
+        "realm_index": 21,
+        "name": "金丹六阶",
+        "qi": 5400.0,
+        "total_qi": 0.0,
+        "qi_to_next": 5400,
+        "stone_to_next": 240,
+        "material_to_next": 80
+      },
+      "items": {
+        "MAT_BR04_C01_G1": 2
+      }
+    },
+    {
+      "app": "NewUIStageAcceptance20261024",
+      "room": "newui-stage-rework-room",
+      "user": "newui-stage-rework",
+      "stage": {
+        "stage_id": "BR01",
+        "name": "练气九阶→筑基初期",
+        "from_realm_index": 8,
+        "to_realm_index": 9,
+        "min_major": 0,
+        "region": "青云山",
+        "subarea": "凝脉谷",
+        "core_species": "MAT_BR01_C01",
+        "core_count": 1,
+        "guard_required": false,
+        "guard_max_count": 3,
+        "essence_max_count": 3,
+        "treasure_max_count": 1,
+        "guard_species_count": 5,
+        "essence_species_count": 5,
+        "treasure_species_count": 5,
+        "old_major_break_material_cost": 20,
+        "old_major_stone_cost": 60,
+        "major_stone_at_commit": 0,
+        "viewer_material_cost": 0,
+        "tribulation": false
+      },
+      "before": {
+        "realm_index": 0,
+        "name": "练气一阶",
+        "qi": 0.0,
+        "total_qi": 0.0,
+        "qi_to_next": 60,
+        "stone_to_next": 60,
+        "material_to_next": 20
+      },
+      "after": {
+        "realm_index": 8,
+        "name": "练气九阶",
+        "qi": 660.0,
+        "total_qi": 0.0,
+        "qi_to_next": 660,
+        "stone_to_next": 60,
+        "material_to_next": 20
+      },
+      "items": {
+        "MAT_BR01_C01_G1": 2,
+        "MAT_BR01_C01_G2": 2
+      }
+    }
+  ]
+}

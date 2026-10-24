@@ -1,0 +1,77 @@
+{
+  "scope": "Actual portrait UI LaunchStart, exact selected resource detail/queue/cancel, actual matched race, truthful active/missing/inactive refusals and six real native common actions/settlement. Isolated declared actors/test clock, real rules unchanged.",
+  "checks": [
+    {
+      "name": "isolated Saved directory",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkDisplay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkBody",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual new default asset",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "begin actual default PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact initial9:16",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'StartGame'}",
+      "passed": false,
+      "actual": []
+    }
+  ],
+  "captures": [],
+  "finished": false,
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "target_platform": "mobile_live_interaction",
+  "device_platform_acceptance": false,
+  "engine_pid": 39700,
+  "started_at": "2026-10-24T09:47:22.274464+00:00",
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "visual_approval": "pending_user",
+  "edges": [],
+  "continues_actual_ui_entry03": true,
+  "authority_provider_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+  "passed": false,
+  "actual_service_enabled": true,
+  "current_step": "reveal {'action': 'StartGame'}",
+  "layout_generation_waits": [
+    {
+      "step": 1,
+      "key": "entry-reveal-1",
+      "snapshot": "pre-layout-generation-1-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    }
+  ],
+  "navigation_alias_readbacks": [
+    {
+      "spec": {
+        "action": "StartGame"
+      },
+      "raw_count": 0,
+      "unique_object_count": 0
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_01.py\", line 338, in tick\n    REPORT['current_step']=name;result=action()\n                                       ^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_01.py\", line 208, in <lambda>\n    STEPS.extend([('reveal '+str(spec),lambda s=spec:reveal(s),.25),('hit '+str(spec),lambda s=spec:hit(s),.55),('destination '+target,lambda t=target,c=context:observed(t,c),.1)])\n                                                     ^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_01.py\", line 185, in reveal\n    b=pick(spec)\n      ^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_01.py\", line 180, in pick\n    check('one actual enabled UI subject '+str(spec),len(matches)==1,matches)\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_01.py\", line 30, in check\n    if not passed: raise AssertionError(name+': '+str(actual))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: one actual enabled UI subject {'action': 'StartGame'}: []\n",
+  "dirty_packages_after_pie": [],
+  "finished_at": "2026-10-24T09:47:38.748324+00:00"
+}

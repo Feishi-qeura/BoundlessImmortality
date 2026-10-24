@@ -1,0 +1,186 @@
+{
+  "import_verified": true,
+  "wbp_migrated": true,
+  "route_wired": true,
+  "logic_verified": true,
+  "visual_pending_user": true,
+  "assets": [
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable.T_Journey_WorldNodeAvailable",
+      "width": 348,
+      "height": 359,
+      "registry_package": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable",
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "srgb": true,
+      "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "exported_png": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\texture-readback\\T_Journey_WorldNodeAvailable.png",
+      "source_sha256": "080a6d45502f62e050fc1f8b07f9d14e32df3a37fc27de207f998ddc059a3268"
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked.T_Journey_WorldNodeLocked",
+      "width": 342,
+      "height": 358,
+      "registry_package": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked",
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "srgb": true,
+      "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "exported_png": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\texture-readback\\T_Journey_WorldNodeLocked.png",
+      "source_sha256": "eef23ab7ce887ffec7daf10b3080b986a6afce70cd580b30b0fda628e2cb3b2d"
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "width": 1448,
+      "height": 1086,
+      "registry_package": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "srgb": true,
+      "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "exported_png": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\texture-readback\\T_RankWulingPaperPanel_Default_v1.png",
+      "source_sha256": "9b243e6844d92ff182d88b3bd28807583e2ff1cf51f7884b9326a36a0f4ad293"
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "width": 2172,
+      "height": 724,
+      "registry_package": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "srgb": true,
+      "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "exported_png": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\texture-readback\\T_HudLaunchCountdownFrame_v1.png",
+      "source_sha256": "5ed2166752c6e891874ca9318d1ba74887d62a8db32cbd15bccd7541ae4b9985"
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1.T_BreakthroughMaterialSlotFrame_Default_v1",
+      "width": 1254,
+      "height": 1254,
+      "registry_package": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1",
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "srgb": true,
+      "lod_group": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "exported_png": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\texture-readback\\T_BreakthroughMaterialSlotFrame_Default_v1.png",
+      "source_sha256": "8b93fa72780f31737ca5fc7926b5c79f7f796bcaf14c773cb2ba47b62193d9e3"
+    }
+  ],
+  "wbps": [
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "saved": true,
+      "sha256": "ddc3152757cd7f0660ed15d34a172154043a46e06ae67a0f31ccf8e9281e91bb"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+      "saved": true,
+      "sha256": "7a2aabb419fa56b4179519ba7061ea2f0d58a65a88e3c40a684a87ef6b4d1044"
+    }
+  ],
+  "batch_sha256": "7b9d67e9e068d0966838b68390f7881737b913fcf27e206bb5f4270a30fb73b4",
+  "hud_cdo_reference": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+  "awaiting": [
+    "user visual review",
+    "separate later batches"
+  ],
+  "texture_source_alpha_readback": [
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable.T_Journey_WorldNodeAvailable",
+      "size": [
+        348,
+        359
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        340,
+        351
+      ],
+      "alpha_matches_source": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked.T_Journey_WorldNodeLocked",
+      "size": [
+        342,
+        358
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        334,
+        350
+      ],
+      "alpha_matches_source": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "size": [
+        1448,
+        1086
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        27,
+        1410,
+        1068
+      ],
+      "alpha_matches_source": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        13,
+        21,
+        2162,
+        698
+      ],
+      "alpha_matches_source": true
+    },
+    {
+      "object_path": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1.T_BreakthroughMaterialSlotFrame_Default_v1",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        13,
+        1234,
+        1254
+      ],
+      "alpha_matches_source": true
+    }
+  ],
+  "verification_scope": "FIRST FIVE TEXTURES/TWO WBP + bounded source/UI/authority integration; not all44-screen completion",
+  "verification_report": "engine-final-verification.json"
+}

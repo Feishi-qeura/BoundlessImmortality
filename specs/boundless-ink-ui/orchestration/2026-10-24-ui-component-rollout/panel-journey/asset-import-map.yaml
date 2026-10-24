@@ -1,0 +1,28 @@
+schema_version: 1
+team_id: panel-journey
+status: prepared-not-imported
+approved: false
+engine: Unreal Engine 5.8
+import_script: tools/import_journey_assets.py
+content_destination: /Game/UI/Ink/ComponentRollout20261024/Journey
+expected_source_root: assets/sprites
+required_texture_settings:
+  srgb: true
+  compression: UserInterface2D
+  texture_group: UI
+  mipmaps: disabled
+  never_stream: true
+  preserve_alpha: true
+  texture_filter: bilinear
+items:
+  - {component_id: world-node-explored, texture_name: T_Journey_WorldNodeExplored, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeExplored}
+  - {component_id: world-node-available, texture_name: T_Journey_WorldNodeAvailable, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable}
+  - {component_id: world-node-locked, texture_name: T_Journey_WorldNodeLocked, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked}
+  - {component_id: resource-pin-free, texture_name: T_Journey_ResourcePinFree, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_ResourcePinFree}
+  - {component_id: resource-pin-temporary, texture_name: T_Journey_ResourcePinTemporary, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_ResourcePinTemporary}
+  - {component_id: resource-pin-contest-open, texture_name: T_Journey_ResourcePinContestOpen, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_ResourcePinContestOpen}
+  - {component_id: resource-pin-expired, texture_name: T_Journey_ResourcePinExpired, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_ResourcePinExpired}
+  - {component_id: fortune-great, texture_name: T_Journey_FortuneGreat, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_FortuneGreat}
+  - {component_id: fortune-good, texture_name: T_Journey_FortuneGood, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_FortuneGood}
+  - {component_id: fortune-neutral, texture_name: T_Journey_FortuneNeutral, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_FortuneNeutral}
+  - {component_id: fortune-bad, texture_name: T_Journey_FortuneBad, package: /Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_FortuneBad}

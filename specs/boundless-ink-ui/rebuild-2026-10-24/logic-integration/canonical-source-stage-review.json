@@ -1,0 +1,231 @@
+{
+  "files": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "before_sha256": "f587a15fec82a8fd7156ee4c6fbf729b30fbcc9e23bb142a20ad9e4fa1fb2678",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkAnchorStatusWidget.cpp",
+      "staged_sha256": "a9c786160c83acad6b317f5e87202a2f0fa948bbd0d7eb43a2ad18ddb34fa0da"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+      "before_sha256": "24b7448f9068fa4979aeae1db03c64fab18dba4685f3b0544695a42ae9142ff1",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkCharacterCultivationWidget.cpp",
+      "staged_sha256": "756f387083ce86e84d7c5c597ef47bb152667a9c11599e9a69d35ae872235b1d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "before_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkCharacterPanels.cpp",
+      "staged_sha256": "2945be1300f789786d709b7da7a2fd47bc399ae900a32eb6fbc1d56a9636d756"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkDrawPanel.cpp",
+      "before_sha256": "5111ff908acc472af122683734ab43073b62437d4116c801da7baadd8ca34fd2",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkDrawPanel.cpp",
+      "staged_sha256": "94cc805cd04efec12e5b76ab97a47a0eded826afe35ef5b99e8246b21b96e778"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "before_sha256": "79e71f172f6679f9959a077b5eb1298957a1560ef3fe76dca4d64e2f15c9c02a",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkExtensionWidget.cpp",
+      "staged_sha256": "722c6522fe039ff336ded0e0cbe935679eae0b6568dfb266f6462eeddf92623e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "before_sha256": "4b19973d09470e57b480c097f8ea293f5a4572275eb08cad7819d7051ff40163",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkFeatureGroupPanel.cpp",
+      "staged_sha256": "5fcc507d0489386da632e2fbef315011d1fd66a921549ba2feaa5a51fe9d0045"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "before_sha256": "b4f59b2a1f17c2c1243ff80eb6db886cf729d3ee10ba1d807f29042656deda6c",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkFeaturePanel.cpp",
+      "staged_sha256": "c49e9c993a247b94694157b93ed0e75070c3ec5a6acd50c1482345a1b4acbaeb"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "before_sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkFrontendExtensions.cpp",
+      "staged_sha256": "b649cd2245c5ddbc94074640e7723c53b49c5f301d5e181241831adbc29c27ba"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "before_sha256": "33925b5b9e350c1de354a755fffac73911ebb801578ebe6833a8a70ae58a4619",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkFrontendWidget.cpp",
+      "staged_sha256": "d1226fb1062a224fec59302cb57c21a40d9084c82809b08e1e1a54eca2f22eef"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHomeArt.cpp",
+      "before_sha256": "f83aeed24062fc23f411d05bef08884eb2de74719c6203d8e53221107137a4fc",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkHomeArt.cpp",
+      "staged_sha256": "e699cbe283f6a503546f62c9c9aa68b0809c8509e574e7c1c1e97b2352cbe78b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "before_sha256": "f987f0d89d982dcc695e9d0c1207b57014a3adc412c5eb460ea75f2d454f6807",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkInventoryWidget.cpp",
+      "staged_sha256": "93b1268d0bf879574fa748fb97a2ddff1a14f862fc65f07192246e7760b1e8e1"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "before_sha256": "f3980b151a5cb4f6cb646e6331928c7e785501c94693d37e9f95fb6db7f90419",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkLeaderboardWidget.cpp",
+      "staged_sha256": "2ae6166853f0cda1cc0b03cdb75b4a12fee5fbdb20f2a9268db8d0aa0906953f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.cpp",
+      "before_sha256": "54b79e05caa154e8c9f7779049958c03d61d0b3a46b7e0ce1fe899d14db18e68",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkNiagaraTitleWidget.cpp",
+      "staged_sha256": "4ee6b0eee74bf8c6f3cfe51ba9e0b0a316c219fafd5526a2f2f0076488204f45"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.cpp",
+      "before_sha256": "3b5dda4ee33b21537d839432949639f50cc82494837527ee19dff4c6369b8173",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkPresentationStyle.cpp",
+      "staged_sha256": "1d1a4fbc830be8d2049a530d0bf86d68ab83de566add74ced3a8ed88e40f7b14"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.cpp",
+      "before_sha256": "b6ca8ea65a1bf8ed9586cf9e56f7b0fa1bbe9c4f90edb5baa2ca15028a639ae2",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\InkSignInChestWidget.cpp",
+      "staged_sha256": "8bf8744996887b5d1f6cb09214644157ad8200f2a11ea8890dcd51f0783ba6f0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkNiagaraTitleTests.cpp",
+      "before_sha256": "07ef7defe6fbf645f677353ddffb2ffb15e1932a9cbb168009ba5047c7796d43",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\Tests\\InkNiagaraTitleTests.cpp",
+      "staged_sha256": "727a094c1c3f143031afff36bc87c3779bfd423f223c85de11f0994af2d260a9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "before_sha256": "4c68bb869ee130fd602766d911a505c475dbf068bd5b591cc7eb61e9e5a89f1c",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkJourneyMapPanel.cpp",
+      "staged_sha256": "1b773ceb42de47e52823f5359b25881c68d1def1175dee9447ef9761f94bdcf8"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkRewardReceiptPanel.cpp",
+      "before_sha256": "0a5e30fefdd3ee4dcbc2b6b8e9112d64f128ab9af0911bd53cc298a8c347577d",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkRewardReceiptPanel.cpp",
+      "staged_sha256": "cfd9d455ce0b428bf2e4191e091671799a7c3d3dfc5e7fffec25c7c67b6e3615"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.cpp",
+      "before_sha256": "84f8f5353a2b9c3f5e798f527f982c26820eb05e8a6814f41ff0643eafb2bed8",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkUiTheme.cpp",
+      "staged_sha256": "4b30bd0c401b29901b991d25deb6eca5abc87b82380b599ec9baae1818ef81e1"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "before_sha256": "009ceedf240b6cc5c197bb896377000de9945c9c2ac8c6624c2e075f873977d1",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkWulingSectPanel.cpp",
+      "staged_sha256": "79da80a424c24cdaa503ec39bcffdfb8305fa0c0b03d6f88b64383907330ece2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "before_sha256": "cfdcaa6afba605c463c2636583d8b0fcf99b6586083f1de900f4220b20a09f27",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkLaunchHudCountdownWidget.cpp",
+      "staged_sha256": "578afcd5d174311048fac3c4108816ba151f64eb7e6d4cea62a61a3da13737b9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "before_sha256": "eb45f6f47af844b0ac2306a811da62f6eb000c689901e2a55222bd468cd3b6f6",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Journey\\JourneyRolloutWidgets.cpp",
+      "staged_sha256": "01a8aa2d66abd63851d88c40e64b736ec84474a8a34bf5603fa3c7af36805f66"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.cpp",
+      "before_sha256": "43202b429c56885248e63a946f83ff1978b34d8c89971d5a671f1ec242342801",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicJourney\\InkRolloutMaterialSlotWidget.cpp",
+      "staged_sha256": "756915f00a9d1562d431e131412c8707052002aaa7016d4be7d7104dccc89943"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "before_sha256": "3160a5501cd492b4eb03285a2bccb6b7891c029f90b83bd0f192b84c9740aefa",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortalityEditor\\Private\\InkCultivationEditorLibrary.cpp",
+      "staged_sha256": "fe8e6a9da3736e275adbff245e6206322f1acff7ee71001b93a970488ad649ad"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "before_sha256": "6f432a36c65183280e608298fe5f00b9d64c8a193d67259f30f74ba0e57e54f6",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortalityEditor\\Private\\InkFrontendEditorLibrary.cpp",
+      "staged_sha256": "2d71011724bec1cf30e4a611590b3e661f115db1b45e7a2532c44c03679022a4"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "before_sha256": "7494fe285c79d6906a8c05fd86518d61f9b6f1cabe15c597df154365cced96bc",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortalityEditor\\Private\\InkUiStyleEditorLibrary.cpp",
+      "staged_sha256": "fb14720e2535605dd3f2888bc0b9b38b4a43f0570e06f07346335b398e9260be"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "before_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\LiveWeapons\\LiveGMControlPanel.cpp",
+      "staged_sha256": "866f216275ccb16352e218f91bd0b46dc2eba9bec32ba7488bf7bd402519f481"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "before_sha256": "bd2e49841ae055bee3b022e43e128705e7df59b03628464b05a3d1af34fcc974",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\LiveWeapons\\LiveGMOverlay.cpp",
+      "staged_sha256": "216906a0ae95326da258310fd780edddcad695e0d935dda2cec56dba25fef6d1"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveTitleEffectsComponent.cpp",
+      "before_sha256": "aee1bf9ff0eba4bd81c38fa1e541401d0f2e5b77d8fdcd6031870fc09cfe67ca",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\LiveWeapons\\LiveTitleEffectsComponent.cpp",
+      "staged_sha256": "f9a01e32031330f987dce7ccb691f5174a91d180c46ca15283a69956f69145b2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.cpp",
+      "before_sha256": "5d26b902323aa2dd267ceec488e2cdbb311cc5232233b2cb2cde884de513a15f",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkUiAssetPaths.cpp",
+      "staged_sha256": "c5b7d1a40bcfe21e1c9ddc4d80a33595fafc3938cd322387a2a5a34a5d2b34d8"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.h",
+      "before_sha256": "f0b86732283b977628faf18f84a4ae9b4c687d282935d43cace6a0d93138468d",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Source\\BoundlessImmortality\\Frontend\\UI\\InkUiAssetPaths.h",
+      "staged_sha256": "8fddf90110b2f07217956a238ca7eebe1c30929aff4ee9913d44f06282f31444"
+    },
+    {
+      "path": "Config/DefaultEngine.ini",
+      "before_sha256": "cd01dfd7e18e1751bb3a98e7119d3b56e8a2e4f7de67396923d1e59efacbc10f",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Config\\DefaultEngine.ini",
+      "staged_sha256": "cf38e1a74a67dd705a5cfc97eb11560f1b98be49bea97825c1e6a9f080e3dff9"
+    },
+    {
+      "path": "Config/DefaultGame.ini",
+      "before_sha256": "402b33749a21620884d107d45a409f0acc00113e9f64ae544a3d868111a1f6f0",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\canonical-source-stage\\Config\\DefaultGame.ini",
+      "staged_sha256": "17c719cb37b036717f49bd67e0193194d308ff7d77c0e856495e379e870c5ee0"
+    }
+  ],
+  "unresolved": [],
+  "mapped_packages": 1151,
+  "exceptions": [
+    "LegacyUiRedirectorFixupCommandlet.cpp",
+    "NewUiMigrationExactFixup.cpp",
+    "ScopedKnownRenameWarning.cpp"
+  ],
+  "ambiguous_canonical_names": {
+    "M_TitleMoteUI": [
+      "/Game/newUI/Ink/Materials/Shared/M_TitleMoteUI",
+      "/Game/newUI/Ink/Materials/Shared/Origin_0a1a0024/M_TitleMoteUI"
+    ],
+    "NS_AvatarFrameParticles": [
+      "/Game/newUI/Ink/Niagara/HUD/NS_AvatarFrameParticles",
+      "/Game/newUI/Ink/Niagara/HUD/Origin_bd53e1fc/NS_AvatarFrameParticles"
+    ],
+    "NS_HonorParticles": [
+      "/Game/newUI/Ink/Niagara/Shared/NS_HonorParticles",
+      "/Game/newUI/Ink/Niagara/Shared/Origin_324c5242/NS_HonorParticles"
+    ],
+    "NS_RealmIconParticles": [
+      "/Game/newUI/Ink/Niagara/Shared/NS_RealmIconParticles",
+      "/Game/newUI/Ink/Niagara/Shared/Origin_349aca5e/NS_RealmIconParticles"
+    ],
+    "NS_RealmParticles": [
+      "/Game/newUI/Ink/Niagara/Shared/NS_RealmParticles",
+      "/Game/newUI/Ink/Niagara/Shared/Origin_64b59c08/NS_RealmParticles"
+    ]
+  }
+}

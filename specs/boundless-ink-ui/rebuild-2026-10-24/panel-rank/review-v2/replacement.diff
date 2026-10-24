@@ -1,0 +1,1223 @@
+--- panel-rank/staged-source/InkRankWulingPages.h
++++ panel-rank/review-v2/staged-source/InkRankWulingPages.h
+@@ -1,7 +1,7 @@
+ #pragma once
+ 
+ #include "CoreMinimal.h"
+-#include "Blueprint/UserWidget.h"
++#include "InkRankWulingPageBase.h"
+ #include "InkRankWulingPages.generated.h"
+ 
+ class UBorder;
+@@ -12,6 +12,7 @@
+ class UTextBlock;
+ class UTexture2D;
+ class UVerticalBox;
++class UImage;
+ 
+ UENUM(BlueprintType)
+ enum class EInkRankPageState : uint8 { Unknown, Unavailable, Loading, Empty, Data, Pending, Offline, Error, Disabled };
+@@ -101,21 +102,23 @@
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkWulingMemberSelected, FString, UserId);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkWulingMemberPageRequested, int32, Cursor);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkWulingMemberRemoveRequested, FString, UserId);
++DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkRankAvatarRequested, FString, ParticipantId);
+ 
+ /** Independent UMG leaderboard page. The host maps authoritative providers into data and owns route changes. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkRankBoardPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkRankBoardPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+     UPROPERTY(BlueprintAssignable) FInkRankCategoryRequested OnCategoryRequested;
+     UPROPERTY(BlueprintAssignable) FInkRankScopeRequested OnScopeRequested;
+     UPROPERTY(BlueprintAssignable) FInkRankRetryRequested OnRetryRequested;
++    UPROPERTY(BlueprintAssignable) FInkRankAvatarRequested OnAvatarRequested;
+     UFUNCTION(BlueprintCallable) void SetBoardData(const FInkNewRankBoardData& InData);
++    UFUNCTION(BlueprintCallable) void SetParticipantAvatar(const FString& ParticipantId, UTexture2D* Avatar);
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     UPROPERTY(Transient) TObjectPtr<UVerticalBox> RowsBox = nullptr;
+     UPROPERTY(Transient) TObjectPtr<UTextBlock> StatusText = nullptr;
+     UPROPERTY(Transient) TObjectPtr<UTextBlock> TitleText = nullptr;
+@@ -125,14 +128,18 @@
+     UPROPERTY(Transient) TObjectPtr<UTextBlock> SelfMetricText = nullptr;
+     UPROPERTY(Transient) TArray<TObjectPtr<UButton>> CategoryTabs;
+     UPROPERTY(Transient) TArray<TObjectPtr<UButton>> ScopeTabs;
++    UPROPERTY(Transient) TMap<FString, TObjectPtr<UTexture2D>> ParticipantAvatarCache;
++    UPROPERTY(Transient) TMap<FString, TObjectPtr<UImage>> AvatarImagesByParticipant;
++    TSet<FString> AvatarRequestsInFlight;
+     FInkNewRankBoardData Data;
+     void BuildPage();
+     void RefreshPage();
++    virtual void RebuildForThemeChange() override;
+ };
+ 
+ /** Independent Wuling summary page; actions are descriptions and ids supplied by the host. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkWulingOverviewPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkWulingOverviewPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+@@ -141,15 +148,15 @@
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     FInkWulingOverviewData Data;
+     void BuildPage();
+     void RefreshPage();
++    virtual void RebuildForThemeChange() override;
+ };
+ 
+ /** Independent paged member page; host supplies selection and authoritative permission state. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkWulingMembersPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkWulingMembersPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+@@ -161,7 +168,6 @@
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     FInkWulingMembersData Data;
+     FString PendingRemoveUserId;
+     bool bConfirmRemove = false;
+@@ -170,4 +176,5 @@
+     void RefreshPage();
+     void ConfirmRemove();
+     void CancelRemove();
++    virtual void RebuildForThemeChange() override;
+ };
+--- panel-rank/staged-source/InkRankWulingPages.cpp
++++ panel-rank/review-v2/staged-source/InkRankWulingPages.cpp
+@@ -2,6 +2,7 @@
+ 
+ #include "Components/Border.h"
+ #include "Components/Button.h"
++#include "Components/ButtonSlot.h"
+ #include "Components/HorizontalBox.h"
+ #include "Components/HorizontalBoxSlot.h"
+ #include "Components/Image.h"
+@@ -13,6 +14,8 @@
+ #include "Components/VerticalBoxSlot.h"
+ #include "Components/Overlay.h"
+ #include "Components/OverlaySlot.h"
++#include "Components/WrapBox.h"
++#include "Components/WrapBoxSlot.h"
+ #include "Blueprint/WidgetTree.h"
+ #include "Engine/Texture2D.h"
+ 
+@@ -27,14 +30,14 @@
+     const FLinearColor Warning(0.612f, 0.263f, 0.212f, 1.f);   // #9C4336
+     const FLinearColor Muted(0.322f, 0.349f, 0.310f, 1.f);     // #52594F
+ 
+-    UTextBlock* AddText(UWidgetTree* Tree, UPanelWidget* Parent, const FString& Value,
++    UTextBlock* AddText(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UPanelWidget* Parent, const FString& Value,
+         int32 Size, FLinearColor Color = Ink, ETextJustify::Type Align = ETextJustify::Left)
+     {
+         if (!Tree || !Parent) return nullptr;
+         auto* Text = Tree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+         Text->SetText(FText::FromString(Value));
+         Text->SetColorAndOpacity(FSlateColor(Color));
+-        Text->SetFont(FSlateFontInfo(NAME_None, Size, FName(TEXT("Regular"))));
++        Text->SetFont(Owner->MakeThemeFont(Size, Size >= 44));
+         Text->SetAutoWrapText(true);
+         Text->SetJustification(Align);
+         Parent->AddChild(Text);
+@@ -53,25 +56,26 @@
+         return Border;
+     }
+ 
+-    UButton* AddButton(UWidgetTree* Tree, UPanelWidget* Parent, const FText& Label,
++    UButton* AddButton(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UPanelWidget* Parent, const FText& Label,
+         bool bEnabled, TFunction<void()>&& OnPressed,
+         FLinearColor Fill = FLinearColor(0.91f,0.87f,0.78f,1.f), FLinearColor TextColor = Ink)
+     {
+-        auto* Button = Tree->ConstructWidget<UButton>(UButton::StaticClass());
++        auto* Button = Tree->ConstructWidget<UInkRankWulingCallbackButton>(UInkRankWulingCallbackButton::StaticClass());
+         Button->SetBackgroundColor(Fill);
+         Button->SetIsEnabled(bEnabled);
+-        Button->SetPadding(FMargin(20.f, 28.f));
+         auto* Text = Tree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+         Text->SetText(Label);
+-        Text->SetFont(FSlateFontInfo(NAME_None, 28, FName(TEXT("Regular"))));
++        Text->SetFont(Owner->MakeThemeFont(28));
+         Text->SetColorAndOpacity(FSlateColor(bEnabled ? TextColor : Muted));
+         Text->SetJustification(ETextJustify::Center);
+-        Button->AddChild(Text);
+-        Parent->AddChild(Button);
+-        Button->OnClicked.AddLambda([Callback = MoveTemp(OnPressed)]() mutable
+-        {
+-            if (Callback) Callback();
+-        });
++        if (UButtonSlot* ButtonSlot = Cast<UButtonSlot>(Button->AddChild(Text)))
++            ButtonSlot->SetPadding(FMargin(4.f));
++        Button->SetAction(MoveTemp(OnPressed));
++        auto* HitTarget = Tree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++        HitTarget->SetMinDesiredWidth(88.f);
++        HitTarget->SetMinDesiredHeight(88.f);
++        HitTarget->SetContent(Button);
++        Parent->AddChild(HitTarget);
+         return Button;
+     }
+ 
+@@ -99,26 +103,38 @@
+         }
+     }
+ 
+-    UVerticalBox* MakePageRoot(UUserWidget* Owner, UVerticalBox*& OutContent)
+-    {
+-        if (!Owner || !Owner->WidgetTree) return nullptr;
+-        auto* Root = Owner->WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-        Owner->WidgetTree->RootWidget = Root;
+-        Root->SetClipping(EWidgetClipping::ClipToBounds);
+-        OutContent = Root;
+-        return Root;
+-    }
+-
+-    void AddRowCell(UWidgetTree* Tree, UHorizontalBox* Row, const FString& Text,
++    void SetWeightedFill(UHorizontalBoxSlot* Slot, float Weight)
++    {
++        if (!Slot) return;
++        FSlateChildSize Size(ESlateSizeRule::Fill);
++        Size.Value = Weight;
++        Slot->SetSize(Size);
++    }
++
++    void SetVerticalFill(UVerticalBoxSlot* Slot)
++    {
++        if (!Slot) return;
++        FSlateChildSize Size(ESlateSizeRule::Fill);
++        Slot->SetSize(Size);
++    }
++
++    UTextBlock* ButtonLabel(UButton* Button)
++    {
++        USizeBox* HitTarget = Button ? Cast<USizeBox>(Button->GetParent()) : nullptr;
++        UButton* InnerButton = HitTarget ? Cast<UButton>(HitTarget->GetContent()) : nullptr;
++        return InnerButton ? Cast<UTextBlock>(InnerButton->GetChildAt(0)) : nullptr;
++    }
++
++    void AddRowCell(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UHorizontalBox* Row, const FString& Text,
+         float Fill, FLinearColor Color, int32 FontSize, ETextJustify::Type Align = ETextJustify::Left)
+     {
+         auto* Cell = Tree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+         Cell->SetText(FText::FromString(Text));
+         Cell->SetColorAndOpacity(FSlateColor(Color));
+-        Cell->SetFont(FSlateFontInfo(NAME_None, FontSize, FName(TEXT("Regular"))));
++        Cell->SetFont(Owner->MakeThemeFont(FontSize));
+         Cell->SetJustification(Align);
+         Cell->SetAutoWrapText(true);
+-        Row->AddChildToHorizontalBox(Cell)->SetSize(FSlateChildSize(ESlateSizeRule::Fill, Fill));
++        SetWeightedFill(Row->AddChildToHorizontalBox(Cell), Fill);
+     }
+ }
+ 
+@@ -126,23 +142,33 @@
+ {
+     Super::NativeOnInitialized();
+     BuildPage();
+-    RefreshPage();
+ }
+ 
+ void UInkRankBoardPage::SetBoardData(const FInkNewRankBoardData& InData)
+ {
+     Data = InData;
+-    if (Content) RefreshPage();
++    if (Content) BuildPage();
++}
++
++void UInkRankBoardPage::SetParticipantAvatar(const FString& ParticipantId, UTexture2D* Avatar)
++{
++    if (ParticipantId.IsEmpty()) return;
++    AvatarRequestsInFlight.Remove(ParticipantId);
++    if (!Avatar) return;
++    ParticipantAvatarCache.Add(ParticipantId, Avatar);
++    if (TObjectPtr<UImage>* Image = AvatarImagesByParticipant.Find(ParticipantId))
++        (*Image)->SetBrushFromTexture(Avatar, true);
+ }
+ 
+ void UInkRankBoardPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    MakePageRoot(this, Content);
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    AvatarImagesByParticipant.Reset();
+     auto* Header = WidgetTree->ConstructWidget<UOverlay>(UOverlay::StaticClass());
+     TitleText = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+     TitleText->SetText(FText::FromString(TEXT("天下榜")));
+-    TitleText->SetFont(FSlateFontInfo(NAME_None, 48, FName(TEXT("Regular"))));
++    TitleText->SetFont(MakeThemeFont(48, true));
+     TitleText->SetColorAndOpacity(FSlateColor(Ink));
+     TitleText->SetJustification(ETextJustify::Center);
+     Header->AddChildToOverlay(TitleText)->SetHorizontalAlignment(HAlign_Fill);
+@@ -150,10 +176,11 @@
+     HeaderSize->SetHeightOverride(176.f);
+     HeaderSize->SetContent(Header);
+     Content->AddChild(HeaderSize);
+-    AddText(WidgetTree, Content, TEXT("以当前服务返回的名次与指标为准"), 20, Slate, ETextJustify::Center);
++    AddText(this, WidgetTree, Content, TEXT("以当前服务返回的名次与指标为准"), 20, Slate, ETextJustify::Center);
+     AddSpacer(WidgetTree, Content, 16.f);
+ 
+-    auto* Categories = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
++    auto* Categories = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++    Categories->SetInnerSlotPadding(FVector2D(8.f, 8.f));
+     Content->AddChild(Categories);
+     const TArray<TPair<FName,FText>> Tabs = {{TEXT("Damage"),FText::FromString(TEXT("伤害榜"))},
+         {TEXT("CultivationSpeed"),FText::FromString(TEXT("修炼速度"))}, {TEXT("Anchor"),FText::FromString(TEXT("主播剑灵"))}};
+@@ -161,30 +188,31 @@
+     for (const auto& Tab : Tabs)
+     {
+         const FName Category = Tab.Key;
+-        CategoryTabs.Add(AddButton(WidgetTree, Categories, Tab.Value, true, [this,Category]() { OnCategoryRequested.Broadcast(Category); },
++        CategoryTabs.Add(AddButton(this, WidgetTree, Categories, Tab.Value, true, [this,Category]() { OnCategoryRequested.Broadcast(Category); },
+             Data.Category == Category ? Jade : Paper, Data.Category == Category ? PaperLight : Ink));
+     }
+-    auto* Scope = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
++    auto* Scope = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++    Scope->SetInnerSlotPadding(FVector2D(8.f, 8.f));
+     Content->AddChild(Scope);
+     ScopeTabs.Reset();
+-    ScopeTabs.Add(AddButton(WidgetTree, Scope, FText::FromString(TEXT("本地")), true,
++    ScopeTabs.Add(AddButton(this, WidgetTree, Scope, FText::FromString(TEXT("本地")), true,
+         [this]() { OnScopeRequested.Broadcast(TEXT("Local")); }, Data.Scope == TEXT("Local") ? Jade : Paper, Data.Scope == TEXT("Local") ? PaperLight : Ink));
+-    ScopeTabs.Add(AddButton(WidgetTree, Scope, FText::FromString(TEXT("全服")), true,
++    ScopeTabs.Add(AddButton(this, WidgetTree, Scope, FText::FromString(TEXT("全服")), true,
+         [this]() { OnScopeRequested.Broadcast(TEXT("Global")); }, Data.Scope == TEXT("Global") ? Jade : Paper, Data.Scope == TEXT("Global") ? PaperLight : Ink));
+ 
+     AddSpacer(WidgetTree, Content, 18.f);
+-    MetricHeaderText = AddText(WidgetTree, Content,
++    MetricHeaderText = AddText(this, WidgetTree, Content,
+         FString::Printf(TEXT("名次与身份由榜单服务提供 · %s"), *Data.MetricLabel.ToString()), 22, Slate);
+     auto* Head = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+     AddPanel(WidgetTree, Content, Head, FLinearColor(0.86f,0.82f,0.74f,1.f), 12.f);
+-    AddRowCell(WidgetTree, Head, TEXT("名次"), .18f, Ink, 22, ETextJustify::Center);
+-    AddRowCell(WidgetTree, Head, TEXT("身份"), .48f, Ink, 22);
+-    MetricColumnText = AddText(WidgetTree, Head,
++    AddRowCell(this, WidgetTree, Head, TEXT("名次"), .18f, Ink, 22, ETextJustify::Center);
++    AddRowCell(this, WidgetTree, Head, TEXT("身份"), .48f, Ink, 22);
++    MetricColumnText = AddText(this, WidgetTree, Head,
+         Data.MetricLabel.IsEmpty() ? TEXT("榜单指标") : Data.MetricLabel.ToString(), 22, Ink, ETextJustify::Right);
+ 
+-    StatusText = AddText(WidgetTree, Content, FString(), 24, Muted, ETextJustify::Center);
++    StatusText = AddText(this, WidgetTree, Content, FString(), 24, Muted, ETextJustify::Center);
+     auto* Scroll = WidgetTree->ConstructWidget<UScrollBox>(UScrollBox::StaticClass());
+-    Content->AddChildToVerticalBox(Scroll)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
++    SetVerticalFill(Content->AddChildToVerticalBox(Scroll));
+     RowsBox = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+     Scroll->AddChild(RowsBox);
+     AddSpacer(WidgetTree, Content, 12.f);
+@@ -192,13 +220,14 @@
+     AddPanel(WidgetTree, Content, SelfPanel, FLinearColor(0.84f,0.88f,0.87f,1.f), 18.f);
+     SelfText = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+     SelfText->SetColorAndOpacity(FSlateColor(Ink));
+-    SelfText->SetFont(FSlateFontInfo(NAME_None, 25, FName(TEXT("Regular"))));
+-    SelfPanel->AddChildToHorizontalBox(SelfText)->SetSize(FSlateChildSize(ESlateSizeRule::Fill,.58f));
++    SelfText->SetFont(MakeThemeFont(25));
++    SetWeightedFill(SelfPanel->AddChildToHorizontalBox(SelfText), .58f);
+     SelfMetricText = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+     SelfMetricText->SetColorAndOpacity(FSlateColor(Slate));
+-    SelfMetricText->SetFont(FSlateFontInfo(NAME_None, 23, FName(TEXT("Regular"))));
++    SelfMetricText->SetFont(MakeThemeFont(23));
+     SelfMetricText->SetJustification(ETextJustify::Right);
+-    SelfPanel->AddChildToHorizontalBox(SelfMetricText)->SetSize(FSlateChildSize(ESlateSizeRule::Fill,.42f));
++    SetWeightedFill(SelfPanel->AddChildToHorizontalBox(SelfMetricText), .42f);
++    RefreshPage();
+ }
+ 
+ void UInkRankBoardPage::RefreshPage()
+@@ -217,14 +246,14 @@
+     {
+         const bool bSelected = Data.Category == CategoryNames[I];
+         CategoryTabs[I]->SetBackgroundColor(bSelected ? Jade : Paper);
+-        if (auto* Label = Cast<UTextBlock>(CategoryTabs[I]->GetChildAt(0)))
++        if (auto* Label = ButtonLabel(CategoryTabs[I]))
+             Label->SetColorAndOpacity(FSlateColor(bSelected ? PaperLight : Ink));
+     }
+     for (int32 I = 0; I < ScopeTabs.Num(); ++I)
+     {
+         const bool bSelected = Data.Scope == (I == 0 ? FName(TEXT("Local")) : FName(TEXT("Global")));
+         ScopeTabs[I]->SetBackgroundColor(bSelected ? Jade : Paper);
+-        if (auto* Label = Cast<UTextBlock>(ScopeTabs[I]->GetChildAt(0)))
++        if (auto* Label = ButtonLabel(ScopeTabs[I]))
+             Label->SetColorAndOpacity(FSlateColor(bSelected ? PaperLight : Ink));
+     }
+     RowsBox->ClearChildren();
+@@ -237,33 +266,45 @@
+             RowSize->SetMinDesiredHeight(120.f);
+             RowSize->SetContent(Row);
+             AddPanel(WidgetTree, RowsBox, RowSize, Entry.Rank == 1 ? FLinearColor(0.96f,0.91f,0.79f,1.f) : PaperLight, 12.f);
+-            AddRowCell(WidgetTree, Row, Entry.Rank > 0 ? FString::FromInt(Entry.Rank) : TEXT("—"), .18f,
++            AddRowCell(this, WidgetTree, Row, Entry.Rank > 0 ? FString::FromInt(Entry.Rank) : TEXT("—"), .18f,
+                 Entry.Rank == 1 ? OldGold : Slate, 28, ETextJustify::Center);
+             auto* Identity = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+-            Row->AddChildToHorizontalBox(Identity)->SetSize(FSlateChildSize(ESlateSizeRule::Fill,.48f));
++            SetWeightedFill(Row->AddChildToHorizontalBox(Identity), .48f);
+             auto* AvatarBox = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
+             AvatarBox->SetWidthOverride(64.f); AvatarBox->SetHeightOverride(64.f);
+             auto* Avatar = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
+-            if (Entry.Avatar) Avatar->SetBrushFromTexture(Entry.Avatar, true);
++            UTexture2D* ResolvedAvatar = Entry.Avatar;
++            if (!ResolvedAvatar)
++                if (const TObjectPtr<UTexture2D>* Cached = ParticipantAvatarCache.Find(Entry.ParticipantId)) ResolvedAvatar = Cached->Get();
++            if (ResolvedAvatar) Avatar->SetBrushFromTexture(ResolvedAvatar, true);
+             else
+             {
+                 Avatar->SetColorAndOpacity(FLinearColor(0.78f,0.75f,0.67f,1.f));
+                 Avatar->SetToolTipText(FText::FromString(TEXT("榜单未提供头像")));
+             }
++            if (!Entry.ParticipantId.IsEmpty())
++            {
++                AvatarImagesByParticipant.Add(Entry.ParticipantId, Avatar);
++                if (!ResolvedAvatar && OnAvatarRequested.IsBound() && !AvatarRequestsInFlight.Contains(Entry.ParticipantId))
++                {
++                    AvatarRequestsInFlight.Add(Entry.ParticipantId);
++                    OnAvatarRequested.Broadcast(Entry.ParticipantId);
++                }
++            }
+             AvatarBox->AddChild(Avatar);
+             Identity->AddChildToHorizontalBox(AvatarBox);
+             auto* IdentityText = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-            Identity->AddChildToHorizontalBox(IdentityText)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
+-            AddText(WidgetTree, IdentityText, Entry.DisplayName.IsEmpty() ? TEXT("身份资料缺失") : Entry.DisplayName.ToString(), 25, Ink);
+-            if (!Entry.EarnedTitle.IsEmpty()) AddText(WidgetTree, IdentityText, Entry.EarnedTitle.ToString(), 18, Slate);
+-            if (!Entry.Realm.IsEmpty()) AddText(WidgetTree, IdentityText, Entry.Realm.ToString(), 18, Muted);
+-            AddRowCell(WidgetTree, Row, Entry.Metric.IsEmpty() ? TEXT("—") : Entry.Metric.ToString(), .34f, Ink, 24, ETextJustify::Right);
++            SetWeightedFill(Identity->AddChildToHorizontalBox(IdentityText), 1.f);
++            AddText(this, WidgetTree, IdentityText, Entry.DisplayName.IsEmpty() ? TEXT("身份资料缺失") : Entry.DisplayName.ToString(), 25, Ink);
++            if (!Entry.EarnedTitle.IsEmpty()) AddText(this, WidgetTree, IdentityText, Entry.EarnedTitle.ToString(), 18, Slate);
++            if (!Entry.Realm.IsEmpty()) AddText(this, WidgetTree, IdentityText, Entry.Realm.ToString(), 18, Muted);
++            AddRowCell(this, WidgetTree, Row, Entry.Metric.IsEmpty() ? TEXT("—") : Entry.Metric.ToString(), .34f, Ink, 24, ETextJustify::Right);
+         }
+         if (Data.Rows.IsEmpty()) StatusText->SetText(FText::FromString(TEXT("服务返回空榜单")));
+     }
+     if (Data.State == EInkRankPageState::Error || Data.State == EInkRankPageState::Unavailable)
+     {
+-        AddButton(WidgetTree, RowsBox, FText::FromString(TEXT("重新读取")), true,
++        AddButton(this, WidgetTree, RowsBox, FText::FromString(TEXT("重新读取")), true,
+             [this]() { OnRetryRequested.Broadcast(); }, Paper);
+     }
+     SelfText->SetText(FText::FromString(Data.SelfPosition.IsEmpty() ? TEXT("我的排名：当前响应未提供") :
+@@ -271,22 +312,27 @@
+     SelfMetricText->SetText(Data.SelfMetric.IsEmpty() ? FText::FromString(TEXT("暂无本人指标")) : Data.SelfMetric);
+ }
+ 
++void UInkRankBoardPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
++}
++
+ void UInkWulingOverviewPage::NativeOnInitialized()
+ {
+-    Super::NativeOnInitialized(); BuildPage(); RefreshPage();
++    Super::NativeOnInitialized(); BuildPage();
+ }
+ 
+ void UInkWulingOverviewPage::SetOverviewData(const FInkWulingOverviewData& InData)
+ {
+-    Data = InData; if (Content) RefreshPage();
++    Data = InData; if (Content) BuildPage();
+ }
+ 
+ void UInkWulingOverviewPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    MakePageRoot(this, Content);
+-    AddText(WidgetTree, Content, TEXT("武灵"), 48, Ink, ETextJustify::Center);
+-    AddText(WidgetTree, Content, TEXT("组织总览"), 28, Slate, ETextJustify::Center);
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    AddText(this, WidgetTree, Content, TEXT("武灵"), 48, Ink, ETextJustify::Center);
++    AddText(this, WidgetTree, Content, TEXT("组织总览"), 28, Slate, ETextJustify::Center);
+     AddSpacer(WidgetTree, Content, 8.f);
+     auto* Identity = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+     AddPanel(WidgetTree, Content, Identity, Paper, 20.f);
+@@ -294,10 +340,11 @@
+     Emblem->SetDesiredSizeOverride(FVector2D(160.f, 160.f));
+     if (Data.Insignia) Emblem->SetBrushFromTexture(Data.Insignia, true);
+     Identity->AddChild(Emblem);
+-    AddText(WidgetTree, Identity, Data.SectName.IsEmpty() ? TEXT("组织名称待同步") : Data.SectName.ToString(), 34, Ink, ETextJustify::Center);
+-    AddText(WidgetTree, Identity, Data.ServiceStatus.IsEmpty() ? TEXT("组织状态未知") : Data.ServiceStatus.ToString(), 22, Jade, ETextJustify::Center);
+-
+-    auto* Counts = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
++    AddText(this, WidgetTree, Identity, Data.SectName.IsEmpty() ? TEXT("组织名称待同步") : Data.SectName.ToString(), 34, Ink, ETextJustify::Center);
++    AddText(this, WidgetTree, Identity, Data.ServiceStatus.IsEmpty() ? TEXT("组织状态未知") : Data.ServiceStatus.ToString(), 22, Jade, ETextJustify::Center);
++
++    auto* Counts = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++    Counts->SetInnerSlotPadding(FVector2D(8.f, 8.f));
+     AddPanel(WidgetTree, Content, Counts, FLinearColor(0.90f,0.87f,0.81f,1.f), 14.f);
+     const TArray<TPair<FText,FText>> CountFields = {
+         {FText::FromString(TEXT("成员")),Data.MemberCount},
+@@ -306,38 +353,43 @@
+     for (const auto& Field : CountFields)
+     {
+         auto* Cell = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-        Counts->AddChildToHorizontalBox(Cell)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
+-        AddText(WidgetTree, Cell, Field.Key.ToString(), 21, Slate, ETextJustify::Center);
+-        AddText(WidgetTree, Cell, Field.Value.IsEmpty() ? TEXT("—") : Field.Value.ToString(), 30, Ink, ETextJustify::Center);
++        auto* CellSize = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++        CellSize->SetWidthOverride(200.f);
++        CellSize->SetMinDesiredHeight(88.f);
++        CellSize->SetContent(Cell);
++        Counts->AddChildToWrapBox(CellSize);
++        AddText(this, WidgetTree, Cell, Field.Key.ToString(), 21, Slate, ETextJustify::Center);
++        AddText(this, WidgetTree, Cell, Field.Value.IsEmpty() ? TEXT("—") : Field.Value.ToString(), 30, Ink, ETextJustify::Center);
+     }
+     auto* Summary = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+     AddPanel(WidgetTree, Content, Summary, PaperLight, 18.f);
+-    AddRowCell(WidgetTree, Summary, TEXT("公共資材  ") + (Data.PublicSupply.IsEmpty() ? TEXT("—") : Data.PublicSupply.ToString()), .5f, Ink, 24);
+-    AddRowCell(WidgetTree, Summary, TEXT("武灵声望  ") + (Data.Reputation.IsEmpty() ? TEXT("—") : Data.Reputation.ToString()), .5f, Ink, 24);
++    AddRowCell(this, WidgetTree, Summary, TEXT("公共資材  ") + (Data.PublicSupply.IsEmpty() ? TEXT("—") : Data.PublicSupply.ToString()), .5f, Ink, 24);
++    AddRowCell(this, WidgetTree, Summary, TEXT("武灵声望  ") + (Data.Reputation.IsEmpty() ? TEXT("—") : Data.Reputation.ToString()), .5f, Ink, 24);
+     AddSpacer(WidgetTree, Content, 12.f);
+-    AddText(WidgetTree, Content, TEXT("现有组织操作"), 28, Ink);
++    AddText(this, WidgetTree, Content, TEXT("现有组织操作"), 28, Ink);
+     for (const FInkWulingActionView& Action : Data.ExistingActions)
+     {
+         const FName ActionId = Action.ActionId;
+-        AddButton(WidgetTree, Content, Action.Label, Action.bEnabled,
++        AddButton(this, WidgetTree, Content, Action.Label, Action.bEnabled,
+             [this,ActionId]() { OnActionRequested.Broadcast(ActionId); }, Action.bEnabled ? Paper : FLinearColor(0.84f,0.84f,0.80f,1.f));
+         if (!Action.bEnabled && !Action.DisabledReason.IsEmpty())
+-            AddText(WidgetTree, Content, Action.DisabledReason.ToString(), 18, Muted);
++            AddText(this, WidgetTree, Content, Action.DisabledReason.ToString(), 18, Muted);
+     }
+ }
+ 
+ void UInkWulingOverviewPage::RefreshPage()
+ {
+-    if (!Content) return;
+-    // Rebuild preserves no mutable local gameplay state; all text/action authority is host supplied.
+-    Content->ClearChildren();
+-    Content = nullptr;
+     BuildPage();
+ }
+ 
++void UInkWulingOverviewPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
++}
++
+ void UInkWulingMembersPage::NativeOnInitialized()
+ {
+-    Super::NativeOnInitialized(); BuildPage(); RefreshPage();
++    Super::NativeOnInitialized(); BuildPage();
+ }
+ 
+ void UInkWulingMembersPage::SetMembersData(const FInkWulingMembersData& InData)
+@@ -349,21 +401,21 @@
+         PendingRemoveUserId.Reset();
+     }
+     Data = InData;
+-    if (Content) RefreshPage();
++    if (Content) BuildPage();
+ }
+ 
+ void UInkWulingMembersPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    MakePageRoot(this, Content);
+-    AddText(WidgetTree, Content, TEXT("武灵成员"), 44, Ink, ETextJustify::Center);
+-    AddText(WidgetTree, Content, Data.ServiceStatus.IsEmpty() ? TEXT("成员列表由组织服务分页提供") : Data.ServiceStatus.ToString(), 20, Slate, ETextJustify::Center);
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    AddText(this, WidgetTree, Content, TEXT("武灵成员"), 44, Ink, ETextJustify::Center);
++    AddText(this, WidgetTree, Content, Data.ServiceStatus.IsEmpty() ? TEXT("成员列表由组织服务分页提供") : Data.ServiceStatus.ToString(), 20, Slate, ETextJustify::Center);
+     auto* Head = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+     AddPanel(WidgetTree, Content, Head, FLinearColor(0.86f,0.82f,0.74f,1.f), 12.f);
+-    AddRowCell(WidgetTree, Head, TEXT("选择"), .16f, Ink, 20, ETextJustify::Center);
+-    AddRowCell(WidgetTree, Head, TEXT("成员身份"), .84f, Ink, 20);
++    AddRowCell(this, WidgetTree, Head, TEXT("选择"), .16f, Ink, 20, ETextJustify::Center);
++    AddRowCell(this, WidgetTree, Head, TEXT("成员身份"), .84f, Ink, 20);
+     auto* Scroll = WidgetTree->ConstructWidget<UScrollBox>(UScrollBox::StaticClass());
+-    Content->AddChildToVerticalBox(Scroll)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
++    SetVerticalFill(Content->AddChildToVerticalBox(Scroll));
+     auto* RowsBox = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+     Scroll->AddChild(RowsBox);
+     const int32 VisibleRowCount = Data.PageSize > 0 ? FMath::Min(Data.Rows.Num(), Data.PageSize) : 0;
+@@ -378,30 +430,30 @@
+         const bool bSelected = Member.UserId == Data.SelectedUserId;
+         AddPanel(WidgetTree, RowsBox, RowSize, bSelected ? Jade : PaperLight, 12.f);
+         const FString UserId = Member.UserId;
+-        AddButton(WidgetTree, Row, Member.UserId == Data.SelectedUserId ? FText::FromString(TEXT("已选")) : FText::FromString(TEXT("选择")),
++        AddButton(this, WidgetTree, Row, Member.UserId == Data.SelectedUserId ? FText::FromString(TEXT("已选")) : FText::FromString(TEXT("选择")),
+             Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
+             [this,UserId]() { OnMemberSelected.Broadcast(UserId); }, bSelected ? OldGold : Paper);
+         auto* Identity = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-        Row->AddChildToHorizontalBox(Identity)->SetSize(FSlateChildSize(ESlateSizeRule::Fill,.84f));
+-        AddText(WidgetTree, Identity, Member.DisplayName.IsEmpty() ? TEXT("身份资料缺失") : Member.DisplayName.ToString(), 24, bSelected ? PaperLight : Ink);
++        SetWeightedFill(Row->AddChildToHorizontalBox(Identity), .84f);
++        AddText(this, WidgetTree, Identity, Member.DisplayName.IsEmpty() ? TEXT("身份资料缺失") : Member.DisplayName.ToString(), 24, bSelected ? PaperLight : Ink);
+     }
+     if ((Data.State != EInkRankPageState::Data && Data.State != EInkRankPageState::Offline) || Data.Rows.IsEmpty())
+     {
+         const FString State = Data.State == EInkRankPageState::Data ? TEXT("当前成员页暂无记录") : StateLabel(Data.State);
+-        AddText(WidgetTree, RowsBox, State.IsEmpty() ? TEXT("成员列表状态未知") : State, 24,
++        AddText(this, WidgetTree, RowsBox, State.IsEmpty() ? TEXT("成员列表状态未知") : State, 24,
+             Data.State == EInkRankPageState::Error ? Warning : Muted, ETextJustify::Center);
+         if (Data.State == EInkRankPageState::Error || Data.State == EInkRankPageState::Unavailable)
+-            AddButton(WidgetTree, RowsBox, FText::FromString(TEXT("重新读取")), true,
++            AddButton(this, WidgetTree, RowsBox, FText::FromString(TEXT("重新读取")), true,
+                 [this]() { OnRetryRequested.Broadcast(); }, Paper);
+     }
+     auto* Pager = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+     Content->AddChild(Pager);
+-    AddButton(WidgetTree, Pager, FText::FromString(TEXT("上一页")), Data.PreviousCursor != INDEX_NONE && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
++    AddButton(this, WidgetTree, Pager, FText::FromString(TEXT("上一页")), Data.PreviousCursor != INDEX_NONE && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
+         [this]() { OnPageRequested.Broadcast(Data.PreviousCursor); }, Paper);
+-    AddText(WidgetTree, Pager, FString::Printf(TEXT("起始位置 %d"), Data.Cursor + 1), 20, Slate, ETextJustify::Center);
+-    AddButton(WidgetTree, Pager, FText::FromString(TEXT("下一页")), Data.NextCursor != INDEX_NONE && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
++    AddText(this, WidgetTree, Pager, FString::Printf(TEXT("起始位置 %d"), Data.Cursor + 1), 20, Slate, ETextJustify::Center);
++    AddButton(this, WidgetTree, Pager, FText::FromString(TEXT("下一页")), Data.NextCursor != INDEX_NONE && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
+         [this]() { OnPageRequested.Broadcast(Data.NextCursor); }, Paper);
+-    AddButton(WidgetTree, Content, FText::FromString(TEXT("移除已选成员")),
++    AddButton(this, WidgetTree, Content, FText::FromString(TEXT("移除已选成员")),
+         Data.bCanRemoveSelected && !Data.SelectedUserId.IsEmpty() && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
+         [this]()
+         {
+@@ -412,7 +464,7 @@
+         },
+         Data.bCanRemoveSelected ? FLinearColor(0.88f,0.75f,0.70f,1.f) : FLinearColor(0.84f,0.84f,0.80f,1.f));
+     if (!Data.bCanRemoveSelected && !Data.RemoveDisabledReason.IsEmpty())
+-        AddText(WidgetTree, Content, Data.RemoveDisabledReason.ToString(), 18, Muted, ETextJustify::Center);
++        AddText(this, WidgetTree, Content, Data.RemoveDisabledReason.ToString(), 18, Muted, ETextJustify::Center);
+     if (bConfirmRemove)
+     {
+         FString ConfirmName;
+@@ -420,14 +472,14 @@
+             if (Member.UserId == PendingRemoveUserId) { ConfirmName = Member.DisplayName.ToString(); break; }
+         auto* Confirm = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+         AddPanel(WidgetTree, Content, Confirm, FLinearColor(0.91f,0.84f,0.80f,1.f), 24.f);
+-        AddText(WidgetTree, Confirm, ConfirmName.IsEmpty()
++        AddText(this, WidgetTree, Confirm, ConfirmName.IsEmpty()
+             ? TEXT("确认移除所选成员？")
+             : FString::Printf(TEXT("确认移除成员“%s”？"), *ConfirmName), 28, Warning, ETextJustify::Center);
+         auto* ConfirmActions = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+         Confirm->AddChild(ConfirmActions);
+-        AddButton(WidgetTree, ConfirmActions, FText::FromString(TEXT("取消")), true,
++        AddButton(this, WidgetTree, ConfirmActions, FText::FromString(TEXT("取消")), true,
+             [this]() { CancelRemove(); }, Paper);
+-        AddButton(WidgetTree, ConfirmActions, FText::FromString(TEXT("确认移除")),
++        AddButton(this, WidgetTree, ConfirmActions, FText::FromString(TEXT("确认移除")),
+             Data.bCanRemoveSelected && Data.SelectedUserId == PendingRemoveUserId && Data.State == EInkRankPageState::Data && !bRemoveSubmitIssued,
+             [this]() { ConfirmRemove(); }, Warning);
+     }
+@@ -435,10 +487,12 @@
+ 
+ void UInkWulingMembersPage::RefreshPage()
+ {
+-    if (!WidgetTree || !Content) return;
+-    Content->ClearChildren();
+-    Content = nullptr;
+     BuildPage();
++}
++
++void UInkWulingMembersPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
+ }
+ 
+ void UInkWulingMembersPage::ConfirmRemove()
+--- panel-rank/staged-source/InkRankWulingExtendedPages.h
++++ panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.h
+@@ -1,7 +1,6 @@
+ #pragma once
+ 
+ #include "CoreMinimal.h"
+-#include "Blueprint/UserWidget.h"
+ #include "InkRankWulingPages.h"
+ #include "InkRankWulingExtendedPages.generated.h"
+ 
+@@ -89,7 +88,7 @@
+ 
+ /** Catalog UI only; the host owns building queries, revalidation, and authority command submission. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkGuildBuildPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkGuildBuildPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+@@ -100,7 +99,6 @@
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     FInkGuildBuildPageData Data;
+     FString ConfirmBuildingId;
+     int32 ConfirmTargetLevel = 0;
+@@ -110,11 +108,12 @@
+     void RefreshPage();
+     void ConfirmBuild();
+     void CancelBuild();
++    virtual void RebuildForThemeChange() override;
+ };
+ 
+ /** Viewer-specific personal sword-spirit view. Missing profile data remains unknown/unavailable. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkSwordSpiritPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkSwordSpiritPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+@@ -123,15 +122,15 @@
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     FInkSwordSpiritPageData Data;
+     void BuildPage();
+     void RefreshPage();
++    virtual void RebuildForThemeChange() override;
+ };
+ 
+ /** Read-only page. Empty catalog is shown only when the host marks rules as provided. */
+ UCLASS()
+-class BOUNDLESSIMMORTALITY_API UInkGiftRulesPage final : public UUserWidget
++class BOUNDLESSIMMORTALITY_API UInkGiftRulesPage final : public UInkRankWulingPageBase
+ {
+     GENERATED_BODY()
+ public:
+@@ -139,8 +138,8 @@
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+-    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
+     FInkGiftEffectPageData Data;
+     void BuildPage();
+     void RefreshPage();
++    virtual void RebuildForThemeChange() override;
+ };
+--- panel-rank/staged-source/InkRankWulingExtendedPages.cpp
++++ panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.cpp
+@@ -3,12 +3,16 @@
+ #include "Blueprint/WidgetTree.h"
+ #include "Components/Border.h"
+ #include "Components/Button.h"
++#include "Components/ButtonSlot.h"
+ #include "Components/HorizontalBox.h"
+ #include "Components/ScrollBox.h"
+ #include "Components/SizeBox.h"
+ #include "Components/TextBlock.h"
+ #include "Components/VerticalBox.h"
+ #include "Components/VerticalBoxSlot.h"
++#include "Components/HorizontalBoxSlot.h"
++#include "Components/WrapBox.h"
++#include "Components/WrapBoxSlot.h"
+ #include "Engine/Texture2D.h"
+ 
+ namespace
+@@ -22,14 +26,14 @@
+     const FLinearColor ExtWarning(0.612f,0.263f,0.212f,1.f);
+     const FLinearColor ExtMuted(0.322f,0.349f,0.310f,1.f);
+ 
+-    UTextBlock* ExtText(UWidgetTree* Tree, UPanelWidget* Parent, const FText& Value,
++    UTextBlock* ExtText(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UPanelWidget* Parent, const FText& Value,
+         int32 Size, FLinearColor Color = ExtInk, ETextJustify::Type Align = ETextJustify::Left)
+     {
+         if (!Tree || !Parent) return nullptr;
+         auto* Text = Tree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+         Text->SetText(Value);
+         Text->SetColorAndOpacity(FSlateColor(Color));
+-        Text->SetFont(FSlateFontInfo(NAME_None, Size, FName(TEXT("Regular"))));
++        Text->SetFont(Owner->MakeThemeFont(Size, Size >= 44));
+         Text->SetAutoWrapText(true);
+         Text->SetJustification(Align);
+         Parent->AddChild(Text);
+@@ -47,22 +51,26 @@
+         return Border;
+     }
+ 
+-    UButton* ExtButton(UWidgetTree* Tree, UPanelWidget* Parent, const FText& Label,
++    UButton* ExtButton(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UPanelWidget* Parent, const FText& Label,
+         bool bEnabled, TFunction<void()>&& Handler, FLinearColor Fill = ExtPaper,
+         FLinearColor TextColor = ExtInk)
+     {
+-        auto* Button = Tree->ConstructWidget<UButton>(UButton::StaticClass());
++        auto* Button = Tree->ConstructWidget<UInkRankWulingCallbackButton>(UInkRankWulingCallbackButton::StaticClass());
+         Button->SetBackgroundColor(Fill);
+-        Button->SetPadding(FMargin(20.f,28.f));
+         Button->SetIsEnabled(bEnabled);
+         auto* Text = Tree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+         Text->SetText(Label);
+-        Text->SetFont(FSlateFontInfo(NAME_None,30,FName(TEXT("Regular"))));
++        Text->SetFont(Owner->MakeThemeFont(30));
+         Text->SetColorAndOpacity(FSlateColor(bEnabled ? TextColor : ExtMuted));
+         Text->SetJustification(ETextJustify::Center);
+-        Button->AddChild(Text);
+-        Parent->AddChild(Button);
+-        Button->OnClicked.AddLambda([Handler = MoveTemp(Handler)]() mutable { if (Handler) Handler(); });
++        if (UButtonSlot* ButtonSlot = Cast<UButtonSlot>(Button->AddChild(Text)))
++            ButtonSlot->SetPadding(FMargin(4.f));
++        Button->SetAction(MoveTemp(Handler));
++        auto* HitTarget = Tree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++        HitTarget->SetMinDesiredWidth(88.f);
++        HitTarget->SetMinDesiredHeight(88.f);
++        HitTarget->SetContent(Button);
++        Parent->AddChild(HitTarget);
+         return Button;
+     }
+ 
+@@ -90,17 +98,25 @@
+         }
+     }
+ 
+-    void ExtRoot(UUserWidget* Owner, UVerticalBox*& Content)
+-    {
+-        Content = Owner->WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-        Owner->WidgetTree->RootWidget = Content;
+-        Content->SetClipping(EWidgetClipping::ClipToBounds);
++    void ExtSetWeightedFill(UHorizontalBoxSlot* Slot, float Weight)
++    {
++        if (!Slot) return;
++        FSlateChildSize Size(ESlateSizeRule::Fill);
++        Size.Value = Weight;
++        Slot->SetSize(Size);
++    }
++
++    void ExtSetVerticalFill(UVerticalBoxSlot* Slot)
++    {
++        if (!Slot) return;
++        FSlateChildSize Size(ESlateSizeRule::Fill);
++        Slot->SetSize(Size);
+     }
+ }
+ 
+ void UInkGuildBuildPage::NativeOnInitialized()
+ {
+-    Super::NativeOnInitialized(); BuildPage(); RefreshPage();
++    Super::NativeOnInitialized(); BuildPage();
+ }
+ 
+ void UInkGuildBuildPage::SetBuildPageData(const FInkGuildBuildPageData& InData)
+@@ -118,47 +134,53 @@
+ 
+ void UInkGuildBuildPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    ExtRoot(this, Content);
+-    ExtText(WidgetTree, Content, FText::FromString(TEXT("武灵建设")), 48, ExtInk, ETextJustify::Center);
+-    ExtText(WidgetTree, Content, Data.ServiceStatus.IsEmpty() ? FText::FromString(TEXT("建筑资料由组织服务提供")) : Data.ServiceStatus,
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    ExtText(this, WidgetTree, Content, FText::FromString(TEXT("武灵建设")), 48, ExtInk, ETextJustify::Center);
++    ExtText(this, WidgetTree, Content, Data.ServiceStatus.IsEmpty() ? FText::FromString(TEXT("建筑资料由组织服务提供")) : Data.ServiceStatus,
+         22, ExtSlate, ETextJustify::Center);
+-    auto* Filters = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
++    auto* Filters = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++    Filters->SetInnerSlotPadding(FVector2D(8.f, 8.f));
+     Content->AddChild(Filters);
+-    ExtButton(WidgetTree, Filters, FText::FromString(TEXT("全部建筑")), Data.bCanQuery && !Data.bBuildPending,
++    ExtButton(this, WidgetTree, Filters, FText::FromString(TEXT("全部建筑")), Data.bCanQuery && !Data.bBuildPending,
+         [this]() { OnQueryRequested.Broadcast(0, false); }, Data.bOwnedOnly ? ExtPaper : ExtJade,
+         Data.bOwnedOnly ? ExtInk : ExtPaperLight);
+-    ExtButton(WidgetTree, Filters, FText::FromString(TEXT("已有建筑")), Data.bCanQuery && !Data.bBuildPending,
++    ExtButton(this, WidgetTree, Filters, FText::FromString(TEXT("已有建筑")), Data.bCanQuery && !Data.bBuildPending,
+         [this]() { OnQueryRequested.Broadcast(0, true); }, Data.bOwnedOnly ? ExtJade : ExtPaper,
+         Data.bOwnedOnly ? ExtPaperLight : ExtInk);
+ 
+     auto* Scroll = WidgetTree->ConstructWidget<UScrollBox>(UScrollBox::StaticClass());
+-    Content->AddChildToVerticalBox(Scroll)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
+-    auto* List = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
++    ExtSetVerticalFill(Content->AddChildToVerticalBox(Scroll));
++    auto* List = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++    List->SetInnerSlotPadding(FVector2D(12.f, 12.f));
+     Scroll->AddChild(List);
+     if (Data.State == EInkRankPageState::Data || Data.State == EInkRankPageState::Offline)
+     {
+         for (const FInkGuildBuildingCardView& Building : Data.Buildings)
+         {
+             auto* Card = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-            ExtPanel(WidgetTree, List, Card, ExtPaperLight, 24.f);
+-            ExtText(WidgetTree, Card, Building.DisplayName.IsEmpty() ? FText::FromString(TEXT("建筑名称未提供")) : Building.DisplayName, 32, ExtInk);
++            auto* CardWidth = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++            CardWidth->SetWidthOverride(440.f);
++            CardWidth->SetMinDesiredHeight(220.f);
++            List->AddChildToWrapBox(CardWidth);
++            ExtPanel(WidgetTree, CardWidth, Card, ExtPaperLight, 24.f);
++            ExtText(this, WidgetTree, Card, Building.DisplayName.IsEmpty() ? FText::FromString(TEXT("建筑名称未提供")) : Building.DisplayName, 32, ExtInk);
+             const FText LevelText = Building.bHasCurrentLevel
+                 ? FText::FromString(FString::Printf(TEXT("当前等级 %d"), Building.CurrentLevel))
+                 : FText::FromString(TEXT("当前等级未知"));
+-            ExtText(WidgetTree, Card, LevelText, 24, ExtSlate);
++            ExtText(this, WidgetTree, Card, LevelText, 24, ExtSlate);
+             if (Building.bHasTargetLevel)
+-                ExtText(WidgetTree, Card, FText::FromString(FString::Printf(TEXT("可查看目标等级 %d"), Building.TargetLevel)), 24, ExtInk);
++                ExtText(this, WidgetTree, Card, FText::FromString(FString::Printf(TEXT("可查看目标等级 %d"), Building.TargetLevel)), 24, ExtInk);
+             else
+-                ExtText(WidgetTree, Card, FText::FromString(TEXT("目标等级未由目录提供")), 22, ExtMuted);
+-            ExtText(WidgetTree, Card, Building.AuthoritativeCosts.IsEmpty()
++                ExtText(this, WidgetTree, Card, FText::FromString(TEXT("目标等级未由目录提供")), 22, ExtMuted);
++            ExtText(this, WidgetTree, Card, Building.AuthoritativeCosts.IsEmpty()
+                 ? FText::FromString(TEXT("费用资料未提供")) : FText::FromString(TEXT("服务费用：") + Building.AuthoritativeCosts.ToString()), 22, ExtSlate);
+-            if (!Building.StateText.IsEmpty()) ExtText(WidgetTree, Card, Building.StateText, 20, ExtMuted);
++            if (!Building.StateText.IsEmpty()) ExtText(this, WidgetTree, Card, Building.StateText, 20, ExtMuted);
+             if (Building.bCanBuild && Building.bHasTargetLevel && !Data.SnapshotVersion.IsEmpty() && Data.State == EInkRankPageState::Data && !bBuildSubmitIssued)
+             {
+                 const FString Id = Building.BuildingId;
+                 const int32 TargetLevel = Building.TargetLevel;
+-                ExtButton(WidgetTree, Card, FText::FromString(TEXT("建设")), true,
++                ExtButton(this, WidgetTree, Card, FText::FromString(TEXT("建设")), true,
+                     [this,Id,TargetLevel]()
+                     {
+                         if (Data.State != EInkRankPageState::Data || bBuildSubmitIssued) return;
+@@ -169,28 +191,28 @@
+                     }, ExtJade, ExtPaperLight);
+             }
+             else if (!Building.DisabledReason.IsEmpty())
+-                ExtText(WidgetTree, Card, Building.DisabledReason, 19, ExtMuted);
++                ExtText(this, WidgetTree, Card, Building.DisabledReason, 19, ExtMuted);
+             else if (Building.bCanBuild && Data.SnapshotVersion.IsEmpty())
+-                ExtText(WidgetTree, Card, FText::FromString(TEXT("版本资料未知，暂不能提交")), 19, ExtMuted);
+-        }
+-        if (Data.Buildings.IsEmpty()) ExtText(WidgetTree, List, FText::FromString(TEXT("当前建筑目录为空")), 26, ExtMuted, ETextJustify::Center);
++                ExtText(this, WidgetTree, Card, FText::FromString(TEXT("版本资料未知，暂不能提交")), 19, ExtMuted);
++        }
++        if (Data.Buildings.IsEmpty()) ExtText(this, WidgetTree, List, FText::FromString(TEXT("当前建筑目录为空")), 26, ExtMuted, ETextJustify::Center);
+     }
+     else
+     {
+         ExtPanel(WidgetTree, List, nullptr, Data.State == EInkRankPageState::Error ? FLinearColor(0.95f,0.87f,0.84f,1.f) : ExtPaper, 32.f);
+         const FString State = ExtState(Data.State);
+-        ExtText(WidgetTree, List, FText::FromString(Data.ServiceStatus.IsEmpty() ? State : State + TEXT(" · ") + Data.ServiceStatus.ToString()),
++        ExtText(this, WidgetTree, List, FText::FromString(Data.ServiceStatus.IsEmpty() ? State : State + TEXT(" · ") + Data.ServiceStatus.ToString()),
+             26, Data.State == EInkRankPageState::Error ? ExtWarning : ExtMuted, ETextJustify::Center);
+         if ((Data.State == EInkRankPageState::Error || Data.State == EInkRankPageState::Unavailable || Data.State == EInkRankPageState::Offline) && Data.bCanQuery)
+-            ExtButton(WidgetTree, List, FText::FromString(TEXT("重新读取")), true,
++            ExtButton(this, WidgetTree, List, FText::FromString(TEXT("重新读取")), true,
+                 [this]() { OnRetryRequested.Broadcast(); }, ExtPaper);
+     }
+     auto* Pager = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+     Content->AddChild(Pager);
+-    ExtButton(WidgetTree, Pager, FText::FromString(TEXT("上一页")), Data.PreviousOffset != INDEX_NONE && !bBuildSubmitIssued,
++    ExtButton(this, WidgetTree, Pager, FText::FromString(TEXT("上一页")), Data.PreviousOffset != INDEX_NONE && !bBuildSubmitIssued,
+         [this]() { OnQueryRequested.Broadcast(Data.PreviousOffset, Data.bOwnedOnly); }, ExtPaper);
+-    ExtText(WidgetTree, Pager, FText::FromString(FString::Printf(TEXT("目录位置 %d"), Data.Offset)), 20, ExtSlate, ETextJustify::Center);
+-    ExtButton(WidgetTree, Pager, FText::FromString(TEXT("下一页")), Data.NextOffset != INDEX_NONE && !bBuildSubmitIssued,
++    ExtText(this, WidgetTree, Pager, FText::FromString(FString::Printf(TEXT("目录位置 %d"), Data.Offset)), 20, ExtSlate, ETextJustify::Center);
++    ExtButton(this, WidgetTree, Pager, FText::FromString(TEXT("下一页")), Data.NextOffset != INDEX_NONE && !bBuildSubmitIssued,
+         [this]() { OnQueryRequested.Broadcast(Data.NextOffset, Data.bOwnedOnly); }, ExtPaper);
+     if (bConfirmBuild)
+     {
+@@ -200,14 +222,14 @@
+         {
+             auto* Confirm = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+             ExtPanel(WidgetTree, Content, Confirm, FLinearColor(0.91f,0.84f,0.80f,1.f), 24.f);
+-            ExtText(WidgetTree, Confirm, FText::FromString(FString::Printf(TEXT("确认建设“%s”至等级 %s？"),
++            ExtText(this, WidgetTree, Confirm, FText::FromString(FString::Printf(TEXT("确认建设“%s”至等级 %s？"),
+                 *Selected->DisplayName.ToString(), *FString::FromInt(ConfirmTargetLevel))), 28, ExtWarning, ETextJustify::Center);
+             if (!Selected->AuthoritativeCosts.IsEmpty())
+-                ExtText(WidgetTree, Confirm, FText::FromString(TEXT("服务费用：") + Selected->AuthoritativeCosts.ToString()), 22, ExtInk, ETextJustify::Center);
++                ExtText(this, WidgetTree, Confirm, FText::FromString(TEXT("服务费用：") + Selected->AuthoritativeCosts.ToString()), 22, ExtInk, ETextJustify::Center);
+             auto* Buttons = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+             Confirm->AddChild(Buttons);
+-            ExtButton(WidgetTree, Buttons, FText::FromString(TEXT("取消")), true, [this]() { CancelBuild(); }, ExtPaper);
+-            ExtButton(WidgetTree, Buttons, FText::FromString(TEXT("确认建设")), Selected->bCanBuild && !bBuildSubmitIssued,
++            ExtButton(this, WidgetTree, Buttons, FText::FromString(TEXT("取消")), true, [this]() { CancelBuild(); }, ExtPaper);
++            ExtButton(this, WidgetTree, Buttons, FText::FromString(TEXT("确认建设")), Selected->bCanBuild && !bBuildSubmitIssued,
+                 [this]() { ConfirmBuild(); }, ExtWarning, ExtPaperLight);
+         }
+     }
+@@ -215,8 +237,12 @@
+ 
+ void UInkGuildBuildPage::RefreshPage()
+ {
+-    if (!WidgetTree || !Content) return;
+-    Content->ClearChildren(); Content = nullptr; BuildPage();
++    BuildPage();
++}
++
++void UInkGuildBuildPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
+ }
+ 
+ void UInkGuildBuildPage::ConfirmBuild()
+@@ -240,22 +266,22 @@
+ 
+ void UInkSwordSpiritPage::NativeOnInitialized()
+ {
+-    Super::NativeOnInitialized(); BuildPage(); RefreshPage();
++    Super::NativeOnInitialized(); BuildPage();
+ }
+ 
+ void UInkSwordSpiritPage::SetSwordSpiritData(const FInkSwordSpiritPageData& InData)
+ {
+-    Data = InData; if (Content) RefreshPage();
++    Data = InData; if (Content) BuildPage();
+ }
+ 
+ void UInkSwordSpiritPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    ExtRoot(this, Content);
+-    ExtText(WidgetTree, Content, FText::FromString(TEXT("我的剑灵")), 48, ExtInk, ETextJustify::Center);
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    ExtText(this, WidgetTree, Content, FText::FromString(TEXT("我的剑灵")), 48, ExtInk, ETextJustify::Center);
+     const FString State = ExtState(Data.State);
+     ExtPanel(WidgetTree, Content, nullptr, Data.State == EInkRankPageState::Error ? FLinearColor(0.95f,0.87f,0.84f,1.f) : ExtPaper, 24.f);
+-    ExtText(WidgetTree, Content, FText::FromString(Data.ServiceStatus.IsEmpty()
++    ExtText(this, WidgetTree, Content, FText::FromString(Data.ServiceStatus.IsEmpty()
+         ? (State.IsEmpty() ? TEXT("个人剑灵资料未提供") : State)
+         : (State.IsEmpty() ? Data.ServiceStatus.ToString() : State + TEXT(" · ") + Data.ServiceStatus.ToString())),
+         24, Data.State == EInkRankPageState::Error ? ExtWarning : ExtMuted, ETextJustify::Center);
+@@ -268,76 +294,101 @@
+             Portrait->SetDesiredSizeOverride(FVector2D(120.f,120.f));
+             Content->AddChild(Portrait);
+         }
+-        if (!Data.DisplayName.IsEmpty()) ExtText(WidgetTree, Content, Data.DisplayName, 34, ExtInk, ETextJustify::Center);
+-        if (!Data.Realm.IsEmpty()) ExtText(WidgetTree, Content, Data.Realm, 26, ExtJade, ETextJustify::Center);
+-        if (!Data.Honor.IsEmpty()) ExtText(WidgetTree, Content, Data.Honor, 22, ExtGold, ETextJustify::Center);
++        if (!Data.DisplayName.IsEmpty()) ExtText(this, WidgetTree, Content, Data.DisplayName, 34, ExtInk, ETextJustify::Center);
++        if (!Data.Realm.IsEmpty()) ExtText(this, WidgetTree, Content, Data.Realm, 26, ExtJade, ETextJustify::Center);
++        if (!Data.Honor.IsEmpty()) ExtText(this, WidgetTree, Content, Data.Honor, 22, ExtGold, ETextJustify::Center);
++        auto* AttributeGrid = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++        AttributeGrid->SetInnerSlotPadding(FVector2D(8.f, 8.f));
++        Content->AddChild(AttributeGrid);
+         for (const FInkSwordSpiritAttributeView& Attribute : Data.Attributes)
+         {
+             if (Attribute.Label.IsEmpty() && Attribute.Value.IsEmpty()) continue;
+             auto* Row = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass());
+-            ExtPanel(WidgetTree, Content, Row, ExtPaperLight, 16.f);
+-            ExtText(WidgetTree, Row, Attribute.Label.IsEmpty() ? FText::FromString(TEXT("属性名称未知")) : Attribute.Label, 24, ExtInk);
+-            ExtText(WidgetTree, Row, Attribute.Value.IsEmpty() ? FText::FromString(TEXT("未知")) : Attribute.Value, 24, ExtSlate, ETextJustify::Right);
++            auto* AttributeCardWidth = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++            AttributeCardWidth->SetWidthOverride(300.f);
++            AttributeCardWidth->SetMinDesiredHeight(88.f);
++            AttributeGrid->AddChildToWrapBox(AttributeCardWidth);
++            ExtPanel(WidgetTree, AttributeCardWidth, Row, ExtPaperLight, 16.f);
++            ExtText(this, WidgetTree, Row, Attribute.Label.IsEmpty() ? FText::FromString(TEXT("属性名称未知")) : Attribute.Label, 24, ExtInk);
++            ExtText(this, WidgetTree, Row, Attribute.Value.IsEmpty() ? FText::FromString(TEXT("未知")) : Attribute.Value, 24, ExtSlate, ETextJustify::Right);
+         }
+     }
+     else if ((Data.State == EInkRankPageState::Data || Data.State == EInkRankPageState::Offline) && Data.ParticipantId.IsEmpty())
+     {
+-        ExtText(WidgetTree, Content, FText::FromString(TEXT("准确参与者身份未提供，个人剑灵资料保持未知")), 24, ExtMuted, ETextJustify::Center);
++        ExtText(this, WidgetTree, Content, FText::FromString(TEXT("准确参与者身份未提供，个人剑灵资料保持未知")), 24, ExtMuted, ETextJustify::Center);
+     }
+     ExtSpacer(WidgetTree, Content, 12.f);
+-    ExtButton(WidgetTree, Content, FText::FromString(TEXT("查看礼物效果说明")), true,
++    ExtButton(this, WidgetTree, Content, FText::FromString(TEXT("查看礼物效果说明")), true,
+         [this]() { OnOpenGiftRulesRequested.Broadcast(); }, ExtJade, ExtPaperLight);
+ }
+ 
+ void UInkSwordSpiritPage::RefreshPage()
+ {
+-    if (!WidgetTree || !Content) return;
+-    Content->ClearChildren(); Content = nullptr; BuildPage();
++    BuildPage();
++}
++
++void UInkSwordSpiritPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
+ }
+ 
+ void UInkGiftRulesPage::NativeOnInitialized()
+ {
+-    Super::NativeOnInitialized(); BuildPage(); RefreshPage();
++    Super::NativeOnInitialized(); BuildPage();
+ }
+ 
+ void UInkGiftRulesPage::SetGiftEffectData(const FInkGiftEffectPageData& InData)
+ {
+-    Data = InData; if (Content) RefreshPage();
++    Data = InData; if (Content) BuildPage();
+ }
+ 
+ void UInkGiftRulesPage::BuildPage()
+ {
+-    if (!WidgetTree || Content) return;
+-    ExtRoot(this, Content);
+-    ExtText(WidgetTree, Content, FText::FromString(TEXT("礼物效果说明")), 48, ExtInk, ETextJustify::Center);
++    if (!WidgetTree || !EnsureStableRoot()) return;
++    Content->ClearChildren();
++    ExtText(this, WidgetTree, Content, FText::FromString(TEXT("礼物效果说明")), 48, ExtInk, ETextJustify::Center);
+     const FString State = ExtState(Data.State);
+-    ExtText(WidgetTree, Content, FText::FromString(Data.ServiceStatus.IsEmpty()
++    ExtText(this, WidgetTree, Content, FText::FromString(Data.ServiceStatus.IsEmpty()
+         ? (State.IsEmpty() ? TEXT("已同步效果说明") : State)
+         : (State.IsEmpty() ? Data.ServiceStatus.ToString() : State + TEXT(" · ") + Data.ServiceStatus.ToString())),
+         22, Data.State == EInkRankPageState::Error ? ExtWarning : ExtMuted, ETextJustify::Center);
+     if (Data.State == EInkRankPageState::Data || Data.State == EInkRankPageState::Offline)
+     {
+         if (Data.bRulesProvided && Data.Rules.IsEmpty())
+-            ExtText(WidgetTree, Content, FText::FromString(TEXT("服务已确认当前说明目录为空")), 24, ExtMuted, ETextJustify::Center);
++            ExtText(this, WidgetTree, Content, FText::FromString(TEXT("服务已确认当前说明目录为空")), 24, ExtMuted, ETextJustify::Center);
+         else if (!Data.bRulesProvided)
+-            ExtText(WidgetTree, Content, FText::FromString(TEXT("详细礼物效果目录尚未同步")), 24, ExtMuted, ETextJustify::Center);
++            ExtText(this, WidgetTree, Content, FText::FromString(TEXT("详细礼物效果目录尚未同步")), 24, ExtMuted, ETextJustify::Center);
++        auto* RulesGrid = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++        RulesGrid->SetInnerSlotPadding(FVector2D(12.f, 12.f));
++        Content->AddChild(RulesGrid);
+         for (const FInkGiftRuleView& Rule : Data.Rules)
+         {
+             auto* Card = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-            ExtPanel(WidgetTree, Content, Card, ExtPaperLight, 24.f);
+-            ExtText(WidgetTree, Card, Rule.Name.IsEmpty() ? FText::FromString(TEXT("规则名称未知")) : Rule.Name, 28, ExtInk);
+-            if (!Rule.ActualDescription.IsEmpty()) ExtText(WidgetTree, Card, Rule.ActualDescription, 24, ExtSlate);
++            auto* CardWidth = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++            CardWidth->SetWidthOverride(440.f);
++            CardWidth->SetMinDesiredHeight(176.f);
++            RulesGrid->AddChildToWrapBox(CardWidth);
++            ExtPanel(WidgetTree, CardWidth, Card, ExtPaperLight, 24.f);
++            ExtText(this, WidgetTree, Card, Rule.Name.IsEmpty() ? FText::FromString(TEXT("规则名称未知")) : Rule.Name, 28, ExtInk);
++            if (!Rule.ActualDescription.IsEmpty()) ExtText(this, WidgetTree, Card, Rule.ActualDescription, 24, ExtSlate);
+         }
+         if (!Data.ActiveEffects.IsEmpty())
+         {
+             ExtSpacer(WidgetTree, Content, 16.f);
+-            ExtText(WidgetTree, Content, FText::FromString(TEXT("当前已生效效果 · 服务记录")), 28, ExtJade);
++            ExtText(this, WidgetTree, Content, FText::FromString(TEXT("当前已生效效果 · 服务记录")), 28, ExtJade);
++            auto* EffectsGrid = WidgetTree->ConstructWidget<UWrapBox>(UWrapBox::StaticClass());
++            EffectsGrid->SetInnerSlotPadding(FVector2D(12.f, 12.f));
++            Content->AddChild(EffectsGrid);
+             for (const FInkGiftRuleView& Effect : Data.ActiveEffects)
+             {
+                 auto* Card = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
+-                ExtPanel(WidgetTree, Content, Card, ExtPaper, 18.f);
+-                ExtText(WidgetTree, Card, Effect.Name.IsEmpty() ? FText::FromString(TEXT("效果名称未知")) : Effect.Name, 24, ExtInk);
+-                if (!Effect.ActualDescription.IsEmpty()) ExtText(WidgetTree, Card, Effect.ActualDescription, 21, ExtSlate);
++                auto* CardWidth = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
++                CardWidth->SetWidthOverride(440.f);
++                CardWidth->SetMinDesiredHeight(144.f);
++                EffectsGrid->AddChildToWrapBox(CardWidth);
++                ExtPanel(WidgetTree, CardWidth, Card, ExtPaper, 18.f);
++                ExtText(this, WidgetTree, Card, Effect.Name.IsEmpty() ? FText::FromString(TEXT("效果名称未知")) : Effect.Name, 24, ExtInk);
++                if (!Effect.ActualDescription.IsEmpty()) ExtText(this, WidgetTree, Card, Effect.ActualDescription, 21, ExtSlate);
+             }
+         }
+     }
+@@ -347,12 +398,16 @@
+         const FText HonestState = Data.bRulesProvided && Data.State == EInkRankPageState::Empty
+             ? FText::FromString(TEXT("服务已确认规则目录为空"))
+             : FText::FromString(TEXT("详细礼物效果目录尚未同步"));
+-        ExtText(WidgetTree, Content, HonestState, 24, Data.State == EInkRankPageState::Error ? ExtWarning : ExtMuted, ETextJustify::Center);
++        ExtText(this, WidgetTree, Content, HonestState, 24, Data.State == EInkRankPageState::Error ? ExtWarning : ExtMuted, ETextJustify::Center);
+     }
+ }
+ 
+ void UInkGiftRulesPage::RefreshPage()
+ {
+-    if (!WidgetTree || !Content) return;
+-    Content->ClearChildren(); Content = nullptr; BuildPage();
+-}
++    BuildPage();
++}
++
++void UInkGiftRulesPage::RebuildForThemeChange()
++{
++    if (WidgetTree) BuildPage();
++}
+--- /dev/null
++++ panel-rank/review-v2/staged-source/InkRankWulingPageBase.h
+@@ -0,0 +1,42 @@
++#pragma once
++
++#include "CoreMinimal.h"
++#include "Blueprint/UserWidget.h"
++#include "Components/Button.h"
++#include "InkRankWulingPageBase.generated.h"
++
++class UFont;
++class UVerticalBox;
++
++/** A native button whose dynamic click event dispatches a retained native action. */
++UCLASS()
++class BOUNDLESSIMMORTALITY_API UInkRankWulingCallbackButton final : public UButton
++{
++    GENERATED_BODY()
++public:
++    UInkRankWulingCallbackButton();
++    void SetAction(TFunction<void()>&& InAction) { Action = MoveTemp(InAction); }
++private:
++    UFUNCTION()
++    void HandleClicked();
++    TFunction<void()> Action;
++};
++
++/** Shared stable root and injected newUI typography for the six Rank/Wuling pages. */
++UCLASS(Abstract)
++class BOUNDLESSIMMORTALITY_API UInkRankWulingPageBase : public UUserWidget
++{
++    GENERATED_BODY()
++public:
++    UFUNCTION(BlueprintCallable, Category="newUI|Theme")
++    void SetSharedThemeFonts(UFont* InTitleFont, UFont* InBodyFont);
++    FSlateFontInfo MakeThemeFont(int32 Size, bool bTitle = false) const;
++protected:
++    UPROPERTY(Transient) TObjectPtr<UVerticalBox> StableRoot = nullptr;
++    UPROPERTY(Transient) TObjectPtr<UVerticalBox> Content = nullptr;
++    UPROPERTY(Transient) TObjectPtr<UFont> SharedTitleFont = nullptr;
++    UPROPERTY(Transient) TObjectPtr<UFont> SharedBodyFont = nullptr;
++
++    bool EnsureStableRoot();
++    virtual void RebuildForThemeChange() = 0;
++};
+--- /dev/null
++++ panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp
+@@ -0,0 +1,56 @@
++#include "InkRankWulingPageBase.h"
++
++#include "Components/VerticalBox.h"
++#include "Components/VerticalBoxSlot.h"
++#include "Styling/CoreStyle.h"
++#include "Blueprint/WidgetTree.h"
++
++UInkRankWulingCallbackButton::UInkRankWulingCallbackButton()
++{
++    OnClicked.AddUniqueDynamic(this, &UInkRankWulingCallbackButton::HandleClicked);
++}
++
++void UInkRankWulingCallbackButton::HandleClicked()
++{
++    if (Action)
++    {
++        Action();
++    }
++}
++
++void UInkRankWulingPageBase::SetSharedThemeFonts(UFont* InTitleFont, UFont* InBodyFont)
++{
++    SharedTitleFont = InTitleFont;
++    SharedBodyFont = InBodyFont;
++    RebuildForThemeChange();
++}
++
++bool UInkRankWulingPageBase::EnsureStableRoot()
++{
++    if (!WidgetTree)
++    {
++        return false;
++    }
++    if (StableRoot && Content)
++    {
++        return true;
++    }
++
++    StableRoot = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
++    Content = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
++    if (UVerticalBoxSlot* ContentSlot = StableRoot->AddChildToVerticalBox(Content))
++    {
++        FSlateChildSize Fill(ESlateSizeRule::Fill);
++        ContentSlot->SetSize(Fill);
++    }
++    StableRoot->SetClipping(EWidgetClipping::ClipToBounds);
++    WidgetTree->RootWidget = StableRoot;
++    return true;
++}
++
++FSlateFontInfo UInkRankWulingPageBase::MakeThemeFont(int32 Size, bool bTitle) const
++{
++    const UFont* Font = bTitle ? SharedTitleFont.Get() : SharedBodyFont.Get();
++    return Font ? FSlateFontInfo(Font, static_cast<float>(Size))
++                : FSlateFontInfo(FCoreStyle::GetDefaultFont().ToSharedPtr(), static_cast<float>(Size));
++}

@@ -59,6 +59,13 @@ void UInkCharacterProfilePanel::BuildPanelContent()
     const auto Identity=State?State->GetParticipantSnapshot(State->GetAnchorId()):FCultivationParticipantSnapshot();
     const float GraphW=bPortraitLayout?BodyWidth-16:FMath::Min(BodyWidth*.52f,(BodyHeight-12)*624/670);
     const float S=GraphW/624;VisualScale=S;VisualSize=FVector2D(GraphW,666*S);
+    auto AddSurface=[&](FName Id,const FVector2D& Position,const FVector2D& Size,ESurface Surface,float Opacity)
+    {
+        auto* Card=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),Id);
+        Card->SetBrush(InkPresentationStyle::Surface(Surface,Size));Card->SetColorAndOpacity(FLinearColor(1,1,1,Opacity));
+        Card->SetVisibility(ESlateVisibility::HitTestInvisible);auto* Slot=BodyCanvas->AddChildToCanvas(Card);Slot->SetPosition(Position);Slot->SetSize(Size);Slot->SetZOrder(-1);return Card;
+    };
+    AddSurface(TEXT("ProfileCoreCard"),FVector2D(0,0),FVector2D(GraphW,666*S),ESurface::FeatureCard,.72f);
     const float ArtSize=384*S;const FVector2D ArtPosition((GraphW-ArtSize)/2,164*S);
     DantianPosition=ArtPosition+FVector2D(FMath::Clamp(DantianUV.X,0.,1.),FMath::Clamp(DantianUV.Y,0.,1.))*ArtSize;
     auto* Name=Label(BodyCanvas,TEXT("ProfileName"),Identity.DisplayName.IsEmpty()?TEXT("修行者"):Identity.DisplayName,GraphW*.08f,0,GraphW*.48f,40*S,FMath::Max(18,FMath::RoundToInt(26*S)),true);Name->SetAutoWrapText(false);Name->SetTextOverflowPolicy(ETextOverflowPolicy::Ellipsis);
@@ -66,19 +73,21 @@ void UInkCharacterProfilePanel::BuildPanelContent()
     auto* RealmText=Label(BodyCanvas,TEXT("ProfileRealm"),Identity.RealmName.ToString(),GraphW*.58f,4*S,GraphW*.38f,32*S,FMath::Max(14,FMath::RoundToInt(20*S)));
     FitAttribute(RealmText,FMath::Max(14,FMath::RoundToInt(20*S)),GraphW*.38f);RealmText->SetClipping(EWidgetClipping::ClipToBoundsAlways);
     auto* Art=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT("ProfileMeditation"));
-    Art->SetBrushFromTexture(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation")));
+    Art->SetBrushFromTexture(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation")));
     Art->SetVisibility(ESlateVisibility::HitTestInvisible);auto* ArtSlot=BodyCanvas->AddChildToCanvas(Art);ArtSlot->SetPosition(ArtPosition);ArtSlot->SetSize(FVector2D(ArtSize));
     auto BuildSlot=[&](const FString& Id,FName Name,const FString& Caption,const FString& Status,int32 Tile,float X,float Y,float W,float H,bool Unlocked)
     {
+        static_cast<void>(Tile);
         auto* B=Action(BodyCanvas,Id,TEXT(""),X,Y,W,H);B->SetIsEnabled(Unlocked);
-        auto Style=B->GetStyle();auto Brush=InkPresentationStyle::Surface(ESurface::Card,FVector2D(W,H));
-        Brush.TintColor=FLinearColor(.92f,.87f,.75f,.75f);Brush.OutlineSettings.Width=.8f;Brush.OutlineSettings.Color=InkPresentationStyle::Gold();
-        Style.SetNormal(Brush);auto Hover=Brush;Hover.TintColor=FLinearColor(.72f,.86f,.87f,.9f);Style.SetHovered(Hover);
-        auto Pressed=Brush;Pressed.TintColor=FLinearColor(.93f,.73f,.35f,.9f);Style.SetPressed(Pressed);
-        auto Disabled=Brush;Disabled.TintColor=FLinearColor(.68f,.66f,.60f,.55f);Style.SetDisabled(Disabled);B->SetStyle(Style);
+        auto Style=InkPresentationStyle::FeatureButton(false,false,true);
+        Style.SetNormal(InkPresentationStyle::Surface(ESurface::FeatureCard,FVector2D(W,H)));
+        auto Hover=Style.Normal;Hover.TintColor=FLinearColor(.77f,.89f,.90f,.88f);Style.SetHovered(Hover);
+        auto Pressed=Style.Normal;Pressed.TintColor=FLinearColor(.91f,.82f,.61f,.92f);Style.SetPressed(Pressed);B->SetStyle(Style);
         B->SetToolTipText(FText::FromString(Unlocked?Caption+TEXT(" · ")+Status:TEXT("功法未解锁")));
-        auto* Icon=AtlasIcon(BodyCanvas,FName(*(Name.ToString()+TEXT("Icon"))),Tile,X+(W-44*S)/2,Y+5*S,44*S);
-        if(!Unlocked)Icon->SetColorAndOpacity(FLinearColor(.18f,.19f,.18f,.55f));
+        auto* Icon=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*(Name.ToString()+TEXT("Icon"))));
+        const auto IconKind=Id.StartsWith(TEXT("ProfileMethod"))?InkPresentationStyle::EIcon::Manual:Id==TEXT("ProfileItem")?InkPresentationStyle::EIcon::Action:InkPresentationStyle::EIcon::Armor;
+        Icon->SetBrush(InkPresentationStyle::Icon(IconKind,FVector2D(44*S)));Icon->SetColorAndOpacity(Unlocked?FLinearColor::White:FLinearColor(.60f,.60f,.57f,1));
+        auto* IconSlot=BodyCanvas->AddChildToCanvas(Icon);IconSlot->SetPosition(FVector2D(X+(W-44*S)/2,Y+5*S));IconSlot->SetSize(FVector2D(44*S));
         auto* T=Label(BodyCanvas,Name,Caption,X+3,Y+52*S,W-6,28*S,FMath::Max(11,FMath::RoundToInt(18*S)),true);FitAttribute(T,FMath::Max(11,FMath::RoundToInt(18*S)),W-6);
         CastChecked<UCanvasPanelSlot>(T->Slot)->SetSize(FVector2D(W-6,28*S));T->SetClipping(EWidgetClipping::ClipToBoundsAlways);
         auto* Hint=Label(BodyCanvas,FName(*(Name.ToString()+TEXT("State"))),Status,X+3,Y+80*S,W-6,22*S,FMath::Max(11,FMath::RoundToInt(14*S)),true);
@@ -118,7 +127,9 @@ void UInkCharacterProfilePanel::BuildPanelContent()
     const float AX=bPortraitLayout?0:GraphW+34,AW=BodyWidth-AX,W=AW/Columns,HeadingY=bPortraitLayout?682*S:6,Top=HeadingY+42;
     AttributeWidth=W;
     const float RowHeight=FMath::Max(62.f,FMath::Min(76.f,(BodyHeight-Top-8)/FMath::Max(1,FMath::DivideAndRoundUp(Count,Columns))));
-    Label(BodyCanvas,TEXT("ProfileAttributesHeading"),TEXT("基础属性"),AX,HeadingY,AW,32,24);
+    const float AttributeCardHeight=FMath::Max(128.f,BodyHeight-HeadingY);
+    AddSurface(TEXT("ProfileAttributesCard"),FVector2D(AX,HeadingY-6),FVector2D(AW,AttributeCardHeight),ESurface::FeatureCard,.58f);
+    auto* Heading=Label(BodyCanvas,TEXT("ProfileAttributesHeading"),TEXT("基础属性"),AX+18,HeadingY,AW-36,32,24);Heading->SetColorAndOpacity(InkPresentationStyle::Ink());
     int32 I=0;PresentedFields.Reset();
     if(FrontendOwner)for(const auto& Attribute:FrontendOwner->GetPresentedCharacterAttributes())
     {
@@ -126,8 +137,8 @@ void UInkCharacterProfilePanel::BuildPanelContent()
         const float X=AX+(I%Columns)*W,Y=Top+(I/Columns)*RowHeight;
         auto* IconImage=Icon(BodyCanvas,FName(*(TEXT("ProfileAttributeIcon_")+Attribute.AttributeId.ToString())),AttributeIcon(Attribute.AttributeId),X+4,Y+2,28);
         if(auto* Texture=Attribute.Icon.LoadSynchronous())IconImage->SetBrushFromTexture(Texture);
-        auto* L=Label(BodyCanvas,FName(*(TEXT("ProfileLabel_")+Attribute.AttributeId.ToString())),Attribute.Label.ToString(),X+38,Y,W-44,25,17);FitAttribute(L,17,W-44);
-        auto* Value=Label(BodyCanvas,FName(*(TEXT("ProfileValue_")+Attribute.AttributeId.ToString())),Attribute.Value.ToString(),X+38,Y+28,W-44,30,23);FitAttribute(Value,23,W-44);
+        auto* L=Label(BodyCanvas,FName(*(TEXT("ProfileLabel_")+Attribute.AttributeId.ToString())),Attribute.Label.ToString(),X+38,Y,W-44,25,17);FitAttribute(L,17,W-44);L->SetColorAndOpacity(FLinearColor(.28f,.35f,.31f,1));
+        auto* Value=Label(BodyCanvas,FName(*(TEXT("ProfileValue_")+Attribute.AttributeId.ToString())),Attribute.Value.ToString(),X+38,Y+28,W-44,30,23);FitAttribute(Value,23,W-44);Value->SetColorAndOpacity(InkPresentationStyle::Ink());
         if(RatedAttribute(Attribute.AttributeId))
         {
             auto* Grade=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),FName(*(TEXT("ProfileRating_")+Attribute.AttributeId.ToString())));
@@ -135,6 +146,12 @@ void UInkCharacterProfilePanel::BuildPanelContent()
         }
         ++I;
     }
+    const float NavigationY=Top+FMath::DivideAndRoundUp(I,Columns)*RowHeight+16;
+    const float NavigationGap=12;
+    const float NavigationWidth=(AW-NavigationGap)*.5f;
+    auto* EquipmentAction=Action(BodyCanvas,TEXT("Open_CharacterEquipment"),TEXT("装备与法宝"),AX+16,NavigationY,NavigationWidth-16,72,true);
+    auto* AppearanceAction=Action(BodyCanvas,TEXT("Open_CharacterAppearance"),TEXT("外观试戴"),AX+NavigationWidth+NavigationGap,NavigationY,NavigationWidth-16,72);
+    EquipmentAction->SetStyle(InkPresentationStyle::FeatureButton(false,true));AppearanceAction->SetStyle(InkPresentationStyle::FeatureButton());
     RefreshLiveData();
 }
 void UInkCharacterProfilePanel::RefreshLiveData()
@@ -171,7 +188,7 @@ void UInkCharacterProfilePanel::RefreshLiveData()
     FInkAttributeRatingContext Rating;Rating.RealmIndex=Realm;
     if(State){Rating.bV14Rules=State->IsWulingAuthorityEnabled();Rating.BaseAttributes=State->Rules.BaseAttributes;Rating.LegacyRealmGrowth=State->Rules.AttributeGrowthPerRealm;Rating.LegacyMeditationPerSecond=State->Rules.MeditationPerSecond;}
     if(RatingTextures.Num()!=7)
-    {RatingTextures.Reset();for(int32 I=0;I<7;++I)RatingTextures.Add(InkUiAssets::Load<UTexture2D>(nullptr,*FString::Printf(TEXT("/Game/UI/Ink/CharacterRating20261022/T_Rating_%s.T_Rating_%s"),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)))));}
+    {RatingTextures.Reset();for(int32 I=0;I<7;++I)RatingTextures.Add(InkUiAssets::Load<UTexture2D>(nullptr,*FString::Printf(TEXT("/Game/newUI/Ink/Textures/Character/T_Rating_%s.T_Rating_%s"),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)),*UInkAttributeRatingLibrary::GradeName(EInkAttributeRating(I)))));}
     for(const auto& A:FrontendOwner->GetPresentedCharacterAttributes())if(auto* Image=Cast<UImage>(WidgetTree->FindWidget(FName(*(TEXT("ProfileRating_")+A.AttributeId.ToString())))))
     {
         auto Context=Rating;if(A.AttributeId==TEXT("MoveSpeed")&&A.RatingBaseValue>0)Context.BaseMoveSpeed=A.RatingBaseValue;
@@ -282,6 +299,8 @@ void UInkCharacterAppearancePanel::BuildPanelContent()
     const float PreviewW=bPortraitLayout?BodyWidth:(BodyWidth-20)*.36f,GridX=bPortraitLayout?0:PreviewW+20,GridW=BodyWidth-GridX;
     const float GridTop=bPortraitLayout?212:0;
     Scene(BodyCanvas,0,0,0,PreviewW,188);
+    auto* PreviewPaper=Surface(BodyCanvas,TEXT("AppearancePreviewPaper"),InkPresentationStyle::ESurface::FeatureCard,126,8,PreviewW-134,172);
+    CastChecked<UCanvasPanelSlot>(PreviewPaper->Slot)->SetZOrder(2);
     AtlasIcon(BodyCanvas,NAME_None,4,12,40,104);AtlasIcon(BodyCanvas,TEXT("AppearanceSelectedFrame"),Selected,6,34,116);
     Label(BodyCanvas,TEXT("AppearanceFrame"),TEXT("名片 · 试戴预览"),132,16,PreviewW-144,76,30);
     Label(BodyCanvas,TEXT("AppearancePreviewName"),TEXT("试剑修士\n")+FrameStyle+TEXT(" · 本地预览"),132,100,PreviewW-144,88,24);

@@ -1,0 +1,4900 @@
+{
+  "extracted_utc": "2026-10-24T08:14:07.253819+00:00",
+  "scope": "01-07 plus bounded late09 market positives joined to live read-only SQLite snapshot command_receipt and command_audit; no service/test execution",
+  "attempts": [
+    {
+      "attempt": 1,
+      "finished": false,
+      "passed": false,
+      "checks": 58,
+      "captures": 6,
+      "source_epoch_sha256": "cdcf98f77ceb664b246346e7ac27fc2d0aadfa8c10b351b0c64f573d76e8eecc",
+      "current_step": "select actual inventory book GUID",
+      "started_at": "2026-10-24T07:48:42.260771+00:00",
+      "finished_at": "2026-10-24T07:49:22.818815+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate actual player item BOOK_METHOD_EDGE_BOOK",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate actual player item BOOK_METHOD_EDGE_BOOK: None"
+      ]
+    },
+    {
+      "attempt": 2,
+      "finished": false,
+      "passed": false,
+      "checks": 58,
+      "captures": 6,
+      "source_epoch_sha256": "4828cfea76b8eb10e1be9ffc416d8e661ec97634ba5236864fe7e3d50f0a98c4",
+      "current_step": "select actual inventory book GUID",
+      "started_at": "2026-10-24T07:51:58.078906+00:00",
+      "finished_at": "2026-10-24T07:52:38.594959+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate actual player item BOOK_METHOD_EDGE_BOOK",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate actual player item BOOK_METHOD_EDGE_BOOK: None"
+      ]
+    },
+    {
+      "attempt": 3,
+      "finished": false,
+      "passed": false,
+      "checks": 95,
+      "captures": 9,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "reveal actual sign action",
+      "started_at": "2026-10-24T07:54:09.987102+00:00",
+      "finished_at": "2026-10-24T07:55:07.172705+00:00",
+      "failed_checks": [
+        {
+          "name": "actual scroll 确认签到",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: actual scroll 确认签到: None"
+      ]
+    },
+    {
+      "attempt": 4,
+      "finished": false,
+      "passed": false,
+      "checks": 18,
+      "captures": 4,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "declared transient production avatar regression fixture",
+      "started_at": "2026-10-24T07:56:02.415111+00:00",
+      "finished_at": "2026-10-24T07:56:24.131327+00:00",
+      "failed_checks": [],
+      "error_last_line": [
+        "AttributeError: module 'unreal' has no attribute 'WidgetBlueprintLibrary'"
+      ]
+    },
+    {
+      "attempt": 5,
+      "finished": false,
+      "passed": false,
+      "checks": 24,
+      "captures": 3,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "select exact actual BUILD_01 target1 confirmation",
+      "started_at": "2026-10-24T07:58:11.427267+00:00",
+      "finished_at": "2026-10-24T07:58:34.772420+00:00",
+      "failed_checks": [
+        {
+          "name": "one real contextual row 建设 ['武灵大殿', '可查看目标等级 1']",
+          "passed": false,
+          "actual": []
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: one real contextual row 建设 ['武灵大殿', '可查看目标等级 1']: []"
+      ]
+    },
+    {
+      "attempt": 6,
+      "finished": false,
+      "passed": false,
+      "checks": 21,
+      "captures": 2,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "fresh native build second confirmation",
+      "started_at": "2026-10-24T07:59:58.063081+00:00",
+      "finished_at": "2026-10-24T08:00:17.336161+00:00",
+      "failed_checks": [
+        {
+          "name": "painted native target 确认建设",
+          "passed": false,
+          "actual": {
+            "name": "InkRankWulingCallbackButton_131",
+            "visible": true,
+            "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.SizeBox_219",
+            "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.InkRankWulingCallbackButton_131",
+            "object_id": 92768,
+            "keyboard_focused": false,
+            "clipping": "Inherit",
+            "in_confirmation": false,
+            "x": 48,
+            "y": 1194,
+            "width": 0,
+            "height": 0,
+            "geometry_arranged": false,
+            "paint_expectation": "unknown",
+            "culling_proof_ancestor": "",
+            "painted_width": 0,
+            "painted_height": 0,
+            "widget_class": "/Script/BoundlessImmortality.InkRankWulingCallbackButton",
+            "enabled": true,
+            "label": "确认建设"
+          }
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: painted native target 确认建设: {'name': 'InkRankWulingCallbackButton_131', 'visible': True, 'parent_object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.SizeBox_219', 'object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.InkRankWulingCallbackButton_131', 'object_id': 92768, 'keyboard_focused': False, 'clipping': 'Inherit', 'in_confirmation': False, 'x': 48, 'y': 1194, 'width': 0, 'height': 0, 'geometry_arranged': False, 'paint_expectation': 'unknown', 'culling_proof_ancestor': '', 'painted_width': 0, 'painted_height': 0, 'widget_class': '/Script/BoundlessImmortality.InkRankWulingCallbackButton', 'enabled': True, 'label': '确认建设'}"
+      ]
+    },
+    {
+      "attempt": 7,
+      "finished": false,
+      "passed": false,
+      "checks": 50,
+      "captures": 3,
+      "source_epoch_sha256": "5e1c9dacee5b22838516c7b12c4d9dfbce1d0e945ac33c083b067b9cd72d1e3b",
+      "current_step": "select actual seller listing",
+      "started_at": "2026-10-24T08:03:05.146784+00:00",
+      "finished_at": "2026-10-24T08:03:37.586966+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate select stable entry 1ed0489e02e641c5b67179edbb8a169d",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate select stable entry 1ed0489e02e641c5b67179edbb8a169d: None"
+      ]
+    },
+    {
+      "attempt": 8,
+      "finished": false,
+      "passed": false,
+      "checks": 15,
+      "captures": 1,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "current_step": "refresh actual market catalog",
+      "started_at": "2026-10-24T08:07:41.500435+00:00",
+      "finished_at": "2026-10-24T08:08:00.114889+00:00",
+      "failed_checks": [
+        {
+          "name": "unique native target 查看市场",
+          "passed": false,
+          "actual": []
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: unique native target 查看市场: []"
+      ]
+    },
+    {
+      "attempt": 9,
+      "finished": false,
+      "passed": false,
+      "checks": 77,
+      "captures": 2,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "current_step": "declared avatar transport regression on actual default root",
+      "started_at": "2026-10-24T08:09:21.062684+00:00",
+      "finished_at": "2026-10-24T08:10:03.414362+00:00",
+      "failed_checks": [],
+      "error_last_line": [
+        "Exception: InkRebuildFrontendWidget: Failed to find property 'leaderboard_entries' for attribute 'leaderboard_entries' on 'WBP_NewUIFrontend_C'"
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "command": "LearnMethod",
+      "request_id": "33FFDBC7490A7CCB6953CD86A559430A",
+      "attempt": 3,
+      "database": 2,
+      "request": {
+        "request_id": "33FFDBC7490A7CCB6953CD86A559430A",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 7,
+        "command": "LearnMethod",
+        "args": {
+          "item_id": "BOOK_METHOD_EDGE_BOOK",
+          "count": 1
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "33FFDBC7490A7CCB6953CD86A559430A",
+          "command": "LearnMethod",
+          "status": "success",
+          "error_code": "",
+          "version": 8,
+          "utc": "2026-10-24T07:54:34.714176+00:00",
+          "monotonic": 107509.437
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "33FFDBC7490A7CCB6953CD86A559430A",
+          "payload_hash": "a873afd2251375e3f6d2497edc49397024b7dc17211fe454fa27977904660b92",
+          "created": 1792828474.7058222,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 8,
+          "receipt_id": "1ce8201ce7084dabba88feb93a524ed3",
+          "result_sha256": "26d035cffa783a9e31991ddd6dbc24a034832faf241c1563b916f3ee9d806a6f",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:6a5395c16623d7ed16e274290a0f26845c640a79b65c69c4e8dcca356286360f",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828474.7058222,
+              "data": "{\"operation\":\"LearnMethod\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 8,
+            "identity": {
+              "generation": 3,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "ConfigureMethods",
+      "request_id": "164F7CA943554C023CB48383D4A4A547",
+      "attempt": 3,
+      "database": 2,
+      "request": {
+        "request_id": "164F7CA943554C023CB48383D4A4A547",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 8,
+        "command": "ConfigureMethods",
+        "args": {
+          "main": "METHOD_EDGE",
+          "supports": []
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "164F7CA943554C023CB48383D4A4A547",
+          "command": "ConfigureMethods",
+          "status": "success",
+          "error_code": "",
+          "version": 9,
+          "utc": "2026-10-24T07:54:39.163008+00:00",
+          "monotonic": 107513.89
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "164F7CA943554C023CB48383D4A4A547",
+          "payload_hash": "e5be5db1656baf5cff3ddca01afc1fdb380bc1d30d56217ed40277dc9a38df44",
+          "created": 1792828479.15605,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 9,
+          "receipt_id": "ce9777080178408d969e546050843772",
+          "result_sha256": "5a3b6752f2f6a23d99829f9f91f6b23a50d3edb9fc6442fbb16c9fc31f055ae7",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:b9f7438da61795e133cfcb4e6e144c4894f0ceb411afb8f57e4da82881a564c8",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828479.15605,
+              "data": "{\"operation\":\"ConfigureMethods\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 9,
+            "identity": {
+              "generation": 3,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "Equip",
+      "request_id": "29EEDB504F303E0584C587AFF8BB8B0E",
+      "attempt": 3,
+      "database": 2,
+      "request": {
+        "request_id": "29EEDB504F303E0584C587AFF8BB8B0E",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 10,
+        "command": "Equip",
+        "args": {
+          "item_id": "EQ_ROBE_T1",
+          "count": 1
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "29EEDB504F303E0584C587AFF8BB8B0E",
+          "command": "Equip",
+          "status": "success",
+          "error_code": "",
+          "version": 11,
+          "utc": "2026-10-24T07:54:47.913353+00:00",
+          "monotonic": 107522.64
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "29EEDB504F303E0584C587AFF8BB8B0E",
+          "payload_hash": "7f25f161c0b9040d17b2cacdaec77182207ef58fdc8ded68469d9a78972c54aa",
+          "created": 1792828487.9068937,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 11,
+          "receipt_id": "f5e342106a98434fa76f3ed754f160ba",
+          "result_sha256": "92141d7b7287af1cceff6b226e8874b384dcebb49b659a572463fe0cc0197048",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:d1a84f2a6091e4d7f53dc1594de8336d30f4a4deadd21e66b2cb15cb35852c45",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828487.9068937,
+              "data": "{\"operation\":\"Equip\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 11,
+            "identity": {
+              "generation": 3,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {
+                "robe": "EQ_ROBE_T1"
+              },
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "Unequip",
+      "request_id": "FA005161496EBF0630FD0B874FA087D5",
+      "attempt": 3,
+      "database": 2,
+      "request": {
+        "request_id": "FA005161496EBF0630FD0B874FA087D5",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 11,
+        "command": "Unequip",
+        "args": {
+          "item_id": "EQ_ROBE_T1",
+          "count": 1
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "FA005161496EBF0630FD0B874FA087D5",
+          "command": "Unequip",
+          "status": "success",
+          "error_code": "",
+          "version": 12,
+          "utc": "2026-10-24T07:54:51.887781+00:00",
+          "monotonic": 107526.625
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "FA005161496EBF0630FD0B874FA087D5",
+          "payload_hash": "b3e5180b44d59849068d02a1537d38fdaaa4776fa5be2bb9c7769eb16ed4ac6f",
+          "created": 1792828491.8824258,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 12,
+          "receipt_id": "cc4a562728b04efcab535021330417c2",
+          "result_sha256": "7c08ae213ea02f94a1ba6610e85c005d5b5247efc1b7bce409279f2be98f3a99",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:006c514dab361eac85b43465ca67128674e752260d16d9c7cdeea56dd35cf71b",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828491.8824258,
+              "data": "{\"operation\":\"Unequip\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 12,
+            "identity": {
+              "generation": 3,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "Purchase",
+      "request_id": "3CC04520493C3CD98003DE900790B940",
+      "attempt": 3,
+      "database": 2,
+      "request": {
+        "request_id": "3CC04520493C3CD98003DE900790B940",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 13,
+        "command": "Purchase",
+        "args": {
+          "sku": "SKU_BREAK"
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "3CC04520493C3CD98003DE900790B940",
+          "command": "Purchase",
+          "status": "success",
+          "error_code": "",
+          "version": 14,
+          "utc": "2026-10-24T07:55:02.250000+00:00",
+          "monotonic": 107536.984
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "3CC04520493C3CD98003DE900790B940",
+          "payload_hash": "df36afacd7171eb4bc1fc920137994e739ef7b5b8017d9378f26adbaa5dd3a75",
+          "created": 1792828502.2409942,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 14,
+          "receipt_id": "d6b0ff474d9740f0862903efa7c880f5",
+          "result_sha256": "088dee02fae1990df608c86ab9ba29e699b6a758834fc33c007feda1e80ada5c",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:70b4f674e4299e439f6067c1a044cc3a993c51254fee2fd05dd66264db1d2056",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828502.2409942,
+              "data": "{\"operation\":\"Purchase\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 14,
+            "identity": {
+              "generation": 3,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 490
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "SignIn",
+      "request_id": "BDBF9051445B3A0699FD36A009EE9806",
+      "attempt": 4,
+      "database": 2,
+      "request": {
+        "request_id": "BDBF9051445B3A0699FD36A009EE9806",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 14,
+        "command": "SignIn",
+        "args": {}
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "BDBF9051445B3A0699FD36A009EE9806",
+          "command": "SignIn",
+          "status": "success",
+          "error_code": "",
+          "version": 15,
+          "utc": "2026-10-24T07:56:21.716024+00:00",
+          "monotonic": 107616.453
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "BDBF9051445B3A0699FD36A009EE9806",
+          "payload_hash": "8b4f30cdd99611ad6f8ea4b31aad12c4d9c521bf2513f3b990035adf4ffa4ffe",
+          "created": 1792828581.709595,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 15,
+          "receipt_id": "39f7836fa42a4d73b8851dc906ec6ade",
+          "result_sha256": "00ddc95049ad6f4344d1e210774266948b7394fc91ee7b6d7df5b5e706dd6f01",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:68134baae347ef37a98dd7426417464d7a1ef588d3515068a1db1077e8847975",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828581.709595,
+              "data": "{\"operation\":\"SignIn\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 15,
+            "identity": {
+              "generation": 4,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 490
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "RemoveMember",
+      "request_id": "EA0EEF194A31A2D0909FC18DBA8BEA8F",
+      "attempt": 5,
+      "database": 2,
+      "request": {
+        "request_id": "EA0EEF194A31A2D0909FC18DBA8BEA8F",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 15,
+        "command": "RemoveMember",
+        "args": {
+          "user_id": "newui-member-fixture"
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "EA0EEF194A31A2D0909FC18DBA8BEA8F",
+          "command": "RemoveMember",
+          "status": "success",
+          "error_code": "",
+          "version": 16,
+          "utc": "2026-10-24T07:58:30.053319+00:00",
+          "monotonic": 107744.781
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "EA0EEF194A31A2D0909FC18DBA8BEA8F",
+          "payload_hash": "d520410e4c6e62213736c30cfde22e861011e1320dda838530cde63fd7105825",
+          "created": 1792828710.0483184,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 16,
+          "receipt_id": "d05e4a82d76e4d86a135136c9beb72fe",
+          "result_sha256": "3c6d9eeca3137a470df0895c916b46459f6cb29e67a8a9faa55af948c1e62084",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:7b321f66bdb5b97f1c4d8e3431babfdcc2338a4caeea8b53d319bf1e7670f1a4",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828710.0483184,
+              "data": "{\"operation\":\"RemoveMember\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 16,
+            "identity": {
+              "generation": 5,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 100
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 490
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "Build",
+      "request_id": "50F67135451F10F48FAFFBB601982ED7",
+      "attempt": 7,
+      "database": 2,
+      "request": {
+        "request_id": "50F67135451F10F48FAFFBB601982ED7",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 19,
+        "command": "Build",
+        "args": {
+          "building_id": "BUILD_01",
+          "target_level": 1
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "50F67135451F10F48FAFFBB601982ED7",
+          "command": "Build",
+          "status": "success",
+          "error_code": "",
+          "version": 20,
+          "utc": "2026-10-24T08:03:24.820953+00:00",
+          "monotonic": 108039.546
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "50F67135451F10F48FAFFBB601982ED7",
+          "payload_hash": "aa70fa8844fe242fd3901072d4a2b0b264a18ef57afe611b7258df365d8d9a91",
+          "created": 1792829004.814027,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 20,
+          "receipt_id": "589dfb4837da43fa9e95f4efac8c994b",
+          "result_sha256": "c5f91f4222738ff67c3259882c01dfe38da0c4182b9e583a758abf11a087c259",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:6404fc96c5a101622973978b469d7b19ddf688f63e7ec155817ece411a990d87",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792829004.814027,
+              "data": "{\"operation\":\"Build\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 20,
+            "identity": {
+              "generation": 7,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 80
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [
+              {
+                "building_id": "BUILD_01",
+                "completed": 1792829004.814027,
+                "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+                "level": 1
+              }
+            ],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 490
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "Craft",
+      "request_id": "8A46C5E44F40746D523D33B6BFD72FCF",
+      "attempt": 7,
+      "database": 2,
+      "request": {
+        "request_id": "8A46C5E44F40746D523D33B6BFD72FCF",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 21,
+        "command": "Craft",
+        "args": {
+          "recipe_id": "R_MAT_BR01_C01_G2"
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "8A46C5E44F40746D523D33B6BFD72FCF",
+          "command": "Craft",
+          "status": "success",
+          "error_code": "",
+          "version": 22,
+          "utc": "2026-10-24T08:03:32.773669+00:00",
+          "monotonic": 108047.5
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "8A46C5E44F40746D523D33B6BFD72FCF",
+          "payload_hash": "1eb91e129337852664610f9083957e8d21c92580ac2a8db3305df708d1ee0fe7",
+          "created": 1792829012.7454605,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 22,
+          "receipt_id": "3b80353b5ebd4839a4f66058a9bbc10f",
+          "result_sha256": "33878bfc99445e7dd53cef0ba48c9642367e80380f21f9d61fc76d217d5bda0c",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:db4c14388e6c11cd19b7900bf017030951727a0dfd2438d36d58a47d728ec5cd",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792829012.7454605,
+              "data": "{\"operation\":\"Craft\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 22,
+            "identity": {
+              "generation": 7,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 80
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [
+              {
+                "building_id": "BUILD_01",
+                "completed": 1792829004.814027,
+                "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+                "level": 1
+              }
+            ],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 4,
+              "MAT_BR01_C01_G2": 1,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 470
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "BuyListing",
+      "request_id": "FEB9BCDA4EB13A8FE91D17B25FB7A4C1",
+      "attempt": 9,
+      "database": 2,
+      "request": {
+        "request_id": "FEB9BCDA4EB13A8FE91D17B25FB7A4C1",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 27,
+        "command": "BuyListing",
+        "args": {
+          "listing_id": "1ed0489e02e641c5b67179edbb8a169d",
+          "listing_version": 0
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "FEB9BCDA4EB13A8FE91D17B25FB7A4C1",
+          "command": "BuyListing",
+          "status": "success",
+          "error_code": "",
+          "version": 28,
+          "utc": "2026-10-24T08:09:44.333902+00:00",
+          "monotonic": 108419.062
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "FEB9BCDA4EB13A8FE91D17B25FB7A4C1",
+          "payload_hash": "1207ae503748a3b3adb14556ccce5f48e83fa64f11e4e52931d6292ad474e190",
+          "created": 1792829384.3269835,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 28,
+          "receipt_id": "6bdf482744f74c1fbac1cc19ba4deef0",
+          "result_sha256": "b2abf0c3920a67a2a17e4befabd9816e709bda2958c400259be275ab4d56d277",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:626c43d0b486fd2414903291588a6fcd4218f0a6d77d1222edd40c2830c9816f",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792829384.3269835,
+              "data": "{\"operation\":\"BuyListing\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 28,
+            "identity": {
+              "generation": 9,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 80
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [
+              {
+                "building_id": "BUILD_01",
+                "completed": 1792829004.814027,
+                "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+                "level": 1
+              }
+            ],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 4,
+              "MAT_BR01_C01_G2": 1,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 14,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 462
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "CreateListing",
+      "request_id": "ED81B8174CBC86199FE9BD890E8DE27A",
+      "attempt": 9,
+      "database": 2,
+      "request": {
+        "request_id": "ED81B8174CBC86199FE9BD890E8DE27A",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 29,
+        "command": "CreateListing",
+        "args": {
+          "item_id": "MAT_HERB_T",
+          "count": 1,
+          "unit_price": 4
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "ED81B8174CBC86199FE9BD890E8DE27A",
+          "command": "CreateListing",
+          "status": "success",
+          "error_code": "",
+          "version": 30,
+          "utc": "2026-10-24T08:09:54.553925+00:00",
+          "monotonic": 108429.281
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "ED81B8174CBC86199FE9BD890E8DE27A",
+          "payload_hash": "d1cb1e0560f80cfd5e9529b1102b54de8fed01d5ddddbd146a09d05807f665c8",
+          "created": 1792829394.5450566,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 30,
+          "receipt_id": "955a6a2228094f97b2b991a9d9496812",
+          "result_sha256": "de40e1b1fac9a9c78c7a68f2519b115b233c5e37363a089bb0686dcec99c145e",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:bdb80d3c0dd3b39f366cbe268b06e7fe866f67bba903d4bd46b6907e05ae3c54",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792829394.5450566,
+              "data": "{\"operation\":\"CreateListing\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 30,
+            "identity": {
+              "generation": 9,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 80
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [
+              {
+                "building_id": "BUILD_01",
+                "completed": 1792829004.814027,
+                "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+                "level": 1
+              }
+            ],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 4,
+              "MAT_BR01_C01_G2": 1,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 13,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 461
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "CancelListing",
+      "request_id": "6CBF720A4F96DC2C39FB44B97A5BB927",
+      "attempt": 9,
+      "database": 2,
+      "request": {
+        "request_id": "6CBF720A4F96DC2C39FB44B97A5BB927",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 30,
+        "command": "CancelListing",
+        "args": {
+          "listing_id": "4e26ede714c94aec8c8a32c2dbb03dae",
+          "listing_version": 0
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "6CBF720A4F96DC2C39FB44B97A5BB927",
+          "command": "CancelListing",
+          "status": "success",
+          "error_code": "",
+          "version": 31,
+          "utc": "2026-10-24T08:10:00.862699+00:00",
+          "monotonic": 108435.593
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "6CBF720A4F96DC2C39FB44B97A5BB927",
+          "payload_hash": "29d4c6559a259b79d40a522fd1dd72388c94a7d8a3eb7fb876b02a0d96bc9f09",
+          "created": 1792829400.85583,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 31,
+          "receipt_id": "3059da5ea7a541a6b1006d37605e040a",
+          "result_sha256": "e44dc377eb1e71c83b97a002b1d0a6af65575030620716bde3574d5b4b67fd17",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:ea5d9aed933f00dc0e7f91aeceab183abcc61b4d9aabf94734d2a90acf09778a",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792829400.85583,
+              "data": "{\"operation\":\"CancelListing\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 31,
+            "identity": {
+              "generation": 9,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 80
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "METHOD_EDGE",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {
+                "METHOD_EDGE": {
+                  "level": 1,
+                  "progress": 0
+                }
+              },
+              "supports": []
+            },
+            "buildings": [
+              {
+                "building_id": "BUILD_01",
+                "completed": 1792829004.814027,
+                "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+                "level": 1
+              }
+            ],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 1,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": true,
+              "signed_days": [
+                "2026-10-24"
+              ],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": true,
+                  "day": "2026-10-24",
+                  "eligible": false,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 0,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 4,
+              "MAT_BR01_C01_G2": 1,
+              "MAT_BREAK": 1,
+              "MAT_HERB_T": 14,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 461
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "CreateGuild",
+      "request_id": "836C02734218B5D6C9B38FAC4477263F",
+      "attempt": 1,
+      "database": 1,
+      "request": {
+        "request_id": "836C02734218B5D6C9B38FAC4477263F",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 1,
+        "command": "CreateGuild",
+        "args": {
+          "name": "验证武灵"
+        }
+      },
+      "receive_count": 2,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "836C02734218B5D6C9B38FAC4477263F",
+          "command": "CreateGuild",
+          "status": "success",
+          "error_code": "",
+          "version": 2,
+          "utc": "2026-10-24T07:49:04.284712+00:00",
+          "monotonic": 107179.015
+        },
+        {
+          "event": "command_result",
+          "request_id": "836C02734218B5D6C9B38FAC4477263F",
+          "command": "CreateGuild",
+          "status": "success",
+          "error_code": "",
+          "version": 2,
+          "utc": "2026-10-24T07:49:08.349866+00:00",
+          "monotonic": 107183.078
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-01",
+          "request": "836C02734218B5D6C9B38FAC4477263F",
+          "payload_hash": "24518bf00df2055cfb5012a1a0d7d0eacaadceb7415600b184df10e182be4ef6",
+          "created": 1792828144.2778025,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 2,
+          "receipt_id": "d1921ffe1ed941a5a37ab68bfb8042e4",
+          "result_sha256": "a02257bcb1b77373c3c7909efe6e4e43d7996d57c5e7e3b17ac81a2cd2e60ad9",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:331cf2859a64f0a420518aabe495d757e31efd7c2742229b9af1ace7dd7ccbed",
+              "kind": "command_audit",
+              "user": "newui-anchor-01",
+              "created": 1792828144.2778025,
+              "data": "{\"operation\":\"CreateGuild\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 2,
+            "identity": {
+              "generation": 2,
+              "role": "anchor",
+              "room": "newui-room-01",
+              "user": "newui-anchor-01"
+            },
+            "guild": {
+              "anchor": "newui-anchor-01",
+              "created": 1792828144.2778025,
+              "dissolved": 0,
+              "id": "5a7397de6f304dd98ccc542f734e683c",
+              "name": "验证武灵",
+              "renamed": 1792828144.2778025,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 0
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {},
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 1,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "CreateGuild",
+      "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+      "attempt": 2,
+      "database": 2,
+      "request": {
+        "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 1,
+        "command": "CreateGuild",
+        "args": {
+          "name": "验证武灵"
+        }
+      },
+      "receive_count": 2,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+          "command": "CreateGuild",
+          "status": "success",
+          "error_code": "",
+          "version": 2,
+          "utc": "2026-10-24T07:52:19.989000+00:00",
+          "monotonic": 107374.718
+        },
+        {
+          "event": "command_result",
+          "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+          "command": "CreateGuild",
+          "status": "success",
+          "error_code": "",
+          "version": 2,
+          "utc": "2026-10-24T07:52:24.047334+00:00",
+          "monotonic": 107378.781
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-anchor-02",
+          "request": "35C2158344BFC113508A6F8C4FCDCB0F",
+          "payload_hash": "65b14ddcd9e0471eaa4151f9ed82cd3a34f669b5582bb4844c00b23b26fc1b65",
+          "created": 1792828339.982589,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 2,
+          "receipt_id": "85e11e5e4a1348b9a5a129f197de429a",
+          "result_sha256": "c37a91d672ab2d8697061a90fc01fa3648665fef524619d046d15a1e9df1c9ab",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:9372f5b435b8d3f0b4c9ecca26a9c0c6b703a895ee1b30887a2ba57e78b8e4c4",
+              "kind": "command_audit",
+              "user": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "data": "{\"operation\":\"CreateGuild\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 2,
+            "identity": {
+              "generation": 2,
+              "role": "anchor",
+              "room": "newui-room-02",
+              "user": "newui-anchor-02"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 0
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {},
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {
+              "BOOK_METHOD_EDGE_BOOK": 1,
+              "EQ_ROBE_T1": 1,
+              "FABAO_01": 1,
+              "MAT_BR01_C01_G1": 6,
+              "MAT_HERB_T": 12,
+              "MAT_IRON_T": 12
+            },
+            "wallet": {
+              "CUR_STONE": 500
+            }
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "actual loopback authority request/receipt/audit, fixture inventory/economy preconditions"
+    },
+    {
+      "command": "JoinGuild",
+      "request_id": "8399bc0ea36a42d495ed7d75bf7175ba",
+      "attempt": 2,
+      "database": 2,
+      "request": {
+        "request_id": "8399bc0ea36a42d495ed7d75bf7175ba",
+        "profile": "prototype_full",
+        "rule_version": "wuling-prototype-v1.4.0",
+        "expected_version": 3,
+        "command": "JoinGuild",
+        "args": {
+          "guild_id": "755de4e04edd434cbfa30ae0cd9a1993"
+        }
+      },
+      "receive_count": 1,
+      "same_full_transport_payload": true,
+      "trace_results": [
+        {
+          "event": "command_result",
+          "request_id": "8399bc0ea36a42d495ed7d75bf7175ba",
+          "command": "JoinGuild",
+          "status": "success",
+          "error_code": "",
+          "version": 4,
+          "utc": "2026-10-24T07:52:31.411391+00:00",
+          "monotonic": 107386.14
+        }
+      ],
+      "durable_receipts": [
+        {
+          "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+          "user": "newui-member-fixture",
+          "request": "8399bc0ea36a42d495ed7d75bf7175ba",
+          "payload_hash": "361e1ac90ba971eb67bd3c5da6df0bc759b4de1d21d41a3db3dda6a5b4b48c6f",
+          "created": 1792828351.404388,
+          "status": "success",
+          "error_code": "",
+          "authoritative_version": 4,
+          "receipt_id": "4c7807ac04f74021bf8902a5d11ca491",
+          "result_sha256": "184c281702155b6e74f0f0f544bec47e6399ab06a63fd11eb1c13a785cd3b0b7",
+          "authority_payload_hash_matches": true,
+          "command_audits": [
+            {
+              "id": "command-audit:command:d19aa4e1d55b5ecd1587ebb4e2a139e88cfc27c08d301f8fd94a7ea5c2abd468",
+              "kind": "command_audit",
+              "user": "newui-member-fixture",
+              "created": 1792828351.404388,
+              "data": "{\"operation\":\"JoinGuild\"}"
+            }
+          ],
+          "state_projection": {
+            "version": 4,
+            "identity": {
+              "generation": 1,
+              "role": "viewer",
+              "room": "newui-room-02",
+              "user": "newui-member-fixture"
+            },
+            "guild": {
+              "anchor": "newui-anchor-02",
+              "created": 1792828339.982589,
+              "dissolved": 0,
+              "id": "755de4e04edd434cbfa30ae0cd9a1993",
+              "name": "验证武灵",
+              "renamed": 1792828339.982589,
+              "reputation": 0,
+              "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+              "supply": 0
+            },
+            "loadout": {
+              "equipment": {},
+              "fabao": "",
+              "main": "",
+              "method_names": {
+                "METHOD_ECHO": "回响诀",
+                "METHOD_EDGE": "疾锋剑诀",
+                "METHOD_ETHER": "百蚀经",
+                "METHOD_GUARD": "玄罡体经",
+                "METHOD_PACT": "合契经",
+                "METHOD_STAR": "星罗法诀",
+                "METHOD_SURGE": "燃脉诀"
+              },
+              "methods": {},
+              "supports": []
+            },
+            "buildings": [],
+            "activities": {
+              "day": "2026-10-24",
+              "month_sign_count": 0,
+              "monthly_chests": [
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 3,
+                  "reward": "3日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 7,
+                  "reward": "7日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 14,
+                  "reward": "14日签到纪念外观"
+                },
+                {
+                  "claimed": false,
+                  "eligible": false,
+                  "milestone": 21,
+                  "reward": "21日签到纪念外观"
+                }
+              ],
+              "monthly_milestones": [
+                3,
+                7,
+                14,
+                21
+              ],
+              "sign_in_qi_reward": 0,
+              "sign_in_reward_mode": "placeholder",
+              "signed": false,
+              "signed_days": [],
+              "templates": [
+                {
+                  "activity_id": "ACT_SIGN",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日签到",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "seven_daily_placeholders_no_grant",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_VERSE",
+                  "cycle": "daily",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "每日剑诀",
+                  "profile_requirement": "base",
+                  "reward_budget": "text_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_WORLD",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "世界历练",
+                  "profile_requirement": "base",
+                  "reward_budget": "world_stage_budget",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_RACE",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "灵脉竞采",
+                  "profile_requirement": "cross_host_race",
+                  "reward_budget": "stage_budget_plus_lease",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_SHARED",
+                  "cycle": "event",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "武灵共修",
+                  "profile_requirement": "base",
+                  "reward_budget": "online_qi_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MONTH",
+                  "cycle": "monthly",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "月度签到历程",
+                  "profile_requirement": "approved_persistence_or_prototype",
+                  "reward_budget": "cosmetic_only",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_MOON",
+                  "cycle": "limited",
+                  "enabled": false,
+                  "end_at": "",
+                  "name": "中秋问月",
+                  "profile_requirement": "approved_materials",
+                  "reward_budget": "replace_world_plus_cosmetic_once",
+                  "start_at": ""
+                },
+                {
+                  "activity_id": "ACT_QINGYUN_LAUNCH",
+                  "cycle": "relative_guild_creation",
+                  "enabled": true,
+                  "end_at": "",
+                  "name": "青云初启",
+                  "profile_requirement": "prototype_or_explicit_launch_manifest",
+                  "reward_budget": "launch_once_budget_rank_numeric_closed",
+                  "start_at": ""
+                }
+              ],
+              "verse": "护阵同心，破障同行",
+              "weekly_chests": [
+                {
+                  "claimed": false,
+                  "day": "2026-10-19",
+                  "eligible": false,
+                  "milestone": 1,
+                  "placeholder": true,
+                  "reward": "灵石（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_1"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-20",
+                  "eligible": false,
+                  "milestone": 2,
+                  "placeholder": true,
+                  "reward": "灵草（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_2"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-21",
+                  "eligible": false,
+                  "milestone": 3,
+                  "placeholder": true,
+                  "reward": "玄铁（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_3"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-22",
+                  "eligible": false,
+                  "milestone": 4,
+                  "placeholder": true,
+                  "reward": "丹药（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_4"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-23",
+                  "eligible": false,
+                  "milestone": 5,
+                  "placeholder": true,
+                  "reward": "残卷（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_5"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-24",
+                  "eligible": true,
+                  "milestone": 6,
+                  "placeholder": true,
+                  "reward": "玉简（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_6"
+                },
+                {
+                  "claimed": false,
+                  "day": "2026-10-25",
+                  "eligible": false,
+                  "milestone": 7,
+                  "placeholder": true,
+                  "reward": "锦囊（占位）",
+                  "reward_id": "PREVIEW_SIGN_DAY_7"
+                }
+              ]
+            },
+            "inventory": {},
+            "wallet": {}
+          }
+        }
+      ],
+      "proof_qualified": true,
+      "scope": "declared viewer fixture setup authority call, not a Slate viewer join journey"
+    }
+  ],
+  "stale_rename": [
+    {
+      "database": 1,
+      "rename_received_count": 0,
+      "rename_audit_count": 0
+    },
+    {
+      "database": 2,
+      "rename_received_count": 0,
+      "rename_audit_count": 0
+    }
+  ],
+  "busy_and_retry_checks": {
+    "1": [
+      {
+        "name": "actual native Busy while still connected",
+        "passed": true,
+        "actual": {
+          "busy": true,
+          "connected": true
+        }
+      },
+      {
+        "name": "actual Inventory page during pending request",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "confirmed inventory retained during Busy",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "dropped reply reconciled and guild confirmed",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "post-commit dropped reply was exercised",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual native outbox retried",
+        "passed": true,
+        "actual": 2
+      },
+      {
+        "name": "same id and payload on retry",
+        "passed": true,
+        "actual": [
+          {
+            "event": "command_received",
+            "request": {
+              "request_id": "836C02734218B5D6C9B38FAC4477263F",
+              "profile": "prototype_full",
+              "rule_version": "wuling-prototype-v1.4.0",
+              "expected_version": 1,
+              "command": "CreateGuild",
+              "args": {
+                "name": "验证武灵"
+              }
+            },
+            "payload_sha256": "a0752748b75915c8137c1c5a452bb2937fb00a45f15232b48da6331854368cad",
+            "utc": "2026-10-24T07:49:02.275265+00:00",
+            "monotonic": 107177.0
+          },
+          {
+            "event": "command_received",
+            "request": {
+              "request_id": "836C02734218B5D6C9B38FAC4477263F",
+              "profile": "prototype_full",
+              "rule_version": "wuling-prototype-v1.4.0",
+              "expected_version": 1,
+              "command": "CreateGuild",
+              "args": {
+                "name": "验证武灵"
+              }
+            },
+            "payload_sha256": "a0752748b75915c8137c1c5a452bb2937fb00a45f15232b48da6331854368cad",
+            "utc": "2026-10-24T07:49:06.344653+00:00",
+            "monotonic": 107181.078
+          }
+        ]
+      },
+      {
+        "name": "changed version confirmation dispatches no rename",
+        "passed": true,
+        "actual": null
+      }
+    ],
+    "2": [
+      {
+        "name": "actual native Busy while still connected",
+        "passed": true,
+        "actual": {
+          "busy": true,
+          "connected": true
+        }
+      },
+      {
+        "name": "actual Inventory page during pending request",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "confirmed inventory retained during Busy",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "dropped reply reconciled and guild confirmed",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "post-commit dropped reply was exercised",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual native outbox retried",
+        "passed": true,
+        "actual": 2
+      },
+      {
+        "name": "same id and payload on retry",
+        "passed": true,
+        "actual": [
+          {
+            "event": "command_received",
+            "request": {
+              "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+              "profile": "prototype_full",
+              "rule_version": "wuling-prototype-v1.4.0",
+              "expected_version": 1,
+              "command": "CreateGuild",
+              "args": {
+                "name": "验证武灵"
+              }
+            },
+            "payload_sha256": "1d1c7fbf5f09a0e54cd885a3e7adb5bdaec45591daa7670f9b0051ff4f19d1a4",
+            "utc": "2026-10-24T07:52:17.979751+00:00",
+            "monotonic": 107372.703
+          },
+          {
+            "event": "command_received",
+            "request": {
+              "request_id": "35C2158344BFC113508A6F8C4FCDCB0F",
+              "profile": "prototype_full",
+              "rule_version": "wuling-prototype-v1.4.0",
+              "expected_version": 1,
+              "command": "CreateGuild",
+              "args": {
+                "name": "验证武灵"
+              }
+            },
+            "payload_sha256": "1d1c7fbf5f09a0e54cd885a3e7adb5bdaec45591daa7670f9b0051ff4f19d1a4",
+            "utc": "2026-10-24T07:52:22.042582+00:00",
+            "monotonic": 107376.765
+          }
+        ]
+      },
+      {
+        "name": "changed version confirmation dispatches no rename",
+        "passed": true,
+        "actual": null
+      }
+    ]
+  },
+  "payload_hash_note": "Transport hash includes expected_version; authority receipt intentionally excludes expected_version before canonical hash. Compared using respective definitions, never compared unequal domains directly.",
+  "late09_market_positive_receipts_qualified": true,
+  "merchant_stale_subject_version_negative_runtime_cases_pending": true
+}

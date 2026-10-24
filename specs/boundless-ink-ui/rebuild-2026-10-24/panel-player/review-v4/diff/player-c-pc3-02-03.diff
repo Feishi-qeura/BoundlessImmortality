@@ -1,0 +1,88 @@
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp
+@@ -280,6 +280,23 @@
+ 		return INDEX_NONE;
+ 	}
+ 
++
++	FText EquipmentSlotItemLabel(const FEquipmentSlot& Slot)
++	{
++		if (!Slot.bEntryKnown)
++			return NSLOCTEXT("InkPlayerC", "SlotUnknown", "槽位数据未提供");
++
++		const bool bHasActualEntry = Slot.EntryId.IsValid() || !Slot.ItemId.IsNone();
++		if (!bHasActualEntry)
++			return NSLOCTEXT("InkPlayerC", "SlotEmpty", "当前没有已配置物品");
++		if (!Slot.ItemName.IsEmpty()) return Slot.ItemName;
++
++		const FText ActualIdentity = !Slot.ItemId.IsNone()
++			? FText::FromName(Slot.ItemId)
++			: FText::FromString(Slot.EntryId.ToString());
++		return FText::Format(NSLOCTEXT("InkPlayerC", "SlotNameUnknown", "物品名称未提供 · {0}"), ActualIdentity);
++	}
++
+ 	void AddCharacterAttributeGroup(UWidgetTree* Tree, UVerticalBox* Parent,
+ 		const FCharacterAttributePreview& Preview, const FStyleTokens& Tokens, UTexture2D* Atlas)
+ 	{
+@@ -385,21 +402,38 @@
+ 	AddSectionHeading(Tree, DetailColumn, NSLOCTEXT("InkPlayerC", "SelectedMethod", "所选功法"), Style);
+ 	const FCatalogEntry* Selected = ViewModel.Catalog.FindByPredicate([&ViewModel](const FCatalogEntry& Entry)
+ 		{ return Entry.ItemId == ViewModel.SelectedMethodId; });
+-	if (Selected)
+-	{
+-		DetailColumn->AddChildToVerticalBox(Card(Tree, Style, CatalogRow(Tree, *Selected, ViewModel.SelectedMethodId,
+-			Style, Atlases.MethodsGlyphs, 0, OnAction, TEXT("ui.methods.select"))))->SetPadding(FMargin(0.f, 0.f, 0.f, 8.f));
++	if (!ViewModel.SelectedMethodId.IsNone())
++	{
++		if (Selected && !Selected->Name.IsEmpty())
++			DetailColumn->AddChildToVerticalBox(Card(Tree, Style, CatalogRow(Tree, *Selected, ViewModel.SelectedMethodId,
++				Style, Atlases.MethodsGlyphs, 0, OnAction, TEXT("ui.methods.select"))))->SetPadding(FMargin(0.f, 0.f, 0.f, 8.f));
++		else
++		{
++			auto* UnknownDetails = Tree->ConstructWidget<UVerticalBox>();
++			UnknownDetails->AddChildToVerticalBox(Text(Tree,
++				FText::Format(NSLOCTEXT("InkPlayerC", "SelectedMethodNameUnknown", "功法名称未提供 · {0}"),
++					FText::FromName(ViewModel.SelectedMethodId)), Style.SectionFont, Style.Ink));
++			UnknownDetails->AddChildToVerticalBox(Text(Tree,
++				NSLOCTEXT("InkPlayerC", "SelectedMethodDetailUnknown", "功法说明未提供"),
++				Style.SecondaryFont, Style.Muted));
++			DetailColumn->AddChildToVerticalBox(Card(Tree, Style, UnknownDetails))->SetPadding(FMargin(0.f, 0.f, 0.f, 8.f));
++		}
++
+ 		FActionPayload LearnPayload;
+-		LearnPayload.ItemId = Selected->ItemId;
++		LearnPayload.ItemId = ViewModel.SelectedMethodId;
+ 		DetailColumn->AddChildToVerticalBox(ActionButton(Tree, NSLOCTEXT("InkPlayerC", "LearnMethod", "研习此功法"),
+ 			Style, OnAction, TEXT("learn-method"), LearnPayload,
+-			ViewModel.bLearnActionAvailable && !Selected->ItemId.IsNone(), true,
++			ViewModel.bLearnActionAvailable && !ViewModel.SelectedMethodId.IsNone(), true,
+ 			ViewModel.LearnDisabledReason))->SetPadding(FMargin(0.f, 4.f));
+-		FActionPayload MainDraft; MainDraft.ItemId = Selected->ItemId;
+-		DetailColumn->AddChildToVerticalBox(ActionButton(Tree, NSLOCTEXT("InkPlayerC", "SelectMainDraft", "设为主功法草案"),
+-			Style, OnAction, TEXT("ui.methods.set-main-draft"), MainDraft))->SetPadding(FMargin(0.f, 4.f));
+-		DetailColumn->AddChildToVerticalBox(ActionButton(Tree, NSLOCTEXT("InkPlayerC", "ToggleSupportDraft", "切换辅修草案"),
+-			Style, OnAction, TEXT("ui.methods.toggle-support-draft"), MainDraft))->SetPadding(FMargin(0.f, 4.f));
++
++		if (Selected)
++		{
++			FActionPayload MainDraft; MainDraft.ItemId = ViewModel.SelectedMethodId;
++			DetailColumn->AddChildToVerticalBox(ActionButton(Tree, NSLOCTEXT("InkPlayerC", "SelectMainDraft", "设为主功法草案"),
++				Style, OnAction, TEXT("ui.methods.set-main-draft"), MainDraft))->SetPadding(FMargin(0.f, 4.f));
++			DetailColumn->AddChildToVerticalBox(ActionButton(Tree, NSLOCTEXT("InkPlayerC", "ToggleSupportDraft", "切换辅修草案"),
++				Style, OnAction, TEXT("ui.methods.toggle-support-draft"), MainDraft))->SetPadding(FMargin(0.f, 4.f));
++		}
+ 	}
+ 	else
+ 		DetailColumn->AddChildToVerticalBox(Text(Tree, NSLOCTEXT("InkPlayerC", "NoMethodSelected", "请选择已提供的目录项"),
+@@ -475,9 +509,7 @@
+ 			auto* Values = Tree->ConstructWidget<UVerticalBox>();
+ 			if (auto* Fill = Row->AddChildToHorizontalBox(Values)) Fill->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
+ 			Values->AddChildToVerticalBox(Text(Tree, SlotValue.Label, Style.SecondaryFont, Style.Muted));
+-			Values->AddChildToVerticalBox(Text(Tree, SlotValue.bEntryKnown
+-				? (SlotValue.ItemName.IsEmpty() ? NSLOCTEXT("InkPlayerC", "SlotEmpty", "当前没有已配置物品") : SlotValue.ItemName)
+-				: NSLOCTEXT("InkPlayerC", "SlotUnknown", "槽位数据未提供"), Style.BodyFont, Style.Ink));
++			Values->AddChildToVerticalBox(Text(Tree, EquipmentSlotItemLabel(SlotValue), Style.BodyFont, Style.Ink));
+ 			if (SlotValue.bEntryKnown && !SlotValue.ItemDetail.IsEmpty())
+ 				Values->AddChildToVerticalBox(Text(Tree, SlotValue.ItemDetail, Style.SecondaryFont, Style.Muted));
+ 			auto* Select = ActionButton(Tree, NSLOCTEXT("InkPlayerC", "SelectSlot", "查看槽位"), Style,
+

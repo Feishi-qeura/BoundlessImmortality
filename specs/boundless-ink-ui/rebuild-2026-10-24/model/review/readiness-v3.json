@@ -1,0 +1,79 @@
+{
+  "team_id": "logic-core",
+  "updated_utc": "2026-10-24T05:17:01.995256+00:00",
+  "phase": "bounded-v3-review-handoff-ready",
+  "report": "bounded-v3-review.md",
+  "matrix": "resolved-open-matrix-v3.json",
+  "mapping": "stage-to-runtime-v3.csv",
+  "historical_mapping_preserved": "screen-coverage-v2.json",
+  "sources": "source-delta-v3.json",
+  "priority_dispatch": "PC3-01 P1: Player-c ordinary UButton dynamic OnClicked AddLambda API mismatch",
+  "new_findings": 5,
+  "previous_N05_open": true,
+  "reviewed_production_delta_files": 5,
+  "coverage": {
+    "screens": 44,
+    "stage_symbol_present": 35,
+    "no_ready_stage": 9,
+    "production_mount": {
+      "new-composition-connected-in-source": 6,
+      "new-root-placeholder": 1,
+      "no-new-production-component-observed": 37
+    },
+    "runtime_verified": 0,
+    "player_entry_verified": 0
+  },
+  "activities_follow_on": "No ready paired source/handoff for rank/commerce/orders observed in this capture",
+  "activities_owner_hashes": "Owner status lacks a source_sha256 map; independent exact input hashes retained here",
+  "owner_hash_checks": [
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingExtendedPages.cpp",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingExtendedPages.h",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPageBase.cpp",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPageBase.h",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPages.cpp",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-rank",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPages.h",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-journey",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "status_hash_matches_reviewed": true
+    },
+    {
+      "owner": "panel-journey",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "status_hash_matches_reviewed": true
+    }
+  ],
+  "changed_after_capture": [],
+  "production_edits_by_this_worker": false,
+  "new_test_source_observed_unrun": 1,
+  "engine_started": false,
+  "build_run": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "historical_tests_rerun": false,
+  "visual_approval": false
+}

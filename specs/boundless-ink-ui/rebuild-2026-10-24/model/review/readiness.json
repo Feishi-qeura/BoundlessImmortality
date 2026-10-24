@@ -1,0 +1,66 @@
+{
+  "team_id": "logic-core",
+  "updated_at": "2026-10-24T12:46:34.8225998+08:00",
+  "phase": "readonly-review-handoff-ready",
+  "report": "current-source-review.md",
+  "api_type_finding_groups": 8,
+  "content_tint_findings": 1,
+  "lifecycle_risks": 3,
+  "source_patches_applied": false,
+  "engine_launched": false,
+  "ubt_run": false,
+  "runtime_verified": false,
+  "hash_capture_note": "Captured after source inspection; concurrently edited files must be rechecked before applying findings.",
+  "sources": [
+    {
+      "last_write_utc": "2026-10-24T04:44:35.1181613Z",
+      "path": "panel-rank/staged-source/InkRankWulingPages.h",
+      "sha256": "7731fd089318c18de697d67c3c52e57bd5c03db2dca12f785ccf7ab1102d2e60"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:44:37.7555400Z",
+      "path": "panel-rank/staged-source/InkRankWulingPages.cpp",
+      "sha256": "57f3eadb171126bad583084504fd035191b944a910c12dc1fee62aa751aadefc"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:46:08.6911915Z",
+      "path": "panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "sha256": "5d6d69c16c44e1aed77e4f42d24d60f772ee6963cabfbb529d34847e451c3b7f"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:46:28.4148228Z",
+      "path": "panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "adca29044d29020aa060eb8c66e0be1cc4b3d20e75550270aa45317c8a2c4fbe"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:45:51.9921131Z",
+      "path": "panel-activities/staged-source/RebuildActivityWidgets.h",
+      "sha256": "2abd8e58977f6c3b57add1a162c17e111f6b4f0f90eeb538a9c0462e10f6548c"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:46:04.7575264Z",
+      "path": "panel-activities/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "501ab09b0de412c2799c42394a63dce16a91b150c3456814904ed5098d3bfe63"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:41:38.4568332Z",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h",
+      "sha256": "838e8cce24ec503bf1d87bfdb96f38aed08c1bc1dbdf2e6b6cb44fafaeda27ec"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:46:04.6823577Z",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "2105add4ac7cff1deff760cc647dfc34e9133b755008cef20e54bf2e516e231f"
+    },
+    {
+      "last_write_utc": "2026-10-24T04:35:29.6611941Z",
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "sha256": "33925b5b9e350c1de354a755fffac73911ebb801578ebe6833a8a70ae58a4619"
+    },
+    {
+      "last_write_utc": "2026-10-23T23:50:08.5390446Z",
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "sha256": "f3c6ff950cceb382d4f268c1560bf2e8ca90608dcac22848f7a04922567062fd"
+    }
+  ]
+}

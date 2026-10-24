@@ -1,0 +1,8 @@
+{
+  "pid": 36708,
+  "started_at": "2026-10-24T15:03:29.1100066+08:00",
+  "build": "build-15-result.json",
+  "source_files": 86,
+  "ledger_records": 178,
+  "previous_attempt": "02 invalid quoting, no tests run, preserved log"
+}

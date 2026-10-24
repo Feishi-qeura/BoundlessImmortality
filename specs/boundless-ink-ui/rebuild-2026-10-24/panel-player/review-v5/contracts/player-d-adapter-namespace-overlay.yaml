@@ -1,0 +1,28 @@
+slice: review-v5
+approved: false
+overlay_only: true
+replaces_document: ../../player-d/contracts/action-adapter.yaml
+scope:
+  corrected_fields:
+    dispatch_delegate:
+      previous: InkPlayerProcessPageWidgets::FActionRequested
+      actual: InkPlayerCraftSourcesWidgets::FActionRequested
+    payload_type:
+      previous: InkPlayerProcessPageWidgets::FActionPayload
+      actual: InkPlayerCraftSourcesWidgets::FActionPayload
+  preserved:
+    - canonical action IDs and handlers
+    - local intent IDs and payload meanings
+    - route/page bindings and authority gates
+    - all other Player-d page mappings
+evidence:
+  header: ../../player-d/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.h
+  namespace: InkPlayerCraftSourcesWidgets
+  declared_types:
+    - FActionRequested
+    - FActionPayload
+host_binding:
+  delegate: InkPlayerCraftSourcesWidgets::FActionRequested
+  payload: InkPlayerCraftSourcesWidgets::FActionPayload
+  owner: logic-integration
+  source_modified: false

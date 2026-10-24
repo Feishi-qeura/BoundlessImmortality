@@ -1,0 +1,12 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:45:18.398947+00:00",
+  "passed": false,
+  "scope": [
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+  ],
+  "proof": "No UObject exports in two old containers; both canonical targets saved/hash match partial snapshot; old files still original snapshot bytes",
+  "old_files_deleted": false,
+  "operations": []
+}

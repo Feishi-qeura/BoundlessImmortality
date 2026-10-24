@@ -1,0 +1,12 @@
+{
+  "path": "Tools/CultivationService/authority.py",
+  "ledger_record": 224,
+  "sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+  "change": "Only identity.active=bool(ctx.session[active]) additive export",
+  "new_regression_tests": 7,
+  "new_regression_passed": true,
+  "existing_service_tests": 102,
+  "existing_service_tests_passed": true,
+  "cpp_unchanged": true,
+  "source26_44render_evidence_retained": true
+}

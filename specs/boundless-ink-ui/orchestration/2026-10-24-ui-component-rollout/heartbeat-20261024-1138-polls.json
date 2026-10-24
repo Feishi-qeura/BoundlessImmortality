@@ -1,0 +1,72 @@
+[
+  {
+    "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+    "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:21",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "UE5.8 Editor Development 构建已通过，退出码为 0，游戏与 Editor 模块均已链接。编译修复的备份、诊断和前后哈希已登记，原冻结清单保持不变。 现在开始真实导入和两份 WBP 的保留式迁移，随后比较从导入纹理导出的 PNG alpha；这一步还不代表玩家入口或业务验证通过。",
+    "last_tool": {
+      "id": "exec-faf71c6d-4c65-45d9-a998-8f48f3a96e17",
+      "turnId": "01a16bf5-accc-7d13-a3d1-bd85351d9e79",
+      "type": "fileChange",
+      "name": "fileChange",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+    "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:4",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "panel-rank batch-2 已交接就绪，内容仅写在 batch-2 目录。 已暂存排行榜三类共享组合、武灵总览和成员列表的 C++ 组件源：InkRankWulingCompositeViews.h、InkRankWulingCompositeViews.cpp。榜单组合保留现有数据订阅、行控件和头像更新；武灵名册只显示服务返回的成员名，并沿用现有分页动作。 逐页覆盖表、API 映射、未应用的接入建议和交接说明已写好。武灵建设、我的剑灵、礼物规则列为后续片；未添加贡献字段。 沿用现有候选设计和面板素材，本批没有重复生成图片；资产清单见 asset-inventory.yaml。视觉仍未批准。 状态文件记录 handoff_ready:true，导入、编译和运行验证均为 false。源码仍暂存在 staged-source，待接入队释放源码与引擎批次后再提升；本轮未改 Source/Content，也未启动导入或编译。",
+    "last_tool": {
+      "id": "exec-0f95bfe9-d253-4036-8af7-2df371a44b0f",
+      "turnId": "01a16bf5-bfeb-7632-b7a4-7f9af415634e",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+    "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:7",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "两张概念图和组件草案已落在独立 batch‑2 目录。现在我在做交接前静态复核：核对候选哈希与清单、动作按钮是否绑定宿主，以及文件变更是否都落在授权目录；不会触发编译或测试。",
+    "last_tool": {
+      "id": "exec-fdc86381-e0aa-498a-a00f-50c390025554",
+      "turnId": "01a16bf5-b7cf-7f72-94eb-3a8781770ffa",
+      "type": "fileChange",
+      "name": "fileChange",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+    "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:6",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "Batch 2 的交接材料已完成，所有新增文件都在 panel-journey/batch-2/： 页面字段与状态约束：page-concepts.md 组件控制映射：component-to-control.csv 后续提升顺序与权威数据要求：handoff.md 暂存组件源码：InkJourneyBatch2Widgets.h 和 InkJourneyBatch2Widgets.cpp 状态为 handoff-ready、approved:false。源码仅暂存，未编译；导入、路由、逻辑、运行时验证均保持 false。我只做了状态 JSON 解析和目录检查，没有运行 Editor、UBT 或测试；活动中的 engine lease 仍禁止提升源码。",
+    "last_tool": {
+      "id": "exec-0e89a986-091a-41e4-9b7b-8592c8ae7649",
+      "turnId": "01a16bf5-c753-7f83-8cd3-247b560bf790",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+    "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:5",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "The asset set is now staged. I’ve confirmed the journey adapter rechecks the service day and active route at click time; its launch-start gate also validates the configured profile, anchor ownership, event absence, and server-authorized time window. The new detail action will use that same adapter, and the offer area will stay disabled because there is no launch SKU or purchase endpoint in the current contract.",
+    "last_tool": {
+      "id": "exec-c1d140c8-8b4c-4de6-b441-2fccd12a4960",
+      "turnId": "01a16bf5-cf47-7931-a1fb-f4e87403912e",
+      "type": "fileChange",
+      "name": "fileChange",
+      "status": "completed"
+    }
+  }
+]

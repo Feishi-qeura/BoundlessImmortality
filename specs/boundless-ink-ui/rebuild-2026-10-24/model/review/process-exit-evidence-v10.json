@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-24T16:44:29.0871148+08:00",
+  "scope": "Read-only exact declared owned PID observations and existing log tails; no process control",
+  "processes": [
+    {
+      "scope": "service-pie-10",
+      "pid": 35768,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-pie-10.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.13.54:522][ 53]LogExit: Exiting.",
+        "[2026.10.24-08.13.54:535][ 53]Log file closed, 10/24/26 16:13:54"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "stage-pie-cancel-01",
+      "pid": 28860,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\stage-pie-cancel-01.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.16.29:418][504]LogExit: Exiting.",
+        "[2026.10.24-08.16.29:429][504]Log file closed, 10/24/26 16:16:29"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "stage-pie-commit-01",
+      "pid": 29596,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\stage-pie-commit-01.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.18.26:548][628]LogExit: Exiting.",
+        "[2026.10.24-08.18.26:566][628]Log file closed, 10/24/26 16:18:26"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "stage-pie-rework-01",
+      "pid": 39388,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\stage-pie-rework-01.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.21.23:780][430]LogExit: Exiting.",
+        "[2026.10.24-08.21.23:795][430]Log file closed, 10/24/26 16:21:23"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "native-tests-05",
+      "pid": 37064,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\native-tests-05.log",
+      "normal_shutdown_markers": [],
+      "exit_code_confirmed": false,
+      "test_exit_request_markers": [
+        "2026.10.24-08.24.58:355 LogExit: Display: **** TestExit: Automation Test Queue Empty ****",
+        "2026.10.24-08.24.58:355 LogCore: Engine exit requested (reason: Win RequestExit)"
+      ]
+    },
+    {
+      "scope": "default-pie-07",
+      "pid": 21416,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-07.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.29.25:966][797]LogExit: Exiting.",
+        "[2026.10.24-08.29.25:983][797]Log file closed, 10/24/26 16:29:25"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "default-pie-08",
+      "pid": 4976,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-08.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.31.33:554][242]LogExit: Exiting.",
+        "[2026.10.24-08.31.33:564][242]Log file closed, 10/24/26 16:31:33"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "default-pie-09",
+      "pid": 2004,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-09.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.35.10:596][827]LogExit: Exiting.",
+        "[2026.10.24-08.35.10:603][827]Log file closed, 10/24/26 16:35:10"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "default-pie-10",
+      "pid": 47560,
+      "process_present": false,
+      "observed_name": null,
+      "log": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-10.log",
+      "normal_shutdown_markers": [
+        "[2026.10.24-08.41.05:247][932]LogExit: Exiting.",
+        "[2026.10.24-08.41.05:258][932]Log file closed, 10/24/26 16:41:05"
+      ],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "service-process-02.json",
+      "pid": 40168,
+      "process_present": true,
+      "observed_name": "python",
+      "normal_shutdown_markers": [],
+      "exit_code_confirmed": false
+    },
+    {
+      "scope": "avatar-service-ready-02.json",
+      "pid": 28596,
+      "process_present": true,
+      "observed_name": "python",
+      "normal_shutdown_markers": [],
+      "exit_code_confirmed": false
+    }
+  ]
+}

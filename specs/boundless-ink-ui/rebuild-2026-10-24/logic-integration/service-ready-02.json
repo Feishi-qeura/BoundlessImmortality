@@ -1,0 +1,11 @@
+{
+  "pid": 40168,
+  "port": 56536,
+  "started_at": "2026-10-24T07:51:21.194914+00:00",
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+  "app": "NewUIHostAcceptance20261024",
+  "room": "newui-room-02",
+  "user": "newui-anchor-02",
+  "scope": "actual existing authority; declared isolated data; command delay and one post-commit dropped reply are transport fixtures",
+  "stopped": false
+}

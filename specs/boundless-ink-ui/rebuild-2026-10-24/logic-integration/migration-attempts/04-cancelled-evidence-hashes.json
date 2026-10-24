@@ -1,0 +1,34 @@
+[
+  {
+    "file": "asset-write-journal.json",
+    "sha256": "4873C03B711D565E111773C55E1214ED7BC218BEAE1C64476D40EE8BCC2456EB"
+  },
+  {
+    "file": "controller-clean-shutdown.json",
+    "sha256": "88A7F05834CDB21B544B48D62156B410DF64BEAC94F524FAADF2C92408BAC195"
+  },
+  {
+    "file": "engine-failure.json",
+    "sha256": "AF4A3B48AE5ABF66C0C053F941F3031C3FB340C355E62B0B49C510CE5F9C8830"
+  },
+  {
+    "file": "engine-legacy-pin-result.json",
+    "sha256": "5C04A0E32398CA34F4C13E95ABBBCB7BCBC149E364F21B489373C16C71C76B9C"
+  },
+  {
+    "file": "engine-migration-journal.json",
+    "sha256": "CF20C4DBB760C0824D20A45FB385322727FFBCD156E2CA1CABB7755F773D581C"
+  },
+  {
+    "file": "engine-preflight.json",
+    "sha256": "9D71173A724073B3795E3C0E2A6FD9B0DC5D8AF75B0F573CC03D41142E6BBE2E"
+  },
+  {
+    "file": "migration-editor-04.log",
+    "sha256": "B2E3ED69578F33B41D3B13B08B4049C1E8F8E5FFD417C328311535D0F20488FD"
+  },
+  {
+    "file": "migration-map.json",
+    "sha256": "2FCF7FCB432A6066A8ECFA880E376129A3BDDD9326ABED53F86FD2F2168CBDAC"
+  }
+]

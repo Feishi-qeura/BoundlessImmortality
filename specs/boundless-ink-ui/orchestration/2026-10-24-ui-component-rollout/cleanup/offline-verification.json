@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-24T09:56:52.934237+08:00",
+  "checks": [
+    "All preparation Python scripts parse",
+    "583 baseline packages retained; six removed redirectors not reintroduced; 12 prior backups match",
+    "Fresh SHA256 check: all 583 old assets still match immutable baseline",
+    "Repeated baseline capture refuses overwrite",
+    "Registry script rejects current ungranted lease before Unreal import",
+    "Backup refuses any package outside immutable old scope",
+    "Real copy-and-hash backup smoke check passes; no source asset changes"
+  ],
+  "passed": 7,
+  "failures": 0,
+  "engine_started": false,
+  "engine_registry_verified": false,
+  "assets_mutated": false,
+  "backup_smoke_manifest": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\cleanup\\backups\\20261024T095652825845\\backup-manifest.json",
+  "registry_guard_expected_error": "RuntimeError: Requires coordinator-issued cleanup / granted|active / registry_audit engine lease."
+}

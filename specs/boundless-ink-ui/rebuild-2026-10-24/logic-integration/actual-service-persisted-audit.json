@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-10-24T09:25:45.648654+00:00",
+  "read_only": true,
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-02\\prototype.sqlite3",
+  "declared_test_fixtures": true,
+  "naturally_earned": false,
+  "checks": [
+    {
+      "name": "one persisted guild despite dropped post-commit reply",
+      "passed": true,
+      "actual": [
+        {
+          "id": "755de4e04edd434cbfa30ae0cd9a1993",
+          "anchor": "newui-anchor-02",
+          "name": "验证武灵",
+          "dissolved": 0
+        }
+      ]
+    },
+    {
+      "name": "actual wallet matches declared fixture less actual shop/recipe/market/listing costs",
+      "passed": true,
+      "actual": {
+        "wallet": {
+          "CUR_STONE": 461
+        },
+        "actual_recipe_stone_cost": 20
+      }
+    },
+    {
+      "name": "actual tradeable herb12 fixture plus2 purchased restored after withdrawal",
+      "passed": true,
+      "actual": {
+        "EQ_ROBE_T1": 1,
+        "FABAO_01": 1,
+        "MAT_BR01_C01_G1": 4,
+        "MAT_BR01_C01_G2": 1,
+        "MAT_BREAK": 1,
+        "MAT_HERB_T": 14,
+        "MAT_IRON_T": 12
+      }
+    },
+    {
+      "name": "actual book consumed once and craft core consumed twice",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual method learned and configured; equipment unequipped",
+      "passed": true,
+      "actual": {
+        "equipment": {},
+        "fabao": "",
+        "main": "METHOD_EDGE",
+        "methods": {
+          "METHOD_EDGE": {
+            "level": 1,
+            "progress": 0
+          }
+        },
+        "supports": []
+      }
+    },
+    {
+      "name": "actual building target1 persisted",
+      "passed": true,
+      "actual": {
+        "building_id": "BUILD_01",
+        "completed": 1792829004.814027,
+        "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+        "level": 1
+      }
+    },
+    {
+      "name": "actual guild material and supply costs debited once",
+      "passed": true,
+      "actual": {
+        "materials": {
+          "GUILD_MAT_01": 6,
+          "GUILD_MAT_02": 6
+        },
+        "supply": 80
+      }
+    },
+    {
+      "name": "actual removed member remains unassigned",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual seller listing sold and own listing cancelled",
+      "passed": true,
+      "actual": [
+        {
+          "id": "1ed0489e02e641c5b67179edbb8a169d",
+          "status": "Sold",
+          "version": 1
+        },
+        {
+          "id": "4e26ede714c94aec8c8a32c2dbb03dae",
+          "status": "Cancelled",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "name": "actual repeated create uses one request and payload hash",
+      "passed": true,
+      "actual": {
+        "attempts": 2,
+        "unique_pairs": 1
+      }
+    },
+    {
+      "name": "one authoritative persisted idempotency receipt",
+      "passed": true,
+      "actual": 1
+    }
+  ],
+  "passed": true
+}

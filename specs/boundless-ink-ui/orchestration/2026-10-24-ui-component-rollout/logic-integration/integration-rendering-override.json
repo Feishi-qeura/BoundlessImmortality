@@ -1,0 +1,22 @@
+{
+  "source_unchanged": true,
+  "final_smoke_pending": false,
+  "component_id": "hud-launch-countdown-frame",
+  "runtime_mode": "full-image",
+  "approved": false,
+  "source": "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-activities/assets/hud-launch-countdown-frame-neutral-v1.png",
+  "logical_size": [
+    200,
+    80
+  ],
+  "reason": "Actual PIE09 Box baseline did not paint; transient change only to IMAGE restored the same frame. Candidate nine-slice remains not accepted in UE.",
+  "candidate_manifest": "panel-activities/asset-manifest.yaml",
+  "candidate_mode": "9-slice [140,140,90,90] source pixels",
+  "evidence": [
+    "pie-09-countdown-diagnostic/box-baseline.png",
+    "pie-09-countdown-diagnostic/full-image-preview.png",
+    "pie-09-countdown-diagnostic/report.json"
+  ],
+  "source_sha256": "5ed2166752c6e891874ca9318d1ba74887d62a8db32cbd15bccd7541ae4b9985",
+  "final_smoke": "pie-10-frame-final/report.json"
+}

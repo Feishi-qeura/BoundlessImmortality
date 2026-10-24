@@ -1,0 +1,22 @@
+{
+  "requested_at": "2026-10-24T17:27:51.968136+08:00",
+  "ready_for_supervisor_review": false,
+  "scope": "Portrait only9:16 per direct user override; all current authorized machine checks completed",
+  "final_report": "final-portrait-machine-verification.json",
+  "gallery": "current44-screenshot-gallery.html",
+  "entry_matrix": "current44-player-entry-matrix.json",
+  "owned_processes_normally_stopped": true,
+  "visual_approved": false,
+  "phone_platform_accepted": false,
+  "contextual_result_trigger_gaps": [
+    "RegionDetail",
+    "ResourceDetail",
+    "EventSettlement",
+    "RaceSettlement",
+    "ResourceRewards"
+  ],
+  "machine_scope_complete": false,
+  "ready_for_supervisor_closeout": false,
+  "reopened_at": "2026-10-24T17:41:48.347286+08:00",
+  "reopened_reason": "Core V11-RACE-ACTIVE-01 P1 actual identity.active authority projection omission; applicable functional chains still required"
+}

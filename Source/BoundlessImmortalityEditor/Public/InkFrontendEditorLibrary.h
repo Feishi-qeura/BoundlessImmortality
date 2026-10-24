@@ -6,16 +6,22 @@
 class UInkFrontendWidget;
 class UTexture2D;
 class ULiveGMOverlayWidget;
+class UButton;
 UCLASS()
 class BOUNDLESSIMMORTALITYEDITOR_API UInkFrontendEditorLibrary : public UBlueprintFunctionLibrary
 {
     GENERATED_BODY()
 public:
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static FString VerifyDevelopmentMutationRefusal(UObject* WorldContext);
+    UFUNCTION(BlueprintCallable,Category="newUI|Editor") static bool ClickLabeledButton(UInkFrontendWidget* Widget,const FText& Caption);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool ClickGMAction(ULiveGMOverlayWidget* Widget,FName Action);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static UObject* CreateFrontendWidgetAsset(const FString& PackagePath,FName PreviewPage);
+    /** Creates only the new default asset, with the independent rebuilt parent. */
+    UFUNCTION(BlueprintCallable,Category="newUI|Editor") static UObject* CreateRebuiltFrontendWidgetAsset(const FString& PackagePath);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool RefreshGeneratedFrontendAsset(const FString& PackagePath,FName PreviewPage);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool ClickAction(UInkFrontendWidget* Widget,FName Action);
+    /** Isolated local-test only; follows Slate hit testing for delivered ordinary buttons. */
+    UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool ClickRolloutButton(UInkFrontendWidget* Widget,UButton* Button);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool PressFrontendKey(UInkFrontendWidget* Widget,FKey Key);
     /** Dispatches without moving focus, for focused editable-text keyboard routing checks. */
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool PressFocusedFrontendKey(FKey Key);
@@ -38,6 +44,7 @@ public:
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool HoverAction(UInkFrontendWidget* Widget,FName Action);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool MoveFrontendPointerOutside(UInkFrontendWidget* Widget);
     /** Focuses the search box, selects existing input, then dispatches Slate character events. */
+    UFUNCTION(BlueprintCallable,Category="newUI|Editor") static bool TypeFrontendText(UInkFrontendWidget* Widget,FName Name,const FString& Text);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static bool TypeInventorySearch(UInkFrontendWidget* Widget,const FString& Text);
     UFUNCTION(BlueprintCallable,Category="Ink Frontend|Editor") static FString DescribeInventory(UInkFrontendWidget* Widget);
     /** Routes a press, drag and release to an independently authored scrollbar. */

@@ -1,0 +1,40 @@
+{
+  "path": "assets/hud-launch-countdown-frame-neutral-v1.png",
+  "size": [
+    2172,
+    724
+  ],
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "alpha_bbox": [
+    13,
+    21,
+    2162,
+    698
+  ],
+  "alpha_pixel_counts": {
+    "transparent": 601278,
+    "opaque": 1920,
+    "partial": 969330
+  },
+  "sha256": "5ED2166752C6E891874CA9318D1BA74887D62A8DB32CBD15BCCD7541AE4B9985",
+  "source_pixel_slice_margins_ltrb": [
+    140,
+    140,
+    90,
+    90
+  ],
+  "preview_targets_logical": [
+    [
+      200,
+      80
+    ],
+    [
+      280,
+      80
+    ]
+  ]
+}

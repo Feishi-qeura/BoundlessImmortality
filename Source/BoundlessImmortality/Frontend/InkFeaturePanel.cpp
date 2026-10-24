@@ -1,4 +1,7 @@
 #include "InkFeaturePanel.h"
+#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
+#include "Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h"
 #include "Frontend/UI/InkUiAssetPaths.h"
 #include "WulingFrontendData.h"
 #include "InkFrontendWidget.h"
@@ -6,7 +9,9 @@
 #include "UI/InkWulingToolsPanel.h"
 #include "UI/InkWulingRecordsPanel.h"
 #include "UI/InkWulingSectPanel.h"
+#include "UI/InkGiftRulesPanel.h"
 #include "UI/InkLaunchEventPanel.h"
+#include "InkPermanentActivitiesPanel.h"
 #include "UI/InkJourneyMapPanel.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/CanvasPanel.h"
@@ -47,19 +52,21 @@ TSubclassOf<UInkFeaturePanel> UInkFeaturePanel::ClassForRoute(FName Route)
     auto NewWidget=[](const TCHAR* Path,UClass* Fallback)->TSubclassOf<UInkFeaturePanel>
     {if(auto* Class=LoadClass<UInkFeaturePanel>(nullptr,Path,nullptr,LOAD_NoWarn|LOAD_Quiet))return Class;return Fallback;};
     if(Route==TEXT("CharacterProfile"))
-        if(auto* Class=LoadClass<UInkFeaturePanel>(nullptr,TEXT("/Game/UI/Ink/Widgets/Character/WBP_CharacterProfile.WBP_CharacterProfile_C"),nullptr,LOAD_NoWarn|LOAD_Quiet))return Class;
-    if(Route==TEXT("Wuling"))return NewWidget(TEXT("/Game/UI/Ink/Widgets/Wuling/WBP_WulingSect.WBP_WulingSect_C"),UInkWulingSectPanel::StaticClass());
+        if(auto* Class=LoadClass<UInkFeaturePanel>(nullptr,TEXT("/Game/newUI/Ink/Widgets/Character/WBP_CharacterProfile.WBP_CharacterProfile_C"),nullptr,LOAD_NoWarn|LOAD_Quiet))return Class;
+    if(Route==TEXT("Wuling"))return NewWidget(TEXT("/Game/newUI/Ink/Widgets/Wuling/WBP_WulingSect.WBP_WulingSect_C"),UInkWulingSectPanel::StaticClass());
+    if(Route==TEXT("GiftRules"))return UInkGiftRulesPanel::StaticClass();
     if(Route==TEXT("WulingWorld"))return UInkWulingPanel::StaticClass();
-    if(Route==TEXT("LaunchEvent")||Route==TEXT("WulingActivity"))return NewWidget(TEXT("/Game/UI/Ink/Widgets/Activities/WBP_LaunchEvent.WBP_LaunchEvent_C"),UInkLaunchEventPanel::StaticClass());
-    if(Route==TEXT("Extensions")||Route==TEXT("WorldCultivation")||Route==TEXT("ResourceContest"))return NewWidget(TEXT("/Game/UI/Ink/Widgets/Journey/WBP_JourneyMap.WBP_JourneyMap_C"),UInkJourneyMapPanel::StaticClass());
-    if(Route==TEXT("JourneyWorldDetail")||Route==TEXT("JourneyResourceDetail")||Route==TEXT("RegionDetail")||Route==TEXT("ResourceDetail"))return NewWidget(TEXT("/Game/UI/Ink/Widgets/Journey/WBP_JourneyDestination.WBP_JourneyDestination_C"),UInkJourneyDestinationPanel::StaticClass());
+    if(Route==TEXT("LaunchEvent"))return NewWidget(TEXT("/Game/newUI/Ink/Widgets/Activities/WBP_LaunchEvent.WBP_LaunchEvent_C"),UInkLaunchEventPanel::StaticClass());
+    if(Route==TEXT("LaunchRank"))return UInkLaunchEventPanel::StaticClass();
+    if(Route==TEXT("Extensions")||Route==TEXT("WorldCultivation")||Route==TEXT("ResourceMap"))return NewWidget(TEXT("/Game/newUI/Ink/Widgets/Journey/WBP_JourneyMap.WBP_JourneyMap_C"),UInkJourneyMapPanel::StaticClass());
+    if(Route==TEXT("JourneyWorldDetail")||Route==TEXT("JourneyResourceDetail")||Route==TEXT("RegionDetail")||Route==TEXT("ResourceDetail"))return NewWidget(TEXT("/Game/newUI/Ink/Widgets/Journey/WBP_JourneyDestination.WBP_JourneyDestination_C"),UInkJourneyDestinationPanel::StaticClass());
     if(Route==TEXT("WulingGuild")||Route==TEXT("WulingOrders")||Route==TEXT("WulingOffline")||Route==TEXT("WulingRights"))return UInkWulingRecordsPanel::StaticClass();
     if(Route==TEXT("WulingCraft")||Route==TEXT("WulingSources")||Route==TEXT("WulingBreakthrough")||Route==TEXT("WulingEquipment")||Route==TEXT("WulingConstruction")||Route==TEXT("WulingActivity")||Route==TEXT("WulingRace")||Route==TEXT("WulingShop")||Route==TEXT("WulingMarket"))return UInkWulingToolsPanel::StaticClass();
     static const TMap<FName,TSubclassOf<UInkFeaturePanel>> Routes={
         {TEXT("Extensions"),UInkFeatureHubPanel::StaticClass()},{TEXT("SignIn"),UInkSignInGroupPanel::StaticClass()},
         {TEXT("MonthlySignIn"),UInkMonthlySignInPanel::StaticClass()},{TEXT("DailyFortune"),UInkDailyFortunePanel::StaticClass()},
-        {TEXT("Activities"),UInkActivitiesGroupPanel::StaticClass()},{TEXT("DailyActivities"),UInkDailyActivitiesPanel::StaticClass()},
-        {TEXT("TimedActivities"),UInkTimedActivitiesPanel::StaticClass()},{TEXT("Draw"),UInkDrawPanel::StaticClass()},
+        {TEXT("Activities"),UInkIntegratedActivitiesPanel::StaticClass()},{TEXT("DailyActivities"),UInkIntegratedDailyPanel::StaticClass()},
+        {TEXT("TimedActivities"),UInkIntegratedLimitedPanel::StaticClass()},{TEXT("PermanentActivities"),UInkIntegratedPermanentPanel::StaticClass()},{TEXT("Draw"),UInkDrawPanel::StaticClass()},
         {TEXT("Expedition"),UInkExpeditionPanel::StaticClass()},{TEXT("WorldCultivation"),UInkWorldCultivationPanel::StaticClass()},
         {TEXT("ResourceContest"),UInkResourceContestPanel::StaticClass()},{TEXT("CharacterProfile"),UInkCharacterProfilePanel::StaticClass()},
         {TEXT("CharacterEquipment"),UInkCharacterEquipmentPanel::StaticClass()},{TEXT("CharacterSkills"),UInkCharacterSkillsPanel::StaticClass()},
@@ -86,6 +93,8 @@ void UInkFeaturePanel::SetContext(const FString& Entry)
 void UInkFeaturePanel::NativeTick(const FGeometry& Geometry,float DeltaSeconds)
 {
     Super::NativeTick(Geometry,DeltaSeconds);
+    if(!bEmbedded&&FrontendOwner&&FrontendOwner->CurrentPage==PageId&&
+        (PageId==TEXT("SignIn")||(PageId==TEXT("DailyActivityDetail")&&SelectedEntry==TEXT("ACT_SIGN"))))RefreshLiveData();
     if(bEmbedded)return;
     PageOpenElapsed+=FMath::Max(0.f,DeltaSeconds);
     const bool Reduced=FrontendOwner&&FrontendOwner->bReducedMotion;
@@ -145,10 +154,10 @@ void UInkFeaturePanel::RebuildPanel()
     PanelSize->SetWidthOverride(Width);PanelSize->SetHeightOverride(Height);
     BodyWidth=Width-88;BodyHeight=Height-230;
     auto* Background=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT("FeaturePaper"));
-    FSlateBrush Brush=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::Card,FVector2D(Width,Height));
+    FSlateBrush Brush=InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(Width,Height));
     Background->SetBrush(Brush);Background->SetVisibility(ESlateVisibility::HitTestInvisible);Place(ShellCanvas,Background,0,0,Width,Height);
-    Surface(ShellCanvas,TEXT("FeatureHeadingArt"),InkPresentationStyle::ESurface::Heading,34,30,Width-68,74);
-    Label(ShellCanvas,TEXT("FeatureHeading"),PanelTitle().ToString(),60,44,Width-180,50,34);
+    Surface(ShellCanvas,TEXT("FeatureHeadingArt"),InkPresentationStyle::ESurface::FeatureHeading,34,30,Width-68,74);
+    Label(ShellCanvas,TEXT("FeatureHeading"),PanelTitle().ToString(),60,42,Width-180,54,36);
     Action(ShellCanvas,TEXT("Close"),TEXT("×"),Width-92,42,44,44);
     BodyCanvas=WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("FeatureBody"));Place(ShellCanvas,BodyCanvas,44,124,BodyWidth,BodyHeight);BodyCanvas->SetClipping(EWidgetClipping::ClipToBoundsAlways);
     BuildPanelContent();
@@ -175,7 +184,7 @@ UInkFrontendActionButton* UInkFeaturePanel::Action(UCanvasPanel* Parent,const FS
     auto* B=WidgetTree->ConstructWidget<UInkFrontendActionButton>(UInkFrontendActionButton::StaticClass(),MakeUniqueObjectName(WidgetTree,UInkFrontendActionButton::StaticClass(),Name));
     B->Action=FName(*(TEXT("Ext_")+Id));B->BindFrontend(FrontendOwner);
     const bool Close=Id==TEXT("Close"),Light=!Close&&(bPrimary||bSelected||bBlue);
-    auto Style=Close?InkPresentationStyle::CloseButton():InkPresentationStyle::Button(bSelected,bPrimary,bBlue);Style.SetNormalPadding(FMargin(0));Style.SetPressedPadding(FMargin(0,1,0,0));B->SetStyle(Style);
+    auto Style=Close?InkPresentationStyle::CloseButton():InkPresentationStyle::FeatureButton(bSelected,bPrimary,bBlue);Style.SetNormalPadding(FMargin(0));Style.SetPressedPadding(FMargin(0,1,0,0));B->SetStyle(Style);
     auto* T=WidgetTree->ConstructWidget<UTextBlock>();auto Font=InkUiTypography::MakeFont(EInkUiTextRole::Button,UsesResponsiveShell()?28:H<50?21:25);
     // The theme converts text pixel sizes to Slate points; the cross is an icon.
     if(Close)Font.Size=H>=64?40:32;
@@ -187,7 +196,7 @@ UInkFrontendActionButton* UInkFeaturePanel::Action(UCanvasPanel* Parent,const FS
 }
 
 UImage* UInkFeaturePanel::Surface(UCanvasPanel* Parent,FName Name,InkPresentationStyle::ESurface Part,float X,float Y,float W,float H)
-{auto* I=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(InkPresentationStyle::Surface(Part,FVector2D(W,H)));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Parent,I,X,Y,W,H);return I;}
+{if(Part==InkPresentationStyle::ESurface::Card)Part=InkPresentationStyle::ESurface::FeatureCard;auto* I=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(InkPresentationStyle::Surface(Part,FVector2D(W,H)));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Parent,I,X,Y,W,H);return I;}
 
 UImage* UInkFeaturePanel::Icon(UCanvasPanel* Parent,FName Name,InkPresentationStyle::EIcon Part,float X,float Y,float Size)
 {auto* I=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),Name);I->SetBrush(InkPresentationStyle::Icon(Part,FVector2D(Size)));I->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Parent,I,X,Y,Size,Size)->SetZOrder(1);return I;}
@@ -197,7 +206,7 @@ void UInkFeaturePanel::Scene(UCanvasPanel* Parent,int32 Tile,float X,float Y,flo
     if(UsesResponsiveShell())
     {
         const FString Name=FString::Printf(TEXT("MI_InkSceneSoft_%d"),Tile);
-        const FString Path=TEXT("/Game/UI/Ink/Refactor20261021/Materials/")+Name+TEXT(".")+Name;
+        const FString Path=InkUiAssets::ResolveNamed(Name);
         if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,*Path,nullptr,LOAD_NoWarn|LOAD_Quiet))
         {
             auto* Image=WidgetTree->ConstructWidget<UImage>();FSlateBrush B;
@@ -210,7 +219,7 @@ void UInkFeaturePanel::Scene(UCanvasPanel* Parent,int32 Tile,float X,float Y,flo
         }
     }
     auto* I=WidgetTree->ConstructWidget<UImage>();FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=FVector2D(768,256);
-    B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_CohesionScenes.T_CohesionScenes")));
+    B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_CohesionScenes.T_CohesionScenes")));
     B.SetUVRegion(FBox2f(FVector2f((Tile%2)*.5f,(Tile/2)*.25f),FVector2f((Tile%2+1)*.5f,(Tile/2+1)*.25f)));I->SetBrush(B);
     if(Tile==6&&!bPortraitLayout){B.ImageSize=FVector2D(384,256);B.SetUVRegion(FBox2f(FVector2f(0,.75f),FVector2f(.25f,1)));I->SetBrush(B);}
     auto* Fit=WidgetTree->ConstructWidget<UScaleBox>();Fit->SetStretch(Tile==6?EStretch::ScaleToFit:EStretch::ScaleToFill);Fit->SetClipping(EWidgetClipping::ClipToBoundsAlways);Fit->SetContent(I);Fit->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Parent,Fit,X,Y,W,H)->SetZOrder(PageId==TEXT("CharacterProfile")?0:1);
@@ -219,7 +228,7 @@ void UInkFeaturePanel::Scene(UCanvasPanel* Parent,int32 Tile,float X,float Y,flo
 void UInkFeaturePanel::Link(UCanvasPanel* Parent,const FString& Route,const FString& Title,const FString& Caption,int32 Tile,float X,float Y,float W,float H)
 {
     auto* B=Action(Parent,TEXT("Open_")+Route,TEXT(""),X,Y,W,H);
-    auto Style=B->GetStyle();Style.SetNormal(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::Card,FVector2D(W,H)));auto Hover=Style.Normal;Hover.TintColor=FLinearColor(1.06f,1.04f,.96f,1);Style.SetHovered(Hover);B->SetStyle(Style);
+    auto Style=B->GetStyle();Style.SetNormal(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureCard,FVector2D(W,H)));auto Hover=Style.Normal;Hover.TintColor=FLinearColor(1.04f,1.05f,1.02f,1);Style.SetHovered(Hover);B->SetStyle(Style);
     auto* Canvas=WidgetTree->ConstructWidget<UCanvasPanel>();B->SetContent(Canvas);auto* ButtonLayout=CastChecked<UButtonSlot>(Canvas->Slot);ButtonLayout->SetPadding(FMargin(0));ButtonLayout->SetHorizontalAlignment(HAlign_Fill);ButtonLayout->SetVerticalAlignment(VAlign_Fill);
     Scene(Canvas,Tile,14,18,128,H-36);
     const bool Compact=H<120;
@@ -234,12 +243,41 @@ void UInkFeaturePanel::FeedbackMessage(const FString& Text)
 void UInkFeaturePanel::Open(const FString& Route,const FString& Context)
 {if(FrontendOwner)FrontendOwner->OpenFeaturePanel(FName(*Route),Context);}
 
+float UInkFeaturePanel::GetBodyContentHeight() const
+{
+    float Height=BodyHeight;
+    if(BodyCanvas)for(auto* Child:BodyCanvas->GetAllChildren())
+        if(const auto* Layout=Cast<UCanvasPanelSlot>(Child->Slot))Height=FMath::Max(Height,float(Layout->GetPosition().Y+Layout->GetSize().Y+16));
+    return Height;
+}
+
+bool UInkFeaturePanel::IsRolloutPageActive() const
+{
+    if(!FrontendOwner)return false;
+    if(!bEmbedded)return FrontendOwner->CurrentPage==PageId;
+    const FName GroupRoute=PageId==TEXT("SignIn")||PageId==TEXT("MonthlySignIn")||PageId==TEXT("DailyFortune")?FName(TEXT("SignIn")):FName(TEXT("Activities"));
+    const auto* Group=Cast<UInkFeatureGroupPanel>(FrontendOwner->ExtensionPages.FindRef(GroupRoute));
+    return FrontendOwner->CurrentPage==GroupRoute&&Group&&Group->SelectedRoute==PageId&&Group->ContentPanels.FindRef(PageId)==this;
+}
+
+void UInkFeaturePanel::HandleRolloutSignInRequested()
+{
+    HandleAction(TEXT("SignInClaim"));
+    if(auto* Claim=Cast<UJourneyClaimStateWidget>(GetWidgetFromName(TEXT("RolloutDailyClaim"))))
+    {
+        auto* Service=WulingFrontendData::Service(this);
+        Claim->SetClaimState(Service&&Service->IsBusy()?EDailySignInClaimState::Pending:EDailySignInClaimState::Error,FText::FromString(PreviewFeedback));
+    }
+}
+
 void UInkFeaturePanel::HandleAction(FName InAction)
 {
     const FString Id=InAction.ToString();
     if(Id==TEXT("SignInClaim"))
     {
-        auto* W=WulingFrontendData::Service(this);FeedbackMessage(W&&W->SignIn()?TEXT("签到请求已记录，等待服务确认"):TEXT("服务未连接或有操作待确认"));return;
+        InkJourneyAdapter::FRequest Request;Request.ExpectedDay=RolloutSignInDay;
+        FString ActionFeedback;InkJourneyAdapter::Submit(WulingFrontendData::Service(this),IsRolloutPageActive(),Request,ActionFeedback);
+        FeedbackMessage(ActionFeedback);return;
     }
     if(Id==TEXT("Back")||Id==TEXT("List")){if(FrontendOwner)FrontendOwner->CloseFeaturePanel(false);return;}
     if(Id==TEXT("Close")){if(FrontendOwner)FrontendOwner->CloseFeaturePanel(true);return;}
@@ -270,6 +308,22 @@ void UInkFeaturePanel::HandlePanelAction(const FString& Id)
 
 void UInkFeaturePanel::RefreshLiveData()
 {
+    if(FrontendOwner&&FrontendOwner->CurrentPage==PageId&&PageId==TEXT("DailyActivityDetail")&&SelectedEntry==TEXT("ACT_SIGN"))
+    {
+        const auto* Service=WulingFrontendData::Service(this);
+        if(!Service)return;
+        const auto Snapshot=Service->Snapshot();
+        double Version=0;int32 SignedState=-1;
+        if(Snapshot)Snapshot->TryGetNumberField(TEXT("version"),Version);
+        const auto Activities=WulingFrontendData::Activity(this);
+        bool Signed=false;
+        if(Activities&&Activities->TryGetBoolField(TEXT("signed"),Signed))SignedState=Signed?1:0;
+        const FString Day=WulingFrontendData::String(Activities,TEXT("day"));
+        const FString ActivityState=FString::Printf(TEXT("%d:%s"),SignedState,*Day);
+        const FString Key=FString::Printf(TEXT("activity|%.0f|%d|%d|%d|%s|%s"),Version,Service->IsEnabled(),Service->IsConnected(),Service->IsBusy(),*Service->GetStatus(),*ActivityState);
+        if(Key!=AuthorityContentKey){AuthorityContentKey=Key;RebuildPanel();}
+        return;
+    }
     if(!FrontendOwner||FrontendOwner->CurrentPage!=PageId||!PageId.ToString().StartsWith(TEXT("Character")))return;
     auto* W=WulingFrontendData::Service(this);if(!W||!W->IsEnabled()||!W->Snapshot())return;
     double Version=0;W->Snapshot()->TryGetNumberField(TEXT("version"),Version);const FString Key=FString::Printf(TEXT("%.0f|%d"),Version,W->IsConnected());

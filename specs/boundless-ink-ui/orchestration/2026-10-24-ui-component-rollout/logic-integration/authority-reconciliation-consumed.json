@@ -1,0 +1,34 @@
+{
+  "scope": "Read-only consumption of LogicCore probe report; not rerun by logic-integration and not UE evidence",
+  "source_report": "logic-core/quote-reconciliation-evidence.json",
+  "report_sha256": "fe88bdf4b0ec4a10ee75e57fced69240f42fc85234df13a9fa7ba8f209d216d0",
+  "checks": 21,
+  "requests": 13,
+  "passed": true,
+  "authority_source_hashes_unchanged": [
+    {
+      "path": "Tools/CultivationService/authority.py",
+      "sha256": "b2faf88bb9572c381edcf8a9a28b109514ee61f472dcc36e558ebdb4011741a6"
+    },
+    {
+      "path": "Tools/CultivationService/breakthrough.py",
+      "sha256": "d3dcf1be7b925bb1b3c537894bb4c2149d4445fe97a36863a679da206a17fd60"
+    },
+    {
+      "path": "Tools/CultivationService/tribulation.py",
+      "sha256": "20ec55414f4bcd3da6708dcd1f9ea750414687754334ca2dfb047524350b5d25"
+    },
+    {
+      "path": "Tools/CultivationService/inventory.py",
+      "sha256": "890b22e7ff21a0f12d93e339ff4a59b6ccdbde581879f43193d40a286f00673d"
+    },
+    {
+      "path": "Tools/CultivationService/http_server.py",
+      "sha256": "41fecc4d11112202d4ac140d4e90cf7dc5def4ec937de1b041a5e32eed570814"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Wuling/WulingPrototypeSubsystem.cpp",
+      "sha256": "a0e6f1d51f6bdf8287737c73bf456d6e5905def164b01d684f49122c6217641f"
+    }
+  ]
+}

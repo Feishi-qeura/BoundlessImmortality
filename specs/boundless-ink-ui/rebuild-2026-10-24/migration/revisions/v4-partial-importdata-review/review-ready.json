@@ -1,0 +1,39 @@
+{
+  "updated_at": "2026-10-24T13:47:40.915276+08:00",
+  "review_ready": true,
+  "engine_started_by_cleanup": false,
+  "content_written_by_cleanup": false,
+  "active_livebridge_modified_by_cleanup": false,
+  "native_rename582_verified": true,
+  "four_texture_recovery_and_pixels_verified": true,
+  "final_migration_verified": false,
+  "unchanged_full_archives_rehashed": false,
+  "read_only_engine_helpers_executed_by_cleanup": false,
+  "report": "../../partial-importdata-review.md",
+  "files": [
+    {
+      "path": "actual-engine-report-audit.json",
+      "sha256": "e6405416c2d2ecbf6b7e823e7796fcc89cbd3349148663cc721dd60f23d9fd24"
+    },
+    {
+      "path": "audit_engine_reports_v4.py",
+      "sha256": "c9906d58579799753a20fe87e6f4748bbebd31e0d78206ad58763738c20c5742"
+    },
+    {
+      "path": "audit_four_payloads.py",
+      "sha256": "3506c33d0ea1b905bd897dc31cbfe97b4ef5ad1124002197fe6871e4454bf048"
+    },
+    {
+      "path": "classify_remaining_old_ue.py",
+      "sha256": "371a4c4962d727045063246a21474a94b3a383d0a5cebe08e6b874b5088b997e"
+    },
+    {
+      "path": "four-texture-independent-audit.json",
+      "sha256": "88bc0b4695e9b9bf0050031447f4db3506ae6575698b05c24dcf182b817de05e"
+    },
+    {
+      "path": "verify_saved_reference_graph_ue.py",
+      "sha256": "02d7bdd9d8c58f9e92fcd2f1face6a1b2491ec6efbeafd5560c033e71c4a7840"
+    }
+  ]
+}

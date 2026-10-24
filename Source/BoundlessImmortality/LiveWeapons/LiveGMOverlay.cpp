@@ -48,6 +48,9 @@ namespace
         for(TActorIterator<AInkMenuDirector> It(World);It;++It)
         {
             const auto* Frontend=It->FrontendWidget.Get();
+            if(Frontend&&Frontend->UsesRebuiltPresentation()&&Frontend->GetOwningPlayer()==Player
+                &&Frontend->IsInViewport()&&Frontend->IsVisible()&&Frontend->GetRenderOpacity()>0
+                &&Frontend->CurrentPage==TEXT("HUD")&&!Frontend->GetRuntimePageLayoutVersion(TEXT("HUD")).IsNone())return true;
             const auto* StatusWidget=Frontend?Frontend->AnchorStatusWidget.Get():nullptr;
             if(Frontend&&Frontend->GetOwningPlayer()==Player&&Frontend->IsInViewport()&&Frontend->IsVisible()&&Frontend->GetRenderOpacity()>0&&Frontend->CurrentPage==TEXT("HUD")
                 &&IsValid(StatusWidget)&&StatusWidget->IsVisible()&&StatusWidget->GetRenderOpacity()>0&&StatusWidget->bHasAnchor)return true;
@@ -55,6 +58,8 @@ namespace
         return false;
     }
 }
+
+BOUNDLESSIMMORTALITY_API bool InkNewUiSuppressesLegacyGMAnchor(UWorld* World,APlayerController* Player){return HasVisibleAnchorStatus(World,Player);}
 
 ALiveGMOverlay::ALiveGMOverlay()
 {
@@ -181,7 +186,7 @@ UTextBlock* ULiveGMOverlayWidget::MakeText(const FString& Text,int32 Size)
 void ULiveGMOverlayWidget::Configure(ALiveGMOverlay* InHost)
 {
     Host=InHost;SetVisibility(ESlateVisibility::SelfHitTestInvisible);SetIsFocusable(false);
-    if(InHost&&(!InHost->NameFont||InHost->NameFont->GetPathName()==TEXT("/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames")))InHost->NameFont=LoadObject<UFont>(nullptr,TEXT("/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(InHost&&(!InHost->NameFont||InHost->NameFont->GetPathName()==TEXT("/Game/LiveWeapons/Fonts/F_LiveNames.F_LiveNames")))InHost->NameFont=LoadObject<UFont>(nullptr,TEXT("/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     if(!WidgetTree)WidgetTree=NewObject<UWidgetTree>(this,TEXT("GMWidgetTree"));
     auto* Root=WidgetTree->ConstructWidget<UCanvasPanel>();Root->SetVisibility(ESlateVisibility::SelfHitTestInvisible);WidgetTree->RootWidget=Root;
     auto* Border=WidgetTree->ConstructWidget<UBorder>();Border->SetBrushColor(FLinearColor(.015f,.025f,.055f,.96f));Border->SetPadding(FMargin(12));
@@ -190,9 +195,9 @@ void ULiveGMOverlayWidget::Configure(ALiveGMOverlay* InHost)
 #if UE_BUILD_SHIPPING
     Border->SetVisibility(ESlateVisibility::Collapsed);
 #endif
-    RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet);
-    RealmChart=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
-    WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    RealmBanners=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    RealmChart=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    WeaponTitles=LoadObject<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Leaderboard/T_LeaderboardTitles.T_LeaderboardTitles"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     auto* PanelSlot=Root->AddChildToCanvas(Border);PanelSlot->SetAnchors(FAnchors(1,0));PanelSlot->SetAlignment(FVector2D(1,0));PanelSlot->SetPosition(FVector2D(-18,190));PanelSlot->SetAutoSize(true);
     Border->SetBrushColor(FLinearColor::Transparent);Border->SetPadding(FMargin(0));
     PanelSlot->SetAutoSize(false);PanelSlot->SetAnchors(FAnchors(1,0,1,1));PanelSlot->SetAlignment(FVector2D(1,0));PanelSlot->SetOffsets(FMargin(-18,140,600,18));

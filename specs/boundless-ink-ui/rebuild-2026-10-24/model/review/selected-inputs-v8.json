@@ -1,0 +1,115 @@
+{
+  "captured_utc": "2026-10-24T07:40:51.853603+00:00",
+  "scope": "bounded changed component/source/runtime reports; no engine/test execution",
+  "sources": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureData.h",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureData.h",
+      "sha256": "4ea477fc2d39bef07dd6324448bb78dc8a75bedb2cadf7c8750f8a896a3524b6",
+      "bytes": 4992
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.h",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.h",
+      "sha256": "0bd62f24ff65ec7eda8a22a4ad93f9ffbbe4e65b7248e3e6cf1c86d8729bb1d7",
+      "bytes": 4904
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.cpp",
+      "sha256": "508571bef739a056bcf4c5f45c5c1e3cc889b867ca51cfc89331fb263a0614eb",
+      "bytes": 25754
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "sha256": "b1faeafd91c9c6b66d78c38fa25c27775c330c035ba1aee8bdbab573cf49514e",
+      "bytes": 28312
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "sha256": "74d20284d3f55fcbb01ad442a1286292c8772edf8e1892c6023e77dd9b3f005d",
+      "bytes": 20892
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureRank.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureRank.cpp",
+      "sha256": "67f29e5e8eb7b537f905690fd31f958923472af0d8866524b9076b4cde7f9b4a",
+      "bytes": 8756
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.cpp",
+      "sha256": "fbf65847ba5048c733a8d6132a61e8d346e51b96e428bae1773fc15bc0a71286",
+      "bytes": 42880
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "sha256": "ed3931f639776a46bd523a4d3bfcb4621b8dba96fcd4bd12f4ffe314dd0d4ac6",
+      "bytes": 35200
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.h",
+      "snapshot": "selected-snapshot-v8/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.h",
+      "sha256": "96c53eb908a15242c92ec982cc3abea0aba2ea2142c2ada976d28758f02a24bc",
+      "bytes": 11411
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/remaining-component-import-result.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/remaining-component-import-result.json",
+      "sha256": "d8d86faf2c2738478617587348b45030df22ee6bb30f40ec5ef257cce0006e3a",
+      "bytes": 3582
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/remaining-component-import-manifest.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/remaining-component-import-manifest.json",
+      "sha256": "30f678cf08e499c41f3e1c81923d97c1e572e03832739dbb7b6149fc6804f06e",
+      "bytes": 4562
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/source-epoch.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/source-epoch.json",
+      "sha256": "cdcf98f77ceb664b246346e7ac27fc2d0aadfa8c10b351b0c64f573d76e8eecc",
+      "bytes": 17325
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-19-result.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-19-result.json",
+      "sha256": "e99116e46fb0e037653baa68001d3537a63204469763846fc7f7881a192d17e6",
+      "bytes": 266
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-05/report.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-05/report.json",
+      "sha256": "6dc696a106b16a47f1d8f459486dabc55d59dc8b11f596d29772d0f0bbe1877f",
+      "bytes": 8914849
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_all44_default_pie.py",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_all44_default_pie.py",
+      "sha256": "1ee54ca58ed19651dbb0ea1c2ebe869116647a3b6613434249ad5266222c7046",
+      "bytes": 15898
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/geometry_metric_validation.py",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/geometry_metric_validation.py",
+      "sha256": "78f5b716be4ebbb1de1926c609ed111a5c03c57e4529cd92a146385c35495f2f",
+      "bytes": 1904
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/status.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/status.json",
+      "sha256": "c4ca9b0693575fa52e24f586fe68a5e5b2a647c8dcee54bc1c3500a0ddbe2b7a",
+      "bytes": 2920
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/native-tests-03-report/index.json",
+      "snapshot": "selected-snapshot-v8/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/native-tests-03-report/index.json",
+      "sha256": "5d07af8f3426f0d952aa93b269ad5a050034ad321e9228d9e9f9e52b533f59a9",
+      "bytes": 2001,
+      "supplement": "existing native03 receipt; not rerun"
+    }
+  ]
+}

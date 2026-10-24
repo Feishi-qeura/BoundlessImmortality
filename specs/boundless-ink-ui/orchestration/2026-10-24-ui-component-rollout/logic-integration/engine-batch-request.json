@@ -1,0 +1,50 @@
+{
+  "team_id": "logic-integration",
+  "state": "requested_not_granted",
+  "updated_at": "2026-10-24T11:13:21+08:00",
+  "prerequisites": [
+    "User saves and closes project UnrealEditor PID35164; do not stop it",
+    "Supervisor grants bounded lease and confirms no parallel engine activity"
+  ],
+  "requested_operations": [
+    "build",
+    "import",
+    "migrate_wbp",
+    "automation",
+    "pie"
+  ],
+  "suggested_timebox_minutes": 120,
+  "estimate": "Approximately 60-120 minutes total; source/UHT/compiler/environment fixes can extend this",
+  "build_target": "BoundlessImmortalityEditor Win64 Development UE5.8",
+  "asset_manifest": "logic-integration/engine-batch.json",
+  "content_writes": [
+    "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable",
+    "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked",
+    "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+    "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+    "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1"
+  ],
+  "new_automation_filters": [
+    "Boundless.InkUI.Rollout20261024.Journey",
+    "BoundlessImmortality.Frontend.Rollout20261024.Core"
+  ],
+  "affected_existing_filters": [
+    "BoundlessImmortality.Frontend.Inventory",
+    "BoundlessImmortality.Frontend.SignIn",
+    "BoundlessImmortality.Frontend.Leaderboard",
+    "Boundless.InkUI.Launch"
+  ],
+  "required_results": [
+    "Build log and exit code",
+    "Five Texture2D imports + AssetRegistry + source-alpha export comparisons",
+    "Two preserved-page WBP migrations saved and read back",
+    "Updated Core QuoteContract tests and Journey/affected suite results",
+    "PIE real normal Prepare and Rework request validation; display unknowns retained; rejection/pending not success"
+  ],
+  "cleanup_asset_mutation": false,
+  "visual_approval": "user_only",
+  "engine_executed": false,
+  "source_correction_ledger": "logic-integration/quote-source-correction-ledger.json"
+}

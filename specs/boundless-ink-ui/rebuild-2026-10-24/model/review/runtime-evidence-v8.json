@@ -1,0 +1,63 @@
+{
+  "attempt": "PIE05",
+  "finished": false,
+  "passed": false,
+  "checks": 479,
+  "captures": 31,
+  "source_epoch_sha256": "7609762589a88043453be3afe4765bc26cf5c9e60073679c267fe592e2101200",
+  "started_at": "2026-10-24T07:19:22.584190+00:00",
+  "finished_at": "2026-10-24T07:22:31.550339+00:00",
+  "current_step": "typed back OfflineRewards",
+  "failed_checks": [
+    {
+      "name": "real Slate typed-button click 返回",
+      "passed": false,
+      "actual": null
+    }
+  ],
+  "observed_routes": [
+    "BreakthroughPrepare",
+    "Character",
+    "CharacterAppearance",
+    "CultivationMethods",
+    "EquipmentFabao",
+    "EventSettlement",
+    "Extensions",
+    "GiftRules",
+    "HUD",
+    "Inventory",
+    "Leaderboard",
+    "Main",
+    "OfflineRewards",
+    "RaceLive",
+    "RaceLobby",
+    "RaceSettlement",
+    "ResourceLease",
+    "Saves",
+    "Settings",
+    "SwordSpirit",
+    "WorldCultivation",
+    "Wuling"
+  ],
+  "observed_count": 22,
+  "source_epoch_predates_seven_component_import": true,
+  "strict_geometry_capture_checks_passed": 31,
+  "geometry_scope": "only captured PIE05 subsets at its own epoch; not current build19, not all44",
+  "character_scroll_entry_passed_routes": [
+    "EquipmentFabao",
+    "CultivationMethods",
+    "BreakthroughPrepare",
+    "CharacterAppearance"
+  ],
+  "failed04_preserved": true,
+  "new_component_brush_readbacks_pending": 7,
+  "service_business_or_Busy_success": false,
+  "native_fixture_existing_receipt": {
+    "report": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/native-tests-03-report/index.json",
+    "succeeded": 3,
+    "failed": 0,
+    "notRun": 0,
+    "real_service_Busy_validated": false,
+    "reviewer_executed": false
+  }
+}

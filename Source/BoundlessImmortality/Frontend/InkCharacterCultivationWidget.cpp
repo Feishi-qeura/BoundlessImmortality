@@ -45,21 +45,21 @@ TSharedRef<SWidget> UInkCharacterCultivationWidget::RebuildWidget()
             Effect->NiagaraSystemReference=InkUiAssets::Load<UNiagaraSystem>(nullptr,Asset);
             Effect->SetVisibility(ESlateVisibility::HitTestInvisible);Canvas->AddChildToCanvas(Effect);return Effect;
         };
-        auto* FrameBase=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Shared/M_QualityFrameUI.M_QualityFrameUI"));
+        auto* FrameBase=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/Shared/M_QualityFrameUI.M_QualityFrameUI"));
         for(int32 I=0;I<8;++I)
         {
             auto* Frame=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),*FString::Printf(TEXT("ProfileSlotGlow_%d"),I));
             auto* Material=FrameBase?UMaterialInstanceDynamic::Create(FrameBase,this):nullptr;
             if(Material)Frame->SetBrushFromMaterial(Material);
             Canvas->AddChildToCanvas(Frame)->SetZOrder(0);Frames.Add(Frame);FrameMaterials.Add(Material);
-            auto* Border=Add(*FString::Printf(TEXT("ProfileBorder_%d"),I),TEXT("/Game/UI/Ink/Niagara/Shared/NS_NodeBorder.NS_NodeBorder"));
+            auto* Border=Add(*FString::Printf(TEXT("ProfileBorder_%d"),I),TEXT("/Game/newUI/Ink/Niagara/Shared/NS_NodeBorder.NS_NodeBorder"));
             CastChecked<UCanvasPanelSlot>(Border->Slot)->SetZOrder(1);Borders.Add(Border);
         }
         Glow=WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(),TEXT("ProfileDantianGlow"));
-        if(auto* M=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Character/M_DantianUI.M_DantianUI")))
+        if(auto* M=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/Character/M_DantianUI.M_DantianUI")))
         {GlowMaterial=UMaterialInstanceDynamic::Create(M,this);Glow->SetBrushFromMaterial(GlowMaterial);}
         Glow->SetVisibility(ESlateVisibility::HitTestInvisible);Canvas->AddChildToCanvas(Glow)->SetZOrder(2);
-        Core=Add(TEXT("ProfileDantianNiagara"),TEXT("/Game/UI/Ink/Niagara/Character/NS_Dantian.NS_Dantian"));
+        Core=Add(TEXT("ProfileDantianNiagara"),TEXT("/Game/newUI/Ink/Niagara/Character/NS_Dantian.NS_Dantian"));
         CastChecked<UCanvasPanelSlot>(Core->Slot)->SetZOrder(3);
     }
     UpdateGeometry();return Super::RebuildWidget();

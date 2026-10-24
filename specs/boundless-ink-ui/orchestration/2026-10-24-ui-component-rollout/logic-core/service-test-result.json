@@ -1,0 +1,8 @@
+{
+  "tests_run": 40,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "scope": "real Python authority; not Unreal adapter runtime or PIE"
+}

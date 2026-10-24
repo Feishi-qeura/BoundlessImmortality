@@ -1,0 +1,121 @@
+{
+  "scope": "cleanup only",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "asset-decisions.csv",
+      "bytes": 202557,
+      "sha256": "fdb2c0161b37f02afa2738d3ae6d5e72327d8348e4e01c5f6e205a1fdad93446"
+    },
+    {
+      "path": "asset-decisions.json",
+      "bytes": 2207507,
+      "sha256": "d6ebadecd455e6dd8f480e9361088ec550dac26b083c283ca93c09d15b442f05"
+    },
+    {
+      "path": "audit-summary.json",
+      "bytes": 964,
+      "sha256": "4c945af6d771f47bf47c7a793a92942ab45a69bb79844a0d0d88298fa150789d"
+    },
+    {
+      "path": "audit_legacy.py",
+      "bytes": 18793,
+      "sha256": "cab67aae8842a2f2d01b16851f1fabfc24a73eb31b2192ddedbb9c0a9378e228"
+    },
+    {
+      "path": "backups/20261024T095652825845/backup-manifest.json",
+      "bytes": 1704,
+      "sha256": "1a0389895ba469c9e990ed7646642e9bb9c64ba5dfd71ff7159d56c0f9d5927d"
+    },
+    {
+      "path": "backups/20261024T095652825845/Config/DefaultEngine.ini",
+      "bytes": 110586,
+      "sha256": "cd01dfd7e18e1751bb3a98e7119d3b56e8a2e4f7de67396923d1e59efacbc10f"
+    },
+    {
+      "path": "backups/20261024T095652825845/Content/UI/Ink/Materials/Leaderboard/M_InkLeaderboard.uasset",
+      "bytes": 19137,
+      "sha256": "99bec08f79b3ca24ef78c932cd11bd15c8b54aa33701dfd6607a56f27c229778"
+    },
+    {
+      "path": "backups/20261024T095652825845/Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.cpp",
+      "bytes": 92685,
+      "sha256": "5d26b902323aa2dd267ceec488e2cdbb311cc5232233b2cb2cde884de513a15f"
+    },
+    {
+      "path": "baseline-directories.json",
+      "bytes": 3123,
+      "sha256": "8a96941ab4e50776a5e0342b9a04443a63ee95997888ac2a522d36008dabd49e"
+    },
+    {
+      "path": "baseline.json",
+      "bytes": 204441,
+      "sha256": "7a2144e95dfb6ea58a7f77faa465c9405a630c03eccd16b4c3dd45d1c56ed2e7"
+    },
+    {
+      "path": "binary-string-leads.json",
+      "bytes": 119966,
+      "sha256": "9ae83a61e7511f22485700e4fe7d6c9480195e247e25cc3699fd8147a3a1d1db"
+    },
+    {
+      "path": "dynamic-load-sites.json",
+      "bytes": 114125,
+      "sha256": "1a47d77df1e8415c2973565a591803072e83fc494d6511a68a978565da3385c8"
+    },
+    {
+      "path": "exact-six-current-check.json",
+      "bytes": 9343,
+      "sha256": "fa8a6147c27f3d86c6b8f06c9208c247ef2c427d85a97126d86c047399da8365"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 2197,
+      "sha256": "11153f7cd726300c5f69e33868273db04b1e350a10b0bbef88b9ae6e53e8397c"
+    },
+    {
+      "path": "known-dynamic-paths.json",
+      "bytes": 11015,
+      "sha256": "71a79e2fe6aab0421e46379f50ad0bde492b44b52b664fa87d1e1a6cb5621fd4"
+    },
+    {
+      "path": "offline-verification.json",
+      "bytes": 1020,
+      "sha256": "77a3fc7d4c20332aed8d53f1ce0b15a2f600460ec461705e8be4d2869c9ec058"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8074,
+      "sha256": "98c1f2f2472c823148cd37a3cf2a7ef6a83630e346916ea8e9ba94cdedf242cd"
+    },
+    {
+      "path": "registry_audit_ue.py",
+      "bytes": 5946,
+      "sha256": "923553315fb614ec6a3a5d91a229bf73950e64bd636108aa74fee9ee6d343d0c"
+    },
+    {
+      "path": "static-text-evidence.json",
+      "bytes": 1367188,
+      "sha256": "3dadd40113bd30e0b9b651fe506f0751b349323f5b90879503635cc6d3bf6841"
+    },
+    {
+      "path": "status.json",
+      "bytes": 1816,
+      "sha256": "909b093cc9473f58bd55fded775e58c28b88fcc4a100c8bd61e21bf4c4e533c5"
+    },
+    {
+      "path": "verification-backup-packages.json",
+      "bytes": 55,
+      "sha256": "44a4793e1bafbfbe1d361476b9e910740bb6b8bf2e1696c2d5895b054032b98f"
+    },
+    {
+      "path": "verification-invalid-packages.json",
+      "bytes": 51,
+      "sha256": "409bb2d292c17c9ba2642cfab4ccdd523d61e22efe1f07c6adfc8d2221c34528"
+    },
+    {
+      "path": "verify_offline.py",
+      "bytes": 4283,
+      "sha256": "7ab87c3abfa6f4532f82a529ad16b1c045c11e8f3f10972d312fbaaa6771f0e0"
+    }
+  ]
+}

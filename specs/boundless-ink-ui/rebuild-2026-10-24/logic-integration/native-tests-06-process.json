@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-10-24T16:44:20.0831960+08:00",
+  "pid": 44084,
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NullRHI",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-native-tests06",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-06.log",
+    "-ReportOutputPath=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-06-report",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/preflight_native_negative_request.py",
+    "\"-ExecCmds=Automation RunTests BoundlessImmortality.Frontend\"",
+    "\"-TestExit=Automation Test Queue Empty\""
+  ],
+  "scope": "build26 native49 and data-only negative request reflection preflight"
+}

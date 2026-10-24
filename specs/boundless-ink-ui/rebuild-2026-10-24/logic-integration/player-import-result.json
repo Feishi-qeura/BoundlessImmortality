@@ -1,0 +1,48 @@
+{
+  "engine_pid": 39268,
+  "approved": false,
+  "assets": [
+    {
+      "object": "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1",
+      "width": 1254,
+      "height": 1254,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "901d495adf87fa946fb41d62eafa7c5951064996ef42bda6f480bab9b631d26c",
+      "uasset_sha256": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee"
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+      "width": 1536,
+      "height": 1024,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "5d576274a7e043a61bfad6590838deb9b0d7adb454ef94b6560afe5697641ed4",
+      "uasset_sha256": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d"
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+      "width": 1254,
+      "height": 1254,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "0cfa127f7a04204d62dcadca9f29075896b8be8650d4b71168356942869d8e19",
+      "uasset_sha256": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6"
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+      "width": 1536,
+      "height": 1024,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "076d8ae4a04e5d03284d870e1092d3895727779b9d145cec18942b7332872f16",
+      "uasset_sha256": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86"
+    }
+  ],
+  "passed": true,
+  "default_wbp": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend"
+}

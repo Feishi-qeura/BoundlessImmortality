@@ -1,0 +1,159 @@
+{
+  "team_id": "logic-core",
+  "updated_utc": "2026-10-24T06:25:16.966601+00:00",
+  "captured_utc": "2026-10-24T06:14:35.742931+00:00",
+  "late_source_captured_utc": "2026-10-24T06:23:10.121212+00:00",
+  "phase": "bounded-v5-evidence-review-handoff-ready",
+  "report": "bounded-v5-review.md",
+  "matrix": "resolved-open-matrix-v5.json",
+  "mapping": "stage-to-runtime-v5.csv",
+  "runtime_evidence": "runtime-evidence-v5.json",
+  "selected_inputs": "selected-inputs-v5.json",
+  "late_source": "late-source-v5.json",
+  "coverage": {
+    "screens": 44,
+    "stage_symbol_present": 44,
+    "no_ready_stage": 0,
+    "production_mount": {
+      "new-composition-connected-in-source": 7,
+      "new-root-placeholder": 0,
+      "no-new-production-component-observed": 37
+    },
+    "observed_prior_runtime_mount_checkpoint": {
+      "new-composition-connected-in-source": 6,
+      "new-root-placeholder": 1,
+      "no-new-production-component-observed": 37
+    },
+    "saved_default_shell": true,
+    "actual_default_route_observations": 6,
+    "complete_runtime_acceptance": 0,
+    "player_entry_verified": 0
+  },
+  "patch_owner_hash_checks": [
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivityWidgets.h",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivityWidgets.cpp",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.h",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.h",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Activities-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.cpp",
+      "replacement_hash_matches": true,
+      "frozen_hash_matches_inherited_review": true,
+      "unchanged_frozen_file_rehashed": false
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/contracts/player-d-adapter-namespace-overlay.yaml",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/contracts/player-e-breakthrough-confirmation-host-contract.yaml",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/diff/player-e-breakthrough-confirmation.diff",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/handoff.md",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/receipt.md",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/replacements/player-d-adapter-namespace.md",
+      "replacement_hash_matches": true
+    },
+    {
+      "owner": "Player-v5",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/replacements/player-e-confirmation-slices.md",
+      "replacement_hash_matches": true
+    }
+  ],
+  "pending_current_source_epoch_mismatches": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp",
+      "sha256": "62b4dc029c8359e10f11948bd4946290d188fa0e1e18b9ade6c42c1473e55a70",
+      "recorded_epoch_sha256": "aef71a153d255186b701813e099dac991c808b0e3066686df1edbe3078c983c4",
+      "matches_recorded_epoch": false
+    }
+  ],
+  "source_hashes_full_scan": false,
+  "unchanged_stage_rehash": false,
+  "engine_started": false,
+  "build_run": false,
+  "old_tests_rerun": false,
+  "images_inspected": false,
+  "visual_approval": false,
+  "native_execution_pass_record_in_reviewed_artifacts": false,
+  "failed_runtime_attempts": [
+    "01",
+    "02"
+  ],
+  "visible_nonfinite_records": 40,
+  "priority_new_findings": [
+    "V5-VERIFY-01",
+    "V5-AVATAR-01"
+  ],
+  "ready_v5_previous_finding_groups_reconciled": 6,
+  "post_capture_changes": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/source-epoch.json",
+      "reviewed_sha256": "2365c56c015c086543e14191090ef1f17e5a914c527b79ac3c3cab7bee0384c6",
+      "now_sha256": "a0d9b6e31b37536400f6075975dc37cf9e9ae9d894ed37d60b61920f9738f495",
+      "state": "later-input-not-covered-by-this-bounded-snapshot"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.h",
+      "reviewed_sha256": "f34a92f6a6a1880b981ccd5326c9abeeeac36530bbba7f0baf50a30ce6fbe554",
+      "now_sha256": "9b46b84f08ae667cb8ef067dc11bfa4319aa83e5eaabd7a0a291c74078cc6566",
+      "state": "later-input-not-covered-by-this-bounded-snapshot"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.cpp",
+      "reviewed_sha256": "e307d362e8a780a5660181dc816dc44bd0d7ede6f3907ba61322685e76ff642a",
+      "now_sha256": "64e257e248467e2d296c662a7924de943a1f78304285b3edf27538f9a5cebfb3",
+      "state": "later-input-not-covered-by-this-bounded-snapshot"
+    }
+  ],
+  "production_edits_by_this_worker": false,
+  "handoff_ready": true
+}

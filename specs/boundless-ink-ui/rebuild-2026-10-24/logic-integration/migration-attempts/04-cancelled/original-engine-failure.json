@@ -1,0 +1,7 @@
+{
+  "failed_at": "2026-10-24T13:08:58.506029+08:00",
+  "error": "RenameAssets returned false; partial results preserved for recovery.",
+  "engine_pid": 9420,
+  "preserve_editor_memory": true,
+  "retry_requires_review": true
+}

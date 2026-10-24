@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project_id": "rebuild-2026-10-24",
+  "authority": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\architecture-and-interfaces.md",
+  "sha256": "7e3e6251d2c815d44dc00f89cd30193c520dae2d1066c62ce6a76849d60ccca4",
+  "planned_root": "UInkRebuildFrontendWidget",
+  "parent": "UInkFrontendWidget",
+  "default_package": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+  "main_routes": [
+    "Main",
+    "HUD",
+    "Saves",
+    "Settings",
+    "Character",
+    "Inventory",
+    "Leaderboard"
+  ],
+  "owner_page_composition": "Independent UUserWidget child, integration-owned host wrapper and UPROPERTY references",
+  "presentation_hook_cpp_names": null,
+  "hook_status": "Owner has not specified exact hook signatures; do not invent calls.",
+  "root_source_production_ready": false,
+  "legacy_visual_fallback_allowed": false
+}

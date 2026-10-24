@@ -1,0 +1,43 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:39:39.008194+00:00",
+  "passed": true,
+  "scope": "Four exact old real Texture2D objects to their verified already-migrated canonical targets; no redirector delete_asset",
+  "backup_manifest": "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\UIRebuild20261024\\PartialBeforeRecovery\\20261024T133800\\manifest.json",
+  "backup_sha256": "5d918ea9d0e27d645a381890ee42c869371c5d20420c614416b5fa291c531ba2",
+  "operations": [
+    {
+      "source_old": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "retained_target": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "state": "native_reconciled_target_payload_preserved",
+      "payload_sha256": "adf00a74a6785bc3b332638c48b8d03bdf2290dd3c54520cfa2ca0742ae4e6f7",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\live-texture-payload-exports\\after-reconcile-T_RankWulingPaperPanel_Default_v1.png"
+    },
+    {
+      "source_old": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+      "retained_target": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+      "state": "native_reconciled_target_payload_preserved",
+      "payload_sha256": "efb280cbe178a48518e264b566e148978be2d6262a454f25ca6cbec22ae62a77",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\live-texture-payload-exports\\after-reconcile-T_RankSwordRows.png"
+    },
+    {
+      "source_old": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+      "retained_target": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+      "state": "native_reconciled_target_payload_preserved",
+      "payload_sha256": "754717b11c93f62a92021cba18d5814e7901c35dac9862f8c6821b85a3629078",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\live-texture-payload-exports\\after-reconcile-T_CohesionIcons.png"
+    },
+    {
+      "source_old": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+      "retained_target": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+      "state": "native_reconciled_target_payload_preserved",
+      "payload_sha256": "5b4ce49fe7e93411879b506421a2287999d3015f21c69b62acd1c62e71353161",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\live-texture-payload-exports\\after-reconcile-T_PolishOrnaments.png"
+    }
+  ],
+  "dirty_remaining": [
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+  ],
+  "completed_at": "2026-10-24T05:39:43.513630+00:00"
+}

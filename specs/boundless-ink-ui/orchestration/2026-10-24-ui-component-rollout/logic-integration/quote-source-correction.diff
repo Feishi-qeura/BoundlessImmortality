@@ -1,0 +1,162 @@
+--- before-quote/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp
++++ after-quote/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp
+@@ -20,7 +20,7 @@
+ bool CoreAdapterSameCounts(const TMap<FString,int32>& A,const TMap<FString,int32>& B)
+ {if(A.Num()!=B.Num())return false;for(const auto& P:A){const auto* N=B.Find(P.Key);if(!N||*N!=P.Value)return false;}return true;}
+ bool CoreAdapterSelectionValid(const TMap<FString,int32>& Selection)
+-{if(Selection.IsEmpty())return false;for(const auto& P:Selection)if(P.Key.IsEmpty()||!InkCorePolicy::ValidCount(P.Value))return false;return true;}
++{if(Selection.IsEmpty()||Selection.Num()>64)return false;for(const auto& P:Selection)if(P.Key.IsEmpty()||!InkCorePolicy::ValidCount(P.Value))return false;return true;}
+ TArray<TSharedPtr<FJsonValue>> CoreAdapterSelectionRows(const TMap<FString,int32>& Selection)
+ {
+     TArray<FString> Keys;Selection.GetKeys(Keys);Keys.Sort();TArray<TSharedPtr<FJsonValue>> Rows;
+@@ -142,7 +142,9 @@
+     if(!Q){D.Reason=TEXT("突破报价尚未同步");return D;}
+     const auto Readiness=CoreAdapterObject(Q,TEXT("readiness"));bool Ready=false;
+     const bool HasReady=Q->TryGetBoolField(TEXT("readiness"),Ready)||(Readiness&&Readiness->TryGetBoolField(TEXT("ready"),Ready));D.Facts.ServiceReady=HasReady&&Ready;
+-    const bool IsRework=CoreAdapterString(Q,TEXT("kind"))==TEXT("rework");D.Facts.KindMatches=Rework==IsRework;
++    const bool IsRework=CoreAdapterString(Q,TEXT("kind"))==TEXT("rework");
++    // Native normal quotes omit kind; only an explicit rework quote authorizes its request type.
++    D.Facts.KindMatches=Rework?IsRework:!CoreAdapterField(Q,TEXT("kind"));
+     TMap<FString,int32> Echo,Slots;const TArray<TSharedPtr<FJsonValue>>* Rows=nullptr;
+     bool EchoValid=Q->TryGetArrayField(TEXT("selection"),Rows);
+     if(EchoValid)for(const auto& V:*Rows)
+@@ -170,8 +172,18 @@
+     const bool Numbers=CoreAdapterNumber(Q,TEXT("q"),Quality)&&CoreAdapterNumber(Q,TEXT("q_normalized"),Normalized)&&CoreAdapterNumber(Q,TEXT("growth_min"),Min)&&CoreAdapterNumber(Q,TEXT("growth_max"),Max)&&Min<=Max;
+     const TArray<TSharedPtr<FJsonValue>>* Sources=nullptr;const bool HasSources=Q->TryGetArrayField(TEXT("sources"),Sources)&&!Sources->IsEmpty();
+     D.Facts.Complete=Numbers&&!Current.IsEmpty()&&!Target.IsEmpty()&&HasReady&&HasSources&&(CoreAdapterField(Q,TEXT("quality"))||CoreAdapterField(Q,TEXT("band"))||!CoreAdapterString(Q,TEXT("quality_band")).IsEmpty())&&(CoreAdapterChance(Q)||CoreAdapterChance(T));
+-    D.CanSubmit=InkCorePolicy::CanSubmitQuote(D.Facts);
+-    if(!D.CanSubmit)D.Reason=D.Facts.AttemptActive?TEXT("当前已有准备、天劫或对账中的突破"):!D.Facts.SelectionMatches?TEXT("报价材料与当前选择不一致，请重新报价"):!D.Facts.KindMatches?TEXT("报价类型与当前操作不一致"):TEXT("报价字段不完整、材料槽位无效或服务尚未确认准备度");
++    // Display completeness remains diagnostic. A preview is not a submit permission:
++    // the authoritative Prepare/Rework handler re-quotes and checks inventory/state.
++    double FromRealm=0,ToRealm=0,CurrentRealm=0;
++    const bool NativeQuote=!CoreAdapterString(Stage,TEXT("stage_id")).IsEmpty()&&
++        CoreAdapterNumber(Stage,TEXT("from_realm_index"),FromRealm)&&FromRealm>=0&&FromRealm<=33&&FMath::FloorToDouble(FromRealm)==FromRealm&&
++        CoreAdapterNumber(Stage,TEXT("to_realm_index"),ToRealm)&&ToRealm>FromRealm&&ToRealm<=33&&FMath::FloorToDouble(ToRealm)==ToRealm&&
++        CoreAdapterNumber(Growth,TEXT("realm_index"),CurrentRealm)&&CurrentRealm>=0&&CurrentRealm<=33&&FMath::FloorToDouble(CurrentRealm)==CurrentRealm&&
++        (Rework?ToRealm<=CurrentRealm:FromRealm==CurrentRealm);
++    const bool ExplicitReadinessAllowsRequest=!CoreAdapterField(Q,TEXT("readiness"))||(HasReady&&Ready);
++    D.CanSubmit=NativeQuote&&D.Facts.HasSelection&&D.Facts.SelectionMatches&&D.Facts.KindMatches&&
++        !D.Facts.AttemptActive&&ExplicitReadinessAllowsRequest;
++    if(!D.CanSubmit)D.Reason=D.Facts.AttemptActive?TEXT("当前已有准备、天劫或对账中的突破"):!D.Facts.SelectionMatches?TEXT("报价材料与当前选择不一致，请重新报价"):!D.Facts.KindMatches?TEXT("报价类型与当前操作不一致"):TEXT("报价身份、阶段或材料选择无效，或服务明确拒绝；缺少展示字段不影响发送校验请求");
+     return D;
+ }
+ 
+--- before-quote/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
++++ after-quote/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
+@@ -3,6 +3,7 @@
+ #include "Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.h"
+ #include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+ #include "Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.h"
+ #include "Frontend/InkFrontendWidget.h"
+ #include "Wuling/WulingPrototypeSubsystem.h"
+ #include "Dom/JsonObject.h"
+@@ -400,10 +401,11 @@
+             const bool CoreSlotsValid=!HasSlotCategories||(IsReworkQuote?(SlotCategoriesValid&&QuotedCoreCount<=1):(SlotCategoriesValid&&QuotedCoreCount==1));
+             const TArray<TSharedPtr<FJsonValue>>* Sources=nullptr;
+             const bool HasSources=Q&&Q->TryGetArrayField(TEXT("sources"),Sources)&&Sources->Num()>0;
+-            const bool HasChance=(T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")))||(T&&T->HasField(TEXT("probability_basis_points")))||(Q&&Q->HasField(TEXT("probability_basis_points")));
++            const bool HasChance=!bRework&&((T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")))||(T&&T->HasField(TEXT("probability_basis_points")))||(Q&&Q->HasField(TEXT("probability_basis_points"))));
+             const bool HasStage=!CurrentStage.IsEmpty()&&!TargetStage.IsEmpty();
+             const bool QuoteKindMatches=bRework?IsReworkQuote:Str(Q,TEXT("kind"))!=TEXT("rework");
+-            BreakSubmissionReady=HasStage&&HasQ&&HasNormalizedQ&&HasQuality&&HasGrowth&&HasReadiness&&HasSlots&&SlotFieldsComplete&&HasSources&&HasChance&&ReadyByService&&SelectionMatches&&SlotSelectionMatches&&CoreSlotsValid&&QuoteKindMatches;
++            const bool BreakDisplayComplete=HasStage&&HasQ&&HasNormalizedQ&&HasQuality&&HasGrowth&&HasReadiness&&HasSlots&&SlotFieldsComplete&&HasSources&&HasChance&&ReadyByService&&SelectionMatches&&SlotSelectionMatches&&CoreSlotsValid&&QuoteKindMatches;
++            BreakSubmissionReady=InkCore::EvaluateQuote(State,MaterialSelection,bRework).CanSubmit;
+ 
+             Details.Reset();
+             Details+=TEXT("当前境界：")+CurrentStageDisplay+TEXT("\n目标境界：")+TargetStageDisplay+TEXT("\n");
+@@ -466,7 +468,8 @@
+ 
+             Details+=HasNormalizedQ?FString::Printf(TEXT("标准化评分 Q：%.0f\n"),Num(Q,TEXT("q_normalized"))):TEXT("标准化评分待同步\n");
+             const bool HasTribulationChance=(T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")));
+-            if(HasTribulationChance)Details+=FString::Printf(TEXT("天劫成功率：%.0f%%\n"),T&&T->HasField(TEXT("tribulation_chance"))?Num(T,TEXT("tribulation_chance")):Num(Q,TEXT("tribulation_chance")));
++            if(bRework)Details+=TEXT("重炼概率：服务未提供\n");
++            else if(HasTribulationChance)Details+=FString::Printf(TEXT("天劫成功率：%.0f%%\n"),T&&T->HasField(TEXT("tribulation_chance"))?Num(T,TEXT("tribulation_chance")):Num(Q,TEXT("tribulation_chance")));
+             else if(HasChance)
+             {
+                 const double ChanceBasisPoints=T&&T->HasField(TEXT("probability_basis_points"))?Num(T,TEXT("probability_basis_points")):Num(Q,TEXT("probability_basis_points"));
+@@ -478,14 +481,15 @@
+             Details+=TEXT("报价状态：")+(ServiceQuoteStatus.IsEmpty()?TEXT("待同步"):ServiceQuoteStatus)+TEXT("\n");
+             if(T)Details+=FString::Printf(TEXT("天劫服务状态：%s · 助力 %.0f 人 · 剩余 %.0f 秒\n"),*Str(T,TEXT("status")),Num(T,TEXT("helper_count")),FMath::Max(0.,Num(T,TEXT("deadline"))-Num(State,TEXT("server_utc"))));
+             else Details+=TEXT("天劫状态待同步\n");
+-            const FString ReadinessStatus=!HasReadiness?FString(TEXT("待同步")):(ReadyByService?FString(TEXT("服务确认可提交")):Str(Readiness,TEXT("reason")));
++            const FString ReadinessStatus=!HasReadiness?FString(TEXT("服务未提供；提交时校验")):(ReadyByService?FString(TEXT("服务准备度标记通过；仍需提交校验")):Str(Readiness,TEXT("reason")));
+             Details+=TEXT("准备度：")+ReadinessStatus+TEXT("\n");
+             Details+=TEXT("取消/对账：")+(BreakCancelReason.IsEmpty()?(CanReconcile?FString(TEXT("可查询对账")):FString(TEXT("可在试炼开始前取消"))):BreakCancelReason)+TEXT("\n");
+-            if(!BreakSubmissionReady)Details+=TEXT("报价字段不完整或服务未确认准备度，暂不可提交。\n");
++            if(!BreakDisplayComplete)Details+=TEXT("部分展示资料未提供；保留未知值，提交时由服务校验。\n");
++            if(!BreakSubmissionReady)Details+=InkCore::EvaluateQuote(State,MaterialSelection,bRework).Reason+TEXT("\n");
+             if(!HasQuotedSelection)Details+=TEXT("提交门控：服务报价缺少 selection，无法核对材料。\n");
+             else if(!SelectionMatches)Details+=TEXT("提交门控：报价 selection 与当前材料选择不一致或结构无效，请重新报价。\n");
+-            if(!SlotSelectionMatches)Details+=TEXT("提交门控：")+(SlotSelectionReason.IsEmpty()?FString(TEXT("slots item_id/count 汇总与当前选择不一致")):SlotSelectionReason)+TEXT("。\n");
+-            if(HasSlotCategories&&!CoreSlotsValid)Details+=TEXT("提交门控：报价核心材料槽位数量不符合当前操作规则或数量结构无效。\n");
++            if(HasSlots&&!SlotSelectionMatches)Details+=TEXT("展示资料：")+(SlotSelectionReason.IsEmpty()?FString(TEXT("slots item_id/count 汇总与当前选择不一致")):SlotSelectionReason)+TEXT("。\n");
++            if(HasSlotCategories&&!CoreSlotsValid)Details+=TEXT("展示资料：材料槽位与选择不一致，分类资料待核对；实际材料资格由服务提交时重验。\n");
+             if(bRework&&!IsReworkQuote)Details+=TEXT("提交门控：重炼需要服务明确返回 kind=rework 的报价。\n");
+             if(!bRework&&IsReworkQuote)Details+=TEXT("提交门控：当前为普通突破模式，不能使用重炼报价。\n");
+             const bool HasQuoteData=Q&&(Q->HasField(TEXT("q"))||Q->HasField(TEXT("slots"))||Q->HasField(TEXT("selection")));
+@@ -579,10 +583,10 @@
+             }
+             else if(BreakPage&&RolloutMaterialBinding)
+             {
+-                auto* Material=CreateWidget<UInkPlayerMaterialSlotWidget>(GetOwningPlayer());
++                auto* Material=CreateWidget<UInkRolloutMaterialSlotWidget>(GetOwningPlayer());
+                 Material->Rename(*FString::Printf(TEXT("RolloutMaterial_%d"),I),WidgetTree);
+                 List->AddChildToCanvas(Material)->SetOffsets(FMargin(X,Y,CW,176));
+-                RolloutMaterialBinding->BindSlot(Material,FName(*Str(O,TEXT("item_id"))),FName(*Str(O,TEXT("item_id"))));
++                RolloutMaterialBinding->BindSlot(Material,FName(*Str(O,TEXT("item_id"))),FName(*Str(O,TEXT("item_id"))),nullptr,UInkRolloutMaterialSlotWidget::MaterialFrame());
+             }
+             else
+             {
+@@ -628,8 +632,8 @@
+     if(Id==TEXT("ToolRankPrevious")||Id==TEXT("ToolRankNext")){RankOffset=FMath::Max(0,RankOffset+(Id==TEXT("ToolRankNext")?8:-8));RebuildPanel();return;}
+     if(Id.StartsWith(TEXT("ToolActivityTab_"))){ActivityTab=Id.Mid(16);RebuildPanel();return;}
+     if(Id==TEXT("ToolSign")){HandleAction(TEXT("SignInClaim"));return;}
+-    if(Id==TEXT("ToolLaunch")){InkJourneyAdapter::FRequest Request;Request.Action=InkJourneyAdapter::EAction::StartLaunch;Request.bConfirmed=true;FString Feedback;InkJourneyAdapter::Submit(W,IsRolloutPageActive(),Request,Feedback);FeedbackMessage(Feedback);return;}
+-    if(Id==TEXT("ToolPrepare")){if(RolloutMaterialBinding)RolloutMaterialBinding->Submit();return;}
++    if(Id==TEXT("ToolLaunch")){InkJourneyAdapter::FRequest Request;Request.Action=InkJourneyAdapter::EAction::StartLaunch;Request.bConfirmed=true;FString ActionFeedback;InkJourneyAdapter::Submit(W,IsRolloutPageActive(),Request,ActionFeedback);FeedbackMessage(ActionFeedback);return;}
++    if(Id==TEXT("ToolPrepare")){if(RolloutMaterialBinding)RolloutMaterialBinding->Submit();RefreshLiveData();return;}
+     if(Id==TEXT("ToolReworkMode")){bRework=!bRework;MaterialSelection.Reset();if(RolloutMaterialBinding)RolloutMaterialBinding->Configure(FrontendOwner,PageId,bRework);RebuildPanel();return;}
+     if(Id==TEXT("ToolCancelBreak"))
+     {
+--- before-quote/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp
++++ after-quote/Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp
+@@ -14,7 +14,7 @@
+ // Synthetic complete future-contract fixture. Never displayed in a live UI.
+ TSharedPtr<FJsonObject> CoreQuoteFixture()
+ {
+-    return ParseCoreTestJson(TEXT(R"JSON({"server_utc":100,"growth":{"name":"fixture-current"},"breakthrough_quote":{"target_stage":"fixture-target","q":20,"q_normalized":0.2,"quality_band":"fixture-quality","growth_min":1,"growth_max":2,"readiness":{"ready":true},"sources":[{"source_id":"fixture-source"}],"probability_basis_points":5000,"selection":[{"item_id":"fixture-core","count":1},{"item_id":"fixture-guard","count":2}],"slots":[{"item_id":"fixture-core","category":"core","count":1},{"item_id":"fixture-guard","category":"guard","quantity":2}]}})JSON"));
++    return ParseCoreTestJson(TEXT(R"JSON({"server_utc":100,"growth":{"name":"fixture-current","realm_index":21},"breakthrough_quote":{"stage":{"stage_id":"BR04","from_realm_index":21,"to_realm_index":22},"target_stage":"fixture-target","q":20,"q_normalized":0.2,"quality_band":"fixture-quality","growth_min":1,"growth_max":2,"readiness":{"ready":true},"sources":[{"source_id":"fixture-source"}],"probability_basis_points":5000,"selection":[{"item_id":"fixture-core","count":1},{"item_id":"fixture-guard","count":2}],"slots":[{"item_id":"fixture-core","category":"core","count":1},{"item_id":"fixture-guard","category":"guard","quantity":2}]}})JSON"));
+ }
+ }
+ 
+@@ -33,9 +33,27 @@
+     const auto Echo=Q->GetArrayField(TEXT("selection"));auto Duplicated=Echo;Duplicated.Add(Echo[0]);Q->SetArrayField(TEXT("selection"),Duplicated);
+     TestFalse(TEXT("duplicated echoed item rejected"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
+     S=CoreQuoteFixture();Q=S->GetObjectField(TEXT("breakthrough_quote"));Q->SetArrayField(TEXT("slots"),{MakeShared<FJsonValueNull>()});
+-    TestFalse(TEXT("malformed slot is inert"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    TestTrue(TEXT("malformed display slot cannot invalidate a matching native quote request"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
+     S=CoreQuoteFixture();Q=S->GetObjectField(TEXT("breakthrough_quote"));Q->RemoveField(TEXT("q_normalized"));
+-    TestFalse(TEXT("missing normalized Q never becomes zero"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    TestTrue(TEXT("missing normalized Q stays unknown and does not block a valid request"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    Q->RemoveField(TEXT("growth_min"));Q->RemoveField(TEXT("growth_max"));Q->RemoveField(TEXT("sources"));Q->RemoveField(TEXT("readiness"));Q->RemoveField(TEXT("slots"));Q->RemoveField(TEXT("probability_basis_points"));Q->RemoveField(TEXT("q"));Q->RemoveField(TEXT("quality_band"));
++    TestTrue(TEXT("display-only fields absent still permit authoritative submit validation"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    TestFalse(TEXT("missing display fields never become complete"),InkCore::EvaluateQuote(S,Selection).Facts.Complete);
++    TestFalse(TEXT("missing readiness never becomes confirmed ready"),InkCore::EvaluateQuote(S,Selection).Facts.ServiceReady);
++    Q->SetStringField(TEXT("kind"),TEXT("unknown-kind"));TestFalse(TEXT("unknown quote kind is refused"),InkCore::EvaluateQuote(S,Selection).CanSubmit);Q->RemoveField(TEXT("kind"));
++    Q->GetObjectField(TEXT("stage"))->SetNumberField(TEXT("from_realm_index"),20);
++    TestFalse(TEXT("quote from another current realm is refused"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    Q->GetObjectField(TEXT("stage"))->SetNumberField(TEXT("from_realm_index"),21);
++    Q->GetObjectField(TEXT("stage"))->SetNumberField(TEXT("to_realm_index"),22.5);
++    TestFalse(TEXT("noninteger target realm is refused"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    Q->GetObjectField(TEXT("stage"))->SetNumberField(TEXT("to_realm_index"),22);
++    Q->SetStringField(TEXT("kind"),TEXT("rework"));S->GetObjectField(TEXT("growth"))->SetNumberField(TEXT("realm_index"),22);
++    TestTrue(TEXT("native rework quote can send validation without display fields"),InkCore::EvaluateQuote(S,Selection,true).CanSubmit);
++    TestFalse(TEXT("rework quote cannot prepare normal breakthrough"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    Q->RemoveField(TEXT("kind"));S->GetObjectField(TEXT("growth"))->SetNumberField(TEXT("realm_index"),21);
++    Q->SetBoolField(TEXT("readiness"),false);TestFalse(TEXT("explicit server readiness refusal is preserved"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
++    Q->RemoveField(TEXT("readiness"));Q->GetObjectField(TEXT("stage"))->RemoveField(TEXT("stage_id"));
++    TestFalse(TEXT("missing actual quote stage identity remains blocked"),InkCore::EvaluateQuote(S,Selection).CanSubmit);
+     S=CoreQuoteFixture();auto Attempt=ParseCoreTestJson(TEXT("{\"id\":\"attempt-fixture\",\"status\":\"Prepare\",\"trial_start\":101}"));S->SetObjectField(TEXT("tribulation"),Attempt);
+     auto Decision=InkCore::EvaluateQuote(S,Selection);TestTrue(TEXT("server permits pre-trial cancel"),Decision.CanCancel);TestFalse(TEXT("active attempt blocks repeat prepare"),Decision.CanSubmit);
+     S->SetNumberField(TEXT("server_utc"),101);TestFalse(TEXT("trial boundary refuses cancellation"),InkCore::EvaluateQuote(S,Selection).CanCancel);

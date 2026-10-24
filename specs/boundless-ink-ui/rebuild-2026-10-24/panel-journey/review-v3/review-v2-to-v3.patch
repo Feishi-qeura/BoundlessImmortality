@@ -1,0 +1,173 @@
+diff --git "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v2\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h" "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h"
+index edf2771..029d593 100644
+--- "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v2\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h"
++++ "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h"
+@@ -118,7 +118,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FInkJourneyNewBackRequested);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyNewEntrySelected, const FString&, EntryId);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyNewTravelRequested, const FString&, EntryId);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyNewSignInRequested, const FString&, ExpectedDay);
+-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FInkJourneyNewMilestoneClaimRequested, const FString&, ExpectedDay, int32, Milestone);
++DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FInkJourneyNewMilestoneClaimRequested, const FString&, ExpectedDay, const FString&, ExpectedMonth, int32, Milestone);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyNewMilestoneSelected, int32, Milestone);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyNewActionKindSelected, const FString&, Kind);
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInkJourneyWorldTravelRequested, const FString&, EntryId);
+@@ -490,6 +490,7 @@ private:
+     void BuildTree();
+     void RefreshPresentation();
+     void RefreshMilestones();
++    void ClearCapturedConfirmation();
+     UFUNCTION() void HandleBack();
+     UFUNCTION() void HandleConfirmClaim();
+     UFUNCTION() void HandleMilestoneSelected(int32 Milestone);
+@@ -507,6 +508,9 @@ private:
+     UPROPERTY(Transient) TObjectPtr<UButton> BackButton;
+     FString ServerMonth;
+     FString ExpectedServiceDay;
++    FString CapturedServiceDay;
++    FString CapturedMonth;
++    int32 CapturedMilestone = 0;
+     int32 CalendarDayCount = 0;
+     int32 ServerDay = 0;
+     int32 MonthCount = 0;
+diff --git "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v2\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp" "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
+index 9758506..3f80f11 100644
+--- "a/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v2\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
++++ "b/specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v3\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp"
+@@ -32,7 +32,7 @@ FSlateFontInfo Font(float Size)
+ {
+  const float SafeSize=FMath::Max(26.f,Size);
+  const TCHAR* FontName=SafeSize>=40.f?TEXT("F_InkDisplay"):TEXT("F_InkBody");
+- const FString Path=FString::Printf(TEXT("/Game/newUI/Shared/Fonts/%s.%s"),FontName,FontName);
++ const FString Path=FString::Printf(TEXT("/Game/newUI/Ink/Fonts/Shared/%s.%s"),FontName,FontName);
+  if(UFont* Asset=LoadObject<UFont>(nullptr,*Path)) return FSlateFontInfo(Asset,SafeSize);
+  // Source-only candidate fallback; the newUI fonts must exist before runtime acceptance.
+  FSlateFontInfo F=FCoreStyle::GetDefaultFontStyle("Regular",FMath::RoundToInt(SafeSize)); F.Size=FMath::RoundToInt(SafeSize); return F;
+@@ -158,13 +158,122 @@ void UInkJourneyMonthlySignInPageWidget::BuildTree()
+  MilestoneList=InkJourneyNew::VBox(WidgetTree,TEXT("MonthlyMilestoneList")); MilestonePanel->AddChild(MilestoneList);
+  UTextBlock* Confirm=nullptr; ConfirmButton=InkJourneyNew::Button(WidgetTree,TEXT("MonthlyMilestoneClaim"),FText::FromString(TEXT("选择可领取奖励")),Confirm); ConfirmText=Confirm; MilestonePanel->AddChild(ConfirmButton); ConfirmButton->OnClicked.AddUniqueDynamic(this,&UInkJourneyMonthlySignInPageWidget::HandleConfirmClaim);
+ }
+-void UInkJourneyMonthlySignInPageWidget::SetPresentation(const FString& InExpectedServiceDay,const FString& Month,int32 Days,int32 Today,bool HasCount,int32 Count,const TArray<FInkJourneyNewMilestone>& InMilestones,const FText& InStatus){ExpectedServiceDay=InExpectedServiceDay;ServerMonth=Month;CalendarDayCount=FMath::Clamp(Days,0,31);ServerDay=FMath::Clamp(Today,0,31);bHasMonthCount=HasCount;MonthCount=Count;Milestones=InMilestones;Status=InStatus;RefreshPresentation();}
+-void UInkJourneyMonthlySignInPageWidget::SetMilestoneFeedback(const FText& InFeedback,bool Pending){Feedback=InFeedback;bRequestPending=Pending;if(!Pending)bConfirmationOpen=false;RefreshPresentation();}
+-void UInkJourneyMonthlySignInPageWidget::ResetConfirmationForReopen(){if(!bRequestPending)bConfirmationOpen=false;RefreshPresentation();}
++void UInkJourneyMonthlySignInPageWidget::SetPresentation(const FString& InExpectedServiceDay,const FString& Month,int32 Days,int32 Today,bool HasCount,int32 Count,const TArray<FInkJourneyNewMilestone>& InMilestones,const FText& InStatus)
++{
++    const bool bCapturedIdentityChanged = bConfirmationOpen &&
++        (CapturedServiceDay != InExpectedServiceDay || CapturedMonth != Month || CapturedMilestone != SelectedMilestone);
++    if (bCapturedIdentityChanged)
++    {
++        ClearCapturedConfirmation();
++    }
++
++    ExpectedServiceDay=InExpectedServiceDay;
++    ServerMonth=Month;
++    CalendarDayCount=FMath::Clamp(Days,0,31);
++    ServerDay=FMath::Clamp(Today,0,31);
++    bHasMonthCount=HasCount;
++    MonthCount=Count;
++    Milestones=InMilestones;
++    Status=InStatus;
++    RefreshPresentation();
++}
++void UInkJourneyMonthlySignInPageWidget::SetMilestoneFeedback(const FText& InFeedback,bool Pending)
++{
++    Feedback=InFeedback;
++    bRequestPending=Pending;
++    if (!Pending)
++    {
++        ClearCapturedConfirmation();
++    }
++    RefreshPresentation();
++}
++void UInkJourneyMonthlySignInPageWidget::ResetConfirmationForReopen()
++{
++    if (!bRequestPending)
++    {
++        ClearCapturedConfirmation();
++    }
++    RefreshPresentation();
++}
++void UInkJourneyMonthlySignInPageWidget::ClearCapturedConfirmation()
++{
++    bConfirmationOpen=false;
++    CapturedServiceDay.Reset();
++    CapturedMonth.Reset();
++    CapturedMilestone=0;
++}
+ void UInkJourneyMonthlySignInPageWidget::RefreshPresentation(){if(MonthText)MonthText->SetText(ServerMonth.IsEmpty()?FText::FromString(TEXT("月份待同步")):FText::FromString(ServerMonth));if(CountText)CountText->SetText(bHasMonthCount?FText::Format(NSLOCTEXT("Journey","MonthSignCount","累计签到 {0} 天"),FText::AsNumber(MonthCount)):FText::FromString(TEXT("累计签到数待同步")));if(StatusText)StatusText->SetText(!Feedback.IsEmpty()?Feedback:Status);if(CalendarGrid){CalendarGrid->ClearChildren();for(int32 D=1;D<=CalendarDayCount;++D){auto* Cell=InkJourneyNew::Text(WidgetTree,*FString::Printf(TEXT("MonthDay_%02d"),D),FText::AsNumber(D),26,D==ServerDay?InkJourneyNew::Gold:InkJourneyNew::Ink);auto* CellBox=WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass(),*FString::Printf(TEXT("MonthDayBox_%02d"),D));CellBox->SetWidthOverride(88);CellBox->SetHeightOverride(88);CellBox->SetContent(Cell);if(auto* S=CalendarGrid->AddChildToUniformGrid(CellBox,(D-1)/7,(D-1)%7))S->SetPadding(FMargin(2));}}RefreshMilestones();}
+-void UInkJourneyMonthlySignInPageWidget::RefreshMilestones(){if(!MilestoneList)return;MilestoneList->ClearChildren();MilestoneButtons.Reset();for(const auto& M:Milestones){auto* B=WidgetTree->ConstructWidget<UInkJourneyMilestoneButton>(UInkJourneyMilestoneButton::StaticClass(),*FString::Printf(TEXT("Milestone_%d"),M.Milestone));FText Caption=M.bKnown?FText::Format(NSLOCTEXT("Journey","MilestoneLabel","累计 {0} 天"),FText::AsNumber(M.Milestone)):FText::FromString(TEXT("奖励条件待同步"));MilestoneList->AddChild(Card(WidgetTree,TEXT("MonthlyMilestoneCard"),B));B->Configure(M.Milestone,Caption,M.Status,M.Milestone==SelectedMilestone);B->OnMilestoneSelected.AddUniqueDynamic(this,&UInkJourneyMonthlySignInPageWidget::HandleMilestoneSelected);B->SetIsEnabled(M.bKnown);MilestoneButtons.Add(B);}const auto* Selected=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==SelectedMilestone;});const bool bCan=Selected&&Selected->bKnown&&Selected->bEligible&&!Selected->bClaimed&&!bRequestPending;if(ConfirmButton){ConfirmButton->SetIsEnabled(bCan||bConfirmationOpen);ConfirmText->SetText(bRequestPending?FText::FromString(TEXT("提交中")):bConfirmationOpen?FText::FromString(TEXT("确认领取")):bCan?FText::FromString(TEXT("领取此档奖励")):FText::FromString(TEXT("选择可领取奖励")));}}
+-void UInkJourneyMonthlySignInPageWidget::HandleBack(){OnBackRequested.Broadcast();}void UInkJourneyMonthlySignInPageWidget::HandleMilestoneSelected(int32 M){SelectedMilestone=M;bConfirmationOpen=false;RefreshMilestones();}
+-void UInkJourneyMonthlySignInPageWidget::HandleConfirmClaim(){const auto* M=Milestones.FindByPredicate([this](const auto& V){return V.Milestone==SelectedMilestone;});if(!M||!M->bKnown||!M->bEligible||M->bClaimed||bRequestPending)return;if(!bConfirmationOpen){bConfirmationOpen=true;RefreshMilestones();return;}bConfirmationOpen=false;bRequestPending=true;RefreshMilestones();OnMilestoneClaimRequested.Broadcast(ExpectedServiceDay,SelectedMilestone);}
++void UInkJourneyMonthlySignInPageWidget::RefreshMilestones()
++{
++    if (!MilestoneList) return;
++    MilestoneList->ClearChildren();
++    MilestoneButtons.Reset();
++    for (const auto& M : Milestones)
++    {
++        auto* B=WidgetTree->ConstructWidget<UInkJourneyMilestoneButton>(UInkJourneyMilestoneButton::StaticClass(),*FString::Printf(TEXT("Milestone_%d"),M.Milestone));
++        const FText Caption=M.bKnown?FText::Format(NSLOCTEXT("Journey","MilestoneLabel","累计 {0} 天"),FText::AsNumber(M.Milestone)):FText::FromString(TEXT("奖励条件待同步"));
++        MilestoneList->AddChild(Card(WidgetTree,TEXT("MonthlyMilestoneCard"),B));
++        B->Configure(M.Milestone,Caption,M.Status,M.Milestone==SelectedMilestone);
++        B->OnMilestoneSelected.AddUniqueDynamic(this,&UInkJourneyMonthlySignInPageWidget::HandleMilestoneSelected);
++        B->SetIsEnabled(M.bKnown&&!bRequestPending);
++        MilestoneButtons.Add(B);
++    }
++
++    const auto* Selected=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==SelectedMilestone;});
++    const bool bHasSubject=!ExpectedServiceDay.IsEmpty()&&!ServerMonth.IsEmpty();
++    const bool bCan=bHasSubject&&Selected&&Selected->bKnown&&Selected->bEligible&&!Selected->bClaimed&&!bRequestPending;
++    if (ConfirmButton)
++    {
++        ConfirmButton->SetIsEnabled(bCan||bConfirmationOpen);
++        ConfirmText->SetText(bRequestPending?FText::FromString(TEXT("提交中")):bConfirmationOpen?FText::FromString(TEXT("确认领取")):bCan?FText::FromString(TEXT("领取此档奖励")):FText::FromString(TEXT("选择可领取奖励")));
++    }
++}
++void UInkJourneyMonthlySignInPageWidget::HandleBack(){OnBackRequested.Broadcast();}
++void UInkJourneyMonthlySignInPageWidget::HandleMilestoneSelected(int32 M)
++{
++    if (bRequestPending) return;
++    if (SelectedMilestone != M)
++    {
++        SelectedMilestone=M;
++        ClearCapturedConfirmation();
++    }
++    RefreshMilestones();
++}
++void UInkJourneyMonthlySignInPageWidget::HandleConfirmClaim()
++{
++    if (bRequestPending) return;
++
++    if (!bConfirmationOpen)
++    {
++        if (ExpectedServiceDay.IsEmpty() || ServerMonth.IsEmpty()) return;
++        const auto* Selected=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==SelectedMilestone;});
++        if (!Selected || !Selected->bKnown || !Selected->bEligible || Selected->bClaimed) return;
++
++        CapturedServiceDay=ExpectedServiceDay;
++        CapturedMonth=ServerMonth;
++        CapturedMilestone=SelectedMilestone;
++        bConfirmationOpen=true;
++        RefreshMilestones();
++        return;
++    }
++
++    const auto* Captured=Milestones.FindByPredicate([this](const auto& M){return M.Milestone==CapturedMilestone;});
++    const bool bIdentityStillMatches=CapturedServiceDay==ExpectedServiceDay&&CapturedMonth==ServerMonth&&CapturedMilestone==SelectedMilestone;
++    if (!bIdentityStillMatches || !Captured || !Captured->bKnown || !Captured->bEligible || Captured->bClaimed)
++    {
++        ClearCapturedConfirmation();
++        RefreshMilestones();
++        return;
++    }
++
++    const FString RequestDay=CapturedServiceDay;
++    const FString RequestMonth=CapturedMonth;
++    const int32 RequestMilestone=CapturedMilestone;
++    bConfirmationOpen=false;
++    bRequestPending=true;
++    RefreshMilestones();
++    OnMilestoneClaimRequested.Broadcast(RequestDay,RequestMonth,RequestMilestone);
++}
+ 
+ void UInkJourneyDetailResultPageWidget::NativeOnInitialized(){Super::NativeOnInitialized();if(!WidgetTree->RootWidget)BuildTree();Refresh();}
+ void UInkJourneyDetailResultPageWidget::BuildTree(){auto* Root=InkJourneyNew::VBox(WidgetTree,TEXT("JourneyResultRoot"));WidgetTree->RootWidget=Root;auto* Head=WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(),TEXT("JourneyResultHeader"));Root->AddChild(Head);UTextBlock* BackLabel=nullptr;BackButton=InkJourneyNew::Button(WidgetTree,TEXT("JourneyResultBack"),FText::FromString(TEXT("返回")),BackLabel);Head->AddChild(BackButton);BackButton->OnClicked.AddUniqueDynamic(this,&UInkJourneyDetailResultPageWidget::HandleBack);TitleText=InkJourneyNew::Text(WidgetTree,TEXT("JourneyResultTitle"),FText::GetEmpty(),32);Head->AddChild(TitleText);StatusText=InkJourneyNew::Text(WidgetTree,TEXT("JourneyResultStatus"),FText::GetEmpty(),20);Root->AddChild(StatusText);RowsScroll=InkJourneyNew::Scroll(WidgetTree,TEXT("JourneyResultRows"));Root->AddChild(RowsScroll);UTextBlock* Label=nullptr;ActionButton=InkJourneyNew::Button(WidgetTree,TEXT("JourneyResultAction"),FText::FromString(TEXT("继续")),Label);ActionText=Label;Root->AddChild(ActionButton);ActionButton->OnClicked.AddUniqueDynamic(this,&UInkJourneyDetailResultPageWidget::HandlePrimary);}

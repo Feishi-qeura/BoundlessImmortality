@@ -1,0 +1,169 @@
+{
+  "engine_pid": 47604,
+  "read_only": true,
+  "rows": [
+    {
+      "old": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "new": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "class": "/Script/Engine.Texture2D",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_HudLaunchCountdownFrame_v1-old.png",
+          "sha256": "50663f0a8312d08326fd094f9af90c55c55d6c7c676df938513e702930e77a91"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_HudLaunchCountdownFrame_v1-new.png",
+          "sha256": "50663f0a8312d08326fd094f9af90c55c55d6c7c676df938513e702930e77a91"
+        }
+      },
+      "equal_payload": true,
+      "equal_properties": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "new": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "class": "/Script/BoundlessImmortality.InkUiThemeData",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\DA_InkUITheme_v1-old.t3d",
+          "sha256": "f8f1d876f1d3a6e6da61e7b5ad34af488d00a00fb3a795506acdace0fb763aef"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\DA_InkUITheme_v1-new.t3d",
+          "sha256": "451551dd4c9387d54b3876743228e57084eea09500424e06101b5e62407857df"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "class": "/Script/Engine.FontFace",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkMaShanZheng-old.t3d",
+          "sha256": "72e17a2e93d6d2ccc09140b68bb7ef49b92a877e2ef2ef391eed0cc0128e4c0d"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkMaShanZheng-new.t3d",
+          "sha256": "ce20b562b263cac0e9bf4853cd9b4cd4d1f13fc8230feeac621d98515e0eaf42"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "font_source": "D:\\demo\\BoundlessImmortality\\docs\\design\\2026-10-21-ink-ui-standard-v1\\fonts\\MaShanZheng\\MaShanZheng-Regular.ttf",
+      "same_font_source": true,
+      "font_source_exists": true,
+      "font_source_sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+      "font_source_bytes": 5857936,
+      "native_font_payload_in_both_packages": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "class": "/Script/Engine.FontFace",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkNotoFallback-old.t3d",
+          "sha256": "bb2e24b2fcacc6c16593d9b6bde6f3bae56bbd4138a096f9788eb27280985651"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkNotoFallback-new.t3d",
+          "sha256": "f522001e18e6f3fc0723a1f262a1b54fc67fb7a1a8cada898752660888276a91"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "font_source": "D:\\demo\\BoundlessImmortality\\docs\\design\\2026-10-21-ink-ui-standard-v1\\fonts\\NotoSansSC\\NotoSansCJKsc-Regular.otf",
+      "same_font_source": true,
+      "font_source_exists": true,
+      "font_source_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "font_source_bytes": 16437364,
+      "native_font_payload_in_both_packages": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "class": "/Script/Engine.FontFace",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkWenKai-old.t3d",
+          "sha256": "f5dbd8562c33eae7d5912131ec62d205e44a665c1230c80a4b735ab9e8f05afd"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkWenKai-new.t3d",
+          "sha256": "382056042d1fbb2c63e11f172009158887e33281e6177848ba20f69575f829ed"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "font_source": "D:\\demo\\BoundlessImmortality\\docs\\design\\2026-10-21-ink-ui-standard-v1\\fonts\\LXGWWenKai\\LXGWWenKai-Regular.ttf",
+      "same_font_source": true,
+      "font_source_exists": true,
+      "font_source_sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+      "font_source_bytes": 25928940,
+      "native_font_payload_in_both_packages": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "new": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "class": "/Script/Engine.Font",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkDisplay-old.t3d",
+          "sha256": "632a07bf11d960f6a717fb1c8efc986213eafdeebe1ba8660781d4f79806e900"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkDisplay-new.t3d",
+          "sha256": "b1b83af37a71c8d24d55b6618ce14fc44273853384b9ec05a6303cec8147e6a3"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "new": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "class": "/Script/Engine.Font",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkFallback-old.t3d",
+          "sha256": "bf08d1fb0e2b210eadc16a6712abda7557f187fb30f2e455d327829cc54da663"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkFallback-new.t3d",
+          "sha256": "3a27ed78ecabf76c3433dae7d97b474773e351932c8dba013d975472fa52b95f"
+        }
+      },
+      "equal_properties": true,
+      "equal_payload": true,
+      "proven": true
+    },
+    {
+      "old": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "new": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "class": "/Script/Engine.Texture2D",
+      "exports": {
+        "old": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_XianxiaMeters-old.png",
+          "sha256": "842af5aae7d4604020c078938443f027e60ca25794ce409a43e332c1995c822c"
+        },
+        "new": {
+          "file": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_XianxiaMeters-new.png",
+          "sha256": "842af5aae7d4604020c078938443f027e60ca25794ce409a43e332c1995c822c"
+        }
+      },
+      "equal_payload": true,
+      "equal_properties": true,
+      "proven": true
+    }
+  ],
+  "all_proven": true
+}

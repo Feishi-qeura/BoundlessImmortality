@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Per-page newUI runtime evidence owned by integration",
+  "type": "object",
+  "required": ["screen_id", "stage", "new_runtime_visible", "partial_component_only", "visual_pending_user"],
+  "properties": {
+    "screen_id": {"type": "string"},
+    "stage": {"enum": ["contract_ready", "source_composed", "partial_component", "runtime_visible", "logic_verified", "business_gap"]},
+    "new_runtime_visible": {"type": "boolean"},
+    "partial_component_only": {"type": "boolean"},
+    "page_tree_composed": {"type": "boolean"},
+    "entry_route": {"type": ["string", "null"]},
+    "actual_instance_class": {"type": ["string", "null"]},
+    "actual_saved_wbp": {"type": ["string", "null"]},
+    "native_tree_owner": {"type": ["string", "null"]},
+    "root_class": {"const": "UInkRebuildFrontendWidget"},
+    "layout_marker": {"type": ["string", "null"]},
+    "source_revision": {"type": ["string", "null"]},
+    "canonical_runtime_refs": {"type": "array", "items": {"type": "string", "pattern": "^/Game/newUI/"}},
+    "new_component_names": {"type": "array", "items": {"type": "string"}},
+    "design_source_ids": {"type": "array", "items": {"type": "string"}},
+    "player_entry_screenshots": {"type": "array", "items": {"type": "string"}},
+    "logic_evidence": {"type": "array", "items": {"type": "string"}},
+    "business_nonempty_verified": {"type": "boolean"},
+    "business_gaps": {"type": "array", "items": {"type": "string"}},
+    "import_verified": {"type": "boolean"},
+    "route_verified": {"type": "boolean"},
+    "visual_pending_user": {"type": "boolean"},
+    "user_visual_approved": {"type": "boolean"},
+    "user_approval_evidence": {"type": ["string", "null"]},
+    "legacy_visual_body_reused": {"const": false},
+    "whole_page_png_used_as_ui": {"const": false}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"new_runtime_visible": {"const": true}}, "required": ["new_runtime_visible"]},
+      "then": {
+        "required": ["entry_route", "actual_instance_class", "root_class", "layout_marker", "new_component_names", "design_source_ids", "player_entry_screenshots", "page_tree_composed", "route_verified", "legacy_visual_body_reused", "whole_page_png_used_as_ui"],
+        "properties": {
+          "partial_component_only": {"const": false},
+          "page_tree_composed": {"const": true},
+          "route_verified": {"const": true},
+          "actual_instance_class": {"type": "string", "minLength": 1},
+          "entry_route": {"type": "string", "minLength": 1},
+          "layout_marker": {"type": "string", "minLength": 1},
+          "new_component_names": {"minItems": 1},
+          "design_source_ids": {"minItems": 1},
+          "player_entry_screenshots": {"minItems": 1}
+        },
+        "anyOf": [
+          {"required": ["actual_saved_wbp"], "properties": {"actual_saved_wbp": {"type": "string", "pattern": "^/Game/newUI/"}}},
+          {"required": ["native_tree_owner"], "properties": {"native_tree_owner": {"type": "string", "minLength": 1}}}
+        ]
+      }
+    },
+    {
+      "if": {"properties": {"user_visual_approved": {"const": true}}, "required": ["user_visual_approved"]},
+      "then": {"required": ["user_approval_evidence"], "properties": {"user_approval_evidence": {"type": "string", "minLength": 1}, "visual_pending_user": {"const": false}}}
+    }
+  ]
+}

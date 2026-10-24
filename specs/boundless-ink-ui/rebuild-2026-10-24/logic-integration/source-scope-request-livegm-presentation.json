@@ -1,0 +1,10 @@
+{
+  "requested_at": "2026-10-24T14:07:00+08:00",
+  "file": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+  "current_scope": "Canonical loader paths only",
+  "requested_additional_scope": "Mirror actual rebuilt frontend presentation ownership in HasVisibleAnchorStatus, matching the already authorized LiveWeaponHUD predicate; suppress obsolete GM fallback anchor strip when the real newUI root owns status",
+  "evidence": "default-root-pie-01/hud.png old262x94 strip exactly matches LiveGMOverlay NativePaint. Its HasVisibleAnchorStatus accepts only visible legacy adapter, but newRoot adapter is intentionally unmounted/collapsed. Actual newWBP/newUIHUD were verified. Separate LiveWeaponHUD suppression is already compiled.",
+  "bounded_change": "In HasVisibleAnchorStatus only, add UsesRebuiltPresentation and nonempty GetRuntimePageLayoutVersion(HUD) after existing actual Frontend owningPlayer/viewport/visibility checks. Preserve fallback when frontend absent, world nameplates, gameplay, GM permissions and all data.",
+  "state": "resolved_by_supervisor_14_08_continue_current_oldHUD_fix_under_full_UI_authorization",
+  "implementation": "ledger record96 exact3-line root ownership branch; no gameplay/nameplate/GM permission changes"
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+    "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:22",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "边界与窗口尺寸检查已通过：响应丢失后返回了同一请求 ID、同一回执，签到只计数一次；720×1280、1280×720 和 680×1280 下的“武灵”入口均可点击。纸框仍未显示，逻辑刷子尺寸调整没有解决它。我已启动短诊断，读取实际几何与颜色，并比较临时 Box/Image 绘制结果。",
+    "last_tool": {
+      "id": "exec-8aa72ab2-239c-4a07-921e-573be7529efd",
+      "turnId": "01a16bf5-accc-7d13-a3d1-bd85351d9e79",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+    "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:8",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "Batch 2 is ready for source-owner review in the isolated batch-2 handoff. Created Saves and Settings page concepts, API mapping, staged C++ composition helpers, and an integration proposal. Both concepts remain approved:false. Verified PNG signatures and hashes, and checked the staged-source manifest. No tests or build were run. Source promotion, import, compile, and runtime verification remain false while the first-batch source freeze is active. The methods, equipment, appearance, crafting, item sources, breakthrough, and tribulation pages remain backlog. View Saves concept · View Settings concept I left the Source and Content changes visible in the worktree untouched.",
+    "last_tool": {
+      "id": "exec-6dfc0784-e0e3-4e9b-9978-1bffb8ad1e83",
+      "turnId": "01a16bf5-b7cf-7f72-94eb-3a8781770ffa",
+      "type": "fileChange",
+      "name": "fileChange",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+    "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:4",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": null,
+    "last_tool": null
+  },
+  {
+    "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+    "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:7",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "更新了 status.json，时间取自当前时钟。已补齐 team_id、batch、handoff_ready、owned_files、completed、remaining 和 blockers；暂存源码、未编译/未运行状态及视觉待用户确认状态均保留。",
+    "last_tool": {
+      "id": "exec-c08a0e30-f172-4ce2-b7e9-98b78bcfbb9d",
+      "turnId": "01a16bfe-8449-7862-8c5b-f1b54214d281",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+    "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:6",
+    "thread_status": "idle",
+    "turn_status": "completed",
+    "last_message": "Batch-2 is staged for handoff under batch-2. It contains three independent panel units—launch activities, contribution rank, and shared daily/limited detail—plus the field/action map, coverage, component contract, merge plan, prompts, and six visual assets. The offer stays disabled until SKU, price, entitlement, and purchase API data exist. ACT_SIGN uses the journey adapter; other unsupported actions remain unavailable. I checked the asset dimensions, hashes, and alpha. The three component sprites have transparency; the three page images are concepts, not runtime textures. Approval, import, route, and logic flags remain false. No UE import, compile, or PIE verification was performed. Status · Staged source · Merge plan",
+    "last_tool": {
+      "id": "exec-fbd51449-ddcb-4a72-b5bd-558256a3977e",
+      "turnId": "01a16bf5-cf47-7931-a1fb-f4e87403912e",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  },
+  {
+    "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+    "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:7",
+    "thread_status": "active",
+    "turn_status": "inProgress",
+    "last_message": "我先核对四队 batch-2 的交接、暂存源码和真实宿主接口，只报告有代码证据的接入阻塞与业务风险。全程只读，不运行引擎或改动冻结文件。",
+    "last_tool": {
+      "id": "exec-a27d13e8-3dde-4b82-b7ba-3074590e28bb",
+      "turnId": "01a16c1a-0c14-7362-9c14-4dadc5356b4f",
+      "type": "commandExecution",
+      "name": "commandExecution",
+      "status": "completed"
+    }
+  }
+]

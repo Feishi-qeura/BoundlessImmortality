@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "newUI typed field and action envelope",
+  "$defs": {
+    "KnownField": {
+      "type": "object",
+      "required": [
+        "status",
+        "value",
+        "source_path"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unavailable",
+            "not-synced",
+            "redacted"
+          ]
+        },
+        "value": {},
+        "source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "known"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Collection": {
+      "type": "object",
+      "required": [
+        "provided",
+        "items"
+      ],
+      "properties": {
+        "provided": {
+          "type": "boolean"
+        },
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "provided": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "items": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "items": {
+                "type": "array"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "required": [
+    "page_id",
+    "domain_state",
+    "transport",
+    "fields"
+  ],
+  "properties": {
+    "page_id": {
+      "type": "string"
+    },
+    "domain_state": {
+      "enum": [
+        "unknown",
+        "loading",
+        "empty",
+        "data",
+        "error",
+        "disabled"
+      ]
+    },
+    "transport": {
+      "type": "object",
+      "required": [
+        "connected",
+        "busy"
+      ],
+      "properties": {
+        "connected": {
+          "type": "boolean"
+        },
+        "busy": {
+          "type": "boolean"
+        },
+        "stale": {
+          "type": "boolean"
+        },
+        "request_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "fields": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/KnownField"
+      }
+    },
+    "collections": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/Collection"
+      }
+    },
+    "source_version": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "service_day": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "server_utc": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

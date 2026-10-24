@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-24T16:55:01.115522+08:00",
+  "scope": "Test-local TLS peer disable existed only on owned avatar process command lines. Default non-avatar test processes keep peer verification and current project config hashes match the authorized ledger.",
+  "project_files": [
+    {
+      "path": "Config/DefaultEngine.ini",
+      "sha256": "cf38e1a74a67dd705a5cfc97eb11560f1b98be49bea97825c1e6a9f080e3dff9",
+      "matches_recorded_source_epoch": true,
+      "contains_peer_disable": false
+    },
+    {
+      "path": "Config/DefaultGame.ini",
+      "sha256": "17c719cb37b036717f49bd67e0193194d308ff7d77c0e856495e379e870c5ee0",
+      "matches_recorded_source_epoch": true,
+      "contains_peer_disable": false
+    }
+  ],
+  "default_process_readbacks": [
+    {
+      "log": "stage-pie-cancel-01.log",
+      "default_peer_verification_enabled": true,
+      "evidence": [
+        "LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate"
+      ]
+    },
+    {
+      "log": "stage-pie-rework-01.log",
+      "default_peer_verification_enabled": true,
+      "evidence": [
+        "LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate"
+      ]
+    },
+    {
+      "log": "default-root-pie-11.log",
+      "default_peer_verification_enabled": true,
+      "evidence": [
+        "LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate"
+      ]
+    }
+  ],
+  "passed": true
+}

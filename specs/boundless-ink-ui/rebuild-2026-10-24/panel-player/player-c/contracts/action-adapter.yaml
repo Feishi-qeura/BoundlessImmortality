@@ -1,0 +1,65 @@
+slice: player-c
+approved: false
+canonical_action_contract: ../../../model/action-contract.yaml
+canonical_screen_bindings: ../../../model/screen-bindings.json
+transport_owner: logic-integration host adapter
+dispatch_delegate: InkPlayerMethodsEquipmentAppearanceWidgets::FActionRequested
+payload_type: InkPlayerMethodsEquipmentAppearanceWidgets::FActionPayload
+rules:
+  - Only canonical action ids below reach the business adapter; ui.* ids update page-local host draft/selection state.
+  - The host revalidates active route, actor role, connection, busy state, and fresh subject before authority commands.
+  - Pending retains current confirmed view state and stable selection; no optimistic loadout/inventory mutation.
+pages:
+  methods:
+    route: {page_id: methods, entry: CultivationMethods, resolved_existing_route: WulingEquipment}
+    local_intents:
+      - {id: ui.methods.select, payload: ItemId}
+      - {id: ui.methods.set-main-draft, payload: ItemId}
+      - {id: ui.methods.toggle-support-draft, payload: ItemId}
+      - {id: ui.methods.select-inventory-entry, payload: stable EntryId}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: learn-method
+        handler: UWulingPrototypeSubsystem::SubmitPrototypeCommand(LearnMethod)
+        parameters: {item_id: payload.ItemId}
+        payload_source: selected actual catalog ItemId
+        optimistic_result: false
+      - id: configure-methods
+        handler: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ConfigureMethods)
+        parameters: {main: payload.MainMethodId, supports: payload.SupportMethodIds}
+        payload_source: actual host-owned draft; do not create extra support slots
+        optimistic_result: false
+  equipment:
+    route: {page_id: equipment, entry: EquipmentFabao, resolved_existing_route: CharacterEquipment}
+    local_intents:
+      - {id: ui.equipment.select-slot, payload: SlotId and current EntryId}
+      - {id: ui.equipment.select-entry, payload: stable EntryId and ItemId}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: inventory-equip
+        handler: InkCore::InventoryAction(enum=Equip)
+        parameters: {EntryId: payload.EntryId, quantity: payload.Quantity}
+        eligibility: action state supplied by the authoritative adapter
+        optimistic_result: false
+      - id: inventory-unequip
+        handler: InkCore::InventoryAction(enum=Unequip)
+        parameters: {EntryId: payload.EntryId, quantity: payload.Quantity}
+        eligibility: action state supplied by the authoritative adapter
+        optimistic_result: false
+      - id: activate-fabao
+        handler: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ActivateFabao)
+        parameters: {}
+        optimistic_result: false
+  appearance:
+    route: {page_id: appearance, entry: CharacterAppearance, resolved_existing_route: CharacterAppearance}
+    local_intents:
+      - {id: ui.appearance.select-tab, payload: "SlotId in [Frame, Bar]"}
+      - {id: ui.appearance.select-frame, payload: PreviewStyleId}
+      - {id: ui.appearance.select-bar, payload: PreviewStyleId}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: preview-appearance
+        handler: existing Frame_* / Bar_* local preview actions
+        parameters: {actual_selected_style: payload.PreviewStyleId}
+        persistence: local-only
+        entitlement_claim: false

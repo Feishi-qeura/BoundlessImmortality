@@ -1,0 +1,24 @@
+{
+  "pid": 30236,
+  "scope": "Merchant zero-write negatives/expanded Appearance; actual Refresh catalog caption and scroll",
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIHostAcceptance20261024",
+    "-WulingRoom=newui-room-02",
+    "-WulingUser=newui-anchor-02",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-merchant-appearance02",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/merchant-appearance-02.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_merchant_appearance_pie_02.py",
+    "-NewUIDefaultPIEAttempt=14"
+  ],
+  "started_at": "2026-10-24T17:23:43.7560240+08:00"
+}

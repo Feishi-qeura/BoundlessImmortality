@@ -21,7 +21,7 @@ TSharedRef<SWidget> UInkSignInChestWidget::RebuildWidget()
     {
         auto* Root=WidgetTree->ConstructWidget<UOverlay>();WidgetTree->RootWidget=Root;
         Glow=WidgetTree->ConstructWidget<UNiagaraSystemWidget>(UNiagaraSystemWidget::StaticClass(),TEXT("ClaimableChestNiagara"));
-        Glow->NiagaraSystemReference=InkUiAssets::Load<UNiagaraSystem>(nullptr,TEXT("/Game/UI/Ink/Niagara/Rewards/NS_ClaimableChest.NS_ClaimableChest"));
+        Glow->NiagaraSystemReference=InkUiAssets::Load<UNiagaraSystem>(nullptr,TEXT("/Game/newUI/Ink/Niagara/Rewards/NS_ClaimableChest.NS_ClaimableChest"));
         Glow->AutoActivate=false;Glow->TickWhenPaused=true;Glow->SetDesiredWidgetSize(FVector2D(96));
         Glow->SetVisibility(ESlateVisibility::HitTestInvisible);Root->AddChildToOverlay(Glow);
     }
@@ -47,7 +47,7 @@ int32 UInkSignInChestWidget::NativePaint(const FPaintArgs& Args,const FGeometry&
 {
     Layer=Super::NativePaint(Args,G,Clip,Out,Layer,Style,Enabled)+1;
     const auto Size=G.GetLocalSize();const FVector2D Scale=Size/96.;
-    if(auto* Atlas=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Rewards/T_ChestStates.T_ChestStates"),nullptr,LOAD_NoWarn|LOAD_Quiet))
+    if(auto* Atlas=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Rewards/T_ChestStates.T_ChestStates"),nullptr,LOAD_NoWarn|LOAD_Quiet))
     {
         FSlateBrush Art;Art.DrawAs=ESlateBrushDrawType::Image;Art.SetResourceObject(Atlas);
         Art.SetUVRegion(FBox2f(FVector2f(bOpen?.5f:0,0),FVector2f(bOpen?1.f:.5f,1)));

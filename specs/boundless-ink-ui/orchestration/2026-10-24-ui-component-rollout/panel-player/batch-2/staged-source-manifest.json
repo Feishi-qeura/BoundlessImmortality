@@ -1,0 +1,23 @@
+{
+  "source_ready": true,
+  "promoted": false,
+  "compile_verified": false,
+  "promotion_paths": [
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.cpp",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.h"
+  ],
+  "files": [
+    {
+      "staged_path": "staged-source/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.cpp",
+      "promotion_path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.cpp",
+      "bytes": 8612,
+      "sha256": "94A812FED69A1D72FC766F925C2EAED484754E12D7B72A05B897015EE1117C7C"
+    },
+    {
+      "staged_path": "staged-source/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.h",
+      "promotion_path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Player/InkPlayerMenuPageWidgets.h",
+      "bytes": 842,
+      "sha256": "3BB875323FA9388B7BC56207AD92963B98943BF639239E0688E93B18BB08C2E3"
+    }
+  ]
+}

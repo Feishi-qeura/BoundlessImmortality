@@ -1,0 +1,62 @@
+# Bounded v5: ready repairs, current Source epoch and actual default PIE evidence
+
+This review reads selected new inputs, existing test/build records and JSON diagnostics, followed by one bounded late Source delta. It does not run UE, UBT, tests, imports, migration or image approval. Selected immutable bytes/hashes are in `selected-inputs-v5.json`, with the late delta in `late-source-v5.json`; structured runtime evidence stays in `runtime-evidence-v5.json`. Previous stage/mount snapshots remain historical records.
+
+## Ready review-v5 changes
+
+Activities supplies six paired replacement files. The delta adds both missing HorizontalBoxSlot includes; removes the nonexistent SourceId from offline acknowledgement permission/model; carries captured OfferId/SKU/version/price in purchase intent; and clears each economic confirmation on local subject changes, comparing refreshed rows directly with the captured subject. The original four finding groups are repaired **in staged source**. Shared `FRebuildActivityActionRequest::OfferId` and its users must be promoted together. Native host context, expected_version, outbox identity, async result correlation and actual purchase/ack/listing behavior remain unverified. These replacements are not covered by the builds of the currently integrated six-page Root.
+
+Player-v5 fixes the documented namespace through an explicit overlay and adds a StageSubjectRevision patch/host contract. The revision changes on stage_id/from/to changes even with unchanged materials, is captured with selection revision/mode, and is compared at confirmation/dispatch; zero is valid and missing display fields are not an added permission. The independent `git apply --check` passed; no patch was applied by this worker. The original Player-d/e files remain frozen. V4-PD-01/V4-PE-01 are ready for integration, not proven runtime fixes. PC3-02/03 remain the separately unapplied v4 patch; PC3-01 is already satisfied at the previously reconciled hash.
+
+## I3-01: fixed Source shape, not a tested live Busy flow
+
+The selected current Root and Character/Inventory pair remove Busy from PlayerState. Confirmed Data stays Data; pending text is displayed separately, and `bMutationsBusy` disables mutation buttons while preserving browsing/confirmed rows. Root/header match the recorded Source epoch. The current Character/Inventory .cpp has a later pending correction: selected hash `62b4dc029c8359e10f11948bd4946290d188fa0e1e18b9ade6c42c1473e55a70` differs from epoch hash `aef71a153d255186b701813e099dac991c808b0e3066686df1edbe3078c983c4`. Its ledger deltas 99/100 center the label using an explicitly included SizeBoxSlot and return a body VerticalBox instead of nesting a second ScrollBox inside the Root's page scroll. The UWidget-returning seam and Busy gate are preserved in the inspected delta, but that current body correction is not covered by the reviewed build09/PIE02 epoch.
+
+Build07 exit 0 covers the owner-recorded canonical/I3 epoch; build08 and build09 also report exit 0 for later first-PIE/GM-overlay repairs. Do not apply those results to the later pending body correction. The epoch verifier's `compiled:false` is a static verifier scope flag; it does not erase the independent build records.
+
+I3's original source defect can be marked repaired. There is still **no execution pass record in the reviewed evidence** for `BoundlessImmortality.Frontend.NewUI.Inventory.BusyRetainsConfirmedPresentation`. That fixture directly builds a Data-state tree with Busy false/true; even a future native pass would establish builder retention/gates, not an actual service-transport Busy transition through the default Root. The two default PIE reports do not exercise that transport scenario.
+
+## N03: current identity regression evidence boundary
+
+The stable GUID click path and its source fixture remain present. `VisibleIdentitySurvivesProjectionChanges` covers native model sorting/removal and TriggerAction, not actual Slate clicks against a stale displayed item in the default route. The selected build07/PIE01 logs and current reports provide no test execution/result record for that exact regression. The Busy fixture has a current build07 compile line; neither compiled source nor the successful inventory search/clear smoke steps is a substitute for an N03 test result. No old service/policy suite was reused as proof.
+
+## Saved WBP, import and actual default route assertions
+
+The import result reports four Texture2D imports/readbacks and saves `/Game/newUI/Runtime/WBP_NewUIFrontend`. All four current uasset hashes match their recorded import-result hashes; the WBP file exists. This is targeted verification of five named assets, not a rehash of the 582 migrated packages. The creation helper checks the ParentClass and generated class derive from UInkRebuildFrontendWidget before returning success (Editor library lines 133-145). Director's actual EnsureFrontend selects that class with the new native fallback. No engine was opened for this review.
+
+Default PIE 01 and 02 both record all five assertions for each of Main, Saves, Settings, HUD, Character and Inventory: actual page, NewUIRoot_r1, new runtime layout version, exact `/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C`, and owner page layout version. The verification script obtains the existing Director's frontend after starting normal PIE and navigates using Slate clicks; it does not directly construct the six components to manufacture route evidence. Both reports also record the expected canonical fonts, and the four relevant surfaces record their actual texture resources. These are **six actual route observations** in an unsuccessful overall attempt, not six accepted pages or 44-route runtime coverage.
+
+The selected Source epoch hash matches the one recorded by PIE02. Build09 finished before that attempt started. That pairs the observations with the earlier epoch, not with the later `62b4...` body correction described above. The report's failed status must still be retained; source/build chronology is not an override. The saved WBP/native class assertions also do not prove every later owner subpage is mounted.
+
+## JSON and geometry are separate failures
+
+| Evidence | Result | Meaning |
+|---|---|---|
+| PIE01 | finished=false, passed=false; JSONDecodeError at landscape Inventory | The DescribeWidget payload could not be decoded; the old failed raw payload is not present among the selected inputs. Do not mark this attempt passed. |
+| Current serializer | nonfinite values become JSON null with `has_nonfinite_metrics=true` | A source correction with subsequent build08/09 records; null must not be read as a finite zero. |
+| PIE02 raw-snapshot-19.txt | Independent strict JSON parse succeeds | The serialization format defect has a new runtime witness. This does not validate its numeric geometry. |
+| PIE02 landscape Inventory | `finite metrics for visible widgets inventory-landscape=false`; 40 visible elements carry nonfinite diagnostics | The overall attempt remains finished=false/passed=false. Null x/y/painted dimensions and the explicit flags are failure evidence, not a reason to relax acceptance. |
+
+Portrait finite-metric assertions were recorded true before the landscape failure. No image was viewed or approved by this review. First-PIE style/overlay repairs and current GM ownership predicates are present in Source/build records, but the current smoke assertions do not explicitly prove old HUD/GM drawing is suppressed or that every layout fits. Require a fresh successful relevant assertion/measurement after the repair; screenshots alone are not substituted here.
+
+## N05 and the 44-screen table
+
+The migration final report states 582 canonical packages verified, six former redirectors removed, old registry count zero; Content/UI is currently absent. Migration is a distinct completed evidence stream and does not imply replacement of the 37 remaining legacy presentation hosts.
+
+All 44 screens have staged declarations. At the original runtime-evidence cut, production wiring was six compositions / one placeholder / 37 unobserved new hosts. The late Source delta now adds a lazy Leaderboard host, so the latest **static wiring** is seven compositions / zero permanently unconnected core placeholders / 37 remaining new hosts. Its actual lazy mount, compilation and runtime assertions are not proved by PIE01/02. N05 is **partial actual default-shell/route observation** with saved-WBP/resource evidence, plus the newer unverified Rank wiring; full new page-host wiring and complete runtime acceptance remain open. `stage-to-runtime-v5.csv/.json` separates those epochs. It records six default-route observations and zero overall accepted runtime/player-entry pages. Staged v5 files and the new Rank host are not marked compiled or rendered just because build09 passed.
+
+## Late Source delta: Rank host and two new findings
+
+`InkRebuildLeaderboard.cpp` creates/retains UInkRankBoardPage, injects actual canonical fonts, binds category/scope/retry/avatar events and calls MountPageComponent with `newui-r1-rank-leaderboard`. The Root refresh invokes this host; category/scope requests reach existing native Rank actions. The imported Rank classes are present in production Source, even where their Wuling/guild/gift/sword-spirit routes still lack new mounts. Source presence is separated from route wiring in the table. The Editor readback now visits nested user-widget trees with a Seen set, and a label-click helper uses actual Slate hit testing. These are source observations, not a new PIE result.
+
+**V5-VERIFY-01 / P1 / integration validation blind spot:** Editor library `.cpp:312` defines `geometry_arranged` using finite Position/PaintedEnd plus positive Size. The updated default-PIE script `.py:53-55` then excludes nonfinite records unless `geometry_arranged` is true. A NaN/Infinity in the very coordinates being checked makes that flag false, so the new predicate can omit the same failure it is meant to detect. Keep strict JSON diagnostics, but determine expected paint/arrangement independently of the finite-value assertion. Prove a flagged record is legitimately unpainted/offscreen using independent evidence, or fail it; do not use its invalid coordinates as the reason to skip it. The added valid-slot39 scroll assertion is useful but does not certify all other flagged geometry. A later pass under this changed filter must not be presented as proof that the original 40-record failure was fixed.
+
+**V5-AVATAR-01 / P2 / new Rank host can re-latch a failed avatar during backoff:** `InkRebuildLeaderboard.cpp:103` returns on retry time in the future without releasing the page-side request latch. The page's row refresh (`Rank/InkRankWulingPages.cpp:310-313`) sets AvatarRequestsInFlight before broadcasting. Sequence: async failure -> SetParticipantAvatar(nullptr) clears the latch -> same participant is refreshed during the 60-second backoff -> row sets it again -> host rejects and leaves it set. After backoff, PollNewRankAvatars calls RetryParticipantAvatarAfterHostBackoff, but that method rejects because the latch remains set (168-172). On a backoff-rejected callback with no request in flight, release/report the page request without starting another network request, or make the host/page share an explicit deferred state. Preserve the current scope/participant/URL subject checks, timeout handling and concurrency limit. This is a concrete source failure path, not an observed HTTP run.
+
+## Next precise evidence requests for integration
+
+- Publish actual N03 and Busy native execution results with test name, result, timestamp and matching Source epoch; separately exercise real default-route transport Busy retention/mutation gates.
+- Resolve the 40 visible nonfinite landscape metrics and retain strict JSON/null diagnostic behavior. A new attempt must explicitly pass the landscape finite-metrics check rather than dropping flagged elements.
+- Repair V5-VERIFY-01 before using the updated metric filter as acceptance, and close the Rank backoff latch path V5-AVATAR-01 before claiming avatar retry coverage.
+- Add an explicit old HUD/GM suppression/ownership assertion and relevant bounds checks; current route/class/font checks alone do not establish those outcomes.
+- Consume ready v4/v5 replacements/overlays through the sole Source writer, then update actual mounted owner pages/back-stack identities before claiming 44-page coverage.

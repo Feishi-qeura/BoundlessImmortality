@@ -1,0 +1,7 @@
+{
+  "pid": 32892,
+  "port": 18789,
+  "scope": "new isolated DB; declared Oct31 clock fixture for real day/month rollover",
+  "owner": "logic-integration",
+  "started_at": "2026-10-24T11:52:39+08:00"
+}

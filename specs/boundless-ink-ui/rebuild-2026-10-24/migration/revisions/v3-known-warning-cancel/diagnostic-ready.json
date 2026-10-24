@@ -1,0 +1,34 @@
+{
+  "updated_at": "2026-10-24T13:14:36.614515+08:00",
+  "diagnostic_ready": true,
+  "root_cause": "Exact source/config rename warning returned Cancel before RenameAssets false",
+  "analysis": "rename-failure-analysis.md",
+  "revision_directory": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\migration\\revisions\\v3-known-warning-cancel",
+  "active_migration_script_unchanged": true,
+  "engine_or_content_actions_performed": false,
+  "cpp_compiled": false,
+  "warning_ack_execution_verified": false,
+  "actual_migration_verified": false,
+  "files": [
+    {
+      "path": "inspect_memory_readonly.py",
+      "sha256": "495d9b27e5035e2ae59aca4bfdfa4957f91c8d8f0bdeacf578019b379ad431ff"
+    },
+    {
+      "path": "observed-warning-evidence.json",
+      "sha256": "1c96b650594a3c63429f686db14bba3913a48daa97330bea38ca693eb9ca73d0"
+    },
+    {
+      "path": "README.md",
+      "sha256": "27a76e191d6ef8979713fb161c8f0ddb99a90a44448313a4daed583959d8557f"
+    },
+    {
+      "path": "ScopedKnownRenameWarning.cpp",
+      "sha256": "8c491bbec36783766d55027d195688feabddc6847a8dcc66d4f4e2f321e4109a"
+    },
+    {
+      "path": "ScopedKnownRenameWarning.h",
+      "sha256": "31e6569b9b3e4ab151b611b80af8e2d53037958e55ee16aa7f84a59e7302214a"
+    }
+  ]
+}

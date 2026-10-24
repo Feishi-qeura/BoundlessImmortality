@@ -74,7 +74,7 @@ UInkFrontendActionButton* UInkExtensionWidget::Button(UVerticalBox* Box,const FS
 UImage* UInkExtensionWidget::Scene(int32 Tile)
 {
     auto* Art=WidgetTree->ConstructWidget<UImage>();Art->SetVisibility(ESlateVisibility::HitTestInvisible);
-    if(auto* Texture=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_InkFeatureScenes.T_InkFeatureScenes"),nullptr,LOAD_NoWarn|LOAD_Quiet))
+    if(auto* Texture=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_InkFeatureScenes.T_InkFeatureScenes"),nullptr,LOAD_NoWarn|LOAD_Quiet))
     {
         FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::Image;Brush.SetResourceObject(Texture);Brush.ImageSize=FVector2D(768,256);
         Brush.SetUVRegion(FBox2f(FVector2f((Tile%2)*.5f,(Tile/2)*.25f),FVector2f((Tile%2+1)*.5f,(Tile/2+1)*.25f)));Art->SetBrush(Brush);

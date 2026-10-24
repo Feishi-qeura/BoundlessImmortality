@@ -1,0 +1,142 @@
+{
+  "captured_utc": "2026-10-24T06:14:35.742931+00:00",
+  "parent": "resolved-open-matrix-v4.json",
+  "report": "bounded-v5-review.md",
+  "rows": [
+    {
+      "id": "V4-API-01",
+      "owner": "Activities + integration",
+      "disposition": "repaired-in-paired-v5-source-compile-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "note": "Defining HorizontalBoxSlot headers added to both secondary/economy translation units",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V4-ACT-01",
+      "owner": "Activities + integration",
+      "disposition": "repaired-in-v5-source-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "note": "No mandatory SourceId on native current-user offline acknowledgement",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V4-ACT-02",
+      "owner": "Activities + integration",
+      "disposition": "repaired-in-v5-source-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "note": "Captured OfferId/SKU/quote version/price/confirmation preserved in paired request schema",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V4-ECO-01",
+      "owner": "Activities + integration",
+      "disposition": "repaired-in-v5-source-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.cpp",
+      "sha256": "a5e714676a1c889f1dc8de4934e2e83c86d8aa068120f7e0399c6f5a3fa3bb81",
+      "note": "Local subject switches clear corresponding confirmation; refreshed data compared to captured tuple",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V4-PD-01",
+      "owner": "Player + integration",
+      "disposition": "namespace-overlay-ready-not-consumed",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/contracts/player-d-adapter-namespace-overlay.yaml",
+      "sha256": "03a82648c125280c7a54cd3ad02ffeb61f8d40f77817a3aef20a3c1bebf85a45",
+      "note": "Correct actual namespace; frozen original contract left intact",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V4-PE-01",
+      "owner": "Player + integration",
+      "disposition": "stage-subject-patch-apply-checked-unapplied",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/review-v5/diff/player-e-breakthrough-confirmation.diff",
+      "sha256": "44908ce252312d3cf0122f69d0005dd53ceec0645ee455cfbbd82d534cd99708",
+      "note": "Host revision tied to actual stage tuple; zero valid; unknown display fields are not permissions",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "I3-01",
+      "owner": "logic-integration",
+      "disposition": "source-defect-repaired-live-busy-evidence-open",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "66b935dfc0da33d52aa30dca157169217a10f8632bbda468d883cb5accc697ca",
+      "note": "Confirmed data retained; mutation Busy separate. Native fixture source/compile is not a default-route transport Busy test",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "N03",
+      "owner": "logic-integration",
+      "disposition": "source-correct-current-execution-record-open",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildInventoryIdentityTests.cpp",
+      "sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900",
+      "note": "Identity regression fixture exists; no execution pass record in selected evidence; search/clear is not identity regression",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "BUSY-EXECUTION",
+      "owner": "logic-integration",
+      "disposition": "current-test-execution-and-live-transition-open",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildCanonicalAndBusyTests.cpp",
+      "sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd",
+      "note": "Build07 compilation line exists; actual result and real service Busy flow absent in selected records",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "N05",
+      "owner": "logic-integration",
+      "disposition": "partial-real-default-route-observation-new-rank-source-wired",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+      "sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+      "note": "Saved new WBP and 6 prior actual route observations; late Source wiring is 7/0/37 including lazy Rank, not a new runtime pass",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "JSON-PROTOCOL",
+      "owner": "logic-integration",
+      "disposition": "PIE01-failed-new-PIE02-strict-json-witness",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-02/report.json",
+      "sha256": "509ec7282070002121ae0a4087a871b81bdcf2281fe785dee1c55abc6092220c",
+      "note": "Raw02 landscape parses strictly; null diagnostics are not finite geometry; neither attempt passed",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "LANDSCAPE-GEOMETRY",
+      "owner": "logic-integration",
+      "disposition": "open-failed-visible-finite-metrics-assertion",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-02/report.json",
+      "sha256": "509ec7282070002121ae0a4087a871b81bdcf2281fe785dee1c55abc6092220c",
+      "note": "40 records flagged visible have nonfinite geometry diagnostics; pending Source body-scroll correction not paired with this runtime epoch",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "OLD-HUD-OWNERSHIP",
+      "owner": "logic-integration",
+      "disposition": "source-build-fix-present-explicit-runtime-assertion-open",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "66b935dfc0da33d52aa30dca157169217a10f8632bbda468d883cb5accc697ca",
+      "note": "Owner predicates and build09 exist; current smoke assertions do not explicitly prove old HUD/GM suppressed",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V5-VERIFY-01",
+      "owner": "logic-integration",
+      "disposition": "open-P1-validation-filter-blind-spot",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py",
+      "sha256": "45cf11ec1ba37ee37ea26f56685f1aee16fab9a7bc785c67601a33642133ddd8",
+      "note": "geometry_arranged already requires finite tested coordinates; filtering invalid records with it can hide the prior nonfinite failure",
+      "overall_runtime_accepted": false
+    },
+    {
+      "id": "V5-AVATAR-01",
+      "owner": "logic-integration",
+      "disposition": "open-P2-backoff-request-latch",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+      "sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+      "note": "Page sets in-flight before broadcast; host backoff rejection leaves it set; post-backoff retry API then refuses forever",
+      "overall_runtime_accepted": false
+    }
+  ]
+}

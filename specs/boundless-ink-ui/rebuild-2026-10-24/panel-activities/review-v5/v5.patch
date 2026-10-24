@@ -1,0 +1,257 @@
+diff --git a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v3/staged-source/RebuildActivityWidgets.h b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivityWidgets.h
+index aa36668..2124921 100644
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v3/staged-source/RebuildActivityWidgets.h
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivityWidgets.h
+@@ -46,6 +46,7 @@ struct FRebuildActivityActionRequest
+     UPROPERTY(BlueprintReadOnly) bool bConfirmed = false;
+     UPROPERTY(BlueprintReadOnly) FString Version;
+     UPROPERTY(BlueprintReadOnly) FString PriceText;
++    UPROPERTY(BlueprintReadOnly) FName OfferId;
+     UPROPERTY(BlueprintReadOnly) FString QuantityText;
+     UPROPERTY(BlueprintReadOnly) int32 Quantity = 0;
+     UPROPERTY(BlueprintReadOnly) int32 Offset = 0;
+
+diff --git a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.h b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.h
+index 9175091..5283499 100644
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.h
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.h
+@@ -68,7 +68,6 @@ struct FRebuildOfflineReceiptRowViewModel
+ {
+     GENERATED_BODY()
+     UPROPERTY(BlueprintReadWrite) FName ReceiptId;
+-    UPROPERTY(BlueprintReadWrite) FName SourceId;
+     UPROPERTY(BlueprintReadWrite) FText SourceText;
+     UPROPERTY(BlueprintReadWrite) FText TimeText;
+     UPROPERTY(BlueprintReadWrite) FText QiText;
+@@ -83,7 +82,6 @@ struct FRebuildOfflineRewardsViewModel
+ {
+     GENERATED_BODY()
+     UPROPERTY(BlueprintReadWrite) FString ContentKey;
+-    UPROPERTY(BlueprintReadWrite) FName SourceId;
+     UPROPERTY(BlueprintReadWrite) FText StatusText;
+     UPROPERTY(BlueprintReadWrite) FText OfflineTotalQiText;
+     UPROPERTY(BlueprintReadWrite) FText AcknowledgedQiText;
+
+diff --git a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp
+index 76fac88..16db2a7 100644
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02/staged-source/RebuildActivitySecondaryWidgets.cpp
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildActivitySecondaryWidgets.cpp
+@@ -4,6 +4,7 @@
+ #include "Components/Border.h"
+ #include "Components/Button.h"
+ #include "Components/HorizontalBox.h"
++#include "Components/HorizontalBoxSlot.h"
+ #include "Components/ScrollBox.h"
+ #include "Components/SizeBox.h"
+ #include "Components/TextBlock.h"
+@@ -263,7 +264,9 @@ void URebuildLaunchSpecialOfferWidget::NativeTick(const FGeometry& Geometry, flo
+ void URebuildLaunchSpecialOfferWidget::ApplyViewModel(const FRebuildLaunchOfferViewModel& Model)
+ {
+     if (bConfirmingPurchase && (Model.OfferId != ConfirmedOfferId || Model.Sku != ConfirmedSku || Model.QuoteVersion != ConfirmedQuoteVersion ||
+-        Model.PriceText.ToString() != ConfirmedPriceText.ToString()))
++        Model.PriceText.ToString() != ConfirmedPriceText.ToString() || !Model.bSkuKnown || !Model.bPriceKnown ||
++        !Model.bEntitlementKnown || Model.bOwnsEntitlement || !Model.bPlatformPaymentAvailable ||
++        !Model.bServicePurchaseAvailable || !Model.bConnected || Model.bBusy))
+     {
+         bConfirmingPurchase = false;
+         ConfirmedOfferId = NAME_None;
+@@ -301,6 +304,9 @@ void URebuildLaunchSpecialOfferWidget::HandlePurchaseIntent(FRebuildActivityActi
+         ConfirmedPriceText.ToString() != ViewModel.PriceText.ToString()) return;
+     bConfirmingPurchase = false;
+     auto Purchase = ActivitySecondaryUI::Request(TEXT("purchase"), ConfirmedSku, true);
++    Purchase.OfferId = ConfirmedOfferId;
++    Purchase.Version = ConfirmedQuoteVersion;
++    Purchase.PriceText = ConfirmedPriceText.ToString();
+     OnActionRequested.Broadcast(Purchase);
+     ConfirmedOfferId = NAME_None;
+     ConfirmedSku = NAME_None;
+@@ -398,7 +404,7 @@ void URebuildOfflineRewardsWidget::ApplyViewModel(const FRebuildOfflineRewardsVi
+ 
+ void URebuildOfflineRewardsWidget::HandleAcknowledge(FRebuildActivityActionRequest RequestIn)
+ {
+-    if (!ViewModel.bCanAcknowledge || !ViewModel.bConnected || ViewModel.bBusy || ViewModel.SourceId.IsNone()) return;
++    if (!ViewModel.bCanAcknowledge || !ViewModel.bConnected || ViewModel.bBusy) return;
+     OnActionRequested.Broadcast(ActivitySecondaryUI::Request(TEXT("ack-offline")));
+ }
+ 
+@@ -473,8 +479,7 @@ void URebuildOfflineRewardsWidget::BuildPage()
+     }
+     Scroll->SetScrollOffset(PreviousOffset);
+ 
+-    const bool bCanAcknowledge = ViewModel.bCanAcknowledge && ViewModel.bConnected && !ViewModel.bBusy &&
+-        !ViewModel.SourceId.IsNone();
++    const bool bCanAcknowledge = ViewModel.bCanAcknowledge && ViewModel.bConnected && !ViewModel.bBusy;
+     const FText AckLabel = ViewModel.bBusy ? FText::FromString(TEXT("等待当前请求完成")) : FText::FromString(TEXT("确认已读"));
+     auto* Ack = Button(WidgetTree, Text(WidgetTree, AckLabel, 22, InkRebuildUI::ETextRole::Button),
+         this, NAME_None, bCanAcknowledge, false);
+
+diff --git a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.h b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.h
+index 7dd2527..33664a6 100644
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.h
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.h
+@@ -176,6 +176,7 @@ private:
+     FName ConfirmedItemId;
+     FName ConfirmedListingId;
+     FName ConfirmedListingVersion;
++    FString ConfirmedBuyPriceText;
+     int32 ConfirmedQuantity = 0;
+     FString ConfirmedPriceText;
+     bool bConfirmingCreate = false;
+
+diff --git a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.cpp b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.cpp
+index 138efa0..0a1faee 100644
+--- a/specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.cpp
++++ b/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v5/staged-source/RebuildEconomyWidgets.cpp
+@@ -5,6 +5,7 @@
+ #include "Components/Button.h"
+ #include "Components/EditableTextBox.h"
+ #include "Components/HorizontalBox.h"
++#include "Components/HorizontalBoxSlot.h"
+ #include "Components/ScrollBox.h"
+ #include "Components/SizeBox.h"
+ #include "Components/TextBlock.h"
+@@ -170,10 +171,10 @@ void URebuildShopWidget::NativeTick(const FGeometry& Geometry, float DeltaTime)
+ 
+ void URebuildShopWidget::ApplyViewModel(const FRebuildShopViewModel& Model)
+ {
+-    const auto* OldSelected = ViewModel.Entries.FindByPredicate([this](const auto& Entry) { return Entry.Sku == ViewModel.SelectedSku; });
+     const auto* NewSelected = Model.Entries.FindByPredicate([&Model](const auto& Entry) { return Entry.Sku == Model.SelectedSku; });
+-    if (bConfirmingPurchase && (!OldSelected || !NewSelected || OldSelected->Sku != NewSelected->Sku ||
+-        OldSelected->QuoteVersion != NewSelected->QuoteVersion || OldSelected->PriceText.ToString() != NewSelected->PriceText.ToString()))
++    if (bConfirmingPurchase && (Model.SelectedSku != ConfirmedSku || !NewSelected ||
++        NewSelected->Sku != ConfirmedSku || !NewSelected->bSkuKnown || !NewSelected->bPriceKnown || !NewSelected->bCanPurchase ||
++        NewSelected->QuoteVersion != ConfirmedQuoteVersion || NewSelected->PriceText.ToString() != ConfirmedPriceText.ToString()))
+     {
+         bConfirmingPurchase = false;
+         ConfirmedSku = NAME_None;
+@@ -188,6 +189,13 @@ void URebuildShopWidget::HandleShopIntent(FRebuildActivityActionRequest RequestI
+ {
+     if (RequestIn.Action.IsNone())
+     {
++        if (ViewModel.SelectedSku != RequestIn.EntryId && bConfirmingPurchase)
++        {
++            bConfirmingPurchase = false;
++            ConfirmedSku = NAME_None;
++            ConfirmedQuoteVersion.Reset();
++            ConfirmedPriceText = FText();
++        }
+         ViewModel.SelectedSku = RequestIn.EntryId;
+         BuildPage();
+         return;
+@@ -366,14 +374,26 @@ void URebuildConsignmentWidget::NativeTick(const FGeometry& Geometry, float Delt
+ void URebuildConsignmentWidget::ApplyViewModel(const FRebuildConsignmentViewModel& Model)
+ {
+     int32 ParsedDraftCount = 0;
+-    if (bConfirmingCreate && (Model.SelectedInventoryItemId != ConfirmedItemId || Model.DraftUnitPriceText != ConfirmedPriceText ||
++    const auto* NewInventoryItem = Model.InventoryEntries.FindByPredicate([&Model](const auto& Row) { return Row.ItemId == ConfirmedItemId; });
++    if (bConfirmingCreate && (Model.SelectedInventoryItemId != ConfirmedItemId || !NewInventoryItem || !NewInventoryItem->bCanList ||
++        !Model.bPriceRulesKnown || !Model.bCreateAllowed || Model.DraftUnitPriceText != ConfirmedPriceText ||
+         !RebuildEconomyUI::ReadPositiveCount(Model.DraftQuantityText, ParsedDraftCount) || ParsedDraftCount != ConfirmedQuantity))
++    {
+         bConfirmingCreate = false;
+-    const auto* OldSelectedListing = ViewModel.Listings.FindByPredicate([this](const auto& Row) { return Row.ListingId == ViewModel.SelectedListingId; });
++        ConfirmedItemId = NAME_None;
++        ConfirmedQuantity = 0;
++        ConfirmedPriceText.Reset();
++    }
+     const auto* NewSelectedListing = Model.Listings.FindByPredicate([&Model](const auto& Row) { return Row.ListingId == Model.SelectedListingId; });
+-    if (bConfirmingBuy && (!OldSelectedListing || !NewSelectedListing || OldSelectedListing->ListingId != NewSelectedListing->ListingId ||
+-        OldSelectedListing->ListingVersion != NewSelectedListing->ListingVersion || OldSelectedListing->PriceText.ToString() != NewSelectedListing->PriceText.ToString()))
++    if (bConfirmingBuy && (Model.SelectedListingId != ConfirmedListingId || !NewSelectedListing || !NewSelectedListing->bCanBuy ||
++        NewSelectedListing->ListingId != ConfirmedListingId || NewSelectedListing->ListingVersion != ConfirmedListingVersion ||
++        NewSelectedListing->PriceText.ToString() != ConfirmedBuyPriceText))
++    {
+         bConfirmingBuy = false;
++        ConfirmedListingId = NAME_None;
++        ConfirmedListingVersion = NAME_None;
++        ConfirmedBuyPriceText.Reset();
++    }
+     ViewModel = Model;
+     BuildPage();
+ }
+@@ -382,20 +402,36 @@ void URebuildConsignmentWidget::HandleQuantityChanged(const FText& TextIn)
+ {
+     ViewModel.DraftQuantityText = TextIn.ToString();
+     bConfirmingCreate = false;
++    ConfirmedItemId = NAME_None; ConfirmedQuantity = 0; ConfirmedPriceText.Reset();
+ }
+ 
+ void URebuildConsignmentWidget::HandlePriceChanged(const FText& TextIn)
+ {
+     ViewModel.DraftUnitPriceText = TextIn.ToString();
+     bConfirmingCreate = false;
++    ConfirmedItemId = NAME_None; ConfirmedQuantity = 0; ConfirmedPriceText.Reset();
+ }
+ 
+ void URebuildConsignmentWidget::HandleConsignmentIntent(FRebuildActivityActionRequest RequestIn)
+ {
+     if (RequestIn.Action.IsNone())
+     {
+-        if (RequestIn.Cycle == TEXT("inventory")) ViewModel.SelectedInventoryItemId = RequestIn.EntryId;
+-        else if (RequestIn.Cycle == TEXT("listing")) ViewModel.SelectedListingId = RequestIn.EntryId;
++        if (RequestIn.Cycle == TEXT("inventory"))
++        {
++            if (ViewModel.SelectedInventoryItemId != RequestIn.EntryId && bConfirmingCreate)
++            {
++                bConfirmingCreate = false; ConfirmedItemId = NAME_None; ConfirmedQuantity = 0; ConfirmedPriceText.Reset();
++            }
++            ViewModel.SelectedInventoryItemId = RequestIn.EntryId;
++        }
++        else if (RequestIn.Cycle == TEXT("listing"))
++        {
++            if (ViewModel.SelectedListingId != RequestIn.EntryId && bConfirmingBuy)
++            {
++                bConfirmingBuy = false; ConfirmedListingId = NAME_None; ConfirmedListingVersion = NAME_None; ConfirmedBuyPriceText.Reset();
++            }
++            ViewModel.SelectedListingId = RequestIn.EntryId;
++        }
+         BuildPage();
+         return;
+     }
+@@ -411,14 +447,15 @@ void URebuildConsignmentWidget::HandleConsignmentIntent(FRebuildActivityActionRe
+         if (!Selected || !Selected->bCanBuy || Selected->ListingId.IsNone() || Selected->ListingVersion.IsNone()) return;
+         if (!bConfirmingBuy)
+         {
+-            ConfirmedListingId = Selected->ListingId; ConfirmedListingVersion = Selected->ListingVersion;
++            ConfirmedListingId = Selected->ListingId; ConfirmedListingVersion = Selected->ListingVersion; ConfirmedBuyPriceText = Selected->PriceText.ToString();
+             bConfirmingBuy = true; BuildPage(); return;
+         }
+-        if (Selected->ListingId != ConfirmedListingId || Selected->ListingVersion != ConfirmedListingVersion) return;
++        if (ViewModel.SelectedListingId != ConfirmedListingId || Selected->ListingId != ConfirmedListingId ||
++            Selected->ListingVersion != ConfirmedListingVersion || Selected->PriceText.ToString() != ConfirmedBuyPriceText) return;
+         auto Buy = RebuildEconomyUI::Request(TEXT("buy-listing"), ConfirmedListingId, true);
+         Buy.Version = ConfirmedListingVersion.ToString();
+         OnActionRequested.Broadcast(Buy);
+-        bConfirmingBuy = false; ConfirmedListingId = NAME_None; ConfirmedListingVersion = NAME_None;
++        bConfirmingBuy = false; ConfirmedListingId = NAME_None; ConfirmedListingVersion = NAME_None; ConfirmedBuyPriceText.Reset();
+         BuildPage(); return;
+     }
+     if (RequestIn.Action == TEXT("create-listing"))
+@@ -619,9 +656,9 @@ void URebuildOrdersWidget::ApplyViewModel(const FRebuildOrdersViewModel& Model)
+ {
+     if (bConfirmingCancel)
+     {
+-        const auto* OldRow = ViewModel.Orders.FindByPredicate([this](const auto& Row) { return Row.ListingId == ConfirmedListingId; });
+-        const auto* NewRow = Model.Orders.FindByPredicate([this, &Model](const auto& Row) { return Row.ListingId == ConfirmedListingId; });
+-        if (!OldRow || !NewRow || OldRow->ListingVersion != ConfirmedListingVersion || NewRow->ListingVersion != ConfirmedListingVersion)
++        const auto* NewRow = Model.Orders.FindByPredicate([this](const auto& Row) { return Row.ListingId == ConfirmedListingId; });
++        if (Model.SelectedListingId != ConfirmedListingId || !NewRow || !NewRow->bCanCancel ||
++            NewRow->ListingVersion != ConfirmedListingVersion)
+         { bConfirmingCancel = false; ConfirmedListingId = NAME_None; ConfirmedListingVersion = NAME_None; }
+     }
+     ViewModel = Model;
+@@ -630,7 +667,12 @@ void URebuildOrdersWidget::ApplyViewModel(const FRebuildOrdersViewModel& Model)
+ 
+ void URebuildOrdersWidget::HandleCancelIntent(FRebuildActivityActionRequest RequestIn)
+ {
+-    if (RequestIn.Action.IsNone()) { ViewModel.SelectedListingId = RequestIn.EntryId; BuildPage(); return; }
++    if (RequestIn.Action.IsNone())
++    {
++        if (ViewModel.SelectedListingId != RequestIn.EntryId && bConfirmingCancel)
++        { bConfirmingCancel = false; ConfirmedListingId = NAME_None; ConfirmedListingVersion = NAME_None; }
++        ViewModel.SelectedListingId = RequestIn.EntryId; BuildPage(); return;
++    }
+     if (RequestIn.Action != TEXT("cancel-listing") || !ViewModel.bConnected || ViewModel.bBusy) return;
+     const auto* Selected = ViewModel.Orders.FindByPredicate([this](const auto& Row) { return Row.ListingId == ViewModel.SelectedListingId; });
+     if (!Selected || !Selected->bCanCancel || Selected->ListingId.IsNone() || Selected->ListingVersion.IsNone()) return;
+

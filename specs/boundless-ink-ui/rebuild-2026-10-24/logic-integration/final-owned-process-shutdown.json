@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-24T17:27:51.968136+08:00",
+  "normal_control": "service-control-02.json",
+  "authority_service_stopped": true,
+  "TLS_fixture_stopped": true,
+  "authority_pid": 40168,
+  "TLS_pid": 28596,
+  "fresh_CIM_owned_service_or_engine_matches": [],
+  "method": "PIE scripts end_play then quit with dirty0; native TestExit status0; services HTTPServer.shutdown/server_close",
+  "force_kill_used": false,
+  "passed": true
+}

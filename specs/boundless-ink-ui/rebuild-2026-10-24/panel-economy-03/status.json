@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-10-24T13:30:00+08:00",
+  "state": "staged-for-review",
+  "slice": "panel-economy-03",
+  "approved": false,
+  "production_source_changed": false,
+  "asset_imported": false,
+  "compile_verified": false,
+  "runtime_verified": false,
+  "static_review": "passed-with-contract-boundaries",
+  "source_sha256": {
+    "staged-source/RebuildEconomyWidgets.h": "7FC31BA14E2DA0AB84791C3620064BFEBCA8F35B67DF28A3A92E76541837D295",
+    "staged-source/RebuildEconomyWidgets.cpp": "7DAD58CE15C748FAB20354499BCF101BDF9B56B5E8CCFC2685A1ED24E86851EC",
+    "../panel-activities/review-v3/staged-source/RebuildActivityWidgets.h": "183597F79CB2AFD171DAED3CAE258D8C0C181DC1533AB26954C34FF53843AB8A",
+    "../panel-activities/review-v3/staged-source/RebuildActivityWidgets.cpp": "535AC0BA0D98E054FC43B920E8E887F74D7307699FF6CDCA013AB90F119F0BE8"
+  },
+  "next_owner": "logic-integration"
+}

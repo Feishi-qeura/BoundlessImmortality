@@ -1,0 +1,14 @@
+component_id,page,control_or_slot,widget_class,state_source,action_api,9slice,approved
+world-node-explored,world,AtlasNode_<id>,UJourneyStateBadgeWidget,WorldVm explicit exploration status,OnGlyphPressed,full-fit,false
+world-node-available,world,AtlasNode_<id>,UJourneyStateBadgeWidget,WorldVm open/available,OnGlyphPressed,full-fit,false
+world-node-locked,world,AtlasNode_<id>,UJourneyStateBadgeWidget,WorldVm explicit locked state,OnGlyphPressed,full-fit,false
+resource-pin-free,resources,AtlasNode_<id>,UJourneyStateBadgeWidget,service resource node type,OnGlyphPressed,full-fit,false
+resource-pin-temporary,resources,AtlasNode_<id>,UJourneyStateBadgeWidget,service temporary validity,OnGlyphPressed,full-fit,false
+resource-pin-contest-open,resources,AtlasNode_<id>,UJourneyStateBadgeWidget,RaceVm availability and permission,OnGlyphPressed,full-fit,false
+resource-pin-expired,resources,AtlasNode_<id>,UJourneyStateBadgeWidget,service expiry status,OnGlyphPressed,full-fit,false
+fortune-great,daily-fortune,DailyFortuneSeal,UJourneyStateBadgeWidget,server daily_fortune only,none; read-only,full-fit,false
+fortune-good,daily-fortune,DailyFortuneSeal,UJourneyStateBadgeWidget,server daily_fortune only,none; read-only,full-fit,false
+fortune-neutral,daily-fortune,DailyFortuneSeal,UJourneyStateBadgeWidget,server daily_fortune only,none; read-only,full-fit,false
+fortune-bad,daily-fortune,DailyFortuneSeal,UJourneyStateBadgeWidget,server daily_fortune only,none; read-only,full-fit,false
+daily-sign-in-claim-state,sign-in,SignInClaim,UJourneyClaimStateWidget,activities.signed/day/template + service state,OnClaimRequested; adapter calls existing SignIn path,theme-native-button,false
+calendar-day-state,monthly-sign-in,CalendarDay_<n>,UJourneyCalendarDayWidget,service month and explicit signed/claimable days,OnDayPressed; reward details only,code-native,false

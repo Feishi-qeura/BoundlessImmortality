@@ -1,0 +1,276 @@
+{
+  "captured_utc": "2026-10-24T05:03:33.694227+00:00",
+  "evidence_level": "source-only",
+  "counts": {
+    "resolved-in-review-v2-source": 12,
+    "partially-resolved-source-host-open": 1,
+    "resolved-in-production-source": 2,
+    "open-source-review": 9
+  },
+  "rows": [
+    {
+      "id": "C01-rank",
+      "owner": "panel-rank",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "AddButton uses UInkRankWulingCallbackButton; base has UFUNCTION click handler",
+      "note": "Production promotion/build still pending",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C01-activities",
+      "owner": "panel-activities",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "URebuildActivityIntentButton and reflected RelayIntent",
+      "note": "Typed request owned by button",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C02",
+      "owner": "panel-rank",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "AddButton sets UButtonSlot padding",
+      "note": "No UButton::SetPadding call",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C03",
+      "owner": "panel-rank",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "SetWeightedFill assigns FSlateChildSize.Value",
+      "note": "No two-argument child-size constructor",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C04",
+      "owner": "panel-rank",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp",
+      "sha256": "7a8cdd779d45823149e927b06030eb5599107ade51c8605a8c10742d12a8e705",
+      "evidence": "MakeThemeFont uses UFont pointer/CoreStyle composite font",
+      "note": "New complete-type include risk N08 is separate",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C05",
+      "owner": "panel-journey",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "97aef118830328eac9ea41b235f0d74d61f0225b96972707f0df17f6499aca94",
+      "evidence": "Pin/milestone now UUserWidget with contained HitButton",
+      "note": "New race action component uses same composition",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C06",
+      "owner": "panel-journey",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "97aef118830328eac9ea41b235f0d74d61f0225b96972707f0df17f6499aca94",
+      "evidence": "*(FString(Name)+TEXT(\"Label\"))",
+      "note": "String concatenated before dereference",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C07",
+      "owner": "panel-activities",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "FProgressBarStyle.SetBackgroundImage + SetWidgetStyle",
+      "note": "UE5.8 exposes the used APIs",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "C08",
+      "owner": "panel-activities",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "Borrowed const delegate argument removed",
+      "note": "Typed intent relay replaces borrowed delegate",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "V01",
+      "owner": "panel-activities",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "SetColorAndOpacity(FLinearColor::White)",
+      "note": "No render evidence",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "L01",
+      "owner": "panel-activities",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "NativeOnInitialized; StablePageRoot/Frame; saved scroll offset",
+      "note": "Focus/scroll behavior still requires real Slate",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "L02",
+      "owner": "panel-rank",
+      "disposition": "resolved-in-review-v2-source",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp",
+      "sha256": "7a8cdd779d45823149e927b06030eb5599107ade51c8605a8c10742d12a8e705",
+      "evidence": "EnsureStableRoot assigns RootWidget once",
+      "note": "Repeated content reconstruction still needs runtime verification",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "L03",
+      "owner": "panel-rank + integration",
+      "disposition": "partially-resolved-source-host-open",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "ParticipantAvatarCache/AvatarImagesByParticipant/OnAvatarRequested/SetParticipantAvatar",
+      "note": "Failure latch N07 and real host async wiring remain open",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "ENTRY-01",
+      "owner": "logic-integration",
+      "disposition": "resolved-in-production-source",
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "sha256": "c670c03ad1be7223186cde390cbf9b93c790025eef9d041bb961d7e9dc7bb7ca",
+      "evidence": "EnsureFrontend loads newUI WBP and validates new Root subclass with new native fallback",
+      "note": "No saved-package or actual player entry evidence",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "ENTRY-02",
+      "owner": "logic-integration",
+      "disposition": "resolved-in-production-source",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "2ece50044aef7014029d2a8ae22bc33b8e36f357b41478f185fdf00ab644c693",
+      "evidence": "RefreshLocalPage calls BuildCharacterPage and BuildInventoryPage",
+      "note": "No rendered/player interaction evidence",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N01",
+      "owner": "panel-activities",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "evidence": "HandleStartClicked requires EventId.IsNone()==false",
+      "note": "P1: service creates ID only after known-absent start",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N02",
+      "owner": "panel-journey",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "97aef118830328eac9ea41b235f0d74d61f0225b96972707f0df17f6499aca94",
+      "evidence": "Monthly SetPresentation replaces day/month without invalidating open confirmation",
+      "note": "P2: capture exact day/month/milestone",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N03",
+      "owner": "logic-integration + panel-player",
+      "disposition": "open-source-review",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp",
+      "sha256": "3e840b8e2fb2fea0ae8c8640d6a6e381cca062f37fd2f4795d228854cb00ca18",
+      "evidence": "InventorySelect_<SlotIndex> despite EntryId widget name",
+      "note": "P2: capture visible stable EntryId at click",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N04",
+      "owner": "logic-integration + panel-journey",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "97aef118830328eac9ea41b235f0d74d61f0225b96972707f0df17f6499aca94",
+      "evidence": "/Game/newUI/Shared/Fonts differs from cleanup canonical mapping",
+      "note": "P2: align with Theme/mapped canonical package",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N05",
+      "owner": "logic-integration",
+      "disposition": "open-source-review",
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "evidence": "EnsureFeaturePage creates legacy UInkFeaturePanel classes",
+      "note": "P2: finish exact new route and host bindings; coverage is not 44",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N06",
+      "owner": "logic-integration",
+      "disposition": "open-source-review",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "2ece50044aef7014029d2a8ae22bc33b8e36f357b41478f185fdf00ab644c693",
+      "evidence": "Inventory content key excludes eligibility inputs and provider state",
+      "note": "P2: prevent stale visual disablement and wrong Data state",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N07",
+      "owner": "panel-rank",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "SetParticipantAvatar null completion returns before clearing in-flight set",
+      "note": "P2: release failed async request and permit controlled retry",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N08",
+      "owner": "panel-rank",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp",
+      "sha256": "7a8cdd779d45823149e927b06030eb5599107ade51c8605a8c10742d12a8e705",
+      "evidence": "UFont* to UObject* font constructor without defining Engine/Font.h include",
+      "note": "Build risk only; no compiler diagnostic claimed",
+      "production_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "id": "N09",
+      "owner": "panel-rank",
+      "disposition": "open-source-review",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "evidence": "ButtonLabel casts wrapper content (the button) to UTextBlock",
+      "note": "P2: resolve Button.GetContent or retain text pointer",
+      "production_verified": false,
+      "runtime_verified": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "updated_at": "2026-10-24T12:16:50.846184+08:00",
+  "phase": "first_batch_engine_verified_owned_processes_closed",
+  "owned_editor_pids": [],
+  "owned_service_pids": [],
+  "latest_build": "build-11-result.json",
+  "latest_native": "automation-03/index.json",
+  "rendered_suites": [
+    {
+      "report": "pie-07/report.json",
+      "binary_scope": "build09 full logic",
+      "checks": 76,
+      "steps": 84,
+      "sha256": "5660672526cc28c7ab2bf185b1eb58889db635482b572a571276a12bf2960449"
+    },
+    {
+      "report": "pie-04-boundaries/report.json",
+      "binary_scope": "build10 stock/replay/responsive",
+      "checks": 30,
+      "steps": 24,
+      "sha256": "82cbe61ce025d7476880b8a2b913b3c11acb9036cdaa645b83c40569bc931352"
+    },
+    {
+      "report": "pie-05-viewer/report.json",
+      "binary_scope": "build11 viewer",
+      "checks": 11,
+      "steps": 6,
+      "sha256": "adaf7599751850278f7e96e944eb7f0b8a7889b11871eeb2d17087137aff074c"
+    },
+    {
+      "report": "pie-10-frame-final/report.json",
+      "binary_scope": "build11 final frame",
+      "checks": 19,
+      "steps": 18,
+      "sha256": "805880491828bc3748506049ec129926461f78eacacdd4a90ac197ef9017bc89"
+    }
+  ],
+  "final_report": "engine-final-verification.json",
+  "unresolved_first_batch_functional": [],
+  "deferred": [
+    "Candidate HUD source-pixel nine-slice not UE accepted; measured full-image runtime fallback verified",
+    "44-screen remaining coverage and batch2 staged work remain separate; no promotion performed",
+    "User visual approval and device/Cook/package/platform/production acceptance not performed in this batch"
+  ],
+  "visual_approved": false,
+  "batch2_promoted": false,
+  "ready_for_coordinator_next_batch_review": true
+}

@@ -1,0 +1,37 @@
+{
+  "team_id": "panel-rank",
+  "phase": "batch-2-review-resolved-staged",
+  "updated_at": "2026-10-24T12:26:37+08:00",
+  "completed": [
+    "read logic-integration/screen-coverage.json, adapter-contract.md, rank/Wuling brief and current host/widget source",
+    "staged reusable leaderboard composite for Damage/CultivationSpeed/Anchor while retaining host row subtree and subscriptions",
+    "staged Wuling overview and current server-paged member-list composites using observed snapshot fields only",
+    "wrote component contract, asset inventory, page coverage, API map, composition prompt and handoff",
+    "parsed batch-2 YAML contracts and verified staged source files exist",
+    "provided narrow, unapplied host-callsite suggestions and documented responsive-layout follow-up",
+    "verified PR-01 against the existing row-selection/remove chain and revised the roster factory to reparent the original row and remove widgets",
+    "documented FRankChrome non-reflected lifetime handling, persistent rank-row/avatar preservation, and concrete adaptive-layout call sequence",
+    "recorded review disposition and outstanding integration-only verification in review-resolution.md"
+  ],
+  "remaining": [
+    "promote staged .h/.cpp only after integration source freeze and active engine batch are released",
+    "capture and wire the existing row, pager, and remove widgets in the assigned integration batch",
+    "apply canonical adaptive names or extend UpdateLeaderboardAdaptiveLayout and invoke it on rebuild/orientation changes",
+    "compile and verify routes/runtime through the engine owner",
+    "user visual review"
+  ],
+  "blockers": [
+    "logic-integration source and engine batch remain exclusive; batch-2 stays staged"
+  ],
+  "owned_files": [
+    "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-rank/batch-2/"
+  ],
+  "handoff_ready": true,
+  "engine_required": true,
+  "import_verified": false,
+  "compile_verified": false,
+  "runtime_verified": false,
+  "visual_pending_user": true,
+  "source_ready": true,
+  "assets_ready": true
+}

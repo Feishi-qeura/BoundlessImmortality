@@ -1,0 +1,69 @@
+{
+  "previous_matrix": "resolved-open-matrix-v6.json",
+  "closed_owner_v5_groups": "six settled source groups retained without re-audit",
+  "findings": [
+    {
+      "id": "V7-ENTRY-01",
+      "priority": "P1",
+      "state": "observed-open",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-04/report.json",
+      "detail": "OpenEquipmentFabao real Slate click returned None; 229 checks/17 captures; overall finished=false passed=false. Character snapshot target enabled/visible but cached 0x0; independently arranged y1539..1635 outside clip171..1244.",
+      "minimal_fix": "Integration should scroll actual Character action into view and settle layout before real Slate click, then retain failed04 and record separate passing attempt. This is evidence for an offscreen target, not proof of a broken native action binding."
+    },
+    {
+      "id": "V7-CONFIRM-01",
+      "priority": "P1",
+      "state": "source-open",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "lines": "stage fingerprint RefreshPlayer and HandlePlayerE prepare/rework branch",
+      "detail": "StageSubjectRevision is advanced only during RefreshPlayer. Confirm/submit compares payload against cached host revisions; PrepareBreakthrough freshly evaluates the current quote but never compares that quote stage to the stage confirmed by the user. A same-actor stage+valid quote replacement before the next refresh can reuse the old confirmation.",
+      "minimal_fix": "At request-confirmation and prepare/rework compare captured stage fingerprint with latest authoritative quote stage; on change advance revision, close confirmation and require new confirmation. Keep current native quote validity rules; do not add display-only completeness requirements.",
+      "frozen_source_lines": [
+        120,
+        121,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200
+      ]
+    },
+    {
+      "id": "V7-CYCLE-01",
+      "priority": "P2",
+      "state": "source-context-open",
+      "source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "detail": "DailyActivities and TimedActivities have distinct PageId hosts but RefreshActivities sends the same unfiltered Categories array to every URebuildActivitiesHubWidget. Unlike detail pages, the hub mapper neither reads PageId for daily/limited selection nor supplies selected cycle to the VM.",
+      "minimal_fix": "Carry explicit daily/limited route context into hub/list projection, or filter the authoritative categories for those two routes; retain Activities full hub. Verify actual daily and timed entries separately.",
+      "frozen_source_lines": [
+        33,
+        35
+      ]
+    },
+    {
+      "id": "V7-ASSET-01",
+      "priority": "P2",
+      "state": "source-and-disk-open",
+      "source": "runtime-component-application-v7.json",
+      "detail": "Seven current new runtime component candidates are not imported/applied: rank v3 emblem1, activities semantic icons3, player-c atlases3. Four Player main/core textures and two Journey maps imported/hash matched and bound readback. Shared CharacterAttribute texture is imported but FeaturePlayer FPageAtlases defaults all pointers null.",
+      "minimal_fix": "Integration imports only seven current candidates into canonical packages, assigns Rank Insignia / Player-c FPageAtlases, adds Activities category image field/brush mapping; also reuse existing CharacterAttribute atlas for appearance. Preserve approved:false and supply actual runtime readback."
+    },
+    {
+      "id": "V5-VERIFY-01",
+      "priority": "P1",
+      "state": "source-repaired-subset-evidence-provisional",
+      "source": "runtime-evidence-v7.json",
+      "detail": "Circular finite filter removed. Independent Slate arrangement/culling and unknown failure audited; strict subset/deliberate bad-value checks pass in failed PIE04; global geometry gate remains provisional.",
+      "minimal_fix": "Next separately recorded passing actual-entry attempt; no repeat requested for three already successful native fixtures."
+    },
+    {
+      "id": "SERVICE-ACCEPTANCE",
+      "priority": "gate",
+      "state": "open",
+      "source": "runtime-evidence-v7.json",
+      "detail": "Service-disabled display across routes does not validate actual quote/purchase/craft/guild/race mutation, real Busy transport, or server global leaderboard.",
+      "minimal_fix": "Unique integration records separately authorized real service business cases; no engine activity by this reviewer."
+    }
+  ]
+}

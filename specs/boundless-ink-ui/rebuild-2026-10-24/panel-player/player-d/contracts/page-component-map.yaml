@@ -1,0 +1,59 @@
+slice: player-d
+status: candidate
+approved: false
+shared_contracts_modified: false
+canonical_inputs:
+  style: ../../../contracts/style-contract.yaml
+  screens: ../../../contracts/screen-contract.yaml
+  briefs:
+    craft: ../../../contracts/screen-briefs/craft.md
+    item_sources: ../../../contracts/screen-briefs/item-sources.md
+  models: ../../../model/vm-contract.yaml
+  actions: ../../../model/action-contract.yaml
+  bindings: ../../../model/screen-bindings.json
+pages:
+  craft:
+    page_id: craft
+    route: WulingCraft
+    layout_version: newui-r1-craft
+    vm: [RecipeVm, InventoryVm]
+    actions: [query-recipes, craft]
+    tree: [page-frame, state-panel, back-button, catalog-card, item-detail-sheet, danger-confirm]
+    fields:
+      recipe_catalog: provider-state plus actual catalog rows
+      selected_recipe_id: stable host-owned FName
+      ingredients: actual item_id/name/count fields with per-field unknown state
+      output: actual item_id/name/count fields with per-field unknown state
+      inventory: optional read-only UInkInventoryModel view; never a client cost calculator
+    actions:
+      query-recipes: {parameters: [offset, OwnedOnly], owner: host pagination/filter state}
+      craft: {parameters: [recipe_id], confirmation_required: true, dispatch_only_after_host_confirmation: true}
+    rules:
+      - No generated recipe, cost, ingredient formula, or output.
+      - Eligibility and atomic ownership/cost/output validation remain server-owned.
+      - Missing displayed ingredients do not disable an otherwise authorized request.
+  item-sources:
+    page_id: item-sources
+    route: ItemSources
+    layout_version: newui-r1-item-sources
+    vm: [ItemSourceVm]
+    actions: [query-sources, choose-focus]
+    tree: [page-frame, state-panel, back-button, data-row, activity-entry]
+    fields: [itemId, sources, selectedSourceId]
+    source_row_fields: [source_id, item_id, method, source]
+    actions:
+      query-sources: {parameters: [offset, OwnedOnly], owner: host pagination/filter state}
+      choose-focus: {parameters: [source_id, item_id], allowed_method: fixed_selected_reward}
+    rules:
+      - Source information is not a claim or reward entitlement.
+      - A non-fixed source remains viewable even when ChooseFocus is unavailable.
+layout:
+  portrait: 720x1280; fixed header/footer; middle scrolls; safe inset 24; minimum hit area 88x88
+  landscape: 1280x720 reflow to list/detail columns; never scale the portrait page
+style_injection:
+  colors: canonical style-contract palette
+  fonts: MaShanZheng title/display and LXGWWenKai section/body/button/secondary from the newUI host
+  text_and_values: live UMG widgets only
+assets:
+  new_transparent_art_generated: false
+  reason: Real provider icons are optional per row; no page-specific semantic fallback is needed.

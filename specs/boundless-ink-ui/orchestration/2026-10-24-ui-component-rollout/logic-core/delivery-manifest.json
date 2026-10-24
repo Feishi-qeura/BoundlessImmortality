@@ -1,0 +1,44 @@
+{
+  "team_id": "logic-core",
+  "updated_at": "2026-10-24T10:00:27.1716959+08:00",
+  "source_files": [
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapter.cpp",
+      "sha256": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa",
+      "bytes": 20291
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapter.h",
+      "sha256": "f38f5ff999b38ca71b78303266246384add3076511b30c5ffd665105c33be473",
+      "bytes": 2927
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapterTests.cpp",
+      "sha256": "9c175c4fc41fdab82efc5de4796d424f60ab068f7ef7da0b94abfdf44eac0e91",
+      "bytes": 8923
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreMaterialBinding.cpp",
+      "sha256": "71fd4888eab446a8682957e00ec6ba79fa8a3ab54754fad07ed8c1ff4a5f5f41",
+      "bytes": 5375
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreMaterialBinding.h",
+      "sha256": "95805e449828fdbf33fa95d1dc1f27144c266dbde7ab17bd164cd511d7b63b75",
+      "bytes": 1484
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCorePolicy.h",
+      "sha256": "d835ab9cba35056a5fe5bf55290340f873226984a94e01ac36cad73af29a02e3",
+      "bytes": 2243
+    }
+  ],
+  "native_automation_tests": 4,
+  "policy_checks": 41,
+  "service_tests": 40,
+  "source_frozen": true,
+  "engine_build_run": false,
+  "native_automation_run": false,
+  "route_wired": false,
+  "approved": false
+}

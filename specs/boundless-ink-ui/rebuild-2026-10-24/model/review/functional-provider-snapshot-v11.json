@@ -1,0 +1,54 @@
+{
+  "request": "CA685CDE4B28663A24D8D8A09EA530EB",
+  "version": 72,
+  "identity": {
+    "generation": 19,
+    "role": "anchor",
+    "room": "newui-room-02",
+    "user": "newui-anchor-02"
+  },
+  "activities_summary": {
+    "signed": true,
+    "month_sign_count": 1,
+    "month": null,
+    "day": "2026-10-24"
+  },
+  "eligible_monthly_chests": [],
+  "provider_presence": {
+    "race": {
+      "field_present": true,
+      "nonempty": false
+    },
+    "race_queue": {
+      "field_present": true,
+      "nonempty": false
+    },
+    "launch": {
+      "field_present": true,
+      "nonempty": false
+    },
+    "launch_event": {
+      "field_present": false,
+      "nonempty": false
+    },
+    "offline_reward": {
+      "field_present": true,
+      "nonempty": false
+    },
+    "fortune": {
+      "field_present": false,
+      "nonempty": false
+    },
+    "global_leaderboard": {
+      "field_present": false,
+      "nonempty": false
+    }
+  },
+  "manifest": {
+    "profile": "prototype_full",
+    "rule_version": "wuling-prototype-v1.4.0",
+    "window_end": 1795420281.157416
+  },
+  "server_utc": 1792833508.230052,
+  "own_guild": true
+}

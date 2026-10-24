@@ -1,0 +1,196 @@
+{
+  "team_id": "logic-core",
+  "task": "batch-2-readonly-preintegration-review",
+  "phase": "handoff-ready",
+  "updated_at": "2026-10-24T12:14:30.0500845+08:00",
+  "review_mode": "static_source_and_actual_UE5.8_public_headers",
+  "handoff_ready": true,
+  "ready_for_direct_promotion": false,
+  "source_or_content_changed": false,
+  "other_team_staging_changed": false,
+  "first_batch_or_production_data_changed": false,
+  "engine_started": false,
+  "ubt_run": false,
+  "uht_run": false,
+  "test_suites_run": false,
+  "images_read": false,
+  "compiled_verified": false,
+  "runtime_verified": false,
+  "unapplied_patch_generated": false,
+  "reviewed_staged_source_files": [
+    {
+      "team_id": "panel-player",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-player\\batch-2\\staged-source\\Frontend\\UiRollout20261024\\Player\\InkPlayerMenuPageWidgets.cpp",
+      "sha256": "94a812fed69a1d72fc766f925c2eaed484754e12d7b72a05b897015ee1117c7c"
+    },
+    {
+      "team_id": "panel-player",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-player\\batch-2\\staged-source\\Frontend\\UiRollout20261024\\Player\\InkPlayerMenuPageWidgets.h",
+      "sha256": "3bb875323fa9388b7bc56207ad92963b98943bf639239e0688e93b18bb08c2e3"
+    },
+    {
+      "team_id": "panel-rank",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-rank\\batch-2\\staged-source\\InkRankWulingCompositeViews.cpp",
+      "sha256": "e2d3c64ca4ca3bfc11eb56d7e40881a2dfaf0921cc8f1c318fa6c5507cdce74e"
+    },
+    {
+      "team_id": "panel-rank",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-rank\\batch-2\\staged-source\\InkRankWulingCompositeViews.h",
+      "sha256": "e107f315b15b4506fe189f21ad555d7e34dfefd637a4220ffa3da2555c676e85"
+    },
+    {
+      "team_id": "panel-journey",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-journey\\batch-2\\staged-source\\InkJourneyBatch2Widgets.cpp",
+      "sha256": "f4c66b445c19d4bde983c5574902b59c2db50187f73693260469da46b89b7072"
+    },
+    {
+      "team_id": "panel-journey",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-journey\\batch-2\\staged-source\\InkJourneyBatch2Widgets.h",
+      "sha256": "8e764cfa72de874532ebd6910d9df4ed94f3f827bce5cf076a6eb6c4879dcad2"
+    },
+    {
+      "team_id": "panel-activities",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-activities\\batch-2\\staged-source\\InkActivitiesBatch2Panels.cpp",
+      "sha256": "06ea4485fc19964b171c6953141e6117b0acce448f9d304831a6ba4ac48fe620"
+    },
+    {
+      "team_id": "panel-activities",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\panel-activities\\batch-2\\staged-source\\InkActivitiesBatch2Panels.h",
+      "sha256": "453f3db46ff072b3154bd3416f4b18274350de60235d76f1ed1b9a8c0a53cdd0"
+    }
+  ],
+  "public_header_root": "F:/unreal/UE_5.8/UE_5.8/Engine/Source",
+  "findings": [
+    {
+      "priority": 1,
+      "id": "PP-01",
+      "team": "panel-player",
+      "kind": "confirmed_include_path_blocker"
+    },
+    {
+      "priority": 2,
+      "id": "PP-02",
+      "team": "panel-player",
+      "kind": "confirmed_public_timezone_contract_violation"
+    },
+    {
+      "priority": 2,
+      "id": "PP-03",
+      "team": "panel-player",
+      "kind": "confirmed_visible_field_regression_under_proposal"
+    },
+    {
+      "priority": 1,
+      "id": "PR-01",
+      "team": "panel-rank",
+      "kind": "confirmed_management_selection_loss_if_list_replaced"
+    },
+    {
+      "priority": 1,
+      "id": "PJ-01",
+      "team": "panel-journey",
+      "kind": "public_lifecycle_based_runtime_risk_not_reproduced"
+    },
+    {
+      "priority": 1,
+      "id": "PJ-02",
+      "team": "panel-journey",
+      "kind": "confirmed_host_route_type_gap"
+    },
+    {
+      "priority": 2,
+      "id": "PJ-03",
+      "team": "panel-journey",
+      "kind": "confirmed_setter_reset_conditional_host_impact"
+    },
+    {
+      "priority": 1,
+      "id": "PA-01",
+      "team": "panel-activities",
+      "kind": "confirmed_unqualified_enum_name_blocker"
+    },
+    {
+      "priority": 1,
+      "id": "PA-02",
+      "team": "panel-activities",
+      "kind": "confirmed_inherited_refresh_early_return"
+    },
+    {
+      "priority": 2,
+      "id": "PA-03",
+      "team": "panel-activities",
+      "kind": "confirmed_array_read_as_number"
+    }
+  ],
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "handoff_read": true,
+      "source_files_read": 2,
+      "compile_blockers": [
+        "PP-01"
+      ],
+      "integration_findings": [
+        "PP-02",
+        "PP-03"
+      ]
+    },
+    {
+      "team_id": "panel-rank",
+      "handoff_read": true,
+      "source_files_read": 2,
+      "compile_blockers": [],
+      "integration_findings": [
+        "PR-01"
+      ],
+      "native_plain_struct_reflection_caution": true,
+      "no_confirmed_avatar_or_subscription_loss_in_reparent_helper": true
+    },
+    {
+      "team_id": "panel-journey",
+      "handoff_read": true,
+      "source_files_read": 2,
+      "compile_blockers": [],
+      "integration_findings": [
+        "PJ-02"
+      ],
+      "unrun_runtime_risks": [
+        "PJ-01",
+        "PJ-03"
+      ]
+    },
+    {
+      "team_id": "panel-activities",
+      "handoff_read": false,
+      "handoff_missing": true,
+      "fallback_documents_read": [
+        "status.json",
+        "merge-plan.md",
+        "field-action-mapping.md"
+      ],
+      "source_files_read": 2,
+      "compile_blockers": [
+        "PA-01"
+      ],
+      "integration_findings": [
+        "PA-02",
+        "PA-03"
+      ]
+    }
+  ],
+  "outputs": [
+    "review.md",
+    "readiness.json"
+  ],
+  "next_action": "Supervisor forwards specific fixes; sole integration executor promotes after freeze release and performs focused compile/runtime checks",
+  "unverified": [
+    "UHT/UBT",
+    "saved WBP trees",
+    "Slate first render and remount",
+    "GC and delegate lifetime",
+    "asynchronous avatars",
+    "back navigation stack",
+    "nonempty authority data and day rollover",
+    "reward receipt source matching"
+  ]
+}

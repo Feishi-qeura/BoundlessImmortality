@@ -1,0 +1,102 @@
+{
+  "source26_epoch": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "actual_world_pin_buttons": 8,
+  "unique_object_count": 8,
+  "expected_painted_count": 8,
+  "enabled_count": 8,
+  "arranged_positive_paint_count": 8,
+  "buttons": [
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_56.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "青云山"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_57.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "落霞谷"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_58.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "玄铁岭"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_59.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "玄冰原"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_60.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "妖兽林"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_61.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "赤炎洲"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_62.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "星陨台"
+    },
+    {
+      "name": "JourneyPinHitButton",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_1.WidgetTree.InkJourneyMapPinButton_63.WidgetTree.JourneyPinHitButton",
+      "visible": true,
+      "enabled": true,
+      "paint_expectation": "expected",
+      "geometry_arranged": true,
+      "painted_width": 130,
+      "painted_height": 88,
+      "label": "太虚境"
+    }
+  ],
+  "producer": "Editor Visit recursively crosses each nested UUserWidget WidgetTree with Visited guard; inner UButton emitted, wrapper is not substituted as hit target",
+  "callback_source": "Pin.HitButton.OnClicked -> HandleClicked -> OnEntryPressed(EntryId); page binding -> HandlePinSelected -> SelectedEntryId/OnEntrySelected",
+  "actual_pin_click_callback_runtime_exercised_by_this_proof": false,
+  "scope": "real nested UButton existence/expected paint + static callback chain; not automatic proof that every pin was clicked or travelled"
+}

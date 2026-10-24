@@ -1,0 +1,42 @@
+{
+  "team": "panel-player",
+  "slice": "player-d",
+  "updated_at": "2026-10-24T13:23:00+08:00",
+  "approval": "approved:false",
+  "production_source_modified": false,
+  "production_content_modified": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "files": [
+    {
+      "path": "contracts/action-adapter.yaml",
+      "bytes": 2308,
+      "sha256": "69B98D244A2A91D4783704DBC01B010AA9B71A9DDDB3F0C22721FBBDB47811AB"
+    },
+    {
+      "path": "contracts/page-component-map.yaml",
+      "bytes": 2812,
+      "sha256": "12520DC79F96EB2927324671BC06C9773EF63B0EDAB426B6D80FC362F8BDA533"
+    },
+    {
+      "path": "execution-basis.md",
+      "bytes": 2510,
+      "sha256": "461B4A0626BEC0274C608D9A84CE813CC71B449CB9EBAD97193197C11C2EB890"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 2113,
+      "sha256": "745E00F85969B743289BD191CA82CCDC343BEE8DAD93D5796856F303A45010FC"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.cpp",
+      "bytes": 17726,
+      "sha256": "2556D05F2A294FA0148AA947D11153702A8513A120E9801AAFC331C30289B4F8"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.h",
+      "bytes": 3761,
+      "sha256": "15AEEA0FC79CF62E1160192DD8326069CB20F0578E8618F7A8E46FAD835D8DB4"
+    }
+  ]
+}

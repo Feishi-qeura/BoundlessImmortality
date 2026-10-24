@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-10-24T11:40:10+08:00",
+  "phase": "handoff-ready",
+  "approved": false,
+  "scope": [
+    "resource-detail",
+    "world-result",
+    "race-result",
+    "shared-settlement-card"
+  ],
+  "source_ready": true,
+  "staged_source_only": true,
+  "assets_required": false,
+  "assets_ready": true,
+  "import_verified": false,
+  "source_compiled": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "visual_pending_user": true,
+  "runtime_verified": false,
+  "engine_lease_active": true,
+  "batch2_promotion_authorized": false,
+  "files": [
+    "staged-source/InkJourneyBatch2Widgets.h",
+    "staged-source/InkJourneyBatch2Widgets.cpp",
+    "page-concepts.md",
+    "prompts/no-raster-required.md",
+    "component-to-control.csv",
+    "handoff.md"
+  ],
+  "notes": [
+    "All writes are contained in batch-2.",
+    "Source has not been UHT/UBT compiled.",
+    "No Editor, UBT, import, Content, shared-source, route, PIE, device, or package operations were performed.",
+    "Result rows are presentation-only and must be mapped from authoritative snapshots by the host."
+  ],
+  "team_id": "panel-journey",
+  "batch": "batch-2",
+  "handoff_ready": true,
+  "source_only": true,
+  "owned_files": [
+    "status.json",
+    "handoff.md",
+    "page-concepts.md",
+    "component-to-control.csv",
+    "prompts/no-raster-required.md",
+    "staged-source/InkJourneyBatch2Widgets.h",
+    "staged-source/InkJourneyBatch2Widgets.cpp"
+  ],
+  "completed": [
+    "Resource detail, world result, race result, and shared settlement card staged",
+    "Authority and action boundaries documented",
+    "No new raster assets required"
+  ],
+  "remaining": [
+    "UHT/UBT compile after lease release and explicit promotion authorization",
+    "Host data mapping and route wiring after authorized promotion",
+    "Logic/runtime verification and user visual review"
+  ],
+  "blockers": [
+    "Active engine lease; batch2_promotion_authorized=false"
+  ]
+}

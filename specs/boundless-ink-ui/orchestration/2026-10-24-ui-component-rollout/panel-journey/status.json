@@ -1,0 +1,37 @@
+{
+  "team_id": "panel-journey",
+  "phase": "handoff-ready",
+  "updated_at": "2026-10-24T10:00:50+08:00",
+  "completed": [
+    "读取rollout README并遵守文件所有权和engine lease",
+    "核对parallel-maps-signin v2候选地图/签到语义及源图原始hash",
+    "发现每日签到/每日一签混排并按互斥状态拆分语义",
+    "生成、像素切分、复查并实测11枚透明RGBA组件",
+    "创建三种可拼装UMG组件类与明确的交互/权威数据API",
+    "完成四图五页覆盖表、组件契约、sprite/导入manifest、Editor导入脚本、ZIP与quickstart",
+    "资产/manifest/API静态验证与ZIP CRC通过"
+  ],
+  "remaining": [
+    "唯一logic-integration执行UE Editor导入并回读AssetRegistry/Texture2D设置",
+    "唯一logic-integration将组件接到现有路由/WidgetTree并接真实字段/回调",
+    "每日一签路由名称与当前每日剑诀页面语义由接入者协调",
+    "在目标页面做本批真实逻辑/路由运行验证",
+    "用户视觉审核；保持全部候选approved:false"
+  ],
+  "blockers": [
+    "需logic-integration独占engine lease后才能导入或改公共路由/现有页面源码",
+    "当前activity snapshot适配代码未见daily_fortune、claimable_days或missed字段；保持unknown，不推算"
+  ],
+  "owned_files": [
+    "specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-journey/**",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/**"
+  ],
+  "handoff_ready": true,
+  "engine_required": true,
+  "source_ready": true,
+  "assets_ready": true,
+  "import_verified": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "visual_pending_user": true
+}

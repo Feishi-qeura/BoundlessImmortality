@@ -1,0 +1,24 @@
+{
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-GWLocalTest",
+    "-WulingPrototype",
+    "-WulingUrl=http://127.0.0.1:56536",
+    "-WulingApp=NewUIHostAcceptance20261024",
+    "-WulingRoom=newui-room-02",
+    "-WulingUser=newui-anchor-02",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-default-pie11",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/default-root-pie-11.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_all44_default_pie_11.py",
+    "-NewUIDefaultPIEAttempt=11"
+  ],
+  "scope": "build26 full44 actual service; actual nested map pin hit-buttons",
+  "started_at": "2026-10-24T16:46:32.0349185+08:00",
+  "pid": 44860
+}

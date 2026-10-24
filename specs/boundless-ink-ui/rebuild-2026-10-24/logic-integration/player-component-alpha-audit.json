@@ -1,0 +1,82 @@
+[
+  {
+    "path": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\character-attribute-glyph-atlas-component-v1.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_fraction": 0.5124730050441458,
+    "under16_fraction": 0.7289184974906455,
+    "over240_fraction": 0.1938485840525629,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "path": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\hud-route-glyph-atlas-component-v1.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "transparent_fraction": 0.6025753021240234,
+    "under16_fraction": 0.6863352457682291,
+    "over240_fraction": 0.27496782938639325,
+    "corner_alpha": [
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "path": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\inventory-category-glyph-atlas-component-v1.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "transparent_fraction": 0.5503451029459635,
+    "under16_fraction": 0.6251595815022787,
+    "over240_fraction": 0.33729807535807294,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "path": "specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\main-action-ornament-component-v1.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "transparent_fraction": 0.82496394313317,
+    "under16_fraction": 0.8537700093353581,
+    "over240_fraction": 0.13334490714243924,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

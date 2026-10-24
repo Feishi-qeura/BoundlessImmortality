@@ -1,0 +1,8 @@
+{
+  "pid": 42704,
+  "identity_verified": true,
+  "close_sent": true,
+  "requested_at": "2026-10-24T17:03:26.6840966+08:00",
+  "method": "CloseMainWindow normal WM_CLOSE",
+  "reason": "User changed final target to portrait-only9:16; cancel superseded landscape validation"
+}

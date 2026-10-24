@@ -1,0 +1,83 @@
+slice: review-v5
+approved: false
+overlay_only: true
+replaces_contract: ../../player-e/contracts/action-adapter.yaml#pages.breakthrough
+page_id: breakthrough
+route: BreakthroughPrepare
+owner: logic-integration
+purpose: Bind first-click confirmation to the exact authority stage/realm, selected materials, and mode without making display completeness a permission gate.
+typed_overlay:
+  FActionPayload:
+    add:
+      StageSubjectRevision: uint64
+  FBreakthroughVm:
+    add:
+      StageSubjectRevision: uint64
+      ConfirmationStageSubjectRevision: uint64
+    existing_capture_fields:
+      - ConfirmationSelectionRevision
+      - ConfirmationReworkMode
+      - bConfirmationOpen
+revision_contract:
+  StageSubjectRevision:
+    owner: logic-integration host
+    changes_when:
+      - authority stage_id changes
+      - authority from_realm_index changes
+      - authority to_realm_index changes
+    properties:
+      monotonic_for_active_page_lifetime: true
+      initial_zero_is_valid: true
+      independent_of_display_known_flags: true
+      derived_from_actual_authority_subject: true
+  SelectionRevision:
+    owner: logic-integration host
+    changes_when: actual material selection map changes
+  mode:
+    value: actual current rework_mode boolean
+confirmation:
+  first_click:
+    intent: ui.breakthrough.request-confirmation
+    carries: [StageSubjectRevision, SelectionRevision, rework_mode]
+    host_captures:
+      - actual stage_id/from_realm_index/to_realm_index tuple
+      - StageSubjectRevision
+      - actual selected item_id/count map and SelectionRevision
+      - rework_mode
+    stale_request: reject and refresh if either revision differs from current host state
+    result: set bConfirmationOpen and return all captured confirmation fields
+  visible_confirmation_requires:
+    - bConfirmationOpen
+    - ConfirmationStageSubjectRevision equals current StageSubjectRevision
+    - ConfirmationSelectionRevision equals current SelectionRevision
+    - ConfirmationReworkMode equals current rework_mode
+  subject_change:
+    - increment StageSubjectRevision whenever the authority stage/realm tuple changes, even if material selection and SelectionRevision do not change
+    - invalidate/close the captured confirmation on stage/realm, selection, or mode change
+  second_click:
+    payload_carries: [captured StageSubjectRevision, captured SelectionRevision, captured rework_mode]
+    compare_against:
+      - current host revisions
+      - freshly read authority stage/realm tuple captured by the host at first click
+      - current actual material selection map
+      - current rework_mode
+    dispatch_only_if_all_match: true
+    then_revalidate_fresh_authority_eligibility: true
+    on_mismatch: invalidate confirmation and require a new first click
+    never_substitute: current stage/selection/mode for the user's captured confirmation
+commands:
+  quote-breakthrough:
+    confirmation_required: false
+  prepare-breakthrough:
+    confirmation_required: true
+    action_availability: bPrepareAvailable from current host/native evaluation
+  rework-quality:
+    confirmation_required: true
+    action_availability: bReworkAvailable from current host/native evaluation
+preserve_unknown_display:
+  - Do not require StageId/from/to display known flags, q_normalized, readiness, slots, sources, or growth range to show/enable a host-authorized Prepare/Rework action.
+  - StageSubjectRevision is an internal confirmation identity, not a displayed business value or command parameter.
+  - If the native host reports the action available, allow the first click even while optional quote fields display unknown.
+  - Re-check canonical eligibility on the second click; fresh eligibility does not replace same-subject confirmation.
+canonical_commands_unchanged: true
+source_modified: false

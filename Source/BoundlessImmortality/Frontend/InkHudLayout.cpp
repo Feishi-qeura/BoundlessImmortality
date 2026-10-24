@@ -2,6 +2,7 @@
 #include "InkAnchorStatusWidget.h"
 #include "InkPresentationStyle.h"
 #include "InkHomeArt.h"
+#include "Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h"
 #include "Components/ScaleBox.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
@@ -25,6 +26,9 @@ void UInkFrontendWidget::EnsureExtensionPages()
     if(IsDesignTime()||!WidgetTree||bRuntimeHudBuilt)return;
     auto* HUD=Cast<UCanvasPanel>(GetWidgetFromName(TEXT("HUDPage")));if(!HUD)return;
     bRuntimeHudBuilt=true;
+    auto* LaunchCountdown=CreateWidget<UInkIntegratedLaunchCountdown>(GetOwningPlayer());
+    LaunchCountdown->Rename(TEXT("RolloutHUDLaunchCountdown"),WidgetTree);
+    HUD->AddChildToCanvas(LaunchCountdown)->SetZOrder(4);LaunchCountdown->Configure(this);
     if(!AnchorStatusWidget)
     {
         AnchorStatusWidget=CreateWidget<UInkAnchorStatusWidget>(GetOwningPlayer());
@@ -182,4 +186,11 @@ void UInkFrontendWidget::UpdateAdaptiveHudLayout()
         const auto Rect=R.TopActions[I];
         Place(GetWidgetFromName(Top[I]),Rect);
     }
+    float ShortcutLeft=Size.X,ShortcutBottom=0;
+    for(const auto& Rect:R.TopActions){ShortcutLeft=FMath::Min(ShortcutLeft,Rect.Left);ShortcutBottom=FMath::Max(ShortcutBottom,Rect.Bottom);}
+    const bool FitsBesideShortcuts=ShortcutLeft-R.Identity.Left>=212.f;
+    const float CountdownX=FitsBesideShortcuts?ShortcutLeft-212.f:R.Identity.Left;
+    const float CountdownY=FMath::Max(float(R.Announcement.Bottom),FitsBesideShortcuts?float(R.Identity.Bottom):ShortcutBottom)+12.f;
+    const float CountdownW=FMath::Min(200.f,float(Size.X-R.Identity.Left*2));
+    Place(GetWidgetFromName(TEXT("RolloutHUDLaunchCountdown")),FSlateRect(CountdownX,CountdownY,CountdownX+CountdownW,CountdownY+80));
 }

@@ -9,13 +9,70 @@
 
 using ESurface=InkPresentationStyle::ESurface;
 
+namespace
+{
+TArray<TSharedPtr<FJsonObject>> ActivityTemplatesForCycle(const TSharedPtr<FJsonObject>& Activities,const TCHAR* Cycle)
+{
+    TArray<TSharedPtr<FJsonObject>> Matches;
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities||!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return Matches;
+    for(const auto& Value:*Templates)
+    {
+        const auto Row=Value.IsValid()?Value->AsObject():nullptr;
+        if(Row&&WulingFrontendData::String(Row,TEXT("cycle"))==Cycle)Matches.Add(Row);
+    }
+    return Matches;
+}
+
+FString ActivityTemplateField(const TSharedPtr<FJsonObject>& Row,const TCHAR* Key)
+{
+    FString Value;
+    return Row&&Row->TryGetStringField(Key,Value)&&!Value.IsEmpty()?Value:TEXT("待同步");
+}
+
+FString ActivityTemplateEnabled(const TSharedPtr<FJsonObject>& Row)
+{
+    bool Enabled=false;
+    if(!Row||!Row->TryGetBoolField(TEXT("enabled"),Enabled))return TEXT("启用状态待同步");
+    return Enabled?TEXT("已启用"):TEXT("当前未启用");
+}
+
+FString ActivityCycleDisplay(const TSharedPtr<FJsonObject>& Row)
+{
+    const FString Cycle=WulingFrontendData::String(Row,TEXT("cycle"));
+    if(Cycle==TEXT("daily"))return TEXT("日常");
+    if(Cycle==TEXT("limited"))return TEXT("限时");
+    if(Cycle==TEXT("permanent"))return TEXT("常驻");
+    return TEXT("待同步");
+}
+
+FString ActivityAuthorityState(const UWulingPrototypeSubsystem* Service,const TSharedPtr<FJsonObject>& Activities)
+{
+    if(!Service||!Service->IsEnabled())return TEXT("活动配置尚未同步，请连接活动服务后查看。");
+    if(!Service->IsConnected())return TEXT("活动服务未连接，活动配置尚未同步。");
+    if(!Activities)return TEXT("活动资料正在同步。");
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return TEXT("服务暂未提供活动配置。");
+    return FString();
+}
+
+bool HasActivityTemplateList(const TSharedPtr<FJsonObject>& Activities)
+{
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    return Activities&&Activities->TryGetArrayField(TEXT("templates"),Templates)&&Templates;
+}
+}
+
 void UInkDailyFortunePanel::BuildPanelContent()
 {
     const auto A=WulingFrontendData::Activity(this);
     const bool Wide=!bPortraitLayout&&BodyWidth>=800;
     const float ArtW=Wide?BodyWidth*.38f:BodyWidth,ArtH=368.f;
     Scene(BodyCanvas,1,0,0,ArtW,ArtH);
-    const FString Verse=A?WulingFrontendData::String(A,TEXT("verse")):(bFortuneDrawn?TEXT("云开月明\n静心自有前程"):TEXT("一念清明\n问道今日仙缘"));
+    const FString AwaitingAuthority=TEXT("服务未提供/待同步");
+    const FString Verse=WulingFrontendData::String(A,TEXT("verse"));
+    bool Signed=false;const bool HasSigned=A&&A->TryGetBoolField(TEXT("signed"),Signed);
+    const FString SignStatus=HasSigned?(Signed?TEXT("今日已签到"):TEXT("今日未签到")):FString(TEXT("签到状态："))+AwaitingAuthority;
     TArray<FString> Lines;Verse.Replace(TEXT("，"),TEXT("\n")).ParseIntoArrayLines(Lines,true);
     const float SealW=220,SealX=(ArtW-SealW)*.5f;
     auto* VerseSlip=Surface(BodyCanvas,TEXT("FortuneVerseSlip"),ESurface::Card,SealX,0,SealW,352);
@@ -26,69 +83,136 @@ void UInkDailyFortunePanel::BuildPanelContent()
     }
     else Label(BodyCanvas,TEXT("FortuneVerticalVerse"),TEXT("每\n日\n剑\n诀"),SealX+60,32,100,288,40,true);
     const float X=Wide?ArtW+32:0,Y=Wide?0:ArtH+16,W=BodyWidth-X;
-    Label(BodyCanvas,TEXT("FortuneHeading"),A?WulingFrontendData::String(A,TEXT("day"))+TEXT(" · 今日剑诀"):TEXT("每日剑诀 · 开发预览"),X,Y,W,64,32);
-    Label(BodyCanvas,TEXT("FortuneVerse"),Verse,X+24,Y+88,W-48,180,40);
-    Label(BodyCanvas,TEXT("FortuneDescription"),A?TEXT("今日剑诀已由服务确认\n静心读诀，无数值奖励。"):TEXT("固定剑诀预览\n日期和正式内容等待服务同步，无数值奖励。"),X,Y+300,W,112,26);
-    if(!A)Action(BodyCanvas,TEXT("Demo_Fortune"),bFortuneDrawn?TEXT("再读剑诀"):TEXT("查看剑诀"),X,Y+436,W,88,true);
+    const FString Day=WulingFrontendData::String(A,TEXT("day"));
+    Label(BodyCanvas,TEXT("FortuneHeading"),FString(TEXT("服务日期："))+(Day.IsEmpty()?AwaitingAuthority:Day)+TEXT(" · 每日剑诀"),X,Y,W,64,30);
+    Label(BodyCanvas,TEXT("FortuneVerse"),Verse.IsEmpty()?FString(TEXT("剑诀内容："))+AwaitingAuthority:Verse,X+24,Y+88,W-48,180,38);
+    Label(BodyCanvas,TEXT("FortuneResult"),FString(TEXT("每日一签/吉凶结果："))+AwaitingAuthority,X,Y+280,W,72,24);
+    Label(BodyCanvas,TEXT("FortuneDescription"),SignStatus+TEXT("\n奖励：")+AwaitingAuthority,X,Y+364,W,104,24);
 }
 void UInkDailyFortunePanel::HandlePanelAction(const FString& Id)
-{if(Id==TEXT("Demo_Fortune")){bFortuneDrawn=true;RebuildPanel();FeedbackMessage(TEXT("固定剑诀预览 · 无数值奖励"));return;}Super::HandlePanelAction(Id);}
+{Super::HandlePanelAction(Id);}
 
 void UInkActivitiesPanel::BuildPanelContent()
 {
-    Link(BodyCanvas,TEXT("DailyActivities"),TEXT("日常活动"),TEXT("历练与奖励 · 查看当前可用行动"),2,0,0,BodyWidth,176);
-    Link(BodyCanvas,TEXT("TimedActivities"),TEXT("限时活动"),TEXT("周期与开放条件以实际配置为准"),7,0,192,BodyWidth,176);
+	const auto Activities=WulingFrontendData::Activity(this);
+	const auto* Service=WulingFrontendData::Service(this);
+	const FString State=ActivityAuthorityState(Service,Activities);
+	Surface(BodyCanvas,TEXT("ActivityCenterHeadingPaper"),ESurface::FeatureHeading,0,0,BodyWidth,62);
+	Label(BodyCanvas,TEXT("ActivityCenterHeading"),TEXT("活动分类"),16,8,BodyWidth-32,44,32);
+	Surface(BodyCanvas,TEXT("ActivityCenterAuthorityPaper"),ESurface::FeatureCard,0,72,BodyWidth,84);
+	Label(BodyCanvas,TEXT("ActivityCenterAuthority"),State.IsEmpty()?TEXT("活动状态由服务端快照确认；未提供的进度、奖励和领取状态保持空态。"):State,16,80,BodyWidth-32,68,20);
+	const float CardH=136.f,Gap=12.f;
+	const float CardW=(BodyWidth-Gap)*.5f;
+	const struct FActivityEntry { const TCHAR* Route; const TCHAR* Title; const TCHAR* Caption; } Entries[]={
+		{TEXT("DailyActivities"),TEXT("日常活动"),TEXT("活动目标和进度待同步")},
+		{TEXT("TimedActivities"),TEXT("限时活动"),TEXT("开放时间与进度待同步")},
+		{TEXT("PermanentActivities"),TEXT("常驻活动"),TEXT("仅显示明确标为 permanent 的条目")},
+		{TEXT("LaunchEvent"),TEXT("开服活动"),TEXT("状态、任务与截止时间以服务记录为准")}};
+	for(int32 I=0;I<UE_ARRAY_COUNT(Entries);++I)
+	{
+		const float X=(I%2)*(CardW+Gap),Y=172.f+(I/2)*(CardH+Gap);
+		Surface(BodyCanvas,NAME_None,ESurface::FeatureCard,X,Y,CardW,CardH);
+		Surface(BodyCanvas,NAME_None,ESurface::FeatureHeading,X+8,Y+8,CardW-16,48);
+		Label(BodyCanvas,NAME_None,Entries[I].Title,X+16,Y+10,CardW-32,42,27);
+		Label(BodyCanvas,NAME_None,Entries[I].Caption,X+16,Y+60,CardW-32,64,19);
+		Action(BodyCanvas,FString(TEXT("Open_"))+Entries[I].Route,TEXT("查看"),X+CardW-112,Y+88,96,40,true);
+	}
 }
 void UInkDailyActivitiesPanel::BuildPanelContent()
 {
     const bool Wide=!bPortraitLayout&&BodyWidth>=800;
     auto* Service=WulingFrontendData::Service(this);
+    const auto Activities=WulingFrontendData::Activity(this);
+    const FString AuthorityState=ActivityAuthorityState(Service,Activities);
+    const auto Daily=ActivityTemplatesForCycle(Activities,TEXT("daily"));
+    Surface(BodyCanvas,TEXT("DailyHeadingPaper"),ESurface::FeatureHeading,0,0,BodyWidth,54);
+    Label(BodyCanvas,TEXT("DailyHeading"),TEXT("日常活动"),12,4,BodyWidth-24,46,32);
+    Surface(BodyCanvas,TEXT("DailyAuthorityPaper"),ESurface::FeatureCard,0,58,BodyWidth,92);
+    if(!AuthorityState.IsEmpty())
+        Label(BodyCanvas,TEXT("DailyAuthorityStatus"),AuthorityState,16,68,BodyWidth-32,72,21);
+    else
+        Label(BodyCanvas,TEXT("DailyClassificationNote"),TEXT("仅显示 cycle=daily；event 与 relative_guild_creation 不归入日常或限时。"),16,68,BodyWidth-32,72,18);
+    float Y=166;
+    if(HasActivityTemplateList(Activities))
+    {
+        if(Daily.IsEmpty())
+        {
+            Surface(BodyCanvas,TEXT("DailyTemplateEmptyPaper"),ESurface::FeatureCard,0,Y,BodyWidth,76);
+            Label(BodyCanvas,TEXT("DailyTemplateEmpty"),TEXT("暂无日常活动配置。"),16,Y+16,BodyWidth-32,44,23);
+        }
+        else
+        {
+            const int32 Columns=Wide?2:1;const float CardW=(BodyWidth-(Columns-1)*20)/Columns,CardH=216;
+            for(int32 I=0;I<Daily.Num();++I)
+            {
+                const auto& Row=Daily[I];const FString Id=WulingFrontendData::String(Row,TEXT("activity_id"));
+                const float X=(I%Columns)*(CardW+20),CardY=Y+(I/Columns)*(CardH+16);
+                Surface(BodyCanvas,NAME_None,ESurface::FeatureCard,X,CardY,CardW,CardH);
+                Surface(BodyCanvas,NAME_None,ESurface::FeatureHeading,X+8,CardY+8,CardW-16,48);
+                Label(BodyCanvas,NAME_None,ActivityTemplateField(Row,TEXT("name")),X+16,CardY+12,CardW-32,40,27);
+                Label(BodyCanvas,NAME_None,FString(TEXT("编号："))+Id+TEXT(" · ")+ActivityTemplateEnabled(Row),X+16,CardY+64,CardW-32,34,19);
+                Label(BodyCanvas,NAME_None,FString(TEXT("周期："))+ActivityCycleDisplay(Row)+TEXT(" · 开放：")+ActivityTemplateField(Row,TEXT("start_at")),X+16,CardY+102,CardW-32,32,18);
+                Action(BodyCanvas,TEXT("Open_DailyActivityDetail|")+Id,TEXT("查看配置详情"),X+16,CardY+148,CardW-32,64,true);
+            }
+            Y+=FMath::DivideAndRoundUp(Daily.Num(),Columns)*(CardH+16);
+        }
+    }
     if(Service&&Service->IsEnabled())
     {
-        const float SummaryW=Wide?BodyWidth*.36f:BodyWidth,X=Wide?SummaryW+28:0,Y=Wide?0:260,W=BodyWidth-X;
-        Label(BodyCanvas,TEXT("DailyHeading"),TEXT("今日共修"),0,0,SummaryW,60,40);
-        Label(BodyCanvas,TEXT("DailyAuthorityStatus"),Service->GetStatus()+TEXT("\n共修只结算实际在线修为，不另发额外数值。"),0,76,SummaryW,156,26);
-        Link(BodyCanvas,TEXT("Wuling"),TEXT("世界历练"),TEXT("三阶段产出 · 实际剑灵参与"),4,X,Y,W,176);
-        const float ButtonW=(W-16)*.5f;
-        Action(BodyCanvas,TEXT("BeginShared"),TEXT("开始共修"),X,Y+196,ButtonW,88,true)->SetIsEnabled(!Service->IsBusy());
-        Action(BodyCanvas,TEXT("EndShared"),TEXT("结束共修"),X+ButtonW+16,Y+196,ButtonW,88)->SetIsEnabled(!Service->IsBusy());
-        Link(BodyCanvas,TEXT("WulingActivity"),TEXT("青云初启"),TEXT("七项任务 · 共同进度与奖励状态"),0,X,Y+312,W,176);return;
-    }
-    Label(BodyCanvas,TEXT("DailyPreviewStatus"),TEXT("日常活动 · 开发预览\n目标、进度和奖励等待服务接入。"),0,0,BodyWidth,104,26);
-    const TCHAR* Names[]={TEXT("静心修炼"),TEXT("秘境历练"),TEXT("丹道研习")};
-    const int32 Columns=Wide?2:1;const float W=(BodyWidth-(Columns-1)*24)/Columns,H=250;
-    for(int32 I=0;I<3;++I)
-    {
-        const float X=(I%Columns)*(W+24),Y=128+(I/Columns)*(H+24);
-        Surface(BodyCanvas,NAME_None,ESurface::Card,X,Y,W,H);
-        AtlasIcon(BodyCanvas,NAME_None,8+I,X+16,Y+20,72);
-        Label(BodyCanvas,NAME_None,Names[I],X+108,Y+20,W-128,48,32);
-        Label(BodyCanvas,NAME_None,TEXT("任务与奖励尚未接入"),X+108,Y+82,W-128,64,24);
-        Action(BodyCanvas,TEXT("Open_DailyActivityDetail|")+FString(Names[I]),TEXT("查看目标与条件"),X+16,Y+146,W-32,88,true);
+        const float OpsY=Y+72;
+        Surface(BodyCanvas,TEXT("DailySharedOperationPaper"),ESurface::FeatureCard,0,OpsY,BodyWidth,224);
+        Label(BodyCanvas,TEXT("SharedOperationHeading"),TEXT("武灵共修"),0,OpsY,BodyWidth,48,25);
+        Label(BodyCanvas,TEXT("SharedOperationStatus"),TEXT("服务进度以实际记录为准。"),0,OpsY+52,BodyWidth,62,19);
+        const float ButtonW=(BodyWidth-16)*.5f;
+        Action(BodyCanvas,TEXT("BeginShared"),TEXT("开始共修"),0,OpsY+126,ButtonW,72,true)->SetIsEnabled(Service->IsConnected()&&!Service->IsBusy());
+        Action(BodyCanvas,TEXT("EndShared"),TEXT("结束共修"),ButtonW+16,OpsY+126,ButtonW,72)->SetIsEnabled(Service->IsConnected()&&!Service->IsBusy());
     }
 }
 void UInkTimedActivitiesPanel::BuildPanelContent()
 {
     const bool Wide=!bPortraitLayout&&BodyWidth>=800;
     auto* Service=WulingFrontendData::Service(this);
+    const auto Activities=WulingFrontendData::Activity(this);
+    const FString AuthorityState=ActivityAuthorityState(Service,Activities);
+    const auto Limited=ActivityTemplatesForCycle(Activities,TEXT("limited"));
+    Surface(BodyCanvas,TEXT("TimedHeadingPaper"),ESurface::FeatureHeading,0,0,BodyWidth,54);
+    Label(BodyCanvas,TEXT("TimedHeading"),TEXT("限时活动"),12,4,BodyWidth-24,46,32);
+    Surface(BodyCanvas,TEXT("TimedAuthorityPaper"),ESurface::FeatureCard,0,58,BodyWidth,92);
+    if(!AuthorityState.IsEmpty())Label(BodyCanvas,TEXT("TimedAuthorityStatus"),AuthorityState,16,68,BodyWidth-32,72,21);
+    else Label(BodyCanvas,TEXT("TimedClassificationNote"),TEXT("仅显示 cycle=limited；event 与 relative_guild_creation 不归入限时。"),16,68,BodyWidth-32,72,18);
+    float Y=166;
+    if(HasActivityTemplateList(Activities))
+    {
+        if(Limited.IsEmpty())
+        {
+            Surface(BodyCanvas,TEXT("TimedTemplateEmptyPaper"),ESurface::FeatureCard,0,Y,BodyWidth,76);
+            Label(BodyCanvas,TEXT("TimedTemplateEmpty"),TEXT("暂无限时活动配置。"),16,Y+16,BodyWidth-32,44,23);
+        }
+        else
+        {
+            const int32 Columns=Wide?2:1;const float CardW=(BodyWidth-(Columns-1)*20)/Columns,CardH=216;
+            for(int32 I=0;I<Limited.Num();++I)
+            {
+                const auto& Row=Limited[I];const FString Id=WulingFrontendData::String(Row,TEXT("activity_id"));
+                const float X=(I%Columns)*(CardW+20),CardY=Y+(I/Columns)*(CardH+16);
+                Surface(BodyCanvas,NAME_None,ESurface::FeatureCard,X,CardY,CardW,CardH);
+                Surface(BodyCanvas,NAME_None,ESurface::FeatureHeading,X+8,CardY+8,CardW-16,48);
+                Label(BodyCanvas,NAME_None,ActivityTemplateField(Row,TEXT("name")),X+16,CardY+12,CardW-32,40,27);
+                Label(BodyCanvas,NAME_None,FString(TEXT("编号："))+Id+TEXT(" · ")+ActivityTemplateEnabled(Row),X+16,CardY+64,CardW-32,34,19);
+                Label(BodyCanvas,NAME_None,FString(TEXT("开始："))+ActivityTemplateField(Row,TEXT("start_at"))+TEXT(" · 截止：")+ActivityTemplateField(Row,TEXT("end_at")),X+16,CardY+102,CardW-32,32,18);
+                Action(BodyCanvas,TEXT("Open_TimedActivityDetail|")+Id,TEXT("查看配置详情"),X+16,CardY+148,CardW-32,64,true);
+            }
+            Y+=FMath::DivideAndRoundUp(Limited.Num(),Columns)*(CardH+16);
+        }
+    }
     if(Service&&Service->IsEnabled())
     {
-        const float SummaryW=Wide?BodyWidth*.36f:BodyWidth,X=Wide?SummaryW+28:0,Y=Wide?0:260,W=BodyWidth-X;
-        Label(BodyCanvas,TEXT("TimedHeading"),TEXT("本期历练"),0,0,SummaryW,60,40);
-        Label(BodyCanvas,TEXT("TimedAuthorityStatus"),TEXT("封闭原型周活动模板\n沿用世界历练基础奖励。未配置日历排期，由主播显式发起。"),0,76,SummaryW,156,26);
-        Action(BodyCanvas,TEXT("WeekGuard"),TEXT("云台护阵 · 开始"),X,Y,W,88,true)->SetIsEnabled(!Service->IsBusy());
-        Action(BodyCanvas,TEXT("WeekIron"),TEXT("玄铁采集 · 开始"),X,Y+108,W,88,true)->SetIsEnabled(!Service->IsBusy());
-        Link(BodyCanvas,TEXT("WulingRace"),TEXT("灵脉竞采"),TEXT("与实际武灵排队匹配 · 查看资格"),5,X,Y+228,W,176);return;
-    }
-    Label(BodyCanvas,TEXT("TimedPreviewStatus"),TEXT("限时活动 · 开发预览\n尚未配置开放周期，不显示虚构倒计时。"),0,0,BodyWidth,104,26);
-    const int32 Columns=Wide?2:1;const float W=(BodyWidth-(Columns-1)*24)/Columns,H=360;
-    const TCHAR* Names[]={TEXT("仙缘寻宝"),TEXT("云山问道")};
-    for(int32 I=0;I<2;++I)
-    {
-        const float X=(I%Columns)*(W+24),Y=128+(I/Columns)*(H+24);
-        Surface(BodyCanvas,NAME_None,ESurface::Card,X,Y,W,H);Scene(BodyCanvas,I?3:7,X+16,Y+12,W-32,112);
-        Label(BodyCanvas,NAME_None,Names[I],X+20,Y+136,W-40,48,32);
-        Label(BodyCanvas,NAME_None,TEXT("开放时间与奖励待配置"),X+20,Y+194,W-40,48,24);
-        Action(BodyCanvas,TEXT("Open_TimedActivityDetail|")+FString(Names[I]),TEXT("查看活动"),X+16,Y+256,W-32,88,true);
+        const float OpsY=Y+72;
+        Surface(BodyCanvas,TEXT("TimedPrototypeOperationPaper"),ESurface::FeatureCard,0,OpsY,BodyWidth,224);
+        Label(BodyCanvas,TEXT("PrototypeOperationHeading"),TEXT("武灵共修"),0,OpsY,BodyWidth,48,25);
+        Label(BodyCanvas,TEXT("PrototypeOperationStatus"),TEXT("共修状态以服务记录为准。"),0,OpsY+52,BodyWidth,62,19);
+        const float ButtonW=(BodyWidth-16)*.5f;
+        Action(BodyCanvas,TEXT("WeekGuard"),TEXT("云台护阵 · 开始"),0,OpsY+126,ButtonW,72,true)->SetIsEnabled(Service->IsConnected()&&!Service->IsBusy());
+        Action(BodyCanvas,TEXT("WeekIron"),TEXT("玄铁采集 · 开始"),ButtonW+16,OpsY+126,ButtonW,72,true)->SetIsEnabled(Service->IsConnected()&&!Service->IsBusy());
     }
 }

@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-24T17:07:40.149059+08:00",
+  "path": "D:\\demo\\BoundlessImmortality\\Config\\DefaultEngine.ini",
+  "sha256": "cf38e1a74a67dd705a5cfc97eb11560f1b98be49bea97825c1e6a9f080e3dff9",
+  "checks": {
+    "Orientation=Portrait": true,
+    "bSupportsPortraitOrientation=True": true,
+    "bSupportsUpsideDownOrientation=False": true,
+    "bSupportsLandscapeLeftOrientation=False": true,
+    "bSupportsLandscapeRightOrientation=False": true
+  },
+  "passed": true,
+  "source_changed": false,
+  "scope": "Current Android/iOS orientation configuration only; not device or live-platform release evidence"
+}

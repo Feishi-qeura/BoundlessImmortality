@@ -1,0 +1,49 @@
+{
+  "team_id": "panel-rank",
+  "revision": "review-v2",
+  "phase": "isolated-replacement-staged",
+  "updated_at": "2026-10-24T13:04:51+08:00",
+  "approved": false,
+  "production_source_written": false,
+  "content_written": false,
+  "original_handoff_frozen": true,
+  "scope": [
+    "leaderboard:Damage",
+    "leaderboard:CultivationSpeed",
+    "leaderboard:Anchor",
+    "wuling-overview",
+    "wuling-members",
+    "guild-build",
+    "sword-spirit",
+    "gift-rules"
+  ],
+  "findings_addressed": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "L02",
+    "L03"
+  ],
+  "source_sha256": {
+    "InkRankWulingExtendedPages.cpp": "e307d362e8a780a5660181dc816dc44bd0d7ede6f3907ba61322685e76ff642a",
+    "InkRankWulingExtendedPages.h": "1b1ae39ef9aee2431281037fe48016a2053d1ce0f96ae64f12df43f6105404b4",
+    "InkRankWulingPageBase.cpp": "7a8cdd779d45823149e927b06030eb5599107ade51c8605a8c10742d12a8e705",
+    "InkRankWulingPageBase.h": "f34a92f6a6a1880b981ccd5326c9abeeeac36530bbba7f0baf50a30ce6fbe554",
+    "InkRankWulingPages.cpp": "4d1da704afdbc538e1e027bc214abf9980052eb92b40311eb753fb27071d9598",
+    "InkRankWulingPages.h": "d32e5cc3e6d8de41e6d5d59cb870781996c2022b9b8f2250f732af8009e608a7"
+  },
+  "verification": {
+    "reviewed_installed_ue58_headers": true,
+    "static_api_assertions": true,
+    "brace_balance": true,
+    "source_compile": false,
+    "engine_started": false,
+    "ubt_run": false,
+    "pie_verified": false,
+    "runtime_visual_review": false,
+    "image_generation": false
+  },
+  "known_gap": "Actual shared font object paths still require integration resolution; use SetSharedThemeFonts with canonical MaShanZheng and LXGWWenKai UFont assets.",
+  "next_owner": "unique integration writer"
+}

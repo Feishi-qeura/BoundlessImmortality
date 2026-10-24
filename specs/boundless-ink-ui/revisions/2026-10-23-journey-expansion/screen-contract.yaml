@@ -30,7 +30,7 @@ screens:
     data_needs: [reward_receipts]
   - id: journey-atlas-native
     route: Extensions
-    aliases: [WorldCultivation, ResourceContest]
+    aliases: [WorldCultivation, ResourceMap]
     widget: /Game/UI/Ink/Widgets/Journey/WBP_JourneyMap
     entry_points: [HUD-OpenExtensions, wuling]
     primary_actions: [world-tab, resource-tab, open-destination]

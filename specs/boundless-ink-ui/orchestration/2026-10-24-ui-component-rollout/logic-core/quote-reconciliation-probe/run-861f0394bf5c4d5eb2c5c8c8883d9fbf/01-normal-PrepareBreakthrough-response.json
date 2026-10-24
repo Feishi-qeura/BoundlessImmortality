@@ -1,0 +1,8 @@
+{
+  "request_id": "probe-dd3702d4ee06418bb08358641b3cfc63",
+  "status": "error",
+  "error_code": "STALE_VERSION",
+  "authoritative_version": 1,
+  "receipt_id": "",
+  "result": null
+}

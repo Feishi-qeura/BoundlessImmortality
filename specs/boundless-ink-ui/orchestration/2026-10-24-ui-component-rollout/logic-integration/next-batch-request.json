@@ -1,0 +1,9 @@
+{
+  "requested_at": "2026-10-24T12:16:50.846184+08:00",
+  "request": "Coordinator review first batch evidence and grant a separate batch2 promotion/import/build lease when ready",
+  "first_batch_report": "engine-final-verification.json",
+  "owned_processes_closed": true,
+  "source_freeze_preserved": true,
+  "promotion_performed": false,
+  "visual_approval_user_only": true
+}

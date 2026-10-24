@@ -1,0 +1,103 @@
+schema_version: 1
+team_id: panel-rank
+revision: newui-r1-rank-a-b
+approved: false
+source_contract: specs/boundless-ink-ui/rebuild-2026-10-24/contracts/component-contract.yaml
+source_screen_ids: [leaderboard, wuling]
+source_component_ids: [page-frame, state-panel, back-button, rank-row, rank-scope-strip, guild-identity-card, guild-member-row, danger-confirm]
+runtime_packages:
+  leaderboard: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Leaderboard
+  wuling: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Wuling
+  components: /Game/newUI/Components/RankWuling
+staged_cpp_target: Source/BoundlessImmortality/Frontend/UIRebuild20261024/RankWuling
+components:
+  - id: rank-category-tab
+    kind: native-umg-button
+    states: [default, hover, pressed, focused, selected, disabled, pending]
+    action: board-category
+    variants: [Damage, CultivationSpeed, Anchor]
+    dynamic_text: true
+  - id: rank-scope-strip
+    kind: native-umg-control
+    states: [default, hover, pressed, focused, selected, disabled, pending]
+    action: board-scope
+    choices: [Local, Global]
+  - id: rank-row
+    kind: native-umg-provider-row
+    contract: shared-rank-row
+    minimum_height: 104
+    fields: [provider_rank, participant_id, display_name, metric, earned_title_if_present, realm_if_present, avatar_if_present]
+    ordering: provider_owned
+  - id: leaderboard-state
+    kind: native-umg-state-panel
+    contract: shared-state-panel
+    states: [unknown, loading, empty, data, pending, offline, error, disabled]
+    action: supported-retry-only
+  - id: leaderboard-self-position
+    kind: native-umg-footer
+    fields: [selfPosition_if_provided]
+    missing_behavior: render-unknown-no-local-derivation
+  - id: wuling-sect-insignia
+    kind: transparent-semantic-png
+    source: assets/components/wuling-sect-insignia-v3.png
+    intended_display_size: [160, 160]
+    package: /Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1
+    scale: contain
+    baked_text: false
+    state: candidate
+  - id: guild-identity-card
+    kind: native-umg-container
+    contract: shared-guild-identity-card
+    fields: [guild_name, member_count, participating_count, helper_count, public_supply, reputation]
+    action: no-inline-create-or-reward
+  - id: guild-member-row
+    kind: native-umg-selectable-row
+    contract: shared-guild-member-row
+    fields: [stable_user_id, display_name]
+    selected_by: user_id
+    action: guild-member-select
+  - id: danger-confirm
+    kind: native-umg-confirm-surface
+    contract: shared-danger-confirm
+    subject: exact_selected_user_id_and_display_name
+    confirm_event: remove-member(user_id)
+    cancel_event: clear-local-confirm-only
+  - id: guild-member-pager
+    kind: native-umg-controls
+    fields: [current_cursor, previous_cursor_if_provided, next_cursor_if_provided]
+    action: existing-RequestMemberPage
+  - id: guild-member-remove
+    kind: native-umg-authority-gated-action
+    enabled_input: host_permission_and_readiness
+    pending_input: host_remove_pending
+    action: remove-member
+    confirm_required: true
+  - id: guild-build-catalog-card
+    kind: native-umg-data-card
+    contract: shared-catalog-card
+    fields: [building_id, display_name, current_level_if_provided, target_level_if_provided, authoritative_costs_if_provided, service_state]
+    actions: [query-buildings, build-guild]
+    build_gate: host_authoritative_bCanBuild
+    confirmation: exact-building-target-snapshot-version
+  - id: guild-build-danger-confirm
+    kind: native-umg-confirm-surface
+    contract: shared-danger-confirm
+    subject: [building_id, target_level, snapshot_version]
+    confirm_event: build-guild(building_id, target_level, snapshot_version)
+    cancel_event: clear-local-confirm-only
+  - id: sword-spirit-profile-state
+    kind: native-umg-state-panel
+    data_model: SwordVm
+    fields: [participant_id, display_name, realm, attributes, honor]
+    no_profile_state: preserve-unknown-or-unavailable
+    navigation: open-gift-rules
+  - id: gift-rule-list
+    kind: native-umg-read-only-list
+    data_model: GiftEffectVm
+    fields: [actual_rule_id, actual_name, actual_description, active_effects_if_provided]
+    empty_state_requires: bRulesProvided
+    mutation_actions: none
+asset_states:
+  generated: true
+  approved: false
+  imported: false

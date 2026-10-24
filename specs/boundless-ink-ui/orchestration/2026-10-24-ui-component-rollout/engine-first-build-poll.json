@@ -1,0 +1,14 @@
+{
+  "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+  "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:12",
+  "thread_status": "active",
+  "turn_status": "inProgress",
+  "last_message": "构建命令已启动，目前还没有返回 UHT 或编译诊断。我会核实本次进程与日志时间戳，同时准备隔离数据验证，避免把旧日志里的成功记录算作本批结果。",
+  "last_tool": {
+    "id": "exec-a695bcd3-0880-4d00-ad1c-2d6078d47ca3",
+    "turnId": "01a16bf5-accc-7d13-a3d1-bd85351d9e79",
+    "type": "commandExecution",
+    "name": "commandExecution",
+    "status": "failed"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "source_change_ledger": "../../orchestration/2026-10-24-ui-component-rollout/logic-integration/visible-source-integration/source-change-ledger.json",
+  "team": "logic-integration",
+  "updated_at": "2026-10-24T16:07:11.527101+08:00",
+  "visual_pending_user": true,
+  "remaining": [
+    "Build20 88files215records: activity Back, equipment GUID validation, pure-page refresh scroll preservation",
+    "Fresh full44 and actual service02 against new DB and new Saved/outbox",
+    "Runtime13component brushes including methods/equipment and appearance attribute shared atlas",
+    "Avatar actual HTTPS backoff test pending",
+    "Visual approval pending"
+  ],
+  "runtime_verified": false,
+  "own_service_pids": [
+    40168,
+    28596
+  ],
+  "engine_lease_expires": "2026-10-24T18:32:33.7348276+08:00",
+  "phase": "build24_running_build_craft_confirmed_market_avatar_stage_full44_pending",
+  "own_engine_pids": [],
+  "user_editor_previously_36400_now_closed_by_user": true,
+  "source_writer": "unique",
+  "host_files_changed": [
+    "Frontend/InkFrontendWidget.h",
+    "Frontend/InkFrontendWidget.cpp"
+  ],
+  "source_files_added": [
+    "UIRebuild20261024/InkRebuildTheme.h",
+    "UIRebuild20261024/InkRebuildTheme.cpp",
+    "UIRebuild20261024/Player/InkPlayerMenuPageWidgets.h/.cpp",
+    "UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.h/.cpp"
+  ],
+  "source_compiled": false,
+  "engine_lease": "../engine-lease.json",
+  "build01_exit_code": 6,
+  "build01_repairs": [
+    "FVector4 explicit constructor",
+    "FName conditional branches"
+  ],
+  "build02_exit_code": 0,
+  "migration_executed": true,
+  "migration_rejection": null,
+  "build04_exit_code": 0,
+  "build05_exit_code": 0,
+  "source_epoch_files": 87,
+  "source_ledger_records": 193,
+  "build06_exit_code": 0,
+  "migration_final_verification": "../migration/engine-final-verification.json",
+  "build07_exit_code": 0,
+  "new_default_wbp_saved": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+  "build08_exit_code": 0,
+  "default_pie01_result": "default-root-pie-01/report.json: false at landscape JSON readback; portrait6 realnewUI and click/search passed; no dirty normalquit",
+  "build09_exit_code": 0,
+  "build10_exit_code": 6,
+  "build11_exit_code": 0,
+  "native_NewUI_regressions": {
+    "not_run": 0,
+    "succeeded": 3,
+    "report": "native-tests-01-report/index.json",
+    "scope": "NullRHI native tests, not visual proof",
+    "failed": 0
+  },
+  "core_runtime_verified": false,
+  "all44_runtime_verified": false,
+  "geometry_provisional": false,
+  "build14_exit_code": 0,
+  "build15_exit_code": 0,
+  "default_pie04_result": "229 checks/17 captures; strict core7 geometry, injected rejection, legacy suppression and real HUD/Journey entry observed; overall failed at offscreen Character child click, dirty0 normalquit15:06:08",
+  "native_test_result": {
+    "succeeded": 4,
+    "warnings": 0,
+    "failed": 0,
+    "not_run": 0
+  },
+  "latest_build": {
+    "attempt": 23,
+    "exit_code": 0,
+    "files": 88,
+    "ledger_records": 219
+  },
+  "component_imported_count": 13,
+  "current_pie_attempt": 6,
+  "current_pie_step": "capture RaceLive",
+  "source_ledger_records_current": 221
+}

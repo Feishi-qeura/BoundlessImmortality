@@ -1,0 +1,18 @@
+{
+  "pid": 9676,
+  "started_at": "2026-10-24T15:42:27.4570868+08:00",
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-default-pie06",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/default-root-pie-06.log",
+    "-ExecutePythonScript=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/verify_all44_default_pie.py",
+    "-NewUIDefaultPIEAttempt=06"
+  ],
+  "scope": "actual default root full44 current build19 all13imported"
+}

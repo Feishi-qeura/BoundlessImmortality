@@ -1,9 +1,12 @@
 #include "Frontend/UI/InkUiAssetPaths.h"
 #include "InkFeaturePanel.h"
+#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
+#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
 #include "InkFrontendWidget.h"
 #include "WulingFrontendData.h"
 #include "UI/InkUiResponsiveLayout.h"
 #include "UI/InkUiTheme.h"
+#include "InkPresentationStyle.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/Overlay.h"
 #include "Components/OverlaySlot.h"
@@ -14,11 +17,29 @@
 #include "Components/Image.h"
 #include "Components/ScrollBox.h"
 #include "Components/SizeBox.h"
-#include "Materials/MaterialInterface.h"
+
+namespace
+{
+bool HasEnabledSignInTemplate(const TSharedPtr<FJsonObject>& Activities)
+{
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities||!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return false;
+    for(const auto& Value:*Templates)
+    {
+        const auto Row=Value.IsValid()?Value->AsObject():nullptr;
+        if(!Row||WulingFrontendData::String(Row,TEXT("activity_id"))!=TEXT("ACT_SIGN")||WulingFrontendData::String(Row,TEXT("cycle"))!=TEXT("daily"))continue;
+        bool Enabled=false;
+        return Row->TryGetBoolField(TEXT("enabled"),Enabled)&&Enabled;
+    }
+    return false;
+}
+}
 
 bool UInkFeaturePanel::UsesResponsiveShell()const
 {
-    return true;
+	// Group panels already provide the responsive outer scroll. Embedded children
+	// must use their canvas directly to avoid a second nested scrollbar.
+	return !bEmbedded;
 }
 
 void UInkFeaturePanel::RebuildResponsivePanel()
@@ -54,6 +75,7 @@ void UInkFeaturePanel::RebuildResponsivePanel()
     else {ShellCanvas=WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("FeatureShell"));ResponsiveRoot->AddChildToCanvas(ShellCanvas);}
     const auto* Group=Cast<UInkFeatureGroupPanel>(this);
     const bool Calendar=Group&&Group->SelectedRoute==TEXT("MonthlySignIn");
+    const bool Verse=Group&&Group->SelectedRoute==TEXT("DailyFortune");
     const bool SignFamily=PageId==TEXT("SignIn")||PageId==TEXT("MonthlySignIn")||PageId==TEXT("DailyFortune");
     const bool Dense=Calendar||PageId.ToString().StartsWith(TEXT("Wuling"))||PageId.ToString().StartsWith(TEXT("Character"))||PageId==TEXT("Draw")||PageId==TEXT("WorldCultivation")||PageId==TEXT("Expedition")||PageId.ToString().StartsWith(TEXT("Resource"));
     ResponsiveScroll=nullptr;
@@ -69,19 +91,27 @@ void UInkFeaturePanel::RebuildResponsivePanel()
     if(!SignFamily)bPortraitLayout=BodyWidth<800;
     auto Place=[&](UWidget* Widget,float X,float Y,float Width,float Height){auto* S=ShellCanvas->AddChildToCanvas(Widget);S->SetPosition({X,Y});S->SetSize({Width,Height});return S;};
     auto* Paper=WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(),TEXT("FeaturePaper"));
-    FSlateBrush B;B.DrawAs=ESlateBrushDrawType::RoundedBox;B.TintColor=InkUiTypography::Theme()->PaperTint;B.OutlineSettings.CornerRadii=FVector4(10,10,10,10);B.OutlineSettings.Color=InkUiTypography::Theme()->GoldTint;B.OutlineSettings.Width=1;
-    B.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
-    if(auto* M=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Shared/M_InkPaperCloud.M_InkPaperCloud"),nullptr,LOAD_NoWarn|LOAD_Quiet))
-    {B.DrawAs=ESlateBrushDrawType::Image;B.SetResourceObject(M);B.TintColor=FLinearColor::White;}
-    Paper->SetBrush(B);Paper->SetRenderOpacity(FMath::Clamp(Theme->PaperOpacity,.7f,1.f));Paper->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Paper,0,0,W,H);
-    // A single shell paper owns the background. The old full-width scene atlas
-    // carried a pale sky backing and washed the paper again. Keep decoration
-    // local to a fine title rule, never behind the full page content.
-    auto* Rule=WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(),TEXT("FeatureHeadingRule"));
-    auto RuleTint=Theme->GoldTint;RuleTint.A=FMath::Clamp(Theme->DecorationOpacity,0.f,.3f)+.25f;
-    Rule->SetBrushColor(RuleTint);Rule->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Rule,24,94,W-48,1);
-    auto* Title=Label(ShellCanvas,TEXT("FeatureHeading"),SignFamily?TEXT("签到有礼"):PanelTitle().ToString(),24,18,W-136,64,44);
+    Paper->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(W,H)));
+    Paper->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Paper,0,0,W,H);
+    auto* HeaderPaper=WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(),TEXT("FeatureHeaderPaper"));
+    HeaderPaper->SetBrush(InkPresentationStyle::Surface(InkPresentationStyle::ESurface::FeatureHeading,FVector2D(W-32,96)));
+    HeaderPaper->SetVisibility(ESlateVisibility::HitTestInvisible);Place(HeaderPaper,16,8,W-32,96)->SetZOrder(1);
+    auto* Rule=WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(),TEXT("FeatureHeadingJadeRule"));
+    Rule->SetBrushColor(InkPresentationStyle::Jade());Rule->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Rule,32,98,W-64,2)->SetZOrder(2);
+    const FString SignTitle=Calendar?TEXT("月签日历"):
+        Verse?TEXT("每日剑诀"):
+        PageId==TEXT("SignIn")?TEXT("每日签到"):TEXT("签到记录");
+    auto* Title=Label(ShellCanvas,TEXT("FeatureHeading"),SignFamily?SignTitle:PanelTitle().ToString(),24,12,W-136,54,40);
     Title->SetAutoWrapText(false);CastChecked<UCanvasPanelSlot>(Title->Slot)->SetZOrder(10);
+    FString ThemeTag=Calendar?TEXT("月签日历 · 逐日确认与累计节点"):
+        Verse?TEXT("每日剑诀 · 今日一览"):
+        PageId==TEXT("SignIn")?TEXT("每日签到 · 七日记录"):
+        SignFamily?TEXT("签到记录 · 奖励节点"):
+        PageId.ToString().StartsWith(TEXT("Journey"))||PageId==TEXT("WorldMap")||PageId==TEXT("ResourceMap")||PageId==TEXT("Extensions")||PageId==TEXT("WorldCultivation")?TEXT("世界历练 · 资源探索"):
+        PageId.ToString().StartsWith(TEXT("Launch"))?TEXT("开服活动 · 任务与贡献记录"):
+        TEXT("");
+    auto* Tag=Label(ShellCanvas,TEXT("FeatureThemeTag"),ThemeTag,28,66,W-176,24,18);
+    Tag->SetColorAndOpacity(InkPresentationStyle::Jade());Tag->SetVisibility(ThemeTag.IsEmpty()?ESlateVisibility::Collapsed:ESlateVisibility::HitTestInvisible);CastChecked<UCanvasPanelSlot>(Tag->Slot)->SetZOrder(10);
     auto* Close=Action(ShellCanvas,TEXT("Close"),TEXT("×"),W-104,0,88,88);CastChecked<UCanvasPanelSlot>(Close->Slot)->SetZOrder(10);
     BodyCanvas=WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),TEXT("FeatureBody"));
     {
@@ -118,12 +148,40 @@ void UInkFeaturePanel::RebuildResponsivePanel()
         ResponsiveContentSize->SetHeightOverride(Extent);ResponsiveContentSize->SetWidthOverride(BodyWidth);ResponsiveScroll->SetScrollOffset(OldScroll);
     }
     const auto Authority=WulingFrontendData::Activity(this);auto* Service=WulingFrontendData::Service(this);
-    const bool Verse=Group&&Group->SelectedRoute==TEXT("DailyFortune");
+    const bool Monthly=Group&&Group->SelectedRoute==TEXT("MonthlySignIn");
     if(SignFamily)
     {
-    auto* Claim=Action(ShellCanvas,TEXT("SignInClaim"),Authority?(Verse?TEXT("每日剑诀 · 无数值奖励"):(WulingFrontendData::Signed(Authority)?TEXT("今日已签到"):TEXT("签到 · 记录占位"))):TEXT("领取待同步"),24,H-96,W-216,88,true);
-    CastChecked<UCanvasPanelSlot>(Claim->Slot)->SetZOrder(10);
-    Claim->SetIsEnabled(Authority&&!Verse&&!WulingFrontendData::Signed(Authority)&&Service&&!Service->IsBusy());
+    bool Signed=false;const bool HasSigned=Authority&&Authority->TryGetBoolField(TEXT("signed"),Signed);
+    const FString ServiceDay=WulingFrontendData::String(Authority,TEXT("day"));
+    const bool Connected=Service&&Service->IsEnabled()&&Service->IsConnected();
+    const bool CanSign=!Verse&&!Monthly&&Connected&&!Service->IsBusy()&&HasEnabledSignInTemplate(Authority)&&HasSigned&&!Signed&&!ServiceDay.IsEmpty();
+    const FString ClaimCaption=Verse?TEXT("剑诀展示 · 未接入抽签端点"):
+        Monthly?TEXT("月签奖励请在宝箱详情操作"):
+        !Connected?TEXT("签到服务未连接"):
+        !HasSigned?TEXT("签到状态待同步"):
+        Signed?TEXT("今日已签到"):
+        ServiceDay.IsEmpty()?TEXT("服务日期待同步"):
+        !HasEnabledSignInTemplate(Authority)?TEXT("签到模板未提供或未启用"):
+        Service->IsBusy()?TEXT("服务请求处理中"):
+        TEXT("提交签到记录");
+    RolloutSignInDay=ServiceDay;
+    if(!Verse&&!Monthly)
+    {
+        auto* Claim=CreateWidget<UJourneyClaimStateWidget>(GetOwningPlayer());
+        Claim->Rename(TEXT("RolloutDailyClaim"),WidgetTree);
+        InkJourneyAdapter::FRequest Request;Request.ExpectedDay=RolloutSignInDay;
+        const auto Gate=InkJourneyAdapter::Evaluate(InkJourneyAdapter::Capture(Service,IsRolloutPageActive()),Request);
+        const auto ClaimState=!Service||!Service->IsEnabled()?EDailySignInClaimState::Unavailable:!Connected?EDailySignInClaimState::Disconnected:Service&&Service->IsBusy()?EDailySignInClaimState::Pending:
+            !HasSigned?EDailySignInClaimState::Unknown:Signed?EDailySignInClaimState::Claimed:Gate.bAllowed?EDailySignInClaimState::Claimable:EDailySignInClaimState::Unavailable;
+        Claim->SetClaimState(ClaimState,FText::FromString(Gate.Reason));
+        Claim->OnClaimRequested.AddUniqueDynamic(this,&UInkFeaturePanel::HandleRolloutSignInRequested);
+        Place(Claim,24,H-96,W-216,88)->SetZOrder(10);
+    }
+    else
+    {
+        auto* Claim=Action(ShellCanvas,TEXT("SignInClaim"),ClaimCaption,24,H-96,W-216,88,true);
+        CastChecked<UCanvasPanelSlot>(Claim->Slot)->SetZOrder(10);Claim->SetIsEnabled(CanSign);
+    }
     }
     auto* Back=Action(ShellCanvas,TEXT("Back"),TEXT("返回"),W-168,H-96,144,88);CastChecked<UCanvasPanelSlot>(Back->Slot)->SetZOrder(10);
     StatusText=Label(ShellCanvas,TEXT("FeatureFeedback"),PreviewFeedback,24,H-132,W-48,32,24);

@@ -9,3 +9,13 @@
 - YAML：用 GameUI 虚拟环境的 PyYAML 成功解析资产提案；逐项检查两图登记 `approved:false`。本次已把突破图清单哈希修正为实测的64字符值。
 - 天劫候选：纯文字提示单页生成，未引用本地图片。人工查看941×1672 `Format24bppRgb` 图，SHA256 `67CA77B4F40973471CB88931AD4E2D305D3B10BE13FE177202B91E301767897F`；比例近似9:16但非严格720×1280。图内无概率/奖励数值；成功/失败并列框按互斥模板处理。
 - 本次本目录文件结构/YAML验证待执行；UE构建、运行、PIE、Cook、设备验收均未执行，本分工不作这些通过声明。
+
+## v2 人工视觉 QA 与资产测量
+
+| 文件 | 像素 | 模式/alpha | SHA256 | 状态/观察 |
+|---|---:|---|---|---|
+| main-menu-v2.png | 941×1672 | RGB，无 alpha | 0404447550AA3B0EA5B01288584E1B3839FAAA92DEF0490EE9E056C18105E922 | 语义错配。独立复核确认画面实际为天劫页；根与 proposed 清单均标 `content-mismatch-do-not-use`、`approved:false`。哈希与该文件一致，不是文件损坏 |
+| breakthrough-preparation-v2.png | 940×1672 | RGB，无 alpha | 82FD74B5B5D6F2CD60A048D03BDAC13E33141D76FD1A7409D06A9013BD0F8E06 | 未批准候选。等待配置提示和禁用 CTA 可见；权威字段/占位关系仍需更清楚，保持 `awaiting-user-visual-review` |
+| tribulation-live-v2.png | 941×1672 | RGB，无 alpha | D980A8339AC1304A31B6F608E23A5549001281A87EEB140C51B4FA8679690F21 | 语义错配。独立复核确认画面实际为主菜单页；根与 proposed 清单均标 `content-mismatch-do-not-use`、`approved:false`。哈希与该文件一致，不是文件损坏 |
+
+三图像素和哈希经文件测量复核，均为近9:16但非严格比例。独立视觉复核确认两张文件语义错配；突破图仍未获视觉批准。公共 manifest 校验通过（0 warnings），本 revision YAML 解析结果待复核；UE/PIE/设备均未验证。

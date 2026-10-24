@@ -1,0 +1,39 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+approved: false
+domain_states: [unknown, loading, empty, data, error, disabled]
+transport_fields: [connected, busy, stale, request_identity]
+display_states: [unknown, loading, empty, data, pending, offline, error, disabled]
+priority:
+  - Explicit feature/role denial disables only the corresponding action/domain, not unrelated navigation.
+  - Offline is a transport overlay; identify a stale snapshot when displayed. Remote writes remain blocked.
+  - Pending retains confirmed data/selected subject/confirmation/request identity. It is not empty or success.
+  - Error requires an actual failed response or malformed expected data; unknown is not error.
+  - Loading means requested/no response; unknown means a response exists but the optional field was not supplied.
+  - Empty requires an explicitly provided empty collection or known absent domain object.
+  - Data may contain actual zero/false and independent unknown optional fields.
+field_policy:
+  known_zero: Render 0 with its real unit and provenance.
+  known_false: Render the actual false state; false is not unknown.
+  missing: Keep value null and render a short unavailable/awaiting-copy label; no invented numeric default.
+  array: provided=false/items=null means unknown; provided=true/items=[] means confirmed empty.
+  current_day: Use authority day key; device locale/Hong Kong display timezone does not redefine qualification date.
+  countdown: Service server_utc plus monotonic elapsed; never use untrusted local wall-clock to grant a reward/action window.
+page_behavior:
+  refresh: Reconcile active page when version/state/displayed keys change; stable children and keyed rows retained.
+  selection: Identity comes from EntryId/user/node_id/listing_id/attempt_id, never visible index, name or row position.
+  parent_return: Retain parent tab/filter/search/selection/scroll and prior focus. Results return to their actual parent stack.
+  detail_refresh: Same entity snapshot updates preserve confirmation/pending; new entity resets only through explicit selection change.
+  permission: Missing real entitlement does not mean allowed; missing descriptive/forecast fields do not create a permission gate.
+  confirmation: Capture exact subject/quantity/price/version/date then re-evaluate against current authoritative context on submit.
+  receipt: Root dequeues once; child pages display only matching confirmed source facts and never grant from inventory deltas.
+mutually_exclusive_groups:
+  - [loading, empty, error]
+  - [tribulation-prepare, tribulation-trial, tribulation-reconcile, tribulation-succeeded, tribulation-failed, tribulation-cancelled]
+  - [sign-in-unknown, sign-in-eligible, sign-in-pending, sign-in-confirmed]
+breakthrough_rule:
+  request_gate: Valid current stage/kind/selection and original transport/role/active-attempt rules; server re-quotes and validates all business state.
+  display_only_missing: [q_normalized, growth_min, growth_max, sources, slots]
+  readiness_absent: Unknown, not an implicit false. Never fill true either.
+  readiness_explicit_false: Preserve explicit refusal when genuinely supplied; do not reinterpret as UI progress.
+  preview_success: Not inventory/safety/eligibility authorization.

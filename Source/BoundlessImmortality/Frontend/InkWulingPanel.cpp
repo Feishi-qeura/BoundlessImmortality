@@ -16,6 +16,7 @@ namespace {
 TSharedPtr<FJsonObject> Obj(const TSharedPtr<FJsonObject>& O,const TCHAR* K){const TSharedPtr<FJsonObject>* V=nullptr;return O&&O->TryGetObjectField(K,V)?*V:nullptr;}
 FString Str(const TSharedPtr<FJsonObject>& O,const TCHAR* K){FString V;if(O)O->TryGetStringField(K,V);return V;}
 double Num(const TSharedPtr<FJsonObject>& O,const TCHAR* K){double V=0;if(O)O->TryGetNumberField(K,V);return V;}
+FString DisplayNum(const TSharedPtr<FJsonObject>& O,const TCHAR* K){double V=0;return O&&O->TryGetNumberField(K,V)?FString::Printf(TEXT("%.0f"),V):FString(TEXT("—"));}
 FString PhaseName(const FString& S){if(S==TEXT("Preparing"))return TEXT("准备接引");if(S==TEXT("Running"))return TEXT("历练进行中");if(S==TEXT("Settling"))return TEXT("阶段结算");if(S==TEXT("Completed"))return TEXT("本轮已结算");if(S==TEXT("Interrupted"))return TEXT("历练已中断");return TEXT("尚未开始");}
 }
 
@@ -31,6 +32,8 @@ void UInkWulingPanel::BuildPanelContent()
     }
     if(!bPortraitLayout||bGuildView)
     {
+        Surface(BodyCanvas,TEXT("WulingGuildCard"),InkPresentationStyle::ESurface::FeatureCard,0,Top,Left,FMath::Max(220.f,Footer-Top-8));
+        Surface(BodyCanvas,TEXT("WulingGuildHeading"),InkPresentationStyle::ESurface::FeatureHeading,0,Top,Left,88);
         Label(BodyCanvas,TEXT("WulingGuildName"),TEXT("武灵名册"),0,Top,Left,44,32);
         Label(BodyCanvas,TEXT("WulingCounts"),TEXT("读取参与会话"),0,Top+48,Left,76,24);
         GuildNameInput=WidgetTree->ConstructWidget<UEditableTextBox>(UEditableTextBox::StaticClass(),TEXT("WulingNameInput"));
@@ -52,10 +55,11 @@ void UInkWulingPanel::BuildPanelContent()
         auto* Size=WidgetTree->ConstructWidget<USizeBox>();Size->SetWidthOverride(Right-10);Size->SetHeightOverride(1040);Scroll->AddChild(Size);
         auto* WorldCanvas=WidgetTree->ConstructWidget<UCanvasPanel>();Size->SetContent(WorldCanvas);const float Width=Right-16;
         const FString RegionName=SelectedEntry==TEXT("luoxia")?TEXT("落霞谷"):SelectedEntry==TEXT("xuantie")?TEXT("玄铁岭"):TEXT("青云山");
-        Scene(WorldCanvas,SelectedEntry==TEXT("luoxia")?1:SelectedEntry==TEXT("xuantie")?2:0,0,0,Width,140);
+        Surface(WorldCanvas,TEXT("WulingWorldCard"),InkPresentationStyle::ESurface::FeatureCard,0,0,Width,1040);
+        Surface(WorldCanvas,TEXT("WulingWorldHeading"),InkPresentationStyle::ESurface::FeatureHeading,0,0,Width,140);
         Label(WorldCanvas,TEXT("WulingWorldTitle"),RegionName+TEXT(" · 十分钟历练"),0,156,Width,48,30);
         Label(WorldCanvas,TEXT("WulingWorldState"),TEXT("等待权威服务"),0,212,Width,76,24);
-        Label(WorldCanvas,TEXT("WulingStageRewards"),TEXT("完成三阶段：80灵石 · 12破境石\n灵草6 · 玄铁4 · 残页2"),0,300,Width,76,24);
+        Label(WorldCanvas,TEXT("WulingStageRewards"),TEXT("历练奖励以服务结算回执为准"),0,300,Width,76,24);
         const TCHAR* Presets[]={TEXT("ENC_SOLO"),TEXT("ENC_SMALL"),TEXT("ENC_MEDIUM"),TEXT("ENC_LARGE")};const TCHAR* Names[]={TEXT("独行"),TEXT("小型"),TEXT("中型"),TEXT("大型")};
         for(int32 I=0;I<4;++I)Action(WorldCanvas,TEXT("WulingPreset_")+FString(Presets[I]),Names[I],I*(Width+8)/4,388,(Width-24)/4,88,false,false,Preset==Presets[I]);
         Action(WorldCanvas,TEXT("WulingRoute"),Route==TEXT("guard")?TEXT("路线：先护阵"):TEXT("路线：先采集"),0,488,Width,88);
@@ -75,11 +79,12 @@ void UInkWulingPanel::RefreshLiveData()
     auto Set=[&](const TCHAR* Name,const FString& Value){if(auto* T=Cast<UTextBlock>(WidgetTree->FindWidget(Name)))T->SetText(FText::FromString(Value));};
     const auto S=W->Snapshot(),Guild=Obj(S,TEXT("guild")),Counts=Obj(S,TEXT("counts")),Round=Obj(S,TEXT("round")),Growth=Obj(S,TEXT("growth"));
     Set(TEXT("WulingGuildName"),Guild?Str(Guild,TEXT("name")):TEXT("尚未创建武灵"));
-    Set(TEXT("WulingCounts"),FString::Printf(TEXT("成员 %.0f · 参与成员 %.0f · 临时助战 %.0f\n公共资材 %.0f · 声望 %.0f"),Num(Counts,TEXT("members")),Num(Counts,TEXT("participating_members")),Num(Counts,TEXT("helpers")),Num(Guild,TEXT("supply")),Num(Guild,TEXT("reputation"))));
+    Set(TEXT("WulingCounts"),FString::Printf(TEXT("成员 %s · 参与成员 %s · 临时助战 %s\n公共资材 %s · 声望 %s"),*DisplayNum(Counts,TEXT("members")),*DisplayNum(Counts,TEXT("participating_members")),*DisplayNum(Counts,TEXT("helpers")),*DisplayNum(Guild,TEXT("supply")),*DisplayNum(Guild,TEXT("reputation"))));
     FString Members;const TArray<TSharedPtr<FJsonValue>>* Rows=nullptr;
-    if(S&&S->TryGetArrayField(TEXT("members"),Rows))for(int32 I=0;I<Rows->Num();++I)
-    {const auto Member=(*Rows)[I]->AsObject();FString Name=Str(Member,TEXT("name"));Members+=FString::Printf(TEXT("%02d  %s\n"),Cursor+I+1,Name.IsEmpty()?TEXT("剑灵"):*Name);}
-    if(Members.IsEmpty())Members=TEXT("暂无正式成员\n观众发送“加入”成为成员\n护阵 / 破障 / 共修 响应阶段");
+    const bool HasRoster=S&&S->TryGetArrayField(TEXT("members"),Rows);
+    if(HasRoster)for(int32 I=0;I<Rows->Num();++I)
+    {const auto Member=(*Rows)[I]->AsObject();FString Name=Str(Member,TEXT("name"));Members+=FString::Printf(TEXT("%02d  %s\n"),Cursor+I+1,Name.IsEmpty()?TEXT("名称待同步"):*Name);}
+    if(Members.IsEmpty())Members=!W->IsConnected()?TEXT("服务未连接 · 名册待同步"):!HasRoster?TEXT("成员名单待服务同步"):TEXT("本页暂无正式成员");
     Set(TEXT("WulingMembers"),Members);
     const FString Phase=Str(Round,TEXT("status"));const int32 Elapsed=int32(Num(Round,TEXT("elapsed")));
     const FString SelectedRegion=SelectedEntry==TEXT("luoxia")?TEXT("落霞谷"):SelectedEntry==TEXT("xuantie")?TEXT("玄铁岭"):TEXT("青云山");
@@ -95,7 +100,7 @@ void UInkWulingPanel::RefreshLiveData()
     if(Num(Round,TEXT("recovery_until"))>Num(S,TEXT("server_utc")))Current=TEXT("主播恢复中 · 30秒后继续\n已完成阶段奖励保留");
     Set(TEXT("WulingWorldState"),W->IsConnected()?Current:TEXT("服务未连接 · 暂停权威进度"));
     const auto Wallet=Obj(S,TEXT("wallet")),Inventory=Obj(S,TEXT("inventory"));
-    Set(TEXT("WulingGrowth"),FString::Printf(TEXT("%s · 修为 %.0f / %.0f\n灵石 %.0f · 破境石 %.0f\n本次突破需 %.0f 灵石 / %.0f 破境石"),*Str(Growth,TEXT("name")),Num(Growth,TEXT("qi")),Num(Growth,TEXT("qi_to_next")),Num(Wallet,TEXT("CUR_STONE")),Num(Inventory,TEXT("MAT_BREAK")),Num(Growth,TEXT("stone_to_next")),Num(Growth,TEXT("material_to_next"))));
+    Set(TEXT("WulingGrowth"),FString::Printf(TEXT("%s · 修为 %s / %s\n灵石 %s · 破境石 %s\n本次突破需 %s 灵石 / %s 破境石"),*Str(Growth,TEXT("name")),*DisplayNum(Growth,TEXT("qi")),*DisplayNum(Growth,TEXT("qi_to_next")),*DisplayNum(Wallet,TEXT("CUR_STONE")),*DisplayNum(Inventory,TEXT("MAT_BREAK")),*DisplayNum(Growth,TEXT("stone_to_next")),*DisplayNum(Growth,TEXT("material_to_next"))));
     const bool Ready=W->IsEnabled()&&W->IsConnected()&&!W->IsBusy();
     auto FindAction=[&](const TCHAR* Id){UInkFrontendActionButton* Found=nullptr;WidgetTree->ForEachWidget([&](UWidget* Widget){if(auto* B=Cast<UInkFrontendActionButton>(Widget);B&&B->Action==FName(Id))Found=B;});return Found;};
     auto Enable=[&](const TCHAR* Id,bool Value){if(auto* B=FindAction(Id))B->SetIsEnabled(Value);};

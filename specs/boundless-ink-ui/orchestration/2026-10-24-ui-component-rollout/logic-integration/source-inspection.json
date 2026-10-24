@@ -1,0 +1,30 @@
+{
+  "scope": "static lexical/source-reference/Python parsing checks; not C++/UHT/UE execution",
+  "inspected_source_files": 41,
+  "parsed_scripts": [
+    "finalize_engine_evidence.py",
+    "inspect_source_batch.py",
+    "integrate_calendar_source.py",
+    "preflight_batch.py",
+    "prepare_boundary_harness.py",
+    "prepare_countdown_diagnostic.py",
+    "prepare_engine_batch.py",
+    "prepare_final_frame_smoke.py",
+    "record_engine_repair.py",
+    "run_authority_tests.py",
+    "run_unreal_batch.py",
+    "serve_engine_qa.py",
+    "verify_countdown_diagnostic.py",
+    "verify_engine_boundaries.py",
+    "verify_engine_pie.py",
+    "verify_engine_viewer.py",
+    "verify_final_frame_smoke.py",
+    "verify_saved_batch_ue.py",
+    "verify_unreal_readback.py",
+    "write_coverage.py"
+  ],
+  "lease_guard_refused_before_unreal_import": true,
+  "errors": [],
+  "engine_executed": false,
+  "compiled": false
+}

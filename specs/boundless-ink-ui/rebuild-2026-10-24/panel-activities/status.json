@@ -1,0 +1,28 @@
+{
+  "updated_at": "2026-10-24T12:48:37+08:00",
+  "slice": "panel-activities-01",
+  "state": "staged-source-ready",
+  "pages": [
+    "activities-hub-v1",
+    "activity-category-detail-v1",
+    "launch-activity-v1"
+  ],
+  "semantic_components": [
+    "daily-activity-scroll-v1",
+    "limited-activity-calendar-v1",
+    "permanent-activity-lotus-v1"
+  ],
+  "approval": "approved:false",
+  "source_promoted": false,
+  "assets_imported": false,
+  "routes_integrated": false,
+  "runtime_verified": false,
+  "next_owner": "logic-integration",
+  "remaining_ui": [
+    "launch-contribution-rank",
+    "hud-activity-entry",
+    "offline-prototype-shop",
+    "consignment",
+    "orders"
+  ]
+}

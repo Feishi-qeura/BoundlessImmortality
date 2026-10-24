@@ -1,0 +1,111 @@
+{
+  "scope": "Four reviewed transparent components, no whole-page raster",
+  "assets": [
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\main-action-ornament-component-v1.png",
+      "source_sha256": "901d495adf87fa946fb41d62eafa7c5951064996ef42bda6f480bab9b631d26c",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.82496394313317,
+      "semantics": "Transparent jade and old-gold action-corner ornament; full texture; no slicing.",
+      "cells": null,
+      "approved": false,
+      "package": "/Game/newUI/Components/Player/T_MainActionOrnament_v1",
+      "name": "T_MainActionOrnament_v1"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\hud-route-glyph-atlas-component-v1.png",
+      "source_sha256": "5d576274a7e043a61bfad6590838deb9b0d7adb454ef94b6560afe5697641ed4",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.6025753021240234,
+      "semantics": [
+        "0 character",
+        "1 inventory",
+        "2 cultivation",
+        "3 leaderboard",
+        "4 journey",
+        "5 menu"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 2
+      },
+      "approved": false,
+      "package": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1",
+      "name": "T_HudRouteGlyphAtlas_v1"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\character-attribute-glyph-atlas-component-v1.png",
+      "source_sha256": "0cfa127f7a04204d62dcadca9f29075896b8be8650d4b71168356942869d8e19",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5124730050441458,
+      "semantics": [
+        "0 Health",
+        "1 Attack",
+        "2 Defense",
+        "3 SpiritDamage",
+        "4 Critical",
+        "5 Evasion",
+        "6 Luck",
+        "7 MoveSpeed",
+        "8 CultivationSpeed"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 3
+      },
+      "approved": false,
+      "package": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1",
+      "name": "T_CharacterAttributeGlyphAtlas_v1"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\visible-entry\\assets\\components\\inventory-category-glyph-atlas-component-v1.png",
+      "source_sha256": "076d8ae4a04e5d03284d870e1092d3895727779b9d145cec18942b7332872f16",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_fraction": 0.5503451029459635,
+      "semantics": [
+        "0 Equipment",
+        "1 Material",
+        "2 Consumable",
+        "3 Treasure",
+        "4 EmptySlot",
+        "5 LockedSlot"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 2
+      },
+      "approved": false,
+      "package": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1",
+      "name": "T_InventoryCategoryGlyphAtlas_v1"
+    }
+  ],
+  "imported": false,
+  "runtime_references_verified": false
+}

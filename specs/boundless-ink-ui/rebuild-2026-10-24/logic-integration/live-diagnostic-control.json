@@ -1,0 +1,5 @@
+{
+  "action": "inspect_import_data",
+  "scope": "Read-only raw ObjectIterator identity in addition to redirect-resolving find_object",
+  "engine_pid": 47604
+}

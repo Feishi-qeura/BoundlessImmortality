@@ -1,0 +1,102 @@
+{
+  "heartbeat_at": "2026-10-24T08:38:43.239Z",
+  "old_ui_directory_exists": false,
+  "new_ui_assets": 596,
+  "latest_actual_build": {
+    "attempt": 26,
+    "exit_code": 0,
+    "source_files": 88,
+    "ledger_records": 224
+  },
+  "latest_runtime": "Actualservice full44 PIE10 begun after failed07/08/09 collector/scroll/Characterpaint attempts. Final44 pass not yet evidenced.",
+  "business_audit": "Corev9 independently proves15request/14types via persistentreceipt/hash/uniqueaudit. New stage7/7 and ordinary11/11 persisted audits plus actualHTTPS503to200/backoff72.265s nowawaitCorev10qualification.",
+  "native05": {
+    "success": 48,
+    "success_with_warning": 1,
+    "failed": 0,
+    "not_run": 0,
+    "total": 49,
+    "scope": "Build24 formaltests; laterSource not automatically covered"
+  },
+  "component_proof": "13/13 candidate visiblebrushes at respectiveepochs; Appearance sharedglyph expandedpaint still needs scopedproof",
+  "next": "Corev10 latest evidence/source review; soleintegration completes44/source26 servicegeometry/newattempt/currenthash and ownnormalprocessshutdown",
+  "visual_approved": false,
+  "all_machine_work_complete": false,
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:11",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:27",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会核对 service10、stage 回执与持久审计、native05，以及最新 Source 变化，更新 v9 的截断状态。build25 与后续 Source 分开记；全44、负例、共享图集可见性和进程退出逐项看证据，只写 review，不运行 UE、服务或测试。",
+      "last_tool": {
+        "id": "exec-e9caa45e-5558-4a44-97f5-4f2ae1982996",
+        "turnId": "01a16d11-118b-7842-ac61-12144ded61c0",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:44",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "真实服务下又确认了两处客户端问题：角色页重建时，临时高度会让滚动位置回跳；地图适配层只读 map_x/map_y，漏读了服务实际提供的 x/y。我会修复这两处，再重跑完整遍历，当前不标完成。",
+      "last_tool": {
+        "id": "exec-935cb271-84b4-4405-8429-c6b1d4d067eb",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    }
+  ]
+}

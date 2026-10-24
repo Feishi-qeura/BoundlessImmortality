@@ -1,0 +1,45 @@
+{
+  "engine_pid": 47604,
+  "operations": [
+    {
+      "old": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "new": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "before_class": "/Script/BoundlessImmortality.InkUiThemeData",
+      "after_class": "/Script/BoundlessImmortality.InkUiThemeData"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "before_class": "/Script/Engine.FontFace",
+      "after_class": "/Script/Engine.FontFace"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "before_class": "/Script/Engine.FontFace",
+      "after_class": "/Script/Engine.FontFace"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "new": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "before_class": "/Script/Engine.FontFace",
+      "after_class": "/Script/Engine.FontFace"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "new": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "before_class": "/Script/Engine.Font",
+      "after_class": "/Script/Engine.Font"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "new": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "before_class": "/Script/Engine.Font",
+      "after_class": "/Script/Engine.Font"
+    }
+  ],
+  "passed": true,
+  "reload_result": "(True, Text(\"\"))",
+  "no_file_changes": true,
+  "dirty_after": []
+}

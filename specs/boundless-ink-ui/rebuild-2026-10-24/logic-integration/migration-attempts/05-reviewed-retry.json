@@ -1,0 +1,17 @@
+{
+  "reviewed_at": "2026-10-24T13:21:14.5514156+08:00",
+  "prior_pid": 9420,
+  "current_pid": 47604,
+  "prior_clean_shutdown": "controller guard checked no dirty content/map then normalExit13:11:08; no retrospective object identity claim",
+  "current_findonly_inspection": "memory-readonly-47604-20261024T131924427830.json dirty0/newloaded0/newgenerated0/sourcedrif0/destinations0",
+  "fresh_preflight_counts": [
+    588,
+    582,
+    6,
+    589,
+    589
+  ],
+  "failed_intent_preserved": "migration-attempts/04-cancelled/original-engine-migration-journal.json",
+  "retry": "new recorded samePID47604 explicit sequence3migrate with scopedknownwarning acknowledgement",
+  "no_gameplay_data_changed": true
+}

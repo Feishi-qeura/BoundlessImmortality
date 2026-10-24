@@ -1,13 +1,13 @@
 # 玩家核心页面分组交付
 
-状态：设计候选交付；未获本轮逐页视觉审核。范围：主菜单、主 HUD、角色属性、背包、突破准备。仅本目录新增文件；不改公共契约、公共清单、公共说明或其他 revision。
+状态：设计候选交付；v2 候选已做独立视觉复核并登记到公共资源清单，仍未批准。范围：主菜单、主 HUD、角色属性、背包、突破准备。运行时代码与受保护页面保持独立。
 
 ## 获批资源保护核查
 
 - `home-v2` 页面与 `home-components-trim-v2-png` 在根 `contracts/asset-manifest.yaml` 中为 `approved: true`，另有对应用户批准证据。此分组只引用，不复制、不编辑、不覆盖。
 - 当前角色属性与背包按契约为 `preserved`，`delivery: preserve-runtime` 且页面视觉 `approval.approved: false`。portrait-refactor README 和代码交接亦明确保护角色属性、背包、排行榜几何/控件/业务绑定。本分组不生成替换稿；提供明确的字段关系与审阅说明。
-- 突破需区别“运行设计/实现已记录”和“页面图资产获批”：portrait-refactor 的 `screen-contract-proposed.yaml` 将突破列为已实现并有 `approval.json`，但根契约仍是 `new_planned`，根资产清单未登记突破 PNG。已有 `assets/pages/breakthrough-v1.png` 文件，不等于清单或用户批准。本分组不修改/覆盖它，新增独立 `breakthrough-preparation-v1.png`，标记候选。
-- 主菜单本身在根 screen contract 仍标 `preserved`、`approval.approved: false`；本分组只给出现有已实现布局的描述，不将实现交接误作新视觉批准。
+- 突破需区别“运行设计/实现已记录”和“页面图资产获批”：portrait-refactor 的 `screen-contract-proposed.yaml` 将突破列为已实现并有 `approval.json`，但页面图仍须单独审阅。本分组的突破图登记为 `generated`、`approved:false`，且等待完善可读的权威字段/占位关系。
+- 主菜单本身在根 screen contract 仍标 `preserved`、`approval.approved: false`。本分组生成的 `main-menu-v2.png` 经独立复核发现实际画面是天劫内容，已在公共及本分组清单中标为 `content-mismatch-do-not-use`；不能作为菜单候选或替换项目场景。
 
 ## 流程与入口
 
@@ -88,3 +88,13 @@ BreakthroughPrepare 的材料“查看来源” → 仅由服务返回的来源�
 - 根契约和 portrait-refactor 提案对突破状态不一致，待主任务合并时统一运行实现状态与页面视觉批准状态。
 - 图像生成返回941×1672（约0.563:1），符合9:16近似稿但不是严格720×1280；如需精确逻辑画布需批准后另做排版/尺寸裁切决策。当前候选仅用于审阅构图。
 - 根资产清单没有主菜单、背包、突破既有图片登记项；保留页不应凭磁盘存在的 PNG 推断批准。
+
+## 修订记录（v2）
+
+| 页面 | v1 状态 | v2 调整 | QA 边界 |
+|---|---|---|---|
+| 主菜单 | v1 作为历史布局候选 | `main-menu-v2.png` 文件名描述菜单，但实际画面是天劫页 | 语义错配；清单隔离为 `content-mismatch-do-not-use`，需要重新生成正确菜单图 |
+| 突破准备 | v1 空数据却强调可用主按钮，标记需替换 | `breakthrough-preparation-v2.png` 标注等待配置，CTA灰态禁用并给原因 | 仍是未批准候选；权威字段/占位的说明还要更清楚，不能推导配置和成本 |
+| 天劫现场 | v1 混画成功/失败且助力状态含混，标记需替换 | `tribulation-live-v2.png` 文件名描述天劫，但实际画面是主菜单 | 语义错配；清单隔离为 `content-mismatch-do-not-use`，需要重新生成正确天劫图 |
+
+v1 图片和登记保留为历史版本。v2 三张图均 `approved:false`，RGB（无 alpha），比例接近但不严格等于9:16；其中主菜单和天劫文件名/内容互换并已隔离，突破图仍等待内容澄清和用户视觉审批。

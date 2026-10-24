@@ -1,0 +1,10 @@
+{
+  "declared_test_fixture": true,
+  "guild_id": "5a7397de6f304dd98ccc542f734e683c",
+  "member": "newui-member-fixture",
+  "supply": 100,
+  "materials": {
+    "GUILD_MAT_01": 8,
+    "GUILD_MAT_02": 8
+  }
+}

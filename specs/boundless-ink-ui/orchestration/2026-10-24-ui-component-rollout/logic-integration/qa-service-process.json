@@ -1,0 +1,8 @@
+{
+  "scope": "isolated declared real Authority fixtures",
+  "started_at": "2026-10-24T11:46:22+08:00",
+  "port": 18789,
+  "pid": 38312,
+  "owner": "logic-integration",
+  "shutdown": "POST /qa/shutdown"
+}

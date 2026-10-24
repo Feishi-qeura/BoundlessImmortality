@@ -1,0 +1,347 @@
+{
+  "checked_at": "2026-10-24T17:14:46.2754198+08:00",
+  "scope": "Supervisor PNG header metadata only; no visual approval",
+  "attempt": 14,
+  "report_passed": true,
+  "report_finished": true,
+  "capture_count": 56,
+  "all_target_match": true,
+  "captures": [
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\main.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\saves.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\settings.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\hud.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\character.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\inventory.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\inventory-search.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\inventory-cleared.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\hud-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\rank-damage-local.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\rank-cultivation-local.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\rank-anchor-local.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\rank-anchor-global.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\extensions-player-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\world-player-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\equipmentfabao-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\cultivationmethods-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\breakthroughprepare-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\characterappearance-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\activities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\dailyactivities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\timedactivities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\dailyactivitydetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\timedactivitydetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\launchevent-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\wuling-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\swordspirit-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\giftrules-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\cultivationmethods-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\racelobby-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\racelive-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\racesettlement-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\resourcelease-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\eventsettlement-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\offlinerewards-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\shop-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\market-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\tradeorders-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\worldcultivation-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\regiondetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\resourcecontest-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\resourcedetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\signin-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\monthlysignin-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\dailyfortune-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\launchrank-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\breakthroughprepare-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\tribulation-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\itemsources-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\guildconstruction-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\equipmentfabao-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\extensions-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\wulingcraft-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\characterappearance-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\resourceranking-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-14\\resourcerewards-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "target_match": true
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "avatar_service10": {
+    "finished": true,
+    "passed": true,
+    "check_count": 14,
+    "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+    "request_statuses": [
+      503,
+      200
+    ],
+    "gap_seconds": 72.26499999999942,
+    "texture": "/Engine/Transient.Texture2D_6",
+    "visible_decoded_images": [
+      {
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRankBoardPage_0.WidgetTree.Image_1",
+        "name": "Image_1",
+        "visible": true,
+        "resource": "/Engine/Transient.Texture2D_6",
+        "paint_expectation": "expected"
+      }
+    ],
+    "scope": "Actual default root with Director tick temporarily paused and declared synthetic avatar transport row; display-only fixture separate from authority/player-entry proof. Native provider tick state restored. HTTPS loopback self-signed fixture uses only process-local peer setting.",
+    "checks": [
+      {
+        "name": "isolated Saved directory",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "begin actual default PIE",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual new default class",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "Slate action StartGame",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "connected retained isolated authority",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual first HTTPS avatar failure",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "allow production12second pending expiry before backoff refresh",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "one failed actual HTTPS request during host backoff",
+        "passed": true,
+        "actual": [
+          {
+            "number": 1,
+            "status": 503,
+            "utc": "2026-10-24T08:12:39.104267+00:00",
+            "monotonic": 108593.828
+          }
+        ]
+      },
+      {
+        "name": "same-subject display refresh is actually presented",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual retry eventually fills participant avatar",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual HTTPS recovery after failure",
+        "passed": true,
+        "actual": [
+          {
+            "number": 1,
+            "status": 503,
+            "utc": "2026-10-24T08:12:39.104267+00:00",
+            "monotonic": 108593.828
+          },
+          {
+            "number": 2,
+            "status": 200,
+            "utc": "2026-10-24T08:13:51.358979+00:00",
+            "monotonic": 108666.093
+          }
+        ]
+      },
+      {
+        "name": "actual host60second retry backoff",
+        "passed": true,
+        "actual": [
+          {
+            "number": 1,
+            "status": 503,
+            "utc": "2026-10-24T08:12:39.104267+00:00",
+            "monotonic": 108593.828
+          },
+          {
+            "number": 2,
+            "status": 200,
+            "utc": "2026-10-24T08:13:51.358979+00:00",
+            "monotonic": 108666.093
+          }
+        ]
+      },
+      {
+        "name": "decoded actual HTTPS pixels applied to real participant image",
+        "passed": true,
+        "actual": "/Engine/Transient.Texture2D_6"
+      },
+      {
+        "name": "avatar recovery render",
+        "passed": true,
+        "actual": null
+      }
+    ]
+  },
+  "native05": {
+    "total": 49,
+    "succeeded": 48,
+    "succeededWithWarnings": 1,
+    "failed": 0,
+    "notRun": 0,
+    "process_scope": "current build24 all frontend native regressions including fresh tuple and quote refusal/optional-display contracts",
+    "test_filter": "BoundlessImmortality.Frontend",
+    "warnings": [
+      {
+        "test": "BoundlessImmortality.Frontend.SafeReentry.StageCoordinatesKeepPawnRoles",
+        "warnings": 1,
+        "entries": [
+          {
+            "event": {
+              "type": "Warning",
+              "message": "LogSpawn: UWorld::DestroyActor: World has no context! World: Untitled, Actor: /Temp/Untitled_3.Untitled:PersistentLevel.Character_0",
+              "context": "log",
+              "artifact": "00000000000000000000000000000000"
+            },
+            "filename": "",
+            "lineNumber": -1,
+            "timestamp": "2026.10.24-08.24.57"
+          }
+        ]
+      }
+    ],
+    "scope": "formal build24 broad Frontend suite; not49 NewUI-only tests; no current26 rerun by reviewer"
+  },
+  "attempts": [
+    {
+      "attempt": "default-root-pie-07",
+      "finished": false,
+      "passed": false,
+      "current_step": "main",
+      "checks": 13,
+      "captures": 0,
+      "source_epoch_sha256": "0ccf723892449f8396d50fbbfadec344b6c64ad4cced2c76e4a02884bd6549b8",
+      "finished_at": "2026-10-24T08:29:22.355529+00:00",
+      "failed_checks": [],
+      "error_last_line": [
+        "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      ]
+    },
+    {
+      "attempt": "default-root-pie-08",
+      "finished": false,
+      "passed": false,
+      "current_step": "scroll to last real inventory slot",
+      "checks": 114,
+      "captures": 9,
+      "source_epoch_sha256": "0ccf723892449f8396d50fbbfadec344b6c64ad4cced2c76e4a02884bd6549b8",
+      "finished_at": "2026-10-24T08:31:30.098853+00:00",
+      "failed_checks": [
+        {
+          "name": "real root scroll to physical slot39",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: real root scroll to physical slot39: None"
+      ]
+    },
+    {
+      "attempt": "default-root-pie-09",
+      "finished": false,
+      "passed": false,
+      "current_step": "Character native feature entry CultivationMethods",
+      "checks": 256,
+      "captures": 18,
+      "source_epoch_sha256": "0ccf723892449f8396d50fbbfadec344b6c64ad4cced2c76e4a02884bd6549b8",
+      "finished_at": "2026-10-24T08:35:07.210224+00:00",
+      "failed_checks": [
+        {
+          "name": "actual scrolled target expected painted OpenCultivationMethods",
+          "passed": false,
+          "actual": {
+            "name": "Rebuild_CharacterRoute_1",
+            "visible": true,
+            "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.HorizontalBox_145",
+            "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_CharacterRoute_1",
+            "object_id": 94096,
+            "keyboard_focused": false,
+            "clipping": "Inherit",
+            "in_confirmation": false,
+            "x": -923,
+            "y": -115,
+            "width": 0,
+            "height": 0,
+            "geometry_arranged": false,
+            "paint_expectation": "culled",
+            "culling_proof_ancestor": "SHorizontalBox",
+            "culled_left": 27,
+            "culled_top": 1486,
+            "culled_right": 1247,
+            "culled_bottom": 1590,
+            "culled_clip_left": 27,
+            "culled_clip_top": 171,
+            "culled_clip_right": 1247,
+            "culled_clip_bottom": 682,
+            "independent_left": 641,
+            "independent_top": 1490,
+            "independent_right": 1243,
+            "independent_bottom": 1586,
+            "independent_clip_left": 27,
+            "independent_clip_top": 171,
+            "independent_clip_right": 1247,
+            "independent_clip_bottom": 682,
+            "painted_width": 0,
+            "painted_height": 0,
+            "action": "OpenCultivationMethods",
+            "enabled": true,
+            "descendant_text_count": 1,
+            "resource": "",
+            "label": "功法",
+            "label_desired_width": 55,
+            "label_width": 0,
+            "label_auto_wrap": true
+          }
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: actual scrolled target expected painted OpenCultivationMethods: {'name': 'Rebuild_CharacterRoute_1', 'visible': True, 'parent_object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.HorizontalBox_145', 'object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_CharacterRoute_1', 'object_id': 94096, 'keyboard_focused': False, 'clipping': 'Inherit', 'in_confirmation': False, 'x': -923, 'y': -115, 'width': 0, 'height': 0, 'geometry_arranged': False, 'paint_expectation': 'culled', 'culling_proof_ancestor': 'SHorizontalBox', 'culled_left': 27, 'culled_top': 1486, 'culled_right': 1247, 'culled_bottom': 1590, 'culled_clip_left': 27, 'culled_clip_top': 171, 'culled_clip_right': 1247, 'culled_clip_bottom': 682, 'independent_left': 641, 'independent_top': 1490, 'independent_right': 1243, 'independent_bottom': 1586, 'independent_clip_left': 27, 'independent_clip_top': 171, 'independent_clip_right': 1247, 'independent_clip_bottom': 682, 'painted_width': 0, 'painted_height': 0, 'action': 'OpenCultivationMethods', 'enabled': True, 'descendant_text_count': 1, 'resource': '', 'label': '功法', 'label_desired_width': 55, 'label_width': 0, 'label_auto_wrap': True}"
+      ]
+    },
+    {
+      "attempt": "default-root-pie-10",
+      "finished": false,
+      "passed": false,
+      "current_step": "world entry observation",
+      "checks": 222,
+      "captures": 16,
+      "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+      "finished_at": "2026-10-24T08:41:00.925482+00:00",
+      "failed_checks": [
+        {
+          "name": "actual provided journey x-y coordinates create native pins WorldCultivation",
+          "passed": false,
+          "actual": {
+            "authoritative_positioned_entries": 8,
+            "actual_pin_buttons": 0
+          }
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: actual provided journey x-y coordinates create native pins WorldCultivation: {'authoritative_positioned_entries': 8, 'actual_pin_buttons': 0}"
+      ]
+    },
+    {
+      "attempt": "stage-pie-cancel-01",
+      "finished": true,
+      "passed": true,
+      "current_step": "actual stage result data",
+      "checks": 53,
+      "captures": 4,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "finished_at": "2026-10-24T08:16:25.167013+00:00",
+      "failed_checks": [],
+      "error_last_line": []
+    },
+    {
+      "attempt": "stage-pie-commit-01",
+      "finished": false,
+      "passed": false,
+      "current_step": "rework optional display fields do not gate request",
+      "checks": 68,
+      "captures": 5,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "finished_at": "2026-10-24T08:18:22.539731+00:00",
+      "failed_checks": [
+        {
+          "name": "unique native target 申请突破",
+          "passed": false,
+          "actual": []
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: unique native target 申请突破: []"
+      ]
+    },
+    {
+      "attempt": "stage-pie-rework-01",
+      "finished": true,
+      "passed": true,
+      "current_step": "actual stage result data",
+      "checks": 43,
+      "captures": 4,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "finished_at": "2026-10-24T08:21:20.027513+00:00",
+      "failed_checks": [],
+      "error_last_line": []
+    }
+  ],
+  "stage_stale_commit_negative_checks": [
+    {
+      "name": "actual committed realm invalidates prior stage permission",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "previous stage confirmation no longer has a real Slate hit path",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "fresh current realm disables reusing old normal-stage quote",
+      "passed": true,
+      "actual": [
+        {
+          "name": "InkPlayerEActionButton_191",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.VerticalBox_91",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.InkPlayerEActionButton_191",
+          "object_id": 95910,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 48,
+          "y": 1027,
+          "width": 611,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 51,
+          "independent_top": 1062,
+          "independent_right": 662,
+          "independent_bottom": 1180,
+          "independent_clip_left": 27,
+          "independent_clip_top": 59,
+          "independent_clip_right": 686,
+          "independent_clip_bottom": 1204,
+          "painted_width": 611,
+          "painted_height": 118,
+          "widget_class": "/Script/BoundlessImmortality.InkPlayerEActionButton",
+          "enabled": false,
+          "label": "申请突破\n报价身份、阶段或材料选择无效，或服务明确拒绝；缺少展示字段不影响发送校验请求"
+        }
+      ]
+    },
+    {
+      "name": "stale confirmation enqueues no extra prepare",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "appearance_visible_attribute_count": 9,
+  "build25": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 88,
+    "source_ledger_records": 222,
+    "started_at": "2026-10-24T16:25:32.5432400+08:00",
+    "finished_at": "2026-10-24T16:25:41.4699423+08:00",
+    "exit_code": 0
+  },
+  "build26": {
+    "scope": "37 feature source integration and independent geometry repair",
+    "source_files": 88,
+    "source_ledger_records": 224,
+    "started_at": "2026-10-24T16:38:09.8432267+08:00",
+    "finished_at": "2026-10-24T16:38:22.6941267+08:00",
+    "exit_code": 0
+  },
+  "cross_epoch_acceptance": false,
+  "current_full44_portrait_landscape_acceptance": false,
+  "late_default10_final": {
+    "finished": false,
+    "passed": false,
+    "current_step": "world entry observation",
+    "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+    "finished_at": "2026-10-24T08:41:00.925482+00:00",
+    "checks": 222,
+    "captures": 16,
+    "failed_checks": [
+      {
+        "name": "actual provided journey x-y coordinates create native pins WorldCultivation",
+        "passed": false,
+        "actual": {
+          "authoritative_positioned_entries": 8,
+          "actual_pin_buttons": 0
+        }
+      }
+    ],
+    "original_checkpoint_preserved": true
+  }
+}

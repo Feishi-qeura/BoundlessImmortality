@@ -1,0 +1,110 @@
+{
+  "approved": false,
+  "assets": [
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-rank\\assets\\components\\wuling-sect-insignia-v3.png",
+      "source_sha256": "d42fbe4f9a002fc8927c4cc47471a236c43a7c1eec1f94d1810c28be2a942ca8",
+      "package": "/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1",
+      "name": "T_NUI_Wuling_SectInsignia_Normal_V1",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\assets\\components\\daily-activity-scroll-v1.png",
+      "source_sha256": "fdb9da51762a9521fcf5147f4bd52edd1f0fe453bf13866d4789461234f7f3af",
+      "package": "/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1",
+      "name": "T_DailyActivityScroll_v1",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\assets\\components\\limited-activity-calendar-v1.png",
+      "source_sha256": "3647d5a63c613b92054077c3fe4e482b7ede471f430904dc5100c7c039641343",
+      "package": "/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1",
+      "name": "T_LimitedActivityCalendar_v1",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\assets\\components\\permanent-activity-lotus-v1.png",
+      "source_sha256": "b9dcab0cd9ce4ec0604ac7830781c422fef82fb4ac368da46c632cbe521d5f73",
+      "package": "/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1",
+      "name": "T_PermanentActivityLotus_v1",
+      "width": 1320,
+      "height": 1192,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-c\\visible-entry\\assets\\components\\method-loadout-glyph-atlas-v1.png",
+      "source_sha256": "47af658d4c50e2692b33a58da4f3e76df7cae02290fc6acf3c5c3d909590516d",
+      "package": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1",
+      "name": "T_MethodLoadoutGlyphAtlas_v1",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-c\\visible-entry\\assets\\components\\equipment-fabao-glyph-atlas-v1.png",
+      "source_sha256": "1a654f979afeedd1a7464e397e653b144b3d60be7629543509d5accdc14c07a0",
+      "package": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1",
+      "name": "T_EquipmentFabaoGlyphAtlas_v1",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    },
+    {
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-c\\visible-entry\\assets\\components\\appearance-preview-ornament-atlas-v1.png",
+      "source_sha256": "80a2405958cde0e6a55da77a09a683a5fdeaaeec5ecfbeabd0f0d24aa5f4b331",
+      "package": "/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1",
+      "name": "T_AppearancePreviewOrnamentAtlas_v1",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "approved": false,
+      "usage": "semantic UI component; text/data/actions stay live widgets"
+    }
+  ]
+}

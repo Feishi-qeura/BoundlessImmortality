@@ -1,0 +1,196 @@
+schema_version: 1
+team_id: panel-journey
+status: candidate
+approved: false
+scope: [world, resources, sign-in, daily-fortune, monthly-sign-in]
+source_revision: specs/boundless-ink-ui/revisions/2026-10-23-parallel-maps-signin/asset-manifest-v2-candidate.yaml
+source_approval_exception: "Rollout README explicitly authorizes these unapproved source-page candidates as processing inputs; this does not approve source pages or derived components."
+logical_reference: [720, 1280]
+alternate_layout: [1280, 720]
+safe_area: "Root SafeZone plus 24 logical units; fixed actions clear gesture area."
+style_source: specs/boundless-ink-ui/contracts/style-contract.yaml
+runtime_rule: "Only server authority provides progress, availability, time, reward, fortune and claim state. Dynamic copy and numbers are TextBlock content."
+components:
+  - id: world-node-explored
+    category: icon
+    family: WorldNode
+    state: explored
+    page: world
+    source_page: world-map-v3-candidate
+    asset: assets/sprites/world-node-explored-v1.png
+    runtime_state_source: "journey.worlds[].exploration_status (adapter must explicitly map; missing/unknown must not map to explored)"
+    sizing: [80, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: world-node-available
+    category: icon
+    family: WorldNode
+    state: available
+    page: world
+    source_page: world-map-v3-candidate
+    asset: assets/sprites/world-node-available-v1.png
+    runtime_state_source: "journey.worlds[].open / explicit world VM availability"
+    sizing: [80, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: world-node-locked
+    category: icon
+    family: WorldNode
+    state: locked
+    page: world
+    source_page: world-map-v3-candidate
+    asset: assets/sprites/world-node-locked-v1.png
+    runtime_state_source: "journey.worlds[].open=false / explicit lock state; absent field stays unknown"
+    sizing: [80, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: resource-pin-free
+    category: icon
+    family: ResourcePin
+    state: free
+    page: resources
+    source_page: resources-map-v2-candidate
+    asset: assets/sprites/resource-pin-free-v1.png
+    runtime_state_source: "service resource-node type; never infer from missing ownership"
+    sizing: [76, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: resource-pin-temporary
+    category: icon
+    family: ResourcePin
+    state: temporary
+    page: resources
+    source_page: resources-map-v2-candidate
+    asset: assets/sprites/resource-pin-temporary-v1.png
+    runtime_state_source: "service temporary-point flag and service validity window"
+    sizing: [76, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: resource-pin-contest-open
+    category: icon
+    family: ResourcePin
+    state: contest-open
+    page: resources
+    source_page: resources-map-v2-candidate
+    asset: assets/sprites/resource-pin-contest-v1.png
+    runtime_state_source: "RaceVm.availability / enabled and permission fields"
+    sizing: [76, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: resource-pin-expired
+    category: icon
+    family: ResourcePin
+    state: expired
+    page: resources
+    source_page: resources-map-v2-candidate
+    asset: assets/sprites/resource-pin-expired-v1.png
+    runtime_state_source: "service expiration/availability result only"
+    sizing: [76, 88]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: OnGlyphPressed
+    approved: false
+  - id: fortune-great
+    category: icon
+    family: FortuneSeal
+    state: great
+    page: daily-fortune
+    source_page: daily-sign-in-v2-candidate
+    asset: assets/sprites/fortune-great-v1.png
+    runtime_state_source: "server-returned daily_fortune only"
+    sizing: [72, 72]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: none
+    approved: false
+  - id: fortune-good
+    category: icon
+    family: FortuneSeal
+    state: good
+    page: daily-fortune
+    source_page: daily-sign-in-v2-candidate
+    asset: assets/sprites/fortune-good-v1.png
+    runtime_state_source: "server-returned daily_fortune only"
+    sizing: [72, 72]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: none
+    approved: false
+  - id: fortune-neutral
+    category: icon
+    family: FortuneSeal
+    state: neutral
+    page: daily-fortune
+    source_page: daily-sign-in-v2-candidate
+    asset: assets/sprites/fortune-neutral-v1.png
+    runtime_state_source: "server-returned daily_fortune only"
+    sizing: [72, 72]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: none
+    approved: false
+  - id: fortune-bad
+    category: icon
+    family: FortuneSeal
+    state: bad
+    page: daily-fortune
+    source_page: daily-sign-in-v2-candidate
+    asset: assets/sprites/fortune-bad-v1.png
+    runtime_state_source: "server-returned daily_fortune only"
+    sizing: [72, 72]
+    fit: contain
+    slice: {type: full, margins: []}
+    class: UJourneyStateBadgeWidget
+    callback: none
+    approved: false
+  - id: calendar-day-state
+    category: control
+    family: MonthlyCalendar
+    state: [unknown, signed, today-claimable, future, missed]
+    page: monthly-sign-in
+    source_page: monthly-sign-in-v2-candidate
+    asset: code-native UJourneyCalendarDayWidget
+    runtime_state_source: "service day/month plus signed-day and claimable-day records; unknown never becomes missed"
+    sizing: [72, 72]
+    fit: native-widget
+    slice: {type: none, margins: []}
+    class: UJourneyCalendarDayWidget
+    callback: OnDayPressed
+    approved: false
+  - id: daily-sign-in-claim-state
+    category: control
+    family: DailySignIn
+    state: [unknown, claimable, pending, claimed, disconnected, unavailable, error]
+    page: sign-in
+    source_page: daily-sign-in-v2-candidate
+    asset: code-native UJourneyClaimStateWidget
+    runtime_state_source: "activities.signed + day + daily template enabled + service connection/busy; claim confirmation is authoritative"
+    sizing: [320, 88]
+    fit: native-widget
+    slice: {type: native-theme-button, margins: []}
+    class: UJourneyClaimStateWidget
+    callback: OnClaimRequested
+    approved: false
+    action_guard: "Emits once only while Claimable, then disables until the adapter supplies a new state; widget never submits the service action itself."

@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-24T11:13:49+08:00",
+  "processes": [
+    {
+      "Id": 33572,
+      "ProcessName": "LiveCodingConsole",
+      "CPU": 33.203125
+    },
+    {
+      "Id": 35164,
+      "ProcessName": "UnrealEditor",
+      "CPU": 9408.625
+    }
+  ],
+  "engine_lease": "not_granted",
+  "started_by_this_chat": false,
+  "stop_restart_authorized": false,
+  "activity_or_inactivity_inferred": false
+}

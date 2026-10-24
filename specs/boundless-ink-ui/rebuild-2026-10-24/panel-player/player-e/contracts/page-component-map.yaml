@@ -1,0 +1,72 @@
+slice: player-e
+status: candidate
+approved: false
+shared_contracts_modified: false
+canonical_inputs:
+  style: ../../../contracts/style-contract.yaml
+  screens: ../../../contracts/screen-contract.yaml
+  briefs:
+    breakthrough: ../../../contracts/screen-briefs/breakthrough.md
+    tribulation: ../../../contracts/screen-briefs/tribulation.md
+  models: ../../../model/vm-contract.yaml
+  actions: ../../../model/action-contract.yaml
+  bindings: ../../../model/screen-bindings.json
+pages:
+  breakthrough:
+    page_id: breakthrough
+    route: BreakthroughPrepare
+    resolved_route: WulingBreakthrough
+    layout_version: newui-r1-breakthrough
+    vm: [BreakthroughVm, InventoryVm]
+    actions: [quote-breakthrough, prepare-breakthrough, rework-quality]
+    tree: [page-frame, state-panel, back-button, material-slot, data-row, primary-button, danger-confirm]
+    actual_data:
+      - stage.stage_id/from_realm_index/to_realm_index
+      - selection.item_id/count
+      - quote.q/band/kind
+      - quality
+      - optionalForecast
+      - inventory read-only entries
+    unknown_when_absent: [q_normalized, readiness, slots, sources, growth_min, growth_max]
+    action_rules:
+      quote-breakthrough: {confirmation_required: false, does_not_authorize_execution: true}
+      prepare-breakthrough: {parameters: [selection.item_id/count, rework_mode], confirmation_required: true}
+      rework-quality: {parameters: [selection.item_id/count, rework_mode], confirmation_required: true, rework: true}
+    rules:
+      - Missing display-only fields never veto a valid native request.
+      - Authority re-quotes and validates growth, safety, inventory, and activity.
+      - Inventory is read-only; the page does not calculate eligibility or mutate it.
+  tribulation:
+    page_id: tribulation
+    route: Tribulation
+    resolved_route: WulingBreakthrough
+    layout_version: newui-r1-tribulation
+    vm: [TribulationVm]
+    actions: [cancel-breakthrough, reconcile-breakthrough]
+    tree: [page-frame, state-panel, back-button, trial-phase-strip, data-row, settlement-card]
+    actual_data:
+      - attempt.id/status
+      - timers.trial_start/deadline/cleanup_at
+      - helpers.helper_count
+      - probability.probability_basis_points
+      - exclusiveOutcome
+      - attempt.receipt_id
+      - snapshot.server_utc
+    phases: [Prepare, Trial, Reconcile, Succeeded, Failed, Cancelled]
+    action_rules:
+      cancel-breakthrough: {parameters: [actual_attempt_id], confirmation_required: true, only_before_trial_start: true}
+      reconcile-breakthrough: {parameters: [actual_attempt_id], confirmation_required: false, actual_reconcile_phase_only: true}
+    rules:
+      - Render only provider supplied phases and values; never synthesize a roll, helper, or result.
+      - No anchor-side Assist action; assistance uses the existing actor-verified live-comment path.
+      - A settled outcome is exclusive and must remain authority supplied.
+layout:
+  portrait: 720x1280; fixed header/footer; middle scrolls; safe inset 24; minimum hit area 88x88
+  landscape: 1280x720 reflow to list/detail columns; no portrait scaling
+style_injection:
+  colors: canonical style-contract palette
+  fonts: MaShanZheng title/display and LXGWWenKai section/body/button/secondary from newUI host
+  text_and_values: live UMG widgets only
+assets:
+  new_transparent_art_generated: false
+  reason: real material icons are optional provider data; existing page candidates supply layout input, not runtime artwork.

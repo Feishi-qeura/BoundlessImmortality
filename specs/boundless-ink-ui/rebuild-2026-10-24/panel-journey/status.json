@@ -1,0 +1,119 @@
+{
+  "team_id": "panel-journey",
+  "batch": "journey-a-through-f",
+  "updated_at": "2026-10-24T13:41:05+08:00",
+  "phase": "handoff-ready",
+  "handoff_ready": true,
+  "approved": false,
+  "visual_pending_user": true,
+  "owner": "panel-journey",
+  "integration_owner": "logic-integration",
+  "merge_slices": {
+    "journey-b": [
+      "sign-in",
+      "monthly-sign-in",
+      "daily-verse"
+    ],
+    "journey-c": [
+      "region",
+      "resource-detail",
+      "world-result"
+    ],
+    "journey-f": [
+      "resource-rank",
+      "resource-rewards"
+    ],
+    "journey-a": [
+      "journey",
+      "world",
+      "resources"
+    ],
+    "journey-d": [
+      "race-lobby",
+      "race-live"
+    ],
+    "journey-e": [
+      "lease",
+      "race-result"
+    ]
+  },
+  "owned_files": [
+    "panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+    "panel-journey/journey-a-world-resource.md",
+    "panel-journey/journey-b-sign-in.md",
+    "panel-journey/review-resolution.md",
+    "panel-journey/handoff.md",
+    "panel-journey/assets/asset-manifest.yaml",
+    "panel-journey/assets/runtime-source/journey-map-background-v1.png",
+    "panel-journey/assets/runtime-source/journey-map-background-landscape-v1.png",
+    "panel-journey/prompts/pages/journey-map-background.md",
+    "panel-journey/prompts/pages/journey-map-background-landscape.md",
+    "panel-journey/journey-c-resource-detail.md",
+    "panel-journey/journey-d-results.md",
+    "panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+    "panel-journey/review-v2/handoff.md",
+    "panel-journey/review-v2/review-resolution.md",
+    "panel-journey/review-v2/status.json",
+    "panel-journey/review-v2/journey-b-daily-verse.md",
+    "panel-journey/review-v2/journey-c-region-resource-world-result.md",
+    "panel-journey/review-v2/journey-d-race.md",
+    "panel-journey/review-v2/journey-e-lease-race-result.md",
+    "panel-journey/review-v2/journey-f-resource-rank-rewards.md",
+    "panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+    "panel-journey/review-v3/handoff.md",
+    "panel-journey/review-v3/review-resolution.md",
+    "panel-journey/review-v3/host-integration-changes.md",
+    "panel-journey/review-v3/review-v2-to-v3.patch",
+    "panel-journey/review-v3/status.json",
+    "panel-journey/review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+    "panel-journey/review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+    "panel-journey/review-v4/handoff.md",
+    "panel-journey/review-v4/review-resolution.md",
+    "panel-journey/review-v4/host-integration-changes.md",
+    "panel-journey/review-v4/review-v3-to-v4.patch",
+    "panel-journey/review-v4/status.json"
+  ],
+  "completed": [
+    "Composed standalone world/resource map pages with portrait and landscape layouts and exact-ID selection events",
+    "Composed daily/monthly sign-in pages with expected service-day action payloads and no invented calendar history or fortune",
+    "Added detail/result composition shell and exact-source refresh/reset semantics",
+    "Applied PJ-01/PJ-02/PJ-03 staged-source and host-contract resolutions",
+    "Recorded background dimensions, pixel format, SHA256, and newUI package targets",
+    "Consumed shared newui-r1 style, screen, VM, action, and page contracts",
+    "Staged distinct resource-detail, world-result, and race-result classes to preserve route identity",
+    "Added width-aware wrap layouts for daily and monthly sign-in composition, with independent landscape reflow",
+    "Fixed current-source-review C05/C06 in an isolated review-v2 copy; kept prior staged-source unchanged",
+    "Added journey hub, region, race lobby/live, lease, daily verse, resource rank/rewards and exact route classes",
+    "Added exact action/VM/host handoffs for panel-journey routes journey-a through journey-f",
+    "Created isolated review-v3 replacement source for remaining-v2 N02 and N04",
+    "Created isolated review-v4 replacement resolving bounded-v3-review J3-01 while retaining N02/N04"
+  ],
+  "remaining": [
+    "logic-integration must consume review-v4 as a full source replacement, bind the three-parameter event, compare exact captured day/month/milestone (month may be empty), and preserve identity through fresh adapter evaluation and response",
+    "Integration/cleanup must verify canonical font package import/readback",
+    "UHT/UBT, Slate, route wiring, service behavior, Editor/player-entry, device/package/runtime verification remain outstanding",
+    "Visual acceptance remains with the user; candidate remains unapproved"
+  ],
+  "blockers": [],
+  "source_only": true,
+  "source_compiled": false,
+  "assets_imported": false,
+  "route_wired": false,
+  "logic_verified": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "assets_approved": false,
+  "risk_notes": [
+    "Landscape/portrait layout fitting and contrast need assembled Editor review",
+    "Monthly calendar intentionally lacks historical signed/missed/future states because no day-history provider field is in the VM",
+    "review-v3 source resolves canonical font paths, but import/readback and displayed typography are not verified",
+    "Monthly claim delegate signature changed in review-v3 and host bindings must be updated atomically"
+  ],
+  "current_revision": "review-v4",
+  "current_source_review": "model/review/bounded-v3-review.md#J3-01",
+  "prior_staged_source_mutated": false,
+  "production_source_config_content_mutated": false
+}

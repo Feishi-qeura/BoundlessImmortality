@@ -1,0 +1,62 @@
+{
+  "owner_team": "logic-integration",
+  "state": "granted",
+  "granted_at": "2026-10-24T12:32:33.7348276+08:00",
+  "expires_at": "2026-10-24T18:32:33.7348276+08:00",
+  "scope": "Full GameUI newUI system: production UI source/config, build and migration helper, reviewed exact /Game/UI to /Game/newUI migration/removal, new UI imports/default entry/WBP save and actual logic verification",
+  "allowed_operations": [
+    "build",
+    "import",
+    "migrate_wbp",
+    "asset_root_migration",
+    "exact_old_redirector_fixup",
+    "remove_migrated_UI_root",
+    "automation",
+    "pie"
+  ],
+  "canonical_runtime_asset_root": "/Game/newUI",
+  "source_root_under_removal": "/Game/UI",
+  "new_assets_under_old_UI_authorized": false,
+  "asset_migration_plan_owner": "cleanup",
+  "sole_engine_and_content_executor": "logic-integration",
+  "migration_execution_conditions": [
+    "Fresh precise map and destination collision check from cleanup",
+    "Complete hash-verified UI/affected-referencer backup outside Content",
+    "Use UE package migration and referencer saves, not OS uasset move",
+    "Exact migrated redirector resolution; no delete_asset on old redirector",
+    "Final physical old directory and AssetRegistry old-root absence"
+  ],
+  "allowed_content_writes": [
+    "/Game/newUI/**",
+    "/Game/UI/** only migration/removal/temporary redirectors",
+    "Exact backed-up referencer packages necessary for named migration"
+  ],
+  "source_integration_authorized": true,
+  "diagnostic_source_repair_authorized": true,
+  "batch2_promotion_authorized": true,
+  "other_team_source_writes_authorized": false,
+  "cleanup_asset_mutation": true,
+  "cleanup_state": "full_named_root_migration_authorized_via_sole_executor",
+  "user_editor_stop_authorized": false,
+  "owned_engine_process_normal_shutdown_authorized": true,
+  "runtime_preconditions": [
+    "Fresh check no user/other engine or build conflict before starting each batch",
+    "Finish own source write epoch before UBT; panel/model writers stay staged",
+    "Record own engine/service PIDs and normally close owned processes"
+  ],
+  "observed_process_count": 0,
+  "observed_at": "2026-10-24T15:40:02.8850411+08:00",
+  "test_data_scope": "Isolated services/saves, retain production data",
+  "visual_approval": "pending_user",
+  "authority_reference": "specs/boundless-ink-ui/rebuild-2026-10-24/quickstart.md",
+  "migration_reference": "specs/boundless-ink-ui/rebuild-2026-10-24/migration-authorization.json",
+  "renewal_policy": "Coordinator may record continuation with genuine progress and no conflicts; complete checkpoint before new work after expiry",
+  "continuations": [
+    {
+      "recorded_at": "2026-10-24T15:40:02.8850411+08:00",
+      "previous_expires_at": "2026-10-24T16:32:33.7348276+08:00",
+      "new_expires_at": "2026-10-24T18:32:33.7348276+08:00",
+      "reason": "Same authorized rebuild batch; source family files updated15:37,7remainingcomponent textures actually imported, real44/service/Busy/confirmation regressions pending. Other6chats idle/staged-only; no otherEditor/UBT observed. Preserve per-batch process checks and user-owned processes."
+    }
+  ]
+}

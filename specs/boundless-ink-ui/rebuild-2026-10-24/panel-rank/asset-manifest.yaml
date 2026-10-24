@@ -1,0 +1,48 @@
+schema_version: 1
+team_id: panel-rank
+approved: false
+runtime_package_root: /Game/newUI/Components/RankWuling
+assets:
+  - id: wuling-sect-insignia-v1
+    path: assets/components/wuling-sect-insignia-v1.png
+    source: built-in-imagegen
+    width: 1024
+    height: 1536
+    mode: RGBA
+    alpha_extrema: [0, 254]
+    sha256: c54b22517802a491bd8520338622637d6775c43e776a5c2999ef8675230114b4
+    bytes: 2540842
+    state: superseded-overly-detailed-style
+    approved: false
+    imported: false
+    prompt: prompts/components/wuling-sect-insignia.md
+  - id: wuling-sect-insignia-v2
+    path: assets/components/wuling-sect-insignia-v2.png
+    source: built-in-imagegen
+    width: 1254
+    height: 1254
+    mode: RGBA
+    alpha_extrema: [0, 255]
+    sha256: da79491328776cd956bd79d4ec0a4ebdb005284bb061be835aadecb978e2bba0
+    bytes: 1261042
+    state: superseded-edge-cleanup-attempt
+    approved: false
+    imported: false
+    prompt: prompts/components/wuling-sect-insignia.md
+  - id: wuling-sect-insignia-v3
+    path: assets/components/wuling-sect-insignia-v3.png
+    source: built-in-imagegen-edit-of-v2
+    width: 1254
+    height: 1254
+    mode: RGBA
+    alpha_extrema: [0, 255]
+    sha256: d42fbe4f9a002fc8927c4cc47471a236c43a7c1eec1f94d1810c28be2a942ca8
+    bytes: 1207656
+    intended_use: small Wuling identity ornament in live UMG; contain-scale
+    object_path_target: /Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1
+    state: current-candidate
+    approved: false
+    imported: false
+    prompt: prompts/components/wuling-sect-insignia.md
+    nine_slice: null
+    notes: Text-free single emblem. Alpha verified; image was visually inspected, but final edge/fit review remains pending.

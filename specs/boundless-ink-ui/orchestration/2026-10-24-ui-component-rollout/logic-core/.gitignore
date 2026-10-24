@@ -1,0 +1,4 @@
+policy_tests.exe
+policy_tests.obj
+test-databases/
+__pycache__/

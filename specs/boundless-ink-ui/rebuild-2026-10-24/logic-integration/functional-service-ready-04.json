@@ -1,0 +1,10 @@
+{
+  "pid": 35712,
+  "port": 49557,
+  "app": "NewUIFunctional20261024",
+  "user": "functional-anchor",
+  "room": "functional-room",
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-04\\prototype.sqlite3",
+  "stopped": false,
+  "scope": "Actual production authority; declared isolated actors and test clock; optional missing-field transport fault only"
+}

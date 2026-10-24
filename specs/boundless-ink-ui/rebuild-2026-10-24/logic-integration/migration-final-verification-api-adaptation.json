@@ -1,0 +1,7 @@
+{
+  "original_sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155",
+  "execution_sha256": "d4701a34274a866098044d135b6e9818cc7f7b2f19b37f036dfd894d1521bda6",
+  "before": "    reg.remove_path('/Game/UI')",
+  "after": "    reg.scan_paths_synchronous(['/Game/newUI'], True, True)  # Cached-folder remove_path is not Python-exposed.",
+  "reason": "AssetRegistry.remove_path is unavailable in UE5.8 Python. Original strict old registry membership0, disk files0, canonical582 class/hash, forbidden phantoms and write scope checks remain unchanged."
+}

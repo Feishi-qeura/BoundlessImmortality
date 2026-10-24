@@ -343,7 +343,7 @@ UNiagaraSystem* UInkCultivationEditorLibrary::CreateQiSystem(const FString& Pack
 
 UNiagaraSystem* UInkCultivationEditorLibrary::CreateTitleSystem(const FString& PackagePath,UMaterialInterface* Material)
 {
-    if(!Material||!(PackagePath.StartsWith(TEXT("/Game/UI/Ink/Cohesion20261021/"))||PackagePath.StartsWith(TEXT("/Game/UI/Ink/SignIn20261022/"))))return nullptr;
+    if(!Material||!(PackagePath.StartsWith(TEXT("/Game/newUI/Ink/Cohesion20261021/"))||PackagePath.StartsWith(TEXT("/Game/newUI/Ink/SignIn20261022/"))))return nullptr;
     auto* Template=LoadObject<UNiagaraEmitter>(nullptr,TEXT("/Niagara/DefaultAssets/Templates/Emitters/SingleLoopingParticle.SingleLoopingParticle"));if(!Template)return nullptr;
     auto* Package=CreatePackage(*PackagePath);auto* System=NewObject<UNiagaraSystem>(Package,*FPackageName::GetLongPackageAssetName(PackagePath),RF_Public|RF_Standalone|RF_Transactional);
     UNiagaraSystemFactoryNew::InitializeSystem(System,true);
@@ -370,7 +370,7 @@ UNiagaraSystem* UInkCultivationEditorLibrary::CreateTitleSystem(const FString& P
 UNiagaraSystem* UInkCultivationEditorLibrary::CreateTitleParticleSystem(const FString& PackagePath,UMaterialInterface* Material,int32 Kind)
 {
     const bool Character=Kind==4||Kind==5;
-    if(!Material||Kind<0||Kind>5||!PackagePath.StartsWith(Character?TEXT("/Game/UI/Ink/CharacterProfile20261022/"):TEXT("/Game/UI/Ink/NiagaraRevision20261022/")))return nullptr;
+    if(!Material||Kind<0||Kind>5||!PackagePath.StartsWith(Character?TEXT("/Game/newUI/Ink/CharacterProfile20261022/"):TEXT("/Game/newUI/Ink/NiagaraRevision20261022/")))return nullptr;
     auto* Template=LoadObject<UNiagaraEmitter>(nullptr,TEXT("/Niagara/DefaultAssets/Templates/Emitters/Fountain.Fountain"));if(!Template)return nullptr;
     auto* Package=CreatePackage(*PackagePath);auto* System=NewObject<UNiagaraSystem>(Package,*FPackageName::GetLongPackageAssetName(PackagePath),RF_Public|RF_Standalone|RF_Transactional);
     UNiagaraSystemFactoryNew::InitializeSystem(System,true);
@@ -502,7 +502,7 @@ UNiagaraSystem* UInkCultivationEditorLibrary::CreateTitleParticleSystem(const FS
 
 UNiagaraSystem* UInkCultivationEditorLibrary::CreateSignInChestSystem(const FString& PackagePath,UMaterialInterface* Material)
 {
-    if(!PackagePath.StartsWith(TEXT("/Game/UI/Ink/SignIn20261022/")))return nullptr;
+    if(!PackagePath.StartsWith(TEXT("/Game/newUI/Ink/SignIn20261022/")))return nullptr;
     auto* System=CreateTitleSystem(PackagePath,Material);if(!System)return nullptr;
     System->GetExposedParameters().SetParameterValue(FVector2f(96),FNiagaraVariable(FNiagaraTypeDefinition::GetVec2Def(),TEXT("User.TitleSize")),true);
     System->GetExposedParameters().SetParameterValue(FLinearColor(1,.72f,.25f,1),FNiagaraVariable(FNiagaraTypeDefinition::GetColorDef(),TEXT("User.TitleColor")),true);

@@ -1,0 +1,155 @@
+{
+  "recorded_at": "2026-10-24T06:30:49.733549+00:00",
+  "core_runtime_verified": false,
+  "core_page_count": 7,
+  "required_total_pages": 44,
+  "remaining_feature_pages": 37,
+  "actual_default_entry_verified": true,
+  "actual_default_wbp": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+  "engine_pid": 44200,
+  "source_epoch_sha256": "a0d9b6e31b37536400f6075975dc37cf9e9ae9d894ed37d60b61920f9738f495",
+  "build": "build-11-result.json",
+  "source_files": 64,
+  "source_ledger_records": 118,
+  "slate_checks": 159,
+  "viewport_captures": 15,
+  "native_tests": {
+    "passed": 3,
+    "failed": 0,
+    "report": "native-tests-01-report/index.json",
+    "rendered": false
+  },
+  "pages": {
+    "Character": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\character.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\character.png",
+        "layout_version": "newui-r1-player-character",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ],
+    "HUD": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\hud-landscape.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\hud-landscape.png",
+        "layout_version": "newui-r1-player-hud",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\hud.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\hud.png",
+        "layout_version": "newui-r1-player-hud",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ],
+    "Inventory": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-cleared.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-cleared.png",
+        "layout_version": "newui-r1-player-inventory",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-landscape-end.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-landscape-end.png",
+        "layout_version": "newui-r1-player-inventory",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-landscape.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-landscape.png",
+        "layout_version": "newui-r1-player-inventory",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-search.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory-search.png",
+        "layout_version": "newui-r1-player-inventory",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\inventory.png",
+        "layout_version": "newui-r1-player-inventory",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ],
+    "Main": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\main.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\main.png",
+        "layout_version": "newui-r1-player-main",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ],
+    "Leaderboard": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-anchor-global.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-anchor-global.png",
+        "layout_version": "newui-r1-rank-leaderboard",
+        "board_category": "Anchor",
+        "board_scope": "Global"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-anchor-local.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-anchor-local.png",
+        "layout_version": "newui-r1-rank-leaderboard",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-cultivation-local.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-cultivation-local.png",
+        "layout_version": "newui-r1-rank-leaderboard",
+        "board_category": "CultivationSpeed",
+        "board_scope": "Local"
+      },
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-damage-local.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\rank-damage-local.png",
+        "layout_version": "newui-r1-rank-leaderboard",
+        "board_category": "Damage",
+        "board_scope": "Local"
+      }
+    ],
+    "Saves": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\saves.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\saves.png",
+        "layout_version": "newui-r1-player-saves",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ],
+    "Settings": [
+      {
+        "snapshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\settings.json",
+        "screenshot": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\default-root-pie-03\\settings.png",
+        "layout_version": "newui-r1-player-settings",
+        "board_category": "Anchor",
+        "board_scope": "Local"
+      }
+    ]
+  },
+  "candidate_approved": false,
+  "visual_acceptance": "pending_user",
+  "server_global_board_acceptance": false,
+  "device_or_package_acceptance": false,
+  "remaining": [
+    "37 independent feature owner pages and real new hosts/routes",
+    "visual polish and user acceptance, including compact landscape Rank header/row space",
+    "service-backed mutation validation separate from unavailable-state UI proof"
+  ],
+  "evidence_scope": "Actual default player entry and Slate actions; global board unavailable branch is truthful; source/compile/native tests/PIE/screenshots do not substitute for server/device/platform acceptance.",
+  "geometry_provisional": true,
+  "geometry_issue": "V5-VERIFY-01 circular finite filter in PIE03; raw 159-check history preserved, awaiting independent arrangement/culling PIE"
+}

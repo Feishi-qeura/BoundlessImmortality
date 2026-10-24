@@ -13,7 +13,7 @@ UInkUiThemeData::UInkUiThemeData()
 const UInkUiThemeData* InkUiTypography::Theme()
 {
     static TWeakObjectPtr<UInkUiThemeData> Cached;
-    if(!Cached.IsValid())Cached=InkUiAssets::Load<UInkUiThemeData>(nullptr,TEXT("/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    if(!Cached.IsValid())Cached=InkUiAssets::Load<UInkUiThemeData>(nullptr,TEXT("/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     return Cached.IsValid()?Cached.Get():GetDefault<UInkUiThemeData>();
 }
 

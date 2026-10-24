@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "authorization": "User explicitly requests removing /Game/UI and replacing it with /Game/newUI as part of full GameUI presentation refactor",
+  "source_package_root": "/Game/UI",
+  "destination_package_root": "/Game/newUI",
+  "source_directory": "D:/demo/BoundlessImmortality/Content/UI",
+  "destination_directory": "D:/demo/BoundlessImmortality/Content/newUI",
+  "backup_directory": "D:/demo/BoundlessImmortality/Saved/Codex/UIRebuild20261024/Backups",
+  "observed_asset_count": 588,
+  "observed_asset_bytes": 214623195,
+  "new_assets_under_source_root_authorized": false,
+  "migration_and_source_directory_removal_authorized": true,
+  "asset_migration_owner": "cleanup",
+  "production_source_config_owner": "logic-integration",
+  "allowed_scope": "All assets physically under the named /Game/UI root and their necessary referencer saves/path configuration updates; no unrelated asset deletion",
+  "required_outputs": [
+    "Fresh exact migration map, destination collision policy and full hash-verified backup outside Content",
+    "UE migration/renaming and saved referencers, with concrete backups of touched packages",
+    "Canonical newUI paths in runtime code/config; historical compatibility aliases explicitly distinguished",
+    "Exact old redirector resolution without delete_asset following canonical targets",
+    "Content/UI absent and AssetRegistry old-root package count zero",
+    "New default UI root/pages actually loaded from newUI and corresponding build/runtime evidence"
+  ],
+  "engine_execution": "Serialized against integration build/import and user Editor; no forced close of user unsaved session",
+  "visual_approval": "pending_user"
+}

@@ -1,0 +1,16 @@
+{
+  "updated_at": "2026-10-24T13:30:00+08:00",
+  "state": "review-v3-staged",
+  "finding": "N01/P1",
+  "supersedes": "review-v2 only for the launch-start confirmation change",
+  "approved": false,
+  "production_source_changed": false,
+  "compile_verified": false,
+  "runtime_verified": false,
+  "source_sha256": {
+    "staged-source/RebuildActivityWidgets.h": "183597F79CB2AFD171DAED3CAE258D8C0C181DC1533AB26954C34FF53843AB8A",
+    "staged-source/RebuildActivityWidgets.cpp": "535AC0BA0D98E054FC43B920E8E887F74D7307699FF6CDCA013AB90F119F0BE8"
+  },
+  "request_transport_extended_for": "panel-economy-03",
+  "next_owner": "logic-integration"
+}

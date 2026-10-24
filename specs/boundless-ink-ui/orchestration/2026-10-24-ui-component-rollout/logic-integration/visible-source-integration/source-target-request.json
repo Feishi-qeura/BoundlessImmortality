@@ -1,0 +1,10 @@
+{
+  "requester": "logic-integration",
+  "scope": "Add two exact source targets to current source-only grant; no engine/content authority requested here",
+  "requested_targets": [
+    {"path":"Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp","reason":"Canonical EventSettlement/RaceSettlement aliases currently force old WulingWorld/WulingRace routes before factory selection; correct actual wrapper routing at the authoritative alias resolver"},
+    {"path":"Source/BoundlessImmortalityEditor/Public/InkFrontendEditorLibrary.h","reason":"Declare an explicit preserving visible-page migration UFUNCTION alongside its already allowed cpp; avoid changing old leaderboard-only API semantics or unregistered helper declarations"}
+  ],
+  "dependent_edits_performed": false,
+  "independent_granted_work_continues": true
+}

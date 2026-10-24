@@ -1,0 +1,15 @@
+﻿owner,id,canonical_object_path,classification,visible_binding_observed
+panel-player,main-action-ornament-component-v1.png,/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-player,hud-route-glyph-atlas-component-v1.png,/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-player,character-attribute-glyph-atlas-component-v1.png,/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-player,inventory-category-glyph-atlas-component-v1.png,/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+player-c,method-loadout-glyph-atlas-v1.png,/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+player-c,equipment-fabao-glyph-atlas-v1.png,/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+player-c,appearance-preview-ornament-atlas-v1.png,/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1.T_AppearancePreviewOrnamentAtlas_v1,actual-visible-brush-observed-at-recorded-epoch,True
+player-c-reuse,shared-character-attribute-atlas,/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1,actual-brush-bound-but-hidden-at-observed-epoch,False
+panel-activities,daily-activity-scroll-v1,/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1.T_DailyActivityScroll_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-activities,limited-activity-calendar-v1,/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1.T_LimitedActivityCalendar_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-activities,permanent-activity-lotus-v1,/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1.T_PermanentActivityLotus_v1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-rank,wuling-sect-insignia-v3,/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1.T_NUI_Wuling_SectInsignia_Normal_V1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-journey,journey-map-background-v1.png,/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1,actual-visible-brush-observed-at-recorded-epoch,True
+panel-journey,journey-map-background-landscape-v1.png,/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1,actual-visible-brush-observed-at-recorded-epoch,True

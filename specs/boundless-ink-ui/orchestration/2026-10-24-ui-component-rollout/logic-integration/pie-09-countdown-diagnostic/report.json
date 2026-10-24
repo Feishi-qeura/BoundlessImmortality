@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture box-baseline",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture full-image-preview",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-09-countdown-diagnostic\\box-baseline.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-09-countdown-diagnostic\\full-image-preview.png"
+  ],
+  "steps": [
+    "main actual entry",
+    "frame baseline probe",
+    "frame baseline capture",
+    "full image transient preview",
+    "full image capture"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-09/Saved/",
+  "passed": true,
+  "current_step": "full image capture",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    }
+  ],
+  "frame_geometry_and_color": {
+    "size": [
+      0.0,
+      0.0
+    ],
+    "position": [
+      0.0,
+      0.0
+    ],
+    "color": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "draw_as": "<SlateBrushDrawType.BOX: 1>",
+    "tint": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "countdown_resource_readback": [
+    {
+      "capture": "box-baseline",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "full-image-preview",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    }
+  ],
+  "countdown_image_readback": [
+    {
+      "capture": "box-baseline",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001B560D9E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "full-image-preview",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.IMAGE: 3>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001B560D9E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    }
+  ],
+  "test_only_preview_mutation": "Transient PIE image brush BOX to IMAGE, no asset/source/save writes"
+}

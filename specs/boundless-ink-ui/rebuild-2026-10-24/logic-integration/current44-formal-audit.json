@@ -1,0 +1,474 @@
+{
+  "checked_at": "2026-10-24T17:14:21.743006+08:00",
+  "source_build": 26,
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "attempt": 14,
+  "expected_pages": 44,
+  "formal_captures": 56,
+  "strict_geometry_rechecked": true,
+  "expected_bad_injections_rejected": 56,
+  "pre_layout_generations_retained": 117,
+  "coverage": {
+    "Main": {
+      "portrait": [
+        "default-root-pie-14\\main.json"
+      ]
+    },
+    "HUD": {
+      "portrait": [
+        "default-root-pie-14\\hud.json",
+        "default-root-pie-14\\hud-portrait.json"
+      ]
+    },
+    "Saves": {
+      "portrait": [
+        "default-root-pie-14\\saves.json"
+      ]
+    },
+    "Settings": {
+      "portrait": [
+        "default-root-pie-14\\settings.json"
+      ]
+    },
+    "Character": {
+      "portrait": [
+        "default-root-pie-14\\character.json"
+      ]
+    },
+    "Inventory": {
+      "portrait": [
+        "default-root-pie-14\\inventory.json",
+        "default-root-pie-14\\inventory-search.json",
+        "default-root-pie-14\\inventory-cleared.json"
+      ]
+    },
+    "Leaderboard": {
+      "portrait": [
+        "default-root-pie-14\\rank-damage-local.json",
+        "default-root-pie-14\\rank-cultivation-local.json",
+        "default-root-pie-14\\rank-anchor-local.json",
+        "default-root-pie-14\\rank-anchor-global.json"
+      ]
+    },
+    "Wuling": {
+      "portrait": [
+        "default-root-pie-14\\wuling-portrait.json"
+      ]
+    },
+    "SwordSpirit": {
+      "portrait": [
+        "default-root-pie-14\\swordspirit-portrait.json"
+      ]
+    },
+    "GiftRules": {
+      "portrait": [
+        "default-root-pie-14\\giftrules-portrait.json"
+      ]
+    },
+    "CultivationMethods": {
+      "portrait": [
+        "default-root-pie-14\\cultivationmethods-character-entry.json",
+        "default-root-pie-14\\cultivationmethods-portrait.json"
+      ]
+    },
+    "RaceLobby": {
+      "portrait": [
+        "default-root-pie-14\\racelobby-portrait.json"
+      ]
+    },
+    "RaceLive": {
+      "portrait": [
+        "default-root-pie-14\\racelive-portrait.json"
+      ]
+    },
+    "RaceSettlement": {
+      "portrait": [
+        "default-root-pie-14\\racesettlement-portrait.json"
+      ]
+    },
+    "ResourceLease": {
+      "portrait": [
+        "default-root-pie-14\\resourcelease-portrait.json"
+      ]
+    },
+    "EventSettlement": {
+      "portrait": [
+        "default-root-pie-14\\eventsettlement-portrait.json"
+      ]
+    },
+    "OfflineRewards": {
+      "portrait": [
+        "default-root-pie-14\\offlinerewards-portrait.json"
+      ]
+    },
+    "Shop": {
+      "portrait": [
+        "default-root-pie-14\\shop-portrait.json"
+      ]
+    },
+    "Market": {
+      "portrait": [
+        "default-root-pie-14\\market-portrait.json"
+      ]
+    },
+    "TradeOrders": {
+      "portrait": [
+        "default-root-pie-14\\tradeorders-portrait.json"
+      ]
+    },
+    "WorldCultivation": {
+      "portrait": [
+        "default-root-pie-14\\world-player-entry.json",
+        "default-root-pie-14\\worldcultivation-portrait.json"
+      ]
+    },
+    "RegionDetail": {
+      "portrait": [
+        "default-root-pie-14\\regiondetail-portrait.json"
+      ]
+    },
+    "ResourceContest": {
+      "portrait": [
+        "default-root-pie-14\\resourcecontest-portrait.json"
+      ]
+    },
+    "ResourceDetail": {
+      "portrait": [
+        "default-root-pie-14\\resourcedetail-portrait.json"
+      ]
+    },
+    "SignIn": {
+      "portrait": [
+        "default-root-pie-14\\signin-portrait.json"
+      ]
+    },
+    "MonthlySignIn": {
+      "portrait": [
+        "default-root-pie-14\\monthlysignin-portrait.json"
+      ]
+    },
+    "DailyFortune": {
+      "portrait": [
+        "default-root-pie-14\\dailyfortune-portrait.json"
+      ]
+    },
+    "Activities": {
+      "portrait": [
+        "default-root-pie-14\\activities-portrait.json"
+      ]
+    },
+    "DailyActivities": {
+      "portrait": [
+        "default-root-pie-14\\dailyactivities-portrait.json"
+      ]
+    },
+    "TimedActivities": {
+      "portrait": [
+        "default-root-pie-14\\timedactivities-portrait.json"
+      ]
+    },
+    "DailyActivityDetail": {
+      "portrait": [
+        "default-root-pie-14\\dailyactivitydetail-portrait.json"
+      ]
+    },
+    "TimedActivityDetail": {
+      "portrait": [
+        "default-root-pie-14\\timedactivitydetail-portrait.json"
+      ]
+    },
+    "LaunchEvent": {
+      "portrait": [
+        "default-root-pie-14\\launchevent-portrait.json"
+      ]
+    },
+    "LaunchRank": {
+      "portrait": [
+        "default-root-pie-14\\launchrank-portrait.json"
+      ]
+    },
+    "BreakthroughPrepare": {
+      "portrait": [
+        "default-root-pie-14\\breakthroughprepare-character-entry.json",
+        "default-root-pie-14\\breakthroughprepare-portrait.json"
+      ]
+    },
+    "Tribulation": {
+      "portrait": [
+        "default-root-pie-14\\tribulation-portrait.json"
+      ]
+    },
+    "ItemSources": {
+      "portrait": [
+        "default-root-pie-14\\itemsources-portrait.json"
+      ]
+    },
+    "GuildConstruction": {
+      "portrait": [
+        "default-root-pie-14\\guildconstruction-portrait.json"
+      ]
+    },
+    "EquipmentFabao": {
+      "portrait": [
+        "default-root-pie-14\\equipmentfabao-character-entry.json",
+        "default-root-pie-14\\equipmentfabao-portrait.json"
+      ]
+    },
+    "Extensions": {
+      "portrait": [
+        "default-root-pie-14\\extensions-player-entry.json",
+        "default-root-pie-14\\extensions-portrait.json"
+      ]
+    },
+    "WulingCraft": {
+      "portrait": [
+        "default-root-pie-14\\wulingcraft-portrait.json"
+      ]
+    },
+    "CharacterAppearance": {
+      "portrait": [
+        "default-root-pie-14\\characterappearance-character-entry.json",
+        "default-root-pie-14\\characterappearance-portrait.json"
+      ]
+    },
+    "ResourceRanking": {
+      "portrait": [
+        "default-root-pie-14\\resourceranking-portrait.json"
+      ]
+    },
+    "ResourceRewards": {
+      "portrait": [
+        "default-root-pie-14\\resourcerewards-portrait.json"
+      ]
+    }
+  },
+  "retained_nonfinite_records": [
+    {
+      "snapshot": "default-root-pie-14\\main.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\saves.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\settings.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\hud.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\character.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\inventory.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\inventory-search.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\inventory-cleared.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\hud-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\rank-damage-local.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\rank-cultivation-local.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\rank-anchor-local.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\rank-anchor-global.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\extensions-player-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\world-player-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\equipmentfabao-character-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\cultivationmethods-character-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\breakthroughprepare-character-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\characterappearance-character-entry.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\activities-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\dailyactivities-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\timedactivities-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\dailyactivitydetail-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\timedactivitydetail-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\launchevent-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\wuling-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\swordspirit-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\giftrules-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\cultivationmethods-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\racelobby-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\racelive-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\racesettlement-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\resourcelease-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\eventsettlement-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\offlinerewards-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\shop-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\market-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\tradeorders-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\worldcultivation-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\regiondetail-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\resourcecontest-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\resourcedetail-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\signin-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\monthlysignin-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\dailyfortune-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\launchrank-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\breakthroughprepare-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\tribulation-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\itemsources-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\guildconstruction-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\equipmentfabao-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\extensions-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\wulingcraft-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\characterappearance-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\resourceranking-portrait.json",
+      "retained_invalid_records": []
+    },
+    {
+      "snapshot": "default-root-pie-14\\resourcerewards-portrait.json",
+      "retained_invalid_records": []
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "scope": "All44actual default-root pages portrait only9:16, typed Back, real core/Journey/Character entries distinguished from programmatic37route probes. Metric audit never uses geometry_arranged to omit a bad expected-painted record. Visual approval remains pending."
+}

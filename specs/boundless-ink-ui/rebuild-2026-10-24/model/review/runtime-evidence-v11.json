@@ -1,0 +1,2444 @@
+{
+  "captured_utc": "2026-10-24T09:12:44.001564+00:00",
+  "human_scope_override": {
+    "recorded_by": "supervisor",
+    "verified_via": "read_thread userMessage, not an agent handoff assertion",
+    "source_thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+    "source_message_id": "01a16d26-2364-7de1-81e8-c690503a517e",
+    "exact_user_text": "只考虑竖屏，不是横屏，最终9比16比例上线手机直播互动玩法\n",
+    "target_orientation": "portrait_only",
+    "target_aspect_ratio": "9:16",
+    "reference_verification_resolution": [
+      720,
+      1280
+    ],
+    "landscape_acceptance_required": false,
+    "source_changes_required_by_this_record": false,
+    "preserve_existing_landscape_assets_and_support": true,
+    "visual_approval": "pending_user",
+    "physical_phone_and_platform_acceptance": "separate; not established by desktop PIE"
+  },
+  "attempts": [
+    {
+      "attempt": 11,
+      "finished": false,
+      "passed": false,
+      "checks": 1012,
+      "captures": 63,
+      "current_step": "capture TimedActivityDetail",
+      "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+      "matches_frozen_build26_epoch": true,
+      "failed_checks": [],
+      "error_last_line": [
+        "TimeoutError: Default root PIE exceeded 900 seconds"
+      ]
+    },
+    {
+      "attempt": 12,
+      "finished": false,
+      "passed": false,
+      "checks": 28,
+      "captures": 2,
+      "current_step": "settings entry",
+      "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+      "matches_frozen_build26_epoch": true,
+      "failed_checks": [],
+      "error_last_line": [
+        "    TypeError: NativizeObject: Cannot nativize 'InkRebuildFrontendWidget' as 'Object' (allowed Class type: 'InkFrontendWidget')"
+      ]
+    },
+    {
+      "attempt": 13,
+      "finished": true,
+      "passed": true,
+      "checks": 905,
+      "captures": 56,
+      "current_step": "back reached HUD ResourceRewards",
+      "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+      "matches_frozen_build26_epoch": true,
+      "failed_checks": [],
+      "error_last_line": []
+    },
+    {
+      "attempt": 14,
+      "finished": false,
+      "passed": false,
+      "checks": 533,
+      "captures": 33,
+      "current_step": "capture ResourceLease",
+      "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+      "matches_frozen_build26_epoch": true,
+      "failed_checks": [],
+      "error_last_line": []
+    }
+  ],
+  "source26_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "portrait13": {
+    "finished": true,
+    "passed": true,
+    "checks": 905,
+    "captures": 56,
+    "route_render_count": 44,
+    "feature_default_router_probes": 37,
+    "feature_typed_back_toHUD": 37,
+    "strict_geometry_capture_checks_passed": 56,
+    "deliberate_bad_metric_rejections_passed": 56,
+    "capture_metadata": [
+      {
+        "page": "Main",
+        "snapshot": "default-root-pie-13/main.json",
+        "snapshot_sha256": "fe0018e4f6328a5c449ae02a25eba0d3dd5556399e2fb819ee78453b6ac4f208",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-main"
+      },
+      {
+        "page": "Saves",
+        "snapshot": "default-root-pie-13/saves.json",
+        "snapshot_sha256": "1c4217b7dd0a8216d6c674fab126dbd344244ebb1080a8951f41ca4cfdea9904",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-saves"
+      },
+      {
+        "page": "Settings",
+        "snapshot": "default-root-pie-13/settings.json",
+        "snapshot_sha256": "1339beb5c1b26ecc85ab0f583fd1905791414bf626379aeebc53f1e3d4af69ad",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-settings"
+      },
+      {
+        "page": "HUD",
+        "snapshot": "default-root-pie-13/hud.json",
+        "snapshot_sha256": "1c03afcef25b12e8e4ef38036b23d70a8f99a003a5629c1bce2f933d83b138ae",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-hud"
+      },
+      {
+        "page": "Character",
+        "snapshot": "default-root-pie-13/character.json",
+        "snapshot_sha256": "8c3639b47acedb90f99f6b09bdf070420549c5750ecea3575f51e0e6fee4b4e6",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-character"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-13/inventory.json",
+        "snapshot_sha256": "848c0b27e23bbaac73ae91fdb5786625b42ec05301ce8a4d76a574a6148450cb",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-inventory"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-13/inventory-search.json",
+        "snapshot_sha256": "b9ab51164ff21290bae64bca5e447def672c80a4eba582bc86ace02797dc639a",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-inventory"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-13/inventory-cleared.json",
+        "snapshot_sha256": "ea7dc7f0d25de6a5a6a3cb37b1602c2033b2331d6ff4b940f64ff662350baab7",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-inventory"
+      },
+      {
+        "page": "HUD",
+        "snapshot": "default-root-pie-13/hud-portrait.json",
+        "snapshot_sha256": "bbe90812d0274138ff3f1968f1488a317c96f0da0586a84101b5e48361ed4f0e",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-player-hud"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-13/rank-damage-local.json",
+        "snapshot_sha256": "dbad1a3b015859979f494f5fb9e0438a3574781a21c1b71c323988d7ff993938",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-rank-leaderboard"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-13/rank-cultivation-local.json",
+        "snapshot_sha256": "aa72ef53d25a97ed2523571c8c6f3873d4a54e18169a0c1ee4e56e1652b7cf76",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-rank-leaderboard"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-13/rank-anchor-local.json",
+        "snapshot_sha256": "507e48a42a773285d6f26a72801126e8314e19f34dc7401c36437f33b55a693a",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-rank-leaderboard"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-13/rank-anchor-global.json",
+        "snapshot_sha256": "26453470eac14ac6afdb8bfa07caaa555496a1758553a5d1c56c4524e1a906a2",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-rank-leaderboard"
+      },
+      {
+        "page": "Extensions",
+        "snapshot": "default-root-pie-13/extensions-player-entry.json",
+        "snapshot_sha256": "0338ec05b438cfeaed67ca5a54a4d25b71c4587a075ccbda11752266a44d8bb3",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-extensions"
+      },
+      {
+        "page": "WorldCultivation",
+        "snapshot": "default-root-pie-13/world-player-entry.json",
+        "snapshot_sha256": "82d532f7e5b60923df778e955618ef72cf5c104ec066c5f12b803cc3662440f6",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-worldcultivation"
+      },
+      {
+        "page": "EquipmentFabao",
+        "snapshot": "default-root-pie-13/equipmentfabao-character-entry.json",
+        "snapshot_sha256": "d7d426a02bd8656c59770fbd64c9afca0912316111a35721eb730005886e66a2",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-equipmentfabao"
+      },
+      {
+        "page": "CultivationMethods",
+        "snapshot": "default-root-pie-13/cultivationmethods-character-entry.json",
+        "snapshot_sha256": "b0d9c763591afe2899712ec510ad2061f48a8f70eca5ad4020a98380824db06d",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-cultivationmethods"
+      },
+      {
+        "page": "BreakthroughPrepare",
+        "snapshot": "default-root-pie-13/breakthroughprepare-character-entry.json",
+        "snapshot_sha256": "25ff542ca3ddb53e4eb74221d5b85c853e8dd210907058c3fa5131a3bec24a1c",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-breakthroughprepare"
+      },
+      {
+        "page": "CharacterAppearance",
+        "snapshot": "default-root-pie-13/characterappearance-character-entry.json",
+        "snapshot_sha256": "ec3e6858a33cdce3a3d071bb0c1da816dbc301f1b0e22c4dd498d581664dfa11",
+        "png_dimensions": [
+          720,
+          1282
+        ],
+        "snapshot_dimensions": [
+          720,
+          1282
+        ],
+        "exact720x1280": false,
+        "exact9to16": false,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-characterappearance"
+      },
+      {
+        "page": "Activities",
+        "snapshot": "default-root-pie-13/activities-portrait.json",
+        "snapshot_sha256": "76361a1c0975cae0866f1d232a107aa3b1eecf68c7fb3dfb5137f0bdfff19a03",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-activities"
+      },
+      {
+        "page": "DailyActivities",
+        "snapshot": "default-root-pie-13/dailyactivities-portrait.json",
+        "snapshot_sha256": "24823039265de0e9258962c8082c948cad79282902d0f932dde60c5a623bbbdf",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-dailyactivities"
+      },
+      {
+        "page": "TimedActivities",
+        "snapshot": "default-root-pie-13/timedactivities-portrait.json",
+        "snapshot_sha256": "f6c3229af5fdc7b23b6ca643e1348d6fe4bf1aaa0a495ba1d2ee713b4a36e9eb",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-timedactivities"
+      },
+      {
+        "page": "DailyActivityDetail",
+        "snapshot": "default-root-pie-13/dailyactivitydetail-portrait.json",
+        "snapshot_sha256": "42a2e572062393f45906d23908ac4570c6476ac1e25d2db3decb17320566deac",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-dailyactivitydetail"
+      },
+      {
+        "page": "TimedActivityDetail",
+        "snapshot": "default-root-pie-13/timedactivitydetail-portrait.json",
+        "snapshot_sha256": "caf68bb7735289b8b5e14f7968eda187c9c7cbca22673acbae643f547d3e5e05",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-timedactivitydetail"
+      },
+      {
+        "page": "LaunchEvent",
+        "snapshot": "default-root-pie-13/launchevent-portrait.json",
+        "snapshot_sha256": "903ceeb2eeb1224d776f998cfbd48a3136d21bc2dffa55e6004d10cabd51eb3d",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-launchevent"
+      },
+      {
+        "page": "Wuling",
+        "snapshot": "default-root-pie-13/wuling-portrait.json",
+        "snapshot_sha256": "f3fa9198b7b2b2e7c2a41eaa2ddf05965833a828c3814d73527e3eb9a94da76e",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-wuling"
+      },
+      {
+        "page": "SwordSpirit",
+        "snapshot": "default-root-pie-13/swordspirit-portrait.json",
+        "snapshot_sha256": "15c765c18c66277eb05e7481b30593e85e66da8643da06cd319f38afdc859c84",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-swordspirit"
+      },
+      {
+        "page": "GiftRules",
+        "snapshot": "default-root-pie-13/giftrules-portrait.json",
+        "snapshot_sha256": "818f10e431ce0a91699a2c0efc0eeb27bbe0b1224c1994e9c95acb7526dd840d",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-giftrules"
+      },
+      {
+        "page": "CultivationMethods",
+        "snapshot": "default-root-pie-13/cultivationmethods-portrait.json",
+        "snapshot_sha256": "4a2bec15c351194fe40a1d9472316dde1d1a0d3dc899c82b980adeae9995912f",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-cultivationmethods"
+      },
+      {
+        "page": "RaceLobby",
+        "snapshot": "default-root-pie-13/racelobby-portrait.json",
+        "snapshot_sha256": "cf461f709b6269be8486e7a3235aa8bff6b1be60057dd60114932168350bc326",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-racelobby"
+      },
+      {
+        "page": "RaceLive",
+        "snapshot": "default-root-pie-13/racelive-portrait.json",
+        "snapshot_sha256": "8fc8e515c967f2cfa9804ba41d0265c9933efb4395dec06fb1940cf69d7bb5f7",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-racelive"
+      },
+      {
+        "page": "RaceSettlement",
+        "snapshot": "default-root-pie-13/racesettlement-portrait.json",
+        "snapshot_sha256": "cf2d7d745b3165d5c98fe666ffa7f57812d997f052c0f3b272deab0db1b778fa",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-racesettlement"
+      },
+      {
+        "page": "ResourceLease",
+        "snapshot": "default-root-pie-13/resourcelease-portrait.json",
+        "snapshot_sha256": "dd2a921420095339fda0173097692821493602c37cc2dbb55f2322a8ba60d0c1",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-resourcelease"
+      },
+      {
+        "page": "EventSettlement",
+        "snapshot": "default-root-pie-13/eventsettlement-portrait.json",
+        "snapshot_sha256": "4d4cd93f352b9ade6aa6f29630a09151057ed27a890c7d634a4be86393842553",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-eventsettlement"
+      },
+      {
+        "page": "OfflineRewards",
+        "snapshot": "default-root-pie-13/offlinerewards-portrait.json",
+        "snapshot_sha256": "1fd77f8997847a13ec477d3f31243947d561d86630ca319a1254e533df376e2b",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-offlinerewards"
+      },
+      {
+        "page": "Shop",
+        "snapshot": "default-root-pie-13/shop-portrait.json",
+        "snapshot_sha256": "1c889c3013c585e54f8c6094154c196cf6caa9ffd4c703bf125d7016a2d9c542",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-shop"
+      },
+      {
+        "page": "Market",
+        "snapshot": "default-root-pie-13/market-portrait.json",
+        "snapshot_sha256": "07f5ba8de4df167966f7e48f061e35ee2071faa5349b0a3f466f91b9e130a778",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-market"
+      },
+      {
+        "page": "TradeOrders",
+        "snapshot": "default-root-pie-13/tradeorders-portrait.json",
+        "snapshot_sha256": "4f3beb2c02c6954df94e3b668e26390d750c102fca290af06e55e3dc26ea44e8",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-tradeorders"
+      },
+      {
+        "page": "WorldCultivation",
+        "snapshot": "default-root-pie-13/worldcultivation-portrait.json",
+        "snapshot_sha256": "ce9703748971571be225263ffc47c475fa805fd377b88d868d2d8e3a054d8c70",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-worldcultivation"
+      },
+      {
+        "page": "RegionDetail",
+        "snapshot": "default-root-pie-13/regiondetail-portrait.json",
+        "snapshot_sha256": "93d4035ff1c47cbfa868aaadc52d4d43e27527fcffcbb3abe82633d4e9965df6",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-regiondetail"
+      },
+      {
+        "page": "ResourceContest",
+        "snapshot": "default-root-pie-13/resourcecontest-portrait.json",
+        "snapshot_sha256": "b6b5572a16528430ea6705d0015e5b5b2a961fbf271e593687de26745011efff",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-resourcecontest"
+      },
+      {
+        "page": "ResourceDetail",
+        "snapshot": "default-root-pie-13/resourcedetail-portrait.json",
+        "snapshot_sha256": "37b4cf5356664966b8b7819b04143daf271820e62819c2d88a257e17f3110454",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-resourcedetail"
+      },
+      {
+        "page": "SignIn",
+        "snapshot": "default-root-pie-13/signin-portrait.json",
+        "snapshot_sha256": "3bd7c696d7ca3c775ae7c56ca58442822692607d7e67ac5c5277ba4649a127db",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-signin"
+      },
+      {
+        "page": "MonthlySignIn",
+        "snapshot": "default-root-pie-13/monthlysignin-portrait.json",
+        "snapshot_sha256": "7af6c7737199286477d5fbc7c0d97ef5de32652c6917d07cf38ce473c0ad8f55",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-monthlysignin"
+      },
+      {
+        "page": "DailyFortune",
+        "snapshot": "default-root-pie-13/dailyfortune-portrait.json",
+        "snapshot_sha256": "0075d0aaad25513ec93796c60ebfacca15efc72844f88ed7bb31ae3dea72f678",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-dailyfortune"
+      },
+      {
+        "page": "LaunchRank",
+        "snapshot": "default-root-pie-13/launchrank-portrait.json",
+        "snapshot_sha256": "d532af8412ef63cdd4e270c59048e9fb82bc9fe516b11a98e8a2f1edac69d8c7",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-launchrank"
+      },
+      {
+        "page": "BreakthroughPrepare",
+        "snapshot": "default-root-pie-13/breakthroughprepare-portrait.json",
+        "snapshot_sha256": "30f4f8ef0ed039fbd1a05b9dfdc80c5fe03c042cbbd8d827a75ced981c43c769",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-breakthroughprepare"
+      },
+      {
+        "page": "Tribulation",
+        "snapshot": "default-root-pie-13/tribulation-portrait.json",
+        "snapshot_sha256": "0d27cd820d659192f5c0d48666a573d05bf1e64d613f35b242a990665face245",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-tribulation"
+      },
+      {
+        "page": "ItemSources",
+        "snapshot": "default-root-pie-13/itemsources-portrait.json",
+        "snapshot_sha256": "3c5152e547b301ffa862cd04558aaf07bea605bd3ff4195ed0c44222365aa53c",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-itemsources"
+      },
+      {
+        "page": "GuildConstruction",
+        "snapshot": "default-root-pie-13/guildconstruction-portrait.json",
+        "snapshot_sha256": "a5e0280ef73f020e18d11a5febcf2f41406422ccdb56f3afee11107b9c396155",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-guildconstruction"
+      },
+      {
+        "page": "EquipmentFabao",
+        "snapshot": "default-root-pie-13/equipmentfabao-portrait.json",
+        "snapshot_sha256": "41fd5aa94d3f0879fd9e1566dd984d662f950cf4fa3c8b58f7961a5d5e8935c6",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-equipmentfabao"
+      },
+      {
+        "page": "Extensions",
+        "snapshot": "default-root-pie-13/extensions-portrait.json",
+        "snapshot_sha256": "f0def08965a5d7df3725e490c49209aaa81eed79d5eacbdb622b8e137a0e03d0",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-extensions"
+      },
+      {
+        "page": "WulingCraft",
+        "snapshot": "default-root-pie-13/wulingcraft-portrait.json",
+        "snapshot_sha256": "23b97e58e2bbe3f8d7effd5b4952459b1d26101e6672cf3540673139091ed685",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-wulingcraft"
+      },
+      {
+        "page": "CharacterAppearance",
+        "snapshot": "default-root-pie-13/characterappearance-portrait.json",
+        "snapshot_sha256": "e7cd7d78ebcc0f9a358110a62bc846539a06d759af2eb78e82c3102f631581d1",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-characterappearance"
+      },
+      {
+        "page": "ResourceRanking",
+        "snapshot": "default-root-pie-13/resourceranking-portrait.json",
+        "snapshot_sha256": "5384ee8574b03c1612a79b9e69e921ea4b9f90286cba50eee892c70c87ce8f41",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-resourceranking"
+      },
+      {
+        "page": "ResourceRewards",
+        "snapshot": "default-root-pie-13/resourcerewards-portrait.json",
+        "snapshot_sha256": "9e866ad546fad4a7193659cd7b4113fb863fb263401b7f8403ccd6d329b5314b",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "exact9to16": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_version": "newui-r1-feature-resourcerewards"
+      }
+    ],
+    "nonexact_reference_captures": [
+      "default-root-pie-13/main.json",
+      "default-root-pie-13/saves.json",
+      "default-root-pie-13/settings.json",
+      "default-root-pie-13/hud.json",
+      "default-root-pie-13/character.json",
+      "default-root-pie-13/inventory.json",
+      "default-root-pie-13/inventory-search.json",
+      "default-root-pie-13/inventory-cleared.json",
+      "default-root-pie-13/hud-portrait.json",
+      "default-root-pie-13/rank-damage-local.json",
+      "default-root-pie-13/rank-cultivation-local.json",
+      "default-root-pie-13/rank-anchor-local.json",
+      "default-root-pie-13/rank-anchor-global.json",
+      "default-root-pie-13/extensions-player-entry.json",
+      "default-root-pie-13/world-player-entry.json",
+      "default-root-pie-13/equipmentfabao-character-entry.json",
+      "default-root-pie-13/cultivationmethods-character-entry.json",
+      "default-root-pie-13/breakthroughprepare-character-entry.json",
+      "default-root-pie-13/characterappearance-character-entry.json"
+    ]
+  },
+  "portrait14_checkpoint": {
+    "finished": false,
+    "passed": false,
+    "checks": 533,
+    "captures": 33,
+    "current_step": "capture ResourceLease",
+    "captures_metadata": [
+      {
+        "png": "default-root-pie-14/main.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/saves.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/settings.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/hud.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/character.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/inventory.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/inventory-search.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/inventory-cleared.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/hud-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/rank-damage-local.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/rank-cultivation-local.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/rank-anchor-local.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/rank-anchor-global.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/extensions-player-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/world-player-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/equipmentfabao-character-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/cultivationmethods-character-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/breakthroughprepare-character-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/characterappearance-character-entry.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/activities-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/dailyactivities-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/timedactivities-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/dailyactivitydetail-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/timedactivitydetail-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/launchevent-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/wuling-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/swordspirit-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/giftrules-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/cultivationmethods-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/racelobby-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/racelive-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/racesettlement-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      },
+      {
+        "png": "default-root-pie-14/resourcelease-portrait.png",
+        "dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true
+      }
+    ],
+    "scope": "running checkpoint only; initial actual viewport calibration added before core captures"
+  },
+  "component_preliminary13": {
+    "passed": true,
+    "imported": 13,
+    "portrait_applicable": 12,
+    "actual_painted": 12,
+    "landscape_map": "retained imported asset; current user excludes landscape paint acceptance"
+  },
+  "formal14_audit_found": false,
+  "current14_component_audit_found": false,
+  "native06_preflight": {
+    "executed_business_action": false,
+    "object_call_method_available": true,
+    "attempts": [
+      {
+        "method": "constructor",
+        "success": false,
+        "error": "call() 'b_confirmed' is an invalid keyword argument for this function"
+      },
+      {
+        "method": "editor_native_names",
+        "success": true,
+        "value": "<Struct 'RebuildActivityActionRequest' (0x00000000F14E2E60) {action: \"purchase\", entry_id: \"SKU_BREAK\", cycle: \"\", expected_service_day: \"\", confirmed: True, version: \"1\", price_text: \"10 灵石\", offer_id: \"\", quantity_text: \"\", quantity: 0, offset: 0, owned_only: False, start_subject: {anchor_user_id: \"\", guild_id: \"\", rules_version: \"\", profile_id: \"\", launch_known_absent: False}}>"
+      }
+    ],
+    "passed": true
+  },
+  "current_formal_native49_result_found": false,
+  "prior_successes": "v9 15requests/14command kinds; v10 stage/Avatar/Appearance scoped successes retained, not pending again",
+  "visual_approval": false,
+  "phone_platform_acceptance": false,
+  "late14_formal": {
+    "finished": true,
+    "passed": true,
+    "checks": 906,
+    "captures": 56,
+    "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+    "matches_source26": true,
+    "rendered_pages": 44,
+    "typed_back_feature_routes": 37,
+    "programmatic_feature_router_routes": 37,
+    "all56_exact720x1280": true,
+    "capture_metadata": [
+      {
+        "page": "Main",
+        "snapshot": "default-root-pie-14/main.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "daae436fb1ebd5326a676b3c0dd9eb45ab94331112793051d54228bd2064b9b6"
+      },
+      {
+        "page": "Saves",
+        "snapshot": "default-root-pie-14/saves.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "92ea1745ebae0bdbf9b3b205716d8073478eb1e8c478ce9e66bfdfff33427ed8"
+      },
+      {
+        "page": "Settings",
+        "snapshot": "default-root-pie-14/settings.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "9f74db10b404ca4f3d1641634bc02cded8b781a6a86e5aae7b42760b84363426"
+      },
+      {
+        "page": "HUD",
+        "snapshot": "default-root-pie-14/hud.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "e084c4fc1b1ea38b1d40d36f403e23beaaf654b9d80419891ad316d37814d54a"
+      },
+      {
+        "page": "Character",
+        "snapshot": "default-root-pie-14/character.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "205cd713d62ff48a4d9b030e5a7720a2340e18c2a14ea3bace862bc9f5f56cfb"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-14/inventory.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "eb01df9fbf4c22143b9fa10f246b631e6c1b956f006f3c039d39b27568094c69"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-14/inventory-search.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "e1e39b647b3f9e1aed82442ec2c11e170e4321857c9d37f9c52d112fc7507be7"
+      },
+      {
+        "page": "Inventory",
+        "snapshot": "default-root-pie-14/inventory-cleared.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "47bb0b38567010c7e0ff742d3e36a256132f3919c56e581e06a1620587cb784c"
+      },
+      {
+        "page": "HUD",
+        "snapshot": "default-root-pie-14/hud-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ff9efe7838368f6a61241cd652ac1ec3c3e56a63562bd9d40d4c8d05ac5a50ee"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-14/rank-damage-local.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "b3dad65ce02e91d6906a0f49a4a075d69c0c256943d3482e5823281ce6c760e4"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-14/rank-cultivation-local.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ebb3f0529d412aba69dafb45b7d042d77cf6fa8396bb907311205e6f5a892bce"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-14/rank-anchor-local.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "6c2eeff4bc2fd38dd10b214a706787dbc77d8a072f0f517303d92914d77b56b5"
+      },
+      {
+        "page": "Leaderboard",
+        "snapshot": "default-root-pie-14/rank-anchor-global.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "9fba3c96fd16156000f2b7c21b7b55185a89d15d75c18af6f374eb3f2e6a04a9"
+      },
+      {
+        "page": "Extensions",
+        "snapshot": "default-root-pie-14/extensions-player-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ad4a3292c44a1ccbba090642a7b7b0051452fdd606a3ab2f829c1ac1f8d3127d"
+      },
+      {
+        "page": "WorldCultivation",
+        "snapshot": "default-root-pie-14/world-player-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "6eee77892269c8b48c276315fc581a0808ba2549b8077c29f07112e5203eb5ea"
+      },
+      {
+        "page": "EquipmentFabao",
+        "snapshot": "default-root-pie-14/equipmentfabao-character-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "f88e8c4928cbb7d889f4b9a14c73ce927da87023cadce46ab1186e60a26b698c"
+      },
+      {
+        "page": "CultivationMethods",
+        "snapshot": "default-root-pie-14/cultivationmethods-character-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "3f28cbcf33030ccac885d13c8530e55772099f35eed7e169ebf6eff20d8c2832"
+      },
+      {
+        "page": "BreakthroughPrepare",
+        "snapshot": "default-root-pie-14/breakthroughprepare-character-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "abd93c931f4bcbcd10990ef7b33eedb706cdbf64a90d131be54c69e02dc624b0"
+      },
+      {
+        "page": "CharacterAppearance",
+        "snapshot": "default-root-pie-14/characterappearance-character-entry.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "bbb3cc6c28c3a506a26c78bfd8df63698ec8eeb27f7e55836030181adc63069b"
+      },
+      {
+        "page": "Activities",
+        "snapshot": "default-root-pie-14/activities-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "2c83ca4d5151a7faf6e420424a107c0ff934d5ca4d8a60d1bf512333e7c2f177"
+      },
+      {
+        "page": "DailyActivities",
+        "snapshot": "default-root-pie-14/dailyactivities-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "f7a5fb75e8a367ada7469320d44e0400c64750cb29f224974e14751c31bd79d9"
+      },
+      {
+        "page": "TimedActivities",
+        "snapshot": "default-root-pie-14/timedactivities-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "8bee888e29c89d85cfa0ee3d3af046e9eb65a54807283c21b5be6fe78c81c64f"
+      },
+      {
+        "page": "DailyActivityDetail",
+        "snapshot": "default-root-pie-14/dailyactivitydetail-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "6597fa880176ffc2635f3a65d5f6fb4d814bc333af7bfafaf54300fefc489e08"
+      },
+      {
+        "page": "TimedActivityDetail",
+        "snapshot": "default-root-pie-14/timedactivitydetail-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "01019cea93decb1fc83025df7d9aa28d34be0da3ed21430b28aedc8ad9f0e6df"
+      },
+      {
+        "page": "LaunchEvent",
+        "snapshot": "default-root-pie-14/launchevent-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "8acbe867d070b1d68978d1b15e50f916e1b21864b91e0cae3d81faa8140286bd"
+      },
+      {
+        "page": "Wuling",
+        "snapshot": "default-root-pie-14/wuling-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "634e28c25d38f8c473fac67db37aa5da6f4a8b209e125b016dab5f0ffcc08958"
+      },
+      {
+        "page": "SwordSpirit",
+        "snapshot": "default-root-pie-14/swordspirit-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "63401817052e75a95bef955dd9f5ea8780fbafa4db6f51ea939cad3dcf097c6f"
+      },
+      {
+        "page": "GiftRules",
+        "snapshot": "default-root-pie-14/giftrules-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ccadcb37e14660d89c12fb4cb9803902b80a65736e431bb49c2d018fa6e76be4"
+      },
+      {
+        "page": "CultivationMethods",
+        "snapshot": "default-root-pie-14/cultivationmethods-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ea7ef04fdfd27b9382f9ebe17cba1a1afb9485b404ef59773372aca966d1d9ea"
+      },
+      {
+        "page": "RaceLobby",
+        "snapshot": "default-root-pie-14/racelobby-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "5a8db6aa947c2c5761cb622855bb3e8392c914f9c2fbc0dec14c4cd039b9f5d4"
+      },
+      {
+        "page": "RaceLive",
+        "snapshot": "default-root-pie-14/racelive-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "88f62ff5c43bec9bd598d6a92ff0b179eb0126d18f4c7c4dea6532de7ce4643a"
+      },
+      {
+        "page": "RaceSettlement",
+        "snapshot": "default-root-pie-14/racesettlement-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "943fd52c61d74d8c0ba65580518305623ae53d8a09f232d60ea9391975598776"
+      },
+      {
+        "page": "ResourceLease",
+        "snapshot": "default-root-pie-14/resourcelease-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "d863caba651ae50da0dd6b30f7b929afcac54c4df7c0dfb5658667f7ebc53ee5"
+      },
+      {
+        "page": "EventSettlement",
+        "snapshot": "default-root-pie-14/eventsettlement-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "9207c90fe4b350aebb0635f91be1dbb1322854b20571c18b3d41ba8a6d01757e"
+      },
+      {
+        "page": "OfflineRewards",
+        "snapshot": "default-root-pie-14/offlinerewards-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "3c001fd3d37965295d37a3d419ffca62be4605fdd3e1604ad574c53af54678d7"
+      },
+      {
+        "page": "Shop",
+        "snapshot": "default-root-pie-14/shop-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "bc15e38ff7d63740be8dfabc1cdfcf1f99fb918e652803b9494cb07a4d6e6c25"
+      },
+      {
+        "page": "Market",
+        "snapshot": "default-root-pie-14/market-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "a70441ffa9df99c5e9f63cb8bb5d2ab265cc0cdab037a33a76a30cd120caae6b"
+      },
+      {
+        "page": "TradeOrders",
+        "snapshot": "default-root-pie-14/tradeorders-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "a4dcb71f14509c38f9dbbf9a76a6a5c17d803e003c3c1d47423e9fd6d57af2aa"
+      },
+      {
+        "page": "WorldCultivation",
+        "snapshot": "default-root-pie-14/worldcultivation-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "cf77059c4e1d768bd446bd7873f01d6156cc63e28ce39b91ca93903109edc507"
+      },
+      {
+        "page": "RegionDetail",
+        "snapshot": "default-root-pie-14/regiondetail-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "d99635282dfae60936ea624eb17159bfa34a1af7e816073ab912be9fee2c0bc4"
+      },
+      {
+        "page": "ResourceContest",
+        "snapshot": "default-root-pie-14/resourcecontest-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "5ea9e7bd73b2bcd8526647471b0b3e3a7e73f8eca10f93302f3e2e8d538ff8e3"
+      },
+      {
+        "page": "ResourceDetail",
+        "snapshot": "default-root-pie-14/resourcedetail-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "937fcfd6ffbc7ba5cb9ff6e0afe9f56ebabd7555cfb1e07554d17f953e0977ee"
+      },
+      {
+        "page": "SignIn",
+        "snapshot": "default-root-pie-14/signin-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "37003a0848fe347028dd78073168df66094abf854b45247650051a59c55e810d"
+      },
+      {
+        "page": "MonthlySignIn",
+        "snapshot": "default-root-pie-14/monthlysignin-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "067f67f01b336e439c6a1c11c8cfa29c74c9d6b326da32720c0ca570779c2fd8"
+      },
+      {
+        "page": "DailyFortune",
+        "snapshot": "default-root-pie-14/dailyfortune-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "4377e50178cca2c439e30814161e6276d6be67a39d69f9ae1bfe23bec9381b71"
+      },
+      {
+        "page": "LaunchRank",
+        "snapshot": "default-root-pie-14/launchrank-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "ea5d02a5188e80b737ec8c2c0fdc83afb270b42cdfe5b51fc63c833cc426cdd4"
+      },
+      {
+        "page": "BreakthroughPrepare",
+        "snapshot": "default-root-pie-14/breakthroughprepare-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "9bfd94c136ae07042ce7b556e9dd3235d06206cf4e52ccc4ad8510568b197bd8"
+      },
+      {
+        "page": "Tribulation",
+        "snapshot": "default-root-pie-14/tribulation-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "b7f8e6f8417759f23ecd7613966d9d3ed9077675b0cb4ed3cd932da083e7ca9e"
+      },
+      {
+        "page": "ItemSources",
+        "snapshot": "default-root-pie-14/itemsources-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "7704e22119996240e03e625c90c64408ba9c8e1347001b24fa6967f7515a41c6"
+      },
+      {
+        "page": "GuildConstruction",
+        "snapshot": "default-root-pie-14/guildconstruction-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "c0a8a7f038b8b56352294b4926f07bb6d64f5b1e3709e40551c32ecd22627e6c"
+      },
+      {
+        "page": "EquipmentFabao",
+        "snapshot": "default-root-pie-14/equipmentfabao-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "b102e1257843a13a67e9da844e5a06d7d3419ff281a711ed5fe0cfb56d078a7c"
+      },
+      {
+        "page": "Extensions",
+        "snapshot": "default-root-pie-14/extensions-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "a46ba49884d8a15f6ab3b3fc964b191defc1c3fb5fb7fcf1e9dc8f2d905aa643"
+      },
+      {
+        "page": "WulingCraft",
+        "snapshot": "default-root-pie-14/wulingcraft-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "b5a52492bf594a4716f657582cca10c15fd2d498f83cd3c8dedfc39f5d649e0e"
+      },
+      {
+        "page": "CharacterAppearance",
+        "snapshot": "default-root-pie-14/characterappearance-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "34749557d9807a3b9a0754281415b121bc96ba4677bbd3d057b061c11ef1a644"
+      },
+      {
+        "page": "ResourceRanking",
+        "snapshot": "default-root-pie-14/resourceranking-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "5a2116a3c318cc332110353579d5e451b54b748f26cdf81fc8b45f5c46ac1407"
+      },
+      {
+        "page": "ResourceRewards",
+        "snapshot": "default-root-pie-14/resourcerewards-portrait.json",
+        "png_dimensions": [
+          720,
+          1280
+        ],
+        "snapshot_dimensions": [
+          720,
+          1280
+        ],
+        "exact720x1280": true,
+        "snapshot_sha256": "f588e456400bd96c6cb6fcb2fa9e1cea851bcf6d2fbf2856b064336a5c405996"
+      }
+    ],
+    "formal_audit_passed": true,
+    "formal_audit_errors": [],
+    "strict_geometry_rechecked": true,
+    "expected_bad_injections_rejected": 56,
+    "current_portrait_component_paint_passed": true,
+    "current_portrait_applicable_components": 12,
+    "current_actual_painted_count": 12,
+    "landscape_map_retained_exempt": true,
+    "real_UI_entry_scope": "core7 plus six feature entry flows only; 37 probes are direct router calls",
+    "original_inprogress_checkpoint_preserved": true
+  },
+  "current_source26_hash_proof": {
+    "checked_utc": "2026-10-24T09:16:05.239430+00:00",
+    "scope": "only88 exact files named by frozen build26 Source epoch; metadata hashing only, no recompile/review rerun",
+    "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+    "files": 88,
+    "matches": 88,
+    "mismatches": []
+  },
+  "late_merchant02": {
+    "finished": true,
+    "passed": true,
+    "checks": 45,
+    "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+    "proof": "merchant-zero-write-proof-v11.json",
+    "native_seam_negative_scope": "old actual version and cross-SKU actual price; UI stale confirmation closure is real refresh/hit test",
+    "expanded_appearance_shared_paint": [
+      {
+        "name": "Image_31",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_48",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_31",
+        "object_id": 94786,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 24,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 59,
+        "independent_right": 91,
+        "independent_bottom": 122,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_32",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_49",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_32",
+        "object_id": 94798,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 141,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 176,
+        "independent_right": 91,
+        "independent_bottom": 239,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_33",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_50",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_33",
+        "object_id": 94810,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 258,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 293,
+        "independent_right": 91,
+        "independent_bottom": 356,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_34",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_51",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_34",
+        "object_id": 94822,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 375,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 410,
+        "independent_right": 91,
+        "independent_bottom": 473,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_35",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_52",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_35",
+        "object_id": 94834,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 492,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 527,
+        "independent_right": 91,
+        "independent_bottom": 590,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_36",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_53",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_36",
+        "object_id": 94846,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 609,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 644,
+        "independent_right": 91,
+        "independent_bottom": 707,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_37",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_54",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_37",
+        "object_id": 94858,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 726,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 761,
+        "independent_right": 91,
+        "independent_bottom": 824,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_38",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_55",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_38",
+        "object_id": 94870,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 843,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 878,
+        "independent_right": 91,
+        "independent_bottom": 941,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      },
+      {
+        "name": "Image_39",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.HorizontalBox_57",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_39",
+        "object_id": 94892,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 1077,
+        "width": 40,
+        "height": 63,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 1112,
+        "independent_right": 91,
+        "independent_bottom": 1175,
+        "independent_clip_left": 27,
+        "independent_clip_top": 59,
+        "independent_clip_right": 686,
+        "independent_clip_bottom": 1202,
+        "painted_width": 40,
+        "painted_height": 63,
+        "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1"
+      }
+    ]
+  }
+}

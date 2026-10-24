@@ -1,0 +1,16 @@
+# Live preflight rejection 12:54 -- no Content mutation
+Owned Editor PID27180 same-process preflight failed before RenameAssets: source registry contains ObjectRedirector. Existing exact-six historical redirectors were not actually removed in prior cleanup. The 588 on-disk package map currently includes them as ordinary migration candidates; script rejects any such class. No engine-migration-journal created, no assets renamed/deleted. Integration is obtaining full live old-root class/redirector destination evidence, then needs revised exact map/helper strategy: distinguish canonical packages to migrate from legacy redirectors to fix precisely, never rename a redirector as canonical newUI asset and never delete_asset. All 1759 snapshot hashes verified by script before failure. Current execution script world-context single repair recorded under logic-integration.
+Please cleanup owner consume live diagnostic once produced and adjust staged map/script/helper/audit while production source remains sole integration writer. Do not operate Content/Editor.
+Correction to 12:54 rejection note: the historical exact-six current check at 09:56 says those six were already removed by 00:43 cleanup. The present redirector(s) are not yet identified; do not assume they are the old six or infer partial migration. Fresh full registry inventory/destination tags will identify exact preexisting class membership. No RenameAssets journal exists.
+
+## LIVE ACTIONABLE MIGRATION REVISION REQUIRED 12:55
+`logic-integration/migration-live-source-inventory.json` PID18992: source588 = canonical582 + preexisting6 ObjectRedirector, all6 incoming referencers empty. These are DIFFERENT from historical exact-six already removed. Exact sources -> old canonical target:
+- Materials/M_InkTitleFeather -> Materials/Shared/M_InkTitleFeather
+- Materials/Atlas/M_InkScrollFade -> Materials/Shared/M_InkScrollFade
+- NiagaraRevision20261022/Textures/T_XianxiaMeters -> Textures/HUD/T_XianxiaMeters
+- Provided/T_ProvidedButtons -> Textures/Shared/T_ProvidedButtons
+- Provided/T_ProvidedInventory -> Textures/Inventory/T_ProvidedInventory
+- Provided/T_ProvidedRank -> Textures/Leaderboard/T_ProvidedRank
+All prefix /Game/UI/Ink/. Fresh tags in inventory prove destination. Need cleanup revised map/script/helper/audit: 582 canonical RenameAssets + exact6 legacy fixup against their migrated canonical destination, then total old588 absent. Do not rename six redirectors to counterfeit canonical new packages. Snapshot covers original588. Current helper strictmap/new uniqueness needs handling separate legacy_redirectors list if that strategy chosen. No mutation yet.
+IMPORTANT API evidence: `str(AssetData.asset_class_path)` includes pointer address such as `<Struct 'TopLevelAssetPath' (0x...) {...}>`; use stable `str(path.package_name)+'.'+str(path.asset_name)` in preflight/final class comparison, not repr addresses. Current script class equality would fail after refetch even without class drift.
+Integration wrapper documented single execute_console_command world-context correction. Original script remains untouched. OwnedEditor18992 idle after read-onlydiagnosis; will normalclose to revise Source. Supervisor/cleanup please consume this live evidence and produce corrected stable staged script/map/helper; sole Source/Content owner remains integration.

@@ -1,0 +1,6 @@
+{
+  "completed_at": "2026-10-24T13:18:23.8486888+08:00",
+  "scope": "Scoped known-warning exact migration rename, N03/N06 inventory corrections, real Player texture bindings and hidden old Canvas HUD",
+  "exit_code": 0,
+  "log": "build-06.log"
+}

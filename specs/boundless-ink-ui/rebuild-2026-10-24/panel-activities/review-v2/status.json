@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-10-24T13:06:58+08:00",
+  "state": "review-v2-staged",
+  "source_review": "../../model/review/current-source-review.md",
+  "review_snapshot_matched_current_base": false,
+  "patched_source_sha256": {
+    "RebuildActivityWidgets.h": "B306EAB1FE044BF807F3D5AA19CF967D9828E7D6D5A6495D8D464369CB58B5ED",
+    "RebuildActivityWidgets.cpp": "DA9D45F6FE6D7895C86C42B29C588A52193B96C39EA278E92251C8C488D6D92A"
+  },
+  "findings": {
+    "C01": "patched-source-only",
+    "C07": "patched-source-only",
+    "C08": "patched-source-only",
+    "V01": "patched-source-only",
+    "L01": "stable-root-source-patch-runtime-evidence-pending"
+  },
+  "approved": false,
+  "production_source_changed": false,
+  "compile_verified": false,
+  "runtime_verified": false,
+  "next_owner": "logic-integration"
+}

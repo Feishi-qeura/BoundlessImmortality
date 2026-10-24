@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "InkProgressState.h"
 #include "InkExtensionWidget.h"
+#include "InkFrontendWidget.h"
 #include "InkPresentationStyle.h"
 #include "InkFeaturePanel.generated.h"
 
@@ -27,7 +28,13 @@ public:
     void SetContext(const FString& Entry);
     void ConfigureEmbedded(UInkFrontendWidget* Owner,FName Route,bool Portrait,FVector2D Size);
     virtual void RefreshLiveData();
+    /** Includes the selected child of a retained SignIn/Activities group. */
+    bool IsRolloutPageActive() const;
+    float GetBodyContentHeight() const;
 protected:
+    UFUNCTION() void HandleRolloutSignInRequested();
+    FString RolloutSignInDay;
+    FString RolloutChestDay;
     virtual void NativeTick(const FGeometry& Geometry,float DeltaSeconds) override;
     virtual FText PanelTitle() const PURE_VIRTUAL(UInkFeaturePanel::PanelTitle,return FText::GetEmpty(););
     virtual void BuildPanelContent() PURE_VIRTUAL(UInkFeaturePanel::BuildPanelContent,);
@@ -89,7 +96,7 @@ UCLASS() class BOUNDLESSIMMORTALITY_API UInkFeatureHubPanel : public UInkFeature
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkSignInPanel : public UInkFeaturePanel
 { GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action)override; private: int32 SelectedDay=1,SelectedChest=-1; };
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkMonthlySignInPanel : public UInkFeaturePanel
-{ GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action) override; private: int32 SelectedChest=-1,CalendarMonthOffset=0; };
+{ GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action) override; private: UFUNCTION() void HandleRolloutCalendarDay(int32 Day); int32 SelectedCalendarDay=0; int32 SelectedChest=-1,CalendarMonthOffset=0; };
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkDailyFortunePanel : public UInkFeaturePanel
 { GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action)override; private: bool bFortuneDrawn=false; };
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkActivitiesPanel : public UInkFeaturePanel
@@ -183,6 +190,15 @@ UCLASS() class BOUNDLESSIMMORTALITY_API UInkRegionDetailPanel : public UInkDetai
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkResourceDetailPanel : public UInkDetailPanel
 { GENERATED_BODY() protected: virtual FString Description() const override; virtual int32 SceneTile() const override; };
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkResourceRankingPanel : public UInkFeaturePanel
-{ GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; };
+{
+    GENERATED_BODY()
+public:
+    virtual void RefreshLiveData() override;
+protected:
+    virtual FText PanelTitle() const override;
+    virtual void BuildPanelContent() override;
+private:
+    FString AuthorityStateKey;
+};
 UCLASS() class BOUNDLESSIMMORTALITY_API UInkResourceRewardsPanel : public UInkFeaturePanel
 { GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; };

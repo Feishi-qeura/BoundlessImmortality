@@ -1,0 +1,59 @@
+{
+  "previous": "resolved-open-matrix-v8.json",
+  "findings": [
+    {
+      "id": "V7-ASSET-01",
+      "state": "13-visible-brush-subsets-proven",
+      "proof": "runtime-component-application-v9.json",
+      "remaining": "Appearance shared attribute atlas has 9 bound but hidden images; visible preview/paint pending. Full current-epoch visual/page acceptance pending."
+    },
+    {
+      "id": "V7-CONFIRM-01",
+      "state": "source-repaired-native04-helper-success-runtime-negative-pending",
+      "proof": "native04 + selected Source",
+      "remaining": "Current actual host/service stage/actor/quote change zero-dispatch/zero-audit and re-confirmation cases; separate unearned fixture namespace."
+    },
+    {
+      "id": "V7-CYCLE-01",
+      "state": "source-repaired-runtime-cycle-subject-pending",
+      "proof": "selected Source RouteCycle filtering retained",
+      "remaining": "Actual daily/limited cycle contents; overall Activities return current build attempt."
+    },
+    {
+      "id": "SERVICE-BUSY",
+      "state": "actual-pending-inventory-browse-proven-subset",
+      "proof": "service01/02 checks + CreateGuild trace/receipt/audit",
+      "remaining": "Do not generalize to every action/Busy phase or full service suite."
+    },
+    {
+      "id": "AUTHORITY-SUCCESS",
+      "state": "15-request-records-14-command-kinds-qualified",
+      "proof": "service-chain-proof-v9.json",
+      "remaining": "All attempts remain false; JoinGuild is fixture setup authority call, not a player UI journey."
+    },
+    {
+      "id": "MERCHANT-CONFIRMATION",
+      "state": "positive-purchase-market-receipts-proven-negative-refresh-cases-pending",
+      "proof": "service03 Purchase + late09 Buy/Create/Cancel joined durable receipt/audit",
+      "remaining": "Same-ID refresh retention; removal/ID/version/price change stale confirmation zero write."
+    },
+    {
+      "id": "ACTIVITY-BACK",
+      "state": "PIE06-observed-failure-source-repair-needs-new-attempt",
+      "proof": "default-root-pie-06 report false 660checks42captures",
+      "remaining": "Six Activity returns, actual entry vs router, full44 portrait/landscape strict geometry."
+    },
+    {
+      "id": "AVATAR",
+      "state": "runtime-regression-pending-harness-exception",
+      "proof": "service09 report error after market positives",
+      "remaining": "Actual cache identity and failure/recovery/retry; HTTPS fixture not platform authentication."
+    },
+    {
+      "id": "FINAL-ACCEPTANCE",
+      "state": "open",
+      "proof": "runtime-evidence-v9.json",
+      "remaining": "No all44/current geometry or user visual/device acceptance; ServiceDisabled/native/actual isolated service scopes separate."
+    }
+  ]
+}

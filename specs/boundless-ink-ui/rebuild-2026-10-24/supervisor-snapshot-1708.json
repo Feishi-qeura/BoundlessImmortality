@@ -1,0 +1,109 @@
+{
+  "heartbeat_at": "2026-10-24T09:08:43.625Z",
+  "human_scope_verified": {
+    "thread": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+    "message": "01a16d26-2364-7de1-81e8-c690503a517e",
+    "target": "portrait-only9:16,720x1280;landscapeacceptancewaived"
+  },
+  "formal14": {
+    "finished": true,
+    "passed": true,
+    "checks": 906,
+    "captures": 56,
+    "all_png_exact_720x1280": true,
+    "scope": "actualdefaultroot44route/render/typedBack; 37loop calls publicrouter, not eachtrueclickentry"
+  },
+  "old_ui_directory_exists": false,
+  "new_ui_assets": 596,
+  "remaining": [
+    "Lightweight realUI clickentry difference from37routerloop",
+    "Merchantstaleversionprice0writenegatives and latest applicable native tests",
+    "Final source/config/13brush/geometry audits and ownedprocessnormalshutdown",
+    "Independent Core finalreview and uservisualgallery checklist"
+  ],
+  "visual_approved": false,
+  "machine_all_complete": false,
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:12",
+      "thread_status": "notLoaded",
+      "turn_status": "completed",
+      "last_message": "review-v3 已完成，review-v2 保持冻结。改动仅限三个文件：补充头像失败后的宿主退避重试 API、为 base 源文件显式包含 Engine/Font.h，并从内层按钮的 GetContent() 读取 tab 文字。 N07 报告中的空指针早退问题在当前 v2 哈希里已经修复；v3 保留这项修复，并补上显式重试入口。归档审阅快照比当前 v2 旧，差异已记入交接。 精确差异 · 短交接 · 状态 静态核对通过，v2 哈希保持一致，v3 仅改三项登记文件。未编译、未启动引擎/UBT/PIE，未写生产目录或生成图片。Rank/Wuling 后续工作等待 integration owner。",
+      "last_tool": {
+        "id": "exec-243994fe-6952-4881-ab2d-753280db51c5",
+        "turnId": "01a16c50-35e0-7e92-a560-83f75d6cf234",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:30",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "已确认13整轮905 checks/56 captures通过；同时查到其初始核心页截图为720×1282，后续portrait页为720×1280，不能算全部精确画幅通过。14已增加首帧校准，目前核心截图为720×1280。pin计数也已定位到真实wrapper内的 JourneyPinHitButton；我会继续核对expected-paint、回调链和最终审计。",
+      "last_tool": {
+        "id": "exec-1424804b-33b9-4a1f-ade5-30c6138d55f0",
+        "turnId": "01a16d2c-f012-78e2-a89e-20be4e2e55a4",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:49",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "精确 9:16 这一轮已检查到突破、天劫等页面，暂未出现失败。剩余入口检查会使用界面已有的菜单和按钮，并分别记录“能点击进入页面”和“已完成业务操作”。",
+      "last_tool": {
+        "id": "exec-3c600bcd-ee9e-4a88-a5da-565b874ae594",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    }
+  ]
+}

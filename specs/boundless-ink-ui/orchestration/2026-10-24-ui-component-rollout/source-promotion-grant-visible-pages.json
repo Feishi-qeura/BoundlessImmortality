@@ -1,0 +1,41 @@
+{
+  "owner_team": "logic-integration",
+  "granted_at": "2026-10-24T12:28:55.9206522+08:00",
+  "state": "full_ui_refactor_and_bounded_engine_authorized",
+  "scope": "Full GameUI presentation refactor authorized by latest user instruction; remove old presentation constraints and replace default runtime root/pages under /Game/newUI",
+  "batch2_promotion_authorized": true,
+  "promotion_conditions": [
+    "Single production source writer and reviewed staged inputs",
+    "Hash-backed exact migration/referencer mapping and serialized Content operation",
+    "Fresh process conflict check per batch; no forced user Editor termination",
+    "Complete actual default new root/page routes, not only partial skin"
+  ],
+  "source_targets": [
+    "Source/BoundlessImmortality/Frontend/",
+    "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+    "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.h",
+    "Source/BoundlessImmortalityEditor/",
+    "Config/DefaultGame.ini",
+    "Config/DefaultEngine.ini",
+    "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+    "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+    "Source/BoundlessImmortality/LiveWeapons/LiveTitleEffectsComponent.cpp",
+    "Tools/CultivationService/authority.py"
+  ],
+  "source_scope_policy": "Complete UI presentation/root/navigation/theme/layout/widget and asset-path refactor plus necessary legacy asset migration helper; preserve authoritative gameplay/data rules and unrelated work; unique production source writer",
+  "user_editor_pid": null,
+  "user_editor_stop_authorized": false,
+  "engine_operations_authorized": true,
+  "visual_approval": "pending_user",
+  "canonical_runtime_asset_root": "/Game/newUI",
+  "rebuild_contract": "specs/boundless-ink-ui/rebuild-2026-10-24/quickstart.md",
+  "additional_targets_recorded_at": "2026-10-24T13:39:59.9142687+08:00",
+  "additional_targets_scope": "Canonical UI asset loader path updates only under existing full user migration authorization; no gameplay behavior change. After own dirty migration Editor normal closure, with exact backup/hash ledger.",
+  "bounded_backend_projection_exception": {
+    "recorded_at": "2026-10-24T17:42:12.2177263+08:00",
+    "owner": "logic-integration",
+    "path": "Tools/CultivationService/authority.py",
+    "scope": "Additive truthful native session-active eligibility export only if existing provider cannot bridge; preserve authoritative eligibility/heartbeat/gameplay/reward rules; unknown not true; exact before/afterhash backup and applicable eligible/unknown/refused proof",
+    "basis": "Existing full UI implementation user authorization; concrete V11-RACE-ACTIVE-01 prevents lawful Race action. Supervisor verified current Source/schema mismatch."
+  }
+}

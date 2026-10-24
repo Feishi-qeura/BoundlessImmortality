@@ -1,64 +1,162 @@
 schema_version: 1
 revision: 2026-10-23-parallel-activities
 assets:
-  - id: activity-center-v1
-    kind: page
-    screen_id: activities
-    path: assets/activity-center-v1.png
-    dimensions: [941, 1672]
-    target_dimensions: [720, 1280]
-    transparent_background: false
-    status: candidate
-    approved: false
-    prompt_path: activity-center-v1-prompt.md
-    source_assets: []
-    source_tool: image_gen
-    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-e5a4f0c1-24cc-4b64-9c4d-51619ddf2581.png
-    mode: RGB
-    sha256: e9ef4c050d55be15c1fae5e283246e39bc14902f66c9d045bbe5fe9c94f2195d
-  - id: launch-event-v1
-    kind: page
-    screen_id: launch
-    path: assets/launch-event-v1.png
-    dimensions: [941, 1672]
-    target_dimensions: [720, 1280]
-    transparent_background: false
-    status: candidate
-    approved: false
-    prompt_path: launch-event-v1-prompt.md
-    source_assets: []
-    source_tool: image_gen
-    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-e21c0095-86e5-4476-b54b-e49f0c7b14dc.png
-    mode: RGB
-    sha256: 03eefa5044cd203a954b2a2a854ce1b23bf9ff2786bd7abd1d4d2314f9e8e784
-  - id: launch-rank-v1
-    kind: page
-    screen_id: launch-rank
-    path: assets/launch-rank-v1.png
-    dimensions: [941, 1672]
-    target_dimensions: [720, 1280]
-    transparent_background: false
-    status: candidate
-    approved: false
-    prompt_path: launch-rank-v1-prompt.md
-    source_assets: []
-    source_tool: image_gen
-    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-a8e2ac05-a08b-44b0-b0e5-f4abefbf9c7b.png
-    mode: RGB
-    sha256: ecce464ef51f93e3ff5d6623b712b99ee0b73b6c07162ea4579ba936ed6b3d36
-  - id: hud-launch-countdown-v1
-    kind: component
-    screen_id: home
-    component_id: hud-launch-countdown
-    path: assets/hud-launch-countdown-v1.png
-    dimensions: [1983, 793]
-    target_dimensions: [600, 240]
-    transparent_background: false
-    status: candidate
-    approved: false
-    prompt_path: hud-launch-countdown-v1-prompt.md
-    source_assets: []
-    source_tool: image_gen
-    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-3afb8c8e-9101-4d70-9a4a-1c29c0393c76.png
-    mode: RGB
-    sha256: 67a5c6b9c6fae5dbb70d112f2527e5db08bd7ae34eb62c2244a9898ebff15222
+- id: activity-center-v1
+  kind: page
+  screen_id: activities
+  path: assets/activity-center-v1.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: activity-center-v1-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-e5a4f0c1-24cc-4b64-9c4d-51619ddf2581.png
+  mode: RGB
+  sha256: e9ef4c050d55be15c1fae5e283246e39bc14902f66c9d045bbe5fe9c94f2195d
+- id: launch-event-v1
+  kind: page
+  screen_id: launch
+  path: assets/launch-event-v1.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: launch-event-v1-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-e21c0095-86e5-4476-b54b-e49f0c7b14dc.png
+  mode: RGB
+  sha256: 03eefa5044cd203a954b2a2a854ce1b23bf9ff2786bd7abd1d4d2314f9e8e784
+- id: launch-rank-v1
+  kind: page
+  screen_id: launch-rank
+  path: assets/launch-rank-v1.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: launch-rank-v1-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-a8e2ac05-a08b-44b0-b0e5-f4abefbf9c7b.png
+  mode: RGB
+  sha256: ecce464ef51f93e3ff5d6623b712b99ee0b73b6c07162ea4579ba936ed6b3d36
+- id: hud-launch-countdown-v1
+  kind: component
+  screen_id: home
+  component_id: hud-launch-countdown
+  path: assets/hud-launch-countdown-v1.png
+  dimensions:
+  - 1983
+  - 793
+  target_dimensions:
+  - 600
+  - 240
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: hud-launch-countdown-v1-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-3afb8c8e-9101-4d70-9a4a-1c29c0393c76.png
+  mode: RGB
+  sha256: 67a5c6b9c6fae5dbb70d112f2527e5db08bd7ae34eb62c2244a9898ebff15222
+- id: activity-center-v2
+  kind: page
+  screen_id: activities
+  path: assets/activity-center-v2.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: activity-center-v2-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-111f6472-c29c-4798-8bcb-db10411a2092.png
+  mode: RGB
+  sha256: 1ebd59bae4960fc2c8c44dda51102102a5fa94ea2c531c2f08533a6f9e38be9e
+- id: launch-event-v2
+  kind: page
+  screen_id: launch
+  path: assets/launch-event-v2.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: launch-event-v2-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-40297cdc-23ea-4d62-a1da-b1e5b0bf3399.png
+  mode: RGB
+  sha256: f391642b6688157f74a0df5c5ba86a5d89c211783e164767784aeaad77650acb
+- id: launch-rank-v2
+  kind: page
+  screen_id: launch-rank
+  path: assets/launch-rank-v2.png
+  dimensions:
+  - 941
+  - 1672
+  target_dimensions:
+  - 720
+  - 1280
+  transparent_background: false
+  status: candidate
+  approved: false
+  prompt_path: launch-rank-v2-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-a4ea4211-f75f-4f5e-adba-312fdc6b5cbc.png
+  mode: RGB
+  sha256: 108db7fa40667965bdb34cc38f8df429917afd396f82839824758e166af6ab08
+- id: hud-launch-countdown-v2
+  kind: component
+  screen_id: home
+  component_id: hud-launch-countdown
+  path: assets/hud-launch-countdown-v2.png
+  dimensions:
+  - 1942
+  - 809
+  target_dimensions:
+  - 600
+  - 240
+  transparent_background: true
+  status: candidate
+  approved: false
+  prompt_path: hud-launch-countdown-v2-prompt.md
+  source_assets: []
+  source_tool: image_gen
+  source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-fe57-7ee2-b286-bc2be74537f6/exec-4ffdc672-279a-43a8-bbac-50f2d57cfba2.png
+  mode: RGBA
+  alpha_extrema:
+  - 0
+  - 255
+  fully_transparent_pixels: 934890
+  partially_transparent_pixels: 636015
+  sha256: 4830273fb5c096a7b4a8e4fc800faa6e52388a9c8309249dd39aedbc1d1addce

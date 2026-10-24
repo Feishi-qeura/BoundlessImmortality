@@ -1,0 +1,14 @@
+[
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp",
+    "sha256": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp",
+    "sha256": "dd13037251bbfecb3d2023f6ad3f9ab3ec694f3f1eb3bb3b2984ac8928a576b0"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapterTests.cpp",
+    "sha256": "9c175c4fc41fdab82efc5de4796d424f60ab068f7ef7da0b94abfdf44eac0e91"
+  }
+]

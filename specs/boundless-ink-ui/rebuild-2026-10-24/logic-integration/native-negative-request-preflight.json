@@ -1,0 +1,17 @@
+{
+  "executed_business_action": false,
+  "object_call_method_available": true,
+  "attempts": [
+    {
+      "method": "constructor",
+      "success": false,
+      "error": "call() 'b_confirmed' is an invalid keyword argument for this function"
+    },
+    {
+      "method": "editor_native_names",
+      "success": true,
+      "value": "<Struct 'RebuildActivityActionRequest' (0x00000000F14E2E60) {action: \"purchase\", entry_id: \"SKU_BREAK\", cycle: \"\", expected_service_day: \"\", confirmed: True, version: \"1\", price_text: \"10 灵石\", offer_id: \"\", quantity_text: \"\", quantity: 0, offset: 0, owned_only: False, start_subject: {anchor_user_id: \"\", guild_id: \"\", rules_version: \"\", profile_id: \"\", launch_known_absent: False}}>"
+    }
+  ],
+  "passed": true
+}

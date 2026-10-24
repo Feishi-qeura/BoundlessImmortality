@@ -1,0 +1,21 @@
+{
+  "latest_editor_exit_logs": [
+    {
+      "log": "pie-05-engine.log",
+      "normal_exit_log": true
+    },
+    {
+      "log": "pie-10-engine.log",
+      "normal_exit_log": true
+    }
+  ],
+  "service05_shutdown_reply": {
+    "ok": true
+  },
+  "owned_editor_pids": [],
+  "method": "Editor script end_play then quit_editor; local test service POST /qa/shutdown; no kill or force",
+  "checked_at": "2026-10-24T12:16:44.117474+08:00",
+  "scope": "Only processes with exact owned batch directory and engine/service identity; unrelated user processes untouched",
+  "normal_shutdown_verified": true,
+  "owned_service_pids": []
+}

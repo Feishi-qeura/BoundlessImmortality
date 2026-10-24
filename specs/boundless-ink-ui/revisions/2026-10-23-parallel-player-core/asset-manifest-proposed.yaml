@@ -10,9 +10,9 @@ assets:
     dimensions: [941, 1672]
     dimensions_basis: measured
     transparent_background: false
-    status: candidate
+    status: generated
     approved: false
-    review_status: awaiting-user-visual-review
+    review_status: content-mismatch-do-not-use
     version: 1
     prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
     source_tool: built-in-image_gen
@@ -59,3 +59,60 @@ assets:
     sha256: 67ca77b4f40973471cb88931ad4e2d305d3b10be13fe177202b91e301767897f
     mode: RGB
     notes: Text-only candidate with blank authoritative fields; success and failure panels are mutually exclusive state templates.
+  - id: main-menu-v2-parallel-player-core
+    kind: page
+    type: page
+    screen_id: main
+    path: revisions/2026-10-23-parallel-player-core/main-menu-v2.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: generated
+    approved: false
+    review_status: content-mismatch-do-not-use
+    version: 2
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-fbbd0c86-c4fd-4109-af12-8d9edada6655.png
+    source_assets: []
+    sha256: 0404447550aa3b0ea5b01288584e1b3839faaa92def0490ee9e056c18105e922
+    mode: RGB
+    notes: Independent visual review found tribulation-page content under the main-menu filename; quarantine this file and do not use as a main-menu candidate. Its SHA-256 matches this file. v1 remains historical.
+  - id: breakthrough-preparation-v2-parallel-player-core
+    kind: page
+    type: page
+    screen_id: breakthrough
+    path: revisions/2026-10-23-parallel-player-core/breakthrough-preparation-v2.png
+    dimensions: [940, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: generated
+    approved: false
+    review_status: awaiting-user-visual-review
+    version: 2
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-38d1f7b2-c9df-4230-be09-6a150b24c337.png
+    source_assets: []
+    sha256: 82fd74b5b5d6f2cd60a048d03bdac13e33141d76fd1a7409d06a9013bd0f8e06
+    mode: RGB
+    notes: Empty config state; disabled action and reason. Some authoritative fields/placeholders need clearer business labeling before visual approval. v1 remains historical.
+  - id: tribulation-live-v2-parallel-player-core
+    kind: page
+    type: page
+    screen_id: tribulation
+    path: revisions/2026-10-23-parallel-player-core/tribulation-live-v2.png
+    dimensions: [941, 1672]
+    dimensions_basis: measured
+    transparent_background: false
+    status: generated
+    approved: false
+    review_status: content-mismatch-do-not-use
+    version: 2
+    prompt_path: revisions/2026-10-23-parallel-player-core/prompts.md
+    source_tool: built-in-image_gen
+    source_file: C:/Users/zxxuh/.codex/generated_images/01a16820-e044-7cd3-aa38-415508a55386/exec-1cb862d4-3ec0-43bb-a9a2-d3ca7e403509.png
+    source_assets: []
+    sha256: d980a8339ac1304a31b6f608e23a5549001281a87eeb140c51b4fa8679690f21
+    mode: RGB
+    notes: Independent visual review found main-menu content under the tribulation filename; quarantine this file and do not use as a tribulation candidate. Its SHA-256 matches this file. v1 remains historical.

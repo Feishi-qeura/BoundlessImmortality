@@ -1,0 +1,13 @@
+{
+	"passed": true,
+	"engine_pid": 47604,
+	"checked_at": "2026-10-24T05:22:01.859Z",
+	"native_rename_succeeded": true,
+	"known_warning_ack_count": 1,
+	"rejected_unknown_dialog_count": 0,
+	"exact_count": 582,
+	"dialog_evidence": [
+		"type=2 category=0 title=消息 text=源代码、配置INI和文本文件可能需要查找/替换：\n\n\nT_HudLaunchCountdownFrame_v1\nT_InkTitle\nT_InkMeditation\nT_InkAttributeIcons\nT_ProvidedButtons\nT_ProvidedRank\nT_ProvidedInventory\nM_InkTitleFeather\nM_InkScrollFade\nF_InkBody\nNS_InkTitleAura\n\n否则烘焙版本可能缺失资产。继续重命名？"
+	],
+	"error": ""
+}

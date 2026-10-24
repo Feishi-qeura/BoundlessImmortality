@@ -1,0 +1,1543 @@
+{
+  "schema_version": 1,
+  "project_id": "rebuild-2026-10-24",
+  "screens": [
+    {
+      "screen_id": "main",
+      "page_id": "main",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Main",
+        "resolved": "Main",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "FrontendVm",
+        "SaveVm"
+      ],
+      "actions": [
+        "start-game",
+        "continue-game",
+        "open-saves",
+        "open-settings",
+        "quit-game"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Main",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-main",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Main",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "home",
+      "page_id": "home",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "HUD",
+        "resolved": "HUD",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "AnchorVm",
+        "WorldVm",
+        "LeaseVm"
+      ],
+      "actions": [
+        "toggle-cultivation",
+        "open-character",
+        "open-inventory",
+        "open-leaderboard",
+        "open-journey"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "HUD",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-home",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Home",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "character",
+      "page_id": "character",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Character",
+        "resolved": "Character",
+        "context": "",
+        "current_host": "UInkFrontendWidget; OpenCharacter enters UInkCharacterProfilePanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "AnchorVm",
+        "EquipmentVm",
+        "MethodVm"
+      ],
+      "actions": [
+        "open-equipment",
+        "open-methods",
+        "open-breakthrough",
+        "open-appearance"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Character",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-character",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Character",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "inventory",
+      "page_id": "inventory",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Inventory",
+        "resolved": "Inventory",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "InventoryVm"
+      ],
+      "actions": [
+        "inventory-select",
+        "inventory-use",
+        "inventory-equip",
+        "inventory-recycle"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Inventory",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-inventory",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Inventory",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "leaderboard",
+      "page_id": "leaderboard",
+      "owner": "panel-rank",
+      "existing_route": {
+        "entry": "Leaderboard",
+        "resolved": "Leaderboard",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LeaderboardVm"
+      ],
+      "actions": [
+        "board-category",
+        "board-scope"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Leaderboard",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-leaderboard",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Rank/WBP_NUI_Leaderboard",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "saves",
+      "page_id": "saves",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Saves",
+        "resolved": "Saves",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "SaveVm"
+      ],
+      "actions": [
+        "save-slot",
+        "load-slot",
+        "delete-slot"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Saves",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-saves",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Saves",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "settings",
+      "page_id": "settings",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Settings",
+        "resolved": "Settings",
+        "context": "",
+        "current_host": "UInkFrontendWidget",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "SettingsVm"
+      ],
+      "actions": [
+        "set-quality",
+        "set-frame-limit",
+        "toggle-reduced-motion",
+        "apply-settings"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Settings",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-settings",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Settings",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "wuling",
+      "page_id": "wuling",
+      "owner": "panel-rank",
+      "existing_route": {
+        "entry": "Wuling",
+        "resolved": "Wuling",
+        "context": "",
+        "current_host": "UInkWulingSectPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "GuildVm"
+      ],
+      "actions": [
+        "create-guild",
+        "guild-member-select",
+        "remove-member",
+        "rename-guild",
+        "dissolve-guild"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Wuling",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-wuling",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Rank/WBP_NUI_Wuling",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "sword-spirit",
+      "page_id": "sword-spirit",
+      "owner": "panel-rank",
+      "existing_route": {
+        "entry": "SwordSpirit",
+        "resolved": "WulingRights",
+        "context": "",
+        "current_host": "UInkWulingRecordsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "SwordVm",
+        "GiftEffectVm"
+      ],
+      "actions": [
+        "open-gift-rules"
+      ],
+      "gaps": [
+        "Current WulingRights is rights/records, not a complete personal sword model; do not invent a profile."
+      ],
+      "new_runtime_binding": {
+        "route_key": "SwordSpirit",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-sword-spirit",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Rank/WBP_NUI_SwordSpirit",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "gift-rules",
+      "page_id": "gift-rules",
+      "owner": "panel-rank",
+      "existing_route": {
+        "entry": "GiftRules",
+        "resolved": "GiftRules",
+        "context": "",
+        "current_host": "UInkGiftRulesPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "GiftEffectVm"
+      ],
+      "actions": [],
+      "gaps": [
+        "Current GiftRules is unavailable copy; no synced detailed effect catalog contract verified."
+      ],
+      "new_runtime_binding": {
+        "route_key": "GiftRules",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-gift-rules",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Rank/WBP_NUI_GiftRules",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "methods",
+      "page_id": "methods",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "CultivationMethods",
+        "resolved": "WulingEquipment",
+        "context": "methods",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "MethodVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "learn-method",
+        "configure-methods"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "CultivationMethods",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-methods",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Methods",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "race-lobby",
+      "page_id": "race-lobby",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "RaceLobby",
+        "resolved": "WulingRace",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "RaceVm",
+        "GuildVm"
+      ],
+      "actions": [
+        "cancel-race-queue"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "RaceLobby",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-race-lobby",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceLobby",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "race-live",
+      "page_id": "race-live",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "RaceLive",
+        "resolved": "WulingRace",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "RaceVm"
+      ],
+      "actions": [
+        "race-action"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "RaceLive",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-race-live",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceLive",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "race-result",
+      "page_id": "race-result",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "RaceSettlement",
+        "resolved": "WulingRace",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "RaceVm",
+        "RewardVm"
+      ],
+      "actions": [
+        "back"
+      ],
+      "gaps": [
+        "Existing alias resolves to generic WulingRace; new distinct outcome host is required."
+      ],
+      "new_runtime_binding": {
+        "route_key": "RaceSettlement",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-race-result",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceResult",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "lease",
+      "page_id": "lease",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "ResourceLease",
+        "resolved": "WulingRace",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LeaseVm"
+      ],
+      "actions": [
+        "back"
+      ],
+      "gaps": [
+        "Existing ResourceLease alias resolves to WulingRace; new lease page must be an actual distinct view."
+      ],
+      "new_runtime_binding": {
+        "route_key": "ResourceLease",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-lease",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_Lease",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "world-result",
+      "page_id": "world-result",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "EventSettlement",
+        "resolved": "WulingWorld",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "WorldVm",
+        "RewardVm"
+      ],
+      "actions": [
+        "back"
+      ],
+      "gaps": [
+        "Existing EventSettlement alias resolves to WulingWorld; new distinct outcome host is required."
+      ],
+      "new_runtime_binding": {
+        "route_key": "EventSettlement",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-world-result",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_WorldResult",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "offline",
+      "page_id": "offline",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "OfflineRewards",
+        "resolved": "WulingOffline",
+        "context": "",
+        "current_host": "UInkWulingRecordsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "RewardVm"
+      ],
+      "actions": [
+        "ack-offline"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "OfflineRewards",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-offline",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Offline",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "shop",
+      "page_id": "shop",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "Shop",
+        "resolved": "WulingShop",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "EconomyVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "query-shop",
+        "purchase"
+      ],
+      "gaps": [
+        "Only real prototype catalog; no platform payment API or invented SKU."
+      ],
+      "new_runtime_binding": {
+        "route_key": "Shop",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-shop",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Shop",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "market",
+      "page_id": "market",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "Market",
+        "resolved": "WulingMarket",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "EconomyVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "query-market",
+        "create-listing",
+        "buy-listing"
+      ],
+      "gaps": [
+        "Prices and limits need real catalog/order rules and user input; do not inherit hardcoded legacy cyclic UI prices."
+      ],
+      "new_runtime_binding": {
+        "route_key": "Market",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-market",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Market",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "orders",
+      "page_id": "orders",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "TradeOrders",
+        "resolved": "WulingOrders",
+        "context": "",
+        "current_host": "UInkWulingRecordsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "EconomyVm"
+      ],
+      "actions": [
+        "cancel-listing"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "TradeOrders",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-orders",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Orders",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "world",
+      "page_id": "world",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "WorldCultivation",
+        "resolved": "WorldCultivation",
+        "context": "",
+        "current_host": "UInkJourneyMapPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "WorldVm"
+      ],
+      "actions": [
+        "select-destination",
+        "world-travel"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "WorldCultivation",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-world",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_World",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "region",
+      "page_id": "region",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "RegionDetail",
+        "resolved": "RegionDetail",
+        "context": "",
+        "current_host": "UInkJourneyDestinationPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "WorldVm"
+      ],
+      "actions": [
+        "world-travel"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "RegionDetail",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-region",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_Region",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "resources",
+      "page_id": "resources",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "ResourceContest",
+        "resolved": "ResourceContest",
+        "context": "",
+        "current_host": "UInkResourceContestPanel (ResourceMap uses UInkJourneyMapPanel)",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LeaseVm",
+        "RaceVm"
+      ],
+      "actions": [
+        "select-destination",
+        "resource-travel"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "ResourceContest",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-resources",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_Resources",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "resource-detail",
+      "page_id": "resource-detail",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "ResourceDetail",
+        "resolved": "ResourceDetail",
+        "context": "",
+        "current_host": "UInkJourneyDestinationPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LeaseVm",
+        "RaceVm"
+      ],
+      "actions": [
+        "resource-travel"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "ResourceDetail",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-resource-detail",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceDetail",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "sign-in",
+      "page_id": "sign-in",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "SignIn",
+        "resolved": "SignIn",
+        "context": "",
+        "current_host": "UInkSignInGroupPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "sign-in"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "SignIn",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-sign-in",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_SignIn",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "monthly-sign-in",
+      "page_id": "monthly-sign-in",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "MonthlySignIn",
+        "resolved": "SignIn",
+        "context": "MonthlySignIn",
+        "current_host": "UInkSignInGroupPanel child UInkMonthlySignInPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "month-navigate",
+        "inspect-chest",
+        "claim-monthly-chest"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "MonthlySignIn",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-monthly-sign-in",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_MonthlySignIn",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "daily-verse",
+      "page_id": "daily-verse",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "DailyFortune",
+        "resolved": "SignIn",
+        "context": "DailyFortune",
+        "current_host": "UInkSignInGroupPanel child UInkDailyFortunePanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [],
+      "gaps": [
+        "Verse is supplied by activities; fortune classification/reward fields may be absent. No local draw."
+      ],
+      "new_runtime_binding": {
+        "route_key": "DailyFortune",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-daily-verse",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_DailyVerse",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "activities",
+      "page_id": "activities",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "Activities",
+        "resolved": "Activities",
+        "context": "",
+        "current_host": "UInkIntegratedActivitiesPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm",
+        "LaunchVm"
+      ],
+      "actions": [
+        "activity-cycle",
+        "open-activity-detail",
+        "open-launch"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Activities",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-activities",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Activities",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "daily-activities",
+      "page_id": "daily-activities",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "DailyActivities",
+        "resolved": "DailyActivities",
+        "context": "",
+        "current_host": "UInkIntegratedDailyPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "open-activity-detail"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "DailyActivities",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-daily-activities",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_DailyActivities",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "timed-activities",
+      "page_id": "timed-activities",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "TimedActivities",
+        "resolved": "TimedActivities",
+        "context": "",
+        "current_host": "UInkIntegratedLimitedPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "open-activity-detail"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "TimedActivities",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-timed-activities",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_TimedActivities",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "daily-detail",
+      "page_id": "daily-detail",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "DailyActivityDetail",
+        "resolved": "DailyActivityDetail",
+        "context": "",
+        "current_host": "UInkDailyActivityDetailPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "sign-in",
+        "start-supported-activity",
+        "end-supported-activity"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "DailyActivityDetail",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-daily-detail",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_DailyDetail",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "timed-detail",
+      "page_id": "timed-detail",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "TimedActivityDetail",
+        "resolved": "TimedActivityDetail",
+        "context": "",
+        "current_host": "UInkTimedActivityDetailPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ActivityVm"
+      ],
+      "actions": [
+        "start-supported-activity"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "TimedActivityDetail",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-timed-detail",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_TimedDetail",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "launch",
+      "page_id": "launch",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "LaunchEvent",
+        "resolved": "LaunchEvent",
+        "context": "",
+        "current_host": "UInkLaunchEventPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LaunchVm"
+      ],
+      "actions": [
+        "start-launch",
+        "open-launch-rank"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "LaunchEvent",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-launch",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_Launch",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "launch-rank",
+      "page_id": "launch-rank",
+      "owner": "panel-activities",
+      "existing_route": {
+        "entry": "LaunchRank",
+        "resolved": "LaunchRank",
+        "context": "",
+        "current_host": "UInkLaunchEventPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LaunchVm"
+      ],
+      "actions": [
+        "back"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "LaunchRank",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-launch-rank",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Activities/WBP_NUI_LaunchRank",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "breakthrough",
+      "page_id": "breakthrough",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "BreakthroughPrepare",
+        "resolved": "WulingBreakthrough",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "BreakthroughVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "quote-breakthrough",
+        "prepare-breakthrough",
+        "rework-quality"
+      ],
+      "gaps": [
+        "q_normalized/readiness/slots/sources/growth_min/max not returned by current quote; display unknown without blocking valid native submit."
+      ],
+      "new_runtime_binding": {
+        "route_key": "BreakthroughPrepare",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-breakthrough",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Breakthrough",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "tribulation",
+      "page_id": "tribulation",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "Tribulation",
+        "resolved": "WulingBreakthrough",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "TribulationVm"
+      ],
+      "actions": [
+        "cancel-breakthrough",
+        "reconcile-breakthrough"
+      ],
+      "gaps": [
+        "Anchor UI does not expose an authorized Assist command; viewer assistance is received through existing verified live-comment actor path."
+      ],
+      "new_runtime_binding": {
+        "route_key": "Tribulation",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-tribulation",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Tribulation",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "item-sources",
+      "page_id": "item-sources",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "ItemSources",
+        "resolved": "WulingSources",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ItemSourceVm"
+      ],
+      "actions": [
+        "query-sources",
+        "choose-focus"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "ItemSources",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-item-sources",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_ItemSources",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "guild-build",
+      "page_id": "guild-build",
+      "owner": "panel-rank",
+      "existing_route": {
+        "entry": "GuildConstruction",
+        "resolved": "WulingConstruction",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "GuildBuildVm"
+      ],
+      "actions": [
+        "query-buildings",
+        "build-guild"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "GuildConstruction",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-guild-build",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Rank/WBP_NUI_GuildBuild",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "equipment",
+      "page_id": "equipment",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "EquipmentFabao",
+        "resolved": "CharacterEquipment",
+        "context": "",
+        "current_host": "UInkCharacterEquipmentPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "EquipmentVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "inventory-equip",
+        "inventory-unequip",
+        "activate-fabao"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "EquipmentFabao",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-equipment",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Equipment",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "journey",
+      "page_id": "journey",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "Extensions",
+        "resolved": "Extensions",
+        "context": "",
+        "current_host": "UInkJourneyMapPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "WorldVm",
+        "GuildVm"
+      ],
+      "actions": [
+        "open-world",
+        "open-resources",
+        "open-wuling"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "Extensions",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-journey",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_Journey",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "craft",
+      "page_id": "craft",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "WulingCraft",
+        "resolved": "WulingCraft",
+        "context": "",
+        "current_host": "UInkWulingToolsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "RecipeVm",
+        "InventoryVm"
+      ],
+      "actions": [
+        "query-recipes",
+        "craft"
+      ],
+      "gaps": [],
+      "new_runtime_binding": {
+        "route_key": "WulingCraft",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-craft",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Craft",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "appearance",
+      "page_id": "appearance",
+      "owner": "panel-player",
+      "existing_route": {
+        "entry": "CharacterAppearance",
+        "resolved": "CharacterAppearance",
+        "context": "",
+        "current_host": "UInkCharacterAppearancePanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "AppearanceVm"
+      ],
+      "actions": [
+        "preview-appearance"
+      ],
+      "gaps": [
+        "Existing Frame_/Bar_ actions are local preview; no verified server unlock/equip/persist contract."
+      ],
+      "new_runtime_binding": {
+        "route_key": "CharacterAppearance",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-appearance",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Player/WBP_NUI_Appearance",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "resource-rank",
+      "page_id": "resource-rank",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "ResourceRanking",
+        "resolved": "ResourceRanking",
+        "context": "",
+        "current_host": "UInkResourceRankingPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "ResourceRankVm"
+      ],
+      "actions": [],
+      "gaps": [
+        "Current resource contribution page has no distinct real ranked result contract; keep unavailable."
+      ],
+      "new_runtime_binding": {
+        "route_key": "ResourceRanking",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-resource-rank",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceRank",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    },
+    {
+      "screen_id": "resource-rewards",
+      "page_id": "resource-rewards",
+      "owner": "panel-journey",
+      "existing_route": {
+        "entry": "ResourceRewards",
+        "resolved": "ResourceRewards",
+        "context": "",
+        "current_host": "UInkResourceRewardsPanel",
+        "evidence": [
+          "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+          "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp"
+        ],
+        "limitation": "Source route resolution only; saved WBP/runtime branch not newly verified."
+      },
+      "vm": [
+        "LeaseVm",
+        "RewardVm"
+      ],
+      "actions": [],
+      "gaps": [
+        "Reward rows need exact event/node source; no inferred entitlement from inventory delta."
+      ],
+      "new_runtime_binding": {
+        "route_key": "ResourceRewards",
+        "distinct_page_id_required": true,
+        "actual_class": null,
+        "actual_wbp": null,
+        "layout_version": "newui-r1-resource-rewards",
+        "package_suggestion": "/Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceRewards",
+        "owner": "logic-integration",
+        "stage": "contract-ready-not-wired"
+      }
+    }
+  ]
+}

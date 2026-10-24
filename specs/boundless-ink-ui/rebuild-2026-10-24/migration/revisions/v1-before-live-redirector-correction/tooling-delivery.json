@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-10-24T12:38:02.559831+08:00",
+  "scope": "migration tooling only; no engine execution",
+  "files": [
+    {
+      "path": "audit_migration_results.py",
+      "bytes": 5196,
+      "sha256": "d5daa15d12c6fa524e62a9762fe27b718ef484ca45d6022b906a63282fb82658"
+    },
+    {
+      "path": "backup-result.json",
+      "bytes": 741,
+      "sha256": "9174999765d1ca04c3f320be4f828539c6d7406b9b9b01f29c60370cb19fc56f"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 4369,
+      "sha256": "6a00241bac74ee3dcf9bb195f3f3efabd2d76913f3c90f70280a07efb7bf45a9"
+    },
+    {
+      "path": "migrate_ui_ue.py",
+      "bytes": 14358,
+      "sha256": "a6f3e34deab9bac950440ca1da8c4ea8744fcbca806f265e3bd9b70d07149d85"
+    },
+    {
+      "path": "migration-map.csv",
+      "bytes": 368494,
+      "sha256": "722eb364fb2eb36fa1fcbdfc25377aae079e8d40174cbe02cb217127e7f2eb1f"
+    },
+    {
+      "path": "migration-map.json",
+      "bytes": 634820,
+      "sha256": "35265be1adb56e89f1266686fcfab628474c8ed9675004dc1a0bea0500d38318"
+    },
+    {
+      "path": "migration-owner-audit.json",
+      "bytes": 363,
+      "sha256": "9c960dcdbd7ead644c3d1a836944b5b9bd5377ccb6b768fa5f27f72ebda6763a"
+    },
+    {
+      "path": "preparation-verification.json",
+      "bytes": 1046,
+      "sha256": "3052f721a6a0792b7f503d97586390ef2a7bd6f904cdfbbb3c2140f9a463a421"
+    },
+    {
+      "path": "prepare_migration.py",
+      "bytes": 10114,
+      "sha256": "92d6b4f1f5e22159e18af79e3f6fe157b360d945a948f654b5e238f620e4db4b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8162,
+      "sha256": "47470e9aa5bb31305bb653065493bb09b19ab9808439a744a6b0aeb478480e1a"
+    },
+    {
+      "path": "recover_snapshot.py",
+      "bytes": 7364,
+      "sha256": "9bca99fb4a988648215c0e7cd70537214a13aeb7d20cccf0b623c2e2ad67323c"
+    },
+    {
+      "path": "reference-replacement-plan.json",
+      "bytes": 1645552,
+      "sha256": "88e2aaf35d0cc99a29bbff4b2fed3ee72d28d8459b54c91bc61529159193ade5"
+    },
+    {
+      "path": "staged-source/NewUiMigrationExactFixup.cpp",
+      "bytes": 13112,
+      "sha256": "1cf5986fc5038e7628768990e6481429e3b99a25c95d081ffcde34f7bb1a57b8"
+    },
+    {
+      "path": "staged-source/NewUiMigrationExactFixup.h",
+      "bytes": 184,
+      "sha256": "91a7b9f294e37a21ba69374ffd42bd7beece248ec0c33f3d6301129bfcfcfe5b"
+    },
+    {
+      "path": "status.json",
+      "bytes": 1486,
+      "sha256": "e63330b58808bb7cdef08c382efffcbd3319d29ac4af53e964dced937fdbdbd3"
+    },
+    {
+      "path": "verify_preparation.py",
+      "bytes": 4182,
+      "sha256": "08a6767fa29448e64bb55f3be5a5df5995a2c173e6c23a403fe1284d6a333912"
+    }
+  ]
+}

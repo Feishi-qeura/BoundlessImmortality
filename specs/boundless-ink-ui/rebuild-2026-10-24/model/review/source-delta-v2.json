@@ -1,0 +1,245 @@
+{
+  "captured_utc": "2026-10-24T05:03:33.694227+00:00",
+  "runtime_verified": false,
+  "note": "Per-file byte snapshot; not a transactional snapshot of concurrent owner edits.",
+  "sources": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "sha256": "33925b5b9e350c1de354a755fffac73911ebb801578ebe6833a8a70ae58a4619",
+      "previous_sha256": "33925b5b9e350c1de354a755fffac73911ebb801578ebe6833a8a70ae58a4619",
+      "delta": "unchanged",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "sha256": "572e795932015d915601f1299540d40c39b06e3579d04dab1d67c05d28db7456",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryModel.cpp",
+      "sha256": "ebffb5db0d0a52f31507f89ca01b2eb5173fc35f7479ece4909cf962ce332fde",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkInventoryModel.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "sha256": "e00d9e7fafe81f63d03cca3e68af14d136e2a0c933cd5f190dcd3b1b26d07175",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "sha256": "c670c03ad1be7223186cde390cbf9b93c790025eef9d041bb961d7e9dc7bb7ca",
+      "previous_sha256": "f3c6ff950cceb382d4f268c1560bf2e8ca90608dcac22848f7a04922567062fd",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "2ece50044aef7014029d2a8ae22bc33b8e36f357b41478f185fdf00ab644c693",
+      "previous_sha256": "2105add4ac7cff1deff760cc647dfc34e9133b755008cef20e54bf2e516e231f",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h",
+      "sha256": "f05d288a254de57d1e63d6c8163aba0fa69620dcf0cc48de21c282a90885a0f3",
+      "previous_sha256": "838e8cce24ec503bf1d87bfdb96f38aed08c1bc1dbdf2e6b6cb44fafaeda27ec",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.cpp",
+      "sha256": "f0c8ee16664b1e1079bb9bcd10ce9eda9e01e82e8541b9675cf5e25f93ddc801",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.h",
+      "sha256": "ca4040475919fe8cc8e7720bfa32443282b6a6d62044ca0bad7b8617b14a7e58",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp",
+      "sha256": "3e840b8e2fb2fea0ae8c8640d6a6e381cca062f37fd2f4795d228854cb00ca18",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.h",
+      "sha256": "d4b078f3c1d4d68833d68514355f0f30446b27fa2027e8e50fa4ad9a1636b2b0",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.cpp",
+      "sha256": "5777a1fb13d6fae2477c1e6b8f1e39426e41a3b7fc04cce9ea7bf3177b59eb2a",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.h",
+      "sha256": "d13e27be0f54b8f715cf5a146a1a7af96f77e831720c1d267b8fe6ce05f98e6f",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.cpp",
+      "sha256": "04317938d79291ef97b662eed7d50be4ad46725e27c23353c681208d5b100662",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.h",
+      "sha256": "67ce0d53b67af5620c60afc32f7a134b675aa51d55f8a8a57efc20c229881086",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "da9d45f6fe6d7895c86c42b29c588a52193b96c39ea278e92251c8c488d6d92a",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.h",
+      "sha256": "247983aa6c0ed6b3620bd7fe1c967da4b155c3198ebfe21547a263762c100920",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v2/staged-source/RebuildActivityWidgets.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "ea8d3b5055d93bfb89fbb08fa2de5ce6d307d97c6ee5aa4d69e7381119e59798",
+      "previous_sha256": "501ab09b0de412c2799c42394a63dce16a91b150c3456814904ed5098d3bfe63",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/staged-source/RebuildActivityWidgets.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/staged-source/RebuildActivityWidgets.h",
+      "sha256": "b80c627ce5b3ba93dab8b4d0a5a5c6d80bc949732330895498eefaf1e707412e",
+      "previous_sha256": "2abd8e58977f6c3b57add1a162c17e111f6b4f0f90eeb538a9c0462e10f6548c",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/staged-source/RebuildActivityWidgets.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "97aef118830328eac9ea41b235f0d74d61f0225b96972707f0df17f6499aca94",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "sha256": "d0011ccb03258a97848cb3fa5a474cfe7d07dbcff2a4b8d04f566d709553de1a",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v2/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "057c2a01d8fbee26645846955b88913302cd3f6bffd07072c9f8bc5209deaf45",
+      "previous_sha256": "adca29044d29020aa060eb8c66e0be1cc4b3d20e75550270aa45317c8a2c4fbe",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "sha256": "e760a8a278c4ac3a863ed215605caab37c070b23ee2402553221fa6dfe657cdf",
+      "previous_sha256": "5d6d69c16c44e1aed77e4f42d24d60f772ee6963cabfbb529d34847e451c3b7f",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.cpp",
+      "sha256": "e307d362e8a780a5660181dc816dc44bd0d7ede6f3907ba61322685e76ff642a",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.h",
+      "sha256": "1b1ae39ef9aee2431281037fe48016a2053d1ce0f96ae64f12df43f6105404b4",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingExtendedPages.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp",
+      "sha256": "7a8cdd779d45823149e927b06030eb5599107ade51c8605a8c10742d12a8e705",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.h",
+      "sha256": "f34a92f6a6a1880b981ccd5326c9abeeeac36530bbba7f0baf50a30ce6fbe554",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPageBase.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp",
+      "sha256": "ed10ac66a2a1cae93b643d1a57cc2eb4d8ba0923ebde809422c5e336a841683d",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.h",
+      "sha256": "d32e5cc3e6d8de41e6d5d59cb870781996c2022b9b8f2250f732af8009e608a7",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v2/staged-source/InkRankWulingPages.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingExtendedPages.cpp",
+      "sha256": "fa10bfcdad93feefcae639efc4f6747e1bfcabcfe894456d19face21cea70a31",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingExtendedPages.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingExtendedPages.h",
+      "sha256": "c987872259a10e129a89e1a2ac51f501feb647d4d42fc533f1ed5f277646f56b",
+      "previous_sha256": null,
+      "delta": "new-review-input",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingExtendedPages.h"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingPages.cpp",
+      "sha256": "c3d33dd1ced0947fceaddf7dd8c14d600c6dbd5cd0433b7f92fb540c360db004",
+      "previous_sha256": "57f3eadb171126bad583084504fd035191b944a910c12dc1fee62aa751aadefc",
+      "delta": "changed",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingPages.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingPages.h",
+      "sha256": "7731fd089318c18de697d67c3c52e57bd5c03db2dca12f785ccf7ab1102d2e60",
+      "previous_sha256": "7731fd089318c18de697d67c3c52e57bd5c03db2dca12f785ccf7ab1102d2e60",
+      "delta": "unchanged",
+      "snapshot": "source-snapshot-v2/specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/staged-source/InkRankWulingPages.h"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-24T09:56:39.134927+08:00",
+  "phase": "audit_only",
+  "asset_count": 583,
+  "decisions": {
+    "RetainReferenced": 42,
+    "RetainCompatibility": 525,
+    "UnknownRetain": 1,
+    "RetainDynamicReferenced": 15
+  },
+  "baseline_drift": [],
+  "text_files_scanned": 399,
+  "binary_files_scanned": 1498,
+  "scan_errors": [],
+  "exact_six_current": {
+    "legacy_absent": 6,
+    "canonical_matches": 6,
+    "backup_matches": 12
+  },
+  "git_status_ink": [
+    " D Content/UI/Ink/Cohesion20261021/NS_InkTitleAura.uasset",
+    " D Content/UI/Ink/Refactor20261021/Fonts/F_InkBody.uasset",
+    " D Content/UI/Ink/Textures/T_InkAttributeIcons.uasset",
+    " D Content/UI/Ink/Textures/T_InkMeditation.uasset",
+    " D Content/UI/Ink/Textures/T_InkTitle.uasset",
+    " D Content/UI/Ink/Widgets/WBP_InkFrontend.uasset"
+  ],
+  "deletion_candidates": 0,
+  "registry_verified": false,
+  "dynamic_use_verified": false,
+  "assets_changed_by_audit": false
+}

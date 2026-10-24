@@ -1,0 +1,1449 @@
+{
+  "checked_at": "2026-10-24T05:50:48.461107+00:00",
+  "engine_pid": 47604,
+  "read_only": true,
+  "no_asset_load_or_save": true,
+  "dirty_packages": [],
+  "assets": [
+    {
+      "old_expected": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "new_expected": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "old": {
+        "path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "aa4f90fa61bd435b2e3f45472de7bce0322bdd76d0380fe0eeab72f6913d709a",
+      "new_disk_sha256": "b4b9afe2d64eb123ace63d950d08fad335fdd3bd0c36e0ae03e1bd2e59182586",
+      "old_methods": [
+        "add_asset_user_data_of_class",
+        "get_asset_user_data_of_class",
+        "has_asset_user_data_of_class"
+      ],
+      "old_registry": [],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_HudLaunchCountdownFrame_v1",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [],
+      "old_size": [
+        2172,
+        724
+      ],
+      "new_size": [
+        2172,
+        724
+      ],
+      "properties": {
+        "compression_settings": {
+          "old": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+          "new": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>"
+        },
+        "srgb": {
+          "old": "True",
+          "new": "True"
+        },
+        "lod_group": {
+          "old": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+          "new": "<TextureGroup.TEXTUREGROUP_UI: 16>"
+        },
+        "never_stream": {
+          "old": "True",
+          "new": "True"
+        },
+        "filter": {
+          "old": "<TextureFilter.TF_DEFAULT: 3>",
+          "new": "<TextureFilter.TF_DEFAULT: 3>"
+        },
+        "mip_gen_settings": {
+          "old": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+          "new": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>"
+        },
+        "address_x": {
+          "old": "<TextureAddress.TA_WRAP: 0>",
+          "new": "<TextureAddress.TA_WRAP: 0>"
+        },
+        "address_y": {
+          "old": "<TextureAddress.TA_WRAP: 0>",
+          "new": "<TextureAddress.TA_WRAP: 0>"
+        },
+        "virtual_texture_streaming": {
+          "old": "False",
+          "new": "False"
+        },
+        "compression_no_alpha": {
+          "old": "False",
+          "new": "False"
+        },
+        "max_texture_size": {
+          "old": "0",
+          "new": "0"
+        }
+      },
+      "old_import_data": {
+        "path": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1:InterchangeAssetImportData_0",
+        "asset_class": "/Script/InterchangeEngine.InterchangeAssetImportData",
+        "outer": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+      },
+      "new_import_data": {
+        "path": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1:InterchangeAssetImportData_0",
+        "asset_class": "/Script/InterchangeEngine.InterchangeAssetImportData",
+        "outer": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+      },
+      "shared_import_data_identity": false
+    },
+    {
+      "old_expected": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "new_expected": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+      "old": {
+        "path": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "6e356390cd45f384a38cce07e770dbdae4b771048bb71be3fd2c66c98588ceb8",
+      "new_disk_sha256": "d3a737e1db4d27634e14e97e2298d5b175fc4452db249d1c758d257a4bf28afe",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_RankWulingPaperPanel_Default_v1",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_RankWulingPaperPanel_Default_v1",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "new_expected": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "old": {
+        "path": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+        "asset_class": "/Script/BoundlessImmortality.InkUiThemeData",
+        "outer": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+        "asset_class": "/Script/BoundlessImmortality.InkUiThemeData",
+        "outer": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+        "asset_class": "/Script/BoundlessImmortality.InkUiThemeData",
+        "outer": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "544e658b1281700bda1db2df7280ea1ae4db845e1a47178aaaf5efde30f29a8d",
+      "new_disk_sha256": "935d48c47d1a699e0c65a28f75e169e866acb2b66e9356e0b682e69cc90af65c",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "DA_InkUITheme_v1",
+          "asset_class": "/Script/BoundlessImmortality.InkUiThemeData"
+        }
+      ],
+      "new_referencers": []
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "f6c940adb4d27951fa6b611034e71ecbf658f671a4310f3ff2e816f37f38bb5a",
+      "new_disk_sha256": "0b4e58ad845db0ba29cbcdd6c6d828f466f91982e0ec3208a56c78c973d6ad4c",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [
+        "/Game/UI/Ink/Fonts/Shared/F_InkDisplay"
+      ],
+      "new_registry": [
+        {
+          "name": "FF_InkMaShanZheng",
+          "asset_class": "/Script/Engine.FontFace"
+        }
+      ],
+      "new_referencers": [
+        "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "995a92d8c279980af1ec2626517f5cbb8a88090e090433b419fb306f7ade7716",
+      "new_disk_sha256": "384aa597bb4114c09ee1c7024cddced9b4fab5aa492d491484aca59c651ec61d",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [
+        "/Game/UI/Ink/Fonts/Shared/F_InkDisplay",
+        "/Game/UI/Ink/Fonts/Shared/F_InkFallback"
+      ],
+      "new_registry": [
+        {
+          "name": "FF_InkNotoFallback",
+          "asset_class": "/Script/Engine.FontFace"
+        }
+      ],
+      "new_referencers": [
+        "/Game/newUI/Ink/Fonts/Shared/F_InkBody",
+        "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay",
+        "/Game/newUI/Ink/Fonts/Shared/F_InkFallback"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+        "asset_class": "/Script/Engine.FontFace",
+        "outer": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "ed8bfcc73b1f768c48936ca2cf039f393625eb6cc5cd24db985beec795d23cfe",
+      "new_disk_sha256": "2ab0a5a99210b3e6e8e42b2b32dbf5658a65ace35c4ca72693367ffe18e0d9da",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [
+        "/Game/UI/Ink/Fonts/Shared/F_InkDisplay"
+      ],
+      "new_registry": [
+        {
+          "name": "FF_InkWenKai",
+          "asset_class": "/Script/Engine.FontFace"
+        }
+      ],
+      "new_referencers": [
+        "/Game/newUI/Ink/Fonts/Shared/F_InkBody",
+        "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/F_InkBody.F_InkBody",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Fonts/Shared/F_InkBody"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/F_InkBody"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/F_InkBody"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "78d8498fcf381bf3193c97da3fb92b47e0becefebbaa290493fc611d3a5d9183",
+      "new_disk_sha256": "253de2e0baaebe603d593534b54733cee1bd4241c0cab6eab3973241b905906c",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "F_InkBody",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "F_InkBody",
+          "asset_class": "/Script/Engine.Font"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1",
+        "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+        "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "4472a9769369cbee280833f0cd08d3482aff8abccda82ada4dc18cdb5b3dfa73",
+      "new_disk_sha256": "49692d0834c7c52c38dde538b061f85476095e3ad36d4d051ad7124951cf2157",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [
+        "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1"
+      ],
+      "new_registry": [
+        {
+          "name": "F_InkDisplay",
+          "asset_class": "/Script/Engine.Font"
+        }
+      ],
+      "new_referencers": [
+        "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "new_expected": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/UI/Ink/Fonts/Shared/F_InkFallback"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+        "asset_class": "/Script/Engine.Font",
+        "outer": "/Game/UI/Ink/Fonts/Shared/F_InkFallback"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "45bc1bd7257f27545e61faf13401c1154f1bef3bfa36ea626a8b3333ce9e1888",
+      "new_disk_sha256": "7cef66a71ff82a40d1d7435d2f223f7e2deaa96753ce36b72adf0c4376f8fa68",
+      "old_methods": [],
+      "old_registry": [],
+      "old_referencers": [
+        "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1"
+      ],
+      "new_registry": [
+        {
+          "name": "F_InkFallback",
+          "asset_class": "/Script/Engine.Font"
+        }
+      ],
+      "new_referencers": [
+        "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade",
+      "new_expected": "/Game/newUI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade",
+      "old": {
+        "path": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade",
+        "asset_class": "/Script/Engine.Material",
+        "outer": "/Game/newUI/Ink/Materials/Shared/M_InkScrollFade"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade",
+        "asset_class": "/Script/Engine.Material",
+        "outer": "/Game/newUI/Ink/Materials/Shared/M_InkScrollFade"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "d29c2c89df7bceb5d5a232182663f6ae4e2543755b5ea56ea44d3afb2cc5f005",
+      "new_disk_sha256": "fb3546b10b07679e131e5d1f328c4b044d2188bcc08835fdc885e5b9bb4aca58",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "M_InkScrollFade",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "M_InkScrollFade",
+          "asset_class": "/Script/Engine.Material"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+        "/Game/UI/Ink/Materials/Atlas/M_InkScrollFade",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather",
+      "new_expected": "/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather",
+      "old": {
+        "path": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather",
+        "asset_class": "/Script/Engine.Material",
+        "outer": "/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather",
+        "asset_class": "/Script/Engine.Material",
+        "outer": "/Game/newUI/Ink/Materials/Shared/M_InkTitleFeather"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "34fd3a73a3f1b4121c4558cd01e03546b65ceccd695944de15a6a0ba473de078",
+      "new_disk_sha256": "97e717598263746d2c72745699114dedc6cb874af7eef6f5889cf7c21fa4a129",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "M_InkTitleFeather",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "M_InkTitleFeather",
+          "asset_class": "/Script/Engine.Material"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather",
+        "/Game/UI/Ink/Materials/M_InkTitleFeather"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura",
+      "new_expected": "/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura",
+      "old": {
+        "path": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura",
+        "asset_class": "/Script/Niagara.NiagaraSystem",
+        "outer": "/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura.NS_InkTitleAura",
+        "asset_class": "/Script/Niagara.NiagaraSystem",
+        "outer": "/Game/newUI/Ink/Niagara/Shared/NS_InkTitleAura"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "afc21e37f92d50d003f697c2182d88863806b7358dff366425883b9a69ea736f",
+      "new_disk_sha256": "cf3f10b9318805dc526ab3d3005d77d67f019d22c6defec366bc2984fc08f3e8",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "NS_InkTitleAura",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "NS_InkTitleAura",
+          "asset_class": "/Script/Niagara.NiagaraSystem"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation",
+      "new_expected": "/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation.T_InkMeditation",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Cultivation/T_InkMeditation"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "caa9952eafd57d955c3d083b283cac6f8f3d76917848522ff1b8c232c8bc1476",
+      "new_disk_sha256": "6819028d2278d50af02756e2e0cc8ab9e2868e9ce030c64b0b9bf96eb932e03b",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_InkMeditation",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_InkMeditation",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+        "/Game/newUI/Ink/Materials/Shared/M_InkCultivateSigil",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "new_expected": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters"
+      },
+      "resolved_old": {
+        "path": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "0b0121bb28c36611f73f5c0554fd1cd9ed840e08cb4b3c8e162d146b7aed53c4",
+      "new_disk_sha256": "7e377594d15d01ff0bf5eb6f00438fcf7ecd760d17802118890bd958dfbbe556",
+      "old_methods": [
+        "add_asset_user_data_of_class",
+        "get_asset_user_data_of_class",
+        "has_asset_user_data_of_class"
+      ],
+      "old_registry": [],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_XianxiaMeters",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters"
+      ],
+      "old_size": [
+        1774,
+        887
+      ],
+      "new_size": [
+        1774,
+        887
+      ],
+      "properties": {
+        "compression_settings": {
+          "old": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+          "new": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>"
+        },
+        "srgb": {
+          "old": "True",
+          "new": "True"
+        },
+        "lod_group": {
+          "old": "<TextureGroup.TEXTUREGROUP_UI: 16>",
+          "new": "<TextureGroup.TEXTUREGROUP_UI: 16>"
+        },
+        "never_stream": {
+          "old": "False",
+          "new": "False"
+        },
+        "filter": {
+          "old": "<TextureFilter.TF_DEFAULT: 3>",
+          "new": "<TextureFilter.TF_DEFAULT: 3>"
+        },
+        "mip_gen_settings": {
+          "old": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+          "new": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>"
+        },
+        "address_x": {
+          "old": "<TextureAddress.TA_WRAP: 0>",
+          "new": "<TextureAddress.TA_WRAP: 0>"
+        },
+        "address_y": {
+          "old": "<TextureAddress.TA_WRAP: 0>",
+          "new": "<TextureAddress.TA_WRAP: 0>"
+        },
+        "virtual_texture_streaming": {
+          "old": "False",
+          "new": "False"
+        },
+        "compression_no_alpha": {
+          "old": "False",
+          "new": "False"
+        },
+        "max_texture_size": {
+          "old": "0",
+          "new": "0"
+        }
+      },
+      "old_import_data": {
+        "path": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters:InterchangeAssetImportData_0",
+        "asset_class": "/Script/InterchangeEngine.InterchangeAssetImportData",
+        "outer": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters"
+      },
+      "new_import_data": {
+        "path": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters:InterchangeAssetImportData_0",
+        "asset_class": "/Script/InterchangeEngine.InterchangeAssetImportData",
+        "outer": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters"
+      },
+      "shared_import_data_identity": false
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory",
+      "new_expected": "/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Inventory/T_ProvidedInventory"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "4fb56416652df188f32fa2d3bb9415d8ed0f305fe4e91c75cd2899fbef31d831",
+      "new_disk_sha256": "911fdea412b13f78d19cf3ce5ed0184c5374077ac7cf30071fd6856afcde7e15",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_ProvidedInventory",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_ProvidedInventory",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory",
+        "/Game/UI/Ink/Provided/T_ProvidedInventory",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1004_846_1054_894_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1004_846_1054_894_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1018_1135_1086_1200_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1018_1135_1086_1200_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1030_966_1233_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1030_966_1233_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1033_956_1242_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1033_956_1242_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1046_733_1107_792_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1046_733_1107_792_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1047_1050_1098_1106_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1047_1050_1098_1106_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1061_864_1134_933_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1061_864_1134_933_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1062_757_1137_833_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1062_757_1137_833_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1066_846_1117_894_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1066_846_1117_894_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1070_331_1157_433_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1070_331_1157_433_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1073_438_1157_535_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1073_438_1157_535_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1093_1135_1160_1200_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1093_1135_1160_1200_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1108_1053_1151_1098_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1108_1053_1151_1098_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_359_1241_455_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_359_1241_455_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_566_1184_914_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_566_1184_914_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1154_584_1189_951_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1154_584_1189_951_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1157_660_1178_770_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1157_660_1178_770_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1160_447_1241_528_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1160_447_1241_528_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1161_339_1241_431_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1161_339_1241_431_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1048_1206_1104_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1048_1206_1104_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1135_1234_1200_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1135_1234_1200_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1195_566_1231_914_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1195_566_1231_914_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_131_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_131_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_542_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_542_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_1115_314_1190_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_1115_314_1190_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_165_667_290_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_165_667_290_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_168_635_280_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_168_635_280_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_956_221_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_956_221_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_188_802_335_944_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_188_802_335_944_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_193_794_328_924_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_193_794_328_924_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_225_956_423_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_225_956_423_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_236_966_425_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_236_966_425_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_237_1047_430_1108_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_237_1047_430_1108_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_23_1121_320_1190_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_23_1121_320_1190_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_240_1185_294_1242_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_240_1185_294_1242_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_242_1191_288_1235_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_242_1191_288_1235_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_251_552_445_617_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_251_552_445_617_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_1047_224_1108_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_1047_224_1108_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_550_243_617_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_550_243_617_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_29_966_221_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_29_966_221_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_300_666_425_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_300_666_425_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_301_635_413_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_301_635_413_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_30_794_164_924_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_30_794_164_924_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_325_1121_550_1191_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_325_1121_550_1191_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_1185_91_1242_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_1185_91_1242_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_635_144_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_635_144_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_334_1128_560_1191_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_334_1128_560_1191_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_349_802_497_944_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_349_802_497_944_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_357_794_492_924_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_357_794_492_924_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_40_1191_86_1235_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_40_1191_86_1235_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_433_966_623_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_433_966_623_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_435_1049_852_1108_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_435_1049_852_1108_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_436_1041_862_1111_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_436_1041_862_1111_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_437_666_561_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_437_666_561_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_438_635_552_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_438_635_552_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_454_552_648_617_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_454_552_648_617_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_511_802_657_944_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_511_802_657_944_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_521_794_656_924_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_521_794_656_924_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_548_1121_770_1191_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_548_1121_770_1191_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_570_1133_784_1191_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_570_1133_784_1191_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_635_688_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_635_688_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_667_696_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_667_696_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_631_966_823_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_631_966_823_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_657_552_851_617_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_657_552_851_617_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_684_794_819_924_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_684_794_819_924_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_24_973_542_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_24_973_542_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_52_963_565_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_52_963_565_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_709_635_824_746_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_709_635_824_746_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_772_1121_991_1191_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_772_1121_991_1191_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_787_1129_997_1190_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_787_1129_997_1190_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_829_966_1020_1034_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_829_966_1020_1034_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_847_759_916_831_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_847_759_916_831_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_550_1063_617_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_550_1063_617_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_733_918_792_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_733_918_792_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_865_1041_1028_1111_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_865_1041_1028_1111_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_629_954_691_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_629_954_691_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_846_911_894_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_846_911_894_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_868_1049_1027_1108_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_868_1049_1027_1108_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_869_666_971_742_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_869_666_971_742_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_913_864_980_933_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_913_864_980_933_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_918_759_987_831_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_918_759_987_831_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1185_238_1242_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1185_238_1242_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1191_236_1234_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1191_236_1234_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_922_733_980_792_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_922_733_980_792_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_932_846_982_894_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_932_846_982_894_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_975_86_1237_298_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_975_86_1237_298_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_980_636_1078_682_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_980_636_1078_682_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_981_58_1240_290_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_981_58_1240_290_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_983_338_1068_429_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_983_338_1068_429_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_442_1068_531_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_442_1068_531_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_733_1043_792_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_733_1043_792_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_987_669_1107_737_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_987_669_1107_737_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_988_864_1059_933_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_988_864_1059_933_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_991_759_1061_831_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_991_759_1061_831_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Slice",
+        "/Game/newUI/Ink/Materials/Inventory/M_InkInventoryAtlasUI"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank",
+      "new_expected": "/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Leaderboard/T_ProvidedRank"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "58dbcf83cc0343ad7a60aaab4cf45993f24721c5cff3d0b697cd05521a29ef97",
+      "new_disk_sha256": "989cc26b0749a4f0955266337ade89015f82010696885b7d4c9f823f7b6a52e3",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_ProvidedRank",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_ProvidedRank",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank",
+        "/Game/UI/Ink/Provided/T_ProvidedRank",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorColumns",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorFrame",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorHeading",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_BronzeRow",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Close",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_CompactFrame",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_DamageHeading",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_GoldRow",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal1",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal2",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal3",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_PlainRow",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Rail",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_SpeedHeading",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_Rank_Thumb",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_16_450_436_584_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_16_450_436_584_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_935_976_987_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_935_976_987_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_990_976_1041_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_990_976_1041_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_438_450_858_584_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_438_450_858_584_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_827_45_1134_421_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_827_45_1134_421_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_858_450_1253_584_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_858_450_1253_584_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_InkCardSoft",
+        "/Game/newUI/Ink/Materials/Leaderboard/M_InkLeaderboard"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+      "new_expected": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows.T_RankSwordRows",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Leaderboard/T_RankSwordRows"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "fb2789cf0aeeb6c5cabfba3bf9d08efe201449dee29a59d1ce09d79d8f11e050",
+      "new_disk_sha256": "57392789710d6d53094589b6aa10d1154c7365bbce69a39f293aa4b1d996e86e",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_RankSwordRows",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_RankSwordRows",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier01",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier02",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier03",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier04",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier05",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier06",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier07",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier08",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier09",
+        "/Game/newUI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier10",
+        "/Game/newUI/Ink/Materials/Leaderboard/M_RankTierSlice"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+      "new_expected": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_CohesionIcons"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "4f83f6d3bc0b0af45c01f221b9f1beb60cb618d9684d07c977c71ff3c7f39150",
+      "new_disk_sha256": "2c9899ec9e7ebbf8497b8f2996e6d74ad5cd623f74dcc5ea443d4282a18ed7f8",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_CohesionIcons",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_CohesionIcons",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Shared/T_CohesionIcons"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons",
+      "new_expected": "/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons.T_InkAttributeIcons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_InkAttributeIcons"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "bf9725028b7f5f62748dd7a5509b82e416e18f754a348446ce9bb433a15e05f5",
+      "new_disk_sha256": "14242ad587832296e3595c88d67bdddc13c0f4b6ee8e1db758e168a829b02a47",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_InkAttributeIcons",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_InkAttributeIcons",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Shared/T_InkTitle.T_InkTitle",
+      "new_expected": "/Game/newUI/Ink/Textures/Shared/T_InkTitle.T_InkTitle",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Shared/T_InkTitle.T_InkTitle",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Shared/T_InkTitle"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_InkTitle.T_InkTitle",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_InkTitle"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_InkTitle.T_InkTitle",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_InkTitle"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "bb60cadeedb87e9cacfdd829dd63b099f4b2ce164bcaaf5bb9b1b2952b6974d3",
+      "new_disk_sha256": "c47bd2a42e75ee79131b3b478dab8720ae7acdcdb114ef5fc5e13d0193ad4f61",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_InkTitle",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_InkTitle",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+        "/Game/newUI/Ink/Widgets/Character/WBP_InkCharacter",
+        "/Game/newUI/Ink/Widgets/Inventory/WBP_InkInventory",
+        "/Game/newUI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+        "/Game/newUI/Ink/Widgets/Menu/WBP_InkMainMenu",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSaves",
+        "/Game/newUI/Ink/Widgets/Shared/WBP_InkSettings"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+      "new_expected": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments.T_PolishOrnaments",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_PolishOrnaments"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "86cb3c3bdbd49c27314b20c0853137ac3d462d70314fb69134c8f13c3c0e3c22",
+      "new_disk_sha256": "94ef1286e458014c10c79dddcda760c493277aa4c371ba3a193da771373445e4",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_PolishOrnaments",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_PolishOrnaments",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons",
+      "new_expected": "/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons",
+      "old": {
+        "path": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons",
+        "asset_class": "/Script/Engine.Texture2D",
+        "outer": "/Game/newUI/Ink/Textures/Shared/T_ProvidedButtons"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "aca26dee6898148d95fb0a8b8355ed403584815d77493a8282709342f0ff46f8",
+      "new_disk_sha256": "b344335cc633170f2af8b55c093750060a60e2644f410bd330dd80bd473a6f3e",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "T_ProvidedButtons",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "T_ProvidedButtons",
+          "asset_class": "/Script/Engine.Texture2D"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons",
+        "/Game/UI/Ink/Provided/T_ProvidedButtons",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_143_222_229_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_143_222_229_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_233_222_317_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_233_222_317_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_48_222_142_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_48_222_142_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_330_222_407_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_330_222_407_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_412_222_488_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_412_222_488_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_494_222_572_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_494_222_572_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_20_804_208_882_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_20_804_208_882_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_211_804_396_882_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_211_804_396_882_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_330_429_407_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_330_429_407_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_412_429_488_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_412_429_488_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_494_429_572_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_494_429_572_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_143_431_229_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_143_431_229_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_233_431_317_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_233_431_317_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_48_431_142_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_48_431_142_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_143_634_229_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_143_634_229_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_233_634_317_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_233_634_317_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_48_634_142_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_48_634_142_Slice",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_577_804_765_882_Fit",
+        "/Game/newUI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_577_804_765_882_Slice",
+        "/Game/newUI/Ink/Materials/Shared/M_InkAtlasUI"
+      ]
+    },
+    {
+      "old_expected": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend.WBP_InkFrontend",
+      "new_expected": "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend.WBP_InkFrontend",
+      "old": {
+        "path": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend.WBP_InkFrontend",
+        "asset_class": "/Script/CoreUObject.ObjectRedirector",
+        "outer": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend"
+      },
+      "new": {
+        "path": "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend.WBP_InkFrontend",
+        "asset_class": "/Script/UMGEditor.WidgetBlueprint",
+        "outer": "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend"
+      },
+      "resolved_old": {
+        "path": "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend.WBP_InkFrontend",
+        "asset_class": "/Script/UMGEditor.WidgetBlueprint",
+        "outer": "/Game/newUI/Ink/Widgets/Shared/WBP_InkFrontend"
+      },
+      "old_exact": true,
+      "dirty": false,
+      "old_disk_sha256": "4ecab10e7cf39872047b3513e17ec98994591c39f9bbc8162caab6a94e9ab742",
+      "new_disk_sha256": "ed0ec0d732639d7232b5af63fecc325dfa4b398f4944b746426a16ff59e0776c",
+      "old_methods": [],
+      "old_registry": [
+        {
+          "name": "WBP_InkFrontend",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        },
+        {
+          "name": "WBP_InkFrontend_C",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        },
+        {
+          "name": "Default__WBP_InkFrontend_C",
+          "asset_class": "/Script/CoreUObject.ObjectRedirector"
+        }
+      ],
+      "old_referencers": [],
+      "new_registry": [
+        {
+          "name": "WBP_InkFrontend",
+          "asset_class": "/Script/UMGEditor.WidgetBlueprint"
+        },
+        {
+          "name": "WBP_InkFrontend_C",
+          "asset_class": "/Script/UMG.WidgetBlueprintGeneratedClass"
+        }
+      ],
+      "new_referencers": [
+        "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "/Game/Isometric_World/Sky_Temple/Maps/Level_Sky_Temple_Demo_01"
+      ]
+    }
+  ],
+  "available_api": {
+    "Package": [],
+    "PackageTools": [],
+    "EditorAssetLibrary": [],
+    "EditorLoadingAndSavingUtils": [
+      "export_scene",
+      "get_dirty_content_packages",
+      "get_dirty_map_packages",
+      "save_dirty_packages",
+      "save_dirty_packages_with_dialog",
+      "unload_packages"
+    ],
+    "EditorAssetSubsystem": [
+      "set_dirty_flag"
+    ]
+  },
+  "load_object_api": "load_object(outer: Optional[Object], name: str, type: Union[Class, type]=Object.static_class(), follow_redirectors: bool=True) -> Any -- load an Unreal object with the given outer and name, optionally validating its type",
+  "find_object_api": "find_object(outer: Optional[Object], name: str, type: Union[Class, type]=Object.static_class(), follow_redirectors: bool=True) -> Any -- find an already loaded Unreal object with the given outer and name, optionally validating its type",
+  "set_dirty_api": "x.set_dirty_flag(object, dirty_state) -> bool\r\nSet the package dirty flag for an asset\r\n\r\nArgs:\r\n    object (Object): Object we want to set the package dirty state.\r\n    dirty_state (bool): The dirty state, true mean the asset package need to be save.\r\n\r\nReturns:\r\n    bool: True if the operation succeeds.",
+  "unload_api": "X.unload_packages(packages_to_unload) -> (out_any_packages_unloaded=bool, out_error_message=Text)\r\nUnloads a list of packages\r\n\r\nArgs:\r\n    packages_to_unload (Array[Package]): Array of packages to unload.\r\n\r\nReturns:\r\n    tuple: \r\n\r\n    out_any_packages_unloaded (bool): \r\n\r\n    out_error_message (Text):",
+  "dirty_object_methods": {}
+}

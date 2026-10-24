@@ -1,0 +1,10 @@
+{
+  "stop": true,
+  "requested_at": "2026-10-24T17:26:50.219863+08:00",
+  "reason": "Portrait source26 final GUI/native checks complete; normally close owned isolated authority and TLS fixtures",
+  "identity_verified_pids": [
+    40168,
+    28596
+  ],
+  "method": "Existing shared control flag -> HTTPServer.shutdown/server_close; no process kill"
+}

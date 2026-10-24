@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "coordinator_thread_id": "01a16b97-94db-7070-acda-d35950bf8c41",
+  "project_root": "D:/demo/BoundlessImmortality",
+  "created_date": "2026-10-24",
+  "timezone": "Asia/Hong_Kong",
+  "phase": "full_newUI_rebuild_with_named_asset_root_migration",
+  "source_threads": [
+    "01a16820-fe57-7ee2-b286-bc2be74537f6",
+    "01a16820-ea48-7da2-a215-73a4cddd6dfc",
+    "01a16820-f3a8-70d3-8197-c9d23c6ecdf4",
+    "01a16820-e044-7cd3-aa38-415508a55386"
+  ],
+  "teams": [
+    {
+      "id": "panel-player",
+      "title": "UI面板制作与应用：主界面与角色成长",
+      "model": "gpt-6-luna",
+      "thinking": "high",
+      "scope": "主菜单、首页HUD、角色属性/背包、突破准备/天劫进行与结果。优先读取 player-core-mapping-correction v3；v2命名互换不能照文件名用。保留真实角色/场景与已实现属性背包业务。缺失来源、准备度与预测字段依实际权威契约补控件，不编造概率/数值。新源码目录 Player。",
+      "threadId": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "hostId": "local",
+      "status": "full_newUI_pages_and_components",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "observed_thread_status": "idle"
+    },
+    {
+      "id": "panel-rank",
+      "title": "UI面板制作与应用：排行榜与武灵",
+      "model": "gpt-6-luna",
+      "thinking": "high",
+      "scope": "伤害榜、修炼速度榜、主播剑灵榜、武灵总览及已有相关子页。读取 parallel-rank-wuling v2/measured-assets-v2.json，read_thread原聊天接口多次失败可用磁盘记录，不用无限重试。新源码目录 RankWuling。",
+      "threadId": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "hostId": "local",
+      "status": "full_newUI_pages_and_components",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:12",
+      "observed_thread_status": "notLoaded"
+    },
+    {
+      "id": "panel-journey",
+      "title": "UI面板制作与应用：地图与签到",
+      "model": "gpt-6-luna",
+      "thinking": "high",
+      "scope": "世界地图、资源地图、每日签到、每日一签（大吉/吉/平/凶）、月签到。读取 parallel-maps-signin v2 manifest，核实地图语义与签到互斥状态。新源码目录 Journey。",
+      "threadId": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "hostId": "local",
+      "status": "full_newUI_pages_and_components",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:17",
+      "observed_thread_status": "notLoaded"
+    },
+    {
+      "id": "panel-activities",
+      "title": "UI面板制作与应用：活动与开服活动",
+      "model": "gpt-6-luna",
+      "thinking": "high",
+      "scope": "日常、限定、常驻、开服活动；贡献榜/每日任务/特惠入口与HUD倒计时。优先 activity-state-correction-3，再补parallel-activities可用部分。单页面不混互斥加载与空态，特惠无SKU/价格时禁用并显示诚实状态。新源码目录 Activities。",
+      "threadId": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "hostId": "local",
+      "status": "full_newUI_pages_and_components",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "additional_staged_paths": [
+        "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02",
+        "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03"
+      ],
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "observed_thread_status": "idle"
+    },
+    {
+      "id": "logic-core",
+      "title": "UI功能实现：玩家成长与排行榜武灵",
+      "model": "gpt-6.1-sol",
+      "thinking": "medium",
+      "scope": "核实现有角色/背包/突破天劫/三榜/武灵子系统、数据与操作，先做独立真实数据/动作适配器和有意义逻辑测试，再绑定已交付壳。新源码目录 LogicCore；不得改旧共享文件，提交精确补丁给logic-integration应用。现有逻辑已大量实现，避免重复系统；附件建议与权威规则冲突记gap，不能默改。",
+      "threadId": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "hostId": "local",
+      "status": "newUI_unified_contracts_and_model",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:33",
+      "observed_thread_status": "active"
+    },
+    {
+      "id": "logic-integration",
+      "title": "UI功能实现：地图活动签到与引擎总接入",
+      "model": "gpt-6.1-sol",
+      "thinking": "medium",
+      "scope": "地图/签到/每日一签/月签/活动开服业务适配；项目唯一公共路由/保存WBP迁移修改者、唯一Editor/UBT/导入与本批验证执行者。先实现独立LogicJourney适配契约并读取四面板队交接；engine-lease初始not_granted，尚不可启动Editor/构建/导入。准备批次后在handoff请求监督授予。随后实际导入/回读并连接新Widget到玩家入口，不能只落脚本或用已有native-paper样式宣称新组件已接入。需求覆盖按screen-map/interaction/策划逐项，未覆盖页登记续队。",
+      "threadId": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "hostId": "local",
+      "status": "newUI_root_architecture_and_source_refactor",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:52",
+      "observed_thread_status": "active"
+    },
+    {
+      "id": "cleanup",
+      "title": "UI清理：核实并清理剩余旧资源",
+      "model": "gpt-6.1-sol",
+      "thinking": "medium",
+      "scope": "专门处理/Game/UI/Ink剩余旧项目资源。精确六个redirector已有cleanup-result/delivery-assets-check成功证据，先现场复核不能重复清它们。保存新增ComponentRollout20261024出现前的原目录基线，审计剩余资产与硬/软/配置/代码/动态加载依赖。当前audit_only不启动引擎或改资产，准备backup/assetregistry检查脚本和逐资产决策表供独占执行。证明零用途且有备份时由监督授予清理lease再执行。Unknown与仍在用资源保留，绝不整目录删除、全局Fixup或EditorAssetLibrary.delete_asset(old_redirector_path)。",
+      "threadId": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "hostId": "local",
+      "status": "full_UI_to_newUI_backup_mapping_migration",
+      "fast_mode": "not_configurable_via_create_thread",
+      "visual_approved": false,
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "observed_thread_status": "idle"
+    }
+  ],
+  "rebuild_root": "specs/boundless-ink-ui/rebuild-2026-10-24",
+  "canonical_asset_root": "/Game/newUI",
+  "last_supervisor_checkpoint": "2026-10-24T17:46:00+08:00"
+}

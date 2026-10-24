@@ -1,0 +1,131 @@
+{
+  "slice": "player-c",
+  "updated_at": "2026-10-24T13:15:13+08:00",
+  "canonical_asset_root": "/Game/newUI/Components/Player",
+  "approved": false,
+  "imported_to_unreal": false,
+  "authorization": "Continuous component production and final user visual review are recorded in the rebuild quickstart and player-c/execution-basis.md.",
+  "dependencies": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/character-attribute-glyph-atlas-component-v1.png",
+      "bytes": 1951284,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "0CFA127F7A04204D62DCADCA9F29075896B8BE8650D4B71168356942869D8E19",
+      "approved": false,
+      "copied": false
+    }
+  ],
+  "assets": [
+    {
+      "path": "method-loadout-glyph-atlas-v1.png",
+      "bytes": 2569283,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_zero_fraction": 0.4689,
+      "sha256": "47AF658D4C50E2692B33A58DA4F3E76DF7CAE02290FC6ACF3C5C3D909590516D",
+      "approved": false,
+      "prompt_path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/prompts/method-loadout-glyph-atlas-v1.md",
+      "semantics": [
+        "0 cultivation manual",
+        "1 qi spiral",
+        "2 linked method scrolls",
+        "3 blank method scroll",
+        "4 catalog lens",
+        "5 selection seal"
+      ],
+      "cells": {
+        "columns": 3,
+        "rows": 2,
+        "uv": "normalized equal cells"
+      },
+      "generation_outputs": [
+        "exec-d13024a4-69f6-44ce-beb4-e58355166ab7.png",
+        "exec-4704dee6-3954-497a-8a2c-47fe297ab17d.png"
+      ]
+    },
+    {
+      "path": "equipment-fabao-glyph-atlas-v1.png",
+      "bytes": 1658321,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_zero_fraction": 0.6083,
+      "sha256": "1A654F979AFEEDD1A7464E397E653B144B3D60BE7629543509D5ACCDC14C07A0",
+      "approved": false,
+      "prompt_path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/prompts/equipment-fabao-glyph-atlas-v1.md",
+      "semantics": [
+        "0 garment-like equipment glyph",
+        "1 round spirit artifact",
+        "2 jade sphere motif",
+        "3 neutral star motif",
+        "4 qi-loop motif",
+        "5 manual motif"
+      ],
+      "cells": {
+        "columns": 3,
+        "rows": 2,
+        "uv": "normalized equal cells"
+      },
+      "generation_outputs": [
+        "exec-5397fa96-efe5-4494-9e18-98adb546a8a8.png",
+        "exec-a46d7573-b7cc-42bd-ad5f-4acac541c3cd.png"
+      ]
+    },
+    {
+      "path": "appearance-preview-ornament-atlas-v1.png",
+      "bytes": 1433395,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_zero_fraction": 0.6527,
+      "sha256": "80A2405958CDE0E6A55DA77A09A683A5FDEAAEEC5ECFBEABD0F0D24AA5F4B331",
+      "approved": false,
+      "prompt_path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/prompts/appearance-preview-ornament-atlas-v1.md",
+      "semantics": [
+        "0 plum-branch trim",
+        "1 bamboo trim",
+        "2 crane motif",
+        "3 linked lotus ornaments",
+        "4 vertical jade brackets",
+        "5 jade medallion"
+      ],
+      "cells": {
+        "columns": 3,
+        "rows": 2,
+        "uv": "normalized equal cells"
+      },
+      "generation_outputs": [
+        "exec-84a66b14-4df5-46c8-8692-38a79ca51db6.png",
+        "exec-05d5dc3a-b730-4ed0-b40a-34569e0d2ff6.png"
+      ]
+    }
+  ],
+  "note": "PNG metadata is measured from saved files. The first generation included a baked checkerboard and is recorded only as provenance; corrected RGBA output is the listed candidate. These assets are not imported into Unreal and do not contain business labels or values."
+}

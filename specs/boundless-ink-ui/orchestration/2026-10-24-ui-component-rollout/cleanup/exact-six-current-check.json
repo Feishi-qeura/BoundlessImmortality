@@ -1,0 +1,293 @@
+{
+  "checked_at": "2026-10-24T09:56:28.359720+08:00",
+  "prior_cleanup_result": {
+    "verified_utc": "2026-10-24T00:43:33.2565191Z",
+    "legacy_removed": 6,
+    "canonical_preserved": 6,
+    "canonical_hashes_match": true,
+    "aliases_count": 569,
+    "aliases_match": true,
+    "registry_postscan_passed": true,
+    "gui_helper_exit_code": 0,
+    "log": "redirector-cleanup-gui.log",
+    "files": [
+      {
+        "package": "/Game/UI/Ink/Widgets/WBP_InkFrontend",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Cohesion20261021/NS_InkTitleAura",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Refactor20261021/Fonts/F_InkBody",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkAttributeIcons",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkMeditation",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkTitle",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      }
+    ]
+  },
+  "prior_delivery_check": {
+    "verified_utc": "2026-10-24T00:55:59.7708774Z",
+    "legacy_absent": 6,
+    "canonical_unchanged": 6,
+    "files": [
+      {
+        "package": "/Game/UI/Ink/Widgets/WBP_InkFrontend",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Cohesion20261021/NS_InkTitleAura",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Refactor20261021/Fonts/F_InkBody",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkAttributeIcons",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkMeditation",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/T_InkTitle",
+        "legacy_redirector": true,
+        "exists": false,
+        "canonical_hash_matches": false
+      },
+      {
+        "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+        "legacy_redirector": false,
+        "exists": true,
+        "canonical_hash_matches": true
+      }
+    ]
+  },
+  "current_files": [
+    {
+      "package": "/Game/UI/Ink/Widgets/WBP_InkFrontend",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "d1116f5cf8803240cd426a00aac1c46de7c57825224b880a5c558121ec354f0f",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "legacy": false,
+      "exists": true,
+      "sha256": "f4e75ffcd587700ee997e2ec64eaa28a0bb1f8661159334805755e48e8669444",
+      "expected_sha256": "f4e75ffcd587700ee997e2ec64eaa28a0bb1f8661159334805755e48e8669444",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Cohesion20261021/NS_InkTitleAura",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "1d7286d72721c75e2bbbe22e30d0bee72e0858f9a01abae80a139e11fcba5c3d",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+      "legacy": false,
+      "exists": true,
+      "sha256": "ff1cda71540715f36c3e9c84bdf1bde7d9b50d88fa595e1fe77f95f484abea0c",
+      "expected_sha256": "ff1cda71540715f36c3e9c84bdf1bde7d9b50d88fa595e1fe77f95f484abea0c",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Refactor20261021/Fonts/F_InkBody",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "c529badd03a930b44fbe0fe6060f7dbc69351702ccde6c47ba8a6831d854ab7f",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+      "legacy": false,
+      "exists": true,
+      "sha256": "59bcfa6799859ed6c55f24923fec58be3e10513196cd422fbd693405afeafaed",
+      "expected_sha256": "59bcfa6799859ed6c55f24923fec58be3e10513196cd422fbd693405afeafaed",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/T_InkAttributeIcons",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "eb409f59ad0a506bc18421593bdef09a7bb06dfa7b80e9427e3f6c31009a882f",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+      "legacy": false,
+      "exists": true,
+      "sha256": "b8183aeb43c4a3e50e67b6a2abe5020bb75b0cfec2405c0f73d44c29d37fcdfa",
+      "expected_sha256": "b8183aeb43c4a3e50e67b6a2abe5020bb75b0cfec2405c0f73d44c29d37fcdfa",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/T_InkMeditation",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "b72404094a3b290fee12317d2b1020ebfad00beca76569f03d20b61495677960",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+      "legacy": false,
+      "exists": true,
+      "sha256": "c240250b41fd7d0bafe87a1bbf5a9d99f668f577d46aae41076ac11de6b5e4ba",
+      "expected_sha256": "c240250b41fd7d0bafe87a1bbf5a9d99f668f577d46aae41076ac11de6b5e4ba",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/T_InkTitle",
+      "legacy": true,
+      "exists": false,
+      "sha256": null,
+      "expected_sha256": "d8f65bbe569647534ec1299a2a0ca7b3b10e73652d3dd4b33b0e005e33cacf4b",
+      "matches_precleanup": false,
+      "backup_exists": true,
+      "backup_matches": true
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+      "legacy": false,
+      "exists": true,
+      "sha256": "43b0278eaf335bb96f53179d3216b188825c92a6d7edcefff3a14dde5d2dc949",
+      "expected_sha256": "43b0278eaf335bb96f53179d3216b188825c92a6d7edcefff3a14dde5d2dc949",
+      "matches_precleanup": true,
+      "backup_exists": true,
+      "backup_matches": true
+    }
+  ],
+  "legacy_absent": 6,
+  "canonical_matches": 6,
+  "backup_matches": 12,
+  "repeat_cleanup_forbidden": true
+}

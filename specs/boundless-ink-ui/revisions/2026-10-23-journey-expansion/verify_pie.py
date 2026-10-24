@@ -147,7 +147,7 @@ step('close reward key',escape,1)
 step('receipt gone',lambda:ck('receipt closed and does not replay',not receipt()),2)
 step('receipt no replay after poll',lambda:ck('receipt remains closed',not receipt()))
 step('landscape',lambda:ck('resize landscape',L.set_pie_viewport_size(1280,720)),2)
-for route,context,tag in [('LaunchEvent','','launch-landscape'),('Wuling','','wuling-landscape'),('WorldCultivation','','world-map-landscape'),('ResourceContest','','resource-map-landscape'),('JourneyWorldDetail','xuantie','world-detail-landscape'),('JourneyResourceDetail','NODE_STONE:1','resource-detail-landscape')]:
+for route,context,tag in [('LaunchEvent','','launch-landscape'),('Wuling','','wuling-landscape'),('WorldCultivation','','world-map-landscape'),('ResourceMap','','resource-map-landscape'),('ResourceContest','','resource-center-landscape'),('JourneyWorldDetail','xuantie','world-detail-landscape'),('JourneyResourceDetail','NODE_STONE:1','resource-detail-landscape')]:
  step('open '+tag,lambda r=route,c=context:page(r,c))
  step('capture '+tag,lambda t=tag:capture(t))
 step('settings landscape',lambda:F.show_page('Settings'))

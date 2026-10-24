@@ -1,0 +1,113 @@
+{
+  "team": "panel-player",
+  "updated_at": "2026-10-24T12:53:06+08:00",
+  "canonical_asset_root": "/Game/newUI/Components/Player",
+  "assets": [
+    {
+      "path": "main-action-ornament-component-v1.png",
+      "bytes": 774748,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "901D495ADF87FA946FB41D62EAFA7C5951064996EF42BDA6F480BAB9B631D26C",
+      "approved": false,
+      "semantics": "Transparent jade and old-gold action-corner ornament; full texture; no slicing.",
+      "cells": null
+    },
+    {
+      "path": "hud-route-glyph-atlas-component-v1.png",
+      "bytes": 2180315,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "sha256": "5D576274A7E043A61BFAD6590838DEB9B0D7ADB454EF94B6560AFE5697641ED4",
+      "approved": false,
+      "semantics": [
+        "0 character",
+        "1 inventory",
+        "2 cultivation",
+        "3 leaderboard",
+        "4 journey",
+        "5 menu"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 2
+      }
+    },
+    {
+      "path": "character-attribute-glyph-atlas-component-v1.png",
+      "bytes": 1951284,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "0CFA127F7A04204D62DCADCA9F29075896B8BE8650D4B71168356942869D8E19",
+      "approved": false,
+      "semantics": [
+        "0 Health",
+        "1 Attack",
+        "2 Defense",
+        "3 SpiritDamage",
+        "4 Critical",
+        "5 Evasion",
+        "6 Luck",
+        "7 MoveSpeed",
+        "8 CultivationSpeed"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 3
+      }
+    },
+    {
+      "path": "inventory-category-glyph-atlas-component-v1.png",
+      "bytes": 2618360,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "sha256": "076D8AE4A04E5D03284D870E1092D3895727779B9D145CEC18942B7332872F16",
+      "approved": false,
+      "semantics": [
+        "0 Equipment",
+        "1 Material",
+        "2 Consumable",
+        "3 Treasure",
+        "4 EmptySlot",
+        "5 LockedSlot"
+      ],
+      "cells": {
+        "columns": 3,
+        "uv": "normalized equal cells",
+        "rows": 2
+      }
+    }
+  ],
+  "imported_to_unreal": false,
+  "note": "PNG evidence only. Integration imports into /Game/newUI, slices atlas UVs in UMG, reads back Texture2D references, and supplies player-entry runtime evidence."
+}

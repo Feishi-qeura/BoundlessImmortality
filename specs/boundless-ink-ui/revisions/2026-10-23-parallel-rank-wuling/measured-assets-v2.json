@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "rw-leaderboard-cultivation-candidate-v2.png",
+    "Bytes": 2614294,
+    "Width": 941,
+    "Height": 1672,
+    "ColorType": 2,
+    "SHA256": "355A1040FE205E8DD5C1D4DFFB7FB2CA165FF35C227EAC6A1880F18F683C7456"
+  },
+  {
+    "Name": "rw-leaderboard-damage-candidate-v2.png",
+    "Bytes": 2263878,
+    "Width": 941,
+    "Height": 1672,
+    "ColorType": 2,
+    "SHA256": "4984754FB5A5ABE8562F76B5AD72EE0320243160F1CE31C9373FD950743BDE8D"
+  },
+  {
+    "Name": "rw-leaderboard-spirit-candidate-v2.png",
+    "Bytes": 2462322,
+    "Width": 940,
+    "Height": 1672,
+    "ColorType": 2,
+    "SHA256": "A0EB106064FBA54D8D51543671E446697E4DC6714A5BB8F268403B415C9B79FC"
+  },
+  {
+    "Name": "rw-wuling-home-candidate-v2.png",
+    "Bytes": 2406561,
+    "Width": 940,
+    "Height": 1672,
+    "ColorType": 2,
+    "SHA256": "2F9D45EDFDE5014CBE6A2F98A6FC31D05B3A5EFF204E74E3B3A686490A443176"
+  }
+]

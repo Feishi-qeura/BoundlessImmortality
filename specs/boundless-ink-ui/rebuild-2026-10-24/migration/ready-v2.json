@@ -1,0 +1,22 @@
+{
+  "ready": true,
+  "revision": "v2",
+  "updated_at": "2026-10-24T13:02:17.935697+08:00",
+  "source_physical_packages": 588,
+  "canonical_rename_count": 582,
+  "preexisting_redirector_fixup_count": 6,
+  "migration_map_sha256": "2fcf7fcb432a6066a8ecfa880e376129a3bddd9326abed53f86fd2f2168cbdac",
+  "owner_script_sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155",
+  "staged_cpp_sha256": "171f019c9361c81400a908dca7052b69861b5d8288f50a88f109c551fa30a261",
+  "staged_h_sha256": "e5f2480b826e3c7306a5779cc0b759be94c8418640d35234df68cff6f7668680",
+  "backup_manifest_sha256": "625eef06abf776f245406e0991bd8b563bfc6b5c51a206fa8bbb84826a0b0980",
+  "offline_checks_passed": 7,
+  "cpp_v2_compiled_by_cleanup": false,
+  "engine_v2_executed_by_cleanup": false,
+  "actual_migration_verified": false,
+  "sole_engine_executor": "logic-integration",
+  "no_second_cleanup_lease_required": true,
+  "controller_initial_dispatch_assert_must_be_updated": true,
+  "pre_rename_pin_required": true,
+  "handoff": "handoff.md"
+}

@@ -22,6 +22,67 @@
 using ESurface=InkPresentationStyle::ESurface;
 using EIcon=InkPresentationStyle::EIcon;
 
+namespace
+{
+TSharedPtr<FJsonObject> FindActivityTemplate(const UUserWidget* Widget,const FString& Entry,const TCHAR* ExpectedCycle)
+{
+    if(Entry.IsEmpty())return nullptr;
+    const auto Activities=WulingFrontendData::Activity(Widget);
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities||!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return nullptr;
+    for(const auto& Value:*Templates)
+    {
+        const auto Row=Value.IsValid()?Value->AsObject():nullptr;
+        if(!Row)continue;
+        const FString Id=WulingFrontendData::String(Row,TEXT("activity_id"));
+        const FString Cycle=WulingFrontendData::String(Row,TEXT("cycle"));
+        if(Entry.Equals(Id,ESearchCase::CaseSensitive)&&Cycle==ExpectedCycle)return Row;
+    }
+    return nullptr;
+}
+
+FString ActivityField(const TSharedPtr<FJsonObject>& Row,const TCHAR* Key)
+{
+    FString Value;
+    return Row&&Row->TryGetStringField(Key,Value)&&!Value.IsEmpty()?Value:TEXT("服务未提供");
+}
+
+FString ActivityEnabled(const TSharedPtr<FJsonObject>& Row)
+{
+    bool Enabled=false;
+    if(!Row||!Row->TryGetBoolField(TEXT("enabled"),Enabled))return TEXT("服务端未提供状态");
+    return Enabled?TEXT("已启用"):TEXT("未启用");
+}
+
+FString ActivityAuthorityDetailState(const UWulingPrototypeSubsystem* Service,const TSharedPtr<FJsonObject>& Activities,const TSharedPtr<FJsonObject>& Row)
+{
+    if(!Service||!Service->IsEnabled())return TEXT("活动信息暂未同步");
+    if(!Service->IsConnected())return TEXT("暂时无法连接，请稍后再查看。");
+    if(!Activities)return TEXT("正在等待活动信息同步。");
+    const TArray<TSharedPtr<FJsonValue>>* Templates=nullptr;
+    if(!Activities->TryGetArrayField(TEXT("templates"),Templates)||!Templates)return TEXT("暂无活动信息");
+    if(!Row)return TEXT("当前活动暂不可用。");
+    return TEXT("活动资料已同步，参与条件与进度仍待确认。");
+}
+
+FString ActivityRewardStatus(const TSharedPtr<FJsonObject>& Activities,const TSharedPtr<FJsonObject>& Row)
+{
+    const FString Id=WulingFrontendData::String(Row,TEXT("activity_id"));
+    if(Id==TEXT("ACT_SIGN"))
+    {
+        const FString Mode=WulingFrontendData::String(Activities,TEXT("sign_in_reward_mode"));
+        double QiReward=-1;
+        const bool HasQiReward=Activities&&Activities->TryGetNumberField(TEXT("sign_in_qi_reward"),QiReward);
+        if(Mode==TEXT("placeholder")&&HasQiReward&&QiReward==0)
+            return TEXT("本次签到仅记录出勤，不发放修为奖励。");
+        return TEXT("签到奖励信息待同步。");
+    }
+    if(Id==TEXT("ACT_VERSE"))return TEXT("每日剑诀仅供品读，不发放数值奖励。");
+    return TEXT("奖励信息待同步。");
+}
+
+}
+
 #define PANEL_TITLE(Class,Value) FText Class::PanelTitle()const{return FText::FromString(TEXT(Value));}
 PANEL_TITLE(UInkFeatureHubPanel,"仙途百事")
 PANEL_TITLE(UInkSignInPanel,"签到")
@@ -40,7 +101,7 @@ PANEL_TITLE(UInkCharacterSkillsPanel,"角色技能")
 PANEL_TITLE(UInkCharacterArtifactsPanel,"法宝")
 PANEL_TITLE(UInkCharacterFatePanel,"仙缘")
 PANEL_TITLE(UInkCharacterAppearancePanel,"名片外观")
-PANEL_TITLE(UInkResourceRankingPanel,"占领排行")
+PANEL_TITLE(UInkResourceRankingPanel,"资源贡献榜")
 PANEL_TITLE(UInkResourceRewardsPanel,"争夺奖励")
 #undef PANEL_TITLE
 
@@ -149,7 +210,9 @@ void UInkResourceContestPanel::BuildPanelContent()
         Label(BodyCanvas,TEXT("ResourceHeading"),TEXT("当前开采权"),X,Y,CW,56,40);
         Label(BodyCanvas,TEXT("ResourceLeaseData"),Status,X,Y+76,CW,228,26);
         Link(BodyCanvas,TEXT("WulingRace"),TEXT("灵脉竞采"),TEXT("五类资源 · 实际武灵匹配"),5,X,Y+328,CW,176);
-        Link(BodyCanvas,TEXT("WulingRights"),TEXT("查看权益"),TEXT("收益来源 · 有效期限"),6,X,Y+524,CW,148);return;
+        Link(BodyCanvas,TEXT("WulingRights"),TEXT("查看权益"),TEXT("收益来源 · 有效期限"),6,X,Y+524,CW,148);
+        Action(BodyCanvas,TEXT("Open_ResourceMap"),TEXT("查看资源地图"),X,Y+692,CW,88);
+        Action(BodyCanvas,TEXT("Open_ResourceRanking"),TEXT("查看资源贡献榜"),X,Y+796,CW,88,true);return;
     }
     if(ActiveTab.IsEmpty())ActiveTab=TEXT("全部");
     const TCHAR* Tabs[]={TEXT("全部"),TEXT("灵矿"),TEXT("灵草"),TEXT("阵法")};const float TabW=(BodyWidth-24)/4;
@@ -169,11 +232,20 @@ void UInkResourceContestPanel::BuildPanelContent()
 void UInkResourceContestPanel::HandlePanelAction(const FString& Id)
 {if(Id.StartsWith(TEXT("Filter_"))){ActiveTab=Id.Mid(7);RebuildPanel();}else Super::HandlePanelAction(Id);}
 
-FText UInkDetailPanel::PanelTitle()const{return FText::FromString(SelectedEntry.IsEmpty()?TEXT("活动详情"):SelectedEntry);}
+FText UInkDetailPanel::PanelTitle()const
+{
+    if(IsA<UInkDailyActivityDetailPanel>()||IsA<UInkTimedActivityDetailPanel>())
+    {
+        const auto Row=FindActivityTemplate(this,SelectedEntry,IsA<UInkTimedActivityDetailPanel>()?TEXT("limited"):TEXT("daily"));
+        if(Row)return FText::FromString(ActivityField(Row,TEXT("name")));
+        return FText::FromString(TEXT("活动详情 · 待同步"));
+    }
+    return FText::FromString(SelectedEntry.IsEmpty()?TEXT("活动详情"):SelectedEntry);
+}
 FString UInkDetailPanel::Description()const{return TEXT("静候仙缘，精彩即将开启。");}
 int32 UInkDetailPanel::SceneTile()const{return 7;}
-FString UInkDailyActivityDetailPanel::Description()const{return TEXT("日常历练，精进修行。\n活动条件与奖励将在开放时公布。");}
-FString UInkTimedActivityDetailPanel::Description()const{return TEXT("限时仙缘，静候开启。\n活动开放后可查看参与条件与奖励。");}
+FString UInkDailyActivityDetailPanel::Description()const{return TEXT("日常活动资料由服务端快照提供。");}
+FString UInkTimedActivityDetailPanel::Description()const{return TEXT("限时活动资料由服务端快照提供。");}
 FString UInkExpeditionDetailPanel::Description()const{return TEXT("行医问道，济世修心。\n委托开放后可编队出诊并查看行程收益。");}
 int32 UInkExpeditionDetailPanel::SceneTile()const{return 2;}
 FString UInkRegionDetailPanel::Description()const{return TEXT("山川蕴灵，入定修行。\n区域开放后可查看产出、修炼阶段与领取收益。");}
@@ -183,17 +255,96 @@ int32 UInkResourceDetailPanel::SceneTile()const{return 5;}
 void UInkDetailPanel::BuildPanelContent()
 {
     const bool Wide=!bPortraitLayout&&BodyWidth>=800;
-    const float ArtW=Wide?BodyWidth*.42f:BodyWidth,ArtH=Wide?300.f:200.f;
-    Scene(BodyCanvas,SceneTile(),0,0,ArtW,ArtH);
+    const bool IsActivityDetail=IsA<UInkDailyActivityDetailPanel>()||IsA<UInkTimedActivityDetailPanel>();
+    const float ArtW=IsActivityDetail?0.f:Wide?BodyWidth*.42f:BodyWidth;
+    const float ArtH=IsActivityDetail?0.f:Wide?300.f:200.f;
+    if(IsActivityDetail)
+    {
+        Surface(BodyCanvas,TEXT("ActivityDetailPaper"),ESurface::FeatureCard,0,0,BodyWidth,BodyHeight);
+        Surface(BodyCanvas,TEXT("ActivityDetailHeadingPaper"),ESurface::FeatureHeading,8,8,BodyWidth-16,56);
+    }
+    else Scene(BodyCanvas,SceneTile(),0,0,ArtW,ArtH);
     const float X=Wide?ArtW+28:0,Y=Wide?0:ArtH+24,W=BodyWidth-X;
+    if(IsActivityDetail)
+    {
+        Label(BodyCanvas,TEXT("DetailSectionHeading"),IsA<UInkTimedActivityDetailPanel>()?TEXT("限时活动资料"):TEXT("日常活动资料"),X+16,Y+12,W-32,44,32);
+        const auto* Service=WulingFrontendData::Service(this);
+        const auto Activities=WulingFrontendData::Activity(this);
+        const TCHAR* ExpectedCycle=IsA<UInkTimedActivityDetailPanel>()?TEXT("limited"):TEXT("daily");
+        const auto Row=FindActivityTemplate(this,SelectedEntry,ExpectedCycle);
+        const FString AuthorityStatus=ActivityAuthorityDetailState(Service,Activities,Row);
+        const float DetailY=Y+68;
+        Label(BodyCanvas,TEXT("DetailAuthorityStatus"),AuthorityStatus,X,DetailY,W,64,22);
+        if(!Row)
+        {
+            Label(BodyCanvas,TEXT("DetailActivityEmpty"),TEXT("暂无可查看的活动\n活动开放并同步后，可在此查看条件、进度与奖励。"),X+16,DetailY+80,W-32,120,25);
+            return;
+        }
+        if(Wide)
+        {
+            const float Half=(W-12)*.5f;
+            Label(BodyCanvas,TEXT("DetailActivityName"),TEXT("活动名称：")+ActivityField(Row,TEXT("name")),X,DetailY+56,Half,38,22);
+            Label(BodyCanvas,TEXT("DetailActivityCycle"),TEXT("周期：")+ActivityField(Row,TEXT("cycle"))+TEXT(" · ")+ActivityEnabled(Row),X+Half+12,DetailY+56,Half,38,19);
+            Label(BodyCanvas,TEXT("DetailActivityDescription"),TEXT("活动说明与目标待同步"),X,DetailY+94,W,36,20);
+            Label(BodyCanvas,TEXT("DetailActivityEligibility"),TEXT("参与条件待同步\n要求：")+ActivityField(Row,TEXT("profile_requirement")),X,DetailY+130,W,46,18);
+            Label(BodyCanvas,TEXT("DetailActivityProgress"),TEXT("活动进度待同步"),X,DetailY+178,W,36,20);
+            Label(BodyCanvas,TEXT("DetailActivityStart"),TEXT("开始时间：")+ActivityField(Row,TEXT("start_at")),X,DetailY+214,Half,40,18);
+            Label(BodyCanvas,TEXT("DetailActivityDeadline"),TEXT("截止时间：")+ActivityField(Row,TEXT("end_at")),X+Half+12,DetailY+214,Half,40,18);
+            Label(BodyCanvas,TEXT("DetailActivityRewardConfig"),TEXT("奖励信息：")+ActivityField(Row,TEXT("reward_budget")),X,DetailY+254,Half,46,17);
+            Label(BodyCanvas,TEXT("DetailActivityRewardStatus"),ActivityRewardStatus(Activities,Row),X+Half+12,DetailY+254,Half,46,17);
+        }
+        else
+        {
+            Label(BodyCanvas,TEXT("DetailActivityName"),TEXT("活动名称：")+ActivityField(Row,TEXT("name")),X,DetailY+76,W,48,27);
+            Label(BodyCanvas,TEXT("DetailActivityDescription"),TEXT("活动说明与目标待同步"),X,DetailY+128,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityCycle"),TEXT("周期：")+ActivityField(Row,TEXT("cycle"))+TEXT(" · 状态：")+ActivityEnabled(Row),X,DetailY+180,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityEligibility"),TEXT("参与条件待同步\n要求：")+ActivityField(Row,TEXT("profile_requirement")),X,DetailY+232,W,68,22);
+            Label(BodyCanvas,TEXT("DetailActivityProgress"),TEXT("活动进度待同步"),X,DetailY+304,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityStart"),TEXT("开始时间：")+ActivityField(Row,TEXT("start_at")),X,DetailY+356,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityDeadline"),TEXT("截止时间：")+ActivityField(Row,TEXT("end_at")),X,DetailY+408,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityRewardConfig"),TEXT("奖励信息：")+ActivityField(Row,TEXT("reward_budget")),X,DetailY+460,W,48,23);
+            Label(BodyCanvas,TEXT("DetailActivityRewardStatus"),ActivityRewardStatus(Activities,Row),X,DetailY+512,W,48,23);
+        }
+
+        const bool IsSignIn=WulingFrontendData::String(Row,TEXT("activity_id"))==TEXT("ACT_SIGN");
+        const float ButtonY=Wide?DetailY+342:DetailY+616;
+        if(IsSignIn)
+        {
+            bool Signed=false;
+            const bool HasSigned=Activities&&Activities->TryGetBoolField(TEXT("signed"),Signed);
+            const FString ServiceDay=WulingFrontendData::String(Activities,TEXT("day"));
+            RolloutSignInDay=ServiceDay;
+            const bool Connected=Service&&Service->IsEnabled()&&Service->IsConnected();
+            const bool Enabled=ActivityEnabled(Row)==TEXT("已启用");
+            const bool CanSubmit=Connected&&!Service->IsBusy()&&Enabled&&HasSigned&&!Signed&&!ServiceDay.IsEmpty();
+            const FString SignState=!HasSigned?TEXT("签到状态未提供，暂不能提交。"):
+                Signed?TEXT("服务已记录今日签到，不能重复提交。"):
+                ServiceDay.IsEmpty()?TEXT("服务日期未提供，暂不能提交签到。"):
+                !Connected?TEXT("签到服务未连接，暂不能提交。"):
+                Service->IsBusy()?TEXT("服务请求处理中，请稍后再试。"):
+                !Enabled?TEXT("authority 模板未启用，不能提交签到。"):
+                TEXT("可提交签到记录；是否成功以服务确认结果为准。");
+            Label(BodyCanvas,TEXT("DetailSignInStatus"),SignState,X,ButtonY-36,W,32,18);
+            Action(BodyCanvas,TEXT("SignInClaim"),Signed?TEXT("今日已签到"):TEXT("提交签到记录"),X,ButtonY,W,48,true)->SetIsEnabled(CanSubmit);
+        }
+        else
+        {
+            const FString UnsupportedReason=WulingFrontendData::String(Row,TEXT("activity_id"))==TEXT("ACT_VERSE")
+                ?TEXT("每日剑诀仅展示文本；当前没有参与或领奖端点。")
+                :TEXT("参与条件、进度和奖励尚未同步，暂不可操作。");
+            Label(BodyCanvas,TEXT("DetailActivityActionReason"),UnsupportedReason,X,ButtonY-36,W,32,18);
+            Action(BodyCanvas,TEXT("DetailUnsupportedAction"),TEXT("当前无可用业务操作"),X,ButtonY,W,48,true)->SetIsEnabled(false);
+        }
+        return;
+    }
     const FString Heading=IsA<UInkRegionDetailPanel>()?TEXT("区域条件"):IsA<UInkResourceDetailPanel>()?TEXT("参与资格"):IsA<UInkExpeditionDetailPanel>()?TEXT("委托与队伍"):IsA<UInkTimedActivityDetailPanel>()?TEXT("周期与阶段"):TEXT("目标与进度");
     Label(BodyCanvas,TEXT("DetailSectionHeading"),Heading,X,Y,W,56,40);
     Label(BodyCanvas,TEXT("DetailDescription"),Description(),X,Y+80,W,152,26);
     Label(BodyCanvas,TEXT("DetailRewardHeading"),TEXT("奖励来源 · 占位预览"),X,Y+260,W,48,28);
     const float Cell=FMath::Min(112.f,(W-32)/3);for(int32 I=0;I<3;++I)Reward(BodyCanvas,NAME_None,I,TEXT("占位"),X+I*(Cell+16),Y+328,Cell);
     Label(BodyCanvas,TEXT("DetailAvailability"),TEXT("条件和奖励尚未接入，当前页面不产生收益。"),X,Y+Cell+352,W,88,24);
-    Action(BodyCanvas,TEXT("Preview_Participate"),TEXT("参与条件待接入"),X,Y+Cell+464,W,88,true);
-    if(IsA<UInkTimedActivityDetailPanel>()&&SelectedEntry==TEXT("仙缘寻宝"))Action(BodyCanvas,TEXT("Open_Draw"),TEXT("查看演示奖池"),X,Y+Cell+572,W,88);
+    auto* Participate=Action(BodyCanvas,TEXT("Preview_Participate"),IsA<UInkExpeditionDetailPanel>()?TEXT("出诊暂未开放"):TEXT("参与条件待接入"),X,Y+Cell+464,W,88,true);
+    if(IsA<UInkExpeditionDetailPanel>())Participate->SetIsEnabled(false);
 }
 
 
@@ -203,9 +354,35 @@ void UInkResourceRankingPanel::BuildPanelContent()
     const float ArtW=Wide?BodyWidth*.42f:BodyWidth,ArtH=Wide?280.f:180.f;
     Scene(BodyCanvas,3,0,0,ArtW,ArtH);
     const float X=Wide?ArtW+28:0,Y=Wide?0:ArtH+24,W=BodyWidth-X;
-    Label(BodyCanvas,TEXT("ResourceRankingHeading"),TEXT("本期贡献记录"),X,Y,W,56,40);
-    Label(BodyCanvas,TEXT("ResourceRankingEmpty"),TEXT("本期争夺尚未开启\n暂无占领排行"),X,Y+88,W,128,30);
-    Label(BodyCanvas,TEXT("ResourceRankingRules"),TEXT("周期、三类得分与本人位置等待实际竞采结果。"),X,Y+252,W,120,26);
+    auto* Service=WulingFrontendData::Service(this);
+    const auto Snapshot=Service&&Service->IsEnabled()?Service->Snapshot():nullptr;
+    const auto Race=WulingFrontendData::Object(Snapshot,TEXT("race"));
+    const FString RaceStatus=WulingFrontendData::String(Race,TEXT("status"));
+    const FString ServiceStatus=Service?Service->GetStatus():TEXT("服务不可用");
+    FString State;
+    if(!Service||!Service->IsEnabled())
+        State=TEXT("资源竞采功能未启用\n贡献榜、周期和个人名次均不可用。服务开放后再查看。");
+    else if(!Service->IsConnected()||!Snapshot.IsValid())
+        State=TEXT("资源服务未连接\n贡献榜和结算记录尚未同步。恢复连接后可重新查看。");
+    else if(Race.IsValid())
+        State=FString::Printf(TEXT("已连接 · 当前竞采状态：%s\n当前服务仅提供单轮竞采快照，未提供资源周期榜的周期、分项、名次或个人位置。单轮分数不作为周期贡献榜。"),*RaceStatus);
+    else
+        State=TEXT("已连接 · 当前没有竞采快照\n当前服务未提供资源周期榜的周期、分项、名次或个人位置。不会用开服榜或礼物数据代替。");
+    Label(BodyCanvas,TEXT("ResourceRankingHeading"),TEXT("资源贡献榜"),X,Y,W,56,40);
+    Label(BodyCanvas,TEXT("ResourceRankingEmpty"),State,X,Y+88,W,192,26);
+    Label(BodyCanvas,TEXT("ResourceRankingRules"),TEXT("榜单周期、贡献分数与个人名次将在同步后显示。"),X,Y+300,W,112,24);
+    Action(BodyCanvas,TEXT("Open_WulingRace"),TEXT("查看当前竞采"),X,Y+436,W,88,true);
+    AuthorityStateKey=FString::Printf(TEXT("%d|%d|%d|%s|%d|%s"),Service&&Service->IsEnabled(),Service&&Service->IsConnected(),Service&&Service->IsBusy(),*ServiceStatus,WulingFrontendData::Number(Snapshot,TEXT("version")),*RaceStatus);
+}
+void UInkResourceRankingPanel::RefreshLiveData()
+{
+    if(!FrontendOwner||FrontendOwner->CurrentPage!=PageId)return;
+    auto* Service=WulingFrontendData::Service(this);
+    const auto Snapshot=Service&&Service->IsEnabled()?Service->Snapshot():nullptr;
+    const auto Race=WulingFrontendData::Object(Snapshot,TEXT("race"));
+    const FString ServiceStatus=Service?Service->GetStatus():TEXT("服务不可用");
+    const FString Key=FString::Printf(TEXT("%d|%d|%d|%s|%d|%s"),Service&&Service->IsEnabled(),Service&&Service->IsConnected(),Service&&Service->IsBusy(),*ServiceStatus,WulingFrontendData::Number(Snapshot,TEXT("version")),*WulingFrontendData::String(Race,TEXT("status")));
+    if(Key!=AuthorityStateKey)RebuildPanel();
 }
 void UInkResourceRewardsPanel::BuildPanelContent()
 {

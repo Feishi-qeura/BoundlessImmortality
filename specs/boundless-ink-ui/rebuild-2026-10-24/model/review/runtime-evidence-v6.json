@@ -1,0 +1,376 @@
+{
+  "captured_utc": "2026-10-24T06:42:00.318994+00:00",
+  "scope": "formal new records supersede missing-record status from prior cutoffs",
+  "source_epoch": {
+    "sha256": "a0d9b6e31b37536400f6075975dc37cf9e9ae9d894ed37d60b61920f9738f495",
+    "reported_files": 64,
+    "reported_ledger_records": 118,
+    "summary_and_PIE03_match": true,
+    "selected_source": [
+      {
+        "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+        "sha256": "4c0241fa3d07bab31b12aa6f89c11234c2a99c6851afc14b4148fa989efc3992",
+        "recorded_epoch_sha256": "4c0241fa3d07bab31b12aa6f89c11234c2a99c6851afc14b4148fa989efc3992",
+        "matches_build11_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+        "sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+        "recorded_epoch_sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+        "matches_build11_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.cpp",
+        "sha256": "247aef203a31c8224348cc799f50909f1489e103bb1bd3299084bcc18d081882",
+        "recorded_epoch_sha256": "247aef203a31c8224348cc799f50909f1489e103bb1bd3299084bcc18d081882",
+        "matches_build11_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildInventoryIdentityTests.cpp",
+        "sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900",
+        "recorded_epoch_sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900",
+        "matches_build11_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildCanonicalAndBusyTests.cpp",
+        "sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd",
+        "recorded_epoch_sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd",
+        "matches_build11_epoch": true
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+        "sha256": "07d327e08d9d524e9294e0e96bda49e1678c21e894208279c83db8376c1d3303",
+        "recorded_epoch_sha256": "66b935dfc0da33d52aa30dca157169217a10f8632bbda468d883cb5accc697ca",
+        "matches_build11_epoch": false
+      },
+      {
+        "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+        "sha256": "384209d3163f5e21a9c4e1b0c576e08d74647bf9a28305a1f65ba1dd5177c394",
+        "recorded_epoch_sha256": "b649cd2245c5ddbc94074640e7723c53b49c5f301d5e181241831adbc29c27ba",
+        "matches_build11_epoch": false
+      }
+    ]
+  },
+  "build11": {
+    "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/build-11-result.json",
+    "scope": "Actual build10 repairs PURE_VIRTUAL UObjectCDO and UImage header; full RootRank and core scroll/metrics",
+    "source_files": 64,
+    "started_at": "2026-10-24T14:23:45.5925575+08:00",
+    "exit_code": 0,
+    "source_ledger_records": 118,
+    "finished_at": "2026-10-24T14:24:18.6210354+08:00"
+  },
+  "default_PIE03": {
+    "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+    "finished": true,
+    "reported_passed": true,
+    "started_at": "2026-10-24T06:26:22.460600+00:00",
+    "finished_at": "2026-10-24T06:27:31.760883+00:00",
+    "engine_pid": 44200,
+    "checks": 159,
+    "captures": 15,
+    "failed_checks": [],
+    "page_observations": [
+      {
+        "page": "Main",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-main"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "HUD",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-hud"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "Saves",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-saves"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "Settings",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-settings"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "Character",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-character"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "Inventory",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-player-inventory"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      },
+      {
+        "page": "Leaderboard",
+        "route_shell_smoke_validated": true,
+        "runtime_class": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C",
+        "page_layout_versions": [
+          "newui-r1-rank-leaderboard"
+        ],
+        "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-03/report.json",
+        "evidence_sha256": "794c7b65561d746a716552eb64fa34756cbde2205c60ffde83b8aaee4640327e"
+      }
+    ],
+    "board_and_scroll_checks": [
+      {
+        "name": "last real physical slot arranged after scroll",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "last slot is inside actual scroll viewport",
+        "passed": true,
+        "actual": null
+      },
+      {
+        "name": "actual board category rank-damage-local",
+        "passed": true,
+        "actual": "Damage"
+      },
+      {
+        "name": "actual board scope rank-damage-local",
+        "passed": true,
+        "actual": "Local"
+      },
+      {
+        "name": "actual board category rank-cultivation-local",
+        "passed": true,
+        "actual": "CultivationSpeed"
+      },
+      {
+        "name": "actual board scope rank-cultivation-local",
+        "passed": true,
+        "actual": "Local"
+      },
+      {
+        "name": "actual board category rank-anchor-local",
+        "passed": true,
+        "actual": "Anchor"
+      },
+      {
+        "name": "actual board scope rank-anchor-local",
+        "passed": true,
+        "actual": "Local"
+      },
+      {
+        "name": "actual board category rank-anchor-global",
+        "passed": true,
+        "actual": "Anchor"
+      },
+      {
+        "name": "actual board scope rank-anchor-global",
+        "passed": true,
+        "actual": "Global"
+      }
+    ],
+    "source_report_strict_json_valid": true,
+    "geometry_acceptance": "provisional-V5-VERIFY-01",
+    "diagnostics": [
+      {
+        "tag": "main",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "saves",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "settings",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "hud",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "character",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "inventory",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "inventory-search",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "inventory-cleared",
+        "total_nonfinite": 0,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "inventory-landscape",
+        "total_nonfinite": 40,
+        "visible_nonfinite": 40,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "inventory-landscape-end",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 8,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "hud-landscape",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "rank-damage-local",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "rank-cultivation-local",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "rank-anchor-local",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      },
+      {
+        "tag": "rank-anchor-global",
+        "total_nonfinite": 8,
+        "visible_nonfinite": 0,
+        "arranged_visible_nonfinite": 0
+      }
+    ]
+  },
+  "formal_native_tests": {
+    "evidence": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/native-tests-01-report/index.json",
+    "evidence_sha256": "1c27f1d7aa5d67baa6461b4d24f9d93800dc0bc25eb12cfd34d6760d2719f389",
+    "process_result": {
+      "source_records": 118,
+      "started_at": "2026-10-24T14:25:14.4788319+08:00",
+      "build": "build-11-result.json",
+      "exit_code": 0,
+      "scope": "Native NewUI3 Editor-context regressions; NullRHI is not visual proof",
+      "finished_at": "2026-10-24T14:25:35.5852346+08:00",
+      "source_files": 64
+    },
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "tests": [
+      {
+        "name": "BoundlessImmortality.Frontend.NewUI.Assets.ExactCanonicalPaths",
+        "state": "Success",
+        "date_time_raw": "2026.10.24-06.25.33",
+        "duration": 0.016485199332237244,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "BoundlessImmortality.Frontend.NewUI.Inventory.BusyRetainsConfirmedPresentation",
+        "state": "Success",
+        "date_time_raw": "2026.10.24-06.25.33",
+        "duration": 0.016581498086452484,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "name": "BoundlessImmortality.Frontend.NewUI.Inventory.VisibleIdentitySurvivesProjectionChanges",
+        "state": "Success",
+        "date_time_raw": "2026.10.24-06.25.33",
+        "duration": 0.016416799277067184,
+        "errors": 0,
+        "warnings": 0
+      }
+    ],
+    "build_process_counts_match": true,
+    "rendering_proof": false,
+    "real_service_transport_Busy_proof": false
+  },
+  "qualification": {
+    "actual_default_entry_verified": true,
+    "route_shell_smoke_validated": 7,
+    "formal_native_tests_validated": 3,
+    "geometry_acceptance": "provisional",
+    "independent_expected_paint_or_culled_proof_present": false,
+    "real_service_Busy_validated": false,
+    "server_global_board_acceptance": false,
+    "visual_approval": false,
+    "device_or_package_acceptance": false,
+    "complete_44_screen_acceptance": false
+  },
+  "open_issue_selected_hashes": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py",
+      "sha256": "45cf11ec1ba37ee37ea26f56685f1aee16fab9a7bc785c67601a33642133ddd8",
+      "prior_sha256": "45cf11ec1ba37ee37ea26f56685f1aee16fab9a7bc785c67601a33642133ddd8",
+      "unchanged_since_v5": true
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "sha256": "4c0241fa3d07bab31b12aa6f89c11234c2a99c6851afc14b4148fa989efc3992",
+      "prior_sha256": "4c0241fa3d07bab31b12aa6f89c11234c2a99c6851afc14b4148fa989efc3992",
+      "unchanged_since_v5": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+      "sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+      "prior_sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+      "unchanged_since_v5": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.cpp",
+      "sha256": "247aef203a31c8224348cc799f50909f1489e103bb1bd3299084bcc18d081882",
+      "prior_sha256": "247aef203a31c8224348cc799f50909f1489e103bb1bd3299084bcc18d081882",
+      "unchanged_since_v5": true
+    }
+  ],
+  "old_issue_description_not_repeated": true
+}

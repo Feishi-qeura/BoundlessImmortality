@@ -1,0 +1,15 @@
+{
+  "request_id": "probe-c4a4d6e13b11418db96d9393f1e666a8",
+  "profile": "prototype_full",
+  "rule_version": "wuling-prototype-v1.4.0",
+  "expected_version": 0,
+  "command": "QuoteBreakthrough",
+  "args": {
+    "selection": [
+      {
+        "item_id": "MAT_BR04_C01_G1",
+        "count": 1
+      }
+    ]
+  }
+}

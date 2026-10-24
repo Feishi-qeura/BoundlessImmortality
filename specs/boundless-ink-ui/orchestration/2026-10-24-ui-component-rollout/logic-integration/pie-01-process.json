@@ -1,0 +1,8 @@
+{
+  "service_pid": 38312,
+  "started_at": "2026-10-24T11:46:51+08:00",
+  "pid": 16044,
+  "owner": "logic-integration",
+  "shutdown": "script editor_end_play then quit_editor",
+  "mode": "rendered isolated-userdir PIE"
+}

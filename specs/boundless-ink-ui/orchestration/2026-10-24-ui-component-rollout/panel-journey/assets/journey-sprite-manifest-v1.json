@@ -1,0 +1,426 @@
+{
+  "source": "inputs/journey-state-sprites-v1-source.png",
+  "source_sha256": "1f45ab9bd1cc549304fc8283b8d00ba042b60e5fb54a547fdda5b0b04567b7f7",
+  "alpha_threshold_for_connected_components_and_output": 8,
+  "padding_px": 8,
+  "items": [
+    {
+      "component_id": "world-node-explored",
+      "family": "world-map",
+      "state": "explored",
+      "source_bounds_xyxy": [
+        258,
+        16,
+        584,
+        360
+      ],
+      "export_bounds_xyxy": [
+        250,
+        8,
+        592,
+        368
+      ],
+      "dimensions": [
+        342,
+        360
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 64653,
+      "partially_transparent_pixels": 58467,
+      "sha256": "15d024b2f2f7aceb26f27d23021c60b3b72618f45976414399606bac5342f202",
+      "path": "assets/sprites/world-node-explored-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "world-node-available",
+      "family": "world-map",
+      "state": "available",
+      "source_bounds_xyxy": [
+        606,
+        17,
+        938,
+        360
+      ],
+      "export_bounds_xyxy": [
+        598,
+        9,
+        946,
+        368
+      ],
+      "dimensions": [
+        348,
+        359
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 70056,
+      "partially_transparent_pixels": 54876,
+      "sha256": "080a6d45502f62e050fc1f8b07f9d14e32df3a37fc27de207f998ddc059a3268",
+      "path": "assets/sprites/world-node-available-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "world-node-locked",
+      "family": "world-map",
+      "state": "locked",
+      "source_bounds_xyxy": [
+        970,
+        17,
+        1296,
+        359
+      ],
+      "export_bounds_xyxy": [
+        962,
+        9,
+        1304,
+        367
+      ],
+      "dimensions": [
+        342,
+        358
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 62517,
+      "partially_transparent_pixels": 59919,
+      "sha256": "eef23ab7ce887ffec7daf10b3080b986a6afce70cd580b30b0fda628e2cb3b2d",
+      "path": "assets/sprites/world-node-locked-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "resource-pin-free",
+      "family": "resources-map",
+      "state": "free",
+      "source_bounds_xyxy": [
+        111,
+        351,
+        400,
+        676
+      ],
+      "export_bounds_xyxy": [
+        103,
+        343,
+        408,
+        684
+      ],
+      "dimensions": [
+        305,
+        341
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 60429,
+      "partially_transparent_pixels": 43576,
+      "sha256": "66e911e68cbdc1fcf88da292fc7b2fb9a6da201e3e80c96d174b8c366ff4a740",
+      "path": "assets/sprites/resource-pin-free-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "resource-pin-temporary",
+      "family": "resources-map",
+      "state": "temporary",
+      "source_bounds_xyxy": [
+        445,
+        360,
+        746,
+        676
+      ],
+      "export_bounds_xyxy": [
+        437,
+        352,
+        754,
+        684
+      ],
+      "dimensions": [
+        317,
+        332
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        253
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 56116,
+      "partially_transparent_pixels": 49128,
+      "sha256": "d35b12f1c0ef7f9a98d5369ba61091a820db50a97364dcf62d110ad27c7d0602",
+      "path": "assets/sprites/resource-pin-temporary-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "resource-pin-contest",
+      "family": "resources-map",
+      "state": "contest-open",
+      "source_bounds_xyxy": [
+        794,
+        353,
+        1115,
+        679
+      ],
+      "export_bounds_xyxy": [
+        786,
+        345,
+        1123,
+        687
+      ],
+      "dimensions": [
+        337,
+        342
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 59242,
+      "partially_transparent_pixels": 56012,
+      "sha256": "36072b49c2728b3437c56670b788444bf2e095b49d0e331d06912eedf5d25b28",
+      "path": "assets/sprites/resource-pin-contest-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "resource-pin-expired",
+      "family": "resources-map",
+      "state": "expired",
+      "source_bounds_xyxy": [
+        1156,
+        392,
+        1459,
+        676
+      ],
+      "export_bounds_xyxy": [
+        1148,
+        384,
+        1467,
+        684
+      ],
+      "dimensions": [
+        319,
+        300
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 63523,
+      "partially_transparent_pixels": 32177,
+      "sha256": "758d2c1e7e48dd0e8d73b72f7035a0ecd277e6614c50caf38410e3832d89ebfa",
+      "path": "assets/sprites/resource-pin-expired-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "fortune-great",
+      "family": "daily-sign-in",
+      "state": "great",
+      "source_bounds_xyxy": [
+        59,
+        680,
+        413,
+        1002
+      ],
+      "export_bounds_xyxy": [
+        51,
+        672,
+        421,
+        1010
+      ],
+      "dimensions": [
+        370,
+        338
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 71863,
+      "partially_transparent_pixels": 53197,
+      "sha256": "d93e64312dd56d53d1648c453a568903017d592481693aa35955adc985c5584c",
+      "path": "assets/sprites/fortune-great-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "fortune-good",
+      "family": "daily-sign-in",
+      "state": "good",
+      "source_bounds_xyxy": [
+        464,
+        717,
+        755,
+        1003
+      ],
+      "export_bounds_xyxy": [
+        456,
+        709,
+        763,
+        1011
+      ],
+      "dimensions": [
+        307,
+        302
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        253
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 48567,
+      "partially_transparent_pixels": 44147,
+      "sha256": "ef234c07f2f21c8746eba82b22387370270026309694a49ed64761d8275b5ed0",
+      "path": "assets/sprites/fortune-good-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "fortune-neutral",
+      "family": "daily-sign-in",
+      "state": "neutral",
+      "source_bounds_xyxy": [
+        786,
+        714,
+        1112,
+        1003
+      ],
+      "export_bounds_xyxy": [
+        778,
+        706,
+        1120,
+        1011
+      ],
+      "dimensions": [
+        342,
+        305
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 57559,
+      "partially_transparent_pixels": 46751,
+      "sha256": "0b0fea339e2582ee0dfaaea7c9b31b3c8e94e58ecae1c3f1d1a1fa9f8fd633b9",
+      "path": "assets/sprites/fortune-neutral-v1.png",
+      "approved": false
+    },
+    {
+      "component_id": "fortune-bad",
+      "family": "daily-sign-in",
+      "state": "bad",
+      "source_bounds_xyxy": [
+        1155,
+        697,
+        1479,
+        1007
+      ],
+      "export_bounds_xyxy": [
+        1147,
+        689,
+        1487,
+        1015
+      ],
+      "dimensions": [
+        340,
+        326
+      ],
+      "mode": "RGBA",
+      "alpha_threshold": 8,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fully_transparent_pixels": 58601,
+      "partially_transparent_pixels": 52239,
+      "sha256": "f795c53dbabd7009ff1ebf7ddb0803a92e1081c33191984c38868d26556b4508",
+      "path": "assets/sprites/fortune-bad-v1.png",
+      "approved": false
+    }
+  ]
+}

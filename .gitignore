@@ -3,6 +3,7 @@
 /DerivedDataCache/
 /Intermediate/
 /Saved/
+**/Saved/
 **/Binaries/
 **/DerivedDataCache/
 **/Intermediate/
@@ -55,3 +56,21 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local UI validation sessions, databases, and duplicate review snapshots
+/specs/boundless-ink-ui/**/engine-user*/
+/specs/boundless-ink-ui/**/engine-qa-service*/
+/specs/boundless-ink-ui/**/engine-backup/
+/specs/boundless-ink-ui/**/model/review/*snapshot*/
+/specs/boundless-ink-ui/**/logic-integration/actual-ui-entry-*/
+/specs/boundless-ink-ui/**/logic-integration/default-root-pie-*/
+/specs/boundless-ink-ui/**/logic-integration/service-pie-*/
+/specs/boundless-ink-ui/**/logic-integration/stage-pie-*/
+/specs/boundless-ink-ui/**/logic-integration/native-tests-*-report/
+/specs/boundless-ink-ui/**/logic-integration/service-data-*/
+/specs/boundless-ink-ui/**/logic-integration/avatar-tls-fixture-*/
+/specs/boundless-ink-ui/**/logic-integration/canonical-source-stage/
+/specs/boundless-ink-ui/**/logic-integration/remaining-source-stage/
+/specs/boundless-ink-ui/**/*.sqlite3*
+/specs/boundless-ink-ui/**/*.jsonl
+/specs/boundless-ink-ui/**/*.bak

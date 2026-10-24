@@ -1,0 +1,20 @@
+{
+  "scope": "four native new UI tests build19",
+  "started_at": "2026-10-24T15:41:55.1783963+08:00",
+  "pid": 29488,
+  "arguments": [
+    "D:\\demo\\BoundlessImmortality\\BoundlessImmortality.uproject",
+    "-NullRHI",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-NoSound",
+    "-unattended",
+    "-UserDir=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/engine-user-native-tests04",
+    "-SaveToUserDir",
+    "-abslog=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-04.log",
+    "-ReportOutputPath=D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration/native-tests-04-report",
+    "\"-ExecCmds=Automation RunTests BoundlessImmortality.Frontend.NewUI\"",
+    "\"-TestExit=Automation Test Queue Empty\""
+  ]
+}

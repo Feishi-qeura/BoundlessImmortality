@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "isolated Saved directory",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "begin actual default PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual new default class",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "resize exact portrait9:16",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate action StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "connected actual stage actor view",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual default router BreakthroughPrepare",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native catalog settled",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real authoritative band name provided",
+      "passed": true,
+      "actual": {
+        "band_id": "QB1",
+        "live_snapshot_factor": 1,
+        "name": "凡品",
+        "q_max": 39,
+        "q_min": 0,
+        "source_indie_multiplier": 2.5
+      }
+    },
+    {
+      "name": "actual current default root shows provided band object name",
+      "passed": true,
+      "actual": "凡品"
+    },
+    {
+      "name": "default root remains current new WBP",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual rendered current-band-object-display",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [
+    "current-band-object-display"
+  ],
+  "finished": true,
+  "scope": "Current build26 actual authoritative band-object display. Session/sync and read-only catalog only; no new prepare/rework business mutation.",
+  "engine_pid": 31964,
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "started_at": "2026-10-24T09:25:13.964213+00:00",
+  "declared_stage_actor": {
+    "app": "NewUIStageAcceptance20261024",
+    "room": "newui-stage-rework-room",
+    "user": "newui-stage-rework",
+    "stage": {
+      "stage_id": "BR01",
+      "name": "练气九阶→筑基初期",
+      "from_realm_index": 8,
+      "to_realm_index": 9,
+      "min_major": 0,
+      "region": "青云山",
+      "subarea": "凝脉谷",
+      "core_species": "MAT_BR01_C01",
+      "core_count": 1,
+      "guard_required": false,
+      "guard_max_count": 3,
+      "essence_max_count": 3,
+      "treasure_max_count": 1,
+      "guard_species_count": 5,
+      "essence_species_count": 5,
+      "treasure_species_count": 5,
+      "old_major_break_material_cost": 20,
+      "old_major_stone_cost": 60,
+      "major_stone_at_commit": 0,
+      "viewer_material_cost": 0,
+      "tribulation": false
+    },
+    "items": {
+      "MAT_BR01_C01_G1": 2,
+      "MAT_BR01_C01_G2": 2
+    }
+  },
+  "passed": true,
+  "current_step": "band actual current build26 rendered",
+  "dirty_packages_after_pie": [],
+  "finished_at": "2026-10-24T09:25:33.241353+00:00"
+}

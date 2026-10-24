@@ -1,0 +1,49 @@
+{
+  "source_manifest": "revisions/2026-10-23-parallel-maps-signin/asset-manifest-v2-candidate.yaml",
+  "items": [
+    {
+      "path": "assets/source-pages/world-map-v3-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "904000ae83881c0402679b5d81975b5da6625f7f1e8381373fb075d6d7ce4f47",
+      "approved": false
+    },
+    {
+      "path": "assets/source-pages/resources-map-v2-candidate.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "5ff704edbd20c7039728b121fda0c0fa5910b2c8bb0265e65b41625d69cfedbd",
+      "approved": false
+    },
+    {
+      "path": "assets/source-pages/daily-sign-in-v2-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "7a4a805c7f056ddf10004c867f5ab4bfc31f6a266f6b3aaa2c99ec90ff8abf4f",
+      "approved": false
+    },
+    {
+      "path": "assets/source-pages/monthly-sign-in-v2-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "233230b8908123c65ae81852a78ac6d8276cd4340ea76b6e922d949e24c211dc",
+      "approved": false
+    }
+  ]
+}

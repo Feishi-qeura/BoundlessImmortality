@@ -1,0 +1,71 @@
+{
+  "team_id": "logic-core",
+  "updated_utc": "2026-10-24T05:45:29.403677+00:00",
+  "phase": "bounded-v4-review-handoff-ready",
+  "report": "bounded-v4-review.md",
+  "matrix": "resolved-open-matrix-v4.json",
+  "mapping": "stage-to-runtime-v4.csv",
+  "sources": "source-delta-v4.json",
+  "coverage": {
+    "screens": 44,
+    "stage_symbol_present": 44,
+    "no_ready_stage": 0,
+    "production_mount": {
+      "new-composition-connected-in-source": 6,
+      "new-root-placeholder": 1,
+      "no-new-production-component-observed": 37
+    },
+    "runtime_verified": 0,
+    "player_entry_verified": 0,
+    "route_less_offer_is_extra_screen": false
+  },
+  "new_finding_groups": 6,
+  "new_matrix_rows": 7,
+  "priority_dispatch": [
+    "V4-API-01: HorizontalBoxSlot definition include in both new Activities translation units",
+    "V4-ACT-01: remove nonexistent offline SourceId permission"
+  ],
+  "ready_patch_check": "Player-v4 repository-root git apply --check succeeded; patch not applied",
+  "current_PC3_01": "satisfied at current exact frozen hash; prior text finding stale",
+  "source_epoch": "unchanged against v3; no repeated full production review",
+  "owner_hash_checks": [
+    {
+      "owner": "Journey-v4",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "matches_reviewed": true
+    },
+    {
+      "owner": "Journey-v4",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v4/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "matches_reviewed": true
+    },
+    {
+      "owner": "Economy-03",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.h",
+      "matches_reviewed": true
+    },
+    {
+      "owner": "Economy-03",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03/staged-source/RebuildEconomyWidgets.cpp",
+      "matches_reviewed": true
+    },
+    {
+      "owner": "Economy-03",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v3/staged-source/RebuildActivityWidgets.h",
+      "matches_reviewed": true
+    },
+    {
+      "owner": "Economy-03",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v3/staged-source/RebuildActivityWidgets.cpp",
+      "matches_reviewed": true
+    }
+  ],
+  "changes_after_capture": [],
+  "engine_started": false,
+  "build_run": false,
+  "service_tests_run": false,
+  "runtime_verified": false,
+  "player_entry_verified": false,
+  "production_edits_by_this_worker": false,
+  "visual_approval": false
+}

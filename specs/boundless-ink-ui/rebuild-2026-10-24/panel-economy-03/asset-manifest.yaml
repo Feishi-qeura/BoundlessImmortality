@@ -1,0 +1,45 @@
+schema_version: 1
+slice: panel-economy-03
+approval_state: approved:false
+runtime_root: /Game/newUI/Economy
+production_source_owner: logic-integration
+assets:
+  - id: economy-shop-v1
+    kind: page-concept
+    file: assets/pages/economy-shop-v1.png
+    intended_object_path: /Game/newUI/Economy/Concepts/T_EconomyShop_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: ca2ff63343b03796dfa99ee6e02d704ecab45bf57a17a2916fbd3d681ed657b3
+    prompt: prompts/pages/shop-v1.md
+  - id: economy-consignment-v1
+    kind: page-concept
+    file: assets/pages/economy-consignment-v1.png
+    intended_object_path: /Game/newUI/Economy/Concepts/T_EconomyConsignment_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 7cf729d03c74082c4ab8f432cb94a86ce533d21d0a7d31cbd11c73f4f24e5a97
+    prompt: prompts/pages/consignment-v1.md
+  - id: economy-orders-v1
+    kind: page-concept
+    file: assets/pages/economy-orders-v1.png
+    intended_object_path: /Game/newUI/Economy/Concepts/T_EconomyOrders_v1
+    runtime_texture: false
+    import_verified: false
+    approval: approved:false
+    fit: full
+    dimensions_px: [941, 1672]
+    mode: RGB
+    alpha: absent
+    sha256: 93dac5318770a3f83836d12a67c49bb591e0215cc8f9e997c827c2e3b04e5828
+    prompt: prompts/pages/orders-v1.md

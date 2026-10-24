@@ -1,0 +1,34 @@
+[
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+    "sha256": "F396C4F91173F1211A7A9E9A35D96DA21654E252E535A469DA973206FCC8882F"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.h",
+    "sha256": "81BA285DBF703E2130FB05F3E235B005C5A7087CE261B278A9EA4A948EE7878B"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+    "sha256": "47DCB72A43B716D609721E2EA843BF03A9724373EF1E439094917D2ACD8019F8"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInShell.cpp",
+    "sha256": "1DAC4EB4CD621566B756D73BF53F0CB79EDD5A95EF7BB6098FEBB0F1909009BD"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkSignInSample.cpp",
+    "sha256": "663A42C254E5A7AC0C63EBA889F37E3B38498D0E2C202EB2B53DF50592D0C383"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/InkRewardsPanels.cpp",
+    "sha256": "EF23DEECE3BBF2D4326297B69962376BA63E7F714A325CBA146A4E3AD6163C01"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+    "sha256": "060194682ED7D85E39F39E916D78ACB6B02D07E3775AF2F08901D98813D215D0"
+  },
+  {
+    "path": "Source/BoundlessImmortality/Frontend/UI/InkLaunchEventPanel.cpp",
+    "sha256": "4628FE6C52AFADF1CAF5676E70ADF703E567BA3CE4C142169162F7FCE56EF41B"
+  }
+]

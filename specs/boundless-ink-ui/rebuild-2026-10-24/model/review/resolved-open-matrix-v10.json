@@ -1,0 +1,59 @@
+{
+  "previous": "resolved-open-matrix-v9.json",
+  "findings": [
+    {
+      "id": "AVATAR",
+      "state": "scoped-runtime-recovery-proven",
+      "proof": "service10 pass14; actual503/200 gap72.265s decoded visible brush",
+      "remaining": "No production platform identity/certificate acceptance claim."
+    },
+    {
+      "id": "V7-CONFIRM-01",
+      "state": "source-native-and-actual-realm-change-negative-qualified",
+      "proof": "8to9 stale confirm no Slate hit; current disabled; no extra Prepare; stage receipt/audit correspondence",
+      "remaining": "Do not extend this case to every actor/single-field concurrent runtime variation or current26 whole UI."
+    },
+    {
+      "id": "STAGE-SERVICE",
+      "state": "actual-cancel-commit-rework-and-persistence-qualified",
+      "proof": "8 stage requests each durable success/hash/unique audit; latest persisted audit7/7",
+      "remaining": "Separate declared unearned namespace; commit attempt later failed and remains false."
+    },
+    {
+      "id": "APPEARANCE-SHARED",
+      "state": "actual-visible-reuse-proven",
+      "proof": "connected service03 Appearance 9visible attribute atlas images",
+      "remaining": "Current26 final13/resource whole-suite reconciliation separate."
+    },
+    {
+      "id": "MAP-PINS-26",
+      "state": "observed-open-P1",
+      "proof": "late attempt10 false222checks16captures, positioned authority entries8 versus native pin buttons0",
+      "remaining": "Unique integration verifies projection to owner VM/native pins and records new actual attempt; x/y Source patch alone insufficient."
+    },
+    {
+      "id": "MERCHANT-NEGATIVES",
+      "state": "runtime-negative-evidence-pending",
+      "proof": "Positive Purchase/Buy/Create/Cancel already durable qualified; selected Source guards retained",
+      "remaining": "Stable same-subject refresh plus removal/ID/version/price stale confirmation zero-write cases."
+    },
+    {
+      "id": "CURRENT26-FULL44",
+      "state": "open",
+      "proof": "build26 exit0 88/224; attempts07-10 failed retained; native05 is build24 broad49",
+      "remaining": "Current26 Character scroll stability, full44 normal Back, portrait+landscape strictgeometry, final13brush and applicable native proof; old tests do not cover new Source."
+    },
+    {
+      "id": "OWNED-SHUTDOWN",
+      "state": "partial-exits-proven-services-still-live",
+      "proof": "exact owned PID/log evidence; authority40168 and avatar28596 remain Python",
+      "remaining": "Unique owner normal service shutdown evidence; reviewer never controls processes."
+    },
+    {
+      "id": "VISUAL",
+      "state": "pending-user",
+      "proof": "no images viewed for approval by reviewer",
+      "remaining": "Final user visual/device acceptance separate from static/runtime fixtures."
+    }
+  ]
+}

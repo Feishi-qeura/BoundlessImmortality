@@ -3,6 +3,7 @@
 #include "InkWulingToolsPanel.generated.h"
 class FJsonObject;
 class UScrollBox;
+class UInkCoreMaterialBinding;
 
 /** Functional child pages reuse the current shell and styles. Authority owns every write. */
 UCLASS()
@@ -16,6 +17,8 @@ protected:
     virtual void BuildPanelContent()override;
     virtual void HandlePanelAction(const FString& Action)override;
 private:
+    UPROPERTY(Transient) TObjectPtr<UInkCoreMaterialBinding> RolloutMaterialBinding;
+    UFUNCTION() void HandleRolloutMaterialFeedback(const FString& Message);
     int32 Offset=0;
     bool bOwnedOnly=false,bBuilding=false;
     bool bRework=false;

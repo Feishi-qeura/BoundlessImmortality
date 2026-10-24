@@ -1,0 +1,13 @@
+FAIL: connected active service accepts action
+FAIL: offline stale payload cannot become data
+FAIL: no response is loading, not empty
+FAIL: confirmed empty response is empty
+FAIL: confirmed nonempty response is data
+FAIL: malformed response is error
+FAIL: pending request preserves confirmed data
+FAIL: integer boundary counts allowed
+FAIL: fully attested matching quote accepted
+FAIL: cancel before server trial time
+FAIL: use actual owned quantity
+FAIL: equipped item can unequip
+41 checks, 12 failed

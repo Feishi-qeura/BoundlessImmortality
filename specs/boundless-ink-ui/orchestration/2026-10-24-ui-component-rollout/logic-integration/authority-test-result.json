@@ -1,0 +1,8 @@
+{
+  "tests_run": 18,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "scope": "real Python authority; not C++ adapter or UE runtime",
+  "fixture_override": "temporary directory allocation only; per-test UUID under owned directory"
+}

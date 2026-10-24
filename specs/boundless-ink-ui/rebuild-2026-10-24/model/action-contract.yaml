@@ -1,0 +1,1284 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+kind: mapping-to-existing-interfaces-not-new-production-functions
+shared_rules:
+- Only transport subsystem creates/persists request_id; UI retains request identity
+  and subject across refresh.
+- Confirm binds exact actor/subject/quantity/cost/version/service day; re-evaluate
+  at click.
+- Unknown display field cannot block unrelated or native-valid requests; unknown actual
+  action entitlement never defaults allowed.
+- Viewer AssistTribulation remains verified live-comment actor/event path; no anchor
+  self-assist button.
+- Root alone owns receipt dequeue; page outcome back has no grant/claim side effect.
+actions:
+- id: start-game
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(StartGame)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: continue-game
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(ContinueGame)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: quit-game
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(RequestQuit)
+  parameters: []
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: toggle-cultivation
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(ToggleCultivation)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: toggle-reduced-motion
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(ToggleReducedMotion)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: apply-settings
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(ApplySettings)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: open-saves
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Saves
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-settings
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Settings
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-character
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route CharacterProfile
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-inventory
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Inventory
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-leaderboard
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Leaderboard
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-journey
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Extensions
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-equipment
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route EquipmentFabao
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-methods
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route CultivationMethods
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-breakthrough
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route BreakthroughPrepare
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-appearance
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route CharacterAppearance
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-gift-rules
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route GiftRules
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-launch
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route LaunchEvent
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-launch-rank
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route LaunchRank
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-world
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route WorldCultivation
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-resources
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route ResourceContest
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: open-wuling
+  kind: navigation
+  handler_ref: New Root presentation hook -> existing semantic route Wuling
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Root/host exact C++ signature is integration-owned; never dispatch by a made-up
+    function name.
+- id: back
+  kind: navigation
+  handler_ref: Existing feature stack / frontend Back
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Restore same parent entity/filter/tab/scroll/focus; result pages cannot alias
+    generic live page.
+- id: board-category
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(RankDamage / RankCultivation / RankAnchor)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Retain actual unsupported/custom values; no forced default or inferred rank.
+- id: board-scope
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(RankLocal / RankGlobal)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Retain actual unsupported/custom values; no forced default or inferred rank.
+- id: set-quality
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(QualityLow / QualityMedium / QualityHigh)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Retain actual unsupported/custom values; no forced default or inferred rank.
+- id: set-frame-limit
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(Frame30 / Frame60)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Retain actual unsupported/custom values; no forced default or inferred rank.
+- id: save-slot
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(SaveSlot_i)
+  parameters:
+  - slot_index
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Existing overwrite/delete confirmation; index validation; actual SaveSubsystem
+    LastError. Save confirmation only for overwrite.
+- id: load-slot
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(LoadSlot_i)
+  parameters:
+  - slot_index
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Existing overwrite/delete confirmation; index validation; actual SaveSubsystem
+    LastError. Save confirmation only for overwrite.
+- id: delete-slot
+  kind: existing-local-action
+  handler_ref: UInkFrontendWidget::TriggerAction(DeleteSlot_i)
+  parameters:
+  - slot_index
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Existing overwrite/delete confirmation; index validation; actual SaveSubsystem
+    LastError. Save confirmation only for overwrite.
+- id: inventory-use
+  kind: authority-command
+  handler_ref: InkCore::InventoryAction(enum=Use)
+  parameters:
+  - EntryId
+  - quantity
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Use current stable instance state; remote projection read-only; validate reserved/expiry/ownership,
+    no clamp-down or optimistic mutation. Legacy local mode delegates to real model
+    only.
+- id: inventory-equip
+  kind: authority-command
+  handler_ref: InkCore::InventoryAction(enum=Equip)
+  parameters:
+  - EntryId
+  - quantity
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Use current stable instance state; remote projection read-only; validate reserved/expiry/ownership,
+    no clamp-down or optimistic mutation. Legacy local mode delegates to real model
+    only.
+- id: inventory-unequip
+  kind: authority-command
+  handler_ref: InkCore::InventoryAction(enum=Unequip)
+  parameters:
+  - EntryId
+  - quantity
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Use current stable instance state; remote projection read-only; validate reserved/expiry/ownership,
+    no clamp-down or optimistic mutation. Legacy local mode delegates to real model
+    only.
+- id: inventory-recycle
+  kind: authority-command
+  handler_ref: InkCore::InventoryAction(enum=Sell)
+  parameters:
+  - EntryId
+  - quantity
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Use current stable instance state; remote projection read-only; validate reserved/expiry/ownership,
+    no clamp-down or optimistic mutation. Legacy local mode delegates to real model
+    only.
+- id: inventory-select
+  kind: local-ui-state
+  handler_ref: Host stable EntryId selection
+  parameters:
+  - EntryId
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Never use visible index/name as identity.
+- id: guild-member-select
+  kind: local-ui-state
+  handler_ref: Existing RecordRow_i -> Rows -> SelectedMember
+  parameters:
+  - actual user id
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Preserve full management selection/mutation chain; page does not grant permissions.
+- id: select-destination
+  kind: local-ui-state
+  handler_ref: Host selected destination state
+  parameters:
+  - exact EntryId
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Map marker art never creates service geography.
+- id: month-navigate
+  kind: local-ui-state
+  handler_ref: Existing month view navigation
+  parameters:
+  - month_offset
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Browsing another month cannot sign/claim for that month.
+- id: inspect-chest
+  kind: local-ui-state
+  handler_ref: Host exact milestone detail
+  parameters:
+  - milestone
+  - captured service day
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Displaying reward detail is not claiming.
+- id: activity-cycle
+  kind: navigation
+  handler_ref: Host retained category state
+  parameters:
+  - daily/limited/permanent/launch
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Cycle names map to actual provider templates; retain parent list.
+- id: open-activity-detail
+  kind: navigation
+  handler_ref: Existing DailyActivityDetail/TimedActivityDetail + SelectedEntry
+  parameters:
+  - activity_id
+  - cycle
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: ''
+- id: preview-appearance
+  kind: local-preview
+  handler_ref: Existing Frame_ / Bar_ preview actions
+  parameters:
+  - actual selected style
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  preserves: []
+  result: existing handler result
+  rule: Preview-only, no server entitlement or persisted equip claim.
+- id: sign-in
+  kind: authority-command
+  handler_ref: InkJourneyAdapter::Capture/Evaluate/Submit(EAction::SignIn)
+  parameters:
+  - ExpectedDay
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Capture fresh context at click. Sign-in binds the displayed service date.
+    Resource submit is QueueRace, not immediate lease.
+- id: claim-monthly-chest
+  kind: authority-command
+  handler_ref: InkJourneyAdapter::Capture/Evaluate/Submit(EAction::MonthlyChest)
+  parameters:
+  - ExpectedDay
+  - Milestone
+  - confirmed
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Capture fresh context at click. Sign-in binds the displayed service date.
+    Resource submit is QueueRace, not immediate lease.
+- id: world-travel
+  kind: authority-command
+  handler_ref: InkJourneyAdapter::Capture/Evaluate/Submit(EAction::WorldTravel)
+  parameters:
+  - exact EntryId
+  - confirmed
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Capture fresh context at click. Sign-in binds the displayed service date.
+    Resource submit is QueueRace, not immediate lease.
+- id: resource-travel
+  kind: authority-command
+  handler_ref: InkJourneyAdapter::Capture/Evaluate/Submit(EAction::ResourceTravel)
+  parameters:
+  - exact EntryId
+  - confirmed
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Capture fresh context at click. Sign-in binds the displayed service date.
+    Resource submit is QueueRace, not immediate lease.
+- id: start-launch
+  kind: authority-command
+  handler_ref: InkJourneyAdapter::Capture/Evaluate/Submit(EAction::StartLaunch)
+  parameters:
+  - confirmed
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Capture fresh context at click. Sign-in binds the displayed service date.
+    Resource submit is QueueRace, not immediate lease.
+- id: quote-breakthrough
+  kind: authority-command
+  handler_ref: InkCore::QuoteBreakthrough
+  parameters:
+  - selection item_id/count
+  - rework mode
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Match native stage+echo and actual mode. Missing display-only fields never
+    veto. Server re-quotes and checks growth/safety/inventory/activity. Quote success
+    is not permission.
+- id: prepare-breakthrough
+  kind: authority-command
+  handler_ref: InkCore::PrepareBreakthrough
+  parameters:
+  - selection item_id/count
+  - rework mode
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Match native stage+echo and actual mode. Missing display-only fields never
+    veto. Server re-quotes and checks growth/safety/inventory/activity. Quote success
+    is not permission.
+- id: rework-quality
+  kind: authority-command
+  handler_ref: InkCore::PrepareBreakthrough(Rework=true)
+  parameters:
+  - selection item_id/count
+  - rework mode
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Match native stage+echo and actual mode. Missing display-only fields never
+    veto. Server re-quotes and checks growth/safety/inventory/activity. Quote success
+    is not permission.
+- id: cancel-breakthrough
+  kind: authority-command
+  handler_ref: InkCore::CancelOrReconcile
+  parameters:
+  - actual attempt id
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Cancel only Prepare before server trial_start; reconcile only actual Reconcile
+    id; never create a roll/helper result.
+- id: reconcile-breakthrough
+  kind: authority-command
+  handler_ref: InkCore::CancelOrReconcile
+  parameters:
+  - actual attempt id
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Cancel only Prepare before server trial_start; reconcile only actual Reconcile
+    id; never create a roll/helper result.
+- id: create-guild
+  kind: authority-command
+  handler_ref: InkCore::CreateGuild
+  parameters:
+  - name
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Anchor role and known absent guild; real service validates name/rules.
+- id: remove-member
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(RemoveMember)
+  parameters:
+  - user_id
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: rename-guild
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(RenameGuild)
+  parameters:
+  - name
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: dissolve-guild
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(DissolveGuild)
+  parameters:
+  - confirmed
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: cancel-race-queue
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(CancelRaceQueue)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: race-action
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(SubmitRaceAction)
+  parameters:
+  - race_id
+  - kind
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: ack-offline
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(AcknowledgeOfflineReward)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: purchase
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(Purchase)
+  parameters:
+  - sku
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: create-listing
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(CreateListing)
+  parameters:
+  - item_id
+  - count
+  - unit_price
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: buy-listing
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(BuyListing)
+  parameters:
+  - listing_id
+  - listing_version
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: cancel-listing
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(CancelListing)
+  parameters:
+  - listing_id
+  - listing_version
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: learn-method
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(LearnMethod)
+  parameters:
+  - item_id
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: configure-methods
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ConfigureMethods)
+  parameters:
+  - main
+  - supports
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: activate-fabao
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ActivateFabao)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: choose-focus
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ChooseFocus)
+  parameters:
+  - source_id
+  - item_id
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: build-guild
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(Build)
+  parameters:
+  - building_id
+  - target_level
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: start-supported-activity
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(StartActivity)
+  parameters:
+  - activity_id
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: end-supported-activity
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::SubmitPrototypeCommand(EndActivity)
+  parameters: []
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Exact existing operation only; no direct HTTP/client ledger writes. StartActivity
+    only actual enabled ACT_SHARED/WEEK_GUARD/WEEK_IRON supported by service; match
+    template/cycle/profile. Race actor/team/heartbeat checked by server. Acknowledge
+    is not an additional grant.
+- id: craft
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::Craft
+  parameters:
+  - recipe_id
+  confirmation_required: true
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Real catalog/recipe, atomic service input/cost/output validation.
+- id: query-shop
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::RequestCatalog(kind=shop)
+  parameters:
+  - offset
+  - OwnedOnly
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Read/query uses original queued operation; no rewards/price defaults. Page-specific
+    filters preserved.
+- id: query-market
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::RequestCatalog(kind=market)
+  parameters:
+  - offset
+  - OwnedOnly
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Read/query uses original queued operation; no rewards/price defaults. Page-specific
+    filters preserved.
+- id: query-sources
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::RequestCatalog(kind=sources)
+  parameters:
+  - offset
+  - OwnedOnly
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Read/query uses original queued operation; no rewards/price defaults. Page-specific
+    filters preserved.
+- id: query-buildings
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::RequestCatalog(kind=buildings)
+  parameters:
+  - offset
+  - OwnedOnly
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Read/query uses original queued operation; no rewards/price defaults. Page-specific
+    filters preserved.
+- id: query-recipes
+  kind: authority-command
+  handler_ref: UWulingPrototypeSubsystem::RequestCatalog(kind=recipes)
+  parameters:
+  - offset
+  - OwnedOnly
+  confirmation_required: false
+  transport_gate:
+  - active-page
+  - known-actor-role
+  - connected
+  - not-busy
+  - fresh-subject
+  preserves:
+  - existing outbox request identity
+  - profile/rule version
+  - expected_version
+  - authority receipt replay
+  - server final inventory/eligibility validation
+  result: enqueued-not-settled
+  rule: Read/query uses original queued operation; no rewards/price defaults. Page-specific
+    filters preserved.

@@ -1,0 +1,282 @@
+{
+  "default_PIE06": {
+    "finished": false,
+    "passed": false,
+    "checks": 660,
+    "captures": 42,
+    "current_step": "typed back Activities",
+    "source_epoch_sha256": "cdcf98f77ceb664b246346e7ac27fc2d0aadfa8c10b351b0c64f573d76e8eecc",
+    "observed_routes": [
+      "Activities",
+      "BreakthroughPrepare",
+      "Character",
+      "CharacterAppearance",
+      "CultivationMethods",
+      "DailyFortune",
+      "EquipmentFabao",
+      "EventSettlement",
+      "Extensions",
+      "GiftRules",
+      "HUD",
+      "Inventory",
+      "Leaderboard",
+      "Main",
+      "Market",
+      "MonthlySignIn",
+      "OfflineRewards",
+      "RaceLive",
+      "RaceLobby",
+      "RaceSettlement",
+      "RegionDetail",
+      "ResourceContest",
+      "ResourceDetail",
+      "ResourceLease",
+      "Saves",
+      "Settings",
+      "Shop",
+      "SignIn",
+      "SwordSpirit",
+      "TradeOrders",
+      "WorldCultivation",
+      "Wuling"
+    ],
+    "failed_checks": [
+      {
+        "name": "real Slate typed-button click 返回",
+        "passed": false,
+        "actual": null
+      }
+    ],
+    "strict_geometry_passed_capture_checks": 42,
+    "scope": "captured PIE06 epoch subsets only; no current full44/portrait+landscape claim"
+  },
+  "native04": {
+    "succeeded": 4,
+    "failed": 0,
+    "notRun": 0,
+    "tests": [
+      {
+        "test": "BoundlessImmortality.Frontend.NewUI.Assets.ExactCanonicalPaths",
+        "state": "Success"
+      },
+      {
+        "test": "BoundlessImmortality.Frontend.NewUI.Features.ConfirmedStageSubjectRejectsChangedQuote",
+        "state": "Success"
+      },
+      {
+        "test": "BoundlessImmortality.Frontend.NewUI.Inventory.BusyRetainsConfirmedPresentation",
+        "state": "Success"
+      },
+      {
+        "test": "BoundlessImmortality.Frontend.NewUI.Inventory.VisibleIdentitySurvivesProjectionChanges",
+        "state": "Success"
+      }
+    ],
+    "scope": "formal native tests build19; fresh-stage helper fixture does not equal full host/service runtime negative case"
+  },
+  "service_attempts": [
+    {
+      "attempt": 1,
+      "finished": false,
+      "passed": false,
+      "checks": 58,
+      "captures": 6,
+      "source_epoch_sha256": "cdcf98f77ceb664b246346e7ac27fc2d0aadfa8c10b351b0c64f573d76e8eecc",
+      "current_step": "select actual inventory book GUID",
+      "started_at": "2026-10-24T07:48:42.260771+00:00",
+      "finished_at": "2026-10-24T07:49:22.818815+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate actual player item BOOK_METHOD_EDGE_BOOK",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate actual player item BOOK_METHOD_EDGE_BOOK: None"
+      ]
+    },
+    {
+      "attempt": 2,
+      "finished": false,
+      "passed": false,
+      "checks": 58,
+      "captures": 6,
+      "source_epoch_sha256": "4828cfea76b8eb10e1be9ffc416d8e661ec97634ba5236864fe7e3d50f0a98c4",
+      "current_step": "select actual inventory book GUID",
+      "started_at": "2026-10-24T07:51:58.078906+00:00",
+      "finished_at": "2026-10-24T07:52:38.594959+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate actual player item BOOK_METHOD_EDGE_BOOK",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate actual player item BOOK_METHOD_EDGE_BOOK: None"
+      ]
+    },
+    {
+      "attempt": 3,
+      "finished": false,
+      "passed": false,
+      "checks": 95,
+      "captures": 9,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "reveal actual sign action",
+      "started_at": "2026-10-24T07:54:09.987102+00:00",
+      "finished_at": "2026-10-24T07:55:07.172705+00:00",
+      "failed_checks": [
+        {
+          "name": "actual scroll 确认签到",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: actual scroll 确认签到: None"
+      ]
+    },
+    {
+      "attempt": 4,
+      "finished": false,
+      "passed": false,
+      "checks": 18,
+      "captures": 4,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "declared transient production avatar regression fixture",
+      "started_at": "2026-10-24T07:56:02.415111+00:00",
+      "finished_at": "2026-10-24T07:56:24.131327+00:00",
+      "failed_checks": [],
+      "error_last_line": [
+        "AttributeError: module 'unreal' has no attribute 'WidgetBlueprintLibrary'"
+      ]
+    },
+    {
+      "attempt": 5,
+      "finished": false,
+      "passed": false,
+      "checks": 24,
+      "captures": 3,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "select exact actual BUILD_01 target1 confirmation",
+      "started_at": "2026-10-24T07:58:11.427267+00:00",
+      "finished_at": "2026-10-24T07:58:34.772420+00:00",
+      "failed_checks": [
+        {
+          "name": "one real contextual row 建设 ['武灵大殿', '可查看目标等级 1']",
+          "passed": false,
+          "actual": []
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: one real contextual row 建设 ['武灵大殿', '可查看目标等级 1']: []"
+      ]
+    },
+    {
+      "attempt": 6,
+      "finished": false,
+      "passed": false,
+      "checks": 21,
+      "captures": 2,
+      "source_epoch_sha256": "0a445cdf6ffd3105522e43bc7130407493666499d3b7680518a6d2a1db0a6826",
+      "current_step": "fresh native build second confirmation",
+      "started_at": "2026-10-24T07:59:58.063081+00:00",
+      "finished_at": "2026-10-24T08:00:17.336161+00:00",
+      "failed_checks": [
+        {
+          "name": "painted native target 确认建设",
+          "passed": false,
+          "actual": {
+            "name": "InkRankWulingCallbackButton_131",
+            "visible": true,
+            "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.SizeBox_219",
+            "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.InkRankWulingCallbackButton_131",
+            "object_id": 92768,
+            "keyboard_focused": false,
+            "clipping": "Inherit",
+            "in_confirmation": false,
+            "x": 48,
+            "y": 1194,
+            "width": 0,
+            "height": 0,
+            "geometry_arranged": false,
+            "paint_expectation": "unknown",
+            "culling_proof_ancestor": "",
+            "painted_width": 0,
+            "painted_height": 0,
+            "widget_class": "/Script/BoundlessImmortality.InkRankWulingCallbackButton",
+            "enabled": true,
+            "label": "确认建设"
+          }
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: painted native target 确认建设: {'name': 'InkRankWulingCallbackButton_131', 'visible': True, 'parent_object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.SizeBox_219', 'object': '/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkGuildBuildPage_0.WidgetTree.InkRankWulingCallbackButton_131', 'object_id': 92768, 'keyboard_focused': False, 'clipping': 'Inherit', 'in_confirmation': False, 'x': 48, 'y': 1194, 'width': 0, 'height': 0, 'geometry_arranged': False, 'paint_expectation': 'unknown', 'culling_proof_ancestor': '', 'painted_width': 0, 'painted_height': 0, 'widget_class': '/Script/BoundlessImmortality.InkRankWulingCallbackButton', 'enabled': True, 'label': '确认建设'}"
+      ]
+    },
+    {
+      "attempt": 7,
+      "finished": false,
+      "passed": false,
+      "checks": 50,
+      "captures": 3,
+      "source_epoch_sha256": "5e1c9dacee5b22838516c7b12c4d9dfbce1d0e945ac33c083b067b9cd72d1e3b",
+      "current_step": "select actual seller listing",
+      "started_at": "2026-10-24T08:03:05.146784+00:00",
+      "finished_at": "2026-10-24T08:03:37.586966+00:00",
+      "failed_checks": [
+        {
+          "name": "Slate select stable entry 1ed0489e02e641c5b67179edbb8a169d",
+          "passed": false,
+          "actual": null
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: Slate select stable entry 1ed0489e02e641c5b67179edbb8a169d: None"
+      ]
+    },
+    {
+      "attempt": 8,
+      "finished": false,
+      "passed": false,
+      "checks": 15,
+      "captures": 1,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "current_step": "refresh actual market catalog",
+      "started_at": "2026-10-24T08:07:41.500435+00:00",
+      "finished_at": "2026-10-24T08:08:00.114889+00:00",
+      "failed_checks": [
+        {
+          "name": "unique native target 查看市场",
+          "passed": false,
+          "actual": []
+        }
+      ],
+      "error_last_line": [
+        "AssertionError: unique native target 查看市场: []"
+      ]
+    },
+    {
+      "attempt": 9,
+      "finished": false,
+      "passed": false,
+      "checks": 77,
+      "captures": 2,
+      "source_epoch_sha256": "d60503f8ad7e209a077a2f1ff3fa8228df552fbb3f2618e7a70623837c950a76",
+      "current_step": "declared avatar transport regression on actual default root",
+      "started_at": "2026-10-24T08:09:21.062684+00:00",
+      "finished_at": "2026-10-24T08:10:03.414362+00:00",
+      "failed_checks": [],
+      "error_last_line": [
+        "Exception: InkRebuildFrontendWidget: Failed to find property 'leaderboard_entries' for attribute 'leaderboard_entries' on 'WBP_NewUIFrontend_C'"
+      ]
+    }
+  ],
+  "service_successes_are_scoped": true,
+  "declared_fixture_naturally_earned": false,
+  "TLS_peer_override": "owned test processes arguments only; no platform/certificate trust acceptance",
+  "stage_service_actor_scope": "separate namespace synthetic preconditions, naturally_earned:false; not natural growth or production player acceptance",
+  "service_real_Busy_evidence": "connected actual pending CreateGuild; Inventory navigable and confirmed authority inventory snapshot retained; no blanket all mutation gating claim"
+}

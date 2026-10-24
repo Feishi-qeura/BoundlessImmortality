@@ -1,0 +1,3038 @@
+{
+  "engine_pid": 18992,
+  "source_count": 588,
+  "assets": [
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+      "name": "T_HudLaunchCountdownFrame_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable",
+      "name": "T_Journey_WorldNodeAvailable",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked",
+      "name": "T_Journey_WorldNodeLocked",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1",
+      "name": "T_BreakthroughMaterialSlotFrame_Default_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+      "name": "T_RankWulingPaperPanel_Default_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1",
+      "name": "DA_InkUITheme_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/BoundlessImmortality\", asset_name: \"InkUiThemeData\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng",
+      "name": "FF_InkMaShanZheng",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"FontFace\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback",
+      "name": "FF_InkNotoFallback",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"FontFace\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai",
+      "name": "FF_InkWenKai",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"FontFace\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+      "name": "F_InkBody",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"Font\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay",
+      "name": "F_InkDisplay",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"Font\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkFallback",
+      "name": "F_InkFallback",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"Font\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1004_846_1054_894_Fit",
+      "name": "MI_T_ProvidedInventory_1004_846_1054_894_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1004_846_1054_894_Slice",
+      "name": "MI_T_ProvidedInventory_1004_846_1054_894_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1018_1135_1086_1200_Fit",
+      "name": "MI_T_ProvidedInventory_1018_1135_1086_1200_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1018_1135_1086_1200_Slice",
+      "name": "MI_T_ProvidedInventory_1018_1135_1086_1200_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1030_966_1233_1034_Fit",
+      "name": "MI_T_ProvidedInventory_1030_966_1233_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1030_966_1233_1034_Slice",
+      "name": "MI_T_ProvidedInventory_1030_966_1233_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1033_956_1242_1034_Fit",
+      "name": "MI_T_ProvidedInventory_1033_956_1242_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1033_956_1242_1034_Slice",
+      "name": "MI_T_ProvidedInventory_1033_956_1242_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Fit",
+      "name": "MI_T_ProvidedInventory_1037_1043_1102_1111_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1037_1043_1102_1111_Slice",
+      "name": "MI_T_ProvidedInventory_1037_1043_1102_1111_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1046_733_1107_792_Fit",
+      "name": "MI_T_ProvidedInventory_1046_733_1107_792_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1046_733_1107_792_Slice",
+      "name": "MI_T_ProvidedInventory_1046_733_1107_792_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1047_1050_1098_1106_Fit",
+      "name": "MI_T_ProvidedInventory_1047_1050_1098_1106_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1047_1050_1098_1106_Slice",
+      "name": "MI_T_ProvidedInventory_1047_1050_1098_1106_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1061_864_1134_933_Fit",
+      "name": "MI_T_ProvidedInventory_1061_864_1134_933_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1061_864_1134_933_Slice",
+      "name": "MI_T_ProvidedInventory_1061_864_1134_933_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1062_757_1137_833_Fit",
+      "name": "MI_T_ProvidedInventory_1062_757_1137_833_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1062_757_1137_833_Slice",
+      "name": "MI_T_ProvidedInventory_1062_757_1137_833_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Fit",
+      "name": "MI_T_ProvidedInventory_1063_354_1153_456_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1063_354_1153_456_Slice",
+      "name": "MI_T_ProvidedInventory_1063_354_1153_456_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Fit",
+      "name": "MI_T_ProvidedInventory_1064_464_1153_565_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1064_464_1153_565_Slice",
+      "name": "MI_T_ProvidedInventory_1064_464_1153_565_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1066_846_1117_894_Fit",
+      "name": "MI_T_ProvidedInventory_1066_846_1117_894_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1066_846_1117_894_Slice",
+      "name": "MI_T_ProvidedInventory_1066_846_1117_894_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1070_331_1157_433_Fit",
+      "name": "MI_T_ProvidedInventory_1070_331_1157_433_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1070_331_1157_433_Slice",
+      "name": "MI_T_ProvidedInventory_1070_331_1157_433_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1073_438_1157_535_Fit",
+      "name": "MI_T_ProvidedInventory_1073_438_1157_535_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1073_438_1157_535_Slice",
+      "name": "MI_T_ProvidedInventory_1073_438_1157_535_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Fit",
+      "name": "MI_T_ProvidedInventory_1077_1126_1158_1204_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1077_1126_1158_1204_Slice",
+      "name": "MI_T_ProvidedInventory_1077_1126_1158_1204_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1093_1135_1160_1200_Fit",
+      "name": "MI_T_ProvidedInventory_1093_1135_1160_1200_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1093_1135_1160_1200_Slice",
+      "name": "MI_T_ProvidedInventory_1093_1135_1160_1200_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Fit",
+      "name": "MI_T_ProvidedInventory_1104_1043_1166_1111_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1104_1043_1166_1111_Slice",
+      "name": "MI_T_ProvidedInventory_1104_1043_1166_1111_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1108_1053_1151_1098_Fit",
+      "name": "MI_T_ProvidedInventory_1108_1053_1151_1098_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1108_1053_1151_1098_Slice",
+      "name": "MI_T_ProvidedInventory_1108_1053_1151_1098_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_359_1241_455_Fit",
+      "name": "MI_T_ProvidedInventory_1152_359_1241_455_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_359_1241_455_Slice",
+      "name": "MI_T_ProvidedInventory_1152_359_1241_455_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Fit",
+      "name": "MI_T_ProvidedInventory_1152_477_1241_559_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_477_1241_559_Slice",
+      "name": "MI_T_ProvidedInventory_1152_477_1241_559_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_566_1184_914_Fit",
+      "name": "MI_T_ProvidedInventory_1152_566_1184_914_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1152_566_1184_914_Slice",
+      "name": "MI_T_ProvidedInventory_1152_566_1184_914_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1154_584_1189_951_Fit",
+      "name": "MI_T_ProvidedInventory_1154_584_1189_951_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1154_584_1189_951_Slice",
+      "name": "MI_T_ProvidedInventory_1154_584_1189_951_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1157_660_1178_770_Fit",
+      "name": "MI_T_ProvidedInventory_1157_660_1178_770_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1157_660_1178_770_Slice",
+      "name": "MI_T_ProvidedInventory_1157_660_1178_770_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Fit",
+      "name": "MI_T_ProvidedInventory_1158_1126_1239_1204_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_1126_1239_1204_Slice",
+      "name": "MI_T_ProvidedInventory_1158_1126_1239_1204_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Fit",
+      "name": "MI_T_ProvidedInventory_1158_685_1186_804_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1158_685_1186_804_Slice",
+      "name": "MI_T_ProvidedInventory_1158_685_1186_804_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1160_447_1241_528_Fit",
+      "name": "MI_T_ProvidedInventory_1160_447_1241_528_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1160_447_1241_528_Slice",
+      "name": "MI_T_ProvidedInventory_1160_447_1241_528_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1161_339_1241_431_Fit",
+      "name": "MI_T_ProvidedInventory_1161_339_1241_431_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1161_339_1241_431_Slice",
+      "name": "MI_T_ProvidedInventory_1161_339_1241_431_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1048_1206_1104_Fit",
+      "name": "MI_T_ProvidedInventory_1167_1048_1206_1104_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1048_1206_1104_Slice",
+      "name": "MI_T_ProvidedInventory_1167_1048_1206_1104_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1135_1234_1200_Fit",
+      "name": "MI_T_ProvidedInventory_1167_1135_1234_1200_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1167_1135_1234_1200_Slice",
+      "name": "MI_T_ProvidedInventory_1167_1135_1234_1200_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Fit",
+      "name": "MI_T_ProvidedInventory_1173_1043_1211_1111_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1173_1043_1211_1111_Slice",
+      "name": "MI_T_ProvidedInventory_1173_1043_1211_1111_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1195_566_1231_914_Fit",
+      "name": "MI_T_ProvidedInventory_1195_566_1231_914_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1195_566_1231_914_Slice",
+      "name": "MI_T_ProvidedInventory_1195_566_1231_914_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Fit",
+      "name": "MI_T_ProvidedInventory_1198_584_1238_951_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_1198_584_1238_951_Slice",
+      "name": "MI_T_ProvidedInventory_1198_584_1238_951_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_131_Fit",
+      "name": "MI_T_ProvidedInventory_14_0_683_131_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_131_Slice",
+      "name": "MI_T_ProvidedInventory_14_0_683_131_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_542_Fit",
+      "name": "MI_T_ProvidedInventory_14_0_683_542_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_0_683_542_Slice",
+      "name": "MI_T_ProvidedInventory_14_0_683_542_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_1115_314_1190_Fit",
+      "name": "MI_T_ProvidedInventory_14_1115_314_1190_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_14_1115_314_1190_Slice",
+      "name": "MI_T_ProvidedInventory_14_1115_314_1190_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_165_667_290_791_Fit",
+      "name": "MI_T_ProvidedInventory_165_667_290_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_165_667_290_791_Slice",
+      "name": "MI_T_ProvidedInventory_165_667_290_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_168_635_280_746_Fit",
+      "name": "MI_T_ProvidedInventory_168_635_280_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_168_635_280_746_Slice",
+      "name": "MI_T_ProvidedInventory_168_635_280_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Fit",
+      "name": "MI_T_ProvidedInventory_17_1041_222_1110_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_1041_222_1110_Slice",
+      "name": "MI_T_ProvidedInventory_17_1041_222_1110_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_956_221_1034_Fit",
+      "name": "MI_T_ProvidedInventory_17_956_221_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_17_956_221_1034_Slice",
+      "name": "MI_T_ProvidedInventory_17_956_221_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_188_802_335_944_Fit",
+      "name": "MI_T_ProvidedInventory_188_802_335_944_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_188_802_335_944_Slice",
+      "name": "MI_T_ProvidedInventory_188_802_335_944_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Fit",
+      "name": "MI_T_ProvidedInventory_18_579_239_656_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_18_579_239_656_Slice",
+      "name": "MI_T_ProvidedInventory_18_579_239_656_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_193_794_328_924_Fit",
+      "name": "MI_T_ProvidedInventory_193_794_328_924_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_193_794_328_924_Slice",
+      "name": "MI_T_ProvidedInventory_193_794_328_924_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Fit",
+      "name": "MI_T_ProvidedInventory_20_16_683_565_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_20_16_683_565_Slice",
+      "name": "MI_T_ProvidedInventory_20_16_683_565_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_225_956_423_1034_Fit",
+      "name": "MI_T_ProvidedInventory_225_956_423_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_225_956_423_1034_Slice",
+      "name": "MI_T_ProvidedInventory_225_956_423_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Fit",
+      "name": "MI_T_ProvidedInventory_229_1041_434_1110_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_229_1041_434_1110_Slice",
+      "name": "MI_T_ProvidedInventory_229_1041_434_1110_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_236_966_425_1034_Fit",
+      "name": "MI_T_ProvidedInventory_236_966_425_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_236_966_425_1034_Slice",
+      "name": "MI_T_ProvidedInventory_236_966_425_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_237_1047_430_1108_Fit",
+      "name": "MI_T_ProvidedInventory_237_1047_430_1108_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_237_1047_430_1108_Slice",
+      "name": "MI_T_ProvidedInventory_237_1047_430_1108_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_23_1121_320_1190_Fit",
+      "name": "MI_T_ProvidedInventory_23_1121_320_1190_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_23_1121_320_1190_Slice",
+      "name": "MI_T_ProvidedInventory_23_1121_320_1190_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_240_1185_294_1242_Fit",
+      "name": "MI_T_ProvidedInventory_240_1185_294_1242_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_240_1185_294_1242_Slice",
+      "name": "MI_T_ProvidedInventory_240_1185_294_1242_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_242_1191_288_1235_Fit",
+      "name": "MI_T_ProvidedInventory_242_1191_288_1235_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_242_1191_288_1235_Slice",
+      "name": "MI_T_ProvidedInventory_242_1191_288_1235_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Fit",
+      "name": "MI_T_ProvidedInventory_244_579_443_656_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_244_579_443_656_Slice",
+      "name": "MI_T_ProvidedInventory_244_579_443_656_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_251_552_445_617_Fit",
+      "name": "MI_T_ProvidedInventory_251_552_445_617_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_251_552_445_617_Slice",
+      "name": "MI_T_ProvidedInventory_251_552_445_617_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_1047_224_1108_Fit",
+      "name": "MI_T_ProvidedInventory_27_1047_224_1108_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_1047_224_1108_Slice",
+      "name": "MI_T_ProvidedInventory_27_1047_224_1108_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_550_243_617_Fit",
+      "name": "MI_T_ProvidedInventory_27_550_243_617_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_27_550_243_617_Slice",
+      "name": "MI_T_ProvidedInventory_27_550_243_617_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Fit",
+      "name": "MI_T_ProvidedInventory_28_667_153_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_667_153_791_Slice",
+      "name": "MI_T_ProvidedInventory_28_667_153_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Fit",
+      "name": "MI_T_ProvidedInventory_28_802_172_944_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Slice",
+      "name": "MI_T_ProvidedInventory_28_802_172_944_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_29_966_221_1034_Fit",
+      "name": "MI_T_ProvidedInventory_29_966_221_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_29_966_221_1034_Slice",
+      "name": "MI_T_ProvidedInventory_29_966_221_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_300_666_425_791_Fit",
+      "name": "MI_T_ProvidedInventory_300_666_425_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_300_666_425_791_Slice",
+      "name": "MI_T_ProvidedInventory_300_666_425_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_301_635_413_746_Fit",
+      "name": "MI_T_ProvidedInventory_301_635_413_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_301_635_413_746_Slice",
+      "name": "MI_T_ProvidedInventory_301_635_413_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_30_794_164_924_Fit",
+      "name": "MI_T_ProvidedInventory_30_794_164_924_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_30_794_164_924_Slice",
+      "name": "MI_T_ProvidedInventory_30_794_164_924_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_325_1121_550_1191_Fit",
+      "name": "MI_T_ProvidedInventory_325_1121_550_1191_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_325_1121_550_1191_Slice",
+      "name": "MI_T_ProvidedInventory_325_1121_550_1191_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_1185_91_1242_Fit",
+      "name": "MI_T_ProvidedInventory_32_1185_91_1242_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_1185_91_1242_Slice",
+      "name": "MI_T_ProvidedInventory_32_1185_91_1242_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_635_144_746_Fit",
+      "name": "MI_T_ProvidedInventory_32_635_144_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_32_635_144_746_Slice",
+      "name": "MI_T_ProvidedInventory_32_635_144_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_334_1128_560_1191_Fit",
+      "name": "MI_T_ProvidedInventory_334_1128_560_1191_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_334_1128_560_1191_Slice",
+      "name": "MI_T_ProvidedInventory_334_1128_560_1191_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_349_802_497_944_Fit",
+      "name": "MI_T_ProvidedInventory_349_802_497_944_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_349_802_497_944_Slice",
+      "name": "MI_T_ProvidedInventory_349_802_497_944_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_357_794_492_924_Fit",
+      "name": "MI_T_ProvidedInventory_357_794_492_924_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_357_794_492_924_Slice",
+      "name": "MI_T_ProvidedInventory_357_794_492_924_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_40_1191_86_1235_Fit",
+      "name": "MI_T_ProvidedInventory_40_1191_86_1235_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_40_1191_86_1235_Slice",
+      "name": "MI_T_ProvidedInventory_40_1191_86_1235_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Fit",
+      "name": "MI_T_ProvidedInventory_423_956_622_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_423_956_622_1034_Slice",
+      "name": "MI_T_ProvidedInventory_423_956_622_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_433_966_623_1034_Fit",
+      "name": "MI_T_ProvidedInventory_433_966_623_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_433_966_623_1034_Slice",
+      "name": "MI_T_ProvidedInventory_433_966_623_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_435_1049_852_1108_Fit",
+      "name": "MI_T_ProvidedInventory_435_1049_852_1108_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_435_1049_852_1108_Slice",
+      "name": "MI_T_ProvidedInventory_435_1049_852_1108_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_436_1041_862_1111_Fit",
+      "name": "MI_T_ProvidedInventory_436_1041_862_1111_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_436_1041_862_1111_Slice",
+      "name": "MI_T_ProvidedInventory_436_1041_862_1111_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_437_666_561_791_Fit",
+      "name": "MI_T_ProvidedInventory_437_666_561_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_437_666_561_791_Slice",
+      "name": "MI_T_ProvidedInventory_437_666_561_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_438_635_552_746_Fit",
+      "name": "MI_T_ProvidedInventory_438_635_552_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_438_635_552_746_Slice",
+      "name": "MI_T_ProvidedInventory_438_635_552_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Fit",
+      "name": "MI_T_ProvidedInventory_450_579_651_656_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_450_579_651_656_Slice",
+      "name": "MI_T_ProvidedInventory_450_579_651_656_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_454_552_648_617_Fit",
+      "name": "MI_T_ProvidedInventory_454_552_648_617_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_454_552_648_617_Slice",
+      "name": "MI_T_ProvidedInventory_454_552_648_617_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_511_802_657_944_Fit",
+      "name": "MI_T_ProvidedInventory_511_802_657_944_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_511_802_657_944_Slice",
+      "name": "MI_T_ProvidedInventory_511_802_657_944_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_521_794_656_924_Fit",
+      "name": "MI_T_ProvidedInventory_521_794_656_924_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_521_794_656_924_Slice",
+      "name": "MI_T_ProvidedInventory_521_794_656_924_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_548_1121_770_1191_Fit",
+      "name": "MI_T_ProvidedInventory_548_1121_770_1191_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_548_1121_770_1191_Slice",
+      "name": "MI_T_ProvidedInventory_548_1121_770_1191_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_570_1133_784_1191_Fit",
+      "name": "MI_T_ProvidedInventory_570_1133_784_1191_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_570_1133_784_1191_Slice",
+      "name": "MI_T_ProvidedInventory_570_1133_784_1191_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_635_688_746_Fit",
+      "name": "MI_T_ProvidedInventory_573_635_688_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_635_688_746_Slice",
+      "name": "MI_T_ProvidedInventory_573_635_688_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_667_696_791_Fit",
+      "name": "MI_T_ProvidedInventory_573_667_696_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_573_667_696_791_Slice",
+      "name": "MI_T_ProvidedInventory_573_667_696_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Fit",
+      "name": "MI_T_ProvidedInventory_622_956_819_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_622_956_819_1034_Slice",
+      "name": "MI_T_ProvidedInventory_622_956_819_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_631_966_823_1034_Fit",
+      "name": "MI_T_ProvidedInventory_631_966_823_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_631_966_823_1034_Slice",
+      "name": "MI_T_ProvidedInventory_631_966_823_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Fit",
+      "name": "MI_T_ProvidedInventory_654_579_856_656_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_654_579_856_656_Slice",
+      "name": "MI_T_ProvidedInventory_654_579_856_656_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_657_552_851_617_Fit",
+      "name": "MI_T_ProvidedInventory_657_552_851_617_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_657_552_851_617_Slice",
+      "name": "MI_T_ProvidedInventory_657_552_851_617_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Fit",
+      "name": "MI_T_ProvidedInventory_669_802_815_944_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Slice",
+      "name": "MI_T_ProvidedInventory_669_802_815_944_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_684_794_819_924_Fit",
+      "name": "MI_T_ProvidedInventory_684_794_819_924_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_684_794_819_924_Slice",
+      "name": "MI_T_ProvidedInventory_684_794_819_924_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_24_973_542_Fit",
+      "name": "MI_T_ProvidedInventory_692_24_973_542_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_24_973_542_Slice",
+      "name": "MI_T_ProvidedInventory_692_24_973_542_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_52_963_565_Fit",
+      "name": "MI_T_ProvidedInventory_692_52_963_565_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_692_52_963_565_Slice",
+      "name": "MI_T_ProvidedInventory_692_52_963_565_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Fit",
+      "name": "MI_T_ProvidedInventory_708_667_832_791_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_708_667_832_791_Slice",
+      "name": "MI_T_ProvidedInventory_708_667_832_791_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_709_635_824_746_Fit",
+      "name": "MI_T_ProvidedInventory_709_635_824_746_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_709_635_824_746_Slice",
+      "name": "MI_T_ProvidedInventory_709_635_824_746_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_772_1121_991_1191_Fit",
+      "name": "MI_T_ProvidedInventory_772_1121_991_1191_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_772_1121_991_1191_Slice",
+      "name": "MI_T_ProvidedInventory_772_1121_991_1191_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_787_1129_997_1190_Fit",
+      "name": "MI_T_ProvidedInventory_787_1129_997_1190_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_787_1129_997_1190_Slice",
+      "name": "MI_T_ProvidedInventory_787_1129_997_1190_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Fit",
+      "name": "MI_T_ProvidedInventory_824_956_1029_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_824_956_1029_1034_Slice",
+      "name": "MI_T_ProvidedInventory_824_956_1029_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_829_966_1020_1034_Fit",
+      "name": "MI_T_ProvidedInventory_829_966_1020_1034_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_829_966_1020_1034_Slice",
+      "name": "MI_T_ProvidedInventory_829_966_1020_1034_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Fit",
+      "name": "MI_T_ProvidedInventory_840_864_906_933_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_840_864_906_933_Slice",
+      "name": "MI_T_ProvidedInventory_840_864_906_933_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_847_759_916_831_Fit",
+      "name": "MI_T_ProvidedInventory_847_759_916_831_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_847_759_916_831_Slice",
+      "name": "MI_T_ProvidedInventory_847_759_916_831_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_550_1063_617_Fit",
+      "name": "MI_T_ProvidedInventory_860_550_1063_617_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_550_1063_617_Slice",
+      "name": "MI_T_ProvidedInventory_860_550_1063_617_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_733_918_792_Fit",
+      "name": "MI_T_ProvidedInventory_860_733_918_792_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_860_733_918_792_Slice",
+      "name": "MI_T_ProvidedInventory_860_733_918_792_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Fit",
+      "name": "MI_T_ProvidedInventory_861_579_1076_656_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_861_579_1076_656_Slice",
+      "name": "MI_T_ProvidedInventory_861_579_1076_656_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_865_1041_1028_1111_Fit",
+      "name": "MI_T_ProvidedInventory_865_1041_1028_1111_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_865_1041_1028_1111_Slice",
+      "name": "MI_T_ProvidedInventory_865_1041_1028_1111_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_629_954_691_Fit",
+      "name": "MI_T_ProvidedInventory_866_629_954_691_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_629_954_691_Slice",
+      "name": "MI_T_ProvidedInventory_866_629_954_691_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_846_911_894_Fit",
+      "name": "MI_T_ProvidedInventory_866_846_911_894_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_866_846_911_894_Slice",
+      "name": "MI_T_ProvidedInventory_866_846_911_894_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_868_1049_1027_1108_Fit",
+      "name": "MI_T_ProvidedInventory_868_1049_1027_1108_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_868_1049_1027_1108_Slice",
+      "name": "MI_T_ProvidedInventory_868_1049_1027_1108_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_869_666_971_742_Fit",
+      "name": "MI_T_ProvidedInventory_869_666_971_742_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_869_666_971_742_Slice",
+      "name": "MI_T_ProvidedInventory_869_666_971_742_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_913_864_980_933_Fit",
+      "name": "MI_T_ProvidedInventory_913_864_980_933_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_913_864_980_933_Slice",
+      "name": "MI_T_ProvidedInventory_913_864_980_933_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_918_759_987_831_Fit",
+      "name": "MI_T_ProvidedInventory_918_759_987_831_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_918_759_987_831_Slice",
+      "name": "MI_T_ProvidedInventory_918_759_987_831_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1185_238_1242_Fit",
+      "name": "MI_T_ProvidedInventory_91_1185_238_1242_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1185_238_1242_Slice",
+      "name": "MI_T_ProvidedInventory_91_1185_238_1242_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1191_236_1234_Fit",
+      "name": "MI_T_ProvidedInventory_91_1191_236_1234_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_91_1191_236_1234_Slice",
+      "name": "MI_T_ProvidedInventory_91_1191_236_1234_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_922_733_980_792_Fit",
+      "name": "MI_T_ProvidedInventory_922_733_980_792_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_922_733_980_792_Slice",
+      "name": "MI_T_ProvidedInventory_922_733_980_792_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_932_846_982_894_Fit",
+      "name": "MI_T_ProvidedInventory_932_846_982_894_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_932_846_982_894_Slice",
+      "name": "MI_T_ProvidedInventory_932_846_982_894_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit",
+      "name": "MI_T_ProvidedInventory_972_359_1062_454_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Slice",
+      "name": "MI_T_ProvidedInventory_972_359_1062_454_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit",
+      "name": "MI_T_ProvidedInventory_973_466_1062_564_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Slice",
+      "name": "MI_T_ProvidedInventory_973_466_1062_564_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_975_86_1237_298_Fit",
+      "name": "MI_T_ProvidedInventory_975_86_1237_298_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_975_86_1237_298_Slice",
+      "name": "MI_T_ProvidedInventory_975_86_1237_298_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_980_636_1078_682_Fit",
+      "name": "MI_T_ProvidedInventory_980_636_1078_682_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_980_636_1078_682_Slice",
+      "name": "MI_T_ProvidedInventory_980_636_1078_682_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_981_58_1240_290_Fit",
+      "name": "MI_T_ProvidedInventory_981_58_1240_290_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_981_58_1240_290_Slice",
+      "name": "MI_T_ProvidedInventory_981_58_1240_290_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_983_338_1068_429_Fit",
+      "name": "MI_T_ProvidedInventory_983_338_1068_429_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_983_338_1068_429_Slice",
+      "name": "MI_T_ProvidedInventory_983_338_1068_429_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_442_1068_531_Fit",
+      "name": "MI_T_ProvidedInventory_985_442_1068_531_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_442_1068_531_Slice",
+      "name": "MI_T_ProvidedInventory_985_442_1068_531_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_733_1043_792_Fit",
+      "name": "MI_T_ProvidedInventory_985_733_1043_792_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_985_733_1043_792_Slice",
+      "name": "MI_T_ProvidedInventory_985_733_1043_792_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_987_669_1107_737_Fit",
+      "name": "MI_T_ProvidedInventory_987_669_1107_737_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_987_669_1107_737_Slice",
+      "name": "MI_T_ProvidedInventory_987_669_1107_737_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_988_864_1059_933_Fit",
+      "name": "MI_T_ProvidedInventory_988_864_1059_933_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_988_864_1059_933_Slice",
+      "name": "MI_T_ProvidedInventory_988_864_1059_933_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_991_759_1061_831_Fit",
+      "name": "MI_T_ProvidedInventory_991_759_1061_831_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_991_759_1061_831_Slice",
+      "name": "MI_T_ProvidedInventory_991_759_1061_831_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Fit",
+      "name": "MI_T_ProvidedInventory_998_1126_1077_1204_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_998_1126_1077_1204_Slice",
+      "name": "MI_T_ProvidedInventory_998_1126_1077_1204_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorColumns",
+      "name": "MI_Rank_AnchorColumns",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorFrame",
+      "name": "MI_Rank_AnchorFrame",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_AnchorHeading",
+      "name": "MI_Rank_AnchorHeading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_BronzeRow",
+      "name": "MI_Rank_BronzeRow",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Close",
+      "name": "MI_Rank_Close",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_CompactFrame",
+      "name": "MI_Rank_CompactFrame",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_DamageHeading",
+      "name": "MI_Rank_DamageHeading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_GoldRow",
+      "name": "MI_Rank_GoldRow",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal1",
+      "name": "MI_Rank_Medal1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal2",
+      "name": "MI_Rank_Medal2",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Medal3",
+      "name": "MI_Rank_Medal3",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_PlainRow",
+      "name": "MI_Rank_PlainRow",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Rail",
+      "name": "MI_Rank_Rail",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_SpeedHeading",
+      "name": "MI_Rank_SpeedHeading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Thumb",
+      "name": "MI_Rank_Thumb",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_Cyberspace",
+      "name": "MI_Rank_Title_Cyberspace",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_DivineBlade",
+      "name": "MI_Rank_Title_DivineBlade",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_Godslayer",
+      "name": "MI_Rank_Title_Godslayer",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_LeftGuardian",
+      "name": "MI_Rank_Title_LeftGuardian",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_Novice",
+      "name": "MI_Rank_Title_Novice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_RightGuardian",
+      "name": "MI_Rank_Title_RightGuardian",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_SevenStar",
+      "name": "MI_Rank_Title_SevenStar",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_Rank_Title_SoulEater",
+      "name": "MI_Rank_Title_SoulEater",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_16_450_436_584_Fit",
+      "name": "MI_T_ProvidedRank_16_450_436_584_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_16_450_436_584_Slice",
+      "name": "MI_T_ProvidedRank_16_450_436_584_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Fit",
+      "name": "MI_T_ProvidedRank_28_15_815_443_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_28_15_815_443_Slice",
+      "name": "MI_T_ProvidedRank_28_15_815_443_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_935_976_987_Fit",
+      "name": "MI_T_ProvidedRank_40_935_976_987_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_935_976_987_Slice",
+      "name": "MI_T_ProvidedRank_40_935_976_987_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_990_976_1041_Fit",
+      "name": "MI_T_ProvidedRank_40_990_976_1041_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_40_990_976_1041_Slice",
+      "name": "MI_T_ProvidedRank_40_990_976_1041_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_438_450_858_584_Fit",
+      "name": "MI_T_ProvidedRank_438_450_858_584_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_438_450_858_584_Slice",
+      "name": "MI_T_ProvidedRank_438_450_858_584_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_827_45_1134_421_Fit",
+      "name": "MI_T_ProvidedRank_827_45_1134_421_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_827_45_1134_421_Slice",
+      "name": "MI_T_ProvidedRank_827_45_1134_421_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_858_450_1253_584_Fit",
+      "name": "MI_T_ProvidedRank_858_450_1253_584_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/MI_T_ProvidedRank_858_450_1253_584_Slice",
+      "name": "MI_T_ProvidedRank_858_450_1253_584_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier01",
+      "name": "M_RankDamageTier01",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier02",
+      "name": "M_RankDamageTier02",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier03",
+      "name": "M_RankDamageTier03",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier04",
+      "name": "M_RankDamageTier04",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier05",
+      "name": "M_RankDamageTier05",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier06",
+      "name": "M_RankDamageTier06",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier07",
+      "name": "M_RankDamageTier07",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier08",
+      "name": "M_RankDamageTier08",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier09",
+      "name": "M_RankDamageTier09",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankDamageTier10",
+      "name": "M_RankDamageTier10",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier01",
+      "name": "M_RankSpeedTier01",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier02",
+      "name": "M_RankSpeedTier02",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier03",
+      "name": "M_RankSpeedTier03",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier04",
+      "name": "M_RankSpeedTier04",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier05",
+      "name": "M_RankSpeedTier05",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier06",
+      "name": "M_RankSpeedTier06",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier07",
+      "name": "M_RankSpeedTier07",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier08",
+      "name": "M_RankSpeedTier08",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier09",
+      "name": "M_RankSpeedTier09",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSpeedTier10",
+      "name": "M_RankSpeedTier10",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier01",
+      "name": "M_RankSwordTier01",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier02",
+      "name": "M_RankSwordTier02",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier03",
+      "name": "M_RankSwordTier03",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier04",
+      "name": "M_RankSwordTier04",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier05",
+      "name": "M_RankSwordTier05",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier06",
+      "name": "M_RankSwordTier06",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier07",
+      "name": "M_RankSwordTier07",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier08",
+      "name": "M_RankSwordTier08",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier09",
+      "name": "M_RankSwordTier09",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Leaderboard/M_RankSwordTier10",
+      "name": "M_RankSwordTier10",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_BarFill",
+      "name": "MI_Cohesion_BarFill",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_BarTrack",
+      "name": "MI_Cohesion_BarTrack",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_BlueButton",
+      "name": "MI_Cohesion_BlueButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_Card",
+      "name": "MI_Cohesion_Card",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_GoldButton",
+      "name": "MI_Cohesion_GoldButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_Heading",
+      "name": "MI_Cohesion_Heading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_PaperButton",
+      "name": "MI_Cohesion_PaperButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Cohesion_SelectedTab",
+      "name": "MI_Cohesion_SelectedTab",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkCardSoft",
+      "name": "MI_InkCardSoft",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_0",
+      "name": "MI_InkSceneSoft_0",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_1",
+      "name": "MI_InkSceneSoft_1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_2",
+      "name": "MI_InkSceneSoft_2",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_3",
+      "name": "MI_InkSceneSoft_3",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_4",
+      "name": "MI_InkSceneSoft_4",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_5",
+      "name": "MI_InkSceneSoft_5",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_6",
+      "name": "MI_InkSceneSoft_6",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_InkSceneSoft_7",
+      "name": "MI_InkSceneSoft_7",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_BarFill",
+      "name": "MI_Polish_BarFill",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_BarTrack",
+      "name": "MI_Polish_BarTrack",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_BlueButton",
+      "name": "MI_Polish_BlueButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_Card",
+      "name": "MI_Polish_Card",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_GoldButton",
+      "name": "MI_Polish_GoldButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_Heading",
+      "name": "MI_Polish_Heading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_PaperButton",
+      "name": "MI_Polish_PaperButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Polish_SelectedTab",
+      "name": "MI_Polish_SelectedTab",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_BarFill",
+      "name": "MI_Portrait_BarFill",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_BarTrack",
+      "name": "MI_Portrait_BarTrack",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_BlueButton",
+      "name": "MI_Portrait_BlueButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_Card",
+      "name": "MI_Portrait_Card",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_GoldButton",
+      "name": "MI_Portrait_GoldButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_Heading",
+      "name": "MI_Portrait_Heading",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_PaperButton",
+      "name": "MI_Portrait_PaperButton",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_Portrait_SelectedTab",
+      "name": "MI_Portrait_SelectedTab",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_00",
+      "name": "MI_RealmIconStage_00",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_01",
+      "name": "MI_RealmIconStage_01",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_02",
+      "name": "MI_RealmIconStage_02",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_03",
+      "name": "MI_RealmIconStage_03",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_04",
+      "name": "MI_RealmIconStage_04",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_05",
+      "name": "MI_RealmIconStage_05",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_06",
+      "name": "MI_RealmIconStage_06",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_07",
+      "name": "MI_RealmIconStage_07",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_08",
+      "name": "MI_RealmIconStage_08",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_09",
+      "name": "MI_RealmIconStage_09",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_10",
+      "name": "MI_RealmIconStage_10",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_11",
+      "name": "MI_RealmIconStage_11",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_12",
+      "name": "MI_RealmIconStage_12",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_13",
+      "name": "MI_RealmIconStage_13",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_14",
+      "name": "MI_RealmIconStage_14",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_15",
+      "name": "MI_RealmIconStage_15",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_16",
+      "name": "MI_RealmIconStage_16",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_17",
+      "name": "MI_RealmIconStage_17",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_18",
+      "name": "MI_RealmIconStage_18",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_19",
+      "name": "MI_RealmIconStage_19",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_20",
+      "name": "MI_RealmIconStage_20",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_21",
+      "name": "MI_RealmIconStage_21",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_22",
+      "name": "MI_RealmIconStage_22",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_23",
+      "name": "MI_RealmIconStage_23",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_24",
+      "name": "MI_RealmIconStage_24",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_25",
+      "name": "MI_RealmIconStage_25",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_26",
+      "name": "MI_RealmIconStage_26",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_27",
+      "name": "MI_RealmIconStage_27",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_28",
+      "name": "MI_RealmIconStage_28",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_29",
+      "name": "MI_RealmIconStage_29",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_30",
+      "name": "MI_RealmIconStage_30",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_31",
+      "name": "MI_RealmIconStage_31",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_32",
+      "name": "MI_RealmIconStage_32",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_RealmIconStage_33",
+      "name": "MI_RealmIconStage_33",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_143_222_229_Fit",
+      "name": "MI_T_ProvidedButtons_14_143_222_229_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_143_222_229_Slice",
+      "name": "MI_T_ProvidedButtons_14_143_222_229_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_233_222_317_Fit",
+      "name": "MI_T_ProvidedButtons_14_233_222_317_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_233_222_317_Slice",
+      "name": "MI_T_ProvidedButtons_14_233_222_317_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_48_222_142_Fit",
+      "name": "MI_T_ProvidedButtons_14_48_222_142_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_14_48_222_142_Slice",
+      "name": "MI_T_ProvidedButtons_14_48_222_142_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_330_222_407_Fit",
+      "name": "MI_T_ProvidedButtons_15_330_222_407_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_330_222_407_Slice",
+      "name": "MI_T_ProvidedButtons_15_330_222_407_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_412_222_488_Fit",
+      "name": "MI_T_ProvidedButtons_15_412_222_488_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_412_222_488_Slice",
+      "name": "MI_T_ProvidedButtons_15_412_222_488_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_494_222_572_Fit",
+      "name": "MI_T_ProvidedButtons_15_494_222_572_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_15_494_222_572_Slice",
+      "name": "MI_T_ProvidedButtons_15_494_222_572_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_20_804_208_882_Fit",
+      "name": "MI_T_ProvidedButtons_20_804_208_882_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_20_804_208_882_Slice",
+      "name": "MI_T_ProvidedButtons_20_804_208_882_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_211_804_396_882_Fit",
+      "name": "MI_T_ProvidedButtons_211_804_396_882_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_211_804_396_882_Slice",
+      "name": "MI_T_ProvidedButtons_211_804_396_882_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_330_429_407_Fit",
+      "name": "MI_T_ProvidedButtons_222_330_429_407_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_330_429_407_Slice",
+      "name": "MI_T_ProvidedButtons_222_330_429_407_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_412_429_488_Fit",
+      "name": "MI_T_ProvidedButtons_222_412_429_488_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_412_429_488_Slice",
+      "name": "MI_T_ProvidedButtons_222_412_429_488_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_494_429_572_Fit",
+      "name": "MI_T_ProvidedButtons_222_494_429_572_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_222_494_429_572_Slice",
+      "name": "MI_T_ProvidedButtons_222_494_429_572_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_143_431_229_Fit",
+      "name": "MI_T_ProvidedButtons_224_143_431_229_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_143_431_229_Slice",
+      "name": "MI_T_ProvidedButtons_224_143_431_229_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_233_431_317_Fit",
+      "name": "MI_T_ProvidedButtons_224_233_431_317_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_233_431_317_Slice",
+      "name": "MI_T_ProvidedButtons_224_233_431_317_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_48_431_142_Fit",
+      "name": "MI_T_ProvidedButtons_224_48_431_142_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_224_48_431_142_Slice",
+      "name": "MI_T_ProvidedButtons_224_48_431_142_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_143_634_229_Fit",
+      "name": "MI_T_ProvidedButtons_430_143_634_229_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_143_634_229_Slice",
+      "name": "MI_T_ProvidedButtons_430_143_634_229_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_233_634_317_Fit",
+      "name": "MI_T_ProvidedButtons_430_233_634_317_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_233_634_317_Slice",
+      "name": "MI_T_ProvidedButtons_430_233_634_317_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_48_634_142_Fit",
+      "name": "MI_T_ProvidedButtons_430_48_634_142_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_430_48_634_142_Slice",
+      "name": "MI_T_ProvidedButtons_430_48_634_142_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_577_804_765_882_Fit",
+      "name": "MI_T_ProvidedButtons_577_804_765_882_Fit",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/MaterialInstances/Shared/MI_T_ProvidedButtons_577_804_765_882_Slice",
+      "name": "MI_T_ProvidedButtons_577_804_765_882_Slice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"MaterialInstanceConstant\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/M_InkTitleFeather",
+      "name": "M_InkTitleFeather",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Material'/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Atlas/M_InkScrollFade",
+      "name": "M_InkScrollFade",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Material'/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Materials/Shared/M_InkScrollFade"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Character/M_DantianUI",
+      "name": "M_DantianUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/HUD/M_HomeAvatarCircle",
+      "name": "M_HomeAvatarCircle",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/HUD/M_InkGoldNamecard",
+      "name": "M_InkGoldNamecard",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/HUD/M_InkNavigationFade",
+      "name": "M_InkNavigationFade",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Inventory/M_InkInventoryAtlasUI",
+      "name": "M_InkInventoryAtlasUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_InkGoldRankCompact",
+      "name": "M_InkGoldRankCompact",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_InkGoldRankLandscape",
+      "name": "M_InkGoldRankLandscape",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_InkGoldRankPortrait",
+      "name": "M_InkGoldRankPortrait",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_InkLeaderboard",
+      "name": "M_InkLeaderboard",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_RankDamageHeader",
+      "name": "M_RankDamageHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_RankSpeedHeader",
+      "name": "M_RankSpeedHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_RankSwordHeader",
+      "name": "M_RankSwordHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Leaderboard/M_RankTierSlice",
+      "name": "M_RankTierSlice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuContinueDisabled",
+      "name": "M_ProvidedMenuContinueDisabled",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686BBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuContinueHover",
+      "name": "M_ProvidedMenuContinueHover",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuContinueNormal",
+      "name": "M_ProvidedMenuContinueNormal",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976867BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitDisabled",
+      "name": "M_ProvidedMenuExitDisabled",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitDisabledClean",
+      "name": "M_ProvidedMenuExitDisabledClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitHover",
+      "name": "M_ProvidedMenuExitHover",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitHoverClean",
+      "name": "M_ProvidedMenuExitHoverClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitNormal",
+      "name": "M_ProvidedMenuExitNormal",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuExitNormalClean",
+      "name": "M_ProvidedMenuExitNormalClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsDisabled",
+      "name": "M_ProvidedMenuSettingsDisabled",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsDisabledClean",
+      "name": "M_ProvidedMenuSettingsDisabledClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsHover",
+      "name": "M_ProvidedMenuSettingsHover",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsHoverClean",
+      "name": "M_ProvidedMenuSettingsHoverClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsNormal",
+      "name": "M_ProvidedMenuSettingsNormal",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuSettingsNormalClean",
+      "name": "M_ProvidedMenuSettingsNormalClean",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuStartDisabled",
+      "name": "M_ProvidedMenuStartDisabled",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuStartHover",
+      "name": "M_ProvidedMenuStartHover",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Menu/M_ProvidedMenuStartNormal",
+      "name": "M_ProvidedMenuStartNormal",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Rewards/M_ClaimableChestUI",
+      "name": "M_ClaimableChestUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkAtlasUI",
+      "name": "M_InkAtlasUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkCloudRibbon",
+      "name": "M_InkCloudRibbon",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkCultivateSigil",
+      "name": "M_InkCultivateSigil",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkHudVeil",
+      "name": "M_InkHudVeil",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkPaperCloud",
+      "name": "M_InkPaperCloud",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkSceneSoft",
+      "name": "M_InkSceneSoft",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+      "name": "M_InkScrollFade",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkTitleAura",
+      "name": "M_InkTitleAura",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather",
+      "name": "M_InkTitleFeather",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkWash",
+      "name": "M_InkWash",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkWheel",
+      "name": "M_InkWheel",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_QualityFrameUI",
+      "name": "M_QualityFrameUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_RealmIconTransparent",
+      "name": "M_RealmIconTransparent",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_SlotMoteUI",
+      "name": "M_SlotMoteUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_TitleMoteUI",
+      "name": "M_TitleMoteUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaBacking",
+      "name": "M_XianxiaBacking",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonHover",
+      "name": "M_XianxiaButtonHover",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonHoverSlice",
+      "name": "M_XianxiaButtonHoverSlice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonNormal",
+      "name": "M_XianxiaButtonNormal",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonNormalSlice",
+      "name": "M_XianxiaButtonNormalSlice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B9BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonPressed",
+      "name": "M_XianxiaButtonPressed",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonPressedSlice",
+      "name": "M_XianxiaButtonPressedSlice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonSelected",
+      "name": "M_XianxiaButtonSelected",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_XianxiaButtonSelectedSlice",
+      "name": "M_XianxiaButtonSelectedSlice",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/Origin_0a1a0024/M_TitleMoteUI",
+      "name": "M_TitleMoteUI",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"Material\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Character/NS_Dantian",
+      "name": "NS_Dantian",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/HUD/NS_AvatarFrameParticles",
+      "name": "NS_AvatarFrameParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/HUD/Origin_bd53e1fc/NS_AvatarFrameParticles",
+      "name": "NS_AvatarFrameParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DFBC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Rewards/NS_ClaimableChest",
+      "name": "NS_ClaimableChest",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_HonorParticles",
+      "name": "NS_HonorParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D6BC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+      "name": "NS_InkTitleAura",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_NodeBorder",
+      "name": "NS_NodeBorder",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_RealmIconParticles",
+      "name": "NS_RealmIconParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_RealmParticles",
+      "name": "NS_RealmParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/Origin_324c5242/NS_HonorParticles",
+      "name": "NS_HonorParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/Origin_349aca5e/NS_RealmIconParticles",
+      "name": "NS_RealmIconParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/Origin_64b59c08/NS_RealmParticles",
+      "name": "NS_RealmParticles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Niagara\", asset_name: \"NiagaraSystem\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters",
+      "name": "T_XianxiaMeters",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedButtons",
+      "name": "T_ProvidedButtons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedInventory",
+      "name": "T_ProvidedInventory",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedRank",
+      "name": "T_ProvidedRank",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_A",
+      "name": "T_Rating_A",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_B",
+      "name": "T_Rating_B",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_C",
+      "name": "T_Rating_C",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_D",
+      "name": "T_Rating_D",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_S",
+      "name": "T_Rating_S",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_SS",
+      "name": "T_Rating_SS",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Character/T_Rating_SSS",
+      "name": "T_Rating_SSS",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Cultivation/T_CultivationPadded",
+      "name": "T_CultivationPadded",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+      "name": "T_InkMeditation",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_LifePotion",
+      "name": "T_Gift_LifePotion",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_LoveExplosion",
+      "name": "T_Gift_LoveExplosion",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_MysteryAirdrop",
+      "name": "T_Gift_MysteryAirdrop",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_StrawberryDessert",
+      "name": "T_Gift_StrawberryDessert",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_SuperAirdrop",
+      "name": "T_Gift_SuperAirdrop",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976801BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_SuperJet",
+      "name": "T_Gift_SuperJet",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768273C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Gifts/T_Gift_Wand",
+      "name": "T_Gift_Wand",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097686F3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeAvatarFrame",
+      "name": "T_HomeAvatarFrame",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768213C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeAvatarPortrait",
+      "name": "T_HomeAvatarPortrait",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976861BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeBarTrack",
+      "name": "T_HomeBarTrack",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x00000000976841BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeBottomCloud",
+      "name": "T_HomeBottomCloud",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C6BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeHealthFill",
+      "name": "T_HomeHealthFill",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F5BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeIconActivity",
+      "name": "T_HomeIconActivity",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F63C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeIconCultivate",
+      "name": "T_HomeIconCultivate",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768683C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeIconJourney",
+      "name": "T_HomeIconJourney",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D13C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeIconMenu",
+      "name": "T_HomeIconMenu",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F13C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeIdentityInk",
+      "name": "T_HomeIdentityInk",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FCBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomePreviewPaper",
+      "name": "T_HomePreviewPaper",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768FD3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeQiFill",
+      "name": "T_HomeQiFill",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeRealmPlaque",
+      "name": "T_HomeRealmPlaque",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_HomeTopTile",
+      "name": "T_HomeTopTile",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_InkGoldNamecard",
+      "name": "T_InkGoldNamecard",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_NavigationAtlas",
+      "name": "T_NavigationAtlas",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_NavigationComplete",
+      "name": "T_NavigationComplete",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D1BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+      "name": "T_XianxiaMeters",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D03C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Inventory/T_HomeIconBag",
+      "name": "T_HomeIconBag",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DDBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory",
+      "name": "T_ProvidedInventory",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768563C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Journey/T_ResourceAtlas_v1",
+      "name": "T_ResourceAtlas_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D23C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Journey/T_WorldAtlas_v1",
+      "name": "T_WorldAtlas_v1",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D73C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_HomeIconRank",
+      "name": "T_HomeIconRank",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768003C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_HomeRankPaper",
+      "name": "T_HomeRankPaper",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768223C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_InkGoldLeaderboardLandscape",
+      "name": "T_InkGoldLeaderboardLandscape",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DEBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_InkGoldLeaderboardPortrait",
+      "name": "T_InkGoldLeaderboardPortrait",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097683FBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_LeaderboardTitles",
+      "name": "T_LeaderboardTitles",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DABC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank",
+      "name": "T_ProvidedRank",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D3BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankDamageHeader",
+      "name": "T_RankDamageHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768DF3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankDamageRows",
+      "name": "T_RankDamageRows",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097685CBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankDamageRowsSpaced",
+      "name": "T_RankDamageRowsSpaced",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D0BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSpeedHeader",
+      "name": "T_RankSpeedHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x0000000097684D3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSpeedRows",
+      "name": "T_RankSpeedRows",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768673C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordHeader",
+      "name": "T_RankSwordHeader",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows",
+      "name": "T_RankSwordRows",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Menu/T_ProvidedMenuControls",
+      "name": "T_ProvidedMenuControls",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Rewards/T_ChestStates",
+      "name": "T_ChestStates",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Rewards/T_Gift_RareChest",
+      "name": "T_Gift_RareChest",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BA3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Rewards/T_HomeIconSignIn",
+      "name": "T_HomeIconSignIn",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_CohesionControls",
+      "name": "T_CohesionControls",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons",
+      "name": "T_CohesionIcons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CDBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_CohesionScenes",
+      "name": "T_CohesionScenes",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+      "name": "T_InkAttributeIcons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkFeatureScenes",
+      "name": "T_InkFeatureScenes",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CC3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+      "name": "T_InkTitle",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PolishControls",
+      "name": "T_PolishControls",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments",
+      "name": "T_PolishOrnaments",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B73C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PortraitControls",
+      "name": "T_PortraitControls",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PortraitPanel",
+      "name": "T_PortraitPanel",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons",
+      "name": "T_ProvidedButtons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_ProvidedTitle",
+      "name": "T_ProvidedTitle",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_RealmBanners",
+      "name": "T_RealmBanners",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BABC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_RealmChart",
+      "name": "T_RealmChart",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B93C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_XianxiaBacking",
+      "name": "T_XianxiaBacking",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B7BC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_XianxiaButtons",
+      "name": "T_XianxiaButtons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C33C) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_XianxiaButtonsRectangular",
+      "name": "T_XianxiaButtonsRectangular",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CBBC) {package_name: \"/Script/Engine\", asset_name: \"Texture2D\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Activities/WBP_LaunchEvent",
+      "name": "WBP_LaunchEvent",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CCBC) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Character/WBP_CharacterProfile",
+      "name": "WBP_CharacterProfile",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BD3C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Character/WBP_InkCharacter",
+      "name": "WBP_InkCharacter",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C7BC) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Inventory/WBP_InkInventory",
+      "name": "WBP_InkInventory",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CA3C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Journey/WBP_JourneyDestination",
+      "name": "WBP_JourneyDestination",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CB3C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Journey/WBP_JourneyMap",
+      "name": "WBP_JourneyMap",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768493C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+      "name": "WBP_InkLeaderboard",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BEBC) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Menu/WBP_InkMainMenu",
+      "name": "WBP_InkMainMenu",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C43C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "name": "WBP_InkFrontend",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CD3C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkSaves",
+      "name": "WBP_InkSaves",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768B83C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkSettings",
+      "name": "WBP_InkSettings",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768C2BC) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_RewardReceipt",
+      "name": "WBP_RewardReceipt",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768BB3C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Wuling/WBP_WulingSect",
+      "name": "WBP_WulingSect",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D33C) {package_name: \"/Script/UMGEditor\", asset_name: \"WidgetBlueprint\"}>"
+    }
+  ],
+  "redirectors": [
+    {
+      "package": "/Game/UI/Ink/Materials/M_InkTitleFeather",
+      "name": "M_InkTitleFeather",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768D8BC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Material'/Game/UI/Ink/Materials/Shared/M_InkTitleFeather.M_InkTitleFeather'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Atlas/M_InkScrollFade",
+      "name": "M_InkScrollFade",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Material'/Game/UI/Ink/Materials/Shared/M_InkScrollFade.M_InkScrollFade'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Materials/Shared/M_InkScrollFade"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters",
+      "name": "T_XianxiaMeters",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F93C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedButtons",
+      "name": "T_ProvidedButtons",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F83C) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Shared/T_ProvidedButtons.T_ProvidedButtons'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedInventory",
+      "name": "T_ProvidedInventory",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768F0BC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory.T_ProvidedInventory'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory"
+      ]
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedRank",
+      "name": "T_ProvidedRank",
+      "asset_class": "<Struct 'TopLevelAssetPath' (0x000000009768CABC) {package_name: \"/Script/CoreUObject\", asset_name: \"ObjectRedirector\"}>",
+      "destination_tag": "/Script/Engine.Texture2D'/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank.T_ProvidedRank'",
+      "referencers": [],
+      "dependencies": [
+        "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank"
+      ]
+    }
+  ]
+}

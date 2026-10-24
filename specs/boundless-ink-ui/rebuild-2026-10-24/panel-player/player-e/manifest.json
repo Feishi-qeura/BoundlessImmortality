@@ -1,0 +1,42 @@
+{
+  "team": "panel-player",
+  "slice": "player-e",
+  "updated_at": "2026-10-24T13:23:00+08:00",
+  "approval": "approved:false",
+  "production_source_modified": false,
+  "production_content_modified": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "files": [
+    {
+      "path": "contracts/action-adapter.yaml",
+      "bytes": 3070,
+      "sha256": "785A54736A2636FDBBFD00F5C3634E92C6A7DC4D7B67A2939B3BB78FF609E53A"
+    },
+    {
+      "path": "contracts/page-component-map.yaml",
+      "bytes": 3482,
+      "sha256": "3F6F7E3B31437B7446273F0C3BDE763E1B02F6083B9B14CFFFD7829BBCD1D3B0"
+    },
+    {
+      "path": "execution-basis.md",
+      "bytes": 1926,
+      "sha256": "B795F20BACBE9B8BA1F1EC0AF6BE1DD4E2E1CB181AE903167EF3677225666FA0"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 2277,
+      "sha256": "E45F9F0B52BFB965388704D626C72FC2948A5DC65E8E209159034BED5B53240B"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.cpp",
+      "bytes": 23505,
+      "sha256": "762BFA4CCBFD6FC30263EAD518771C13BBA5857C15A7F00564B43EEC60DBBB03"
+    },
+    {
+      "path": "staged-source/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.h",
+      "bytes": 4978,
+      "sha256": "CB8D0E2276E633706F4B9A53383FFB8E8F73222063FF2C563A25A9D2C591C117"
+    }
+  ]
+}

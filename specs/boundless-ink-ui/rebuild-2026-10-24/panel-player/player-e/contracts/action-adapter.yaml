@@ -1,0 +1,56 @@
+slice: player-e
+approved: false
+canonical_action_contract: ../../../model/action-contract.yaml
+canonical_screen_bindings: ../../../model/screen-bindings.json
+dispatch_delegate: InkPlayerBreakthroughTribulationWidgets::FActionRequested
+payload_type: InkPlayerBreakthroughTribulationWidgets::FActionPayload
+transport_owner: logic-integration host adapter
+rules:
+  - ui.* intents update local selection and host-owned confirmation state only.
+  - Revalidate active route, actor role, connected state, not-busy state, fresh subject, and native stage before dispatch.
+  - Keep stable selection/attempt IDs during pending, offline, or error states; never optimistically alter authority state.
+  - Never serialize an unknown material count as zero; resolve current host selection by its revision or leave that command unavailable.
+pages:
+  breakthrough:
+    route: {page_id: breakthrough, entry: BreakthroughPrepare, resolved_existing_route: WulingBreakthrough}
+    local_intents:
+      - {id: ui.breakthrough.add-material, payload: item_id and count_delta=1}
+      - {id: ui.breakthrough.select-material, payload: item_id/count}
+      - {id: ui.breakthrough.adjust-count, payload: item_id and count_delta}
+      - {id: ui.breakthrough.set-rework-mode, payload: rework_mode}
+      - {id: ui.breakthrough.request-confirmation, payload: rework_mode}
+      - {id: ui.breakthrough.cancel-confirmation, payload: none}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: quote-breakthrough
+        handler: InkCore::QuoteBreakthrough
+        parameters: {selection: actual item_id/count, rework_mode: actual mode}
+        optimistic_result: false
+      - id: prepare-breakthrough
+        handler: InkCore::PrepareBreakthrough
+        parameters: {selection: current actual item_id/count, rework_mode: false}
+        dispatch_gate: explicit confirmation plus canonical host availability
+        optimistic_result: false
+      - id: rework-quality
+        handler: InkCore::PrepareBreakthrough(Rework=true)
+        parameters: {selection: current actual item_id/count, rework_mode: true}
+        dispatch_gate: explicit confirmation plus canonical host availability
+        optimistic_result: false
+  tribulation:
+    route: {page_id: tribulation, entry: Tribulation, resolved_existing_route: WulingBreakthrough}
+    local_intents:
+      - {id: ui.tribulation.request-cancel-confirmation, payload: actual_attempt_id}
+      - {id: ui.tribulation.cancel-confirmation, payload: none}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: cancel-breakthrough
+        handler: InkCore::CancelOrReconcile
+        parameters: {actual_attempt_id: current provider attempt id}
+        dispatch_gate: host confirms Prepare phase and no server trial_start
+        confirmation_required: true
+        optimistic_result: false
+      - id: reconcile-breakthrough
+        handler: InkCore::CancelOrReconcile
+        parameters: {actual_attempt_id: current provider attempt id}
+        dispatch_gate: host confirms actual Reconcile phase
+        optimistic_result: false

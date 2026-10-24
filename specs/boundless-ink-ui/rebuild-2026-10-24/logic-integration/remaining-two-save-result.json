@@ -1,0 +1,20 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:43:18.447431+00:00",
+  "scope": [
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+  ],
+  "objects": {
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1": [],
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters": []
+  },
+  "save_packages_returned": true,
+  "dirty_after": [
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1"
+  ],
+  "map_dirty_after": [],
+  "passed": false,
+  "preserve_editor_memory": true
+}

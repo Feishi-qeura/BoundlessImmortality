@@ -1,0 +1,6 @@
+Begin Object Class=/Script/BoundlessImmortality.InkUiThemeData Name="DA_InkUITheme_v1" ExportPath="/Script/BoundlessImmortality.InkUiThemeData'/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1'"
+   DisplayFont="/Script/Engine.Font'/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay'"
+   BodyFont="/Script/Engine.Font'/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody'"
+   DataFont="/Script/Engine.Font'/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody'"
+   FallbackFont="/Script/Engine.Font'/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback'"
+End Object

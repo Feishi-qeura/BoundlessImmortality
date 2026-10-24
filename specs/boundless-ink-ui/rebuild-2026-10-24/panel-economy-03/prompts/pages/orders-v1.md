@@ -1,0 +1,3 @@
+# Orders · concept prompt
+
+Create one full portrait mobile UI composition concept for a Chinese cultivation game's own orders page. A calm pine-ink header, provider state, a scrollable card list of actual owner orders/listings with blank ID/item/price/state/time fields, and a secondary cancel area that is disabled unless the service confirms the exact listing is cancellable. Reserve a fixed navigation footer. Shared ink, jade, warm ivory, restrained gold; labels “我的订单”, “订单待同步”, “状态”, “价格”, “撤销”, “等待服务确认”. No invented item, price, order, sale result, fees, refund, completion state, or optimistic cancellation. Composition only; all fields and actions remain live UMG.

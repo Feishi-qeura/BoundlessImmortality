@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "project_id": "rebuild-2026-10-24",
+  "sources": [
+    {
+      "id": "player-main-v3",
+      "screen_id": "main",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-player-core-mapping-correction\\main-menu-v3.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "d980a8339ac1304a31b6f608e23a5549001281a87eeb140c51b4fa8679690f21",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "player-breakthrough-v3",
+      "screen_id": "breakthrough",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-player-core-mapping-correction\\breakthrough-preparation-v3.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "82fd74b5b5d6f2cd60a048d03bdac13e33141d76fd1a7409d06a9013bd0f8e06",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "player-tribulation-v3",
+      "screen_id": "tribulation",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-player-core-mapping-correction\\tribulation-live-v3.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "0404447550aa3b0ea5b01288584e1b3839faaa92def0490ee9e056c18105e922",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "activities-empty-v3",
+      "screen_id": "activities",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-activity-state-correction-3\\assets\\pages\\activities-empty-v3.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "0896129f9b0c91f04fdf25495b630a9640303132713d17781fb63e5dd0e73338",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "launch-pending-v3",
+      "screen_id": "launch",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-activity-state-correction-3\\assets\\pages\\launch-milestone-pending-v3.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "1e7bd5b9dec1ae860f03a300760499fd0cb8a47ecfcc2adc4fe7c3bf27ffe538",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "world-map-v3",
+      "screen_id": "world",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-maps-signin\\assets\\world-map-v3-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "904000ae83881c0402679b5d81975b5da6625f7f1e8381373fb075d6d7ce4f47",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "resource-map-v2",
+      "screen_id": "resources",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-maps-signin\\assets\\resources-map-v2-candidate.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "5ff704edbd20c7039728b121fda0c0fa5910b2c8bb0265e65b41625d69cfedbd",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "sign-in-v2",
+      "screen_id": "sign-in",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-maps-signin\\assets\\daily-sign-in-v2-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "7a4a805c7f056ddf10004c867f5ab4bfc31f6a266f6b3aaa2c99ec90ff8abf4f",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "monthly-sign-in-v2",
+      "screen_id": "monthly-sign-in",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-maps-signin\\assets\\monthly-sign-in-v2-candidate.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "233230b8908123c65ae81852a78ac6d8276cd4340ea76b6e922d949e24c211dc",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "rank-damage-v2",
+      "screen_id": "leaderboard",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-rank-wuling\\assets\\pages\\rw-leaderboard-damage-candidate-v2.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "4984754fb5a5abe8562f76b5ad72ee0320243160f1ce31c9373fd950743bde8d",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "rank-cultivation-v2",
+      "screen_id": "leaderboard",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-rank-wuling\\assets\\pages\\rw-leaderboard-cultivation-candidate-v2.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "355a1040fe205e8dd5c1d4dffb7fb2ca165ff35c227eac6a1880f18f683c7456",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "rank-spirit-v2",
+      "screen_id": "leaderboard",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-rank-wuling\\assets\\pages\\rw-leaderboard-spirit-candidate-v2.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "a0eb106064fba54d8d51543671e446697e4dc6714a5bb8f268403b415c9b79fc",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    },
+    {
+      "id": "wuling-v2",
+      "screen_id": "wuling",
+      "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\revisions\\2026-10-23-parallel-rank-wuling\\assets\\pages\\rw-wuling-home-candidate-v2.png",
+      "dimensions": [
+        940,
+        1672
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "sha256": "2f9d45edfde5014cbe6a2f98a6fc31d05b3a5eff204e74e3b3a686490a443176",
+      "approved": false,
+      "metadata_measured": true,
+      "visually_inspected_in_this_run": true,
+      "use": "authorized candidate input; never runtime whole-page texture",
+      "old_restrictions_in_manifest": "superseded by rebuild quickstart; no old layout-preservation requirement inherited"
+    }
+  ],
+  "viewed_count": 13
+}

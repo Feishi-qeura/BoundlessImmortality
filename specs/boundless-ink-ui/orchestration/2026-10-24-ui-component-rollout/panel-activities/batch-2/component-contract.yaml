@@ -1,0 +1,84 @@
+batch: batch-2
+owner: panel-activities
+approved: false
+source_path: staged-source
+units:
+  - id: launch-page
+    class: UInkLaunchEventBatch2Panel
+    route_candidate: LaunchEvent
+    includes:
+      - overview
+      - tasks
+      - guild milestones
+      - honors entry
+      - offer panel disabled pending SKU, price, and purchase API
+    authority:
+      event: launch
+      personal: launch.personal
+      tasks: launch.tasks
+      guild_milestones: launch.guild_milestones
+      confirmed_rounds: launch.complete_rounds array; count only after successful array retrieval
+      permissions: launch.permissions
+      clock: server UTC start/end converted to Hong Kong display time
+    actions:
+      - StartLaunch through InkJourneyAdapter::Submit(StartLaunch), with click-time gate
+      - explicit second click confirms a new start request
+      - active event enters the existing WulingWorld route
+      - OpenLaunchRank local route request
+      - task settlement is service-owned; no client claim action
+    refresh:
+      - active route
+      - snapshot version and service enabled/connected/busy/status
+      - selected tab and serialized launch/identity/guild/manifest fields
+  - id: launch-rank
+    class: UInkLaunchRankBatch2Panel
+    route_candidate: LaunchRank
+    fields:
+      - launch.start
+      - launch.end
+      - launch.personal.score
+      - launch.personal.complete_count
+      - launch.leaderboard[].rank
+      - launch.leaderboard[].name
+      - launch.leaderboard[].score
+    rules:
+      - server ranks and ties are rendered as returned
+      - no local qualification, tie, reward, or rank is synthesized
+    refresh:
+      - active route
+      - snapshot version and service enabled/connected/busy/status
+      - serialized launch leaderboard and personal fields
+  - id: activity-detail-shell
+    classes:
+      base: UInkActivityDetailBatch2PanelBase
+      daily: UInkDailyActivityDetailBatch2Panel
+      limited: UInkTimedActivityDetailBatch2Panel
+    route_candidates:
+      - DailyActivityDetail
+      - TimedActivityDetail
+    selection: UInkExtensionWidget.SelectedEntry
+    authority:
+      - InkJourneyAdapter::Capture
+      - InkJourneyAdapter::Read
+      - exact activity_id and cycle match from templates
+    actions:
+      - ACT_SIGN daily entry uses InkJourneyAdapter::Submit(SignIn)
+      - all other participation actions remain unavailable pending endpoint contracts
+      - service day is captured for display and revalidated on click
+    refresh:
+      - active route, snapshot version, service state, selected entry and cycle
+      - service day and serialized activity data
+states:
+  detail: loading, offline, missing, ready; expired remains pending until an authority expiry contract is exposed
+  unavailable_values: show neutral pending labels
+assets:
+  approved: false
+  dynamic_values_rendered_as_text: true
+  importable_components:
+    - launch-seal-neutral-v1.png
+    - activity-detail-divider-v1.png
+    - rank-position-frame-v1.png
+  page_concepts_not_runtime_textures:
+    - launch-page-concept-v1.png
+    - launch-rank-page-concept-v1.png
+    - activity-detail-page-concept-v1.png

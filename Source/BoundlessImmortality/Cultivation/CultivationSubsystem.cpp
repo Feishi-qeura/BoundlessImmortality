@@ -27,15 +27,15 @@ FObject WriteRecord(const FCultivationParticipantRecord& R)
     J->SetArrayField(TEXT("unlocked"),Unlocks);J->SetArrayField(TEXT("star_ready_at"),Stars);
     auto Materials=MakeShared<FJsonObject>();for(const auto& P:R.Materials)Materials->SetNumberField(P.Key.ToString(),P.Value);J->SetObjectField(TEXT("materials"),Materials);return J;
 }
-double Number(const FObject& J,const TCHAR* Key,double Default=0){double V=Default;J->TryGetNumberField(Key,V);return FMath::IsFinite(V)?V:Default;}
+double RecordNumber(const FObject& J,const TCHAR* Key,double Default=0){double V=Default;J->TryGetNumberField(Key,V);return FMath::IsFinite(V)?V:Default;}
 bool ReadRecord(const FObject& J,FCultivationParticipantRecord& R)
 {
     if(!J.IsValid()||!J->TryGetStringField(TEXT("participant_id"),R.ParticipantId)||R.ParticipantId.IsEmpty()||R.ParticipantId.Len()>1024)return false;
     J->TryGetStringField(TEXT("display_name"),R.DisplayName);J->TryGetStringField(TEXT("avatar_url"),R.AvatarUrl);J->TryGetBoolField(TEXT("is_anchor"),R.bIsAnchor);
-    R.RealmIndex=FMath::Clamp(int32(Number(J,TEXT("realm_index"))),0,1024);R.Cultivation=FMath::Clamp(Number(J,TEXT("cultivation")),0.0,1.e30);
+    R.RealmIndex=FMath::Clamp(int32(RecordNumber(J,TEXT("realm_index"))),0,1024);R.Cultivation=FMath::Clamp(RecordNumber(J,TEXT("cultivation")),0.0,1.e30);
     FString Title;J->TryGetStringField(TEXT("title_id"),Title);R.TitleId=FName(Title);
-    R.WandCount=int64(FMath::Clamp(Number(J,TEXT("wand_count")),0.0,9007199254740991.0));R.WandExpiresUtc=Number(J,TEXT("wand_expires_utc"));R.PotionCount=int64(FMath::Clamp(Number(J,TEXT("potion_count")),0.0,9007199254740991.0));R.PotionExpiresUtc=Number(J,TEXT("potion_expires_utc"));J->TryGetStringField(TEXT("potion_room_id"),R.PotionRoomId);
-    R.SoulActiveUntil=Number(J,TEXT("soul_active_until"));R.SoulReadyAt=Number(J,TEXT("soul_ready_at"));R.JetActiveUntil=Number(J,TEXT("jet_active_until"));R.JetReadyAt=Number(J,TEXT("jet_ready_at"));R.Version=int64(FMath::Clamp(Number(J,TEXT("version")),0.0,9.e15));R.LastSeenUtc=Number(J,TEXT("last_seen_utc"));
+    R.WandCount=int64(FMath::Clamp(RecordNumber(J,TEXT("wand_count")),0.0,9007199254740991.0));R.WandExpiresUtc=RecordNumber(J,TEXT("wand_expires_utc"));R.PotionCount=int64(FMath::Clamp(RecordNumber(J,TEXT("potion_count")),0.0,9007199254740991.0));R.PotionExpiresUtc=RecordNumber(J,TEXT("potion_expires_utc"));J->TryGetStringField(TEXT("potion_room_id"),R.PotionRoomId);
+    R.SoulActiveUntil=RecordNumber(J,TEXT("soul_active_until"));R.SoulReadyAt=RecordNumber(J,TEXT("soul_ready_at"));R.JetActiveUntil=RecordNumber(J,TEXT("jet_active_until"));R.JetReadyAt=RecordNumber(J,TEXT("jet_ready_at"));R.Version=int64(FMath::Clamp(RecordNumber(J,TEXT("version")),0.0,9.e15));R.LastSeenUtc=RecordNumber(J,TEXT("last_seen_utc"));
     const TArray<TSharedPtr<FJsonValue>>* Values=nullptr;
     if(J->TryGetArrayField(TEXT("unlocked"),Values))for(const auto& V:*Values){double N=0;if(V->TryGetNumber(N)&&N>=0&&N<=7)R.UnlockedGifts.AddUnique(ECultivationGift(int32(N)));}
     if(J->TryGetArrayField(TEXT("star_ready_at"),Values))for(const auto& V:*Values){double N=0;if(R.StarReadyAt.Num()<64&&V->TryGetNumber(N)&&FMath::IsFinite(N))R.StarReadyAt.Add(N);}

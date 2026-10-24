@@ -1,0 +1,329 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "AVHERD",
+			"instance": "86269D914B54386A643EB8890BE19D3F",
+			"instanceName": "AVHERD-47040",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (26H2) [10.0.26300.9711] ",
+			"model": "Default",
+			"gPU": "AMD Radeon RX 7900 XTX",
+			"cPUModel": "13th Gen Intel(R) Core(TM) i5-13600KF",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.24-03.43.47",
+	"succeeded": 20,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.33575332164764404,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "AuthorityGuard",
+			"fullTestPath": "Boundless.InkUI.Launch.AuthorityGuard",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.015998002141714096,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StableViewKey",
+			"fullTestPath": "Boundless.InkUI.Launch.StableViewKey",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.017021398991346359,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StartFeedback",
+			"fullTestPath": "Boundless.InkUI.Launch.StartFeedback",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.01692739874124527,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Guards",
+			"fullTestPath": "Boundless.InkUI.Rollout20261024.Journey.Guards",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016266301274299622,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Routes",
+			"fullTestPath": "Boundless.InkUI.Rollout20261024.Journey.Routes",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.013899598270654678,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Actions",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Actions",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016171697527170181,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Capacity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Capacity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016303997486829758,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NewMarker",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.NewMarker",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016201503574848175,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Quantity1To100",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.Quantity1To100",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.023449897766113281,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StableIdentity",
+			"fullTestPath": "BoundlessImmortality.Frontend.Inventory.StableIdentity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.017305001616477966,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ActivityFade",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.ActivityFade",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.01607859879732132,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DataChanges",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.DataChanges",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.017052602022886276,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ManualFade",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.ManualFade",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016125500202178955,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "PortraitRows",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.PortraitRows",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.015464100986719131,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Rows",
+			"fullTestPath": "BoundlessImmortality.Frontend.Leaderboard.Rows",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016429699957370758,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Boards",
+			"fullTestPath": "BoundlessImmortality.Frontend.Rollout20261024.Core.Boards",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.017105098813772202,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Inventory",
+			"fullTestPath": "BoundlessImmortality.Frontend.Rollout20261024.Core.Inventory",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.017408199608325958,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MaterialBinding",
+			"fullTestPath": "BoundlessImmortality.Frontend.Rollout20261024.Core.MaterialBinding",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.0175975002348423,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "QuoteContract",
+			"fullTestPath": "BoundlessImmortality.Frontend.Rollout20261024.Core.QuoteContract",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016544997692108154,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ChestProgress",
+			"fullTestPath": "BoundlessImmortality.Frontend.SignIn.ChestProgress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"86269D914B54386A643EB8890BE19D3F"
+			],
+			"duration": 0.016402199864387512,
+			"dateTime": "2026.10.24-03.43.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

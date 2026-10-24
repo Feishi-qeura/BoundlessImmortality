@@ -1,0 +1,722 @@
+--- before/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h
++++ after/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h
+@@ -142,6 +142,8 @@
+     void CompleteLeaderboardAvatar(const FString& Key,UTexture2D* Texture);
+     const TArray<FInkCharacterAttribute>& GetPresentedCharacterAttributes()const{return CharacterAttributes;}
+     const FText& GetPresentedCharacterName()const{return CharacterName;}
++    const TArray<FInkLeaderboardEntry>& GetPresentedRoomLeaderboard()const{return LeaderboardEntries;}
++    bool HasPresentedRoomLeaderboard()const{return bRolloutRoomLeaderboardProvided;}
+     const TArray<FInkDisciplineEntry>& GetPresentedCharacterDisciplines()const{return CharacterDisciplines;}
+     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeInSeconds=.4f;
+     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeOutSeconds=.5f;
+@@ -177,6 +179,7 @@
+     UPROPERTY(Transient) TObjectPtr<UBorder> RuntimeHUDFeedbackPanel;
+     UPROPERTY(Transient) TArray<FInkCharacterAttribute> CharacterAttributes;
+     UPROPERTY(Transient) TArray<FInkDisciplineEntry> CharacterDisciplines;
++    bool bRolloutRoomLeaderboardProvided=false;
+     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> LeaderboardEntries;
+     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> GlobalLeaderboardEntries;
+     FText CharacterName;
+--- before/Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp
+@@ -1,4 +1,5 @@
+ #include "InkFrontendWidget.h"
++#include "Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.h"
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "InkAnchorStatusWidget.h"
+ #include "InkPresentationStyle.h"
+@@ -855,6 +856,8 @@
+ void UInkFrontendWidget::SetCharacterData(const FText& Name,const TArray<FInkCharacterAttribute>& Attributes,const TArray<FInkDisciplineEntry>& Disciplines)
+ {
+     CharacterName=Name;CharacterAttributes=Attributes;CharacterDisciplines=Disciplines;if(CurrentPage==TEXT("Character"))RefreshCharacter();
++    // Collapsed HUD widgets do not tick. Authority publication can reveal a newly started event.
++    if(auto* Countdown=Cast<UInkLaunchHudCountdownWidget>(GetWidgetFromName(TEXT("RolloutHUDLaunchCountdown"))))Countdown->Configure(this);
+     TArray<TObjectPtr<UInkExtensionWidget>> LivePanels;ExtensionPages.GenerateValueArray(LivePanels);
+     for(const auto& Item:LivePanels)if(auto* Panel=Cast<UInkFeaturePanel>(Item))Panel->RefreshLiveData();
+ }
+@@ -863,7 +866,14 @@
+ { SetLeaderboardEntriesForScope(Entries,TEXT("Local")); }
+ 
+ void UInkFrontendWidget::SetLeaderboardEntriesForScope(const TArray<FInkLeaderboardEntry>& Entries,FName Scope)
+-{if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;if(InkLeaderboard::SameEntries(Target,Entries))return;Target=Entries;RefreshLeaderboard();}
++{
++    if(Scope!=TEXT("Global")&&Scope!=TEXT("Local"))return;
++    const bool FirstRoomResponse=Scope==TEXT("Local")&&!bRolloutRoomLeaderboardProvided;
++    if(Scope==TEXT("Local"))bRolloutRoomLeaderboardProvided=true;
++    auto& Target=Scope==TEXT("Global")?GlobalLeaderboardEntries:LeaderboardEntries;
++    if(InkLeaderboard::SameEntries(Target,Entries)){if(FirstRoomResponse)RefreshLeaderboard();return;}
++    Target=Entries;RefreshLeaderboard();
++}
+ void UInkFrontendWidget::SetGlobalLeaderboardConnection(bool bConnected,const FText& Status)
+ {if(bGlobalLeaderboardConnected==bConnected&&GlobalLeaderboardStatus.EqualTo(Status))return;bGlobalLeaderboardConnected=bConnected;GlobalLeaderboardStatus=Status;if(!bConnected)GlobalLeaderboardEntries.Reset();RefreshLeaderboard();}
+ 
+--- before/Source/BoundlessImmortality/Frontend/InkFeaturePanel.h
++++ after/Source/BoundlessImmortality/Frontend/InkFeaturePanel.h
+@@ -2,6 +2,7 @@
+ #include "CoreMinimal.h"
+ #include "InkProgressState.h"
+ #include "InkExtensionWidget.h"
++#include "InkFrontendWidget.h"
+ #include "InkPresentationStyle.h"
+ #include "InkFeaturePanel.generated.h"
+ 
+@@ -27,7 +28,13 @@
+     void SetContext(const FString& Entry);
+     void ConfigureEmbedded(UInkFrontendWidget* Owner,FName Route,bool Portrait,FVector2D Size);
+     virtual void RefreshLiveData();
+-protected:
++    /** Includes the selected child of a retained SignIn/Activities group. */
++    bool IsRolloutPageActive() const;
++    float GetBodyContentHeight() const;
++protected:
++    UFUNCTION() void HandleRolloutSignInRequested();
++    FString RolloutSignInDay;
++    FString RolloutChestDay;
+     virtual void NativeTick(const FGeometry& Geometry,float DeltaSeconds) override;
+     virtual FText PanelTitle() const PURE_VIRTUAL(UInkFeaturePanel::PanelTitle,return FText::GetEmpty(););
+     virtual void BuildPanelContent() PURE_VIRTUAL(UInkFeaturePanel::BuildPanelContent,);
+@@ -89,7 +96,7 @@
+ UCLASS() class BOUNDLESSIMMORTALITY_API UInkSignInPanel : public UInkFeaturePanel
+ { GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action)override; private: int32 SelectedDay=1,SelectedChest=-1; };
+ UCLASS() class BOUNDLESSIMMORTALITY_API UInkMonthlySignInPanel : public UInkFeaturePanel
+-{ GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action) override; private: int32 SelectedChest=-1,CalendarMonthOffset=0; };
++{ GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action) override; private: UFUNCTION() void HandleRolloutCalendarDay(int32 Day); int32 SelectedCalendarDay=0; int32 SelectedChest=-1,CalendarMonthOffset=0; };
+ UCLASS() class BOUNDLESSIMMORTALITY_API UInkDailyFortunePanel : public UInkFeaturePanel
+ { GENERATED_BODY() protected: virtual FText PanelTitle() const override; virtual void BuildPanelContent() override; virtual void HandlePanelAction(const FString& Action)override; private: bool bFortuneDrawn=false; };
+ UCLASS() class BOUNDLESSIMMORTALITY_API UInkActivitiesPanel : public UInkFeaturePanel
+--- before/Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+@@ -1,4 +1,7 @@
+ #include "InkFeaturePanel.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
++#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h"
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "WulingFrontendData.h"
+ #include "InkFrontendWidget.h"
+@@ -62,8 +65,8 @@
+     static const TMap<FName,TSubclassOf<UInkFeaturePanel>> Routes={
+         {TEXT("Extensions"),UInkFeatureHubPanel::StaticClass()},{TEXT("SignIn"),UInkSignInGroupPanel::StaticClass()},
+         {TEXT("MonthlySignIn"),UInkMonthlySignInPanel::StaticClass()},{TEXT("DailyFortune"),UInkDailyFortunePanel::StaticClass()},
+-        {TEXT("Activities"),UInkActivitiesGroupPanel::StaticClass()},{TEXT("DailyActivities"),UInkDailyActivitiesPanel::StaticClass()},
+-        {TEXT("TimedActivities"),UInkTimedActivitiesPanel::StaticClass()},{TEXT("PermanentActivities"),UInkPermanentActivitiesPanel::StaticClass()},{TEXT("Draw"),UInkDrawPanel::StaticClass()},
++        {TEXT("Activities"),UInkIntegratedActivitiesPanel::StaticClass()},{TEXT("DailyActivities"),UInkIntegratedDailyPanel::StaticClass()},
++        {TEXT("TimedActivities"),UInkIntegratedLimitedPanel::StaticClass()},{TEXT("PermanentActivities"),UInkIntegratedPermanentPanel::StaticClass()},{TEXT("Draw"),UInkDrawPanel::StaticClass()},
+         {TEXT("Expedition"),UInkExpeditionPanel::StaticClass()},{TEXT("WorldCultivation"),UInkWorldCultivationPanel::StaticClass()},
+         {TEXT("ResourceContest"),UInkResourceContestPanel::StaticClass()},{TEXT("CharacterProfile"),UInkCharacterProfilePanel::StaticClass()},
+         {TEXT("CharacterEquipment"),UInkCharacterEquipmentPanel::StaticClass()},{TEXT("CharacterSkills"),UInkCharacterSkillsPanel::StaticClass()},
+@@ -240,12 +243,41 @@
+ void UInkFeaturePanel::Open(const FString& Route,const FString& Context)
+ {if(FrontendOwner)FrontendOwner->OpenFeaturePanel(FName(*Route),Context);}
+ 
++float UInkFeaturePanel::GetBodyContentHeight() const
++{
++    float Height=BodyHeight;
++    if(BodyCanvas)for(auto* Child:BodyCanvas->GetAllChildren())
++        if(const auto* Layout=Cast<UCanvasPanelSlot>(Child->Slot))Height=FMath::Max(Height,float(Layout->GetPosition().Y+Layout->GetSize().Y+16));
++    return Height;
++}
++
++bool UInkFeaturePanel::IsRolloutPageActive() const
++{
++    if(!FrontendOwner)return false;
++    if(!bEmbedded)return FrontendOwner->CurrentPage==PageId;
++    const FName GroupRoute=PageId==TEXT("SignIn")||PageId==TEXT("MonthlySignIn")||PageId==TEXT("DailyFortune")?FName(TEXT("SignIn")):FName(TEXT("Activities"));
++    const auto* Group=Cast<UInkFeatureGroupPanel>(FrontendOwner->ExtensionPages.FindRef(GroupRoute));
++    return FrontendOwner->CurrentPage==GroupRoute&&Group&&Group->SelectedRoute==PageId&&Group->ContentPanels.FindRef(PageId)==this;
++}
++
++void UInkFeaturePanel::HandleRolloutSignInRequested()
++{
++    HandleAction(TEXT("SignInClaim"));
++    if(auto* Claim=Cast<UJourneyClaimStateWidget>(GetWidgetFromName(TEXT("RolloutDailyClaim"))))
++    {
++        auto* Service=WulingFrontendData::Service(this);
++        Claim->SetClaimState(Service&&Service->IsBusy()?EDailySignInClaimState::Pending:EDailySignInClaimState::Error,FText::FromString(PreviewFeedback));
++    }
++}
++
+ void UInkFeaturePanel::HandleAction(FName InAction)
+ {
+     const FString Id=InAction.ToString();
+     if(Id==TEXT("SignInClaim"))
+     {
+-        auto* W=WulingFrontendData::Service(this);FeedbackMessage(W&&W->SignIn()?TEXT("签到请求已记录，等待服务确认"):TEXT("服务未连接或有操作待确认"));return;
++        InkJourneyAdapter::FRequest Request;Request.ExpectedDay=RolloutSignInDay;
++        FString ActionFeedback;InkJourneyAdapter::Submit(WulingFrontendData::Service(this),IsRolloutPageActive(),Request,ActionFeedback);
++        FeedbackMessage(ActionFeedback);return;
+     }
+     if(Id==TEXT("Back")||Id==TEXT("List")){if(FrontendOwner)FrontendOwner->CloseFeaturePanel(false);return;}
+     if(Id==TEXT("Close")){if(FrontendOwner)FrontendOwner->CloseFeaturePanel(true);return;}
+--- before/Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+@@ -78,7 +78,7 @@
+     else if(Page==TEXT("RaceLobby")||Page==TEXT("RaceLive")||Page==TEXT("RaceSettlement")||Page==TEXT("ResourceLease"))Page=TEXT("WulingRace");
+     const FName Requested=Page==TEXT("SignIn")&&CurrentPage!=TEXT("SignIn")?SignInSelectedRoute:Page;
+     if(Page==TEXT("MonthlySignIn")||Page==TEXT("DailyFortune"))Page=TEXT("SignIn");
+-    if(Page==TEXT("DailyActivities")||Page==TEXT("TimedActivities"))Page=TEXT("Activities");
++    // Rollout cycle pages are real retained children, with a detail stack of their own.
+     if(!UInkFeaturePanel::ClassForRoute(Page))return false;
+     if(CurrentPage==Page){if(auto* Group=Cast<UInkFeatureGroupPanel>(ExtensionPages.FindRef(Page)))Group->SelectRoute(Requested);if(auto* Panel=Cast<UInkFeaturePanel>(ExtensionPages.FindRef(Page)))Panel->SetContext(ResolvedContext);BindTree();return true;}
+     // Returning to an ancestor retires its descendants instead of creating a navigation cycle.
+--- before/Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp
+@@ -39,11 +39,11 @@
+ void UInkFeatureGroupPanel::RefreshLiveData()
+ {
+     if(!FrontendOwner||FrontendOwner->CurrentPage!=PageId)return;
+-    auto* W=WulingFrontendData::Service(this);if(!W||!W->IsEnabled())return;
++    auto* W=WulingFrontendData::Service(this);
+     const auto A=WulingFrontendData::Activity(this);FString Key;
+     if(A)FJsonSerializer::Serialize(A.ToSharedRef(),TJsonWriterFactory<>::Create(&Key));
+-    Key+=(W->IsBusy()?TEXT("busy"):TEXT("idle"))+W->GetStatus();
+-    if(Key!=AuthorityStateKey){AuthorityStateKey=Key;if(!W->IsBusy()&&!PreviewFeedback.IsEmpty())PreviewFeedback=W->GetStatus();RebuildPanel();}
++    Key+=W?FString::Printf(TEXT("%d|%d|%d|%s"),W->IsEnabled(),W->IsConnected(),W->IsBusy(),*W->GetStatus()):FString(TEXT("disabled"));
++    if(Key!=AuthorityStateKey){AuthorityStateKey=Key;if(W&&!W->IsBusy()&&!PreviewFeedback.IsEmpty())PreviewFeedback=W->GetStatus();RebuildPanel();}
+ }
+ void UInkFeatureGroupPanel::BuildPanelContent()
+ {
+@@ -71,11 +71,15 @@
+         }
+         if(Child->GetParent())Child->RemoveFromParent();Child->ConfigureEmbedded(FrontendOwner,Route,bPortraitLayout,FVector2D(BodyWidth-16.f,FMath::Max(88.f,BodyHeight-ContentY)));
+         auto* ContentSlot=CastChecked<UWidgetSwitcherSlot>(Switcher->AddChild(Child));ContentSlot->SetHorizontalAlignment(HAlign_Fill);ContentSlot->SetVerticalAlignment(VAlign_Fill);
+-        if(Route==SelectedRoute)Switcher->SetActiveWidget(Child);
++        if(Route==SelectedRoute)
++        {
++            Switcher->SetActiveWidget(Child);
++            SwitcherSlot->SetOffsets(FMargin(0,ContentY,BodyWidth,Child->GetBodyContentHeight()));
++        }
+     }
+ }
+ void UInkFeatureGroupPanel::HandlePanelAction(const FString& Id)
+ {
+     if(Id.StartsWith(TEXT("GroupTab_"))){SelectRoute(FName(*Id.Mid(9)));return;}
+-    if(auto* Child=ContentPanels.FindRef(SelectedRoute).Get()){Child->HandleAction(FName(*Id));FeedbackMessage(Child->PreviewFeedback);if(FrontendOwner)FrontendOwner->RefreshExtensionActions();}
++    if(auto* Child=ContentPanels.FindRef(SelectedRoute).Get()){Child->HandleAction(FName(*Id));FeedbackMessage(Child->PreviewFeedback);RebuildPanel();if(FrontendOwner)FrontendOwner->RefreshExtensionActions();}
+ }
+--- before/Source/BoundlessImmortality/Frontend/InkSignInShell.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkSignInShell.cpp
+@@ -1,5 +1,7 @@
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "InkFeaturePanel.h"
++#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+ #include "InkFrontendWidget.h"
+ #include "WulingFrontendData.h"
+ #include "UI/InkUiResponsiveLayout.h"
+@@ -162,9 +164,24 @@
+         !HasEnabledSignInTemplate(Authority)?TEXT("签到模板未提供或未启用"):
+         Service->IsBusy()?TEXT("服务请求处理中"):
+         TEXT("提交签到记录");
+-    auto* Claim=Action(ShellCanvas,TEXT("SignInClaim"),ClaimCaption,24,H-96,W-216,88,true);
+-    CastChecked<UCanvasPanelSlot>(Claim->Slot)->SetZOrder(10);
+-    Claim->SetIsEnabled(CanSign);
++    RolloutSignInDay=ServiceDay;
++    if(!Verse&&!Monthly)
++    {
++        auto* Claim=CreateWidget<UJourneyClaimStateWidget>(GetOwningPlayer());
++        Claim->Rename(TEXT("RolloutDailyClaim"),WidgetTree);
++        InkJourneyAdapter::FRequest Request;Request.ExpectedDay=RolloutSignInDay;
++        const auto Gate=InkJourneyAdapter::Evaluate(InkJourneyAdapter::Capture(Service,IsRolloutPageActive()),Request);
++        const auto ClaimState=!Service||!Service->IsEnabled()?EDailySignInClaimState::Unavailable:!Connected?EDailySignInClaimState::Disconnected:Service&&Service->IsBusy()?EDailySignInClaimState::Pending:
++            !HasSigned?EDailySignInClaimState::Unknown:Signed?EDailySignInClaimState::Claimed:Gate.bAllowed?EDailySignInClaimState::Claimable:EDailySignInClaimState::Unavailable;
++        Claim->SetClaimState(ClaimState,FText::FromString(Gate.Reason));
++        Claim->OnClaimRequested.AddUniqueDynamic(this,&UInkFeaturePanel::HandleRolloutSignInRequested);
++        Place(Claim,24,H-96,W-216,88)->SetZOrder(10);
++    }
++    else
++    {
++        auto* Claim=Action(ShellCanvas,TEXT("SignInClaim"),ClaimCaption,24,H-96,W-216,88,true);
++        CastChecked<UCanvasPanelSlot>(Claim->Slot)->SetZOrder(10);Claim->SetIsEnabled(CanSign);
++    }
+     }
+     auto* Back=Action(ShellCanvas,TEXT("Back"),TEXT("返回"),W-168,H-96,144,88);CastChecked<UCanvasPanelSlot>(Back->Slot)->SetZOrder(10);
+     StatusText=Label(ShellCanvas,TEXT("FeatureFeedback"),PreviewFeedback,24,H-132,W-48,32,24);
+--- before/Source/BoundlessImmortality/Frontend/InkSignInSample.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkSignInSample.cpp
+@@ -1,4 +1,6 @@
+ #include "InkFeaturePanel.h"
++#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+ #include "InkFrontendWidget.h"
+ #include "WulingFrontendData.h"
+ #include "InkBufferedProgressWidget.h"
+@@ -130,7 +132,10 @@
+     auto* Service=WulingFrontendData::Service(this);
+     const auto Activities=WulingFrontendData::Activity(this);
+     const bool Connected=Service&&Service->IsEnabled()&&Service->IsConnected()&&Service->Snapshot().IsValid()&&Activities.IsValid();
+-    const bool CanClaim=HasClaimed&&HasEligible&&HasMilestone&&Eligible&&!Open&&Connected&&!Service->IsBusy();
++    InkJourneyAdapter::FRequest ClaimRequest;ClaimRequest.Action=Monthly?InkJourneyAdapter::EAction::MonthlyChest:InkJourneyAdapter::EAction::SignIn;
++    ClaimRequest.ExpectedDay=Monthly?RolloutChestDay:WulingFrontendData::String(R,TEXT("day"));ClaimRequest.Milestone=static_cast<int32>(Milestone);ClaimRequest.bConfirmed=true;
++    const bool CanClaim=HasClaimed&&HasEligible&&HasMilestone&&Eligible&&!Open&&Connected&&
++        InkJourneyAdapter::Evaluate(InkJourneyAdapter::Capture(Service,IsRolloutPageActive()),ClaimRequest).bAllowed;
+     const FString ActionStatus=!HasClaimed||!HasEligible?TEXT("authority 未提供完整的已领取/领取资格状态，操作已禁用。"):
+         Open?(Monthly?TEXT("本节点已领取，不可重复领取。"):TEXT("今日已签到，不可重复提交签到。")):
+         !HasMilestone?TEXT("authority 未提供有效里程碑编号，无法提交领取请求。"):
+@@ -148,7 +153,7 @@
+ 
+ bool UInkFeaturePanel::HandleSignInChestAction(const FString& Id,bool Monthly,int32& SelectedChest)
+ {
+-    if(Id.StartsWith(TEXT("ChestPreview_"))){SelectedChest=FCString::Atoi(*Id.Mid(13));RebuildPanel();return true;}
++    if(Id.StartsWith(TEXT("ChestPreview_"))){RolloutChestDay=WulingFrontendData::String(WulingFrontendData::Activity(this),TEXT("day"));SelectedChest=FCString::Atoi(*Id.Mid(13));RebuildPanel();return true;}
+     if(Id==TEXT("ChestPreviewClose")){SelectedChest=-1;RebuildPanel();return true;}
+     if(Id!=TEXT("ChestRewardClaim"))return false;
+     const auto Records=Chests(this,Monthly);auto* Service=WulingFrontendData::Service(this);
+@@ -166,8 +171,10 @@
+             Service&&Service->IsBusy()?TEXT("服务请求处理中，操作未提交。"):
+             TEXT("签到服务或活动快照未连接，操作未提交。"));return true;
+     }
+-    const bool Submitted=Monthly?Service->SubmitPrototypeCommand(TEXT("ClaimSignInChest"),FString::Printf(TEXT("{\"milestone\":%d}"),static_cast<int32>(Milestone))):Service->SignIn();
+-    FeedbackMessage(Submitted?(Monthly?TEXT("月签领取请求已提交，等待服务确认"):TEXT("签到请求已提交，等待服务确认")):Service->GetStatus());return true;
++    InkJourneyAdapter::FRequest Request;Request.Action=Monthly?InkJourneyAdapter::EAction::MonthlyChest:InkJourneyAdapter::EAction::SignIn;
++    Request.ExpectedDay=Monthly?RolloutChestDay:WulingFrontendData::String(Records[SelectedChest],TEXT("day"));
++    Request.Milestone=static_cast<int32>(Milestone);Request.bConfirmed=true;
++    FString ActionFeedback;InkJourneyAdapter::Submit(Service,IsRolloutPageActive(),Request,ActionFeedback);FeedbackMessage(ActionFeedback);return true;
+ }
+ 
+ void UInkSignInPanel::BuildPanelContent()
+@@ -204,7 +211,7 @@
+     double MonthSignCount=0;const bool HasMonthSignCount=A&&A->TryGetNumberField(TEXT("month_sign_count"),MonthSignCount);
+     Label(BodyCanvas,TEXT("CalendarStatus"),CalendarMonthOffset==0?(HasMonthSignCount?FString::Printf(TEXT("本月累计 %d 日 · 已确认签到记录"),int32(MonthSignCount)):TEXT("本月累计签到记录尚未同步")):TEXT("历史月份 · 仅标记服务提供的已签记录"),0,108,CalendarW,84,24);
+     const TArray<TSharedPtr<FJsonValue>>* Signed=nullptr;if(A)A->TryGetArrayField(TEXT("signed_days"),Signed);TSet<FString> Dates;if(Signed)for(const auto& V:*Signed)Dates.Add(V->AsString());
+-    const float Cell=CalendarW/7,Row=72;const TCHAR* Week[]={TEXT("一"),TEXT("二"),TEXT("三"),TEXT("四"),TEXT("五"),TEXT("六"),TEXT("日")};
++    const float Cell=CalendarW/7,Row=88;const TCHAR* Week[]={TEXT("一"),TEXT("二"),TEXT("三"),TEXT("四"),TEXT("五"),TEXT("六"),TEXT("日")};
+     for(int I=0;I<7;++I)Label(BodyCanvas,NAME_None,Week[I],I*Cell,212,Cell,36,24,true);
+     // FDateTime uses Monday=1..Sunday=0; the calendar grid begins on Monday.
+     const int Offset=(int(FDateTime(Year,Month,1).GetDayOfWeek())+6)%7,Days=FDateTime::DaysInMonth(Year,Month);
+@@ -213,42 +220,32 @@
+         const int I=Offset+Day-1;const FString Key=FString::Printf(TEXT("%04d-%02d-%02d"),Year,Month,Day);const bool Confirmed=Dates.Contains(Key),Today=Key==Date;
+         const bool NotYetReached=CalendarMonthOffset==0&&Day>ServerDay;
+         const float X=I%7*Cell,Y=264+I/7*Row;
+-        auto* DayCard=Surface(BodyCanvas,NAME_None,InkPresentationStyle::ESurface::Card,X+2,Y,Cell-4,Row-8);
+-        auto DayBrush=DayCard->GetBrush();DayBrush.SetResourceObject(nullptr);DayBrush.DrawAs=ESlateBrushDrawType::RoundedBox;
+-        DayBrush.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;DayBrush.OutlineSettings.CornerRadii=FVector4(5,5,5,5);
+-        if(Confirmed)
+-        {
+-            DayBrush.TintColor=FLinearColor(.23f,.55f,.49f,.16f);DayBrush.OutlineSettings.Color=Today?InkPresentationStyle::Gold():InkPresentationStyle::Jade();DayBrush.OutlineSettings.Width=Today?2.f:1.5f;
+-        }
+-        else if(Today)
+-        {
+-            DayBrush.TintColor=FLinearColor(.72f,.54f,.22f,.19f);DayBrush.OutlineSettings.Color=InkPresentationStyle::Gold();DayBrush.OutlineSettings.Width=2;
+-        }
+-        else if(NotYetReached)
+-        {
+-            DayBrush.TintColor=FLinearColor(.48f,.49f,.45f,.07f);DayBrush.OutlineSettings.Color=FLinearColor(.48f,.49f,.45f,.42f);DayBrush.OutlineSettings.Width=.75f;
+-        }
+-        else
+-        {
+-            DayBrush.TintColor=FLinearColor(.96f,.94f,.88f,.48f);DayBrush.OutlineSettings.Color=FLinearColor(.35f,.39f,.34f,.18f);DayBrush.OutlineSettings.Width=.5f;
+-        }
+-        DayCard->SetBrush(DayBrush);
+-        auto* DayNumber=Label(BodyCanvas,FName(*FString::Printf(TEXT("CalendarDay_%d"),Day)),FString::Printf(TEXT("%d"),Day),X,Y+3,Cell,34,25,true);
+-        DayNumber->SetColorAndOpacity(NotYetReached?FLinearColor(.52f,.53f,.49f,1):InkPresentationStyle::Ink());
+-        const FString DayState=Confirmed?TEXT("已签"):Today?TEXT("今日"):NotYetReached?TEXT("未到"):TEXT("未确认");
+-        auto* State=Label(BodyCanvas,FName(*FString::Printf(TEXT("CalendarState_%d"),Day)),DayState,X,Y+37,Cell,24,17,true);
+-        State->SetColorAndOpacity(Today?InkPresentationStyle::Gold():Confirmed?InkPresentationStyle::Jade():FLinearColor(.47f,.49f,.45f,1));
++        auto* DayCell=CreateWidget<UJourneyCalendarDayWidget>(GetOwningPlayer());
++        DayCell->Rename(*FString::Printf(TEXT("RolloutCalendarCell_%d"),Day),WidgetTree);
++        InkJourneyAdapter::FRequest TodayRequest;TodayRequest.ExpectedDay=Date;
++        const bool TodayEligible=Today&&InkJourneyAdapter::Evaluate(InkJourneyAdapter::Capture(WulingFrontendData::Service(this),IsRolloutPageActive()),TodayRequest).bAllowed;
++        const auto CellState=Confirmed?EJourneyCalendarState::Signed:TodayEligible?EJourneyCalendarState::TodayClaimable:NotYetReached?EJourneyCalendarState::Future:EJourneyCalendarState::Unknown;
++        DayCell->SetDayState(Day,CellState,Day==SelectedCalendarDay);
++        DayCell->OnDayPressed.AddUniqueDynamic(this,&UInkMonthlySignInPanel::HandleRolloutCalendarDay);
++        auto* CellSlot=BodyCanvas->AddChildToCanvas(DayCell);CellSlot->SetOffsets(FMargin(X+2,Y,Cell-4,Row-8));
+     }
+     const float CalendarBottom=264+FMath::DivideAndRoundUp(Offset+Days,7)*Row;
+     Label(BodyCanvas,TEXT("CalendarLegend"),TEXT("金框为今日 · 青玉为已签到\n“未到”为未来日期；“未确认”不代表漏签。"),0,CalendarBottom+16,CalendarW,88,22);
+-    if(CalendarMonthOffset!=0)Action(BodyCanvas,TEXT("CalendarCurrent"),TEXT("返回本月"),0,CalendarBottom+124,CalendarW,88);
+-    BuildSignInChestStrip(true,Wide?0:CalendarBottom+(CalendarMonthOffset?244:132),SelectedChest);
++    if(CalendarMonthOffset!=0)Action(BodyCanvas,TEXT("CalendarCurrent"),TEXT("返回本月"),0,CalendarBottom+212,CalendarW,88);
++    if(SelectedCalendarDay>0)Label(BodyCanvas,TEXT("CalendarSelectedDetail"),FString::Printf(TEXT("已选择 %d 日 · 仅查看服务记录，未知状态不代表漏签"),SelectedCalendarDay),0,CalendarBottom+106,CalendarW,72,22);
++    BuildSignInChestStrip(true,Wide?0:CalendarBottom+(CalendarMonthOffset?300:212),SelectedChest);
++}
++
++void UInkMonthlySignInPanel::HandleRolloutCalendarDay(int32 Day)
++{
++    if(!IsRolloutPageActive())return;
++    SelectedCalendarDay=Day;RebuildPanel();
+ }
+ 
+ void UInkMonthlySignInPanel::HandlePanelAction(const FString& Id)
+ {
+     if(Id==TEXT("CalendarPrevious")||Id==TEXT("CalendarNext")||Id==TEXT("CalendarCurrent"))
+-    {CalendarMonthOffset=Id==TEXT("CalendarCurrent")?0:FMath::Clamp(CalendarMonthOffset+(Id==TEXT("CalendarPrevious")?-1:1),-12,0);RebuildPanel();return;}
++    {SelectedCalendarDay=0;CalendarMonthOffset=Id==TEXT("CalendarCurrent")?0:FMath::Clamp(CalendarMonthOffset+(Id==TEXT("CalendarPrevious")?-1:1),-12,0);RebuildPanel();return;}
+     if(!HandleSignInChestAction(Id,true,SelectedChest))Super::HandlePanelAction(Id);
+ }
+ 
+--- before/Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp
+@@ -2,6 +2,8 @@
+ #include "UI/InkUiTheme.h"
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "InkFrontendWidget.h"
++#include "Frontend/UiRollout20261024/RankWuling/InkRankWulingComponents.h"
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
+ #include "InkPresentationStyle.h"
+ #include "InkLeaderboardTheme.h"
+ #include "InkNiagaraTitleWidget.h"
+@@ -37,6 +39,10 @@
+ namespace InkRankUI
+ {
+     constexpr float CompactWidth=360.f;
++    UTexture2D* RolloutRankTexture()
++    {
++        return LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1"),nullptr,LOAD_NoWarn|LOAD_Quiet);
++    }
+     const float CompactRowsHeight=[](){float H=0;for(int32 Rank=1;Rank<=InkLeaderboard::VisibleRows;++Rank)H+=InkLeaderboard::CompactRowLayout(Rank).Height;return H;}();
+     const float CompactHeight=140.f+CompactRowsHeight;
+     template<typename T> T* Find(UWidgetTree* Tree,FName Name){return Tree?Cast<T>(Tree->FindWidget(Name)):nullptr;}
+@@ -190,7 +196,7 @@
+         Size->SetWidthOverride(Width);Size->SetHeightOverride(Height);Scale->SetContent(Size);
+         auto* Shell=Tree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(),*(Prefix+TEXT("Shell")));
+         Shell->SetVisibility(ESlateVisibility::SelfHitTestInvisible);Size->SetContent(Shell);
+-        SurfaceImage(Tree,Shell,*(Prefix+TEXT("Frame")),InkPresentationStyle::ESurface::FeaturePaper,0,0,Width,Height);
++        InkRankWulingComponents::AddPaperPanel(Tree,Shell,*(Prefix+TEXT("Frame")),RolloutRankTexture(),{0,0,Width,Height,0},FVector4f(136,136,136,136));
+         Shell->SetClipping(EWidgetClipping::ClipToBoundsAlways);
+         SurfaceImage(Tree,Shell,*(Prefix+TEXT("Heading")),InkPresentationStyle::ESurface::FeatureHeading,Compact?12:32,Compact?6:12,Compact?Width-24:Width-64,Compact?44:62);
+         auto* Heading=AddText(Tree,nullptr,FText::FromString(InkLeaderboardTheme::CategoryTitle(Compact?FName(TEXT("CultivationSpeed")):LeaderboardCategory)),Compact?22:34,*(Prefix+TEXT("TitleText")));
+@@ -267,8 +273,8 @@
+     const FString Prefix=Compact?TEXT("RankHUD"):TEXT("RankAnchor");
+     auto* List=Find<UVerticalBox>(Tree,*(Prefix+TEXT("List")));if(!List)return;
+     if(Compact)UpdateCategoryHeading(Tree,TEXT("RankHUD"),Category);
+-    const auto& Source=(!Compact&&LeaderboardScope==TEXT("Global"))?GlobalLeaderboardEntries:LeaderboardEntries;
+-    const auto Rows=InkLeaderboard::MakeRows(Source,Category);
++    const auto Board=InkCore::ReadBoard(this,LeaderboardEntries,(!Compact&&LeaderboardScope==TEXT("Global"))?FName(TEXT("Global")):FName(TEXT("Local")),Category,HasPresentedRoomLeaderboard());
++    const auto Rows=InkLeaderboard::MakeRows(Board.Entries,Category);
+     int32 VisibleEntryCount=0;
+     for(const auto& E:Rows)if(!E.DisplayName.IsEmpty())++VisibleEntryCount;
+     for(const auto& E:Rows)
+@@ -356,7 +362,7 @@
+         if(auto* Empty=Find<UTextBlock>(Tree,TEXT("RankAnchorEmptyState")))
+         {
+             Empty->SetVisibility(bHasEntries?ESlateVisibility::Collapsed:ESlateVisibility::HitTestInvisible);
+-            Empty->SetText(FText::FromString(TEXT("本期暂无上榜修士")));
++            Empty->SetText(FText::FromString(Board.State==InkCorePolicy::EState::Empty?FString(TEXT("本期暂无上榜修士")):Board.Status));
+         }
+     }
+ }
+@@ -383,9 +389,8 @@
+             }
+         if(auto* Status=InkRankUI::Find<UTextBlock>(Tree,TEXT("RankProviderStatus")))
+         {
+-            const FString StatusLabel=LeaderboardScope==TEXT("Global")
+-                ?FString(bGlobalLeaderboardConnected?TEXT("全服排行"):TEXT("全服排行暂未连接 · 可切回本房榜"))
+-                :FString(TEXT("本房排行 · "))+InkLeaderboardTheme::CategoryTitle(LeaderboardCategory);
++            const auto Board=InkCore::ReadBoard(this,LeaderboardEntries,LeaderboardScope,LeaderboardCategory,HasPresentedRoomLeaderboard());
++            const FString StatusLabel=Board.Status+TEXT(" · ")+InkLeaderboardTheme::CategoryTitle(LeaderboardCategory);
+             Status->SetText(FText::FromString(StatusLabel));
+         }
+         UpdateLeaderboardAdaptiveLayout(true);
+@@ -405,7 +410,15 @@
+     if(auto* Size=Find<USizeBox>(WidgetTree,TEXT("RankAnchorSize"))){Size->SetWidthOverride(Width);Size->SetHeightOverride(Height);}
+     auto Move=[&](FName Name,float X,float Y,float W,float H){if(auto* Widget=GetWidgetFromName(Name))if(auto* LayoutSlot=Cast<UCanvasPanelSlot>(Widget->Slot))LayoutSlot->SetOffsets(FMargin(X,Y,W,H));};
+     if(auto* Frame=Find<UImage>(WidgetTree,TEXT("RankAnchorFrame")))
+-        Frame->SetBrush(NativeSurface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(Width,Height)));
++    {
++        if(auto* Texture=RolloutRankTexture())
++        {
++            FSlateBrush Brush;Brush.SetResourceObject(Texture);Brush.DrawAs=ESlateBrushDrawType::Box;
++            Brush.ImageSize=FVector2D(Texture->GetSizeX(),Texture->GetSizeY());
++            Brush.Margin=FMargin(136.f/Texture->GetSizeX(),136.f/Texture->GetSizeY());Frame->SetBrush(Brush);
++        }
++        else Frame->SetBrush(NativeSurface(InkPresentationStyle::ESurface::FeaturePaper,FVector2D(Width,Height)));
++    }
+     Move(TEXT("RankAnchorFrame"),0,0,Width,Height);
+     Move(TEXT("RankAnchorHeading"),32,12,Width-64,62);
+     auto* Title=Find<UTextBlock>(WidgetTree,TEXT("RankAnchorTitleText"));
+--- before/Source/BoundlessImmortality/Frontend/InkHudLayout.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkHudLayout.cpp
+@@ -2,6 +2,7 @@
+ #include "InkAnchorStatusWidget.h"
+ #include "InkPresentationStyle.h"
+ #include "InkHomeArt.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkIntegratedActivityPanels.h"
+ #include "Components/ScaleBox.h"
+ #include "Misc/CommandLine.h"
+ #include "Misc/Parse.h"
+@@ -25,6 +26,9 @@
+     if(IsDesignTime()||!WidgetTree||bRuntimeHudBuilt)return;
+     auto* HUD=Cast<UCanvasPanel>(GetWidgetFromName(TEXT("HUDPage")));if(!HUD)return;
+     bRuntimeHudBuilt=true;
++    auto* LaunchCountdown=CreateWidget<UInkIntegratedLaunchCountdown>(GetOwningPlayer());
++    LaunchCountdown->Rename(TEXT("RolloutHUDLaunchCountdown"),WidgetTree);
++    HUD->AddChildToCanvas(LaunchCountdown)->SetZOrder(4);LaunchCountdown->Configure(this);
+     if(!AnchorStatusWidget)
+     {
+         AnchorStatusWidget=CreateWidget<UInkAnchorStatusWidget>(GetOwningPlayer());
+@@ -182,4 +186,11 @@
+         const auto Rect=R.TopActions[I];
+         Place(GetWidgetFromName(Top[I]),Rect);
+     }
++    float ShortcutLeft=Size.X,ShortcutBottom=0;
++    for(const auto& Rect:R.TopActions){ShortcutLeft=FMath::Min(ShortcutLeft,Rect.Left);ShortcutBottom=FMath::Max(ShortcutBottom,Rect.Bottom);}
++    const bool FitsBesideShortcuts=ShortcutLeft-R.Identity.Left>=212.f;
++    const float CountdownX=FitsBesideShortcuts?ShortcutLeft-212.f:R.Identity.Left;
++    const float CountdownY=FMath::Max(float(R.Announcement.Bottom),FitsBesideShortcuts?float(R.Identity.Bottom):ShortcutBottom)+12.f;
++    const float CountdownW=FMath::Min(200.f,float(Size.X-R.Identity.Left*2));
++    Place(GetWidgetFromName(TEXT("RolloutHUDLaunchCountdown")),FSlateRect(CountdownX,CountdownY,CountdownX+CountdownW,CountdownY+80));
+ }
+--- before/Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp
+@@ -1,3 +1,4 @@
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
+ #include "Frontend/UI/InkUiAssetPaths.h"
+ #include "InkFrontendWidget.h"
+ #include "InkInventoryModel.h"
+@@ -531,10 +532,10 @@
+             const auto* E=Model->FindEntry(SelectedInventoryEntry);
+             if(!W||!E||bInventoryMultiSelect){SetPageFeedback(LOCTEXT("AuthoritySingle","请选中一项物品后提交，批量操作尚未开放"));return true;}
+             if(Action==TEXT("InventoryDecompose")){SetPageFeedback(LOCTEXT("AuthorityNoDecompose","此规则档未开放分解"));return true;}
+-            auto Args=MakeShared<FJsonObject>();Args->SetStringField(TEXT("item_id"),E->Item.ItemId.ToString());Args->SetNumberField(TEXT("count"),FMath::Clamp(InventoryActionQuantity,1,E->Item.Count));
+-            FString Json;FJsonSerializer::Serialize(Args,TJsonWriterFactory<>::Create(&Json));
+-            const FString Op=Action==TEXT("InventoryEquip")?(E->bEquipped?TEXT("Unequip"):TEXT("Equip")):(Action==TEXT("InventorySell")?TEXT("Recycle"):(E->Item.ItemId.ToString().StartsWith(TEXT("BOOK_"))?TEXT("LearnMethod"):TEXT("UseProp")));
+-            SetPageFeedback(FText::FromString(W->SubmitPrototypeCommand(Op,Json)?TEXT("请求已记录，等待服务确认"):W->GetStatus()));return true;
++            const auto CoreAction=Action==TEXT("InventoryEquip")?(E->bEquipped?InkCorePolicy::EInventoryAction::Unequip:InkCorePolicy::EInventoryAction::Equip):
++                Action==TEXT("InventorySell")?InkCorePolicy::EInventoryAction::Sell:InkCorePolicy::EInventoryAction::Use;
++            const auto Result=InkCore::InventoryAction(this,SelectedInventoryEntry,CoreAction,InventoryActionQuantity,CurrentPage==TEXT("Inventory"));
++            SetPageFeedback(FText::FromString(Result.Message));return true;
+         }
+         int32 Changed=0;
+         if(bInventoryMultiSelect&&!InventoryBatchSelection.IsEmpty()&&(Action==TEXT("InventorySell")||Action==TEXT("InventoryDecompose")))
+--- before/Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp
++++ after/Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp
+@@ -1,5 +1,8 @@
+ #include "InkJourneyMapPanel.h"
+ #include "InkJourneyData.h"
++#include "Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkIntegratedJourneyWidgets.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
+ #include "Frontend/InkPresentationStyle.h"
+ #include "InkUiTheme.h"
+ #include "Frontend/InkFrontendWidget.h"
+@@ -53,6 +56,11 @@
+         auto* Text=Cast<UTextBlock>(Pin->GetContent());
+         Text->SetText(FText::FromString(String(Entry,TEXT("name"))+(Available?TEXT("\n查看详情"):TEXT("\n未开放"))));Text->SetFont(InkUiTypography::MakeFont(EInkUiTextRole::Button,24));
+         Text->SetColorAndOpacity(Available?InkPresentationStyle::Ink():FLinearColor(.34f,.37f,.34f,1));Text->SetAutoWrapText(false);
++        auto* Badge=CreateWidget<UInkIntegratedMapBadge>(GetOwningPlayer());
++        Badge->ConfigureBadge(bResourceMap?EJourneyGlyphFamily::ResourcePin:EJourneyGlyphFamily::WorldNode,
++            bResourceMap?NAME_None:Available?FName(TEXT("available")):FName(TEXT("locked")),
++            FText::FromString(String(Entry,TEXT("name"))+(Available?TEXT("\n查看详情"):TEXT("\n未开放"))));
++        Badge->SetVisibility(ESlateVisibility::HitTestInvisible);Pin->SetContent(Badge);
+         CastChecked<UCanvasPanelSlot>(Pin->Slot)->SetZOrder(7);Pin->SetToolTipText(FText::FromString(Available?TEXT("查看地点与前往条件"):TEXT("未开放区域，无法前往")));
+     }
+     const float SX=Wide?MapW+24:0,SY=Wide?MapY:MapY+MapH+24,SW=BodyWidth-SX;
+@@ -106,7 +114,11 @@
+ bool UInkJourneyDestinationPanel::IsResource()const{return PageId==TEXT("JourneyResourceDetail")||PageId==TEXT("ResourceDetail");}
+ FText UInkJourneyDestinationPanel::PanelTitle()const{return FText::FromString(IsResource()?TEXT("灵脉 · 资源详情"):TEXT("山海 · 地点详情"));}
+ bool UInkJourneyDestinationPanel::CanTravel()const
+-{return InkJourneyData::Ready(this)&&InkJourneyData::Open(InkJourneyData::Find(this,IsResource(),SelectedEntry))&&!bTravelPending;}
++{
++    InkJourneyAdapter::FRequest Request;Request.Action=IsResource()?InkJourneyAdapter::EAction::ResourceTravel:InkJourneyAdapter::EAction::WorldTravel;
++    Request.EntryId=SelectedEntry;Request.bConfirmed=true;
++    return !bTravelPending&&InkJourneyAdapter::Evaluate(InkJourneyAdapter::Capture(WulingFrontendData::Service(this),IsRolloutPageActive()),Request).bAllowed;
++}
+ 
+ void UInkJourneyDestinationPanel::BuildPanelContent()
+ {
+@@ -185,8 +197,10 @@
+         auto* W=WulingFrontendData::Service(this);const auto Entry=InkJourneyData::Find(this,IsResource(),SelectedEntry);
+         PreviousRound=WulingFrontendData::String(WulingFrontendData::Object(W->Snapshot(),TEXT("round")),TEXT("id"));
+         PreviousQueue=WulingFrontendData::String(WulingFrontendData::Object(W->Snapshot(),TEXT("race_queue")),TEXT("id"));
+-        bTravelPending=IsResource()?W->QueueRace(WulingFrontendData::String(Entry,TEXT("node_id"))):W->StartWorldRound(TEXT("ENC_SOLO"),TEXT("guard"),WulingFrontendData::String(Entry,TEXT("id")));
+-        FeedbackMessage(bTravelPending?TEXT("正在前往，等待确认"):W->GetStatus());RebuildPanel();return;
++        InkJourneyAdapter::FRequest Request;Request.Action=IsResource()?InkJourneyAdapter::EAction::ResourceTravel:InkJourneyAdapter::EAction::WorldTravel;
++        Request.EntryId=WulingFrontendData::String(Entry,TEXT("id"));Request.bConfirmed=bConfirmTravel;
++        FString ActionFeedback;bTravelPending=InkJourneyAdapter::Submit(W,IsRolloutPageActive(),Request,ActionFeedback);
++        FeedbackMessage(ActionFeedback);RebuildPanel();return;
+     }
+     Super::HandlePanelAction(Id);
+ }
+--- before/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.h
++++ after/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.h
+@@ -3,6 +3,7 @@
+ #include "InkWulingToolsPanel.generated.h"
+ class FJsonObject;
+ class UScrollBox;
++class UInkCoreMaterialBinding;
+ 
+ /** Functional child pages reuse the current shell and styles. Authority owns every write. */
+ UCLASS()
+@@ -16,6 +17,8 @@
+     virtual void BuildPanelContent()override;
+     virtual void HandlePanelAction(const FString& Action)override;
+ private:
++    UPROPERTY(Transient) TObjectPtr<UInkCoreMaterialBinding> RolloutMaterialBinding;
++    UFUNCTION() void HandleRolloutMaterialFeedback(const FString& Message);
+     int32 Offset=0;
+     bool bOwnedOnly=false,bBuilding=false;
+     bool bRework=false;
+--- before/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
++++ after/Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp
+@@ -1,4 +1,9 @@
+ #include "InkWulingToolsPanel.h"
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.h"
++#include "Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkJourneyAdapter.h"
++#include "Frontend/UiRollout20261024/Player/InkPlayerMaterialSlotWidget.h"
++#include "Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.h"
+ #include "Frontend/InkFrontendWidget.h"
+ #include "Wuling/WulingPrototypeSubsystem.h"
+ #include "Dom/JsonObject.h"
+@@ -73,10 +78,17 @@
+ void UInkWulingToolsPanel::BuildPanelContent()
+ {
+     bBuilding=true;
++    if(PageId==TEXT("WulingBreakthrough")&&!RolloutMaterialBinding)
++    {
++        RolloutMaterialBinding=NewObject<UInkCoreMaterialBinding>(this);
++        RolloutMaterialBinding->Configure(FrontendOwner,PageId,bRework);
++        RolloutMaterialBinding->OnFeedback.AddUniqueDynamic(this,&UInkWulingToolsPanel::HandleRolloutMaterialFeedback);
++    }
+     const float OldCatalogOffset=CatalogScroll?CatalogScroll->GetScrollOffset():0;
+     const float OldDetailOffset=DetailScroll?DetailScroll->GetScrollOffset():0;
+     CatalogScroll=nullptr;DetailScroll=nullptr;DisplayRows.Reset();
+     auto* W=Service(this);const auto State=W?W->Snapshot():nullptr;
++    RolloutSignInDay=Str(Obj(State,TEXT("activities")),TEXT("day"));
+     const bool Active=FrontendOwner&&FrontendOwner->CurrentPage==PageId;
+     const bool Ready=Active&&W&&W->IsEnabled()&&W->IsConnected()&&!W->IsBusy();
+     const float Gap=16,Hit=88;
+@@ -389,10 +401,11 @@
+             const bool CoreSlotsValid=!HasSlotCategories||(IsReworkQuote?(SlotCategoriesValid&&QuotedCoreCount<=1):(SlotCategoriesValid&&QuotedCoreCount==1));
+             const TArray<TSharedPtr<FJsonValue>>* Sources=nullptr;
+             const bool HasSources=Q&&Q->TryGetArrayField(TEXT("sources"),Sources)&&Sources->Num()>0;
+-            const bool HasChance=(T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")))||(T&&T->HasField(TEXT("probability_basis_points")))||(Q&&Q->HasField(TEXT("probability_basis_points")));
++            const bool HasChance=!bRework&&((T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")))||(T&&T->HasField(TEXT("probability_basis_points")))||(Q&&Q->HasField(TEXT("probability_basis_points"))));
+             const bool HasStage=!CurrentStage.IsEmpty()&&!TargetStage.IsEmpty();
+             const bool QuoteKindMatches=bRework?IsReworkQuote:Str(Q,TEXT("kind"))!=TEXT("rework");
+-            BreakSubmissionReady=HasStage&&HasQ&&HasNormalizedQ&&HasQuality&&HasGrowth&&HasReadiness&&HasSlots&&SlotFieldsComplete&&HasSources&&HasChance&&ReadyByService&&SelectionMatches&&SlotSelectionMatches&&CoreSlotsValid&&QuoteKindMatches;
++            const bool BreakDisplayComplete=HasStage&&HasQ&&HasNormalizedQ&&HasQuality&&HasGrowth&&HasReadiness&&HasSlots&&SlotFieldsComplete&&HasSources&&HasChance&&ReadyByService&&SelectionMatches&&SlotSelectionMatches&&CoreSlotsValid&&QuoteKindMatches;
++            BreakSubmissionReady=InkCore::EvaluateQuote(State,MaterialSelection,bRework).CanSubmit;
+ 
+             Details.Reset();
+             Details+=TEXT("当前境界：")+CurrentStageDisplay+TEXT("\n目标境界：")+TargetStageDisplay+TEXT("\n");
+@@ -455,7 +468,8 @@
+ 
+             Details+=HasNormalizedQ?FString::Printf(TEXT("标准化评分 Q：%.0f\n"),Num(Q,TEXT("q_normalized"))):TEXT("标准化评分待同步\n");
+             const bool HasTribulationChance=(T&&T->HasField(TEXT("tribulation_chance")))||(Q&&Q->HasField(TEXT("tribulation_chance")));
+-            if(HasTribulationChance)Details+=FString::Printf(TEXT("天劫成功率：%.0f%%\n"),T&&T->HasField(TEXT("tribulation_chance"))?Num(T,TEXT("tribulation_chance")):Num(Q,TEXT("tribulation_chance")));
++            if(bRework)Details+=TEXT("重炼概率：服务未提供\n");
++            else if(HasTribulationChance)Details+=FString::Printf(TEXT("天劫成功率：%.0f%%\n"),T&&T->HasField(TEXT("tribulation_chance"))?Num(T,TEXT("tribulation_chance")):Num(Q,TEXT("tribulation_chance")));
+             else if(HasChance)
+             {
+                 const double ChanceBasisPoints=T&&T->HasField(TEXT("probability_basis_points"))?Num(T,TEXT("probability_basis_points")):Num(Q,TEXT("probability_basis_points"));
+@@ -467,14 +481,15 @@
+             Details+=TEXT("报价状态：")+(ServiceQuoteStatus.IsEmpty()?TEXT("待同步"):ServiceQuoteStatus)+TEXT("\n");
+             if(T)Details+=FString::Printf(TEXT("天劫服务状态：%s · 助力 %.0f 人 · 剩余 %.0f 秒\n"),*Str(T,TEXT("status")),Num(T,TEXT("helper_count")),FMath::Max(0.,Num(T,TEXT("deadline"))-Num(State,TEXT("server_utc"))));
+             else Details+=TEXT("天劫状态待同步\n");
+-            const FString ReadinessStatus=!HasReadiness?FString(TEXT("待同步")):(ReadyByService?FString(TEXT("服务确认可提交")):Str(Readiness,TEXT("reason")));
++            const FString ReadinessStatus=!HasReadiness?FString(TEXT("服务未提供；提交时校验")):(ReadyByService?FString(TEXT("服务准备度标记通过；仍需提交校验")):Str(Readiness,TEXT("reason")));
+             Details+=TEXT("准备度：")+ReadinessStatus+TEXT("\n");
+             Details+=TEXT("取消/对账：")+(BreakCancelReason.IsEmpty()?(CanReconcile?FString(TEXT("可查询对账")):FString(TEXT("可在试炼开始前取消"))):BreakCancelReason)+TEXT("\n");
+-            if(!BreakSubmissionReady)Details+=TEXT("报价字段不完整或服务未确认准备度，暂不可提交。\n");
++            if(!BreakDisplayComplete)Details+=TEXT("部分展示资料未提供；保留未知值，提交时由服务校验。\n");
++            if(!BreakSubmissionReady)Details+=InkCore::EvaluateQuote(State,MaterialSelection,bRework).Reason+TEXT("\n");
+             if(!HasQuotedSelection)Details+=TEXT("提交门控：服务报价缺少 selection，无法核对材料。\n");
+             else if(!SelectionMatches)Details+=TEXT("提交门控：报价 selection 与当前材料选择不一致或结构无效，请重新报价。\n");
+-            if(!SlotSelectionMatches)Details+=TEXT("提交门控：")+(SlotSelectionReason.IsEmpty()?FString(TEXT("slots item_id/count 汇总与当前选择不一致")):SlotSelectionReason)+TEXT("。\n");
+-            if(HasSlotCategories&&!CoreSlotsValid)Details+=TEXT("提交门控：报价核心材料槽位数量不符合当前操作规则或数量结构无效。\n");
++            if(HasSlots&&!SlotSelectionMatches)Details+=TEXT("展示资料：")+(SlotSelectionReason.IsEmpty()?FString(TEXT("slots item_id/count 汇总与当前选择不一致")):SlotSelectionReason)+TEXT("。\n");
++            if(HasSlotCategories&&!CoreSlotsValid)Details+=TEXT("展示资料：材料槽位与选择不一致，分类资料待核对；实际材料资格由服务提交时重验。\n");
+             if(bRework&&!IsReworkQuote)Details+=TEXT("提交门控：重炼需要服务明确返回 kind=rework 的报价。\n");
+             if(!bRework&&IsReworkQuote)Details+=TEXT("提交门控：当前为普通突破模式，不能使用重炼报价。\n");
+             const bool HasQuoteData=Q&&(Q->HasField(TEXT("q"))||Q->HasField(TEXT("slots"))||Q->HasField(TEXT("selection")));
+@@ -550,7 +565,7 @@
+         const TArray<TSharedPtr<FJsonValue>>* Rows=nullptr;
+         const bool HasCatalog=Str(Catalog,TEXT("kind"))==Kind&&int32(Num(Catalog,TEXT("offset")))==Offset&&Catalog&&Catalog->TryGetArrayField(TEXT("rows"),Rows);
+         const int32 Count=HasCatalog?Rows->Num():0,Columns=Kind==TEXT("shop")?(bPortraitLayout?2:3):1;
+-        const float RowH=Kind==TEXT("shop")?300:128,CW=(ListW-10-(Columns-1)*12)/Columns;
++        const float RowH=Kind==TEXT("shop")?300:BreakPage?188:128,CW=(ListW-10-(Columns-1)*12)/Columns;
+         auto* List=ScrollArea(TEXT("WulingCatalogScroll"),0,ListTop,ListW,ListH,FMath::Max(132.f,FMath::DivideAndRoundUp(Count,Columns)*RowH)+100,CatalogScroll,OldCatalogOffset);
+         if(!HasCatalog||Count==0)Label(List,TEXT("WulingCatalogEmpty"),HasCatalog?TEXT("当前没有可用条目"):BreakPage?TEXT("材料目录尚未同步"):TEXT("目录尚未同步"),8,8,ListW-34,112,26);
+         for(int32 I=0;I<Count;++I)
+@@ -565,6 +580,13 @@
+                 Label(List,NAME_None,Str(O,TEXT("name")),X+80,Y+8,CW-88,76,26);
+                 Label(List,NAME_None,ShopCosts(O)+FString::Printf(TEXT("\n每日上限 %.0f"),Num(O,TEXT("daily_limit"))),X+8,Y+88,CW-16,104,24);
+                 Action(List,Id,TEXT("选择商品"),X,Y+200,CW,Hit,false,false,SelectedData&&Str(SelectedData,TEXT("sku"))==Str(O,TEXT("sku")))->SetIsEnabled(Ready);
++            }
++            else if(BreakPage&&RolloutMaterialBinding)
++            {
++                auto* Material=CreateWidget<UInkRolloutMaterialSlotWidget>(GetOwningPlayer());
++                Material->Rename(*FString::Printf(TEXT("RolloutMaterial_%d"),I),WidgetTree);
++                List->AddChildToCanvas(Material)->SetOffsets(FMargin(X,Y,CW,176));
++                RolloutMaterialBinding->BindSlot(Material,FName(*Str(O,TEXT("item_id"))),FName(*Str(O,TEXT("item_id"))),nullptr,UInkRolloutMaterialSlotWidget::MaterialFrame());
+             }
+             else
+             {
+@@ -581,15 +603,21 @@
+         Action(List,TEXT("ToolNext"),TEXT("下一页"),(ListW+2)/2,FMath::Max(132.f,FMath::DivideAndRoundUp(Count,Columns)*RowH),(ListW-22)/2,Hit)->SetIsEnabled(HasCatalog&&Offset+8<int32(Num(Catalog,TEXT("total"))));
+         if(BreakPage)
+         {
+-            Action(BodyCanvas,TEXT("ToolPrepare"),bRework?TEXT("确认重炼"):TEXT("准备突破"),0,Footer,(BodyWidth-12)*.6f,Hit,true)->SetIsEnabled(Ready&&!MaterialSelection.IsEmpty()&&BreakSubmissionReady);
++            Action(BodyCanvas,TEXT("ToolPrepare"),bRework?TEXT("确认重炼"):TEXT("准备突破"),0,Footer,(BodyWidth-12)*.6f,Hit,true)->SetIsEnabled(Ready&&RolloutMaterialBinding&&RolloutMaterialBinding->CanSubmit()&&BreakSubmissionReady);
+             auto* CancelAction=Action(BodyCanvas,TEXT("ToolCancelBreak"),CanReconcile?TEXT("查询对账"):TEXT("取消准备"),(BodyWidth-12)*.6f+12,Footer,(BodyWidth-12)*.4f,Hit);CancelAction->SetIsEnabled(Ready&&BreakCancelReason.IsEmpty());
+         }
+         else Action(BodyCanvas,TEXT("ToolConfirm"),Primary,0,Footer,BodyWidth,Hit,true)->SetIsEnabled(Ready&&SelectedData);
+     }
+     RenderKey=RenderStateKey(State,!Ready)+(Active?TEXT("active"):TEXT("inactive"));bBuilding=false;
+ }
++void UInkWulingToolsPanel::HandleRolloutMaterialFeedback(const FString& Message)
++{
++    if(RolloutMaterialBinding)MaterialSelection=RolloutMaterialBinding->GetSelection();
++    FeedbackMessage(Message);
++}
+ void UInkWulingToolsPanel::RefreshLiveData()
+ {
++    if(RolloutMaterialBinding)RolloutMaterialBinding->Refresh();
+     if(bBuilding||!FrontendOwner||FrontendOwner->CurrentPage!=PageId)return;auto* W=Service(this);if(!W)return;const auto S=W->Snapshot();
+     const FString Key=RenderStateKey(S,!W->IsEnabled()||!W->IsConnected()||W->IsBusy())+TEXT("active");
+     if(Key!=RenderKey)RebuildPanel();
+@@ -603,9 +631,10 @@
+     if(Id.StartsWith(TEXT("ToolView_"))){SelectedEntry=Id.Mid(9);SelectedData.Reset();Offset=0;RebuildPanel();return;}
+     if(Id==TEXT("ToolRankPrevious")||Id==TEXT("ToolRankNext")){RankOffset=FMath::Max(0,RankOffset+(Id==TEXT("ToolRankNext")?8:-8));RebuildPanel();return;}
+     if(Id.StartsWith(TEXT("ToolActivityTab_"))){ActivityTab=Id.Mid(16);RebuildPanel();return;}
+-    if(Id==TEXT("ToolSign")){W->SignIn();return;}if(Id==TEXT("ToolLaunch")){W->StartLaunchEvent();return;}
+-    if(Id==TEXT("ToolPrepare")){if(bRework)W->SubmitPrototypeCommand(TEXT("ReworkQuality"),TEXT("{\"selection\":")+SelectionJson()+TEXT("}"));else W->PrepareBreakthrough(SelectionJson());return;}
+-    if(Id==TEXT("ToolReworkMode")){bRework=!bRework;MaterialSelection.Reset();RebuildPanel();return;}
++    if(Id==TEXT("ToolSign")){HandleAction(TEXT("SignInClaim"));return;}
++    if(Id==TEXT("ToolLaunch")){InkJourneyAdapter::FRequest Request;Request.Action=InkJourneyAdapter::EAction::StartLaunch;Request.bConfirmed=true;FString ActionFeedback;InkJourneyAdapter::Submit(W,IsRolloutPageActive(),Request,ActionFeedback);FeedbackMessage(ActionFeedback);return;}
++    if(Id==TEXT("ToolPrepare")){if(RolloutMaterialBinding)RolloutMaterialBinding->Submit();RefreshLiveData();return;}
++    if(Id==TEXT("ToolReworkMode")){bRework=!bRework;MaterialSelection.Reset();if(RolloutMaterialBinding)RolloutMaterialBinding->Configure(FrontendOwner,PageId,bRework);RebuildPanel();return;}
+     if(Id==TEXT("ToolCancelBreak"))
+     {
+         const auto Snapshot=W->Snapshot(),Attempt=Obj(Snapshot,TEXT("tribulation"));const FString Status=Str(Attempt,TEXT("status"));
+@@ -618,7 +647,7 @@
+         if(Status==TEXT("Prepare")&&Attempt&&Attempt->TryGetNumberField(TEXT("trial_start"),TrialStart)&&Snapshot&&Snapshot->TryGetNumberField(TEXT("server_utc"),ServerUtc)&&ServerUtc<TrialStart){W->CancelBreakthrough();return;}
+         FeedbackMessage(Status==TEXT("Prepare")?TEXT("试炼已开始或服务时间字段缺失，不能取消准备"):TEXT("仅 Prepare 且试炼开始前可取消；仅 Reconcile 可查询对账"));return;
+     }
+-    if(Id==TEXT("ToolClearSelection")){MaterialSelection.Reset();RebuildPanel();return;}
++    if(Id==TEXT("ToolClearSelection")){MaterialSelection.Reset();if(RolloutMaterialBinding)RolloutMaterialBinding->ClearSelection();RebuildPanel();return;}
+     if(Id==TEXT("ToolFabao")){W->SubmitPrototypeCommand(TEXT("ActivateFabao"),TEXT("{}"));return;}if(Id==TEXT("ToolMethod")){W->SubmitPrototypeCommand(TEXT("ActivateMethod"),TEXT("{}"));return;}
+     if(Id==TEXT("ToolConfirm")){ExecuteSelected();return;}
+     if(Id==TEXT("ToolMarketBrowse")||Id==TEXT("ToolMarketSell")){SelectedEntry=Id==TEXT("ToolMarketSell")?TEXT("sell"):TEXT("");Offset=0;SelectedData.Reset();RebuildPanel();return;}
+--- before/Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp
++++ after/Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp
+@@ -1,4 +1,6 @@
+ #include "InkWulingSectPanel.h"
++#include "Frontend/UiRollout20261024/RankWuling/InkRankWulingComponents.h"
++#include "Engine/Texture2D.h"
+ #include "Frontend/InkFrontendWidget.h"
+ #include "Frontend/WulingFrontendData.h"
+ #include "Frontend/UI/InkUiTheme.h"
+@@ -95,7 +97,9 @@
+ 
+     const float CountsY = IdentityY + 184;
+     const float StatWidth = (ColumnWidth - 24.f) / 3.f;
+-    Surface(BodyCanvas, TEXT("SectStatsCard"), InkPresentationStyle::ESurface::FeatureCard, 0, CountsY - 8, ColumnWidth, 210);
++    InkRankWulingComponents::AddPaperPanel(WidgetTree,BodyCanvas,TEXT("SectStatsCard"),
++        LoadObject<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1.T_RankWulingPaperPanel_Default_v1"),nullptr,LOAD_NoWarn|LOAD_Quiet),
++        {0,CountsY-8,ColumnWidth,210,0},FVector4f(136,136,136,136));
+     auto Count = [&](const TCHAR* Name, const TCHAR* Caption, int32 Index)
+     {
+         const float X = Index * (StatWidth + 12.f);
+--- before/Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp
++++ after/Source/BoundlessImmortality/Frontend/InkFeaturePanels.cpp
+@@ -313,6 +313,7 @@
+             bool Signed=false;
+             const bool HasSigned=Activities&&Activities->TryGetBoolField(TEXT("signed"),Signed);
+             const FString ServiceDay=WulingFrontendData::String(Activities,TEXT("day"));
++            RolloutSignInDay=ServiceDay;
+             const bool Connected=Service&&Service->IsEnabled()&&Service->IsConnected();
+             const bool Enabled=ActivityEnabled(Row)==TEXT("已启用");
+             const bool CanSubmit=Connected&&!Service->IsBusy()&&Enabled&&HasSigned&&!Signed&&!ServiceDay.IsEmpty();

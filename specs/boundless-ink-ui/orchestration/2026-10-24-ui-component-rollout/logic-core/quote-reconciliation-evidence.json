@@ -1,0 +1,228 @@
+{
+  "test_only": true,
+  "scope": "narrow in-process actual Authority protocol; no HTTP/UE runtime",
+  "checks": [
+    {
+      "check": "real quote succeeds",
+      "passed": true
+    },
+    {
+      "check": "six presentation-only fields actually absent in successful raw result",
+      "passed": true
+    },
+    {
+      "check": "stage indices available at nested real paths",
+      "passed": true
+    },
+    {
+      "check": "stale version rejected before mutation",
+      "passed": true
+    },
+    {
+      "check": "prepare succeeds with the same six fields absent",
+      "passed": true
+    },
+    {
+      "check": "real attempt entered Prepare",
+      "passed": true
+    },
+    {
+      "check": "same request id replays receipt instead of another attempt",
+      "passed": true
+    },
+    {
+      "check": "replay retains the one actual attempt",
+      "passed": true
+    },
+    {
+      "check": "fixture authority settlement unlocks real rework prerequisite",
+      "passed": true
+    },
+    {
+      "check": "real rework quote succeeds",
+      "passed": true
+    },
+    {
+      "check": "rework mode attested at quote.kind",
+      "passed": true
+    },
+    {
+      "check": "rework quote itself provides no random trial probability",
+      "passed": true
+    },
+    {
+      "check": "rework quote does not bypass authoritative attempt cleanup",
+      "passed": true
+    },
+    {
+      "check": "real rework commits without normalized/readiness/slots/sources",
+      "passed": true
+    },
+    {
+      "check": "successful quote does not certify inventory ownership",
+      "passed": true
+    },
+    {
+      "check": "actual prepare still checks current inventory",
+      "passed": true
+    },
+    {
+      "check": "successful quote does not certify safe combat state",
+      "passed": true
+    },
+    {
+      "check": "actual prepare still checks authoritative safety",
+      "passed": true
+    },
+    {
+      "check": "service protocol does not require a prior quote object for legal prepare",
+      "passed": true
+    },
+    {
+      "check": "viewer cannot submit anchor breakthrough",
+      "passed": true
+    },
+    {
+      "check": "all consumed frozen Source/service inputs unchanged",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "requests": [
+    {
+      "case": "normal",
+      "operation": "QuoteBreakthrough",
+      "request": "00-normal-QuoteBreakthrough-request.json",
+      "response": "00-normal-QuoteBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "normal",
+      "operation": "PrepareBreakthrough",
+      "request": "01-normal-PrepareBreakthrough-request.json",
+      "response": "01-normal-PrepareBreakthrough-response.json",
+      "status": "error",
+      "error_code": "STALE_VERSION"
+    },
+    {
+      "case": "normal",
+      "operation": "PrepareBreakthrough",
+      "request": "02-normal-PrepareBreakthrough-request.json",
+      "response": "02-normal-PrepareBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "normal",
+      "operation": "PrepareBreakthrough",
+      "request": "03-normal-PrepareBreakthrough-request.json",
+      "response": "03-normal-PrepareBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "normal",
+      "operation": "QuoteReworkQuality",
+      "request": "04-normal-QuoteReworkQuality-request.json",
+      "response": "04-normal-QuoteReworkQuality-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "normal",
+      "operation": "ReworkQuality",
+      "request": "05-normal-ReworkQuality-request.json",
+      "response": "05-normal-ReworkQuality-response.json",
+      "status": "error",
+      "error_code": "ACTIVITY_BUSY"
+    },
+    {
+      "case": "normal",
+      "operation": "ReworkQuality",
+      "request": "06-normal-ReworkQuality-request.json",
+      "response": "06-normal-ReworkQuality-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "unowned",
+      "operation": "QuoteBreakthrough",
+      "request": "07-unowned-QuoteBreakthrough-request.json",
+      "response": "07-unowned-QuoteBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "unowned",
+      "operation": "PrepareBreakthrough",
+      "request": "08-unowned-PrepareBreakthrough-request.json",
+      "response": "08-unowned-PrepareBreakthrough-response.json",
+      "status": "error",
+      "error_code": "INSUFFICIENT_FUNDS"
+    },
+    {
+      "case": "unsafe",
+      "operation": "QuoteBreakthrough",
+      "request": "09-unsafe-QuoteBreakthrough-request.json",
+      "response": "09-unsafe-QuoteBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "unsafe",
+      "operation": "PrepareBreakthrough",
+      "request": "10-unsafe-PrepareBreakthrough-request.json",
+      "response": "10-unsafe-PrepareBreakthrough-response.json",
+      "status": "error",
+      "error_code": "NOT_SAFE"
+    },
+    {
+      "case": "direct-no-preview",
+      "operation": "PrepareBreakthrough",
+      "request": "11-direct-no-preview-PrepareBreakthrough-request.json",
+      "response": "11-direct-no-preview-PrepareBreakthrough-response.json",
+      "status": "success",
+      "error_code": ""
+    },
+    {
+      "case": "direct-no-preview",
+      "operation": "PrepareBreakthrough",
+      "request": "12-direct-no-preview-PrepareBreakthrough-request.json",
+      "response": "12-direct-no-preview-PrepareBreakthrough-response.json",
+      "status": "error",
+      "error_code": "FORBIDDEN"
+    }
+  ],
+  "missing_normal_quote_fields": [
+    "q_normalized",
+    "growth_min",
+    "growth_max",
+    "readiness",
+    "slots",
+    "sources"
+  ],
+  "frozen_hashes_before": {
+    "Tools/CultivationService/authority.py": "b2faf88bb9572c381edcf8a9a28b109514ee61f472dcc36e558ebdb4011741a6",
+    "Tools/CultivationService/breakthrough.py": "d3dcf1be7b925bb1b3c537894bb4c2149d4445fe97a36863a679da206a17fd60",
+    "Tools/CultivationService/tribulation.py": "20ec55414f4bcd3da6708dcd1f9ea750414687754334ca2dfb047524350b5d25",
+    "Tools/CultivationService/inventory.py": "890b22e7ff21a0f12d93e339ff4a59b6ccdbde581879f43193d40a286f00673d",
+    "Tools/CultivationService/http_server.py": "41fecc4d11112202d4ac140d4e90cf7dc5def4ec937de1b041a5e32eed570814",
+    "Source/BoundlessImmortality/Wuling/WulingPrototypeSubsystem.cpp": "a0e6f1d51f6bdf8287737c73bf456d6e5905def164b01d684f49122c6217641f",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.cpp": "71fd4888eab446a8682957e00ec6ba79fa8a3ab54754fad07ed8c1ff4a5f5f41",
+    "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp": "dd13037251bbfecb3d2023f6ad3f9ab3ec694f3f1eb3bb3b2984ac8928a576b0"
+  },
+  "frozen_hashes_after": {
+    "Tools/CultivationService/authority.py": "b2faf88bb9572c381edcf8a9a28b109514ee61f472dcc36e558ebdb4011741a6",
+    "Tools/CultivationService/breakthrough.py": "d3dcf1be7b925bb1b3c537894bb4c2149d4445fe97a36863a679da206a17fd60",
+    "Tools/CultivationService/tribulation.py": "20ec55414f4bcd3da6708dcd1f9ea750414687754334ca2dfb047524350b5d25",
+    "Tools/CultivationService/inventory.py": "890b22e7ff21a0f12d93e339ff4a59b6ccdbde581879f43193d40a286f00673d",
+    "Tools/CultivationService/http_server.py": "41fecc4d11112202d4ac140d4e90cf7dc5def4ec937de1b041a5e32eed570814",
+    "Source/BoundlessImmortality/Wuling/WulingPrototypeSubsystem.cpp": "a0e6f1d51f6bdf8287737c73bf456d6e5905def164b01d684f49122c6217641f",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreAdapter.cpp": "402c6025d20e83f832ef96457fc8c3dd7317e2eacec25edba4b7c3aaa8aa7faa",
+    "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicCore/InkCoreMaterialBinding.cpp": "71fd4888eab446a8682957e00ec6ba79fa8a3ab54754fad07ed8c1ff4a5f5f41",
+    "Source/BoundlessImmortality/Frontend/UI/InkWulingToolsPanel.cpp": "dd13037251bbfecb3d2023f6ad3f9ab3ec694f3f1eb3bb3b2984ac8928a576b0"
+  },
+  "run_directory": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-core\\quote-reconciliation-probe\\run-899e1b2af19b4a47b7e891af55fc2967"
+}

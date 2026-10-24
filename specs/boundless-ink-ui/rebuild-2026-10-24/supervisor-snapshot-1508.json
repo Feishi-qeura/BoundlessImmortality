@@ -1,0 +1,98 @@
+{
+  "heartbeat_at": "2026-10-24T07:08:42.037Z",
+  "old_ui_directory_exists": false,
+  "new_ui_assets": 589,
+  "source_status": "Full37 independent family feature hosts authored/promoted; build14/15exit0 epoch86/178",
+  "latest_runtime_attempt": {
+    "path": "logic-integration/default-root-pie-04/report.json",
+    "finished": false,
+    "passed": false,
+    "failed_at": "real Slate click OpenEquipmentFabao from Character",
+    "partial_proofs": "Core7 and stricter independent-culling/scroll39/deliberate-bad-metric rejection/oldHUDGM suppression preceding steps recorded; not full44 pass"
+  },
+  "next_tasks": [
+    "Integration fix actual native Character entry and continue strict all44 portrait/landscape traversal",
+    "Real isolated-service newHost action/Busy/version/confirmation/idempotency evidence after render route suite",
+    "Core bounded review newgeometry/avatar/hostmapper/source and actualruntime",
+    "Core per-manifest new runtime art import/reference gap table, excluding concepts"
+  ],
+  "visual_approved": false,
+  "all44_machine_verified": false,
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:11",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:21",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会按最新 Source epoch 核对几何证据链和各族 FeatureHost，逐族更新实际 class、route、context 与挂载状态，并各抽查一至两条关键动作链。PIE04 的入口失败会保留为未通过；服务禁用态的展示证据与真实服务业务验证分开记录。不启动引擎，也不重跑已通过的三项原生测试。",
+      "last_tool": {
+        "id": "exec-03e9e455-31b3-4cfd-91df-2512f8ccfda4",
+        "turnId": "01a16cbe-bc2b-7410-9991-936b71a994bc",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:41",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "新的 PIE 已通过核心 7 页检查，包括横屏背包的独立裁剪证明、滚动到第 39 格，以及故意注入错误后的拒绝检查。旧 HUD/GM 抑制条件也已读回验证。现在正在测试 HUD 菜单、角色子页入口，再继续遍历其余页面。",
+      "last_tool": {
+        "id": "exec-1ae36c67-d895-47e7-be85-112bffa06454",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    }
+  ]
+}

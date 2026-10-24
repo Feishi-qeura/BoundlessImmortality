@@ -1,0 +1,60 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:52:39.862554+00:00",
+  "passed": true,
+  "operations": [
+    {
+      "old": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "retained": "/Game/newUI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_HudLaunchCountdownFrame_v1-after.png"
+    },
+    {
+      "old": "/Game/UI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "retained": "/Game/newUI/Ink/Data/Shared/DA_InkUITheme_v1.DA_InkUITheme_v1",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\DA_InkUITheme_v1-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "retained": "/Game/newUI/Ink/Fonts/Shared/FF_InkMaShanZheng.FF_InkMaShanZheng",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkMaShanZheng-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "retained": "/Game/newUI/Ink/Fonts/Shared/FF_InkNotoFallback.FF_InkNotoFallback",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkNotoFallback-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "retained": "/Game/newUI/Ink/Fonts/Shared/FF_InkWenKai.FF_InkWenKai",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\FF_InkWenKai-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "retained": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkDisplay-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "retained": "/Game/newUI/Ink/Fonts/Shared/F_InkFallback.F_InkFallback",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\F_InkFallback-after.t3d"
+    },
+    {
+      "old": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "retained": "/Game/newUI/Ink/Textures/HUD/T_XianxiaMeters.T_XianxiaMeters",
+      "state": "reconciled_canonical_payload_preserved",
+      "after_export": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\eight-source-copy-exports\\T_XianxiaMeters-after.png"
+    }
+  ],
+  "scope": "Eight exact migrated source real assets; retained canonical target equality proven before all mutations",
+  "backup_manifest": "D:\\demo\\BoundlessImmortality\\Saved\\Codex\\UIRebuild20261024\\PartialBeforeRecovery\\20261024T133800\\manifest.json",
+  "proof_sha256": "3063ff390cf68eee7277435c5c67ff9e2fe8d65b732871bd7a2f54f61ecfb9ab",
+  "dirty_remaining": [],
+  "dirty_maps": []
+}

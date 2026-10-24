@@ -1,0 +1,102 @@
+{
+  "revision": "v2",
+  "updated_at": "2026-10-24T13:02:17.935697+08:00",
+  "scope": "Current V2 artifacts; V1 separately preserved",
+  "files": [
+    {
+      "path": "audit_migration_results.py",
+      "bytes": 6135,
+      "sha256": "178b6366aedb773f0b1864dda69a5239deeba46b29e24895d1e1bc1af65500de"
+    },
+    {
+      "path": "backup-result.json",
+      "bytes": 741,
+      "sha256": "9174999765d1ca04c3f320be4f828539c6d7406b9b9b01f29c60370cb19fc56f"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 3493,
+      "sha256": "4534ff5b8256dc35211045e9be21cb92eb95151fdc2fd3d0cf360ab7dd2001a5"
+    },
+    {
+      "path": "migrate_ui_ue.py",
+      "bytes": 16751,
+      "sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155"
+    },
+    {
+      "path": "migration-map.csv",
+      "bytes": 370425,
+      "sha256": "aff7c4f31fb3d634c3341fb46bbd2249e52b3f33a1e78ef471dee65fac33d25b"
+    },
+    {
+      "path": "migration-map.json",
+      "bytes": 722106,
+      "sha256": "2fcf7fcb432a6066a8ecfa880e376129a3bddd9326abed53f86fd2f2168cbdac"
+    },
+    {
+      "path": "migration-owner-audit.json",
+      "bytes": 363,
+      "sha256": "9c960dcdbd7ead644c3d1a836944b5b9bd5377ccb6b768fa5f27f72ebda6763a"
+    },
+    {
+      "path": "preparation-verification.json",
+      "bytes": 1432,
+      "sha256": "b732bd5e150a703d5fbb4868b27b8578f3ec17e18e439f1320f3f63f6bb8c7a5"
+    },
+    {
+      "path": "prepare_migration.py",
+      "bytes": 11476,
+      "sha256": "fb4e84a627f16644ea332a3f88d0971e593943b411c352083129e23eb1133c6f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8524,
+      "sha256": "837303e3e6e4d266e1edd947ab3ab47df4f6257e202ec3234d1ce6ad3c3133c3"
+    },
+    {
+      "path": "ready-v2.json",
+      "bytes": 1050,
+      "sha256": "6168d663f0bdb2cf5bf4c89f769e0929c0317917ac26f58fd894879140fa7008"
+    },
+    {
+      "path": "recover_snapshot.py",
+      "bytes": 7364,
+      "sha256": "9bca99fb4a988648215c0e7cd70537214a13aeb7d20cccf0b623c2e2ad67323c"
+    },
+    {
+      "path": "reference-replacement-plan.json",
+      "bytes": 1893537,
+      "sha256": "7f553e4a9343522c670e52f326e02bba829ae4374aabf8b7911f70bc962ce64d"
+    },
+    {
+      "path": "revise_map_v2.py",
+      "bytes": 5426,
+      "sha256": "486bb45fe985048b490f3d8f62da4386deffb8aa60ef2ae2a2f5dc7ff0c83cc3"
+    },
+    {
+      "path": "staged-source/NewUiMigrationExactFixup.cpp",
+      "bytes": 19974,
+      "sha256": "171f019c9361c81400a908dca7052b69861b5d8288f50a88f109c551fa30a261"
+    },
+    {
+      "path": "staged-source/NewUiMigrationExactFixup.h",
+      "bytes": 237,
+      "sha256": "e5f2480b826e3c7306a5779cc0b759be94c8418640d35234df68cff6f7668680"
+    },
+    {
+      "path": "status.json",
+      "bytes": 2155,
+      "sha256": "199aacedb63c37e9ef49dcb982cb5bd8b33d271970241cf2e906097170bbe1b2"
+    },
+    {
+      "path": "v2-correction-evidence.json",
+      "bytes": 9830,
+      "sha256": "57c62bebf59d0f9684855ddd804511a7050a9fd1ca5ba6f30e096d114547d294"
+    },
+    {
+      "path": "verify_preparation.py",
+      "bytes": 6540,
+      "sha256": "938c9cac602bc2eae39ad3aa2d0ad11a51da14cda7968a3682a6f9236d953f4e"
+    }
+  ]
+}

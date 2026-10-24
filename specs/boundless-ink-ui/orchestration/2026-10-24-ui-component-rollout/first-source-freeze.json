@@ -1,0 +1,86 @@
+{
+  "observed_at": "2026-10-24T10:10:08.7986483+08:00",
+  "scope": "First handoff source snapshot; no compile/import/runtime claim",
+  "files": [
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkActivityRolloutPanels.cpp",
+      "sha256": "474B78C7CD1E402E95C1CDF512B767A8EC33EB12ACEEEC71866ADF4746203DBB",
+      "last_write": "2026-10-24T09:57:18.2760714+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkActivityRolloutPanels.h",
+      "sha256": "923168E2DC9B59D4C165916A9F04352DFAFD102C252FAD2707864FB4112620BE",
+      "last_write": "2026-10-24T09:54:53.2810363+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkLaunchHudCountdownWidget.cpp",
+      "sha256": "4CBC1EFD430265B133CD27D0E93ADB1F3F3E0967CBD2B3E4F32B3F3F0349A002",
+      "last_write": "2026-10-24T09:58:47.4317918+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Activities\\InkLaunchHudCountdownWidget.h",
+      "sha256": "98D635ED9D4DC3519A272A3C13C9D6FE2F381FCA18CB46F9A0CA4D7DED615247",
+      "last_write": "2026-10-24T09:58:18.9675444+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Journey\\JourneyRolloutWidgets.cpp",
+      "sha256": "89D1B5018ACC53525C157EB1C57EDA57701A94FEE97C78A1FB289FC813405580",
+      "last_write": "2026-10-24T09:57:54.7985373+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Journey\\JourneyRolloutWidgets.h",
+      "sha256": "916ADD47F80E7CF4F161A3A77B4AEDF38DDB98F70EEC74E88AD30F00772EA94C",
+      "last_write": "2026-10-24T09:56:21.7400792+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapter.cpp",
+      "sha256": "402C6025D20E83F832EF96457FC8C3DD7317E2EACEC25EDBA4B7C3AAA8AA7FAA",
+      "last_write": "2026-10-24T10:00:10.8181894+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapter.h",
+      "sha256": "F38F5FF999B38CA71B78303266246384ADD3076511B30C5FFD665105C33BE473",
+      "last_write": "2026-10-24T09:57:46.7727169+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreAdapterTests.cpp",
+      "sha256": "9C175C4FC41FDAB82EFC5DE4796D424F60AB068F7EF7DA0B94ABFDF44EAC0E91",
+      "last_write": "2026-10-24T09:58:47.5817148+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreMaterialBinding.cpp",
+      "sha256": "71FD4888EAB446A8682957E00EC6BA79FA8A3AB54754FAD07ED8C1FF4A5F5F41",
+      "last_write": "2026-10-24T09:58:47.4277871+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCoreMaterialBinding.h",
+      "sha256": "95805E449828FDBF33FA95D1DC1F27144C266DBDE7AB17BD164CD511D7B63B75",
+      "last_write": "2026-10-24T09:58:32.9179306+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\LogicCore\\InkCorePolicy.h",
+      "sha256": "D835AB9CBA35056A5FE5BF55290340F873226984A94E01AC36CAD73AF29A02E3",
+      "last_write": "2026-10-24T09:53:51.0704156+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Player\\InkPlayerMaterialSlotWidget.cpp",
+      "sha256": "D0C80272A5A8F0895741B9B19A4FACB54A3EDD9BA8714B00B9E8FDB06F5BBBB3",
+      "last_write": "2026-10-24T09:55:40.9115952+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\Player\\InkPlayerMaterialSlotWidget.h",
+      "sha256": "7A1369E944A2B47B15358E0520A54AA2B52682CD3869ABAA4E1756ED22AB09AD",
+      "last_write": "2026-10-24T09:55:15.9923476+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\RankWuling\\InkRankWulingComponents.cpp",
+      "sha256": "D7A4652812711553988B23EAD7CA99DE3AB8E145F0F58BCC1520CD709612F2E0",
+      "last_write": "2026-10-24T09:54:28.8644710+08:00"
+    },
+    {
+      "path": "D:\\demo\\BoundlessImmortality\\Source\\BoundlessImmortality\\Frontend\\UiRollout20261024\\RankWuling\\InkRankWulingComponents.h",
+      "sha256": "3B26B3B0DDADEED25B545A74B5C0240FDC6F6EC9E262476A33947F4FAAC7F0E2",
+      "last_write": "2026-10-24T09:54:28.6836090+08:00"
+    }
+  ]
+}

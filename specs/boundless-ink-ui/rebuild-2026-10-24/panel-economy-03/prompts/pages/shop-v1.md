@@ -1,0 +1,3 @@
+# Prototype Shop · concept prompt
+
+Create one full portrait mobile UI composition concept for a Chinese cultivation game's prototype shop. A fresh compact catalog-detail page: pine-ink header and provider state, narrow scrollable catalog rows with blank item identity and actual price placeholders, a selected detail sheet with item/cost/output fields marked “待同步”, a user-independent purchase availability state and a fixed back region. Shared ink, jade and warm ivory, restrained gold, readable short labels “原型商店”, “目录待同步”, “商品详情”, “费用待同步”, “暂不可用”. No invented SKU, item, costs, rewards, currency symbol, price, stock, discount or checkout provider. Composition only; UI text and purchase state remain live UMG.

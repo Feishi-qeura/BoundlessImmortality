@@ -30,21 +30,21 @@ FSlateBrush HonorBrush(FName Id)
     FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=FVector2D(130,30);
     if(Id.IsNone()||Id==TEXT("Cyberspace"))return FSlateBrush();
     const FString Name=TEXT("MI_Rank_Title_")+Id.ToString();
-    B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(TEXT("/Game/UI/Ink/Materials/Leaderboard/")+Name+TEXT(".")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet));
+    B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(InkUiAssets::ResolveNamed(Name)),nullptr,LOAD_NoWarn|LOAD_Quiet));
     if(!B.GetResourceObject())return FSlateBrush();
     const auto UV=CultivationNameplate::WeaponUV(Id);if(UV.GetArea()>0)B.ImageSize=UV.GetSize()*FVector2D(1254);return B;
 }
 FSlateBrush RealmBrush(int32 Index)
 {
     FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=FVector2D(130,26);
-    B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet));
+    B.SetResourceObject(InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_RealmBanners.T_RealmBanners"),nullptr,LOAD_NoWarn|LOAD_Quiet));
     const auto UV=CultivationNameplate::BannerUV(Index);B.SetUVRegion(FBox2f(FVector2f(UV.Min),FVector2f(UV.Max)));B.ImageSize=UV.GetSize()*FVector2D(1122,1402);return B;
 }
 FSlateBrush RealmIconBrush(int32 Index)
 {
     FSlateBrush B;B.DrawAs=ESlateBrushDrawType::Image;B.ImageSize=FVector2D(34);
     const FString Name=FString::Printf(TEXT("MI_RealmIconStage_%02d"),FMath::Clamp(Index,0,33));
-    B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(TEXT("/Game/UI/Ink/NiagaraRevision20261022/")+Name+TEXT(".")+Name),nullptr,LOAD_NoWarn|LOAD_Quiet));
+    B.SetResourceObject(InkUiAssets::Load<UMaterialInterface>(nullptr,*(InkUiAssets::ResolveNamed(Name)),nullptr,LOAD_NoWarn|LOAD_Quiet));
     const auto UV=CultivationNameplate::BadgeUV(Index);B.ImageSize=UV.GetSize()*FVector2D(1536,1024);return B;
 }
 FSlateBrush AvatarFrameBrush(){return InkPresentationStyle::NavigationIcon(0,FVector2D(64));}
@@ -106,7 +106,7 @@ void UInkNiagaraTitleWidget::ApplyConfiguration()
     if(!Effect)return;
     const TCHAR* Names[]={TEXT("Honor"),TEXT("Realm"),TEXT("RealmIcon"),TEXT("AvatarFrame")};
     const FString Name=FString(TEXT("NS_"))+Names[uint8(Kind)]+TEXT("Particles");
-    const FString Path=TEXT("/Game/UI/Ink/NiagaraRevision20261022/Flowing20261022/")+Name+TEXT(".")+Name;
+    const FString Path=InkUiAssets::TitleParticlesPath(Name);
     auto* System=InkUiAssets::Load<UNiagaraSystem>(nullptr,*Path,nullptr,LOAD_NoWarn|LOAD_Quiet);
     if(Effect->NiagaraSystemReference!=System){StopEffect();Effect->UpdateNiagaraSystemReference(System);}
 }
@@ -195,7 +195,7 @@ void UInkNiagaraNameplateWidget::SetIdentity(const FString& Id,const FString& Di
     ParticipantId=Id;CachedDisplayName=DisplayName;CachedAvatar=Texture;CachedAvatarFrame=FMath::Clamp(AvatarFrame,0,15);
     if(!Avatar)return;
     bIdentityApplied=true;
-    auto* Chart=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/UI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
+    auto* Chart=InkUiAssets::Load<UTexture2D>(nullptr,TEXT("/Game/newUI/Ink/Textures/Shared/T_CohesionIcons.T_CohesionIcons"),nullptr,LOAD_NoWarn|LOAD_Quiet);
     auto ChartBrush=[&](int32 Tile)
     {
         FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::Image;Brush.SetResourceObject(Chart);const auto UV=CultivationNameplate::OrnamentUV(Tile);

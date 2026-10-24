@@ -1,0 +1,460 @@
+{
+  "completed_at": "2026-10-24T17:27:51.968136+08:00",
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "target_platform": "mobile_live_interaction",
+  "source_build": 26,
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "current_source_files": 88,
+  "current_ledger_records": 224,
+  "current_source_hash_errors": [],
+  "machine_scope_complete": true,
+  "production_release_accepted": false,
+  "visual_approved": false,
+  "all44_exact_portrait_render_and_typed_back_passed": true,
+  "formal_checks": 906,
+  "formal_captures": 56,
+  "actual_player_view_entry_coverage": 44,
+  "physical_entry_supplement_edges": 110,
+  "entry_matrix": "current44-player-entry-matrix.json",
+  "all44_contextual_business_trigger_acceptance": false,
+  "contextual_or_earned_result_trigger_gaps": [
+    "RegionDetail",
+    "ResourceDetail",
+    "EventSettlement",
+    "RaceSettlement",
+    "ResourceRewards"
+  ],
+  "strict_geometry_and_bad_injection_rejection": true,
+  "imported_components": 13,
+  "portrait_applicable_actual_painted_components": 12,
+  "landscape_map_retained_out_of_scope": true,
+  "expanded_appearance_unique_attribute_images_painted": 9,
+  "merchant_zero_write_negatives_passed": true,
+  "band_display_current_passed": true,
+  "native": {
+    "succeeded": 48,
+    "succeededWithWarnings": 1,
+    "failed": 0,
+    "notRun": 0,
+    "inProcess": 0
+  },
+  "native_warning": "Existing transient automation test world DestroyActor has no context; SafeReentry.StageCoordinatesKeepPawnRoles",
+  "source_and_asset_integrity": {
+    "checked_at": "2026-10-24T17:15:05.011019+08:00",
+    "source_build": 26,
+    "source_files": 88,
+    "ledger_records": 224,
+    "source_hash_errors": [],
+    "exact_formal14_epoch_unchanged": true,
+    "migrated_original_packages": 582,
+    "asset_hash_errors": [],
+    "old_ui_directory_exists": false,
+    "newui_package_count": 596,
+    "read_only": true,
+    "passed": true
+  },
+  "project_default_TLS_peer_verification_preserved": true,
+  "owned_normal_shutdown_proof": "final-owned-process-shutdown.json",
+  "unverified_acceptance": [
+    "Human visual approval",
+    "Physical phone touch/safe-area/performance acceptance",
+    "Live platform integration and release acceptance",
+    "Five contextual or earned-result trigger gaps listed explicitly"
+  ],
+  "screenshot_gallery": "current44-screenshot-gallery.html",
+  "formal_images": [
+    {
+      "path": "default-root-pie-14\\main.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "24ed53ada5d0bd92678ce09d564ba4afcbf19dbf5b403c257f1ad7fc18206a04",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\saves.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "19ce62f38f8512c54e900b8528294002ad43f364b74a1c7ebfc643f587616de7",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\settings.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "c07c5cd8109911e7431c32b4d9ec26fbce946273d1fde3a084de257dc73939be",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\hud.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "10cc7beb142b80e4a09527fca0629fd7a89b7a395a3f66fbc5420ed20b7e8701",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\character.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "48f86530201af4f14554df138f3a338264eac997fd0f4b0732e4d9aa1f148129",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\inventory.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "bb494758975b821aa2f4326f6687013d37d8db15a5224fd0c4922fed0264ce8f",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\inventory-search.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "2e7af0513e9ea5e707330424baecd9245e2a7efe591105c438ec1f873c67025b",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\inventory-cleared.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "bec1cebf7dd2f05ad4272d240050ecc3ea892a625d4ce2da4b144bba55b552ca",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\hud-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "547696687351736c6696ff69a0fc3094c955716ea2ee2b9154353eb9826493b6",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\rank-damage-local.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "122aaeb9e7a1adf7d52dfd52e6dd9e8345ad67c4ee4755ae2fbfedd693e48d48",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\rank-cultivation-local.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "27ced687c72a41164dada8ea54345ef64bc79d2ab619f68cf677aad302a0ed58",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\rank-anchor-local.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "03837558bc2c9efdb37c30eaa25175fe36b33b3feb1bd32eff3968f5240f1b47",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\rank-anchor-global.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "5b528ff33c0b90927e13a7dd9dd5344f3e7b0a9bca6a465a0e65fd7bc31b7431",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\extensions-player-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "070f9076c394adee459cab91149e21adbe2e6e00904d4bfbff58183ab2ca9252",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\world-player-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "64bea5d4da5d4e9918ed7a422fc1558dff8e89c6f0d80efe84b630f76f9cd226",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\equipmentfabao-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "9211590a06a42b0a385072443b3169028551f37dcbcb90b48bb699aed3490f52",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\cultivationmethods-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "3d6118c6a688b50014e5043e7885ccb8ef6b440972ad3507dc6d809087529312",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\breakthroughprepare-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "c1c9a6a55d7fdeabac73cd107ae7b0d5418aaae6dee5c2baf4ec77f3a07c63b4",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\characterappearance-character-entry.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "7cd4facb86ef552cc5bcdc278ab5c416fa267ffbff819380f971efac01806f61",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\activities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "48981f15be9c54128fba400dea709992479a098df863377fc3e66bdb1a5ba18c",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\dailyactivities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "4d16c2328ee4208afd3ecfbb397e4ffb2f5c411fc5337a46990fe6d543d0596b",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\timedactivities-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "6a16ef01fe4de1c663a814c5e8073abd5684f7b41131c48c50c31e048619d5f7",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\dailyactivitydetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "70f4f864aacda2bab8d544945be52d69ea81cc435a27f93601e247160973543e",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\timedactivitydetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "d80f0505dcda06918b02d930c65e0e0cdbb1ed5edd106db3f38a2f34caa27b3f",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\launchevent-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "d9ec657b0966e0c023b64ad10ee6280ee97c1bcfdd513bb086a0d6e73f3ff1c2",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\wuling-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "51e9f2d1311dd11fd797517c154d951573032ec09ccc540026d25d8220a16dc6",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\swordspirit-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "84d6c6a5cd09270b641bc51f3f0add8003cc54b54eed6d7576ece2763f827f83",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\giftrules-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "a3040c11b4ce31f33589ff8b539868b71f5b43eb3b535f5fab94cc473f7c3757",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\cultivationmethods-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "3d6118c6a688b50014e5043e7885ccb8ef6b440972ad3507dc6d809087529312",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\racelobby-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "ddf2a45bba97ab1fbc9c8ec001484a76c411528f27a64235e24152de2dd8dd20",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\racelive-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "ff44b7e1279f1dac2f05d7a5b3f894634a01cbedd26330266d136a344c79abcc",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\racesettlement-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "1153f8cdf4a0c94779c081f7eb934c92b9f58b2286434c1ab4152b25f5aa8a6d",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\resourcelease-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "e26ff8255955778b638d63e8e644ac66e9fc41ba8a1c6951e44b3e1f41e86bb8",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\eventsettlement-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "d231ed55560b651c56318506372b726870918e99cc0033763c9626d0d7f43979",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\offlinerewards-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "6aa97a31954cc31fcd1e656bfd90f92031b5974b4f094b27b2cb6560cd0aca08",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\shop-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "ba1b60b5e104be6050fc079195ba9acfbf8845f08f95f9e9358cb072b45586e8",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\market-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "82d8a1dcb1cc7401540d919e5b7b9ca71b2d80727b9c226f6b21f6b158a22bdc",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\tradeorders-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "e9a7321b727eaf5e9169d71bb9b8a8e2c3e30ae7d644af117cdd7714b5d7dea9",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\worldcultivation-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "2fb02b321dbae55f63e3b5b2a10db7a57bfcd68088eb4062e7804f60fd90ddd9",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\regiondetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "e39bd6e7a9fee38c0895a21e62aae355a6896bc5ee4b6bf7932a7d3d67866190",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\resourcecontest-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "000de9934b56535272da2c06c4b291c90b69bf2db6198185e239d35d2a644f7f",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\resourcedetail-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "8c5531a710aa03c1a09eb357de8449978321d0ff9b49eb5f89c160d1d5895f34",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\signin-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "27d79d6bda243ca8f404649b291d48c6cf502c4db8b83797ab5e21fbe14d856a",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\monthlysignin-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "816653067966128dd45f82d743b45ab567f9d82ed0dcea08d69ab2110d3e31d6",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\dailyfortune-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "67efba336b6976d62d4ff697326b3d30b53e525a4c4cd3194410f50df1f69d02",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\launchrank-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "504db0b670c050448dd8d0b61ede16ab4d8a31ffc951170f94bc54e075abbea6",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\breakthroughprepare-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "c1c9a6a55d7fdeabac73cd107ae7b0d5418aaae6dee5c2baf4ec77f3a07c63b4",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\tribulation-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "de7c92e21babd11f85aa462e5bff6f03da7ba2242231c828d58df4a37edfe537",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\itemsources-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "74f0d662372dd0dacfb68cd6b526cea2808a94ccbe8e57ff2a562815e090dd06",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\guildconstruction-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "0406b5c26d695e6d094f146c81974a67cd052f605c2bc9b252b2725fc3c75187",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\equipmentfabao-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "9211590a06a42b0a385072443b3169028551f37dcbcb90b48bb699aed3490f52",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\extensions-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "483cd34015d062cc44899f77c85cfb772e8ae75b69f9ff6c94d67487cec349d5",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\wulingcraft-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "8b7a290d6e5c127b2e2cc67387c65eef8a44e38ca9b2e07b86b8be319170f756",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\characterappearance-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "7cd4facb86ef552cc5bcdc278ab5c416fa267ffbff819380f971efac01806f61",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\resourceranking-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "006721c3074ca11e038e851aa1d6705d6d6b09f5907f47d80f265fc5bc9de33a",
+      "exact9by16": true
+    },
+    {
+      "path": "default-root-pie-14\\resourcerewards-portrait.png",
+      "width": 720,
+      "height": 1280,
+      "sha256": "d2f84be73b39e2a84e88141c6341b78313088ebccaade56a4aba17de6399bb76",
+      "exact9by16": true
+    }
+  ]
+}

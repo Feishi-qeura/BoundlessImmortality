@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-24T12:54:02.5941660+08:00",
+  "pid": 18992,
+  "arguments": [
+    "D:/demo/BoundlessImmortality/BoundlessImmortality.uproject",
+    "-NoLiveCoding",
+    "-NoAutoSave",
+    "-nop4",
+    "-unattended",
+    "-NoSound",
+    "-UserDir=D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/engine-user-migration03",
+    "-SaveToUserDir",
+    "-abslog=D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/migration-editor-03.log",
+    "-ExecutePythonScript=D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/migration_editor_controller.py"
+  ],
+  "purpose": "Read-only full old-root redirector inventory before revised preflight"
+}

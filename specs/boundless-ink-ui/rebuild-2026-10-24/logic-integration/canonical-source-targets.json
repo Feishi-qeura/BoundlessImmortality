@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-10-24T13:03:49.3806482+08:00",
+  "state": "required_canonical_path_followup_for_full_user_authorized_migration",
+  "writer": "logic-integration",
+  "additional_exact_targets": [
+    "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+    "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+    "Source/BoundlessImmortality/LiveWeapons/LiveTitleEffectsComponent.cpp"
+  ],
+  "reason": "Fresh production Source scan found UI gift dynamic path, fonts/textures and title Niagara runtime loads outside current source_targets. These must resolve canonical newUI after migration. Preserve all gameplay/business behavior.",
+  "config_targets_already_granted": [
+    "Config/DefaultEngine.ini",
+    "Config/DefaultGame.ini"
+  ],
+  "source_recorder_adjustment": "Extend allowed Source-only predicate to explicit granted Config INI targets before their exact backups/rewrites",
+  "execution": "after migration Editor normal closure; exact resolved_package_replacements, no blind root-prefix of legacy aliases"
+}

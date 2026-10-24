@@ -1,0 +1,122 @@
+{
+  "heartbeat_at": "2026-10-24T06:08:41.208Z",
+  "old_ui_directory_exists": false,
+  "old_ui_asset_count": 0,
+  "new_ui_asset_count": 587,
+  "migration_final": {
+    "path": "migration/engine-final-verification.json",
+    "passed": true,
+    "old_registry_packages": 0,
+    "canonical_verified": 582,
+    "legacy_removed": 6,
+    "engine_pid": 47604
+  },
+  "runtime": {
+    "new_default_wbp": "/Game/newUI/Runtime/WBP_NewUIFrontend",
+    "build07_exit_code": 0,
+    "player_texture_import_count": 4,
+    "first_default_pie": "partial actual new root+core clicks; failed visual/layout/HUD overlay and invalid JSON readback; repair ongoing, no pass"
+  },
+  "next_dispatches": [
+    "Cleanup independent final migration audit",
+    "Activities review-v5 V4-API-01/ACT-01/ACT-02/ECO-01",
+    "Player review-v5 PD-01/PE-01",
+    "Core newepoch/runtime proof and v5 incremental review",
+    "Integration actual defaultPIE repair then remaining owner page hosts"
+  ],
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:18",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会按 review-v5 只产出新目录里的替换片、diff 与 host 契约。先对照 bounded-v4 的原文和 player-d/e 冻结文件，重点确认确认流程捕获的是哪组 stage、材料、模式字段；不会改动候选源码或生产文件。",
+      "last_tool": {
+        "id": "exec-a2e921d0-a3b6-42fa-a11b-977178774105",
+        "turnId": "01a16c87-b083-7fa3-881c-db5bc0e13674",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:11",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:15",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会应用 superpowers:receiving-code-review：先逐条核对反馈是否符合当前服务和委托接口，再实现；遇到不明确项会先停在该项，不盲改。记忆中的候选稿约束也适用：v5 独立目录、保留业务未知态、approved:false。",
+      "last_tool": {
+        "id": "exec-b37912b9-ee79-49bb-905b-ff071a49774e",
+        "turnId": "01a16c87-a752-7ad0-8ee5-3b34eba81a6c",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:17",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会先定位 integration 的最新报告、Source epoch 和 review-v5 就绪差异，只核对相关文件与证据。I3、N05、默认 WBP／路由、N03 回归和 Busy 测试会分别记录；NaN JSON 与首次 PIE 的问题单列为未通过，不用迁移或资产保存结果替代运行验收。",
+      "last_tool": {
+        "id": "exec-230d1597-d124-4a72-9a40-ff6a2ba7a355",
+        "turnId": "01a16c87-bbc4-72a3-afdf-25f6eab5fd07",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:39",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "首轮 PIE 已确认六个核心页面使用新 WBP，真实点击和搜索也已执行。截图暴露了需要修正的问题：主菜单按钮文字折行、控件使用了不合适的圆角，以及 HUD 旧状态层叠加；横屏读回还遇到非法 JSON 数值。该轮不会记为通过，我会修正后重跑。",
+      "last_tool": {
+        "id": "exec-f3fb2491-6810-4422-9dcf-f9d9a10b4709",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:11",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "最新证据链已确认推进到完成：同 PID 的 29 个精确 redirector Fixup 成功，最终报告记录旧注册表为 0、旧目录不存在；现场也已核实 Content/UI 不存在，newUI 有 587 个资产。接下来核对 582 个迁移目标的当前哈希、589 个改写原包的备份覆盖，以及八份副本协调证明；额外 5 个新 UI 资产单独计数。",
+      "last_tool": {
+        "id": "exec-4820273f-dc41-46ea-8bd3-6d41ac1da2bd",
+        "turnId": "01a16c87-9c9d-75b0-87a8-eabe6d89b1c3",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    }
+  ]
+}

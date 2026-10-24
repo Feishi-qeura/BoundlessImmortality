@@ -63,7 +63,7 @@ void UInkWulingRecordsPanel::BuildPanelContent()
     }
     else if(OrdersPage)
     {
-        Label(Summary,TEXT("RecordOrderRules"),TEXT("订单与收据\n出售立即结算，到账扣除5%手续费；到期按原期限退回。"),0,0,TextW,152,26);
+        Label(Summary,TEXT("RecordOrderRules"),TEXT("订单与收据\n订单状态、成交金额与期限以已同步记录为准。"),0,0,TextW,152,26);
         if(!SelectedListing.IsEmpty()&&!Orders.ContainsByPredicate([this](const TSharedPtr<FJsonValue>& V){const auto O=V->AsObject();return String(O,TEXT("id"))==SelectedListing&&String(O,TEXT("status"))==TEXT("Listed");}))SelectedListing.Reset();
         const TMap<FString,FString> Status={{TEXT("Listed"),TEXT("寄售中")},{TEXT("Sold"),TEXT("已售出")},{TEXT("Cancelled"),TEXT("已撤单")},{TEXT("Expired"),TEXT("已到期")}};
         for(int I=Offset;I<FMath::Min(Orders.Num(),Offset+Count);++I)
@@ -77,9 +77,20 @@ void UInkWulingRecordsPanel::BuildPanelContent()
     else if(OfflinePage)
     {
         const auto Offline=Object(S,TEXT("offline_reward"));
-        Label(Summary,TEXT("OfflineActual"),FString::Printf(TEXT("已入账离线修为 %d\n已确认阅读 %d\n主播没有离线成长；观众10%%、每次最多8小时。\n确认只标记阅读，不再次发放。"),Number(Offline,TEXT("total_qi")),Number(Offline,TEXT("acknowledged_qi"))),0,0,TextW,208,26);
+        if(!Offline)
+            Label(Summary,TEXT("OfflineActual"),TEXT("离线记录待同步\n已入账修为与确认状态以服务同步记录为准。"),0,0,TextW,128,26);
+        else
+        {
+            double TotalQi=0,AcknowledgedQi=0;
+            FString TotalLabel=TEXT("—"),AcknowledgedLabel=TEXT("—");
+            if(Offline->TryGetNumberField(TEXT("total_qi"),TotalQi))TotalLabel=FString::Printf(TEXT("%.0f"),TotalQi);
+            if(Offline->TryGetNumberField(TEXT("acknowledged_qi"),AcknowledgedQi))AcknowledgedLabel=FString::Printf(TEXT("%.0f"),AcknowledgedQi);
+            Label(Summary,TEXT("OfflineActual"),FString::Printf(TEXT("已入账离线修为 %s\n已确认阅读 %s\n离线记录与确认状态以已同步数据为准。"),*TotalLabel,*AcknowledgedLabel),0,0,TextW,160,26);
+        }
         int32 I=0;for(const auto& V:Records){auto O=V->AsObject();const auto Reward=Object(O,TEXT("offline_reward"));if(!Reward)continue;
-            Label(List,NAME_None,String(O,TEXT("name"))+FString::Printf(TEXT("\n离线已入账 %d 修为"),Number(Reward,TEXT("total_qi"))),8,ListTop+I++*120,ListW-32,104,26);}
+            double Qi=0;FString QiLabel=TEXT("待同步");
+            if(Reward->TryGetNumberField(TEXT("total_qi"),Qi))QiLabel=FString::Printf(TEXT("%.0f"),Qi);
+            Label(List,NAME_None,String(O,TEXT("name"))+FString::Printf(TEXT("\n离线已入账 %s 修为"),*QiLabel),8,ListTop+I++*120,ListW-32,104,26);}
         Action(BodyCanvas,TEXT("RecordAcknowledge"),TEXT("确认已入账展示"),0,Footer,BodyWidth,88,true)->SetIsEnabled(Ready&&Offline);
     }
     else

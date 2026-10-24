@@ -1,0 +1,42 @@
+{
+  "team_id": "panel-rank",
+  "revision": "review-v3",
+  "parent_revision": "review-v2",
+  "phase": "incremental-replacement-staged",
+  "updated_at": "2026-10-24T13:10:42+08:00",
+  "approved": false,
+  "production_source_written": false,
+  "content_written": false,
+  "parent_review_v2_frozen": true,
+  "parent_source_hashes_match": true,
+  "changed_source_files": [
+    "InkRankWulingPages.h",
+    "InkRankWulingPages.cpp",
+    "InkRankWulingPageBase.cpp"
+  ],
+  "findings": [
+    "N07",
+    "N08",
+    "N09"
+  ],
+  "source_sha256": {
+    "InkRankWulingExtendedPages.cpp": "e307d362e8a780a5660181dc816dc44bd0d7ede6f3907ba61322685e76ff642a",
+    "InkRankWulingExtendedPages.h": "1b1ae39ef9aee2431281037fe48016a2053d1ce0f96ae64f12df43f6105404b4",
+    "InkRankWulingPageBase.cpp": "5cbb4d22821c80eed6a8a82d96bc77144619ef50464f551a8b5eeaed4110194b",
+    "InkRankWulingPageBase.h": "f34a92f6a6a1880b981ccd5326c9abeeeac36530bbba7f0baf50a30ce6fbe554",
+    "InkRankWulingPages.cpp": "b9a6342e75bb12f730b01d8f51237693bc3610bbfdf01c6cf626cd3397cc4a11",
+    "InkRankWulingPages.h": "57b5c742868b5bfaf7d721ca79e498c5d1aa7b77b438699e117c2c295e77fa24"
+  },
+  "verification": {
+    "installed_ue58_headers_checked": true,
+    "static_assertions": true,
+    "engine_started": false,
+    "ubt_run": false,
+    "source_compile": false,
+    "pie_verified": false,
+    "screenshot": false,
+    "image_generation": false
+  },
+  "known_runtime_dependency": "Integration must call SetParticipantAvatar(id,nullptr) on async failure, then RetryParticipantAvatarAfterHostBackoff(id) only after host backoff; actual texture success remains keyed by ParticipantId.",
+  "next_owner": "unique integration writer"
+}

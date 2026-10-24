@@ -1,0 +1,125 @@
+schema_version: 1
+team_id: panel-rank
+revision: newui-r1-rank-a-b
+approved: false
+source_style_contract: specs/boundless-ink-ui/contracts/style-contract.yaml
+pages:
+  - id: leaderboard
+    variants: [Damage, CultivationSpeed, Anchor]
+    runtime_class: UInkRankBoardPage
+    page_id: leaderboard
+    data_model: LeaderboardVm
+    actions: [board-category, board-scope]
+    runtime_asset_root: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Leaderboard
+    purpose: Compare authoritative entries for the selected leaderboard and scope.
+    reference_pages:
+      Damage: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-damage-candidate-v2.png
+      CultivationSpeed: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-cultivation-candidate-v2.png
+      Anchor: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-spirit-candidate-v2.png
+    composition:
+      top: [back-route-owned, calligraphic-rank-title, current-board-status]
+      controls: [three-category-tabs, local-global-scope-tabs]
+      content: [rank-identity-metric-column-header, scrollable-provider-rows]
+      footer: [authoritative-self-position, authoritative-self-metric]
+    primary_interactions:
+      - board-category(Category)
+      - board-scope(Scope)
+      - request-refresh()
+    data_authority:
+      ordering_and_rank: existing leaderboard provider
+      identity_and_metric: InkCore::FBoardView mapped from current FInkLeaderboardEntry
+      self_position: explicit provider value only; otherwise state as not supplied
+    metric_by_variant:
+      Damage: Theme/service metric for Damage; do not derive ranking locally
+      CultivationSpeed: Theme/service metric for CultivationSpeed; do not derive ranking locally
+      Anchor: Theme/service metric for Anchor; preserve participant identity separately
+    states: [unavailable, loading, empty, data, error]
+    layout: portrait 720x1280 baseline; adaptive content region; landscape handled by host safe-area slot
+    business_rules:
+      - no period, prize, claim, or self-rank invented without provider data/action
+      - ranks and row order are display-only provider output
+      - no project-local old UI image is used as a visual source
+
+  - id: wuling
+    runtime_classes: [UInkWulingOverviewPage, UInkWulingMembersPage]
+    page_id: wuling
+    variants: [overview, members-management]
+    data_model: GuildVm
+    actions: [create-guild, guild-member-select, remove-member, rename-guild, dissolve-guild]
+    runtime_asset_root: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Wuling
+    purpose: Show current organization identity, status, counts, public supply, and existing host actions.
+    reference_page: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-wuling-home-candidate-v2.png
+    composition:
+      top: [route-owned-back, wuling-title, existing-section-navigation]
+      identity: [transparent-wuling-banner-insignia, dynamic-sect-name, dynamic-service-status]
+      summary: [member-count, participating-count, helper-count, public-supply, reputation]
+      actions: host-supplied-existing-action-list
+    primary_interactions: host-supplied-action-ids-only
+    data_authority:
+      snapshot: UWulingPrototypeSubsystem::Snapshot
+      actions: existing host action ids and authoritative enabled/disabled reasons
+    states: [unknown, loading, empty, data, pending, offline, error, disabled]
+    business_rules:
+      - display only fields present in the actual snapshot
+      - no synthetic contribution, permission, reward, or progress
+
+    member_management_variant:
+      runtime_class: UInkWulingMembersPage
+      composition: [selectable-member-rows, isolated-scroll-region, previous-page, current-offset, next-page, selection-dependent-remove, danger-confirm]
+      primary_interactions:
+        - guild-member-select(UserId)
+        - remove-member(UserId) after danger confirmation
+      data_authority:
+        rows: host-mapped existing Rows array; identity fields name and user id only
+        paging: existing member_cursor and RequestMemberPage behavior
+        removal_permission: host/service supplied bCanRemoveSelected and disabled reason
+      business_rules:
+        - never infer roles, online state, contribution, or join date
+        - component emits callbacks; host/service remains mutation and permission authority
+        - selected member is a stable user id, never recovered from display text
+
+  - id: guild-build
+    runtime_class: UInkGuildBuildPage
+    page_id: guild-build
+    data_model: GuildBuildVm
+    actions: [query-buildings, build-guild]
+    runtime_asset_root: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_GuildBuild
+    purpose: Show the real building catalog and current guild building state; allow the authority-backed build flow.
+    composition: [page-frame, state-panel, back-button, catalog-card, item-detail-sheet, danger-confirm]
+    data_authority: [catalog-kind-buildings, snapshot-buildings, guild-identity]
+    action_parameters:
+      query-buildings: [offset, OwnedOnly]
+      build-guild: [building_id, target_level]
+    business_rules:
+      - render only catalog supplied levels and costs
+      - authority checks supply, contribution, caps, and actor role
+      - require confirmation and preserve request identity/version from existing host
+    states: [unknown, loading, empty, data, pending, offline, error, disabled]
+
+  - id: sword-spirit
+    runtime_class: UInkSwordSpiritPage
+    page_id: sword-spirit
+    data_model: SwordVm
+    actions: [open-gift-rules]
+    runtime_asset_root: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_SwordSpirit
+    purpose: Show the viewer's own sword spirit only when an exact participant record exists.
+    composition: [page-frame, state-panel, back-button, character-attribute-group, tab-strip, data-row]
+    data_authority: [exact-participant-snapshot, actual-authority-records]
+    states: [unknown, loading, empty, data, offline, error]
+    business_rules:
+      - never substitute guild or anchor growth for the viewer's personal sword spirit
+      - missing profile records remain unavailable or unknown, without placeholder statistics
+
+  - id: gift-rules
+    runtime_class: UInkGiftRulesPage
+    page_id: gift-rules
+    data_model: GiftEffectVm
+    actions: []
+    runtime_asset_root: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_GiftRules
+    purpose: Read-only explanation of a real synchronized gift-effect catalog when available.
+    composition: [page-frame, state-panel, back-button, data-row]
+    data_authority: [active-effects, synchronized-rules-catalog]
+    states: [unknown, loading, empty, data, offline, error]
+    business_rules:
+      - no invented gift prices, durations, passive descriptions, or grants
+      - unavailable catalog remains an honest business gap

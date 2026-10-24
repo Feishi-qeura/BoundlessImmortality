@@ -1,0 +1,1038 @@
+{
+  "activities": {
+    "day": "2026-10-24",
+    "month_sign_count": 1,
+    "monthly_chests": [
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 3,
+        "reward": "3日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 7,
+        "reward": "7日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 14,
+        "reward": "14日签到纪念外观"
+      },
+      {
+        "claimed": false,
+        "eligible": false,
+        "milestone": 21,
+        "reward": "21日签到纪念外观"
+      }
+    ],
+    "monthly_milestones": [
+      3,
+      7,
+      14,
+      21
+    ],
+    "sign_in_qi_reward": 0,
+    "sign_in_reward_mode": "placeholder",
+    "signed": true,
+    "signed_days": [
+      "2026-10-24"
+    ],
+    "templates": [
+      {
+        "activity_id": "ACT_SIGN",
+        "cycle": "daily",
+        "enabled": true,
+        "end_at": "",
+        "name": "每日签到",
+        "profile_requirement": "approved_persistence_or_prototype",
+        "reward_budget": "seven_daily_placeholders_no_grant",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_VERSE",
+        "cycle": "daily",
+        "enabled": true,
+        "end_at": "",
+        "name": "每日剑诀",
+        "profile_requirement": "base",
+        "reward_budget": "text_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_WORLD",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "世界历练",
+        "profile_requirement": "base",
+        "reward_budget": "world_stage_budget",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_RACE",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "灵脉竞采",
+        "profile_requirement": "cross_host_race",
+        "reward_budget": "stage_budget_plus_lease",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_SHARED",
+        "cycle": "event",
+        "enabled": true,
+        "end_at": "",
+        "name": "武灵共修",
+        "profile_requirement": "base",
+        "reward_budget": "online_qi_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_MONTH",
+        "cycle": "monthly",
+        "enabled": true,
+        "end_at": "",
+        "name": "月度签到历程",
+        "profile_requirement": "approved_persistence_or_prototype",
+        "reward_budget": "cosmetic_only",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_MOON",
+        "cycle": "limited",
+        "enabled": false,
+        "end_at": "",
+        "name": "中秋问月",
+        "profile_requirement": "approved_materials",
+        "reward_budget": "replace_world_plus_cosmetic_once",
+        "start_at": ""
+      },
+      {
+        "activity_id": "ACT_QINGYUN_LAUNCH",
+        "cycle": "relative_guild_creation",
+        "enabled": true,
+        "end_at": "",
+        "name": "青云初启",
+        "profile_requirement": "prototype_or_explicit_launch_manifest",
+        "reward_budget": "launch_once_budget_rank_numeric_closed",
+        "start_at": ""
+      }
+    ],
+    "verse": "护阵同心，破障同行",
+    "weekly_chests": [
+      {
+        "claimed": false,
+        "day": "2026-10-19",
+        "eligible": false,
+        "milestone": 1,
+        "placeholder": true,
+        "reward": "灵石（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_1"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-20",
+        "eligible": false,
+        "milestone": 2,
+        "placeholder": true,
+        "reward": "灵草（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_2"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-21",
+        "eligible": false,
+        "milestone": 3,
+        "placeholder": true,
+        "reward": "玄铁（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_3"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-22",
+        "eligible": false,
+        "milestone": 4,
+        "placeholder": true,
+        "reward": "丹药（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_4"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-23",
+        "eligible": false,
+        "milestone": 5,
+        "placeholder": true,
+        "reward": "残卷（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_5"
+      },
+      {
+        "claimed": true,
+        "day": "2026-10-24",
+        "eligible": false,
+        "milestone": 6,
+        "placeholder": true,
+        "reward": "玉简（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_6"
+      },
+      {
+        "claimed": false,
+        "day": "2026-10-25",
+        "eligible": false,
+        "milestone": 7,
+        "placeholder": true,
+        "reward": "锦囊（占位）",
+        "reward_id": "PREVIEW_SIGN_DAY_7"
+      }
+    ]
+  },
+  "breakthrough_quote": null,
+  "buildings": [
+    {
+      "building_id": "BUILD_01",
+      "completed": 1792829004.814027,
+      "guild_id": "755de4e04edd434cbfa30ae0cd9a1993",
+      "level": 1
+    }
+  ],
+  "catalog": {
+    "kind": "shop",
+    "offset": 0,
+    "rows": [
+      {
+        "daily_limit": 2,
+        "earliest_expiry": 0,
+        "extra_count_1": 2,
+        "extra_count_2": 0,
+        "extra_item_1": "MAT_HERB_B",
+        "extra_item_2": "",
+        "name": "回复丹",
+        "output_count": 1,
+        "output_item": "ITEM_HEAL",
+        "owned_count": 0,
+        "owner_type": "anchor",
+        "sku": "SKU_HEAL",
+        "stone_cost": 50,
+        "unique_window": false
+      },
+      {
+        "daily_limit": 2,
+        "earliest_expiry": 0,
+        "extra_count_1": 2,
+        "extra_count_2": 0,
+        "extra_item_1": "MAT_IRON_B",
+        "extra_item_2": "",
+        "name": "护阵符",
+        "output_count": 1,
+        "output_item": "ITEM_SHIELD",
+        "owned_count": 0,
+        "owner_type": "anchor",
+        "sku": "SKU_SHIELD",
+        "stone_cost": 40,
+        "unique_window": false
+      },
+      {
+        "daily_limit": 1,
+        "earliest_expiry": 0,
+        "extra_count_1": 2,
+        "extra_count_2": 0,
+        "extra_item_1": "MAT_PAGE",
+        "extra_item_2": "",
+        "name": "研习简",
+        "output_count": 1,
+        "output_item": "ITEM_STUDY",
+        "owned_count": 0,
+        "owner_type": "anchor",
+        "sku": "SKU_STUDY",
+        "stone_cost": 50,
+        "unique_window": false
+      },
+      {
+        "daily_limit": 3,
+        "earliest_expiry": 0,
+        "extra_count_1": 0,
+        "extra_count_2": 0,
+        "extra_item_1": "",
+        "extra_item_2": "",
+        "name": "破境石",
+        "output_count": 1,
+        "output_item": "MAT_BREAK",
+        "owned_count": 1,
+        "owner_type": "anchor",
+        "sku": "SKU_BREAK",
+        "stone_cost": 10,
+        "unique_window": false
+      },
+      {
+        "daily_limit": 1,
+        "earliest_expiry": 0,
+        "extra_count_1": 10,
+        "extra_count_2": 2,
+        "extra_item_1": "MAT_BREAK",
+        "extra_item_2": "MAT_CORE",
+        "name": "凝元精华",
+        "output_count": 1,
+        "output_item": "ITEM_QUALITY",
+        "owned_count": 0,
+        "owner_type": "anchor",
+        "sku": "SKU_QUALITY",
+        "stone_cost": 200,
+        "unique_window": false
+      },
+      {
+        "daily_limit": 1,
+        "earliest_expiry": 0,
+        "extra_count_1": 60,
+        "extra_count_2": 0,
+        "extra_item_1": "STAT_CONTRIB",
+        "extra_item_2": "",
+        "name": "青云徽记",
+        "output_count": 1,
+        "output_item": "COS_BADGE",
+        "owned_count": 0,
+        "owner_type": "viewer",
+        "sku": "SKU_BADGE",
+        "stone_cost": 0,
+        "unique_window": true
+      },
+      {
+        "daily_limit": 1,
+        "earliest_expiry": 0,
+        "extra_count_1": 180,
+        "extra_count_2": 0,
+        "extra_item_1": "STAT_CONTRIB",
+        "extra_item_2": "",
+        "name": "问道纹饰",
+        "output_count": 1,
+        "output_item": "COS_PATTERN",
+        "owned_count": 0,
+        "owner_type": "viewer",
+        "sku": "SKU_PATTERN",
+        "stone_cost": 0,
+        "unique_window": true
+      }
+    ],
+    "total": 7
+  },
+  "combat": {
+    "cooldowns": {},
+    "effects": {},
+    "health": 1000,
+    "last_combat": 0,
+    "max_health": 1000,
+    "safe": true,
+    "statuses": {}
+  },
+  "counts": {
+    "helpers": 0,
+    "members": 0,
+    "participating_members": 0
+  },
+  "focus": null,
+  "growth": {
+    "material_to_next": 20,
+    "name": "练气一阶",
+    "qi": 1352.4344747066498,
+    "qi_to_next": 60,
+    "realm_index": 0,
+    "stone_to_next": 60,
+    "total_qi": 1352.4344747066498
+  },
+  "guild": {
+    "anchor": "newui-anchor-02",
+    "created": 1792828339.982589,
+    "dissolved": 0,
+    "id": "755de4e04edd434cbfa30ae0cd9a1993",
+    "name": "验证武灵",
+    "renamed": 1792828339.982589,
+    "reputation": 0,
+    "scope": "6093255dde1e23c6c264ae9ef015e35fa88bc79dc455f2753a11a8e2afca85a4",
+    "supply": 80
+  },
+  "guild_inventory": {
+    "GUILD_MAT_01": 6,
+    "GUILD_MAT_02": 6
+  },
+  "honors": {
+    "owned": [],
+    "selected": ""
+  },
+  "identity": {
+    "generation": 21,
+    "role": "anchor",
+    "room": "newui-room-02",
+    "user": "newui-anchor-02"
+  },
+  "inventory": {
+    "BOOK_METHOD_EDGE_BOOK": 0,
+    "EQ_ROBE_T1": 1,
+    "FABAO_01": 1,
+    "MAT_BR01_C01_G1": 4,
+    "MAT_BR01_C01_G2": 1,
+    "MAT_BREAK": 1,
+    "MAT_HERB_T": 14,
+    "MAT_IRON_T": 12
+  },
+  "item_instances": [
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "fabao",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "fabao",
+        "implementation_status": "design_only",
+        "item_id": "FABAO_01",
+        "max_stack": 1,
+        "min_major": 0,
+        "name": "引灵葫芦",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "恢复主播最大生命10%；满生命不消耗技能冷却"
+      },
+      "expiry": 1792835481.165424,
+      "id": "18fef26c2a8147d5a2c0892ac2f0ba2d",
+      "item": "FABAO_01",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "unbound",
+      "count": 1,
+      "definition": {
+        "binding": "unbound",
+        "category": "legacy_material",
+        "expiry_policy": "window",
+        "icon_key": "legacy_material",
+        "implementation_status": "design_only",
+        "item_id": "MAT_HERB_T",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "可交易灵草",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": true,
+        "use": "原型寄售或回收或主动绑定制作"
+      },
+      "expiry": 1792835481.165424,
+      "id": "1ae518bbef894d1cba689b4d5f060782",
+      "item": "MAT_HERB_T",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "equipment",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "equipment",
+        "implementation_status": "design_only",
+        "item_id": "EQ_ROBE_T1",
+        "max_stack": 1,
+        "min_major": 0,
+        "name": "青云法衣",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播robe槽；health_add+3%"
+      },
+      "expiry": 1792835481.165424,
+      "id": "1b9e209b2f9d4f3499556c8673fd7031",
+      "item": "EQ_ROBE_T1",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "bound",
+      "count": 4,
+      "definition": {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G1",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "下品筑基丹",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      },
+      "expiry": 1792835481.165424,
+      "id": "2f7d91aaab64403e8409ccb208a7caaf",
+      "item": "MAT_BR01_C01_G1",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "unbound",
+      "count": 11,
+      "definition": {
+        "binding": "unbound",
+        "category": "legacy_material",
+        "expiry_policy": "window",
+        "icon_key": "legacy_material",
+        "implementation_status": "design_only",
+        "item_id": "MAT_HERB_T",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "可交易灵草",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": true,
+        "use": "原型寄售或回收或主动绑定制作"
+      },
+      "expiry": 1792835481.165424,
+      "id": "3b8e18a848f3403ab47e79190b59cfdf",
+      "item": "MAT_HERB_T",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "unbound",
+      "count": 12,
+      "definition": {
+        "binding": "unbound",
+        "category": "legacy_material",
+        "expiry_policy": "window",
+        "icon_key": "legacy_material",
+        "implementation_status": "design_only",
+        "item_id": "MAT_IRON_T",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "可交易玄铁",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": true,
+        "use": "原型寄售或回收或主动绑定制作"
+      },
+      "expiry": 1792835481.165424,
+      "id": "626ba9d2e1ed4874ad729e0eca462375",
+      "item": "MAT_IRON_T",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "breakthrough_core",
+        "expiry_policy": "earliest_input_or_window",
+        "icon_key": "MAT_core_1",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BR01_C01_G2",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "中品筑基丹",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播大境界突破资格；整次只消耗1份"
+      },
+      "expiry": 1792835481.165424,
+      "id": "ca656ae6172f40d1862bfe20b6241121",
+      "item": "MAT_BR01_C01_G2",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.165424,\"id\":\"8A46C5E44F40746D523D33B6BFD72FCF\",\"paid\":false}"
+    },
+    {
+      "binding": "unbound",
+      "count": 2,
+      "definition": {
+        "binding": "unbound",
+        "category": "legacy_material",
+        "expiry_policy": "window",
+        "icon_key": "legacy_material",
+        "implementation_status": "design_only",
+        "item_id": "MAT_HERB_T",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "可交易灵草",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": true,
+        "use": "原型寄售或回收或主动绑定制作"
+      },
+      "expiry": 1792835481.1747944,
+      "id": "95271c300ddb4ab8a02a757d5103a747",
+      "item": "MAT_HERB_T",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1792835481.1747944,\"id\":\"declared-newui-test-fixture\"}"
+    },
+    {
+      "binding": "bound",
+      "count": 1,
+      "definition": {
+        "binding": "bound",
+        "category": "legacy_material",
+        "expiry_policy": "window",
+        "icon_key": "legacy_material",
+        "implementation_status": "design_only",
+        "item_id": "MAT_BREAK",
+        "max_stack": 9999,
+        "min_major": 0,
+        "name": "破境石",
+        "owner_type": "anchor",
+        "paid_origin": false,
+        "tradeable": false,
+        "use": "主播突破"
+      },
+      "expiry": 1795420281.157416,
+      "id": "3f743027d43f45bfadd5cf9ed7805831",
+      "item": "MAT_BREAK",
+      "paid": 0,
+      "reserved": null,
+      "source": "{\"expiry\":1795420281.157416,\"id\":\"3CC04520493C3CD98003DE900790B940\",\"paid\":false}"
+    }
+  ],
+  "journey": {
+    "resources": [
+      {
+        "entry_count": 1,
+        "id": "NODE_QI:1",
+        "index": 1,
+        "interval_seconds": 1,
+        "item_id": "",
+        "item_name": "",
+        "lease_max_seconds": 1800,
+        "name": "灵泉",
+        "node_id": "NODE_QI",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0.2,
+        "quantity": 0,
+        "x": 0.23,
+        "y": 0.72
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_STONE:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "CUR_STONE",
+        "item_name": "灵石",
+        "lease_max_seconds": 1800,
+        "name": "灵石矿",
+        "node_id": "NODE_STONE",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 20,
+        "x": 0.75,
+        "y": 0.22
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_HERB:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "MAT_HERB_B",
+        "item_name": "绑定灵草",
+        "lease_max_seconds": 1800,
+        "name": "灵草园",
+        "node_id": "NODE_HERB",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 2,
+        "x": 0.22,
+        "y": 0.23
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_IRON:1",
+        "index": 1,
+        "interval_seconds": 600,
+        "item_id": "MAT_IRON_B",
+        "item_name": "绑定玄铁",
+        "lease_max_seconds": 1800,
+        "name": "玄铁脉",
+        "node_id": "NODE_IRON",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 2,
+        "x": 0.77,
+        "y": 0.6
+      },
+      {
+        "entry_count": 1,
+        "id": "NODE_PAGE:1",
+        "index": 1,
+        "interval_seconds": 1200,
+        "item_id": "MAT_PAGE",
+        "item_name": "功法残页",
+        "lease_max_seconds": 1800,
+        "name": "残卷遗址",
+        "node_id": "NODE_PAGE",
+        "open": true,
+        "owners": [],
+        "qi_additive": 0,
+        "quantity": 1,
+        "x": 0.48,
+        "y": 0.48
+      }
+    ],
+    "worlds": [
+      {
+        "description": "青山灵泉，守护阵眼。与剑灵一同完成三阶段历练，积累修为与破境资材。",
+        "difficulty": "护阵 · 常规",
+        "id": "qingyun",
+        "name": "青云山",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.22,
+        "y": 0.65
+      },
+      {
+        "description": "霞谷药田被灵障封锁。第一阶段选择免费采集路线解封，再完成三阶段历练。",
+        "difficulty": "采集封印 · 进阶",
+        "id": "luoxia",
+        "name": "落霞谷",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.5,
+        "y": 0.48
+      },
+      {
+        "description": "玄铁矿脉盘踞山岭。第二阶段回应破障，打开限时弱点，合力完成历练。",
+        "difficulty": "限时弱点 · 挑战",
+        "id": "xuantie",
+        "name": "玄铁岭",
+        "open": true,
+        "rewards": [
+          {
+            "item_id": "CUR_STONE",
+            "name": "灵石",
+            "quantity": 80
+          },
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 12
+          },
+          {
+            "item_id": "MAT_HERB_B",
+            "name": "绑定灵草",
+            "quantity": 5
+          },
+          {
+            "item_id": "MAT_IRON_B",
+            "name": "绑定玄铁",
+            "quantity": 3
+          },
+          {
+            "item_id": "MAT_PAGE",
+            "name": "功法残页",
+            "quantity": 2
+          },
+          {
+            "item_id": "MAT_HERB_T",
+            "name": "可交易灵草",
+            "quantity": 1
+          },
+          {
+            "item_id": "MAT_IRON_T",
+            "name": "可交易玄铁",
+            "quantity": 1
+          }
+        ],
+        "x": 0.32,
+        "y": 0.22
+      },
+      {
+        "description": "冰封北域，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "xuanbing",
+        "name": "玄冰原",
+        "open": false,
+        "rewards": [],
+        "x": 0.76,
+        "y": 0.18
+      },
+      {
+        "description": "林海深处，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "yaoshou",
+        "name": "妖兽林",
+        "open": false,
+        "rewards": [],
+        "x": 0.84,
+        "y": 0.72
+      },
+      {
+        "description": "赤炎诸岛，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "chiyan",
+        "name": "赤炎洲",
+        "open": false,
+        "rewards": [],
+        "x": 0.72,
+        "y": 0.43
+      },
+      {
+        "description": "星光遗址，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "xingyun",
+        "name": "星陨台",
+        "open": false,
+        "rewards": [],
+        "x": 0.9,
+        "y": 0.4
+      },
+      {
+        "description": "太虚秘境，待后续章节开放。",
+        "difficulty": "未开放",
+        "id": "taixu",
+        "name": "太虚境",
+        "open": false,
+        "rewards": [],
+        "x": 0.67,
+        "y": 0.88
+      }
+    ]
+  },
+  "launch": null,
+  "lease": null,
+  "loadout": {
+    "equipment": {},
+    "fabao": "",
+    "main": "METHOD_EDGE",
+    "method_names": {
+      "METHOD_ECHO": "回响诀",
+      "METHOD_EDGE": "疾锋剑诀",
+      "METHOD_ETHER": "百蚀经",
+      "METHOD_GUARD": "玄罡体经",
+      "METHOD_PACT": "合契经",
+      "METHOD_STAR": "星罗法诀",
+      "METHOD_SURGE": "燃脉诀"
+    },
+    "methods": {
+      "METHOD_EDGE": {
+        "level": 1,
+        "progress": 0
+      }
+    },
+    "supports": []
+  },
+  "manifest": {
+    "profile": "prototype_full",
+    "rule_version": "wuling-prototype-v1.4.0",
+    "rules_hash": "6f272299ba03a3c7bb27e5085008bfd8529518553be7f93134cd0e95c63e4c09",
+    "window_end": 1795420281.157416
+  },
+  "market": {
+    "listings": [],
+    "own_listings": [
+      {
+        "count": 1,
+        "created": 1792829394.5450566,
+        "end": 1792835481.165424,
+        "id": "4e26ede714c94aec8c8a32c2dbb03dae",
+        "item_id": "MAT_HERB_T",
+        "name": "可交易灵草",
+        "original_expiry": 1792835481.165424,
+        "seller": "newui-anchor-02",
+        "status": "Cancelled",
+        "unit_price": 4,
+        "version": 1
+      }
+    ]
+  },
+  "member_cursor": 0,
+  "members": [],
+  "offline_reward": null,
+  "presentation": {
+    "effects": [],
+    "message": "",
+    "next_cue": "",
+    "route_preview": [],
+    "weakness_remaining": 0
+  },
+  "race": null,
+  "race_queue": null,
+  "records": [
+    {
+      "attributes": {
+        "attack": 10,
+        "defense": 20,
+        "max_health": 1000,
+        "move_speed_add": 0,
+        "quality_factor": 1
+      },
+      "honor_title": "",
+      "material_cost": 20,
+      "material_count": 1,
+      "name": "newui-anchor-02",
+      "offline_reward": null,
+      "qi": 1352.4344747066498,
+      "qi_to_next": 60,
+      "rate": 1,
+      "realm_index": 0,
+      "realm_name": "练气一阶",
+      "role": "anchor",
+      "user": "newui-anchor-02"
+    },
+    {
+      "attributes": {
+        "attack": 13.599999999999998,
+        "defense": 0,
+        "max_health": 0,
+        "move_speed_add": 0,
+        "quality_factor": 1
+      },
+      "honor_title": "",
+      "material_cost": 0,
+      "material_count": 0,
+      "name": "界面验证样本",
+      "offline_reward": {
+        "acknowledged_qi": 0,
+        "last_settled_utc": 1792833765.4237561,
+        "seconds": 5414.737224817276,
+        "total_qi": 541.4737224817244
+      },
+      "qi": 1.4737224817277024,
+      "qi_to_next": 300,
+      "rate": 0,
+      "realm_index": 3,
+      "realm_name": "练气四阶",
+      "role": "viewer",
+      "user": "newui-member-fixture"
+    }
+  ],
+  "revoked_participants": [],
+  "reward_receipts": {
+    "entries": [
+      {
+        "created_utc": 1792828502.2409942,
+        "items": [
+          {
+            "item_id": "MAT_BREAK",
+            "name": "破境石",
+            "quantity": 1
+          }
+        ],
+        "owner": "newui-anchor-02",
+        "receipt_id": "5e6975417401b74ef9cf9b9407794c90485c6878ae74f07bbd3b2727bc02fa71",
+        "sequence": 1,
+        "source_id": "3CC04520493C3CD98003DE900790B940",
+        "source_label": "商店兑换",
+        "title": "获得奖励"
+      },
+      {
+        "created_utc": 1792829012.7454605,
+        "items": [
+          {
+            "item_id": "MAT_BR01_C01_G2",
+            "name": "中品筑基丹",
+            "quantity": 1
+          }
+        ],
+        "owner": "newui-anchor-02",
+        "receipt_id": "3518c54e91c55fcf588de49ca59109740c452b68655a9261de05fdcf3797cca7",
+        "sequence": 2,
+        "source_id": "8A46C5E44F40746D523D33B6BFD72FCF",
+        "source_label": "炼制完成",
+        "title": "获得奖励"
+      }
+    ],
+    "high_watermark": 2
+  },
+  "round": null,
+  "server_utc": 1792833765.432686,
+  "tribulation": null,
+  "version": 73,
+  "wallet": {
+    "CUR_STONE": 461
+  }
+}

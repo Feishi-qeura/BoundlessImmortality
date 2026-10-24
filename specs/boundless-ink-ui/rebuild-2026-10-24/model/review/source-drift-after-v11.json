@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-24T09:13:59.975150+00:00",
+  "changed": [
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/default-root-pie-14/report.json",
+      "captured_sha256": "a6519f926e22272050e618c2b09edde34f4d55bfb2d0680d60856c92bd9b95ce",
+      "current_sha256": "19c6f559ad81e322a755ba27b97287f49472def5f7fbc316e9a6f96b14591623"
+    }
+  ]
+}

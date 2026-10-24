@@ -1,0 +1,44 @@
+{
+  "owner_team": "logic-integration",
+  "state": "granted",
+  "granted_at": "2026-10-24T11:29:53.2298057+08:00",
+  "expires_at": "2026-10-24T13:29:53.2298057+08:00",
+  "scope": "First five referenced textures, two preserving WBP migrations, Editor Development build, native automation and isolated-data PIE player-entry/logic verification",
+  "allowed_operations": [
+    "build",
+    "import",
+    "migrate_wbp",
+    "automation",
+    "pie"
+  ],
+  "allowed_content_writes": [
+    "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeAvailable",
+    "/Game/UI/Ink/ComponentRollout20261024/Journey/T_Journey_WorldNodeLocked",
+    "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+    "/Game/UI/Ink/Widgets/Leaderboard/WBP_InkLeaderboard",
+    "/Game/UI/Ink/ComponentRollout20261024/Player/T_BreakthroughMaterialSlotFrame_Default_v1"
+  ],
+  "asset_manifest": "logic-integration/engine-batch.json",
+  "asset_manifest_sha256": "109dd3a6cdfc5d9a12db913b50982333d99aa465b3429db94fb859b7c815a234",
+  "cleanup_state": "audit_only",
+  "cleanup_asset_mutation": false,
+  "source_integration_authorized": true,
+  "diagnostic_source_repair_authorized": true,
+  "diagnostic_source_repair_scope": "Only minimal repairs tied to actual compiler/UHT/runtime test diagnostics in current rollout source and integrated public/editor helper files. Back up exact files and record pre/post hashes; preserve original freeze; no concurrent writers.",
+  "batch2_promotion_authorized": false,
+  "other_team_source_writes_authorized": false,
+  "user_editor_stop_authorized": false,
+  "owned_engine_process_normal_shutdown_authorized": true,
+  "preflight": {
+    "observed_at": "2026-10-24T11:29:53.2298057+08:00",
+    "engine_process_count": 0,
+    "all_seven_threads_idle": true,
+    "prepared_textures": 5,
+    "unexpected_frozen_source_drift": []
+  },
+  "test_data_scope": "Isolated local fixtures/service database/save sandbox; preserve user production saves and configuration",
+  "visual_approval": "user_only",
+  "expiry_policy": "Do not begin another operation after expiry; checkpoint and request coordinator renewal; normal cleanup of owned test processes allowed"
+}

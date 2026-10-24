@@ -1,0 +1,118 @@
+{
+  "engine_pid": 47604,
+  "started_at": "2026-10-24T05:50:41.372272+00:00",
+  "passed": true,
+  "scope": [
+    "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+    "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters"
+  ],
+  "proof": "No UObject exports in two old containers; both canonical targets saved/hash match partial snapshot; old files still original snapshot bytes",
+  "old_files_deleted": false,
+  "operations": [
+    {
+      "package": "/Game/UI/Ink/Textures/HUD/T_XianxiaMeters",
+      "action": "native_reload_only_proven_empty_containers_from_verified_original_files"
+    },
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1",
+      "action": "native_reload_only_proven_empty_containers_from_verified_original_files"
+    }
+  ],
+  "reload_result": "(True, Text(\"\"))",
+  "dirty_after": [],
+  "map_dirty_after": [],
+  "old_registry": [
+    {
+      "package": "/Game/UI/Ink/ComponentRollout20261024/RankWuling/T_RankWulingPaperPanel_Default_v1",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Fonts/Shared/F_InkBody",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/M_InkTitleFeather",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Atlas/M_InkScrollFade",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkScrollFade",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Materials/Shared/M_InkTitleFeather",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Niagara/Shared/NS_InkTitleAura",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/NiagaraRevision20261022/Textures/T_XianxiaMeters",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedButtons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedInventory",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Provided/T_ProvidedRank",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Cultivation/T_InkMeditation",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Inventory/T_ProvidedInventory",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_RankSwordRows",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Leaderboard/T_ProvidedRank",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkTitle",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_CohesionIcons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_ProvidedButtons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_InkAttributeIcons",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Textures/Shared/T_PolishOrnaments",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    },
+    {
+      "package": "/Game/UI/Ink/Widgets/Shared/WBP_InkFrontend",
+      "asset_class": "/Script/CoreUObject.ObjectRedirector"
+    }
+  ]
+}

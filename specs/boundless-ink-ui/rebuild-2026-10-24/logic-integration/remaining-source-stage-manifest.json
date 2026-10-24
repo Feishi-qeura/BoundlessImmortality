@@ -1,0 +1,198 @@
+{
+  "staged_files": 14,
+  "production_written": false,
+  "approved": false,
+  "patched": [
+    "InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+    "InkPlayerBreakthroughTribulationWidgets.h",
+    "InkPlayerBreakthroughTribulationWidgets.cpp"
+  ],
+  "files": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "owner": "panel-journey",
+      "revision": "review-v4",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp",
+      "source_sha256": "894fb63becb47dcf2cbe2a46ff8bad7062de418a6c201a1e80ee148aa0bd3bcd",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\status.json",
+      "receipt_sha256": "a79645a66795edc1ae9575cedc58284bd2454ff1bf397d9e66a3e8c780f60c22",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.cpp",
+      "staged_sha256": "894fb63becb47dcf2cbe2a46ff8bad7062de418a6c201a1e80ee148aa0bd3bcd",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "owner": "panel-journey",
+      "revision": "review-v4",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\staged-source\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h",
+      "source_sha256": "1b25d7f6b3df6775aa8a38ff73b577c3aa9402eb5cb3c3a6a764d29287a44464",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-journey\\review-v4\\status.json",
+      "receipt_sha256": "a79645a66795edc1ae9575cedc58284bd2454ff1bf397d9e66a3e8c780f60c22",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Journey\\InkJourneyNewWidgets.h",
+      "staged_sha256": "1b25d7f6b3df6775aa8a38ff73b577c3aa9402eb5cb3c3a6a764d29287a44464",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivitySecondaryWidgets.cpp",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildActivitySecondaryWidgets.cpp",
+      "source_sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildActivitySecondaryWidgets.cpp",
+      "staged_sha256": "d9a086d3d909b7448a533c5dce4fb2b8381976e6ef90756cc803fd579bb4a265",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivitySecondaryWidgets.h",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildActivitySecondaryWidgets.h",
+      "source_sha256": "9d3cfbf12a06732c0df2c6dba6159af9aa7630fdedd53fd7bb6f6576bc4d8ca3",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildActivitySecondaryWidgets.h",
+      "staged_sha256": "9d3cfbf12a06732c0df2c6dba6159af9aa7630fdedd53fd7bb6f6576bc4d8ca3",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildActivityWidgets.cpp",
+      "source_sha256": "535ac0ba0d98e054fc43b920e8e887f74d7307699ff6cdca013ab90f119f0be8",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildActivityWidgets.cpp",
+      "staged_sha256": "535ac0ba0d98e054fc43b920e8e887f74d7307699ff6cdca013ab90f119f0be8",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.h",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildActivityWidgets.h",
+      "source_sha256": "77a3112d21aec1e5b2aa3d019d73b6852bee43fe0baf9d928df50c5cff11f3a8",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildActivityWidgets.h",
+      "staged_sha256": "77a3112d21aec1e5b2aa3d019d73b6852bee43fe0baf9d928df50c5cff11f3a8",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.cpp",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildEconomyWidgets.cpp",
+      "source_sha256": "a5e714676a1c889f1dc8de4934e2e83c86d8aa068120f7e0399c6f5a3fa3bb81",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildEconomyWidgets.cpp",
+      "staged_sha256": "a5e714676a1c889f1dc8de4934e2e83c86d8aa068120f7e0399c6f5a3fa3bb81",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.h",
+      "owner": "panel-activities",
+      "revision": "review-v5",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\staged-source\\RebuildEconomyWidgets.h",
+      "source_sha256": "24527a98e09499ad81a0347a95bc71ba2a6994aae2b37b12663bfbe5ec1804c4",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-activities\\review-v5\\source-delta-v5.json",
+      "receipt_sha256": "36db503863b41b4f7c8d1db1e480c056213aae301354ff9b36b6df460001ee9e",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Activities\\RebuildEconomyWidgets.h",
+      "staged_sha256": "24527a98e09499ad81a0347a95bc71ba2a6994aae2b37b12663bfbe5ec1804c4",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "owner": "panel-player",
+      "revision": "player-c",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-c\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "source_sha256": "a6b08dbcc3d449270b21e6da8db3c05f90f1c162136af1e75d7ffba84f615d34",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v4\\receipt.md",
+      "receipt_sha256": "5240085fa70f9b2a203b81a57012bde3b1471b4580848eb6b179b0d6814b8c39",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "staged_sha256": "34eeee22bc0031b0c1b940e7568b5993feb068e23bb538f05a723b6d3f72999c",
+      "patches": [
+        {
+          "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v4\\diff\\player-c-pc3-02-03.diff",
+          "sha256": "375f596b199613e12cc24ddbbe2c373a828112410b4d9b20c8be42af06c574ee",
+          "hunks": 3
+        }
+      ]
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.h",
+      "owner": "panel-player",
+      "revision": "player-c",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-c\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerMethodsEquipmentAppearanceWidgets.h",
+      "source_sha256": "3948ac462ed549df7e9860e1b166cf86623c71b9748e05295be1453fbba0c3ed",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v4\\receipt.md",
+      "receipt_sha256": "5240085fa70f9b2a203b81a57012bde3b1471b4580848eb6b179b0d6814b8c39",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerMethodsEquipmentAppearanceWidgets.h",
+      "staged_sha256": "3948ac462ed549df7e9860e1b166cf86623c71b9748e05295be1453fbba0c3ed",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.cpp",
+      "owner": "panel-player",
+      "revision": "player-d",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-d\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerCraftSourcesWidgets.cpp",
+      "source_sha256": "2556d05f2a294fa0148aa947d11153702a8513a120e9801aafc331c30289b4f8",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\receipt.md",
+      "receipt_sha256": "b7dfaa8eb65cb3fa27492d6f7a7971a06bac20ee7ee7d4a5c1f9544fe3985d21",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerCraftSourcesWidgets.cpp",
+      "staged_sha256": "2556d05f2a294fa0148aa947d11153702a8513a120e9801aafc331c30289b4f8",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.h",
+      "owner": "panel-player",
+      "revision": "player-d",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-d\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerCraftSourcesWidgets.h",
+      "source_sha256": "15aeea0fc79cf62e1160192dd8326069cb20f0578e8618f7a8e46fad835d8db4",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\receipt.md",
+      "receipt_sha256": "b7dfaa8eb65cb3fa27492d6f7a7971a06bac20ee7ee7d4a5c1f9544fe3985d21",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerCraftSourcesWidgets.h",
+      "staged_sha256": "15aeea0fc79cf62e1160192dd8326069cb20f0578e8618f7a8e46fad835d8db4",
+      "patches": []
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.cpp",
+      "owner": "panel-player",
+      "revision": "player-e",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-e\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerBreakthroughTribulationWidgets.cpp",
+      "source_sha256": "762bfa4ccbfd6fc30263ead518771c13bba5857c15a7f00564b43eec60dbbb03",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\receipt.md",
+      "receipt_sha256": "b7dfaa8eb65cb3fa27492d6f7a7971a06bac20ee7ee7d4a5c1f9544fe3985d21",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerBreakthroughTribulationWidgets.cpp",
+      "staged_sha256": "4c747d003fbe5687aa86833749211cb90ff79eca99b3a09d1dcf1e05b5eccf1b",
+      "patches": [
+        {
+          "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\diff\\player-e-breakthrough-confirmation.diff",
+          "sha256": "44908ce252312d3cf0122f69d0005dd53ceec0645ee455cfbbd82d534cd99708",
+          "hunks": 3
+        }
+      ]
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.h",
+      "owner": "panel-player",
+      "revision": "player-e",
+      "source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\player-e\\staged-source\\Frontend\\UIRebuild20261024\\Player\\InkPlayerBreakthroughTribulationWidgets.h",
+      "source_sha256": "cb8d0e2276e633706f4b9a53383ffb8e8f73222063ff2c563a25a9d2c591c117",
+      "receipt": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\receipt.md",
+      "receipt_sha256": "b7dfaa8eb65cb3fa27492d6f7a7971a06bac20ee7ee7d4a5c1f9544fe3985d21",
+      "staged": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\remaining-source-stage\\Source\\BoundlessImmortality\\Frontend\\UIRebuild20261024\\Player\\InkPlayerBreakthroughTribulationWidgets.h",
+      "staged_sha256": "a085e4e866795f5b7ed0048eb3f932a47e95d5645e7049d5b158880504cadc4d",
+      "patches": [
+        {
+          "path": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\panel-player\\review-v5\\diff\\player-e-breakthrough-confirmation.diff",
+          "sha256": "44908ce252312d3cf0122f69d0005dd53ceec0645ee455cfbbd82d534cd99708",
+          "hunks": 3
+        }
+      ]
+    }
+  ]
+}

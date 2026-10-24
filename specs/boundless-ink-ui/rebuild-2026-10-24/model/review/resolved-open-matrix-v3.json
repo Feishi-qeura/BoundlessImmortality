@@ -1,0 +1,133 @@
+{
+  "captured_utc": "2026-10-24T05:16:05.995057+00:00",
+  "report": "bounded-v3-review.md",
+  "parent_matrix": "resolved-open-matrix-v2.json",
+  "rows": [
+    {
+      "id": "N01",
+      "owner": "panel-activities + integration",
+      "disposition": "source-resolved-stage-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/review-v3/staged-source/RebuildActivityWidgets.cpp",
+      "sha256": "535ac0ba0d98e054fc43b920e8e887f74d7307699ff6cdca013ab90f119f0be8",
+      "note": "Native known-absent start subject captured; no mandatory future EventId or nonempty day",
+      "runtime_verified": false
+    },
+    {
+      "id": "N02",
+      "owner": "panel-journey + integration",
+      "disposition": "identity-defect-resolved-new-J3-01-open",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "1dc84b428388cdc36e57e1efb91ab2896a0124bc43e86e2c681e6a967699d378",
+      "note": "Captured day/month/milestone emitted; new optional month-string gate remains",
+      "runtime_verified": false
+    },
+    {
+      "id": "N03",
+      "owner": "logic-integration",
+      "disposition": "source-resolved-production-runtime-pending",
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "sha256": "f987f0d89d982dcc695e9d0c1207b57014a3adc412c5eb460ea75f2d454f6807",
+      "note": "Visible GUID selection and separate revalidated empty-slot intent",
+      "runtime_verified": false
+    },
+    {
+      "id": "N04",
+      "owner": "panel-journey + integration/cleanup",
+      "disposition": "source-path-resolved-import-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "1dc84b428388cdc36e57e1efb91ab2896a0124bc43e86e2c681e6a967699d378",
+      "note": "Canonical mapped font path used; imported/runtime typography unverified",
+      "runtime_verified": false
+    },
+    {
+      "id": "N05",
+      "owner": "logic-integration",
+      "disposition": "open-next-source-epoch",
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "1a67345efd4471e03de7583501f5de35d2259d520fb19a5b95dfcd6f669db849",
+      "note": "6 connected / 1 placeholder / 37 without observed new production component; legacy feature host remains",
+      "runtime_verified": false
+    },
+    {
+      "id": "N06",
+      "owner": "logic-integration",
+      "disposition": "key-provider-defects-resolved-new-I3-01-open",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "79418674e005bec2a01c480d88a4971f23e463499c7ea199884ccba58f96d1c8",
+      "note": "Complete entry export/provider key; Busy projection hides confirmed content",
+      "runtime_verified": false
+    },
+    {
+      "id": "N07",
+      "owner": "panel-rank + integration",
+      "disposition": "source-resolved-async-host-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPages.cpp",
+      "sha256": "b9a6342e75bb12f730b01d8f51237693bc3610bbfdf01c6cf626cd3397cc4a11",
+      "note": "Null releases in-flight; explicit retry API; host must back off all request paths",
+      "runtime_verified": false
+    },
+    {
+      "id": "N08",
+      "owner": "panel-rank",
+      "disposition": "source-resolved-compile-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPageBase.cpp",
+      "sha256": "5cbb4d22821c80eed6a8a82d96bc77144619ef50464f551a8b5eeaed4110194b",
+      "note": "Engine/Font.h explicitly included",
+      "runtime_verified": false
+    },
+    {
+      "id": "N09",
+      "owner": "panel-rank",
+      "disposition": "source-resolved-render-pending",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/review-v3/staged-source/InkRankWulingPages.cpp",
+      "sha256": "b9a6342e75bb12f730b01d8f51237693bc3610bbfdf01c6cf626cd3397cc4a11",
+      "note": "Inner button GetContent yields label",
+      "runtime_verified": false
+    },
+    {
+      "id": "PC3-01",
+      "owner": "panel-player",
+      "disposition": "open-P1-API",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "sha256": "a6b08dbcc3d449270b21e6da8db3c05f90f1c162136af1e75d7ffba84f615d34",
+      "note": "Ordinary dynamic UButton.OnClicked still uses AddLambda",
+      "runtime_verified": false
+    },
+    {
+      "id": "PC3-02",
+      "owner": "panel-player",
+      "disposition": "open-P2-action-display-coupling",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "sha256": "a6b08dbcc3d449270b21e6da8db3c05f90f1c162136af1e75d7ffba84f615d34",
+      "note": "Known selected item + host eligibility cannot render learn action without catalog display row",
+      "runtime_verified": false
+    },
+    {
+      "id": "PC3-03",
+      "owner": "panel-player",
+      "disposition": "open-P2-unknown-field",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/staged-source/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "sha256": "a6b08dbcc3d449270b21e6da8db3c05f90f1c162136af1e75d7ffba84f615d34",
+      "note": "Missing item name claims empty slot despite known actual entry identity",
+      "runtime_verified": false
+    },
+    {
+      "id": "J3-01",
+      "owner": "panel-journey",
+      "disposition": "open-P2-display-gate",
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/review-v3/staged-source/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "1dc84b428388cdc36e57e1efb91ab2896a0124bc43e86e2c681e6a967699d378",
+      "note": "Nonempty ServerMonth newly required although native MonthlyChest does not require month string",
+      "runtime_verified": false
+    },
+    {
+      "id": "I3-01",
+      "owner": "logic-integration",
+      "disposition": "open-P2-pending-content",
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "79418674e005bec2a01c480d88a4971f23e463499c7ea199884ccba58f96d1c8",
+      "note": "Busy switches confirmed Character/Inventory content to status-only presentation",
+      "runtime_verified": false
+    }
+  ]
+}

@@ -1,0 +1,4517 @@
+schema_version: 1
+project_id: rebuild-2026-10-24
+status: draft
+approved: false
+screen_count: 44
+policy: All 44 pages are new visual compositions; legacy preservation flags are superseded.
+screens:
+- id: main
+  name: 主菜单
+  category: scene-entry
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 看清开始与继续，人物场景成为新版主视觉
+  owner: panel-player
+  new_page_id: main
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Main
+    resolved: Main
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Main
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-main
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Main
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - application-start
+  primary_actions:
+  - start-game
+  - continue-game
+  - open-saves
+  all_actions:
+  - start-game
+  - continue-game
+  - open-saves
+  - open-settings
+  - quit-game
+  dependencies: []
+  layout:
+    family: scene-entry
+    top:
+    - page-header
+    - provider-state
+    center:
+    - main-scene-window
+    - primary-button
+    - secondary-button
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - main-scene-window
+  - primary-button
+  - secondary-button
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - FrontendVm
+  - SaveVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - player-main-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/main.md
+    prompt: ''
+    image: ''
+- id: home
+  name: 常驻HUD
+  category: scene-hud
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 边缘HUD与真实修炼动作，中心保留战斗与人物
+  owner: panel-player
+  new_page_id: home
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: HUD
+    resolved: HUD
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: HUD
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-home
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Home
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - main
+  primary_actions:
+  - toggle-cultivation
+  - open-character
+  - open-inventory
+  all_actions:
+  - toggle-cultivation
+  - open-character
+  - open-inventory
+  - open-leaderboard
+  - open-journey
+  dependencies:
+  - main
+  layout:
+    family: scene-hud
+    top:
+    - page-header
+    - provider-state
+    center:
+    - anchor-status
+    - bottom-navigation
+    - progress-track
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - anchor-status
+  - bottom-navigation
+  - progress-track
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - AnchorVm
+  - WorldVm
+  - LeaseVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: &id001
+    - player-main-v3
+    - player-breakthrough-v3
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/home.md
+    prompt: ''
+    image: ''
+- id: character
+  name: 角色
+  category: character-sheet
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 新角色构图中的真实属性、装备和成长入口
+  owner: panel-player
+  new_page_id: character
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Character
+    resolved: Character
+    context: ''
+    current_host: UInkFrontendWidget; OpenCharacter enters UInkCharacterProfilePanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Character
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-character
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Character
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - open-equipment
+  - open-methods
+  - open-breakthrough
+  all_actions:
+  - open-equipment
+  - open-methods
+  - open-breakthrough
+  - open-appearance
+  dependencies:
+  - main
+  layout:
+    family: character-sheet
+    top:
+    - page-header
+    - provider-state
+    center: &id002
+    - character-attribute-group
+    - tab-strip
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - character-attribute-group
+  - tab-strip
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - AnchorVm
+  - EquipmentVm
+  - MethodVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/character.md
+    prompt: ''
+    image: ''
+- id: inventory
+  name: 物品
+  category: inventory-detail
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实物品筛选、稳定选择与动作详情
+  owner: panel-player
+  new_page_id: inventory
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Inventory
+    resolved: Inventory
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Inventory
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-inventory
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Inventory
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - inventory-select
+  - inventory-use
+  - inventory-equip
+  all_actions:
+  - inventory-select
+  - inventory-use
+  - inventory-equip
+  - inventory-recycle
+  dependencies:
+  - main
+  layout:
+    family: inventory-detail
+    top:
+    - page-header
+    - provider-state
+    center:
+    - tab-strip
+    - inventory-slot
+    - item-detail-sheet
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - tab-strip
+  - inventory-slot
+  - item-detail-sheet
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/inventory.md
+    prompt: ''
+    image: ''
+- id: leaderboard
+  name: 排行
+  category: leaderboard
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 三榜完整构图，共享身份列与真实排序
+  owner: panel-rank
+  new_page_id: leaderboard
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Leaderboard
+    resolved: Leaderboard
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Leaderboard
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-leaderboard
+    package_suggestion: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Leaderboard
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - board-category
+  - board-scope
+  all_actions:
+  - board-category
+  - board-scope
+  dependencies:
+  - main
+  layout:
+    family: leaderboard
+    top:
+    - page-header
+    - provider-state
+    center: &id013
+    - rank-row
+    - rank-scope-strip
+    - state-panel
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - rank-row
+  - rank-scope-strip
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants:
+  - Damage
+  - CultivationSpeed
+  - Anchor
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LeaderboardVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - rank-damage-v2
+    - rank-cultivation-v2
+    - rank-spirit-v2
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: rank-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/leaderboard.md
+    prompt: ''
+    image: ''
+- id: saves
+  name: 存档
+  category: card-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 三份本地真实存档的元信息及确认动作
+  owner: panel-player
+  new_page_id: saves
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Saves
+    resolved: Saves
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Saves
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-saves
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Saves
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - save-slot
+  - load-slot
+  - delete-slot
+  all_actions:
+  - save-slot
+  - load-slot
+  - delete-slot
+  dependencies:
+  - main
+  layout:
+    family: card-list
+    top:
+    - page-header
+    - provider-state
+    center: &id008
+    - data-row
+    - secondary-button
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - secondary-button
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - SaveVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/saves.md
+    prompt: ''
+    image: ''
+- id: settings
+  name: 设置
+  category: option-groups
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 可见当前设置、自定义状态与即时反馈
+  owner: panel-player
+  new_page_id: settings
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Settings
+    resolved: Settings
+    context: ''
+    current_host: UInkFrontendWidget
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Settings
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-settings
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Settings
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - set-quality
+  - set-frame-limit
+  - toggle-reduced-motion
+  all_actions:
+  - set-quality
+  - set-frame-limit
+  - toggle-reduced-motion
+  - apply-settings
+  dependencies:
+  - main
+  layout:
+    family: option-groups
+    top:
+    - page-header
+    - provider-state
+    center:
+    - tab-strip
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - tab-strip
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - SettingsVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/settings.md
+    prompt: ''
+    image: ''
+- id: wuling
+  name: 武灵总览成员建设记录
+  category: organization
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 新组织hero、统计、成员管理和既有权限链
+  owner: panel-rank
+  new_page_id: wuling
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Wuling
+    resolved: Wuling
+    context: ''
+    current_host: UInkWulingSectPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Wuling
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-wuling
+    package_suggestion: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_Wuling
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - journey
+  primary_actions:
+  - create-guild
+  - guild-member-select
+  - remove-member
+  all_actions:
+  - create-guild
+  - guild-member-select
+  - remove-member
+  - rename-guild
+  - dissolve-guild
+  dependencies:
+  - main
+  layout:
+    family: organization
+    top:
+    - page-header
+    - provider-state
+    center:
+    - guild-identity-card
+    - guild-member-row
+    - danger-confirm
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - guild-identity-card
+  - guild-member-row
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants:
+  - overview
+  - members-management
+  - construction-entry
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - GuildVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - wuling-v2
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: rank-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/wuling.md
+    prompt: ''
+    image: ''
+- id: sword-spirit
+  name: 我的剑灵
+  category: character-sheet
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 观众个人剑灵资料与主播/组织成长分开
+  owner: panel-rank
+  new_page_id: sword-spirit
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: SwordSpirit
+    resolved: WulingRights
+    context: ''
+    current_host: UInkWulingRecordsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: SwordSpirit
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-sword-spirit
+    package_suggestion: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_SwordSpirit
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - journey
+  primary_actions:
+  - open-gift-rules
+  all_actions:
+  - open-gift-rules
+  dependencies:
+  - main
+  layout:
+    family: character-sheet
+    top:
+    - page-header
+    - provider-state
+    center: *id002
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - character-attribute-group
+  - tab-strip
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - SwordVm
+  - GiftEffectVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: &id003
+    - rank-damage-v2
+    - wuling-v2
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Current WulingRights is rights/records, not a complete personal sword model; do
+    not invent a profile.
+  delivery:
+    merge_slice: rank-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/sword-spirit.md
+    prompt: ''
+    image: ''
+- id: gift-rules
+  name: 礼物效果说明
+  category: rules-sheet
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 只展示真实礼物效果说明，未知字段明确缺口
+  owner: panel-rank
+  new_page_id: gift-rules
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: GiftRules
+    resolved: GiftRules
+    context: ''
+    current_host: UInkGiftRulesPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: GiftRules
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-gift-rules
+    package_suggestion: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_GiftRules
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - sword-spirit
+  primary_actions: []
+  all_actions: []
+  dependencies:
+  - main
+  layout:
+    family: rules-sheet
+    top:
+    - page-header
+    - provider-state
+    center:
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - GiftEffectVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id003
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Current GiftRules is unavailable copy; no synced detailed effect catalog contract
+    verified.
+  delivery:
+    merge_slice: rank-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/gift-rules.md
+    prompt: ''
+    image: ''
+- id: methods
+  name: 功法构筑
+  category: loadout-builder
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 主功法与辅助位的新构筑页
+  owner: panel-player
+  new_page_id: methods
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: CultivationMethods
+    resolved: WulingEquipment
+    context: methods
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: CultivationMethods
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-methods
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Methods
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - journey
+  primary_actions:
+  - learn-method
+  - configure-methods
+  all_actions:
+  - learn-method
+  - configure-methods
+  dependencies:
+  - main
+  layout:
+    family: loadout-builder
+    top:
+    - page-header
+    - provider-state
+    center: &id014
+    - inventory-slot
+    - item-detail-sheet
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - inventory-slot
+  - item-detail-sheet
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - MethodVm
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/methods.md
+    prompt: ''
+    image: ''
+- id: race-lobby
+  name: 竞采匹配
+  category: event-lobby
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 等待真实匹配，不把入队当开赛
+  owner: panel-journey
+  new_page_id: race-lobby
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: RaceLobby
+    resolved: WulingRace
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: RaceLobby
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-race-lobby
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceLobby
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - resource-detail
+  primary_actions:
+  - cancel-race-queue
+  all_actions:
+  - cancel-race-queue
+  dependencies:
+  - main
+  layout:
+    family: event-lobby
+    top:
+    - page-header
+    - provider-state
+    center:
+    - state-panel
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - RaceVm
+  - GuildVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: &id004
+    - world-map-v3
+    - sign-in-v2
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/race-lobby.md
+    prompt: ''
+    image: ''
+- id: race-live
+  name: 竞采现场
+  category: live-event
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 阶段/分数/有效参与与实际行动入口
+  owner: panel-journey
+  new_page_id: race-live
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: RaceLive
+    resolved: WulingRace
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: RaceLive
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-race-live
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceLive
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - race-lobby
+  primary_actions:
+  - race-action
+  all_actions:
+  - race-action
+  dependencies:
+  - main
+  layout:
+    family: live-event
+    top:
+    - page-header
+    - provider-state
+    center:
+    - trial-phase-strip
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - trial-phase-strip
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - RaceVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/race-live.md
+    prompt: ''
+    image: ''
+- id: race-result
+  name: 竞采结算
+  category: settlement
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实竞采结果和匹配收据，不本地颁奖
+  owner: panel-journey
+  new_page_id: race-result
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: RaceSettlement
+    resolved: WulingRace
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: RaceSettlement
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-race-result
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_RaceResult
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - race-live
+  primary_actions:
+  - back
+  all_actions:
+  - back
+  dependencies:
+  - main
+  layout:
+    family: settlement
+    top:
+    - page-header
+    - provider-state
+    center: &id005
+    - settlement-card
+    - receipt-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - settlement-card
+  - receipt-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - RaceVm
+  - RewardVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Existing alias resolves to generic WulingRace; new distinct outcome host is required.
+  delivery:
+    merge_slice: journey-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/race-result.md
+    prompt: ''
+    image: ''
+- id: lease
+  name: 当前开采权
+  category: lease-status
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 当前开采权、在线秒与有效状态
+  owner: panel-journey
+  new_page_id: lease
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ResourceLease
+    resolved: WulingRace
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ResourceLease
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-lease
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_Lease
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - race-result
+  primary_actions:
+  - back
+  all_actions:
+  - back
+  dependencies:
+  - main
+  layout:
+    family: lease-status
+    top:
+    - page-header
+    - provider-state
+    center:
+    - data-row
+    - progress-track
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - progress-track
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LeaseVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Existing ResourceLease alias resolves to WulingRace; new lease page must be an
+    actual distinct view.
+  delivery:
+    merge_slice: journey-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/lease.md
+    prompt: ''
+    image: ''
+- id: world-result
+  name: 历练结算
+  category: settlement
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 历练阶段结果及精确来源奖励
+  owner: panel-journey
+  new_page_id: world-result
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: EventSettlement
+    resolved: WulingWorld
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: EventSettlement
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-world-result
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_WorldResult
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - world
+  primary_actions:
+  - back
+  all_actions:
+  - back
+  dependencies:
+  - main
+  layout:
+    family: settlement
+    top:
+    - page-header
+    - provider-state
+    center: *id005
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - settlement-card
+  - receipt-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - WorldVm
+  - RewardVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Existing EventSettlement alias resolves to WulingWorld; new distinct outcome host
+    is required.
+  delivery:
+    merge_slice: journey-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/world-result.md
+    prompt: ''
+    image: ''
+- id: offline
+  name: 离线收益
+  category: receipt-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 已入账离线记录与确认阅读
+  owner: panel-activities
+  new_page_id: offline
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: OfflineRewards
+    resolved: WulingOffline
+    context: ''
+    current_host: UInkWulingRecordsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: OfflineRewards
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-offline
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Offline
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - ack-offline
+  all_actions:
+  - ack-offline
+  dependencies:
+  - main
+  layout:
+    family: receipt-list
+    top:
+    - page-header
+    - provider-state
+    center: &id015
+    - receipt-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - receipt-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - RewardVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: &id006
+    - activities-empty-v3
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/offline.md
+    prompt: ''
+    image: ''
+- id: shop
+  name: 原型商店
+  category: catalog-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实原型SKU/费用/产出与购买确认
+  owner: panel-activities
+  new_page_id: shop
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Shop
+    resolved: WulingShop
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Shop
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-shop
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Shop
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - query-shop
+  - purchase
+  all_actions:
+  - query-shop
+  - purchase
+  dependencies:
+  - main
+  layout:
+    family: catalog-detail
+    top:
+    - page-header
+    - provider-state
+    center: &id007
+    - catalog-card
+    - item-detail-sheet
+    - danger-confirm
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - catalog-card
+  - item-detail-sheet
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - EconomyVm
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Only real prototype catalog; no platform payment API or invented SKU.
+  delivery:
+    merge_slice: activities-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/shop.md
+    prompt: ''
+    image: ''
+- id: market
+  name: 原型寄售
+  category: catalog-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实寄售买卖条件及版本化订单动作
+  owner: panel-activities
+  new_page_id: market
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Market
+    resolved: WulingMarket
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Market
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-market
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Market
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - query-market
+  - create-listing
+  - buy-listing
+  all_actions:
+  - query-market
+  - create-listing
+  - buy-listing
+  dependencies:
+  - main
+  layout:
+    family: catalog-detail
+    top:
+    - page-header
+    - provider-state
+    center: *id007
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - catalog-card
+  - item-detail-sheet
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - EconomyVm
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Prices and limits need real catalog/order rules and user input; do not inherit
+    hardcoded legacy cyclic UI prices.
+  delivery:
+    merge_slice: activities-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/market.md
+    prompt: ''
+    image: ''
+- id: orders
+  name: 我的订单
+  category: card-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 自有订单状态、版本和撤单确认
+  owner: panel-activities
+  new_page_id: orders
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: TradeOrders
+    resolved: WulingOrders
+    context: ''
+    current_host: UInkWulingRecordsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: TradeOrders
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-orders
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Orders
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - market
+  primary_actions:
+  - cancel-listing
+  all_actions:
+  - cancel-listing
+  dependencies:
+  - main
+  layout:
+    family: card-list
+    top:
+    - page-header
+    - provider-state
+    center: *id008
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - secondary-button
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - EconomyVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-f
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/orders.md
+    prompt: ''
+    image: ''
+- id: world
+  name: 世界历练
+  category: landscape-map
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 新版山水世界视口、真实节点与选中详情
+  owner: panel-journey
+  new_page_id: world
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: WorldCultivation
+    resolved: WorldCultivation
+    context: ''
+    current_host: UInkJourneyMapPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: WorldCultivation
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-world
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_World
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - journey
+  primary_actions:
+  - select-destination
+  - world-travel
+  all_actions:
+  - select-destination
+  - world-travel
+  dependencies:
+  - main
+  layout:
+    family: landscape-map
+    top:
+    - page-header
+    - provider-state
+    center: &id009
+    - map-viewport
+    - map-node
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - map-viewport
+  - map-node
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - WorldVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - world-map-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/world.md
+    prompt: ''
+    image: ''
+- id: region
+  name: 区域详情
+  category: destination-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 准确区域条件/机制与前往确认
+  owner: panel-journey
+  new_page_id: region
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: RegionDetail
+    resolved: RegionDetail
+    context: ''
+    current_host: UInkJourneyDestinationPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: RegionDetail
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-region
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_Region
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - world
+  primary_actions:
+  - world-travel
+  all_actions:
+  - world-travel
+  dependencies:
+  - main
+  layout:
+    family: destination-detail
+    top:
+    - page-header
+    - provider-state
+    center: &id010
+    - data-row
+    - danger-confirm
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - WorldVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/region.md
+    prompt: ''
+    image: ''
+- id: resources
+  name: 资源争夺
+  category: landscape-map
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 资源节点/归属与竞争规则分层
+  owner: panel-journey
+  new_page_id: resources
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ResourceContest
+    resolved: ResourceContest
+    context: ''
+    current_host: UInkResourceContestPanel (ResourceMap uses UInkJourneyMapPanel)
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ResourceContest
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-resources
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_Resources
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - journey
+  primary_actions:
+  - select-destination
+  - resource-travel
+  all_actions:
+  - select-destination
+  - resource-travel
+  dependencies:
+  - main
+  layout:
+    family: landscape-map
+    top:
+    - page-header
+    - provider-state
+    center: *id009
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - map-viewport
+  - map-node
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LeaseVm
+  - RaceVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - resource-map-v2
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/resources.md
+    prompt: ''
+    image: ''
+- id: resource-detail
+  name: 资源详情
+  category: destination-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 同资源条目的真实详情、确认和请求态
+  owner: panel-journey
+  new_page_id: resource-detail
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ResourceDetail
+    resolved: ResourceDetail
+    context: ''
+    current_host: UInkJourneyDestinationPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ResourceDetail
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-resource-detail
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceDetail
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - resources
+  primary_actions:
+  - resource-travel
+  all_actions:
+  - resource-travel
+  dependencies:
+  - main
+  layout:
+    family: destination-detail
+    top:
+    - page-header
+    - provider-state
+    center: *id010
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LeaseVm
+  - RaceVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/resource-detail.md
+    prompt: ''
+    image: ''
+- id: sign-in
+  name: 签到组及日签到
+  category: sign-in
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 只显示当前账户一个签到状态
+  owner: panel-journey
+  new_page_id: sign-in
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: SignIn
+    resolved: SignIn
+    context: ''
+    current_host: UInkSignInGroupPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: SignIn
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-sign-in
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_SignIn
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - sign-in
+  all_actions:
+  - sign-in
+  dependencies:
+  - main
+  layout:
+    family: sign-in
+    top:
+    - page-header
+    - provider-state
+    center:
+    - sign-in-seal
+    - receipt-row
+    - primary-button
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - sign-in-seal
+  - receipt-row
+  - primary-button
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - sign-in-v2
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/sign-in.md
+    prompt: ''
+    image: ''
+- id: monthly-sign-in
+  name: 月签到
+  category: calendar
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 七列月历、真实服务日期和里程碑详情
+  owner: panel-journey
+  new_page_id: monthly-sign-in
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: MonthlySignIn
+    resolved: SignIn
+    context: MonthlySignIn
+    current_host: UInkSignInGroupPanel child UInkMonthlySignInPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: MonthlySignIn
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-monthly-sign-in
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_MonthlySignIn
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - sign-in
+  primary_actions:
+  - month-navigate
+  - inspect-chest
+  - claim-monthly-chest
+  all_actions:
+  - month-navigate
+  - inspect-chest
+  - claim-monthly-chest
+  dependencies:
+  - main
+  layout:
+    family: calendar
+    top:
+    - page-header
+    - provider-state
+    center:
+    - calendar-cell
+    - tab-strip
+    - receipt-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - calendar-cell
+  - tab-strip
+  - receipt-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - monthly-sign-in-v2
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/monthly-sign-in.md
+    prompt: ''
+    image: ''
+- id: daily-verse
+  name: 每日剑诀
+  category: fortune-sheet
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 服务提供的每日剑诀和签运，缺失不本地抽取
+  owner: panel-journey
+  new_page_id: daily-verse
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: DailyFortune
+    resolved: SignIn
+    context: DailyFortune
+    current_host: UInkSignInGroupPanel child UInkDailyFortunePanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: DailyFortune
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-daily-verse
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_DailyVerse
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - sign-in
+  primary_actions: []
+  all_actions: []
+  dependencies:
+  - main
+  layout:
+    family: fortune-sheet
+    top:
+    - page-header
+    - provider-state
+    center:
+    - fortune-ornament
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - fortune-ornament
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Verse is supplied by activities; fortune classification/reward fields may be absent.
+    No local draw.
+  delivery:
+    merge_slice: journey-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/daily-verse.md
+    prompt: ''
+    image: ''
+- id: activities
+  name: 活动组
+  category: activity-hub
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 日常/限定/常驻/开服的统一入口和单一状态
+  owner: panel-activities
+  new_page_id: activities
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Activities
+    resolved: Activities
+    context: ''
+    current_host: UInkIntegratedActivitiesPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Activities
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-activities
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Activities
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - activity-cycle
+  - open-activity-detail
+  - open-launch
+  all_actions:
+  - activity-cycle
+  - open-activity-detail
+  - open-launch
+  dependencies:
+  - main
+  layout:
+    family: activity-hub
+    top:
+    - page-header
+    - provider-state
+    center:
+    - activity-entry
+    - tab-strip
+    - state-panel
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - activity-entry
+  - tab-strip
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants:
+  - daily
+  - limited
+  - permanent
+  - launch-entry
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  - LaunchVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - activities-empty-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/activities.md
+    prompt: ''
+    image: ''
+- id: daily-activities
+  name: 日常活动
+  category: activity-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 当前日常清单和精确详情入口
+  owner: panel-activities
+  new_page_id: daily-activities
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: DailyActivities
+    resolved: DailyActivities
+    context: ''
+    current_host: UInkIntegratedDailyPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: DailyActivities
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-daily-activities
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_DailyActivities
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - activities
+  primary_actions:
+  - open-activity-detail
+  all_actions:
+  - open-activity-detail
+  dependencies:
+  - main
+  layout:
+    family: activity-list
+    top:
+    - page-header
+    - provider-state
+    center: &id011
+    - activity-entry
+    - state-panel
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - activity-entry
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/daily-activities.md
+    prompt: ''
+    image: ''
+- id: timed-activities
+  name: 限时活动
+  category: activity-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 当前限定清单和真实时限
+  owner: panel-activities
+  new_page_id: timed-activities
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: TimedActivities
+    resolved: TimedActivities
+    context: ''
+    current_host: UInkIntegratedLimitedPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: TimedActivities
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-timed-activities
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_TimedActivities
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - activities
+  primary_actions:
+  - open-activity-detail
+  all_actions:
+  - open-activity-detail
+  dependencies:
+  - main
+  layout:
+    family: activity-list
+    top:
+    - page-header
+    - provider-state
+    center: *id011
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - activity-entry
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/timed-activities.md
+    prompt: ''
+    image: ''
+- id: daily-detail
+  name: 日常详情
+  category: activity-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 所选日常模板与真实动作分离
+  owner: panel-activities
+  new_page_id: daily-detail
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: DailyActivityDetail
+    resolved: DailyActivityDetail
+    context: ''
+    current_host: UInkDailyActivityDetailPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: DailyActivityDetail
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-daily-detail
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_DailyDetail
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - daily-activities
+  primary_actions:
+  - sign-in
+  - start-supported-activity
+  - end-supported-activity
+  all_actions:
+  - sign-in
+  - start-supported-activity
+  - end-supported-activity
+  dependencies:
+  - main
+  layout:
+    family: activity-detail
+    top:
+    - page-header
+    - provider-state
+    center: &id012
+    - data-row
+    - state-panel
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/daily-detail.md
+    prompt: ''
+    image: ''
+- id: timed-detail
+  name: 限时详情
+  category: activity-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 精确周期/模板和服务支持的参与条件
+  owner: panel-activities
+  new_page_id: timed-detail
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: TimedActivityDetail
+    resolved: TimedActivityDetail
+    context: ''
+    current_host: UInkTimedActivityDetailPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: TimedActivityDetail
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-timed-detail
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_TimedDetail
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - timed-activities
+  primary_actions:
+  - start-supported-activity
+  all_actions:
+  - start-supported-activity
+  dependencies:
+  - main
+  layout:
+    family: activity-detail
+    top:
+    - page-header
+    - provider-state
+    center: *id012
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ActivityVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/timed-detail.md
+    prompt: ''
+    image: ''
+- id: launch
+  name: 青云初启开服活动
+  category: launch-event
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 开服总览/任务/组织/荣誉，真实异步更新
+  owner: panel-activities
+  new_page_id: launch
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: LaunchEvent
+    resolved: LaunchEvent
+    context: ''
+    current_host: UInkLaunchEventPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: LaunchEvent
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-launch
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_Launch
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - activities
+  primary_actions:
+  - start-launch
+  - open-launch-rank
+  all_actions:
+  - start-launch
+  - open-launch-rank
+  dependencies:
+  - main
+  layout:
+    family: launch-event
+    top:
+    - page-header
+    - provider-state
+    center:
+    - launch-task-row
+    - tab-strip
+    - data-row
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - launch-task-row
+  - tab-strip
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants:
+  - overview
+  - tasks
+  - guild
+  - honors
+  - offers-unavailable
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LaunchVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - launch-pending-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/launch.md
+    prompt: ''
+    image: ''
+- id: launch-rank
+  name: 开服玩法贡献榜
+  category: leaderboard
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 服务贡献分、并列名次和真实作用域
+  owner: panel-activities
+  new_page_id: launch-rank
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: LaunchRank
+    resolved: LaunchRank
+    context: ''
+    current_host: UInkLaunchEventPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: LaunchRank
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-launch-rank
+    package_suggestion: /Game/newUI/Runtime/Pages/Activities/WBP_NUI_LaunchRank
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - launch
+  primary_actions:
+  - back
+  all_actions:
+  - back
+  dependencies:
+  - main
+  layout:
+    family: leaderboard
+    top:
+    - page-header
+    - provider-state
+    center: *id013
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - rank-row
+  - rank-scope-strip
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LaunchVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id006
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: activities-b
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/launch-rank.md
+    prompt: ''
+    image: ''
+- id: breakthrough
+  name: 突破准备
+  category: breakthrough-builder
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 新材料配置与真实报价，展示缺失不阻断合法请求
+  owner: panel-player
+  new_page_id: breakthrough
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: BreakthroughPrepare
+    resolved: WulingBreakthrough
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: BreakthroughPrepare
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-breakthrough
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Breakthrough
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - character
+  primary_actions:
+  - quote-breakthrough
+  - prepare-breakthrough
+  - rework-quality
+  all_actions:
+  - quote-breakthrough
+  - prepare-breakthrough
+  - rework-quality
+  dependencies:
+  - main
+  layout:
+    family: breakthrough-builder
+    top:
+    - page-header
+    - provider-state
+    center:
+    - material-slot
+    - data-row
+    - primary-button
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - material-slot
+  - data-row
+  - primary-button
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - BreakthroughVm
+  - InventoryVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - player-breakthrough-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps:
+  - q_normalized/readiness/slots/sources/growth_min/max not returned by current quote;
+    display unknown without blocking valid native submit.
+  delivery:
+    merge_slice: player-f
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/breakthrough.md
+    prompt: ''
+    image: ''
+- id: tribulation
+  name: 天劫助力
+  category: trial-event
+  priority: must-have
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实天劫阶段与互斥结果/对账
+  owner: panel-player
+  new_page_id: tribulation
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Tribulation
+    resolved: WulingBreakthrough
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Tribulation
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-tribulation
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Tribulation
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - breakthrough
+  primary_actions:
+  - cancel-breakthrough
+  - reconcile-breakthrough
+  all_actions:
+  - cancel-breakthrough
+  - reconcile-breakthrough
+  dependencies:
+  - main
+  layout:
+    family: trial-event
+    top:
+    - page-header
+    - provider-state
+    center:
+    - trial-phase-strip
+    - data-row
+    - settlement-card
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - trial-phase-strip
+  - data-row
+  - settlement-card
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants:
+  - Prepare
+  - Trial
+  - Reconcile
+  - Succeeded
+  - Failed
+  - Cancelled
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - TribulationVm
+  visual_source:
+    mode: direct-candidate-layout-input
+    source_ids:
+    - player-tribulation-v3
+    exact_page_candidate_exists: true
+    whole_page_import_allowed: false
+  gaps:
+  - Anchor UI does not expose an authorized Assist command; viewer assistance is received
+    through existing verified live-comment actor path.
+  delivery:
+    merge_slice: player-f
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/tribulation.md
+    prompt: ''
+    image: ''
+- id: item-sources
+  name: 物品来源
+  category: source-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实获取方式与已有定向选择动作
+  owner: panel-player
+  new_page_id: item-sources
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ItemSources
+    resolved: WulingSources
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ItemSources
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-item-sources
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_ItemSources
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - inventory
+  primary_actions:
+  - query-sources
+  - choose-focus
+  all_actions:
+  - query-sources
+  - choose-focus
+  dependencies:
+  - main
+  layout:
+    family: source-detail
+    top:
+    - page-header
+    - provider-state
+    center:
+    - data-row
+    - activity-entry
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - data-row
+  - activity-entry
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ItemSourceVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/item-sources.md
+    prompt: ''
+    image: ''
+- id: guild-build
+  name: 武灵建设
+  category: catalog-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 真实建筑等级与服务费用/贡献确认
+  owner: panel-rank
+  new_page_id: guild-build
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: GuildConstruction
+    resolved: WulingConstruction
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: GuildConstruction
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-guild-build
+    package_suggestion: /Game/newUI/Runtime/Pages/Rank/WBP_NUI_GuildBuild
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - wuling
+  primary_actions:
+  - query-buildings
+  - build-guild
+  all_actions:
+  - query-buildings
+  - build-guild
+  dependencies:
+  - main
+  layout:
+    family: catalog-detail
+    top:
+    - page-header
+    - provider-state
+    center: *id007
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - catalog-card
+  - item-detail-sheet
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - GuildBuildVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id003
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: rank-c
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/guild-build.md
+    prompt: ''
+    image: ''
+- id: equipment
+  name: 装备与法宝
+  category: loadout-builder
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 装备与法宝真持有/资格/槽位
+  owner: panel-player
+  new_page_id: equipment
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: EquipmentFabao
+    resolved: CharacterEquipment
+    context: ''
+    current_host: UInkCharacterEquipmentPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: EquipmentFabao
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-equipment
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Equipment
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - character
+  primary_actions:
+  - inventory-equip
+  - inventory-unequip
+  - activate-fabao
+  all_actions:
+  - inventory-equip
+  - inventory-unequip
+  - activate-fabao
+  dependencies:
+  - main
+  layout:
+    family: loadout-builder
+    top:
+    - page-header
+    - provider-state
+    center: *id014
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - inventory-slot
+  - item-detail-sheet
+  - data-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - EquipmentVm
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/equipment.md
+    prompt: ''
+    image: ''
+- id: journey
+  name: 仙途菜单
+  category: journey-hub
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 新版仙途入口按世界/资源/组织明确导航
+  owner: panel-journey
+  new_page_id: journey
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: Extensions
+    resolved: Extensions
+    context: ''
+    current_host: UInkJourneyMapPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: Extensions
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-journey
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_Journey
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - home
+  primary_actions:
+  - open-world
+  - open-resources
+  - open-wuling
+  all_actions:
+  - open-world
+  - open-resources
+  - open-wuling
+  dependencies:
+  - main
+  layout:
+    family: journey-hub
+    top:
+    - page-header
+    - provider-state
+    center:
+    - activity-entry
+    - map-node
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - activity-entry
+  - map-node
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - WorldVm
+  - GuildVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: journey-a
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/journey.md
+    prompt: ''
+    image: ''
+- id: craft
+  name: 物品炼制
+  category: catalog-detail
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 配方输入和真实产出，缺配方不编造
+  owner: panel-player
+  new_page_id: craft
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: WulingCraft
+    resolved: WulingCraft
+    context: ''
+    current_host: UInkWulingToolsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: WulingCraft
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-craft
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Craft
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - inventory
+  primary_actions:
+  - query-recipes
+  - craft
+  all_actions:
+  - query-recipes
+  - craft
+  dependencies:
+  - main
+  layout:
+    family: catalog-detail
+    top:
+    - page-header
+    - provider-state
+    center: *id007
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - catalog-card
+  - item-detail-sheet
+  - danger-confirm
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - RecipeVm
+  - InventoryVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps: []
+  delivery:
+    merge_slice: player-e
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/craft.md
+    prompt: ''
+    image: ''
+- id: appearance
+  name: 名片外观
+  category: appearance-preview
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 明确标记本地试戴，不冒充解锁/持久化权益
+  owner: panel-player
+  new_page_id: appearance
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: CharacterAppearance
+    resolved: CharacterAppearance
+    context: ''
+    current_host: UInkCharacterAppearancePanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: CharacterAppearance
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-appearance
+    package_suggestion: /Game/newUI/Runtime/Pages/Player/WBP_NUI_Appearance
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - character
+  primary_actions:
+  - preview-appearance
+  all_actions:
+  - preview-appearance
+  dependencies:
+  - main
+  layout:
+    family: appearance-preview
+    top:
+    - page-header
+    - provider-state
+    center:
+    - character-attribute-group
+    - tab-strip
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - character-attribute-group
+  - tab-strip
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - AppearanceVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id001
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Existing Frame_/Bar_ actions are local preview; no verified server unlock/equip/persist
+    contract.
+  delivery:
+    merge_slice: player-d
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/appearance.md
+    prompt: ''
+    image: ''
+- id: resource-rank
+  name: 资源贡献榜
+  category: leaderboard
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 资源贡献数据未有独立契约时展示缺口
+  owner: panel-journey
+  new_page_id: resource-rank
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ResourceRanking
+    resolved: ResourceRanking
+    context: ''
+    current_host: UInkResourceRankingPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ResourceRanking
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-resource-rank
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceRank
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - resources
+  primary_actions: []
+  all_actions: []
+  dependencies:
+  - main
+  layout:
+    family: leaderboard
+    top:
+    - page-header
+    - provider-state
+    center: *id013
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - rank-row
+  - rank-scope-strip
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - ResourceRankVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Current resource contribution page has no distinct real ranked result contract;
+    keep unavailable.
+  delivery:
+    merge_slice: journey-f
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/resource-rank.md
+    prompt: ''
+    image: ''
+- id: resource-rewards
+  name: 资源奖励明细
+  category: receipt-list
+  priority: genre-specific
+  status: planned
+  contract_ready: true
+  approved: false
+  purpose: 精确资源/事件来源对应已确认奖励
+  owner: panel-journey
+  new_page_id: resource-rewards
+  new_root: UInkRebuildFrontendWidget
+  new_root_package: /Game/newUI/Runtime/WBP_NewUIFrontend
+  architecture: ../architecture-and-interfaces.md
+  existing_route:
+    entry: ResourceRewards
+    resolved: ResourceRewards
+    context: ''
+    current_host: UInkResourceRewardsPanel
+    evidence:
+    - Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp
+    - Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp
+    limitation: Source route resolution only; saved WBP/runtime branch not newly verified.
+  new_runtime_binding:
+    route_key: ResourceRewards
+    distinct_page_id_required: true
+    actual_class: null
+    actual_wbp: null
+    layout_version: newui-r1-resource-rewards
+    package_suggestion: /Game/newUI/Runtime/Pages/Journey/WBP_NUI_ResourceRewards
+    owner: logic-integration
+    stage: contract-ready-not-wired
+  entry_points:
+  - resource-detail
+  primary_actions: []
+  all_actions: []
+  dependencies:
+  - main
+  layout:
+    family: receipt-list
+    top:
+    - page-header
+    - provider-state
+    center: *id015
+    bottom:
+    - primary-action-or-navigation
+    floating:
+    - confirmation-only-when-required
+  responsive:
+    portrait: 720x1280; middle region scrolls; fixed header and footer; 88 hit targets
+    landscape: 1280x720 reflow; list/detail or map/right detail; no full-page portrait
+      scaling
+  components:
+  - page-frame
+  - state-panel
+  - back-button
+  - receipt-row
+  states:
+  - unknown
+  - loading
+  - empty
+  - data
+  - pending
+  - offline
+  - error
+  - disabled
+  variants: []
+  edge_cases:
+  - Unknown is not zero or empty
+  - Retain stable entity selection and request identity
+  - Back restores parent draft/filter/scroll state
+  - Missing display fields do not become business permission gates
+  data_needs:
+  - LeaseVm
+  - RewardVm
+  visual_source:
+    mode: new-layout-derived-from-shared-language
+    source_ids: *id004
+    exact_page_candidate_exists: false
+    whole_page_import_allowed: false
+  gaps:
+  - Reward rows need exact event/node source; no inferred entitlement from inventory
+    delta.
+  delivery:
+    merge_slice: journey-f
+    stage: contract_ready
+    design_source_ready: true
+    component_source_ready: false
+    page_composed: false
+    import_verified: false
+    route_wired: false
+    logic_verified: false
+    player_entry_verified: false
+    visual_pending_user: true
+  output:
+    brief: contracts/screen-briefs/resource-rewards.md
+    prompt: ''
+    image: ''

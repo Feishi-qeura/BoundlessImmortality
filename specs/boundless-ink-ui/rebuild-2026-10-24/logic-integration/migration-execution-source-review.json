@@ -1,0 +1,11 @@
+{
+  "owner_source": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\migration\\migrate_ui_ue.py",
+  "owner_source_sha256": "cbbe4812a141893ecc24b6636653c161cc96ed65e3b4315dde4250dc665e2155",
+  "execution_source_sha256": "6435fa1b2047d016f747e056cc7606f8b57fa5a91ba785d1006019909809fba2",
+  "dispatch_replacement_applied": false,
+  "native_rename_replacement": {
+    "before": "        ok = unreal.AssetToolsHelpers.get_asset_tools().rename_assets(rename)",
+    "after": "        unreal.SystemLibrary.execute_console_command(unreal.EditorLevelLibrary.get_editor_world(), 'BoundlessNewUI.RenameExactReviewedAssets')\n        native_rename = read(OUT / 'engine-rename-result.json')\n        ok = native_rename.get('passed') and native_rename.get('engine_pid') == os.getpid() and native_rename.get('exact_count') == len(rename)"
+  },
+  "exact_single_replacement": null
+}

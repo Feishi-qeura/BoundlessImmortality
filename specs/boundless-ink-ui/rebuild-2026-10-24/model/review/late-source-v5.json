@@ -1,0 +1,78 @@
+{
+  "captured_utc": "2026-10-24T06:23:10.121212+00:00",
+  "scope": "one bounded late source delta; runtime reports remain original failed epochs",
+  "sources": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "66b935dfc0da33d52aa30dca157169217a10f8632bbda468d883cb5accc697ca",
+      "bytes": 23931,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h",
+      "sha256": "1a15c1f570f4e14ca1754ff6439cd9fc4cca315f344ff873d32c935c4597c3b9",
+      "bytes": 3005,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+      "sha256": "7d8cd7cb49897db762d614902f160f756d718e03807ff1f5fe4ddaa6a6b1dbf7",
+      "bytes": 7799,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "sha256": "8678d0b1408dd216c313e887b07f52a0dd83ccdf75f8c6bbc29b11061f98ee08",
+      "bytes": 18973,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/InkFrontendWidget.h"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "sha256": "4c0241fa3d07bab31b12aa6f89c11234c2a99c6851afc14b4148fa989efc3992",
+      "bytes": 52487,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp"
+    },
+    {
+      "path": "specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py",
+      "sha256": "45cf11ec1ba37ee37ea26f56685f1aee16fab9a7bc785c67601a33642133ddd8",
+      "bytes": 9771,
+      "snapshot": "late-source-snapshot-v5/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_default_root_pie.py"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.h",
+      "sha256": "47242cb7ff4dc17faa1079815836cfee1953ca0b4939380bfb8d5b8afd1904e6",
+      "bytes": 8691,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.cpp",
+      "sha256": "247aef203a31c8224348cc799f50909f1489e103bb1bd3299084bcc18d081882",
+      "bytes": 28873,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.h",
+      "sha256": "f34a92f6a6a1880b981ccd5326c9abeeeac36530bbba7f0baf50a30ce6fbe554",
+      "bytes": 1375,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.cpp",
+      "sha256": "b43b532365800fef54e0b20c424584d6bccc32ca7d61575df83980f33b6c04fa",
+      "bytes": 1766,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.cpp"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.h",
+      "sha256": "1b1ae39ef9aee2431281037fe48016a2053d1ce0f96ae64f12df43f6105404b4",
+      "bytes": 6019,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.h"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.cpp",
+      "sha256": "e307d362e8a780a5660181dc816dc44bd0d7ede6f3907ba61322685e76ff642a",
+      "bytes": 22335,
+      "snapshot": "late-source-snapshot-v5/Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.cpp"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+schema_version: 1
+team_id: panel-journey
+status: candidate
+approved: false
+source_sprite_sheet:
+  path: inputs/journey-state-sprites-v1-source.png
+  dimensions: [1536, 1024]
+  mode: RGBA
+  generation_prompt: prompts/journey-state-sprites-v1.md
+  detection: "8-connected alpha component analysis, 3/4/4 row semantic map, component mask, and 8px padding"
+  alpha_threshold: 8
+  crop_script: tools/split_journey_sprite_sheet.py
+source_pages:
+  - {id: world-map-v3-candidate, path: assets/source-pages/world-map-v3-candidate.png, approved: false}
+  - {id: resources-map-v2-candidate, path: assets/source-pages/resources-map-v2-candidate.png, approved: false}
+  - {id: daily-sign-in-v2-candidate, path: assets/source-pages/daily-sign-in-v2-candidate.png, approved: false}
+  - {id: monthly-sign-in-v2-candidate, path: assets/source-pages/monthly-sign-in-v2-candidate.png, approved: false}
+items_manifest: assets/journey-sprite-manifest-v1.json
+review:
+  text_free: true
+  visual_review: pending
+  edge_review: pending
+  transparent_background: measured_rgba_alpha_with_soft_image_alpha_retained_above_threshold
+  nine_slice: not_applicable_to_individual_glyphs
+  notes: "Sprite symbols contain no baked copy. Runtime captions/status text remain UMG TextBlock values. Page source candidates retain their baked preview labels and are never imported as runtime UI."
+package: packages/journey-components-v1-png.zip

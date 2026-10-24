@@ -1,0 +1,48 @@
+slice: player-d
+approved: false
+canonical_action_contract: ../../../model/action-contract.yaml
+canonical_screen_bindings: ../../../model/screen-bindings.json
+dispatch_delegate: InkPlayerProcessPageWidgets::FActionRequested
+payload_type: InkPlayerProcessPageWidgets::FActionPayload
+transport_owner: logic-integration host adapter
+rules:
+  - ui.* intents update host-owned query, selection, and confirmation state only.
+  - Revalidate active route, actor role, connected state, not-busy state, and fresh subject before commands.
+  - Keep stable selected IDs during pending/error/offline; no optimistic inventory mutation.
+pages:
+  craft:
+    route: {page_id: craft, entry: WulingCraft}
+    local_intents:
+      - {id: ui.craft.select-recipe, payload: recipe_id}
+      - {id: ui.craft.query-offset, payload: offset}
+      - {id: ui.craft.toggle-owned-only, payload: OwnedOnly}
+      - {id: ui.craft.request-confirmation, payload: recipe_id}
+      - {id: ui.craft.cancel-confirmation, payload: none}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: query-recipes
+        handler: UWulingPrototypeSubsystem::RequestCatalog(kind=recipes)
+        parameters: {offset: host offset, OwnedOnly: host filter}
+        optimistic_result: false
+      - id: craft
+        handler: UWulingPrototypeSubsystem::Craft
+        parameters: {recipe_id: confirmed actual recipe ID}
+        dispatch_gate: user confirmed current selected recipe
+        optimistic_result: false
+  item-sources:
+    route: {page_id: item-sources, entry: ItemSources, resolved_existing_route: WulingSources}
+    local_intents:
+      - {id: ui.sources.select-entry, payload: source_id and item_id}
+      - {id: ui.sources.query-offset, payload: offset}
+      - {id: ui.sources.toggle-owned-only, payload: OwnedOnly}
+      - {id: ui.page.back, payload: none}
+    commands:
+      - id: query-sources
+        handler: UWulingPrototypeSubsystem::RequestCatalog(kind=sources)
+        parameters: {offset: host offset, OwnedOnly: host filter}
+        optimistic_result: false
+      - id: choose-focus
+        handler: UWulingPrototypeSubsystem::SubmitPrototypeCommand(ChooseFocus)
+        parameters: {source_id: selected.source_id, item_id: selected.item_id}
+        enabled_method: fixed_selected_reward
+        optimistic_result: false

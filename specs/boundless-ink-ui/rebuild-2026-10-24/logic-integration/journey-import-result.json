@@ -1,0 +1,27 @@
+{
+  "engine_pid": 29076,
+  "approved": false,
+  "assets": [
+    {
+      "object": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1",
+      "width": 1024,
+      "height": 1536,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "ecbba015b0f9100ea85eed749af7db5a3796ab73553c82dba29861289d4699a2",
+      "uasset_sha256": "9c070d6e28b9f43a4172df0d87b3d7a7717bd96b76ba9f04ec49e1c826d4411e"
+    },
+    {
+      "object": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1",
+      "width": 1536,
+      "height": 1024,
+      "compression": "<TextureCompressionSettings.TC_EDITOR_ICON: 7>",
+      "never_stream": true,
+      "compression_no_alpha": false,
+      "source_sha256": "6fe816646da0368fe56d3760ae40cc845607f4db1dc8568d23a9089d32a15d62",
+      "uasset_sha256": "143564312b02565b9829557e730a6a3b2af1bd301341114ac81843538870b110"
+    }
+  ],
+  "passed": true
+}

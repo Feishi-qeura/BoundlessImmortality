@@ -1,0 +1,26 @@
+schema_version: 1
+team_id: panel-rank
+source_page: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-damage-candidate-v2.png
+source_sheet: assets/rank-wuling-paper-panel-default-v1.png
+mode: already-isolated-single-component
+thresholds: not-applicable
+output_dir: assets
+zip: packages/rank-wuling-components-v1.zip
+items:
+  - component_id: rank-wuling-paper-panel
+    semantic_name: rank-wuling-paper-panel-default-v1.png
+    category: container
+    state: default
+    path: assets/rank-wuling-paper-panel-default-v1.png
+    coordinates: [0, 0, 1448, 1086]
+    dimensions: [1448, 1086]
+    transparent: true
+    alpha_bbox: [0, 27, 1410, 1068]
+    sha256: 9b243e6844d92ff182d88b3bd28807583e2ff1cf51f7884b9326a36f0a4ad293
+    slice: {type: 9-slice, margins: [136, 136, 136, 136], status: candidate}
+review:
+  manual_component_integrity: true
+  text_free: true
+  alpha_edges_checked: true
+  slice_guide: evidence/rank-wuling-paper-panel-9slice-guide-v1.png
+  user_approved: false

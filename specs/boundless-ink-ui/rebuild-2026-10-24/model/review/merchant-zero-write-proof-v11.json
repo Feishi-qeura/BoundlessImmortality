@@ -1,0 +1,59 @@
+{
+  "captured_utc": "2026-10-24T09:25:29.125532+00:00",
+  "report_sha256": "c8c7e3a4620f8981bc5ca8c095c8c5ff8b4fdd780705ce7095185bec79e5e8bc",
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "attempt_finished": true,
+  "attempt_passed": true,
+  "passed_guard_checks": [
+    {
+      "name": "stale UI confirmation has no real Slate path after version refresh",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "zero Purchase requests stale visible confirmation",
+      "passed": true,
+      "actual": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "actual wallet and confirmed inventory unchanged stale visible confirmation",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "zero Purchase requests old actual version",
+      "passed": true,
+      "actual": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "actual wallet and confirmed inventory unchanged old actual version",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "zero Purchase requests other actual SKU price",
+      "passed": true,
+      "actual": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "actual wallet and confirmed inventory unchanged other actual SKU price",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "current_Purchase_trace_request_count": 1,
+  "current_Purchase_audit_count": 1,
+  "Purchase_receipt_counts": {
+    "3CC04520493C3CD98003DE900790B940": 1
+  },
+  "scope": "actual UI stale confirmation refresh; old-version/cross-SKU-price requests injected through native Host seam, not claimed as real user price editing or listing-price API"
+}

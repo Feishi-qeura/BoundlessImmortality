@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-24T13:44:23.305487+08:00",
+  "reports_present": [
+    "engine-preflight.json",
+    "engine-legacy-pin-result.json",
+    "engine-rename-result.json",
+    "engine-migration-journal.json",
+    "asset-write-journal.json"
+  ],
+  "missing_reports": [
+    "engine-fixup-result.json",
+    "engine-final-verification.json"
+  ],
+  "actual_rename582_verified": true,
+  "old_directory_exists": true,
+  "engine_actions": false,
+  "content_writes": false,
+  "original1759_or_partial612_archive_rehashed": false,
+  "status": "PARTIAL_MIGRATION_FINAL_PROOF_PENDING",
+  "migration_complete": false,
+  "warning": "Rename already succeeded. Do not retry migrate or treat controller verify passed as machine final proof."
+}

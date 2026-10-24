@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "id": "FORMAL14",
+      "state": "closed-scoped-render-back-geometry",
+      "proof": "906checks56captures passed,44routes,37typedBack,56exact720x1280,formal audit0errors",
+      "remaining": "Do not rerun whole render suite; real UI entry/action/function/visual are separate."
+    },
+    {
+      "id": "PORTRAIT-COMPONENTS",
+      "state": "closed-current26-scope",
+      "proof": "13imported retained,12portrait-applicable actual expected-paint passed; landscape map exempt by human",
+      "remaining": "No invented landscape paint acceptance gate."
+    },
+    {
+      "id": "PLAYER-UI-ENTRY",
+      "state": "31not-yet-proven-in-consumed-formal-evidence",
+      "proof": "core7+6feature actual Slate entry flows versus37directrouter probes",
+      "remaining": "Unique integration light real popup/scroll/paint/Slate/context/Back; honest business detail/result trigger gaps."
+    },
+    {
+      "id": "V11-RACE-ACTIVE-01",
+      "state": "P1-source-provider-schema-gap",
+      "proof": "Host requires identity.active absent from authority snapshot; native server session truth exists",
+      "remaining": "Bridge truthful active entitlement, keep unknown deny; one bounded applicable logical proof."
+    },
+    {
+      "id": "V11-ACTIVITY-CARD-01",
+      "state": "withdrawn-no-source-defect",
+      "proof": "Source line37 selected-detail VM override was missed by reviewer; same frozen hash",
+      "remaining": "No code fix requested; actual supported activity action chain still unobserved."
+    },
+    {
+      "id": "AVAILABLE-BACKEND-HOST-ACTIONS",
+      "state": "bounded-runtime-applicability-gaps",
+      "proof": "Journey World/Resource Queue and StartLaunch native backend exists; no batch trace command results",
+      "remaining": "Combine genuine UI-entry checks with one World travel, resource queue/cancel, eligible launch case or exact legitimate state refusal; no invented result IDs."
+    },
+    {
+      "id": "MERCHANT",
+      "state": "closed-scoped-zero-write-negative",
+      "proof": "merchant02 passed45; stale real UI confirm + native old-version/cross-SKU-price no Purchase, audit count1 unchanged",
+      "remaining": "Preserve seam versus gesture scope; no nonexistent editable listing-price API required."
+    },
+    {
+      "id": "CURRENT-NATIVE",
+      "state": "formal-current26-not-found-in-selected-evidence",
+      "proof": "native05 build24 broad49, native06 reflection preflight no business/no formal49",
+      "remaining": "Owner applicable current native receipt; reviewer no test rerun."
+    },
+    {
+      "id": "OWNED-EXIT",
+      "state": "render13and14-closed-services-still-live",
+      "proof": "normal exit markers + exact renderPIDs absent; authority40168/avatar28596 live",
+      "remaining": "Unique owner normal service shutdown proof."
+    },
+    {
+      "id": "USER-EXTERNAL",
+      "state": "pending",
+      "proof": "No images viewed/approved by reviewer",
+      "remaining": "User visual and explicitly separate physical mobile/platform; no landscape requirement."
+    }
+  ],
+  "latest_functional_map": "functional-44-evidence-v11.csv",
+  "scope_override": "human portrait9:16"
+}

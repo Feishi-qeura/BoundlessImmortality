@@ -1,0 +1,298 @@
+{
+  "checks": [
+    {
+      "name": "begin rendered PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real authority connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native UE shortage command enqueued",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual authority INSUFFICIENT_FUNDS",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "shortage leaves no attempt",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "shortage preserves core",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenSignIn",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "real Slate sign sends command",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "signed after lost response recovery",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "same-id committed command replay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "same receipt returned on replay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "one sign count after actual replay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture lost-response-recovered",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native guild setup enqueued",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native launch setup enqueued",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture active-countdown",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route Wuling",
+      "passed": true,
+      "actual": "Wuling"
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "resize actual PIE to landscape",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture active-countdown-landscape",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route Wuling",
+      "passed": true,
+      "actual": "Wuling"
+    },
+    {
+      "name": "Slate Ext_Close",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "resize actual PIE to narrow portrait",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rendered capture active-countdown-narrow",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "Slate OpenWuling",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual player route Wuling",
+      "passed": true,
+      "actual": "Wuling"
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-04-boundaries\\lost-response-recovered.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-04-boundaries\\active-countdown.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-04-boundaries\\active-countdown-landscape.png",
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\orchestration\\2026-10-24-ui-component-rollout\\logic-integration\\pie-04-boundaries\\active-countdown-narrow.png"
+  ],
+  "steps": [
+    "actual main entry",
+    "authority connected",
+    "native shortage request",
+    "shortage response",
+    "response loss fixture",
+    "sign entry",
+    "actual sign button",
+    "idempotent recovery",
+    "close sign",
+    "native launch setup guild",
+    "native launch setup event",
+    "capture active countdown",
+    "actual Wuling accessible beside countdown",
+    "Wuling route confirmed",
+    "close Wuling for landscape",
+    "landscape real viewport",
+    "landscape countdown capture",
+    "landscape actual Wuling entry",
+    "landscape Wuling route",
+    "close Wuling for narrow portrait",
+    "narrow portrait real viewport",
+    "narrow portrait countdown capture",
+    "narrow portrait actual Wuling entry",
+    "narrow portrait Wuling route"
+  ],
+  "finished": true,
+  "scope": "Rendered Windows PIE with actual Slate input; isolated declared fixtures; no visual/user approval",
+  "project_saved_dir": "D:/demo/BoundlessImmortality/specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/logic-integration/engine-user-04/Saved/",
+  "passed": true,
+  "current_step": "narrow portrait Wuling route",
+  "player_entry_clicks": [
+    {
+      "action": "StartGame",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenSignIn",
+      "slate_handled": true,
+      "page": "SignIn"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    },
+    {
+      "action": "Ext_Close",
+      "slate_handled": true,
+      "page": "HUD"
+    },
+    {
+      "action": "OpenWuling",
+      "slate_handled": true,
+      "page": "Wuling"
+    }
+  ],
+  "fixture_controls": [
+    {
+      "drop_next": "SignIn"
+    }
+  ],
+  "countdown_resource_readback": [
+    {
+      "capture": "lost-response-recovered",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "active-countdown",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "active-countdown-landscape",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    },
+    {
+      "capture": "active-countdown-narrow",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1"
+    }
+  ],
+  "countdown_image_readback": [
+    {
+      "capture": "lost-response-recovered",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001D4D825E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "active-countdown",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001D4D825E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "active-countdown-landscape",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001D4D825E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    },
+    {
+      "capture": "active-countdown-narrow",
+      "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_InkFrontend_C_0.WidgetTree_0.RolloutHUDLaunchCountdown.WidgetTree.LaunchCountdownFrame",
+      "texture": "/Game/UI/Ink/ComponentRollout20261024/Activities/T_HudLaunchCountdownFrame_v1.T_HudLaunchCountdownFrame_v1",
+      "draw_as": "<SlateBrushDrawType.BOX: 1>",
+      "brush_image_size": "<Struct 'DeprecateSlateVector2D' (0x00000001D4D825E0) {}>",
+      "visibility": "<SlateVisibility.VISIBLE: 0>",
+      "opacity": 1.0
+    }
+  ]
+}

@@ -91,6 +91,11 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Ink UI") FName CurrentPage=TEXT("Main");
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Preview") FName DesignerPreviewPage=TEXT("Main");
     UPROPERTY(BlueprintAssignable, Category="Ink UI") FInkFrontendActionEvent OnActionTriggered;
+#if WITH_EDITOR
+    // Safe PIE route acceptance uses this pair to distinguish a handled Slate mouse-down from an actual button callback.
+    FName LastDispatchedAction;
+    uint32 ActionDispatchSerial=0;
+#endif
     UPROPERTY(Transient, BlueprintReadOnly, Category="Ink UI") TArray<TObjectPtr<UInkFrontendActionButton>> ActionButtons;
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Ink UI") FName PendingConfirmationAction;
 
@@ -134,9 +139,11 @@ public:
     UFUNCTION(BlueprintCallable, Category="Ink UI|Panels") void CloseFeaturePanel(bool bReturnToGame=false);
     UPROPERTY(Transient,BlueprintReadOnly,Category="Ink UI|Panels") TArray<FName> FeaturePanelStack;
     UFUNCTION(BlueprintCallable, Category="Ink UI") bool RevealFrontendAction(FName Action);
-    void CompleteLeaderboardAvatar(const FString& Key,UTexture2D* Texture);
+    virtual void CompleteLeaderboardAvatar(const FString& Key,UTexture2D* Texture);
     const TArray<FInkCharacterAttribute>& GetPresentedCharacterAttributes()const{return CharacterAttributes;}
     const FText& GetPresentedCharacterName()const{return CharacterName;}
+    const TArray<FInkLeaderboardEntry>& GetPresentedRoomLeaderboard()const{return LeaderboardEntries;}
+    bool HasPresentedRoomLeaderboard()const{return bRolloutRoomLeaderboardProvided;}
     const TArray<FInkDisciplineEntry>& GetPresentedCharacterDisciplines()const{return CharacterDisciplines;}
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeInSeconds=.4f;
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Ink UI|Leaderboard",meta=(ClampMin="0.05",ClampMax="3")) float LeaderboardFadeOutSeconds=.5f;
@@ -151,13 +158,27 @@ public:
     UFUNCTION(BlueprintPure, Category="Ink UI") bool IsQuitConfirmationVisible() const;
 
     /** Intended for the editor factory: creates a serializable tree only when it is empty. */
-    void BuildDefaultTree(UWidgetTree* Tree);
+    virtual void BuildDefaultTree(UWidgetTree* Tree);
+    /** New presentation controllers reuse business state without rebuilding the legacy tree. */
+    virtual bool UsesRebuiltPresentation()const{return false;}
+    UFUNCTION(BlueprintPure,Category="newUI|Verification") virtual FName GetRuntimeLayoutVersion()const{return NAME_None;}
+    UFUNCTION(BlueprintPure,Category="newUI|Verification") virtual FName GetRuntimePageLayoutVersion(FName Page)const{return NAME_None;}
+    AInkMenuDirector* GetPresentationDirector()const{return Director.Get();}
+    FName GetPresentedLeaderboardCategory()const{return LeaderboardCategory;}
+    const TArray<FInkLeaderboardEntry>& GetPresentedGlobalLeaderboard()const{return GlobalLeaderboardEntries;}
     /** Replaces only the inventory surface; used by the backed-up editor migration. */
     void RebuildInventoryPage(UWidgetTree* Tree);
     /** Replaces only the leaderboard page and its HUD overlay. */
     void RebuildLeaderboardSurfaces(UWidgetTree* Tree);
 
 protected:
+    void RebindPresentationActions(){BindTree();}
+    virtual void RefreshRebuiltPresentation(){}
+    virtual UInkExtensionWidget* CreateRebuiltFeaturePage(FName Page){return nullptr;}
+    virtual FName ResolveRebuiltFeatureRoute(FName Page,const FString& Context)const{return Page;}
+    virtual void TickRebuiltPresentation(const FGeometry& Geometry,float DeltaSeconds){}
+    virtual bool HandleRebuiltNavigation(FName Action){return false;}
+    virtual void SetRebuiltFeedback(const FText& Message){}
     virtual TSharedRef<SWidget> RebuildWidget() override;
     virtual void NativeOnInitialized() override;
     virtual void NativePreConstruct() override;
@@ -172,6 +193,7 @@ private:
     UPROPERTY(Transient) TObjectPtr<UBorder> RuntimeHUDFeedbackPanel;
     UPROPERTY(Transient) TArray<FInkCharacterAttribute> CharacterAttributes;
     UPROPERTY(Transient) TArray<FInkDisciplineEntry> CharacterDisciplines;
+    bool bRolloutRoomLeaderboardProvided=false;
     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> LeaderboardEntries;
     UPROPERTY(Transient) TArray<FInkLeaderboardEntry> GlobalLeaderboardEntries;
     FText CharacterName;
@@ -210,6 +232,7 @@ private:
     void RefreshPage();
     void RefreshLiveStatus();
     void UpdateAdaptiveMainLayout();
+    void ApplyMainMenuPresentation();
     void UpdateAdaptiveSurfaceLayout();
     void UpdateAdaptiveHudLayout();
     FVector2D LastHudSafeSize=FVector2D::ZeroVector;

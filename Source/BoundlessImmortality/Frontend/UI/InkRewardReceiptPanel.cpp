@@ -45,7 +45,7 @@ void UInkRewardReceiptPanel::NativeOnInitialized()
     FSlateBrush Brush;Brush.DrawAs=ESlateBrushDrawType::RoundedBox;Brush.TintColor=InkUiTypography::Theme()->PaperTint;
     Brush.OutlineSettings.CornerRadii=FVector4(12,12,12,12);Brush.OutlineSettings.Color=InkUiTypography::Theme()->GoldTint;Brush.OutlineSettings.Width=2;
     Brush.OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
-    if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/UI/Ink/Materials/Shared/M_InkPaperCloud.M_InkPaperCloud"),nullptr,LOAD_NoWarn|LOAD_Quiet))
+    if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,TEXT("/Game/newUI/Ink/Materials/Shared/M_InkPaperCloud.M_InkPaperCloud"),nullptr,LOAD_NoWarn|LOAD_Quiet))
     {Brush.DrawAs=ESlateBrushDrawType::Image;Brush.SetResourceObject(Material);Brush.TintColor=FLinearColor::White;}
     Paper->SetBrush(Brush);Paper->SetVisibility(ESlateVisibility::HitTestInvisible);
     auto* PaperSlot=Card->AddChildToCanvas(Paper);PaperSlot->SetAnchors(FAnchors(0,0,1,1));PaperSlot->SetOffsets(FMargin(0));
@@ -90,10 +90,10 @@ void UInkRewardReceiptPanel::Populate()
         CastChecked<UScrollBoxSlot>(Items->AddChild(Row))->SetPadding(FMargin(0,8,0,12));
         auto* IconSize=WidgetTree->ConstructWidget<USizeBox>();IconSize->SetWidthOverride(80);IconSize->SetHeightOverride(88);
         auto* Icon=WidgetTree->ConstructWidget<UImage>();Icon->SetVisibility(ESlateVisibility::HitTestInvisible);IconSize->SetContent(Icon);
-        FString IconPath=TEXT("/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit");
-        if(Id.StartsWith(TEXT("EQ_")))IconPath=TEXT("/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Fit");
-        else if(Id.StartsWith(TEXT("FABAO"))||Id.StartsWith(TEXT("COSMETIC")))IconPath=TEXT("/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Fit");
-        else if(Id.StartsWith(TEXT("PROP")))IconPath=TEXT("/Game/UI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit");
+        FString IconPath=TEXT("/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_972_359_1062_454_Fit");
+        if(Id.StartsWith(TEXT("EQ_")))IconPath=TEXT("/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_28_802_172_944_Fit");
+        else if(Id.StartsWith(TEXT("FABAO"))||Id.StartsWith(TEXT("COSMETIC")))IconPath=TEXT("/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_669_802_815_944_Fit");
+        else if(Id.StartsWith(TEXT("PROP")))IconPath=TEXT("/Game/newUI/Ink/MaterialInstances/Inventory/MI_T_ProvidedInventory_973_466_1062_564_Fit");
         if(auto* Material=InkUiAssets::Load<UMaterialInterface>(nullptr,*IconPath,nullptr,LOAD_NoWarn|LOAD_Quiet))Icon->SetBrushFromMaterial(Material);
         Row->AddChildToHorizontalBox(IconSize)->SetPadding(FMargin(0,0,18,0));
         auto* Details=WidgetTree->ConstructWidget<UVerticalBox>();auto* DetailsSlot=Row->AddChildToHorizontalBox(Details);DetailsSlot->SetSize(FSlateChildSize(ESlateSizeRule::Fill));DetailsSlot->SetVerticalAlignment(VAlign_Center);

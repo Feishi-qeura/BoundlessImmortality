@@ -22,7 +22,7 @@
 
 bool UInkUiStyleEditorLibrary::RelocateUiAsset(UObject* Asset,const FString& DestinationPackage)
 {
-    if(!Asset||!Asset->GetOutermost()->GetName().StartsWith(TEXT("/Game/UI/"))||!DestinationPackage.StartsWith(TEXT("/Game/UI/Ink/"))||!FPackageName::IsValidLongPackageName(DestinationPackage))return false;
+    if(!Asset||!Asset->GetOutermost()->GetName().StartsWith(TEXT("/Game/newUI/"))||!DestinationPackage.StartsWith(TEXT("/Game/newUI/Ink/"))||!FPackageName::IsValidLongPackageName(DestinationPackage))return false;
     UPackage* Old=Asset->GetOutermost();Old->FullyLoad();
     ObjectTools::FPackageGroupName Target;Target.PackageName=DestinationPackage;Target.ObjectName=Asset->GetName();
     TSet<UPackage*> Refused;FText Error;
@@ -37,7 +37,7 @@ bool UInkUiStyleEditorLibrary::RelocateUiAsset(UObject* Asset,const FString& Des
 void UInkUiStyleEditorLibrary::FixUiRedirectors()
 {
     auto& Registry=FModuleManager::LoadModuleChecked<FAssetRegistryModule>(TEXT("AssetRegistry")).Get();
-    TArray<FAssetData> Assets;Registry.GetAssetsByPath(FName(TEXT("/Game/UI")),Assets,true);
+    TArray<FAssetData> Assets;Registry.GetAssetsByPath(FName(TEXT("/Game/newUI")),Assets,true);
     TArray<UObjectRedirector*> Redirectors;
     for(const auto& Data:Assets)if(Data.AssetClassPath==UObjectRedirector::StaticClass()->GetClassPathName())
         if(auto* Redirector=Cast<UObjectRedirector>(Data.GetAsset()))Redirectors.Add(Redirector);
@@ -46,7 +46,7 @@ void UInkUiStyleEditorLibrary::FixUiRedirectors()
 
 namespace
 {
-    const FString Folder=TEXT("/Game/UI/Ink/Refactor20261021/");
+    const FString Folder=TEXT("/Game/newUI/Ink/Refactor20261021/");
     UFontFace* ImportFace(const FString& Name,const FString& Relative)
     {
         const FString Path=Folder+TEXT("Fonts/")+Name;
@@ -118,7 +118,7 @@ FString UInkUiStyleEditorLibrary::MigrateRefactorTypography()
     int32 Assets=0,Texts=0;
     for(const TCHAR* Suffix:{TEXT("Frontend"),TEXT("MainMenu"),TEXT("Character"),TEXT("Inventory"),TEXT("Leaderboard"),TEXT("Saves"),TEXT("Settings")})
     {
-        const FString Name=TEXT("WBP_Ink")+FString(Suffix),Path=TEXT("/Game/UI/Ink/Widgets/")+Name;
+        const FString Name=TEXT("WBP_Ink")+FString(Suffix),Path=TEXT("/Game/newUI/Ink/Widgets/")+Name;
         auto* B=LoadObject<UWidgetBlueprint>(nullptr,*(Path+TEXT(".")+Name));if(!B||!B->GeneratedClass||!B->WidgetTree)return TEXT("Missing WBP: ")+Path;
         auto* Defaults=Cast<UInkFrontendWidget>(B->GeneratedClass->GetDefaultObject());if(!Defaults)return TEXT("Unexpected parent: ")+Path;
         Defaults->TextFont=Theme->BodyFont.Get();

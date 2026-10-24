@@ -1,0 +1,80 @@
+schema_version: 1
+team_id: panel-rank
+batch: 2
+approved: false
+source_pages:
+  leaderboard: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-damage-candidate-v2.png
+  wuling_overview: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-wuling-home-candidate-v2.png
+source_page_state: candidate-unapproved-trial-authorized
+source_sha256_verified_against: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/measured-assets-v2.json
+new_image_generation: none
+reason_no_regeneration: Existing v2 concepts and the batch-1 shared parchment panel are available; this slice is native UMG composition around real data slots.
+staged_source:
+  header: staged-source/InkRankWulingCompositeViews.h
+  implementation: staged-source/InkRankWulingCompositeViews.cpp
+  target_header: Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingCompositeViews.h
+  target_implementation: Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingCompositeViews.cpp
+components:
+  - id: leaderboard-shared-title
+    type: native-umg-container
+    states: [Damage, CultivationSpeed, Anchor]
+    data: InkLeaderboardTheme::CategoryTitle(Board.Category)
+    implementation: InkRankWulingCompositeViews::BuildLeaderboardComposite
+    dynamic_text: true
+  - id: leaderboard-category-selector
+    type: native-umg-control
+    states: [normal, selected]
+    actions: [RankDamage, RankCultivation, RankAnchor]
+    implementation: UInkFrontendActionButton / existing UInkFrontendWidget dispatch
+  - id: leaderboard-scope-selector
+    type: native-umg-control
+    states: [Local, Global]
+    actions: [RankLocal, RankGlobal]
+    implementation: existing UInkFrontendWidget dispatch
+  - id: leaderboard-field-header
+    type: native-umg-container
+    fields: [authoritative_rank, identity, category_metric]
+    metric_source: InkLeaderboardTheme::MetricLabel(Board.Category)
+  - id: leaderboard-row-viewport
+    type: existing-umg-subtree
+    source: UInkFrontendWidget::RefreshLeaderboardRows
+    preserve: [persistent_keyed_rows, room_global_data_provider, avatar_async_requests, cached_row_brushes]
+    handling: reparent_existing_scrollbox_without_clearing_rows
+  - id: leaderboard-self-position
+    type: native-umg-container
+    data_source: explicit_authoritative_self_position_argument
+    missing_data: 本人名次未包含在当前榜单响应中
+  - id: leaderboard-state-card
+    type: native-umg-container
+    states: [unavailable, offline, loading, empty, data, error]
+    data_source: InkCore::FBoardView::State / Status
+  - id: wuling-overview-identity
+    type: native-umg-container
+    data: [snapshot.guild.name, service_status]
+    implementation: InkRankWulingCompositeViews::BuildWulingOverviewComposite
+  - id: wuling-overview-counts
+    type: native-umg-container
+    data: [snapshot.counts.members, snapshot.counts.participating_members, snapshot.counts.helpers]
+    missing_data: em-dash
+  - id: wuling-overview-treasury-summary
+    type: native-umg-container
+    data: [snapshot.guild.supply, snapshot.guild.reputation]
+    missing_data: em-dash
+  - id: wuling-roster-page
+    type: reparented-existing-umg-actions
+    page_size: 8
+    data: existing host Rows plus snapshot.member_cursor gate
+    row_widgets: existing clickable RecordRow_i instances
+    selection_owner: UInkWulingRecordsPanel::HandlePanelAction
+    management_controls: existing RecordRemove widget
+    preserve: [SelectedMember, selected_enabled_state, existing_remove_handler, service_permission_and_error_path]
+    implementation: InkRankWulingCompositeViews::BuildWulingRosterComposite
+  - id: wuling-roster-pager
+    type: native-umg-control
+    actions: [RecordPrevious, RecordNext]
+    action_source: existing UInkWulingRecordsPanel action widgets
+  - id: leaderboard-adaptive-layout
+    type: existing-host-layout-method
+    owner: UInkFrontendWidget::UpdateLeaderboardAdaptiveLayout
+    call_after: [leaderboard-composite-assembly, viewport-orientation-change]
+    controls: canonical_rank_widget_names_or_explicit_adaptive_extensions

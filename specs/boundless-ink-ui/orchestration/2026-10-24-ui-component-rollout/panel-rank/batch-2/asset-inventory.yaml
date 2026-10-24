@@ -1,0 +1,34 @@
+schema_version: 1
+team_id: panel-rank
+batch: 2
+approved: false
+generated_assets: []
+reused_processing_inputs:
+  - path: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-damage-candidate-v2.png
+    dimensions: [941, 1672]
+    sha256: 4984754fb5a5abe8562f76b5ad72ee0320243160f1ce31c9373fd950743bde8d
+    use: source concept for leaderboard component placement; remains unchanged
+  - path: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-cultivation-candidate-v2.png
+    dimensions: [941, 1672]
+    sha256: 355a1040fe205e8dd5c1d4dffb7fb2ca165ff35c227eac6a1880f18f683c7456
+    use: source concept for cultivation metric variant; remains unchanged
+  - path: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-leaderboard-spirit-candidate-v2.png
+    dimensions: [940, 1672]
+    sha256: a0eb106064fba54d8d51543671e446697e4dc6714a5bb8f268403b415c9b79fc
+    use: source concept for Anchor category variant; remains unchanged
+  - path: specs/boundless-ink-ui/revisions/2026-10-23-parallel-rank-wuling/assets/pages/rw-wuling-home-candidate-v2.png
+    dimensions: [940, 1672]
+    sha256: 2f9d45edfde5014cbe6a2f98a6fc31d05b3a5eff204e74e3b3a686490a443176
+    use: source concept for organization overview; remains unchanged
+reused_components:
+  - path: specs/boundless-ink-ui/orchestration/2026-10-24-ui-component-rollout/panel-rank/assets/rank-wuling-paper-panel-default-v1.png
+    dimensions: [1448, 1086]
+    sha256: 9b243e6844d92ff182d88b3bd28807583e2ff1cf51f7884b9326a36f0a4ad293
+    alpha: verified-in-batch-1
+    reuse: optional background argument; native FeatureCard fallback works when texture is not imported
+new_native_components:
+  - InkRankWulingCompositeViews::BuildLeaderboardComposite
+  - InkRankWulingCompositeViews::BuildWulingOverviewComposite
+  - InkRankWulingCompositeViews::BuildWulingRosterComposite
+image_generation: not-run; existing source concepts and transparent component suffice for this UMG-only slice
+import_verified: false

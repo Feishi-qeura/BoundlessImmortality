@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-24T15:43:38.489472+08:00",
+  "original_migrated_assets": 582,
+  "hash_mismatches": [],
+  "old_content_ui_exists": false,
+  "new_ui_packages": 596,
+  "scope": "Fresh bytes compared with final engine migration report; registry absence remains engine report evidence",
+  "passed": true
+}

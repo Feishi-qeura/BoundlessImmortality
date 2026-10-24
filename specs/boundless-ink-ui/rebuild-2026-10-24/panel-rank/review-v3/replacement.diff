@@ -1,0 +1,58 @@
+--- panel-rank/review-v2/staged-source/InkRankWulingPages.h
++++ panel-rank/review-v3/staged-source/InkRankWulingPages.h
+@@ -115,7 +115,10 @@
+     UPROPERTY(BlueprintAssignable) FInkRankRetryRequested OnRetryRequested;
+     UPROPERTY(BlueprintAssignable) FInkRankAvatarRequested OnAvatarRequested;
+     UFUNCTION(BlueprintCallable) void SetBoardData(const FInkNewRankBoardData& InData);
++    /** Non-null completes and caches a participant avatar; null marks async failure and releases the in-flight key. */
+     UFUNCTION(BlueprintCallable) void SetParticipantAvatar(const FString& ParticipantId, UTexture2D* Avatar);
++    /** Call only after the host's avatar retry/backoff policy allows another request. */
++    UFUNCTION(BlueprintCallable) void RetryParticipantAvatarAfterHostBackoff(const FString& ParticipantId);
+ protected:
+     virtual void NativeOnInitialized() override;
+ private:
+--- panel-rank/review-v2/staged-source/InkRankWulingPages.cpp
++++ panel-rank/review-v3/staged-source/InkRankWulingPages.cpp
+@@ -122,7 +122,7 @@
+     {
+         USizeBox* HitTarget = Button ? Cast<USizeBox>(Button->GetParent()) : nullptr;
+         UButton* InnerButton = HitTarget ? Cast<UButton>(HitTarget->GetContent()) : nullptr;
+-        return InnerButton ? Cast<UTextBlock>(InnerButton->GetChildAt(0)) : nullptr;
++        return InnerButton ? Cast<UTextBlock>(InnerButton->GetContent()) : nullptr;
+     }
+ 
+     void AddRowCell(UInkRankWulingPageBase* Owner, UWidgetTree* Tree, UHorizontalBox* Row, const FString& Text,
+@@ -158,6 +158,23 @@
+     ParticipantAvatarCache.Add(ParticipantId, Avatar);
+     if (TObjectPtr<UImage>* Image = AvatarImagesByParticipant.Find(ParticipantId))
+         (*Image)->SetBrushFromTexture(Avatar, true);
++}
++
++void UInkRankBoardPage::RetryParticipantAvatarAfterHostBackoff(const FString& ParticipantId)
++{
++    if (ParticipantId.IsEmpty() || !OnAvatarRequested.IsBound() ||
++        AvatarRequestsInFlight.Contains(ParticipantId) || ParticipantAvatarCache.Contains(ParticipantId) ||
++        Data.State != EInkRankPageState::Data)
++        return;
++
++    const bool bParticipantVisible = Data.Rows.ContainsByPredicate([&ParticipantId](const FInkNewRankRow& Row)
++    {
++        return Row.ParticipantId == ParticipantId && !Row.Avatar;
++    });
++    if (!bParticipantVisible) return;
++
++    AvatarRequestsInFlight.Add(ParticipantId);
++    OnAvatarRequested.Broadcast(ParticipantId);
+ }
+ 
+ void UInkRankBoardPage::BuildPage()
+--- panel-rank/review-v2/staged-source/InkRankWulingPageBase.cpp
++++ panel-rank/review-v3/staged-source/InkRankWulingPageBase.cpp
+@@ -2,6 +2,7 @@
+ 
+ #include "Components/VerticalBox.h"
+ #include "Components/VerticalBoxSlot.h"
++#include "Engine/Font.h"
+ #include "Styling/CoreStyle.h"
+ #include "Blueprint/WidgetTree.h"
+ 

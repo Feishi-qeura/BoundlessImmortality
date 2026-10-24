@@ -16,6 +16,7 @@ class BOUNDLESSIMMORTALITY_API UInkExtensionWidget : public UUserWidget
 public:
     virtual void Configure(UInkFrontendWidget* InFrontend,FName InPage);
     virtual void HandleAction(FName Action);
+    virtual void SetContext(const FString& Entry){SelectedEntry=Entry;}
     UPROPERTY(Transient,BlueprintReadOnly,Category="Ink UI") FName PageId;
     UPROPERTY(Transient,BlueprintReadOnly,Category="Ink UI") FString ActiveTab;
     UPROPERTY(Transient,BlueprintReadOnly,Category="Ink UI") FString SelectedEntry;

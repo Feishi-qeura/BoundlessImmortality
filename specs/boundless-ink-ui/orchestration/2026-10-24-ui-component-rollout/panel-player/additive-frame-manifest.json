@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "team_id": "panel-player",
+  "asset_id": "breakthrough-material-slot-frame-default-v1",
+  "path": "assets/breakthrough-material-slot-frame-default-v1.png",
+  "kind": "single-component-frame",
+  "state": "default",
+  "category": "container",
+  "dimensions_px": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode": "RGBA",
+  "file_bytes": 774053,
+  "sha256": "8b93fa72780f31737ca5fc7926b5c79f7f796bcaf14c773cb2ba47b62193d9e3",
+  "alpha": {
+    "extrema": [
+      0,
+      255
+    ],
+    "unique_values": 256,
+    "bbox_nonzero": [
+      0,
+      13,
+      1234,
+      1254
+    ],
+    "bbox_threshold_16": [
+      98,
+      102,
+      1157,
+      1145
+    ],
+    "bbox_threshold_64": [
+      98,
+      103,
+      1156,
+      1144
+    ],
+    "bbox_threshold_128": [
+      99,
+      103,
+      1156,
+      1144
+    ],
+    "bbox_threshold_250": [
+      100,
+      104,
+      1155,
+      1143
+    ],
+    "center_pixel_alpha": 0,
+    "center_300x300_nonzero_alpha_pixels": 227,
+    "center_300x300_alpha_1_pixels": 227,
+    "outer_32px_nonzero_alpha_pixels": 204,
+    "outer_32px_max_alpha": 1,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "slice": {
+    "type": "full",
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "nine_slice": false
+  },
+  "source": {
+    "recovery_method": "copied existing local imagegen output; no regeneration",
+    "source_output": "C:/Users/zxxuh/.codex/generated_images/01a16b9b-3510-7f53-acb8-af72d60a1c68/exec-ea0720f5-9c72-4049-bf69-27997f81e7e9.png",
+    "source_output_timestamp_local": "2026-10-24T09:54:18+08:00",
+    "prompt_path": "prompts/components/additive-frame-recovery-prompt.md",
+    "provenance_path": "asset-generation-provenance.md",
+    "source_candidate": "specs/boundless-ink-ui/revisions/2026-10-23-player-core-mapping-correction/breakthrough-preparation-v3.png"
+  },
+  "approved": false,
+  "review_status": "candidate-pending-user-visual-review",
+  "package_status": "additive-asset-only-not-in-original-zip-or-manifest"
+}

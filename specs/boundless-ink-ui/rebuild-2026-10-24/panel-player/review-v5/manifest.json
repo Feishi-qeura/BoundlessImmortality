@@ -1,0 +1,50 @@
+{
+  "team": "panel-player",
+  "slice": "review-v5",
+  "updated_at": "2026-10-24T14:12:42+08:00",
+  "approval": "approved:false",
+  "frozen_player_slices_modified": false,
+  "production_source_modified": false,
+  "production_content_modified": false,
+  "source_patch_applied": false,
+  "build_verified": false,
+  "runtime_verified": false,
+  "image_generation_performed": false,
+  "files": [
+    {
+      "path": "contracts/player-d-adapter-namespace-overlay.yaml",
+      "bytes": 1007,
+      "sha256": "03A82648C125280C7A54CD3AD02FFEB61F8D40F77817A3AEF20A3C1BEBF85A45"
+    },
+    {
+      "path": "contracts/player-e-breakthrough-confirmation-host-contract.yaml",
+      "bytes": 3795,
+      "sha256": "E92BB6F9993BD5C45F10442EEBD50427EE5A22F5103485A59CC0404CD19330A2"
+    },
+    {
+      "path": "diff/player-e-breakthrough-confirmation.diff",
+      "bytes": 3015,
+      "sha256": "44908CE252312D3CF0122F69D0005DD53CEEC0645EE455CFBBD82D534CD99708"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 544,
+      "sha256": "52CD0880E677D1C642CE54F4C15263236660AE1511F30C02D474C4A172DADB16"
+    },
+    {
+      "path": "receipt.md",
+      "bytes": 3349,
+      "sha256": "B7DFAA8EB65CB3FA27492D6F7A7971A06BAC20EE7EE7D4A5C1F9544FE3985D21"
+    },
+    {
+      "path": "replacements/player-d-adapter-namespace.md",
+      "bytes": 526,
+      "sha256": "2BCE2150508CAC8BED9E8D62EDDF931BD2FBE1F71FA0F457DF101A9CA17B166C"
+    },
+    {
+      "path": "replacements/player-e-confirmation-slices.md",
+      "bytes": 3690,
+      "sha256": "537D543FD1E2892E8818929A42FCE693E28E39910276846B94D3EBA48A5C6DA1"
+    }
+  ]
+}

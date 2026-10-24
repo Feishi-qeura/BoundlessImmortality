@@ -1,0 +1,119 @@
+{
+  "heartbeat_at": "2026-10-24T06:38:41.545Z",
+  "directory_migration": "Independently complete; Content/UI absent, oldregistry0,582canonical verified",
+  "actual_default_entry_observed": true,
+  "core_page_routes_observed": 7,
+  "total_required": 44,
+  "remaining_feature_pages": 37,
+  "default_pie03": {
+    "finished": true,
+    "reported_passed": true,
+    "checks": 159,
+    "captures": 15,
+    "geometry_acceptance": "provisional: V5-VERIFY-01 finite-based arrangement predicate circularly excludes invalid metrics; repair and independent paint/culling proof requested"
+  },
+  "native_newui_tests": {
+    "success": 3,
+    "failed": 0,
+    "scope": "fixture/native only; real service transport Busy remains unproved"
+  },
+  "all44_runtime_verified": false,
+  "visual_approved": false,
+  "visual_pending_user": true,
+  "next_source_work": "37 independent newFeatureHost owner mappings/real routes/actions; V5-VERIFY-01 and V5-AVATAR-01 production repair",
+  "teams": [
+    {
+      "team_id": "panel-player",
+      "thread_id": "01a16b9b-3510-7f53-acb8-af72d60a1c68",
+      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": "review-v5 已就绪，Player-c/d/e 与 review-v4 均保持冻结，PE diff 未应用。 **V4-PD-01：**新 namespace overlay 将两个文档类型改为实际声明的 InkPlayerCraftSourcesWidgets，原 action-adapter 文件未改。 **V4-PE-01：**最小 diff 加入 StageSubjectRevision；host 契约要求首次确认捕获真实 stage/realm、材料选择和模式，并在二次提交前逐项核对。未知展示字段不会额外禁用 host 已授权的 Prepare/Rework。 **PC3-01：**沿用已满足的 typed relay；PC3-02/03 的 review-v4 补丁仍保持 ready。 review-v5 handoff · 回执 · PE diff · host 确认契约 静态 manifest/hash/YAML 检查通过；review-v4 与 review-v5 diff 的 git apply --check 均通过。未运行编译或测试，这不构成编译证据。",
+      "last_tool": {
+        "id": "exec-27c158e5-7b1a-4e78-8c79-1fbf77804424",
+        "turnId": "01a16c87-b083-7fa3-881c-db5bc0e13674",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "panel-rank",
+      "thread_id": "01a16b9b-463f-7c40-a591-cbc847242da8",
+      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:11",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-journey",
+      "thread_id": "01a16b9b-5e7e-7452-8c35-01d98ee12e70",
+      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": null,
+      "last_tool": null
+    },
+    {
+      "team_id": "panel-activities",
+      "thread_id": "01a16b9b-6be6-7683-b2d5-3b4bf7b1b8a4",
+      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": "已完成独立 review-v5，没有改动冻结的 v3、panel-activities-02 或 panel-economy-03。 六个完整替换源码文件：review-v5/staged-source 精确逐文件差异：v5.patch 宿主交接：host-handoff.md 冻结输入与替换文件哈希：source-delta-v5.json v5 补上两个 .cpp 的 HorizontalBoxSlot 定义头；移除离线确认对不存在 SourceId 的依赖；让 offer intent 携带确认时的 OfferId、SKU、报价版本和价格文本；并修正商店、寄售创建/购买、订单撤销在切换主体或刷新时的确认状态处理。真实支付通道未提供时，offer 仍不可购买。 静态核对通过，输入哈希与 v4 记录一致。未运行编译或 Unreal 验证；生产 Source/Content 未修改，批准状态仍为 false。",
+      "last_tool": {
+        "id": "exec-da37ec5c-ac7a-4b5e-8c57-6c0ab7e2e847",
+        "turnId": "01a16c87-a752-7ad0-8ee5-3b34eba81a6c",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-core",
+      "thread_id": "01a16b9b-7c7d-7ab0-a89e-d3c27e8c9393",
+      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:19",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "我会读取 14:30 后的正式报告，更新默认 7 路由和三项原生测试结果，替换此前“快照中未见执行记录”的状态。几何验收会继续标为暂定；原生 Busy fixture 与真实服务 Busy 分开记录。头像和验证器只按新 hash／修复回执复核，不启动引擎或重复测试。",
+      "last_tool": {
+        "id": "exec-56d6e75c-29a6-469a-80bd-78b04e0aa1f3",
+        "turnId": "01a16ca2-e3f5-7d80-91fd-a1d3d8ce867c",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "logic-integration",
+      "thread_id": "01a16b9b-8d4d-7b01-a560-b0395775dc15",
+      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:40",
+      "thread_status": "active",
+      "turn_status": "inProgress",
+      "last_message": "这轮默认入口检查已通过 159 项检查，并留下 15 张实际截图；三榜分类、本地/全服状态切换和横屏背包末格滚动均已验证。当前是 7 个核心页面通过这组运行检查，视觉仍待你确认；我会继续接入其余 37 页的新宿主。",
+      "last_tool": {
+        "id": "exec-b103ad63-bd0b-4a80-898c-93055b78aea2",
+        "turnId": "01a16c26-c359-7fc3-9685-d086eb398e6a",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    },
+    {
+      "team_id": "cleanup",
+      "thread_id": "01a16b9b-9af0-7a02-8ad2-0cdaf4b9a15f",
+      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
+      "thread_status": "idle",
+      "turn_status": "completed",
+      "last_message": "资源目录迁移已独立核验完成：Content/UI 不存在，实际旧根注册表为 0，582 个迁移目标哈希与非 redirector 类证明一致。 589 个改写原包的备份覆盖、八副本载荷及 Source/Config 静态审计通过。status、handoff 和最终审计报告已更新。 完整 PIE、视觉及额外全依赖图读回另列，未冒称通过。",
+      "last_tool": {
+        "id": "exec-cc074fa9-9638-48d1-8225-2bd768d15069",
+        "turnId": "01a16c87-9c9d-75b0-87a8-eabe6d89b1c3",
+        "type": "commandExecution",
+        "name": "commandExecution",
+        "status": "completed"
+      }
+    }
+  ]
+}

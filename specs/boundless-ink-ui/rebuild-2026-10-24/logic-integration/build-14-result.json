@@ -1,0 +1,9 @@
+{
+  "scope": "37 feature source integration and independent geometry repair",
+  "source_files": 86,
+  "source_ledger_records": 176,
+  "started_at": "2026-10-24T14:57:39.4981263+08:00",
+  "finished_at": "2026-10-24T14:58:48.1896087+08:00",
+  "exit_code": 0,
+  "record_count_basis": "Matching frozen epoch confirmed by exact ledger hash chain; reporting field was absent from static epoch schema"
+}

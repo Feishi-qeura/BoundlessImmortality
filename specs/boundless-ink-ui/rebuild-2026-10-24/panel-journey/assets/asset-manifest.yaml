@@ -1,0 +1,29 @@
+# Candidate map backgrounds
+
+schema_version: 1
+team_id: panel-journey
+batch: journey-a
+approved: false
+visual_review: pending_user
+imported: false
+assets:
+  - semantic_id: journey-map-background-portrait
+    file: assets/runtime-source/journey-map-background-v1.png
+    dimensions: [1024, 1536]
+    pixel_format: Format24bppRgb
+    alpha: false
+    sha256: ECBBA015B0F9100EA85EED749AF7DB5A3796AB73553C82DBA29861289D4699A2
+    package: /Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1
+    source_prompt: prompts/pages/journey-map-background.md
+    runtime_use: unlabelled portrait map landscape behind live UMG pins and detail panel
+    status: candidate
+  - semantic_id: journey-map-background-landscape
+    file: assets/runtime-source/journey-map-background-landscape-v1.png
+    dimensions: [1536, 1024]
+    pixel_format: Format24bppRgb
+    alpha: false
+    sha256: 6FE816646DA0368FE56D3760AE40CC845607F4DB1DC8568D23A9089D32A15D62
+    package: /Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1
+    source_prompt: prompts/pages/journey-map-background-landscape.md
+    runtime_use: unlabelled landscape map landscape behind live UMG pins and detail panel
+    status: candidate

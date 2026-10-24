@@ -1,0 +1,995 @@
+{
+  "unique_candidates": 13,
+  "unique_candidates_with_visible_brush_readback": 13,
+  "shared_appearance_attribute": "9 matching UImages bound, all visible=false in saved Appearance snapshot; actual preview visible/paint proof still pending",
+  "all_current_source_runtime_acceptance": false,
+  "assets": [
+    {
+      "owner": "panel-player",
+      "id": "main-action-ornament-component-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/main-action-ornament-component-v1.png",
+      "source_exists": true,
+      "source_sha256": "901d495adf87fa946fb41d62eafa7c5951064996ef42bda6f480bab9b631d26c",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "BuildMainMenuSurface + NewUIMainOrnament",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/main.json",
+          "page": "Main",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "NewUIMainOrnament",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIMainOrnament",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-player",
+      "id": "hud-route-glyph-atlas-component-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/hud-route-glyph-atlas-component-v1.png",
+      "source_exists": true,
+      "source_sha256": "5d576274a7e043a61bfad6590838deb9b0d7adb454ef94b6560afe5697641ed4",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "BuildHudSurface + AddHudGlyphs UV3x2",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/hud-landscape.json",
+          "page": "HUD",
+          "bound_image_count": 7,
+          "visible_bound_image_count": 5,
+          "images": [
+            {
+              "name": "NewUIHudGlyph_OpenExtensions",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenExtensions",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_OpenCharacter",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenCharacter",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_OpenInventory",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenInventory",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_ToggleCultivation",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleCultivation",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_OpenLeaderboard",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenLeaderboard",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_ToggleHUDMenu",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_ToggleHUDMenu",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "NewUIHudGlyph_OpenExtensions",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.NewUIHudGlyph_OpenExtensions",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-player",
+      "id": "character-attribute-glyph-atlas-component-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/character-attribute-glyph-atlas-component-v1.png",
+      "source_exists": true,
+      "source_sha256": "0cfa127f7a04204d62dcadca9f29075896b8be8650d4b71168356942869d8e19",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "BuildCharacterPage AttributeGlyphAtlas UV3x3",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/character.json",
+          "page": "Character",
+          "bound_image_count": 9,
+          "visible_bound_image_count": 9,
+          "images": [
+            {
+              "name": "Image_0",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_0",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_1",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_1",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_2",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_2",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_3",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_3",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_4",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_4",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_5",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_5",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_6",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_6",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_7",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_7",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_8",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_8",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-player",
+      "id": "inventory-category-glyph-atlas-component-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/inventory-category-glyph-atlas-component-v1.png",
+      "source_exists": true,
+      "source_sha256": "076d8ae4a04e5d03284d870e1092d3895727779b9d145cec18942b7332872f16",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "BuildInventoryPage CategoryGlyphAtlas UV3x2",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/inventory-cleared.json",
+          "page": "Inventory",
+          "bound_image_count": 40,
+          "visible_bound_image_count": 40,
+          "images": [
+            {
+              "name": "Image_49",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_49",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_50",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_50",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_51",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_51",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_52",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_52",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_53",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_53",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_54",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_54",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_55",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_55",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_56",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_56",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_57",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_57",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_58",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_58",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_59",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_59",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_60",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_60",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_61",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_61",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_62",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_62",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_63",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_63",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_64",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_64",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_65",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_65",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_66",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_66",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_67",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_67",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_68",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_68",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_69",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_69",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_70",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_70",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_71",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_71",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_72",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_72",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_73",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_73",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_74",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_74",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_75",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_75",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_76",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_76",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_77",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_77",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_78",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_78",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_79",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_79",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_80",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_80",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_81",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_81",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_82",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_82",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_83",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_83",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_84",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_84",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_85",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_85",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_86",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_86",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_87",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_87",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            },
+            {
+              "name": "Image_88",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_88",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+              "paint_expectation": "culled"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "player-c",
+      "id": "method-loadout-glyph-atlas-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/method-loadout-glyph-atlas-v1.png",
+      "source_exists": true,
+      "source_sha256": "47af658d4c50e2692b33a58da4f3e76df7cae02290fc6acf3c5c3d909590516d",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "FPageAtlases.MethodsGlyphs -> BuildMethodsPage",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "131337ea991ece98779fb3fae2e86af2806f8d032563b6c30fdcd9c22e5770dd",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "production_reference_sha256": "b1faeafd91c9c6b66d78c38fa25c27775c330c035ba1aee8bdbab573cf49514e",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "service-pie-01/failure-current.json",
+          "page": "CultivationMethods",
+          "bound_image_count": 5,
+          "visible_bound_image_count": 5,
+          "images": [
+            {
+              "name": "Image_34",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_34",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_35",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_35",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_36",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_36",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_37",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_37",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_38",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2.WidgetTree.Image_38",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "player-c",
+      "id": "equipment-fabao-glyph-atlas-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/equipment-fabao-glyph-atlas-v1.png",
+      "source_exists": true,
+      "source_sha256": "1a654f979afeedd1a7464e397e653b144b3d60be7629543509d5accdc14c07a0",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "FPageAtlases.EquipmentGlyphs -> BuildEquipmentPage",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "3d1035616108d006dd455a4455d7fc6d3e49fa409c7e4b217641d08380e9881b",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "production_reference_sha256": "b1faeafd91c9c6b66d78c38fa25c27775c330c035ba1aee8bdbab573cf49514e",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "service-pie-03/equipment-native-data.json",
+          "page": "EquipmentFabao",
+          "bound_image_count": 3,
+          "visible_bound_image_count": 3,
+          "images": [
+            {
+              "name": "Image_9",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_9",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_10",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_10",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            },
+            {
+              "name": "Image_11",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.Image_11",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "player-c",
+      "id": "appearance-preview-ornament-atlas-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/appearance-preview-ornament-atlas-v1.png",
+      "source_exists": true,
+      "source_sha256": "80a2405958cde0e6a55da77a09a683a5fdeaaeec5ecfbeabd0f0d24aa5f4b331",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "FPageAtlases.AppearanceOrnaments -> BuildAppearancePage",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1.T_AppearancePreviewOrnamentAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "3948cac0ec8cbdc6f7d05359cc0f89478beb4ea51c485450c41da7d131a1588f",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "production_reference_sha256": "b1faeafd91c9c6b66d78c38fa25c27775c330c035ba1aee8bdbab573cf49514e",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/characterappearance-character-entry.json",
+          "page": "CharacterAppearance",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "Image_2",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_5.WidgetTree.Image_2",
+              "visible": true,
+              "resource": "/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1.T_AppearancePreviewOrnamentAtlas_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "player-c-reuse",
+      "id": "shared-character-attribute-atlas",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/visible-entry/assets/components/character-attribute-glyph-atlas-component-v1.png",
+      "source_exists": true,
+      "source_sha256": "0cfa127f7a04204d62dcadca9f29075896b8be8650d4b71168356942869d8e19",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-player/player-c/visible-entry/assets/components/asset-manifest.json",
+      "production_composition_field": "FPageAtlases.CharacterAttributeGlyphs -> BuildAppearancePage",
+      "canonical_object_path": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "classification": "actual-brush-bound-but-hidden-at-observed-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "canonical_reference_present_in_source": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/characterappearance-character-entry.json",
+          "page": "CharacterAppearance",
+          "bound_image_count": 9,
+          "visible_bound_image_count": 0,
+          "images": [
+            {
+              "name": "Image_0",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_0",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_1",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_1",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_2",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_2",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_3",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_3",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_4",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_4",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_5",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_5",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_6",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_6",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_7",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_7",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            },
+            {
+              "name": "Image_8",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Image_8",
+              "visible": false,
+              "resource": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+              "paint_expectation": "unknown"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": false
+    },
+    {
+      "owner": "panel-activities",
+      "id": "daily-activity-scroll-v1",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/assets/components/daily-activity-scroll-v1.png",
+      "source_exists": true,
+      "source_sha256": "fdb9da51762a9521fcf5147f4bd52edd1f0fe453bf13866d4789461234f7f3af",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/asset-manifest.yaml",
+      "production_composition_field": "CategoryBadge cycle=daily -> UImage.SetBrushFromTexture",
+      "canonical_object_path": "/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1.T_DailyActivityScroll_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "3009ecc410c96d67e61e0b01f1ffddae8b9a2306b8e04116e3acbbad7aa18f39",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "production_reference_sha256": "ed3931f639776a46bd523a4d3bfcb4621b8dba96fcd4bd12f4ffe314dd0d4ac6",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/activities-portrait.json",
+          "page": "Activities",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "Image_6",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_6",
+              "visible": true,
+              "resource": "/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1.T_DailyActivityScroll_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-activities",
+      "id": "limited-activity-calendar-v1",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/assets/components/limited-activity-calendar-v1.png",
+      "source_exists": true,
+      "source_sha256": "3647d5a63c613b92054077c3fe4e482b7ede471f430904dc5100c7c039641343",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/asset-manifest.yaml",
+      "production_composition_field": "CategoryBadge cycle=limited -> UImage.SetBrushFromTexture",
+      "canonical_object_path": "/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1.T_LimitedActivityCalendar_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "bf64c6c2242f06ffc262bb650ffab8a727e599f9bcdf6d2405eb6bb4cf037195",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "production_reference_sha256": "ed3931f639776a46bd523a4d3bfcb4621b8dba96fcd4bd12f4ffe314dd0d4ac6",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/activities-portrait.json",
+          "page": "Activities",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "Image_7",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_7",
+              "visible": true,
+              "resource": "/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1.T_LimitedActivityCalendar_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-activities",
+      "id": "permanent-activity-lotus-v1",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/assets/components/permanent-activity-lotus-v1.png",
+      "source_exists": true,
+      "source_sha256": "b9dcab0cd9ce4ec0604ac7830781c422fef82fb4ac368da46c632cbe521d5f73",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities/asset-manifest.yaml",
+      "production_composition_field": "CategoryBadge cycle=permanent -> UImage.SetBrushFromTexture",
+      "canonical_object_path": "/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1.T_PermanentActivityLotus_v1",
+      "uasset_exists": true,
+      "uasset_sha256": "3a9fe499f8e3d18c61a34cfb3825deb48d43f898b77c89a61b3739338ab08308",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "production_reference_sha256": "ed3931f639776a46bd523a4d3bfcb4621b8dba96fcd4bd12f4ffe314dd0d4ac6",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/activities-portrait.json",
+          "page": "Activities",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "Image_8",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildActivitiesHubWidget_0.WidgetTree.Image_8",
+              "visible": true,
+              "resource": "/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1.T_PermanentActivityLotus_v1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-rank",
+      "id": "wuling-sect-insignia-v3",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/assets/components/wuling-sect-insignia-v3.png",
+      "source_exists": true,
+      "source_sha256": "d42fbe4f9a002fc8927c4cc47471a236c43a7c1eec1f94d1810c28be2a942ca8",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-rank/asset-manifest.yaml",
+      "production_composition_field": "FInkWulingOverviewData.Insignia -> Emblem brush",
+      "canonical_object_path": "/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1.T_NUI_Wuling_SectInsignia_Normal_V1",
+      "uasset_exists": true,
+      "uasset_sha256": "30d27a3c2c0b2b209bc5fc8fa972da2890e64dcf552e3b24f54b5583be1147d5",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "production_reference_source": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureRank.cpp",
+      "production_reference_sha256": "67f29e5e8eb7b537f905690fd31f958923472af0d8866524b9076b4cde7f9b4a",
+      "canonical_reference_present_in_source": true,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/wuling-portrait.json",
+          "page": "Wuling",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "Image_3",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkWulingOverviewPage_0.WidgetTree.Image_3",
+              "visible": true,
+              "resource": "/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1.T_NUI_Wuling_SectInsignia_Normal_V1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-journey",
+      "id": "journey-map-background-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/assets/runtime-source/journey-map-background-v1.png",
+      "source_exists": true,
+      "source_sha256": "ecbba015b0f9100ea85eed749af7db5a3796ab73553c82dba29861289d4699a2",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/assets/asset-manifest.yaml",
+      "production_composition_field": "Journey MapCanvas Art brush chooses portrait/landscape canonical texture",
+      "canonical_object_path": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1",
+      "uasset_exists": true,
+      "uasset_sha256": "9c070d6e28b9f43a4172df0d87b3d7a7717bd96b76ba9f04ec49e1c826d4411e",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/resourcecontest-portrait.json",
+          "page": "ResourceContest",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "JourneyPortraitMapArt",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.JourneyPortraitMapArt",
+              "visible": true,
+              "resource": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    },
+    {
+      "owner": "panel-journey",
+      "id": "journey-map-background-landscape-v1.png",
+      "source": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/assets/runtime-source/journey-map-background-landscape-v1.png",
+      "source_exists": true,
+      "source_sha256": "6fe816646da0368fe56d3760ae40cc845607f4db1dc8568d23a9089d32a15d62",
+      "manifest": "specs/boundless-ink-ui/rebuild-2026-10-24/panel-journey/assets/asset-manifest.yaml",
+      "production_composition_field": "Journey MapCanvas Art brush chooses portrait/landscape canonical texture",
+      "canonical_object_path": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1",
+      "uasset_exists": true,
+      "uasset_sha256": "143564312b02565b9829557e730a6a3b2af1bd301341114ac81843538870b110",
+      "classification": "actual-visible-brush-observed-at-recorded-epoch",
+      "runtime_readback": "v9 exact snapshots supersede previous pending text; each observation belongs to its saved attempt epoch",
+      "approved": false,
+      "import_receipt_uasset_hash_matches": true,
+      "import_receipt_source_hash_matches": true,
+      "current_uasset_hash_matches_v7": true,
+      "runtime_observations_v9": [
+        {
+          "snapshot": "default-root-pie-06/world-player-entry.json",
+          "page": "WorldCultivation",
+          "bound_image_count": 1,
+          "visible_bound_image_count": 1,
+          "images": [
+            {
+              "name": "JourneyLandscapeMapArt",
+              "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyWorldMapPageWidget_0.WidgetTree.JourneyLandscapeMapArt",
+              "visible": true,
+              "resource": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1",
+              "paint_expectation": "expected"
+            }
+          ]
+        }
+      ],
+      "visible_binding_observed": true
+    }
+  ],
+  "partial12_report_preserved": true
+}

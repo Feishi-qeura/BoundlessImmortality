@@ -1,0 +1,187 @@
+{
+  "checked_at": "2026-10-24T09:56:36.662384+08:00",
+  "packages": {
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_Wand": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_Wand",
+        "array_value": "Wand",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_LoveExplosion": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_LoveExplosion",
+        "array_value": "LoveExplosion",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Rewards/T_Gift_RareChest": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_RareChest",
+        "array_value": "RareChest",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_SuperJet": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_SuperJet",
+        "array_value": "SuperJet",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_MysteryAirdrop": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_MysteryAirdrop",
+        "array_value": "MysteryAirdrop",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_StrawberryDessert": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_StrawberryDessert",
+        "array_value": "StrawberryDessert",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_SuperAirdrop": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_SuperAirdrop",
+        "array_value": "SuperAirdrop",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Gifts/T_Gift_LifePotion": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/Gifts/T_Gift_LifePotion",
+        "array_value": "LifePotion",
+        "enumeration_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "enumeration_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "loader_file": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+        "loader_sha256": "72591dd88749145f05efbd97be8159b9466dcbd1561b8330795d1424b45afbc8",
+        "resolution": "Config PackageRedirects; Button uses LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_D": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_D",
+        "array_value": "D",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_C": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_C",
+        "array_value": "C",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_B": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_B",
+        "array_value": "B",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_A": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_A",
+        "array_value": "A",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_S": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_S",
+        "array_value": "S",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_SS": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_SS",
+        "array_value": "SS",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ],
+    "/Game/UI/Ink/Textures/Character/T_Rating_SSS": [
+      {
+        "assembled_legacy_package": "/Game/UI/Ink/CharacterRating20261022/T_Rating_SSS",
+        "array_value": "SSS",
+        "enumeration_file": "Source/BoundlessImmortality/Frontend/InkAttributeRating.cpp",
+        "enumeration_sha256": "ca2c55be9a5958d9d7be3a7eacea1c7b8868d830575b4d4793d68f1852bee06c",
+        "loader_file": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+        "loader_sha256": "2bf86d262410dd054e484940d06ec87eb832c73b41cf17f87b8c54add55c8f52",
+        "resolution": "InkUiAssets::Load -> Resolve -> LoadObject",
+        "evidence": "Static finite path construction reviewed; runtime load not executed"
+      }
+    ]
+  },
+  "runtime_tested": false,
+  "other_dynamic_sites_still_pending": true
+}
