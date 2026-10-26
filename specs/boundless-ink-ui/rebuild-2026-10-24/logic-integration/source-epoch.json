@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-24T16:38:09.792895+08:00",
+  "checked_at": "2026-10-24T18:51:29.357177+08:00",
   "scope": "static source/backup/hash/Python parsing only",
   "files": [
     {
@@ -260,7 +260,7 @@
     },
     {
       "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
-      "sha256": "37cf356d56054d89d658c1792277b2632055a51a6b8f8c5a49f2e64419dbaae1"
+      "sha256": "192bfb98f3194030ebc597b64f1fac2a0d98b5e1fc454cb6c32899e38483e89a"
     },
     {
       "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
@@ -353,6 +353,10 @@
     {
       "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildConfirmationTests.cpp",
       "sha256": "afadd3ebc1f26de89b3f730dfe4c063025297667721b91fae23b1a961db78759"
+    },
+    {
+      "path": "Tools/CultivationService/authority.py",
+      "sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de"
     }
   ],
   "errors": [],

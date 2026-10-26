@@ -23,8 +23,8 @@
       "status": "full_newUI_pages_and_components",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "bccc533b-e357-4de1-ac45-30ab193aaf91:19",
-      "observed_thread_status": "idle"
+      "cursor": "e20974d7-aee6-48c7-ab93-21782fea3162:1",
+      "observed_thread_status": "notLoaded"
     },
     {
       "id": "panel-rank",
@@ -37,7 +37,7 @@
       "status": "full_newUI_pages_and_components",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "a622489f-8706-4fa7-a643-3d94f4890ac1:12",
+      "cursor": "ea422212-0347-40fc-ba6c-ccfc96056471:1",
       "observed_thread_status": "notLoaded"
     },
     {
@@ -51,7 +51,7 @@
       "status": "full_newUI_pages_and_components",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "98245792-ecc8-4e40-b22f-bdac8c231260:17",
+      "cursor": "340cfeb4-c308-4472-a2d7-af5a51a5ab20:1",
       "observed_thread_status": "notLoaded"
     },
     {
@@ -69,8 +69,8 @@
         "specs/boundless-ink-ui/rebuild-2026-10-24/panel-activities-02",
         "specs/boundless-ink-ui/rebuild-2026-10-24/panel-economy-03"
       ],
-      "cursor": "959459d8-519a-4c5a-80f5-00b804ec7799:16",
-      "observed_thread_status": "idle"
+      "cursor": "1bff2fc0-4bd8-41af-a70f-2171b826eba6:1",
+      "observed_thread_status": "notLoaded"
     },
     {
       "id": "logic-core",
@@ -83,7 +83,7 @@
       "status": "newUI_unified_contracts_and_model",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "44f45af7-6007-4fd8-8064-b0b83899fbab:33",
+      "cursor": "50cefcdc-444f-47b9-9524-16a6f630819d:2",
       "observed_thread_status": "active"
     },
     {
@@ -97,7 +97,7 @@
       "status": "newUI_root_architecture_and_source_refactor",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "94c8bb4d-400c-49f5-b6b6-e8bccd84fa69:52",
+      "cursor": "f86292f6-d88d-465b-ae84-df67945ee091:2",
       "observed_thread_status": "active"
     },
     {
@@ -111,11 +111,11 @@
       "status": "full_UI_to_newUI_backup_mapping_migration",
       "fast_mode": "not_configurable_via_create_thread",
       "visual_approved": false,
-      "cursor": "19ff39dd-113c-45b2-9a5b-e8aa8c70ccb3:12",
-      "observed_thread_status": "idle"
+      "cursor": "0475a1f1-a9ee-412e-89a5-722d9b03987d:1",
+      "observed_thread_status": "notLoaded"
     }
   ],
   "rebuild_root": "specs/boundless-ink-ui/rebuild-2026-10-24",
   "canonical_asset_root": "/Game/newUI",
-  "last_supervisor_checkpoint": "2026-10-24T17:46:00+08:00"
+  "last_supervisor_checkpoint": "2026-10-24T18:42:00+08:00"
 }

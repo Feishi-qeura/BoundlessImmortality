@@ -214,3 +214,23 @@ Supervisor returned V11-RACE-ACTIVE-01 P1: nativeHost requires identity.active, 
 
 ## 2026-10-24T17:47:25.826233+08:00 Actual active provider repair and functional UI chain
 Grant exact Tools/authority.py exception applied via narrowly extended recorder with own before/after backup. Ledger224 (225records/89files) adds ONLY identity.active=bool(ctx.session[active]); no heartbeat/race/gameplay/reward changes. Red7fail due missing field→green7pass. Existing full service102pass26s. C++26 unchanged; no unnecessary rebuild or14render rerun. Fresh isolated functional service04 PID35712 (service03boot failed long fixture guild name, DBpreserved), ownEditor39700 running actualStartLaunch/selectedResourceDetail/QueueCancel/realRace/missingprovider/inactive/eligible/commonresponses/settlement. Synthetic actors and controlled clock expressly declared, actual states/receipts remain authoritative. Prior machinecloseout revoked pending applicable functional work.
+
+
+## 2026-10-24T18:10:55.778702+08:00 Resume18:10 actual state audit
+Fresh elevatedCIM: no engine/compiler; own functional service04 PID35712 still running (not absent), identity exactscript verified. Functional01 raw-snapshot1 is actualHUD720x1280 withOpenLaunchEvent/Character/Inventory/Leaderboard/menu; noStartGame because local-test gameplay already started. Test assumption failure, not source/root missingMain bug.02 inspects actual startup Main/HUD and only clicks real MainStartGame if present; otherwise continues realHUD controls. OwnEditor28860. Provider7green+102service pass and unchangedC++26render retained. No newSource/Config edits sincebackend ledger225. Lease18:32stillvalid; machinecloseout remainsfalse.
+
+
+## 2026-10-24T18:41:04.313558+08:00 Resume18:40 checkpoint, stale running removed
+Fresh elevatedCIM noengine/compiler/functionalPython processes.02finishedfalse/errornull/5checks/0edges; log18:11:11windowdestruction→PIEteardown→QUIT_EDITOR18:11:12, normalEditorExit18:11:15. No Pythoncallback exception and nofinish result, closureorigin unestablished; not a product pass/fail beyond setup incomplete. Service04 absent without service-result04 file, so normalshutdown unproved, do not infer from earlier scans. Existingbackend7+102andC++26/14render retained. Next03 instrumentstartup probes/finish call marker and fresh isolated service05; lease19:32valid.
+
+
+## 2026-10-24T18:42:16.164963+08:00 Functional03 actual actions underway
+Fresh service05 PID10000/newDB service-data05 and Editor39172 startup probes confirm actual PIE world/frontend. Script progressed through realHUD/menu/Activities→LaunchEvent, no directrouter.02 earlywindowclosure origin remainsunknown; not silently markedpass. Lease19:32.
+
+
+## 2026-10-24T18:44:19.660141+08:00 Functional03 actual product red and narrow repair
+Actual eligibleStartLaunchEvent succeeded via2physical confirmations (reuse, do not repeat). Actual ResourceContest selected current NODE_STONE:1 and ResourceDetail inherited sameID. Real继续 first click followed by ordinary fresh snapshots lost确认继续. Rootcause3Journey SetTravelFeedback methods unconditionally reset confirmation on everyPendingfalse. Ledger225/226records fixes ONLY reset onwasPending&&nowidle; selectedID/identity reset intact. build27started.04 continuesresource/race only, preservingrealLaunch03receipt; no44render rerun.
+
+
+## 2026-10-24T18:49:08.442497+08:00 Build27 Unity failure, bounded functional validation mode
+Default build27 failed code6 due AdaptiveUnity working-set regroup exposing pre-existing helper/type collisions (InkFrontendWidget/Inventory/PlayerC-D-E/Menu/WulingTools/LiveGMControlPanel); changedJourneyNewWidgets.cpp itself compiled. No gameplay changes made to unrelated files to mask this. Build28 explicitly -DisableUnity, real UBT flag verified installedDLL; current89files/226ledger. StandardUnity build remains a reported outstanding build limitation;28success not equivalent to defaultUnitysuccess. Functional04resource/race continuation and world02prepared, do not rerun14all44.

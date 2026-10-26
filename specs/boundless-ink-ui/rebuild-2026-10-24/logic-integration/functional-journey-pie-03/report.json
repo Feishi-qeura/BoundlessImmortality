@@ -1,0 +1,3654 @@
+{
+  "scope": "Actual portrait UI LaunchStart, exact selected resource detail/queue/cancel, actual matched race, truthful active/missing/inactive refusals and six real native common actions/settlement. Isolated declared actors/test clock, real rules unchanged.",
+  "checks": [
+    {
+      "name": "isolated Saved directory",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkDisplay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkBody",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual new default asset",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "begin actual default PIE",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "exact initial9:16",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "physical startup StartGame",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "native real service connected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_ToggleHUDMenu",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+          "object_id": 82304,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 544,
+          "y": 1154,
+          "width": 112,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 547,
+          "independent_top": 1189,
+          "independent_right": 659,
+          "independent_bottom": 1307,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 112,
+          "painted_height": 118,
+          "action": "ToggleHUDMenu",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_ToggleHUDMenu",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+          "object_id": 82304,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 544,
+          "y": 1154,
+          "width": 112,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 547,
+          "independent_top": 1189,
+          "independent_right": 659,
+          "independent_bottom": 1307,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 112,
+          "painted_height": 118,
+          "action": "ToggleHUDMenu",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": {
+        "name": "Rebuild_Hud_ToggleHUDMenu",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+        "object_id": 82304,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 544,
+        "y": 1154,
+        "width": 112,
+        "height": 118,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 547,
+        "independent_top": 1189,
+        "independent_right": 659,
+        "independent_bottom": 1307,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 112,
+        "painted_height": 118,
+        "action": "ToggleHUDMenu",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'OpenActivities'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_OpenActivities",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenActivities",
+          "object_id": 82364,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 212,
+          "y": 954,
+          "width": 283,
+          "height": 96,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 484,
+          "independent_top": 67,
+          "independent_right": 692,
+          "independent_bottom": 163,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 283,
+          "painted_height": 96,
+          "action": "OpenActivities",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "活动",
+          "label_desired_width": 55,
+          "label_width": 259,
+          "label_auto_wrap": true
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'OpenActivities'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_OpenActivities",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenActivities",
+          "object_id": 82364,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 212,
+          "y": 954,
+          "width": 283,
+          "height": 96,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 484,
+          "independent_top": 67,
+          "independent_right": 692,
+          "independent_bottom": 163,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 283,
+          "painted_height": 96,
+          "action": "OpenActivities",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "活动",
+          "label_desired_width": 55,
+          "label_width": 259,
+          "label_auto_wrap": true
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'OpenActivities'}",
+      "passed": true,
+      "actual": {
+        "name": "Rebuild_Hud_OpenActivities",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenActivities",
+        "object_id": 82364,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 212,
+        "y": 954,
+        "width": 283,
+        "height": 96,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 484,
+        "independent_top": 67,
+        "independent_right": 692,
+        "independent_bottom": 163,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 283,
+        "painted_height": 96,
+        "action": "OpenActivities",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "活动",
+        "label_desired_width": 55,
+        "label_width": 259,
+        "label_auto_wrap": true
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'OpenActivities'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination Activities",
+      "passed": true,
+      "actual": "Activities"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureRelatedToggle",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedToggle",
+          "object_id": 81397,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 496,
+          "y": 1192,
+          "width": 200,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 499,
+          "independent_top": 1227,
+          "independent_right": 699,
+          "independent_bottom": 1315,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 200,
+          "painted_height": 88,
+          "action": "Ext_ToggleRelated",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureRelatedToggle",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedToggle",
+          "object_id": 81397,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 496,
+          "y": 1192,
+          "width": 200,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 499,
+          "independent_top": 1227,
+          "independent_right": 699,
+          "independent_bottom": 1315,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 200,
+          "painted_height": 88,
+          "action": "Ext_ToggleRelated",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": {
+        "name": "NewFeatureRelatedToggle",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedToggle",
+        "object_id": 81397,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 496,
+        "y": 1192,
+        "width": 200,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 499,
+        "independent_top": 1227,
+        "independent_right": 699,
+        "independent_bottom": 1315,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 200,
+        "painted_height": 88,
+        "action": "Ext_ToggleRelated",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination Activities",
+      "passed": true,
+      "actual": "Activities"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_Open_LaunchEvent'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewRelated_2",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedChoices",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewRelated_2",
+          "object_id": 81375,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 384,
+          "y": 980,
+          "width": 296,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 387,
+          "independent_top": 1015,
+          "independent_right": 683,
+          "independent_bottom": 1103,
+          "independent_clip_left": 387,
+          "independent_clip_top": 815,
+          "independent_clip_right": 678,
+          "independent_clip_bottom": 1198,
+          "painted_width": 296,
+          "painted_height": 88,
+          "action": "Ext_Open_LaunchEvent",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "actual navigation scroll {'action': 'Ext_Open_LaunchEvent'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_Open_LaunchEvent'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewRelated_2",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedChoices",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewRelated_2",
+          "object_id": 81375,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 384,
+          "y": 963,
+          "width": 296,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 387,
+          "independent_top": 998,
+          "independent_right": 683,
+          "independent_bottom": 1086,
+          "independent_clip_left": 387,
+          "independent_clip_top": 815,
+          "independent_clip_right": 678,
+          "independent_clip_bottom": 1198,
+          "painted_width": 296,
+          "painted_height": 88,
+          "action": "Ext_Open_LaunchEvent",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'Ext_Open_LaunchEvent'}",
+      "passed": true,
+      "actual": {
+        "name": "NewRelated_2",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedChoices",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewRelated_2",
+        "object_id": 81375,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 384,
+        "y": 963,
+        "width": 296,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 387,
+        "independent_top": 998,
+        "independent_right": 683,
+        "independent_bottom": 1086,
+        "independent_clip_left": 387,
+        "independent_clip_top": 815,
+        "independent_clip_right": 678,
+        "independent_clip_bottom": 1198,
+        "painted_width": 296,
+        "painted_height": 88,
+        "action": "Ext_Open_LaunchEvent",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'Ext_Open_LaunchEvent'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '开启活动'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "RebuildActivityIntentButton_21",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_28",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_21",
+          "object_id": 78578,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 44,
+          "y": 1064,
+          "width": 632,
+          "height": 92,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 47,
+          "independent_top": 1099,
+          "independent_right": 679,
+          "independent_bottom": 1191,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 632,
+          "painted_height": 92,
+          "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+          "enabled": true,
+          "label": "开启活动",
+          "intent_action": "start-launch",
+          "intent_entry": "None",
+          "intent_cycle": "None",
+          "intent_confirmed": false
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '开启活动'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "RebuildActivityIntentButton_21",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_28",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_21",
+          "object_id": 78578,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 44,
+          "y": 1064,
+          "width": 632,
+          "height": 92,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 47,
+          "independent_top": 1099,
+          "independent_right": 679,
+          "independent_bottom": 1191,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 632,
+          "painted_height": 92,
+          "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+          "enabled": true,
+          "label": "开启活动",
+          "intent_action": "start-launch",
+          "intent_entry": "None",
+          "intent_cycle": "None",
+          "intent_confirmed": false
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '开启活动'}",
+      "passed": true,
+      "actual": {
+        "name": "RebuildActivityIntentButton_21",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_28",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_21",
+        "object_id": 78578,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 44,
+        "y": 1064,
+        "width": 632,
+        "height": 92,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 47,
+        "independent_top": 1099,
+        "independent_right": 679,
+        "independent_bottom": 1191,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 632,
+        "painted_height": 92,
+        "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+        "enabled": true,
+        "label": "开启活动",
+        "intent_action": "start-launch",
+        "intent_entry": "None",
+        "intent_cycle": "None",
+        "intent_confirmed": false
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '开启活动'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '再次确认开启活动'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "RebuildActivityIntentButton_33",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_42",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_33",
+          "object_id": 78327,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 44,
+          "y": 1064,
+          "width": 632,
+          "height": 92,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 47,
+          "independent_top": 1099,
+          "independent_right": 679,
+          "independent_bottom": 1191,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 632,
+          "painted_height": 92,
+          "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+          "enabled": true,
+          "label": "再次确认开启活动",
+          "intent_action": "start-launch",
+          "intent_entry": "None",
+          "intent_cycle": "None",
+          "intent_confirmed": false
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '再次确认开启活动'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "RebuildActivityIntentButton_33",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_42",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_33",
+          "object_id": 78327,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 44,
+          "y": 1064,
+          "width": 632,
+          "height": 92,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 47,
+          "independent_top": 1099,
+          "independent_right": 679,
+          "independent_bottom": 1191,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 632,
+          "painted_height": 92,
+          "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+          "enabled": true,
+          "label": "再次确认开启活动",
+          "intent_action": "start-launch",
+          "intent_entry": "None",
+          "intent_cycle": "None",
+          "intent_confirmed": false
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '再次确认开启活动'}",
+      "passed": true,
+      "actual": {
+        "name": "RebuildActivityIntentButton_33",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_42",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_33",
+        "object_id": 78327,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 44,
+        "y": 1064,
+        "width": 632,
+        "height": 92,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 47,
+        "independent_top": 1099,
+        "independent_right": 679,
+        "independent_bottom": 1191,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 632,
+        "painted_height": 92,
+        "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+        "enabled": true,
+        "label": "再次确认开启活动",
+        "intent_action": "start-launch",
+        "intent_entry": "None",
+        "intent_cycle": "None",
+        "intent_confirmed": false
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '再次确认开启活动'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "actual eligible StartLaunchEvent success and persisted Active",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual page LaunchEvent",
+      "passed": true,
+      "actual": "LaunchEvent"
+    },
+    {
+      "name": "independent root LaunchEvent",
+      "passed": true,
+      "actual": "NewUIRoot_r1"
+    },
+    {
+      "name": "new root runtime version LaunchEvent",
+      "passed": true,
+      "actual": "newui-r1-root-20261024"
+    },
+    {
+      "name": "actual new WBP LaunchEvent",
+      "passed": true,
+      "actual": "/Game/newUI/Runtime/WBP_NewUIFrontend.WBP_NewUIFrontend_C"
+    },
+    {
+      "name": "owner page version LaunchEvent",
+      "passed": true,
+      "actual": "newui-r1-feature-launchevent"
+    },
+    {
+      "name": "actual new feature host LaunchEvent",
+      "passed": true,
+      "actual": "/Script/BoundlessImmortality.InkRebuildFeatureHost"
+    },
+    {
+      "name": "independent feature root LaunchEvent",
+      "passed": true,
+      "actual": "NewFeatureRoot_r1"
+    },
+    {
+      "name": "actual owner composition LaunchEvent",
+      "passed": true,
+      "actual": "/Script/BoundlessImmortality.RebuildLaunchActivityWidget"
+    },
+    {
+      "name": "real Chinese fonts in visible text LaunchEvent",
+      "passed": true,
+      "actual": [
+        {
+          "name": "TextBlock_158",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay"
+        },
+        {
+          "name": "TextBlock_159",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_160",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_161",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_162",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_163",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_164",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_165",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_166",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_167",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_168",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_169",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_170",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_171",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_172",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_173",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_174",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_175",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_176",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_177",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "NewFeatureFeedback",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_0",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        },
+        {
+          "name": "TextBlock_5",
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkBody.F_InkBody"
+        }
+      ]
+    },
+    {
+      "name": "rendered viewport actual-start-launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "finite metrics or independently proven culling actual-start-launch",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "name": "independent expected-painted witness actual-start-launch",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "deliberate nonfinite expected-painted metric rejected actual-start-launch",
+      "passed": true,
+      "actual": [
+        {
+          "name": "TextBlock_158",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_57",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.TextBlock_158",
+          "object_id": 78004,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": null,
+          "y": 40,
+          "width": 161,
+          "height": 41,
+          "geometry_arranged": false,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 47,
+          "independent_top": 75,
+          "independent_right": 208,
+          "independent_bottom": 116,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 161,
+          "painted_height": 41,
+          "text": "青云初启",
+          "desired_width": 161,
+          "desired_height": 41,
+          "auto_wrap": true,
+          "font": "/Game/newUI/Ink/Fonts/Shared/F_InkDisplay.F_InkDisplay",
+          "font_size": 30,
+          "has_nonfinite_metrics": true,
+          "kind": "buttons"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '返回'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureBack",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureBack",
+          "object_id": 80666,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 608,
+          "y": 24,
+          "width": 88,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 611,
+          "independent_top": 59,
+          "independent_right": 699,
+          "independent_bottom": 147,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 88,
+          "painted_height": 88,
+          "action": "Ext_Back",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "返回"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '返回'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureBack",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureBack",
+          "object_id": 80666,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 608,
+          "y": 24,
+          "width": 88,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 611,
+          "independent_top": 59,
+          "independent_right": 699,
+          "independent_bottom": 147,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 88,
+          "painted_height": 88,
+          "action": "Ext_Back",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "返回"
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '返回'}",
+      "passed": true,
+      "actual": {
+        "name": "NewFeatureBack",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureBack",
+        "object_id": 80666,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 608,
+        "y": 24,
+        "width": 88,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 611,
+        "independent_top": 59,
+        "independent_right": 699,
+        "independent_bottom": 147,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 88,
+        "painted_height": 88,
+        "action": "Ext_Back",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "返回"
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '返回'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination Activities",
+      "passed": true,
+      "actual": "Activities"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '返回'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureBack",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureBack",
+          "object_id": 81279,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 608,
+          "y": 24,
+          "width": 88,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 611,
+          "independent_top": 59,
+          "independent_right": 699,
+          "independent_bottom": 147,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 88,
+          "painted_height": 88,
+          "action": "Ext_Back",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "返回"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '返回'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureBack",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureBack",
+          "object_id": 81279,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 608,
+          "y": 24,
+          "width": 88,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 611,
+          "independent_top": 59,
+          "independent_right": 699,
+          "independent_bottom": 147,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 88,
+          "painted_height": 88,
+          "action": "Ext_Back",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": "",
+          "label": "返回"
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '返回'}",
+      "passed": true,
+      "actual": {
+        "name": "NewFeatureBack",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureBack",
+        "object_id": 81279,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 608,
+        "y": 24,
+        "width": 88,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 611,
+        "independent_top": 59,
+        "independent_right": 699,
+        "independent_bottom": 147,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 88,
+        "painted_height": 88,
+        "action": "Ext_Back",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "返回"
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '返回'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_ToggleHUDMenu",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+          "object_id": 82304,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 544,
+          "y": 1154,
+          "width": 112,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 547,
+          "independent_top": 1189,
+          "independent_right": 659,
+          "independent_bottom": 1307,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 112,
+          "painted_height": 118,
+          "action": "ToggleHUDMenu",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_ToggleHUDMenu",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+          "object_id": 82304,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 544,
+          "y": 1154,
+          "width": 112,
+          "height": 118,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 547,
+          "independent_top": 1189,
+          "independent_right": 659,
+          "independent_bottom": 1307,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 112,
+          "painted_height": 118,
+          "action": "ToggleHUDMenu",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": {
+        "name": "Rebuild_Hud_ToggleHUDMenu",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+        "object_id": 82304,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 544,
+        "y": 1154,
+        "width": 112,
+        "height": 118,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 547,
+        "independent_top": 1189,
+        "independent_right": 659,
+        "independent_bottom": 1307,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 112,
+        "painted_height": 118,
+        "action": "ToggleHUDMenu",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'ToggleHUDMenu'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination HUD",
+      "passed": true,
+      "actual": "HUD"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'OpenExtensions'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_OpenExtensions",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenExtensions",
+          "object_id": 82350,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 212,
+          "y": 854,
+          "width": 283,
+          "height": 96,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 484,
+          "independent_top": 267,
+          "independent_right": 692,
+          "independent_bottom": 363,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 283,
+          "painted_height": 96,
+          "action": "OpenExtensions",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'OpenExtensions'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Rebuild_Hud_OpenExtensions",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenExtensions",
+          "object_id": 82350,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 212,
+          "y": 854,
+          "width": 283,
+          "height": 96,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 484,
+          "independent_top": 267,
+          "independent_right": 692,
+          "independent_bottom": 363,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 283,
+          "painted_height": 96,
+          "action": "OpenExtensions",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'OpenExtensions'}",
+      "passed": true,
+      "actual": {
+        "name": "Rebuild_Hud_OpenExtensions",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenExtensions",
+        "object_id": 82350,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 212,
+        "y": 854,
+        "width": 283,
+        "height": 96,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 484,
+        "independent_top": 267,
+        "independent_right": 692,
+        "independent_bottom": 363,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 283,
+        "painted_height": 96,
+        "action": "OpenExtensions",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'OpenExtensions'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination Extensions",
+      "passed": true,
+      "actual": "Extensions"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '进入资源地图'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyHubOpenResources_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubResourcesCard_0",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubOpenResources_0",
+          "object_id": 92254,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 48,
+          "y": 434,
+          "width": 524,
+          "height": 97,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 51,
+          "independent_top": 469,
+          "independent_right": 575,
+          "independent_bottom": 566,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 524,
+          "painted_height": 97,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "进入资源地图"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '进入资源地图'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyHubOpenResources_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubResourcesCard_0",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubOpenResources_0",
+          "object_id": 92254,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 48,
+          "y": 434,
+          "width": 524,
+          "height": 97,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 51,
+          "independent_top": 469,
+          "independent_right": 575,
+          "independent_bottom": 566,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 524,
+          "painted_height": 97,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "进入资源地图"
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '进入资源地图'}",
+      "passed": true,
+      "actual": {
+        "name": "JourneyHubOpenResources_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubResourcesCard_0",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubOpenResources_0",
+        "object_id": 92254,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 434,
+        "width": 524,
+        "height": 97,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 469,
+        "independent_right": 575,
+        "independent_bottom": 566,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 524,
+        "painted_height": 97,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "进入资源地图"
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '进入资源地图'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination ResourceContest",
+      "passed": true,
+      "actual": "ResourceContest"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'name': 'JourneyPinHitButton', 'label': '灵石矿'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyPinHitButton",
+          "visible": true,
+          "parent_object": "",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.InkJourneyMapPinButton_36.WidgetTree.JourneyPinHitButton",
+          "object_id": 92726,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 403.75,
+          "y": 253,
+          "width": 130,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 406.75,
+          "independent_top": 288,
+          "independent_right": 536.75,
+          "independent_bottom": 376,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 130,
+          "painted_height": 88,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "灵石矿"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'name': 'JourneyPinHitButton', 'label': '灵石矿'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyPinHitButton",
+          "visible": true,
+          "parent_object": "",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.InkJourneyMapPinButton_36.WidgetTree.JourneyPinHitButton",
+          "object_id": 92726,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 403.75,
+          "y": 253,
+          "width": 130,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 406.75,
+          "independent_top": 288,
+          "independent_right": 536.75,
+          "independent_bottom": 376,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 130,
+          "painted_height": 88,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "灵石矿"
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'name': 'JourneyPinHitButton', 'label': '灵石矿'}",
+      "passed": true,
+      "actual": {
+        "name": "JourneyPinHitButton",
+        "visible": true,
+        "parent_object": "",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.InkJourneyMapPinButton_36.WidgetTree.JourneyPinHitButton",
+        "object_id": 92726,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 403.75,
+        "y": 253,
+        "width": 130,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 406.75,
+        "independent_top": 288,
+        "independent_right": 536.75,
+        "independent_bottom": 376,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 130,
+        "painted_height": 88,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "灵石矿"
+      }
+    },
+    {
+      "name": "physical Slate navigation {'name': 'JourneyPinHitButton', 'label': '灵石矿'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination ResourceContest",
+      "passed": true,
+      "actual": "ResourceContest"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "actual selected context ResourceContest",
+      "passed": true,
+      "actual": "NODE_STONE:1"
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureRelatedToggle",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedToggle",
+          "object_id": 92288,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 496,
+          "y": 1192,
+          "width": 200,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 499,
+          "independent_top": 1227,
+          "independent_right": 699,
+          "independent_bottom": 1315,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 200,
+          "painted_height": 88,
+          "action": "Ext_ToggleRelated",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewFeatureRelatedToggle",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRoot_r1",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedToggle",
+          "object_id": 92288,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 496,
+          "y": 1192,
+          "width": 200,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 499,
+          "independent_top": 1227,
+          "independent_right": 699,
+          "independent_bottom": 1315,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 200,
+          "painted_height": 88,
+          "action": "Ext_ToggleRelated",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": {
+        "name": "NewFeatureRelatedToggle",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedToggle",
+        "object_id": 92288,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 496,
+        "y": 1192,
+        "width": 200,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 499,
+        "independent_top": 1227,
+        "independent_right": 699,
+        "independent_bottom": 1315,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 200,
+        "painted_height": 88,
+        "action": "Ext_ToggleRelated",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'Ext_ToggleRelated'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination ResourceContest",
+      "passed": true,
+      "actual": "ResourceContest"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_Open_ResourceDetail'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewRelated_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedChoices",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewRelated_0",
+          "object_id": 92302,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 384,
+          "y": 780,
+          "width": 296,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 387,
+          "independent_top": 815,
+          "independent_right": 683,
+          "independent_bottom": 903,
+          "independent_clip_left": 387,
+          "independent_clip_top": 815,
+          "independent_clip_right": 678,
+          "independent_clip_bottom": 1198,
+          "painted_width": 296,
+          "painted_height": 88,
+          "action": "Ext_Open_ResourceDetail",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "actual navigation scroll {'action': 'Ext_Open_ResourceDetail'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "one actual enabled UI subject {'action': 'Ext_Open_ResourceDetail'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "NewRelated_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedChoices",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewRelated_0",
+          "object_id": 92302,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "z_order": 5,
+          "in_confirmation": false,
+          "x": 384,
+          "y": 780,
+          "width": 296,
+          "height": 88,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 387,
+          "independent_top": 815,
+          "independent_right": 683,
+          "independent_bottom": 903,
+          "independent_clip_left": 387,
+          "independent_clip_top": 815,
+          "independent_clip_right": 678,
+          "independent_clip_bottom": 1198,
+          "painted_width": 296,
+          "painted_height": 88,
+          "action": "Ext_Open_ResourceDetail",
+          "enabled": true,
+          "descendant_text_count": 1,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'action': 'Ext_Open_ResourceDetail'}",
+      "passed": true,
+      "actual": {
+        "name": "NewRelated_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedChoices",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewRelated_0",
+        "object_id": 92302,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 384,
+        "y": 780,
+        "width": 296,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 387,
+        "independent_top": 815,
+        "independent_right": 683,
+        "independent_bottom": 903,
+        "independent_clip_left": 387,
+        "independent_clip_top": 815,
+        "independent_clip_right": 678,
+        "independent_clip_bottom": 1198,
+        "painted_width": 296,
+        "painted_height": 88,
+        "action": "Ext_Open_ResourceDetail",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      }
+    },
+    {
+      "name": "physical Slate navigation {'action': 'Ext_Open_ResourceDetail'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination ResourceDetail",
+      "passed": true,
+      "actual": "ResourceDetail"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "actual clicked destination ResourceDetail",
+      "passed": true,
+      "actual": "ResourceDetail"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "actual selected context ResourceDetail",
+      "passed": true,
+      "actual": "NODE_STONE:1"
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '继续'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyResultAction_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultRoot_0",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultAction_0",
+          "object_id": 93575,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 24,
+          "y": 461,
+          "width": 672,
+          "height": 97,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 27,
+          "independent_top": 496,
+          "independent_right": 699,
+          "independent_bottom": 593,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 672,
+          "painted_height": 97,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "继续"
+        }
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '继续'}",
+      "passed": true,
+      "actual": [
+        {
+          "name": "JourneyResultAction_0",
+          "visible": true,
+          "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultRoot_0",
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultAction_0",
+          "object_id": 93575,
+          "keyboard_focused": false,
+          "clipping": "Inherit",
+          "in_confirmation": false,
+          "x": 24,
+          "y": 461,
+          "width": 672,
+          "height": 97,
+          "geometry_arranged": true,
+          "paint_expectation": "expected",
+          "culling_proof_ancestor": "",
+          "independent_left": 27,
+          "independent_top": 496,
+          "independent_right": 699,
+          "independent_bottom": 593,
+          "independent_clip_left": 3,
+          "independent_clip_top": 35,
+          "independent_clip_right": 723,
+          "independent_clip_bottom": 1315,
+          "painted_width": 672,
+          "painted_height": 97,
+          "widget_class": "/Script/UMG.Button",
+          "enabled": true,
+          "label": "继续"
+        }
+      ]
+    },
+    {
+      "name": "navigation target expected painted {'label': '继续'}",
+      "passed": true,
+      "actual": {
+        "name": "JourneyResultAction_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultRoot_0",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultAction_0",
+        "object_id": 93575,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 24,
+        "y": 461,
+        "width": 672,
+        "height": 97,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 27,
+        "independent_top": 496,
+        "independent_right": 699,
+        "independent_bottom": 593,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 672,
+        "painted_height": 97,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "继续"
+      }
+    },
+    {
+      "name": "physical Slate navigation {'label': '继续'}",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual clicked destination ResourceDetail",
+      "passed": true,
+      "actual": "ResourceDetail"
+    },
+    {
+      "name": "actual navigation exact9:16",
+      "passed": true,
+      "actual": [
+        720,
+        1280
+      ]
+    },
+    {
+      "name": "one actual enabled UI subject {'label': '确认继续'}",
+      "passed": false,
+      "actual": []
+    }
+  ],
+  "captures": [
+    "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\functional-journey-pie-03\\actual-start-launch.png"
+  ],
+  "finished": false,
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "target_platform": "mobile_live_interaction",
+  "device_platform_acceptance": false,
+  "engine_pid": 39172,
+  "started_at": "2026-10-24T10:41:40.900979+00:00",
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "visual_approval": "pending_user",
+  "edges": [
+    {
+      "from_page": "HUD",
+      "subject": {
+        "name": "Rebuild_Hud_ToggleHUDMenu",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+        "object_id": 82304,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 544,
+        "y": 1154,
+        "width": 112,
+        "height": 118,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 547,
+        "independent_top": 1189,
+        "independent_right": 659,
+        "independent_bottom": 1307,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 112,
+        "painted_height": 118,
+        "action": "ToggleHUDMenu",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "HUD",
+      "actual_selected_context": null,
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "HUD",
+      "subject": {
+        "name": "Rebuild_Hud_OpenActivities",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenActivities",
+        "object_id": 82364,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 212,
+        "y": 954,
+        "width": 283,
+        "height": 96,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 484,
+        "independent_top": 67,
+        "independent_right": 692,
+        "independent_bottom": 163,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 283,
+        "painted_height": 96,
+        "action": "OpenActivities",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "活动",
+        "label_desired_width": 55,
+        "label_width": 259,
+        "label_auto_wrap": true
+      },
+      "to_page": "Activities",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "Activities",
+      "subject": {
+        "name": "NewFeatureRelatedToggle",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedToggle",
+        "object_id": 81397,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 496,
+        "y": 1192,
+        "width": 200,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 499,
+        "independent_top": 1227,
+        "independent_right": 699,
+        "independent_bottom": 1315,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 200,
+        "painted_height": 88,
+        "action": "Ext_ToggleRelated",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "Activities",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "Activities",
+      "subject": {
+        "name": "NewRelated_2",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRelatedChoices",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewRelated_2",
+        "object_id": 81375,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 384,
+        "y": 963,
+        "width": 296,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 387,
+        "independent_top": 998,
+        "independent_right": 683,
+        "independent_bottom": 1086,
+        "independent_clip_left": 387,
+        "independent_clip_top": 815,
+        "independent_clip_right": 678,
+        "independent_clip_bottom": 1198,
+        "painted_width": 296,
+        "painted_height": 88,
+        "action": "Ext_Open_LaunchEvent",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "LaunchEvent",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "LaunchEvent",
+      "subject": {
+        "name": "RebuildActivityIntentButton_21",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_28",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_21",
+        "object_id": 78578,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 44,
+        "y": 1064,
+        "width": 632,
+        "height": 92,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 47,
+        "independent_top": 1099,
+        "independent_right": 679,
+        "independent_bottom": 1191,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 632,
+        "painted_height": 92,
+        "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+        "enabled": true,
+        "label": "开启活动",
+        "intent_action": "start-launch",
+        "intent_entry": "None",
+        "intent_cycle": "None",
+        "intent_confirmed": false
+      },
+      "to_page": "LaunchEvent",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "LaunchEvent",
+      "subject": {
+        "name": "RebuildActivityIntentButton_33",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.VerticalBox_42",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.RebuildLaunchActivityWidget_0.WidgetTree.RebuildActivityIntentButton_33",
+        "object_id": 78327,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 44,
+        "y": 1064,
+        "width": 632,
+        "height": 92,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 47,
+        "independent_top": 1099,
+        "independent_right": 679,
+        "independent_bottom": 1191,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 632,
+        "painted_height": 92,
+        "widget_class": "/Script/BoundlessImmortality.RebuildActivityIntentButton",
+        "enabled": true,
+        "label": "再次确认开启活动",
+        "intent_action": "start-launch",
+        "intent_entry": "None",
+        "intent_cycle": "None",
+        "intent_confirmed": false
+      },
+      "to_page": "LaunchEvent",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "LaunchEvent",
+      "subject": {
+        "name": "NewFeatureBack",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1.WidgetTree.NewFeatureBack",
+        "object_id": 80666,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 608,
+        "y": 24,
+        "width": 88,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 611,
+        "independent_top": 59,
+        "independent_right": 699,
+        "independent_bottom": 147,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 88,
+        "painted_height": 88,
+        "action": "Ext_Back",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "返回"
+      },
+      "to_page": "Activities",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "Activities",
+      "subject": {
+        "name": "NewFeatureBack",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0.WidgetTree.NewFeatureBack",
+        "object_id": 81279,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 608,
+        "y": 24,
+        "width": 88,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 611,
+        "independent_top": 59,
+        "independent_right": 699,
+        "independent_bottom": 147,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 88,
+        "painted_height": 88,
+        "action": "Ext_Back",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": "",
+        "label": "返回"
+      },
+      "to_page": "HUD",
+      "actual_selected_context": null,
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "HUD",
+      "subject": {
+        "name": "Rebuild_Hud_ToggleHUDMenu",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_ToggleHUDMenu",
+        "object_id": 82304,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 544,
+        "y": 1154,
+        "width": 112,
+        "height": 118,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 547,
+        "independent_top": 1189,
+        "independent_right": 659,
+        "independent_bottom": 1307,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 112,
+        "painted_height": 118,
+        "action": "ToggleHUDMenu",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "HUD",
+      "actual_selected_context": null,
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "HUD",
+      "subject": {
+        "name": "Rebuild_Hud_OpenExtensions",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_HudRuntimeActionsV1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.WBP_NewUIFrontend_C_0.WidgetTree_0.Rebuild_Hud_OpenExtensions",
+        "object_id": 82350,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 212,
+        "y": 854,
+        "width": 283,
+        "height": 96,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 484,
+        "independent_top": 267,
+        "independent_right": 692,
+        "independent_bottom": 363,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 283,
+        "painted_height": 96,
+        "action": "OpenExtensions",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "Extensions",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "Extensions",
+      "subject": {
+        "name": "JourneyHubOpenResources_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubResourcesCard_0",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyHubPageWidget_0.WidgetTree.JourneyHubOpenResources_0",
+        "object_id": 92254,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 48,
+        "y": 434,
+        "width": 524,
+        "height": 97,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 51,
+        "independent_top": 469,
+        "independent_right": 575,
+        "independent_bottom": 566,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 524,
+        "painted_height": 97,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "进入资源地图"
+      },
+      "to_page": "ResourceContest",
+      "actual_selected_context": "",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "ResourceContest",
+      "subject": {
+        "name": "JourneyPinHitButton",
+        "visible": true,
+        "parent_object": "",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceMapPageWidget_0.WidgetTree.InkJourneyMapPinButton_36.WidgetTree.JourneyPinHitButton",
+        "object_id": 92726,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 403.75,
+        "y": 253,
+        "width": 130,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 406.75,
+        "independent_top": 288,
+        "independent_right": 536.75,
+        "independent_bottom": 376,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 130,
+        "painted_height": 88,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "灵石矿"
+      },
+      "to_page": "ResourceContest",
+      "actual_selected_context": "NODE_STONE:1",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "ResourceContest",
+      "subject": {
+        "name": "NewFeatureRelatedToggle",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRoot_r1",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedToggle",
+        "object_id": 92288,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 496,
+        "y": 1192,
+        "width": 200,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 499,
+        "independent_top": 1227,
+        "independent_right": 699,
+        "independent_bottom": 1315,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 200,
+        "painted_height": 88,
+        "action": "Ext_ToggleRelated",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "ResourceContest",
+      "actual_selected_context": "NODE_STONE:1",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "ResourceContest",
+      "subject": {
+        "name": "NewRelated_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedChoices",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewRelated_0",
+        "object_id": 92302,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 384,
+        "y": 780,
+        "width": 296,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 387,
+        "independent_top": 815,
+        "independent_right": 683,
+        "independent_bottom": 903,
+        "independent_clip_left": 387,
+        "independent_clip_top": 815,
+        "independent_clip_right": 678,
+        "independent_clip_bottom": 1198,
+        "painted_width": 296,
+        "painted_height": 88,
+        "action": "Ext_Open_ResourceDetail",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "ResourceDetail",
+      "actual_selected_context": "NODE_STONE:1",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "ResourceContest",
+      "subject": {
+        "name": "NewRelated_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewFeatureRelatedChoices",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3.WidgetTree.NewRelated_0",
+        "object_id": 92302,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "z_order": 5,
+        "in_confirmation": false,
+        "x": 384,
+        "y": 780,
+        "width": 296,
+        "height": 88,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 387,
+        "independent_top": 815,
+        "independent_right": 683,
+        "independent_bottom": 903,
+        "independent_clip_left": 387,
+        "independent_clip_top": 815,
+        "independent_clip_right": 678,
+        "independent_clip_bottom": 1198,
+        "painted_width": 296,
+        "painted_height": 88,
+        "action": "Ext_Open_ResourceDetail",
+        "enabled": true,
+        "descendant_text_count": 1,
+        "resource": ""
+      },
+      "to_page": "ResourceDetail",
+      "actual_selected_context": "NODE_STONE:1",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    },
+    {
+      "from_page": "ResourceDetail",
+      "subject": {
+        "name": "JourneyResultAction_0",
+        "visible": true,
+        "parent_object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultRoot_0",
+        "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkJourneyResourceDetailPageWidget_0.WidgetTree.JourneyResultAction_0",
+        "object_id": 93575,
+        "keyboard_focused": false,
+        "clipping": "Inherit",
+        "in_confirmation": false,
+        "x": 24,
+        "y": 461,
+        "width": 672,
+        "height": 97,
+        "geometry_arranged": true,
+        "paint_expectation": "expected",
+        "culling_proof_ancestor": "",
+        "independent_left": 27,
+        "independent_top": 496,
+        "independent_right": 699,
+        "independent_bottom": 593,
+        "independent_clip_left": 3,
+        "independent_clip_top": 35,
+        "independent_clip_right": 723,
+        "independent_clip_bottom": 1315,
+        "painted_width": 672,
+        "painted_height": 97,
+        "widget_class": "/Script/UMG.Button",
+        "enabled": true,
+        "label": "继续"
+      },
+      "to_page": "ResourceDetail",
+      "actual_selected_context": "NODE_STONE:1",
+      "view_navigation_only": false,
+      "business_result_trigger_proved": false
+    }
+  ],
+  "continues_actual_ui_entry03": true,
+  "authority_provider_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+  "passed": false,
+  "startup_probe": {
+    "worlds": [
+      "/Game/Isometric_World/Sky_Temple/Maps/UEDPIE_0_Level_Sky_Temple_Demo_01.Level_Sky_Temple_Demo_01"
+    ],
+    "utc": "2026-10-24T10:41:53.016229+00:00"
+  },
+  "actual_service_enabled": true,
+  "current_step": "reveal {'label': '确认继续'}",
+  "actual_startup_page": "Main",
+  "layout_generation_waits": [
+    {
+      "step": 3,
+      "key": "entry-reveal-3",
+      "snapshot": "pre-layout-generation-3-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 4,
+      "key": "entry-hit-4",
+      "snapshot": "pre-layout-generation-4-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 5,
+      "key": "entry-result-5",
+      "snapshot": "pre-layout-generation-5-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 6,
+      "key": "entry-reveal-6",
+      "snapshot": "pre-layout-generation-6-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 7,
+      "key": "entry-hit-7",
+      "snapshot": "pre-layout-generation-7-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 8,
+      "key": "entry-result-8",
+      "snapshot": "pre-layout-generation-8-1.json",
+      "fingerprint": "e8815ea7e3dff5af36b6e063e39eab93ba0e547c9e64b8e27725c0335eae9970",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 9,
+      "key": "entry-reveal-9",
+      "snapshot": "pre-layout-generation-9-1.json",
+      "fingerprint": "1aacee296740334e6a0c052bea97089aa440e6de94dab8e509900fe094a82a38",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 10,
+      "key": "entry-hit-10",
+      "snapshot": "pre-layout-generation-10-1.json",
+      "fingerprint": "1aacee296740334e6a0c052bea97089aa440e6de94dab8e509900fe094a82a38",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 11,
+      "key": "entry-result-11",
+      "snapshot": "pre-layout-generation-11-1.json",
+      "fingerprint": "ac47946736ea07323670fed61cc142b8189023777168df2b099430a513d33e34",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 12,
+      "key": "entry-reveal-12",
+      "snapshot": "pre-layout-generation-12-1.json",
+      "fingerprint": "ac47946736ea07323670fed61cc142b8189023777168df2b099430a513d33e34",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 13,
+      "key": "entry-hit-13",
+      "snapshot": "pre-layout-generation-13-1.json",
+      "fingerprint": "ac47946736ea07323670fed61cc142b8189023777168df2b099430a513d33e34",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 14,
+      "key": "entry-result-14",
+      "snapshot": "pre-layout-generation-14-1.json",
+      "fingerprint": "d5712e739c3441ad1666b561c58002611f494ee8e1284ab914a8dc121d7b389c",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 14,
+      "key": "entry-result-14",
+      "snapshot": "pre-layout-generation-14-2.json",
+      "fingerprint": "f254f42fc648b44d1f4bed6e705a2d3dde6ce5768b951207baecf248db57d908",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 15,
+      "key": "entry-reveal-15",
+      "snapshot": "pre-layout-generation-15-1.json",
+      "fingerprint": "f254f42fc648b44d1f4bed6e705a2d3dde6ce5768b951207baecf248db57d908",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 16,
+      "key": "entry-hit-16",
+      "snapshot": "pre-layout-generation-16-1.json",
+      "fingerprint": "f254f42fc648b44d1f4bed6e705a2d3dde6ce5768b951207baecf248db57d908",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 17,
+      "key": "entry-result-17",
+      "snapshot": "pre-layout-generation-17-1.json",
+      "fingerprint": "debb14ba6fb2d6db7d603963e9c8a280595eacf7fd6b7280a6000dca6063ff48",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 18,
+      "key": "entry-reveal-18",
+      "snapshot": "pre-layout-generation-18-1.json",
+      "fingerprint": "debb14ba6fb2d6db7d603963e9c8a280595eacf7fd6b7280a6000dca6063ff48",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 19,
+      "key": "entry-hit-19",
+      "snapshot": "pre-layout-generation-19-1.json",
+      "fingerprint": "debb14ba6fb2d6db7d603963e9c8a280595eacf7fd6b7280a6000dca6063ff48",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 20,
+      "key": "entry-result-20",
+      "snapshot": "pre-layout-generation-20-1.json",
+      "fingerprint": "1334885d9c219602ef9c29e8215c57426cb66b18a6a061542678fc4f1dce567a",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 22,
+      "key": "capture-22",
+      "snapshot": "pre-layout-generation-22-1.json",
+      "fingerprint": "1334885d9c219602ef9c29e8215c57426cb66b18a6a061542678fc4f1dce567a",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 23,
+      "key": "entry-reveal-23",
+      "snapshot": "pre-layout-generation-23-1.json",
+      "fingerprint": "b9a51b4ef7bd6f92c7f76af16fe42c30399b2e92d13fe7d34ec1ba18959f8f1d",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 24,
+      "key": "entry-hit-24",
+      "snapshot": "pre-layout-generation-24-1.json",
+      "fingerprint": "b9a51b4ef7bd6f92c7f76af16fe42c30399b2e92d13fe7d34ec1ba18959f8f1d",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 24,
+      "key": "entry-hit-24",
+      "snapshot": "pre-layout-generation-24-2.json",
+      "fingerprint": "dc5e02662e446787e94ce72523b002a3a47c5bff1196e2d4d4abbfedc344f8e2",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 25,
+      "key": "entry-result-25",
+      "snapshot": "pre-layout-generation-25-1.json",
+      "fingerprint": "f16e800dbec6b3dd12e2920a5c1fedcf97dfad2eebebfef16a41bdd91b0da98a",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 26,
+      "key": "entry-reveal-26",
+      "snapshot": "pre-layout-generation-26-1.json",
+      "fingerprint": "167becf49987e1c0987b0f4442ebcc77e99bc4763df0432385e305a652f2feb6",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 27,
+      "key": "entry-hit-27",
+      "snapshot": "pre-layout-generation-27-1.json",
+      "fingerprint": "167becf49987e1c0987b0f4442ebcc77e99bc4763df0432385e305a652f2feb6",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 28,
+      "key": "entry-result-28",
+      "snapshot": "pre-layout-generation-28-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 29,
+      "key": "entry-reveal-29",
+      "snapshot": "pre-layout-generation-29-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 30,
+      "key": "entry-hit-30",
+      "snapshot": "pre-layout-generation-30-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 31,
+      "key": "entry-result-31",
+      "snapshot": "pre-layout-generation-31-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 32,
+      "key": "entry-reveal-32",
+      "snapshot": "pre-layout-generation-32-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 33,
+      "key": "entry-hit-33",
+      "snapshot": "pre-layout-generation-33-1.json",
+      "fingerprint": "139e2e8d383117dfa543803d83a59236af68ba8a3e030f0c6b16e5d14494aa0b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 34,
+      "key": "entry-result-34",
+      "snapshot": "pre-layout-generation-34-1.json",
+      "fingerprint": "ebde3b29763ce97a4bbd903edbfe20286214ccaeacab2f29b2b1b1b4c5ba5a51",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 35,
+      "key": "entry-reveal-35",
+      "snapshot": "pre-layout-generation-35-1.json",
+      "fingerprint": "ebde3b29763ce97a4bbd903edbfe20286214ccaeacab2f29b2b1b1b4c5ba5a51",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 36,
+      "key": "entry-hit-36",
+      "snapshot": "pre-layout-generation-36-1.json",
+      "fingerprint": "ebde3b29763ce97a4bbd903edbfe20286214ccaeacab2f29b2b1b1b4c5ba5a51",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 37,
+      "key": "entry-result-37",
+      "snapshot": "pre-layout-generation-37-1.json",
+      "fingerprint": "008ae01849d09677a329b53da60561d40d0760008f3c45816a467000bd3ac0b3",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 39,
+      "key": "entry-reveal-39",
+      "snapshot": "pre-layout-generation-39-1.json",
+      "fingerprint": "1196351f05c2845325c55a1f0e80d8cbfa7993c98dd5c80cb2fa3f1dc6c3ccf6",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 40,
+      "key": "entry-hit-40",
+      "snapshot": "pre-layout-generation-40-1.json",
+      "fingerprint": "1196351f05c2845325c55a1f0e80d8cbfa7993c98dd5c80cb2fa3f1dc6c3ccf6",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 41,
+      "key": "entry-result-41",
+      "snapshot": "pre-layout-generation-41-1.json",
+      "fingerprint": "a8a5fa7a367cc5754fe8f7a5af3caaf9d82406e60deef07bc66269d6cc263ffd",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 42,
+      "key": "entry-reveal-42",
+      "snapshot": "pre-layout-generation-42-1.json",
+      "fingerprint": "1bd666d0271ffdde8de739b8b205076c462189bd99fe8b744cd30868e89851b9",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 43,
+      "key": "entry-hit-43",
+      "snapshot": "pre-layout-generation-43-1.json",
+      "fingerprint": "1bd666d0271ffdde8de739b8b205076c462189bd99fe8b744cd30868e89851b9",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 44,
+      "key": "entry-result-44",
+      "snapshot": "pre-layout-generation-44-1.json",
+      "fingerprint": "2fe84e59f43fca6d3f978b368759957835d7ca606d1553e99b9bbfe62e53b85b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 45,
+      "key": "entry-reveal-45",
+      "snapshot": "pre-layout-generation-45-1.json",
+      "fingerprint": "2fe84e59f43fca6d3f978b368759957835d7ca606d1553e99b9bbfe62e53b85b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 46,
+      "key": "entry-hit-46",
+      "snapshot": "pre-layout-generation-46-1.json",
+      "fingerprint": "2fe84e59f43fca6d3f978b368759957835d7ca606d1553e99b9bbfe62e53b85b",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 46,
+      "key": "entry-hit-46",
+      "snapshot": "pre-layout-generation-46-2.json",
+      "fingerprint": "6a0b12b4515cfb7e5ce4abb43c77c780f59cc3d8717409478a49681f37580423",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 47,
+      "key": "entry-result-47",
+      "snapshot": "pre-layout-generation-47-1.json",
+      "fingerprint": "36a2cd424b3dac99552b6e48a4b13e37cba767845960c94e016a8f23355a50cb",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 48,
+      "key": "entry-result-48",
+      "snapshot": "pre-layout-generation-48-1.json",
+      "fingerprint": "c38b4cf62096732f2711aaf4e6bda9692109dff84ae0f3f0376645ef2379b701",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 49,
+      "key": "entry-reveal-49",
+      "snapshot": "pre-layout-generation-49-1.json",
+      "fingerprint": "c38b4cf62096732f2711aaf4e6bda9692109dff84ae0f3f0376645ef2379b701",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 50,
+      "key": "entry-hit-50",
+      "snapshot": "pre-layout-generation-50-1.json",
+      "fingerprint": "c38b4cf62096732f2711aaf4e6bda9692109dff84ae0f3f0376645ef2379b701",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 51,
+      "key": "entry-result-51",
+      "snapshot": "pre-layout-generation-51-1.json",
+      "fingerprint": "8079300500f071dbf57ad64cd6b09d3de1c319026b205e3b07bd1df426d264ab",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    },
+    {
+      "step": 52,
+      "key": "entry-reveal-52",
+      "snapshot": "pre-layout-generation-52-1.json",
+      "fingerprint": "8079300500f071dbf57ad64cd6b09d3de1c319026b205e3b07bd1df426d264ab",
+      "reason": "new widget generation has not yet completed a frame; no geometry-value filter"
+    }
+  ],
+  "navigation_alias_readbacks": [
+    {
+      "spec": {
+        "action": "ToggleHUDMenu"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "ToggleHUDMenu"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "OpenActivities"
+      },
+      "raw_count": 2,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "OpenActivities"
+      },
+      "raw_count": 2,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_ToggleRelated"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_ToggleRelated"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_Open_LaunchEvent"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_Open_LaunchEvent"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "开启活动"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "开启活动"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "再次确认开启活动"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "再次确认开启活动"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "返回"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "返回"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "返回"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "返回"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "ToggleHUDMenu"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "ToggleHUDMenu"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "OpenExtensions"
+      },
+      "raw_count": 2,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "OpenExtensions"
+      },
+      "raw_count": 2,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "进入资源地图"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "进入资源地图"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "name": "JourneyPinHitButton",
+        "label": "灵石矿"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "name": "JourneyPinHitButton",
+        "label": "灵石矿"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_ToggleRelated"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_ToggleRelated"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_Open_ResourceDetail"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "action": "Ext_Open_ResourceDetail"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "继续"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "继续"
+      },
+      "raw_count": 1,
+      "unique_object_count": 1
+    },
+    {
+      "spec": {
+        "label": "确认继续"
+      },
+      "raw_count": 0,
+      "unique_object_count": 0
+    }
+  ],
+  "context_inspection": [
+    {
+      "target": "HUD",
+      "active_host": null,
+      "retired_and_current_candidates": []
+    },
+    {
+      "target": "Activities",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "Activities",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "LaunchEvent",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "LaunchEvent",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "LaunchEvent",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_1",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "Activities",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_0",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "HUD",
+      "active_host": null,
+      "retired_and_current_candidates": []
+    },
+    {
+      "target": "HUD",
+      "active_host": null,
+      "retired_and_current_candidates": []
+    },
+    {
+      "target": "Extensions",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_2",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "ResourceContest",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+          "selected": ""
+        }
+      ]
+    },
+    {
+      "target": "ResourceContest",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+          "selected": "NODE_STONE:1"
+        }
+      ]
+    },
+    {
+      "target": "ResourceContest",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_3",
+          "selected": "NODE_STONE:1"
+        }
+      ]
+    },
+    {
+      "target": "ResourceDetail",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+          "selected": "NODE_STONE:1"
+        }
+      ]
+    },
+    {
+      "target": "ResourceDetail",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+          "selected": "NODE_STONE:1"
+        }
+      ]
+    },
+    {
+      "target": "ResourceDetail",
+      "active_host": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+      "retired_and_current_candidates": [
+        {
+          "object": "/Engine/Transient.UnrealEdEngine_0:GameInstance_0.InkRebuildFeatureHost_4",
+          "selected": "NODE_STONE:1"
+        }
+      ]
+    }
+  ],
+  "actual_service_capture_contexts": [
+    {
+      "tag": "actual-start-launch",
+      "connected": true,
+      "busy": false,
+      "snapshot_present": true,
+      "version": 7,
+      "identity": {
+        "active": true,
+        "generation": 2,
+        "role": "anchor",
+        "room": "functional-room",
+        "user": "functional-anchor"
+      },
+      "declared_isolated_fixture": true
+    }
+  ],
+  "nonfinite_metrics": {
+    "actual-start-launch": []
+  },
+  "actual_resource_subject": {
+    "entry_count": 1,
+    "id": "NODE_STONE:1",
+    "index": 1,
+    "interval_seconds": 600,
+    "item_id": "CUR_STONE",
+    "item_name": "灵石",
+    "lease_max_seconds": 1800,
+    "name": "灵石矿",
+    "node_id": "NODE_STONE",
+    "open": true,
+    "owners": [],
+    "qi_additive": 0,
+    "quantity": 20,
+    "x": 0.75,
+    "y": 0.22
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 345, in tick\n    REPORT['current_step']=name;result=action()\n                                       ^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 208, in <lambda>\n    STEPS.extend([('reveal '+str(spec),lambda s=spec:reveal(s),.25),('hit '+str(spec),lambda s=spec:hit(s),.55),('destination '+target,lambda t=target,c=context:observed(t,c),.1)])\n                                                     ^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 185, in reveal\n    b=pick(spec)\n      ^^^^^^^^^^\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 180, in pick\n    check('one actual enabled UI subject '+str(spec),len(matches)==1,matches)\n  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 30, in check\n    if not passed: raise AssertionError(name+': '+str(actual))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: one actual enabled UI subject {'label': '确认继续'}: []\n",
+  "finish_called_at": "2026-10-24T10:42:19.759627+00:00",
+  "finish_call_stack": [
+    "  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 350, in tick\n    REPORT['error']=traceback.format_exc();save();finish()\n",
+    "  File \"D:/demo/BoundlessImmortality/specs/boundless-ink-ui/rebuild-2026-10-24/logic-integration/verify_functional_journey_pie_03.py\", line 306, in finish\n    REPORT['finish_called_at']=datetime.now(timezone.utc).isoformat();REPORT['finish_call_stack']=traceback.format_stack();save()\n"
+  ],
+  "dirty_packages_after_pie": [],
+  "finished_at": "2026-10-24T10:42:19.912419+00:00"
+}

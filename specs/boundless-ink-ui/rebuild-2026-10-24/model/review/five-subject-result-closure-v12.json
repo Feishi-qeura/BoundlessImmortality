@@ -1,0 +1,65 @@
+{
+  "scope": "Do not remove these five from machine acceptance by view reachability alone",
+  "rows": [
+    {
+      "page": "RegionDetail",
+      "view_entry": "actual-ui-entry-03/report.json edge21 from WorldCultivation; actual_selected_context=''",
+      "gap_type": "existing navigation and backend; genuine selection/context test missing",
+      "source_chain": "MapPin.EntryId -> HandlePinSelected/OnEntrySelected -> Host.SelectedEntry -> Open_RegionDetail Navigate(Context) -> SetContext -> JourneyEntry(worlds,id)",
+      "backend": "Journey.snapshot.worlds contains real id/open/x/y; World.start accepts actual region_id",
+      "minimum": "Click actual open world pin, then real related menu detail; assert current owned host ID and displayed region match authority row, Back; combine real WorldTravel and receipt/round.region_id if eligible",
+      "production_change_required": "none demonstrated for selection navigation; fix only if actual test fails",
+      "close_standard": "actual nonempty authority world ID preserved across real click/detail/Back; no fabricated ID",
+      "view_entry_proven": true,
+      "business_subject_result_proven": false
+    },
+    {
+      "page": "ResourceDetail",
+      "view_entry": "actual-ui-entry-03/report.json edge29 from ResourceContest; actual_selected_context=''",
+      "gap_type": "existing navigation and backend; genuine resource/node selection test missing",
+      "source_chain": "Actual grouped resource pin EntryId -> SelectedEntry -> Navigate ResourceDetail(Context) -> JourneyEntry(resources,id) -> row.node_id -> adapter QueueRace",
+      "backend": "Journey.snapshot.resources provides real atlas id/node_id; native QueueRace and CancelRaceQueue exist",
+      "minimum": "Select real resource pin, assert exact resource ID/node_id/current detail, Back; eligible real QueueRace->Lobby->Cancel with same queue and receipts",
+      "production_change_required": "none demonstrated for selection navigation",
+      "close_standard": "actual resource context correct; applicable queue/cancel or exact real denial; not empty menu navigation",
+      "view_entry_proven": true,
+      "business_subject_result_proven": false
+    },
+    {
+      "page": "EventSettlement",
+      "view_entry": "actual-ui-entry-03/report.json edge24 from WorldCultivation; actual_selected_context=''",
+      "gap_type": "native provider exists; actual finished-result sample/association test missing",
+      "source_chain": "World.start writes world + last_world; World.advance at native boundary settles; authority.snapshot.round reads actual last_world; Host reads round/id/facts",
+      "backend": "Native world has Preparing/Running/Settling/Completed/Interrupted; native grant/receipt path exists",
+      "minimum": "Reuse actual result if available, else real supported WorldTravel with declared isolated prerequisites; obtain native completed/interrupted result, open via real parent menu/action, verify exact round ID/region/status/result/receipt and Back",
+      "production_change_required": "no missing route/provider demonstrated; truthful not-yet-settled state is legal but does not close result test",
+      "close_standard": "actual native result and UI identity association; declared time/state fixtures do not become natural-earned whole-flow proof",
+      "view_entry_proven": true,
+      "business_subject_result_proven": false
+    },
+    {
+      "page": "RaceSettlement",
+      "view_entry": "actual-ui-entry-03/report.json edge49 from RaceLobby; actual_selected_context=''",
+      "gap_type": "native provider exists; real multi-actor state/result sample test missing",
+      "source_chain": "Native queue/match records last_race; race advance/settle produces Settled; authority.snapshot.race -> Host result page",
+      "backend": "Races.settle derives lease/rewards from existing rules; no new rewards/prices required",
+      "minimum": "Declared isolated native race/eligibility setup and applicable real UI action after provider fix; obtain actual Settled race/audit, open result/Back and verify race/team/result IDs. Reuse existing native state if present",
+      "production_change_required": "active provider repaired separately; no missing settlement route demonstrated",
+      "close_standard": "actual race result/provider + UI association, not an arbitrary related-menu jump or hand-filled score/reward",
+      "view_entry_proven": true,
+      "business_subject_result_proven": false
+    },
+    {
+      "page": "ResourceRewards",
+      "view_entry": "actual-ui-entry-03/report.json edge41 from ResourceContest; actual_selected_context=''",
+      "gap_type": "existing generic authoritative receipt provider; missing page projection, not external unsupported backend",
+      "source_chain": "Host currently expects absent resource_rewards.rows; authority already exports reward_receipts.entries; native race/lease grants record source_id/owner/receipt_id/items",
+      "backend": "RewardReceipts.record/snapshot; race source associated with actual race ID and lease source with actual lease ID; fixtures/refunds excluded by native source policy",
+      "minimum": "Derive read-only rows from confirmed relevant race/lease receipts and actual selected resource/node/source context; flatten items to item_id/name/quantity while retaining receipt/source identity, or emit equivalent truthful readonly alias. Exclude unrelated purchase/craft/fixtures; never infer grants from wallet deltas",
+      "production_change_required": "bounded frontend/provider projection wiring required to show real resource receipts; no grant rule or claim API creation",
+      "close_standard": "current real source association + actual native grant receipt display; valid empty/unrelated/unknown cases stay empty/unknown; no arbitrary rewards/claim button",
+      "view_entry_proven": true,
+      "business_subject_result_proven": false
+    }
+  ]
+}

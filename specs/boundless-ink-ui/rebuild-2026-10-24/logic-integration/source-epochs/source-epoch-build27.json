@@ -1,0 +1,365 @@
+{
+  "checked_at": "2026-10-24T18:43:31.189860+08:00",
+  "scope": "static source/backup/hash/Python parsing only",
+  "files": [
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingCompositeViews.h",
+      "sha256": "087d5b64ffc496b19abcb1370e553d5bb7622ccecbff7b9d85dfdb50636413ec"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/RankWuling/InkRankWulingCompositeViews.cpp",
+      "sha256": "3655c6940522767a66ac0eed0d4a8a91e5ca309abb85aec4389becf061ff04ea"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivitiesBatch2Panels.h",
+      "sha256": "64f148bf8285d247ba992b894732067c6c51e7f353d43c0de987b4c788bfd2de"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkActivitiesBatch2Panels.cpp",
+      "sha256": "125ce324ada3e73ab4dfb22056778a98b8fa70d9a3f29c6cb64e98954fe7a2b4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.h",
+      "sha256": "b87214c78bb299c0bdc8a546a79c76e2d478d58401565dd27b4dca3df89a94c7"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendWidget.cpp",
+      "sha256": "d1226fb1062a224fec59302cb57c21a40d9084c82809b08e1e1a54eca2f22eef"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.h",
+      "sha256": "ca4040475919fe8cc8e7720bfa32443282b6a6d62044ca0bad7b8617b14a7e58"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildTheme.cpp",
+      "sha256": "f0c8ee16664b1e1079bb9bcd10ce9eda9e01e82e8541b9675cf5e25f93ddc801"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.h",
+      "sha256": "d13e27be0f54b8f715cf5a146a1a7af96f77e831720c1d267b8fe6ce05f98e6f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMenuPageWidgets.cpp",
+      "sha256": "5f41855e2b5a52d9b56b0756b276442446dbd662eceb2a55658e1c03c6cae6b4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.h",
+      "sha256": "67ce0d53b67af5620c60afc32f7a134b675aa51d55f8a8a57efc20c229881086"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerVisibleEntryWidgets.cpp",
+      "sha256": "5529a11846f01d706e36948862f6b75448682584e5f688bdefad53fb17f6fb9e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.h",
+      "sha256": "590f1f3cb53de3f43cc284fa96342cc73dd8d3afcbad3874898558bf031cc8f3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFrontendWidget.cpp",
+      "sha256": "573097f57ffbac201d35104b12f93652305ee0405bab47f913cdff1430eb5215"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/NewUiMigrationExactFixup.h",
+      "sha256": "e5f2480b826e3c7306a5779cc0b759be94c8418640d35234df68cff6f7668680"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/NewUiMigrationExactFixup.cpp",
+      "sha256": "1b39c54ca81af1d3e2dbebf3d358b08edf717e92555634c7875462cf871df630"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkMenuDirector.cpp",
+      "sha256": "c670c03ad1be7223186cde390cbf9b93c790025eef9d041bb961d7e9dc7bb7ca"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkInventoryWidget.cpp",
+      "sha256": "93b1268d0bf879574fa748fb97a2ddff1a14f862fc65f07192246e7760b1e8e1"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkLeaderboardWidget.cpp",
+      "sha256": "2ae6166853f0cda1cc0b03cdb75b4a12fee5fbdb20f2a9268db8d0aa0906953f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.h",
+      "sha256": "977e9da48dc31a39fbac5f10312dc94e3b5e7cc2f72cadf6d76d559f8842985c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCharacterInventoryWidgets.cpp",
+      "sha256": "62b4dc029c8359e10f11948bd4946290d188fa0e1e18b9ade6c42c1473e55a70"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Public/InkFrontendEditorLibrary.h",
+      "sha256": "8c5e6f5874a9527314d867deebe6cb2f094368885f35dadd87b1ddeb30df6f65"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkFrontendEditorLibrary.cpp",
+      "sha256": "89e62c48388c0078a3da31695f0790fe74ee81910f5bd66e9961731cf55006ae"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveWeaponHUD.cpp",
+      "sha256": "2fec4f0c273799a37cf85e97a28bd4b70bde3fb3565d8b5cd811c9b028732ae0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildInventoryIdentityTests.cpp",
+      "sha256": "595d97ce15b3f514515de53da0d303ce3d92ffa20a618ab5fdaaf32c6447b900"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/ScopedKnownRenameWarning.h",
+      "sha256": "31e6569b9b3e4ab151b611b80af8e2d53037958e55ee16aa7f84a59e7302214a"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/ScopedKnownRenameWarning.cpp",
+      "sha256": "8c491bbec36783766d55027d195688feabddc6847a8dcc66d4f4e2f321e4109a"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkAnchorStatusWidget.cpp",
+      "sha256": "a9c786160c83acad6b317f5e87202a2f0fa948bbd0d7eb43a2ad18ddb34fa0da"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterCultivationWidget.cpp",
+      "sha256": "756f387083ce86e84d7c5c597ef47bb152667a9c11599e9a69d35ae872235b1d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkCharacterPanels.cpp",
+      "sha256": "2945be1300f789786d709b7da7a2fd47bc399ae900a32eb6fbc1d56a9636d756"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkDrawPanel.cpp",
+      "sha256": "94cc805cd04efec12e5b76ab97a47a0eded826afe35ef5b99e8246b21b96e778"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.cpp",
+      "sha256": "722c6522fe039ff336ded0e0cbe935679eae0b6568dfb266f6462eeddf92623e"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeatureGroupPanel.cpp",
+      "sha256": "5fcc507d0489386da632e2fbef315011d1fd66a921549ba2feaa5a51fe9d0045"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFeaturePanel.cpp",
+      "sha256": "c49e9c993a247b94694157b93ed0e75070c3ec5a6acd50c1482345a1b4acbaeb"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkFrontendExtensions.cpp",
+      "sha256": "2fbc19bd34d2130643090c50cbced21928196b068d5926a2e8564074fbef173c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkHomeArt.cpp",
+      "sha256": "e699cbe283f6a503546f62c9c9aa68b0809c8509e574e7c1c1e97b2352cbe78b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkNiagaraTitleWidget.cpp",
+      "sha256": "4ee6b0eee74bf8c6f3cfe51ba9e0b0a316c219fafd5526a2f2f0076488204f45"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkPresentationStyle.cpp",
+      "sha256": "1d1a4fbc830be8d2049a530d0bf86d68ab83de566add74ced3a8ed88e40f7b14"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkSignInChestWidget.cpp",
+      "sha256": "8bf8744996887b5d1f6cb09214644157ad8200f2a11ea8890dcd51f0783ba6f0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/Tests/InkNiagaraTitleTests.cpp",
+      "sha256": "727a094c1c3f143031afff36bc87c3779bfd423f223c85de11f0994af2d260a9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkJourneyMapPanel.cpp",
+      "sha256": "1b773ceb42de47e52823f5359b25881c68d1def1175dee9447ef9761f94bdcf8"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkRewardReceiptPanel.cpp",
+      "sha256": "cfd9d455ce0b428bf2e4191e091671799a7c3d3dfc5e7fffec25c7c67b6e3615"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiTheme.cpp",
+      "sha256": "4b30bd0c401b29901b991d25deb6eca5abc87b82380b599ec9baae1818ef81e1"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkWulingSectPanel.cpp",
+      "sha256": "79da80a424c24cdaa503ec39bcffdfb8305fa0c0b03d6f88b64383907330ece2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Activities/InkLaunchHudCountdownWidget.cpp",
+      "sha256": "578afcd5d174311048fac3c4108816ba151f64eb7e6d4cea62a61a3da13737b9"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/Journey/JourneyRolloutWidgets.cpp",
+      "sha256": "01a8aa2d66abd63851d88c40e64b736ec84474a8a34bf5603fa3c7af36805f66"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UiRollout20261024/LogicJourney/InkRolloutMaterialSlotWidget.cpp",
+      "sha256": "756915f00a9d1562d431e131412c8707052002aaa7016d4be7d7104dccc89943"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkCultivationEditorLibrary.cpp",
+      "sha256": "fe8e6a9da3736e275adbff245e6206322f1acff7ee71001b93a970488ad649ad"
+    },
+    {
+      "path": "Source/BoundlessImmortalityEditor/Private/InkUiStyleEditorLibrary.cpp",
+      "sha256": "fb14720e2535605dd3f2888bc0b9b38b4a43f0570e06f07346335b398e9260be"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveGMControlPanel.cpp",
+      "sha256": "866f216275ccb16352e218f91bd0b46dc2eba9bec32ba7488bf7bd402519f481"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveGMOverlay.cpp",
+      "sha256": "e843f05e11a0f1fdc7fe748cda103d0d8942ff61f9cdd841c7002bd8d7c4a223"
+    },
+    {
+      "path": "Source/BoundlessImmortality/LiveWeapons/LiveTitleEffectsComponent.cpp",
+      "sha256": "f9a01e32031330f987dce7ccb691f5174a91d180c46ca15283a69956f69145b2"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.cpp",
+      "sha256": "c5b7d1a40bcfe21e1c9ddc4d80a33595fafc3938cd322387a2a5a34a5d2b34d8"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UI/InkUiAssetPaths.h",
+      "sha256": "8fddf90110b2f07217956a238ca7eebe1c30929aff4ee9913d44f06282f31444"
+    },
+    {
+      "path": "Config/DefaultEngine.ini",
+      "sha256": "cf38e1a74a67dd705a5cfc97eb11560f1b98be49bea97825c1e6a9f080e3dff9"
+    },
+    {
+      "path": "Config/DefaultGame.ini",
+      "sha256": "17c719cb37b036717f49bd67e0193194d308ff7d77c0e856495e379e870c5ee0"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildCanonicalAndBusyTests.cpp",
+      "sha256": "e21c29a8def12a143baf787fbbff75e6a7283c2c70fb54a7e982c0b9cac08ebd"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.cpp",
+      "sha256": "ac7c56d019655b1ca6644cbdd72d69642f38a4a5bae23c84d4b8d6556b9c8140"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingExtendedPages.h",
+      "sha256": "1b1ae39ef9aee2431281037fe48016a2053d1ce0f96ae64f12df43f6105404b4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.cpp",
+      "sha256": "b43b532365800fef54e0b20c424584d6bccc32ca7d61575df83980f33b6c04fa"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPageBase.h",
+      "sha256": "9b46b84f08ae667cb8ef067dc11bfa4319aa83e5eaabd7a0a291c74078cc6566"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.cpp",
+      "sha256": "c0bfd37ff2737e16294df387e973806d0ab653bd058d8e3e2004c722caac176c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Rank/InkRankWulingPages.h",
+      "sha256": "47242cb7ff4dc17faa1079815836cfee1953ca0b4939380bfb8d5b8afd1904e6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildLeaderboard.cpp",
+      "sha256": "ef2a19e6e0a65619c850bb3dc193a699f950e7ea085594544254bdf85db68045"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "sha256": "192bfb98f3194030ebc597b64f1fac2a0d98b5e1fc454cb6c32899e38483e89a"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.h",
+      "sha256": "cf85856a392ee26144fbf47360934afdf11c929a9b5167e57a64e6d55f5c9e8a"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivitySecondaryWidgets.cpp",
+      "sha256": "a6960df14bc475a57c17a227684feeb43cf3b249afee8b1bcdea7f99109474a4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivitySecondaryWidgets.h",
+      "sha256": "9d3cfbf12a06732c0df2c6dba6159af9aa7630fdedd53fd7bb6f6576bc4d8ca3"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.cpp",
+      "sha256": "ed3931f639776a46bd523a4d3bfcb4621b8dba96fcd4bd12f4ffe314dd0d4ac6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildActivityWidgets.h",
+      "sha256": "96c53eb908a15242c92ec982cc3abea0aba2ea2142c2ada976d28758f02a24bc"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.cpp",
+      "sha256": "bc55313994e11f05063684c9057868e426435be6fa016194c0dae43bae9156c4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Activities/RebuildEconomyWidgets.h",
+      "sha256": "8432be8019faf706a603eb13530eab4dd2c3833217c9a5338ebbb328fd8c478c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.cpp",
+      "sha256": "3b952e99b7e2ae3d83fd355f25839be7f0f653de3d57a9d1dbd8e6461e46907d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerMethodsEquipmentAppearanceWidgets.h",
+      "sha256": "3948ac462ed549df7e9860e1b166cf86623c71b9748e05295be1453fbba0c3ed"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.cpp",
+      "sha256": "2556d05f2a294fa0148aa947d11153702a8513a120e9801aafc331c30289b4f8"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerCraftSourcesWidgets.h",
+      "sha256": "15aeea0fc79cf62e1160192dd8326069cb20f0578e8618f7a8e46fad835d8db4"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.cpp",
+      "sha256": "27779872a4a46ea5d95caa54d50edbfd017e268166b749145d390f725abc570f"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Player/InkPlayerBreakthroughTribulationWidgets.h",
+      "sha256": "a085e4e866795f5b7ed0048eb3f932a47e95d5645e7049d5b158880504cadc4d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.h",
+      "sha256": "0bd62f24ff65ec7eda8a22a4ad93f9ffbbe4e65b7248e3e6cf1c86d8729bb1d7"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureData.h",
+      "sha256": "4ea477fc2d39bef07dd6324448bb78dc8a75bedb2cadf7c8750f8a896a3524b6"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureHost.cpp",
+      "sha256": "ac21bdfd9db5d3a3a18e37c4d08272b7731f20997bd4c8b691399f6b36486657"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/InkExtensionWidget.h",
+      "sha256": "f27f16449d210e022fcb9995d62a6324884db8fe6e2bbe04d1c57702f42826aa"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeaturePlayer.cpp",
+      "sha256": "b2fe3b8cf7fef3707a146a98fadd1c63e268ff6db00e41600d16f904457dcc6d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureJourney.cpp",
+      "sha256": "eefbe0ec4d51e55c06a22cefc4b2740a2245fa3b0b695de715a41bbc1bb1348b"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureRank.cpp",
+      "sha256": "d968f1d6bd75dc1468c21c7ee083c9f3c95b11aa44b93f2c6a5eccf29a76e529"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureActivities.cpp",
+      "sha256": "521abe88b2f2b4fde715cc261aa150a8fde0a12be661a5ac8695654d4f60085c"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/InkRebuildFeatureGuild.cpp",
+      "sha256": "0e7b4239adb2743111a0ca6540b395832f9847ea0750b51af278a3f93dea114d"
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Tests/InkRebuildConfirmationTests.cpp",
+      "sha256": "afadd3ebc1f26de89b3f730dfe4c063025297667721b91fae23b1a961db78759"
+    },
+    {
+      "path": "Tools/CultivationService/authority.py",
+      "sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de"
+    }
+  ],
+  "errors": [],
+  "compiled": false,
+  "runtime_verified": false
+}

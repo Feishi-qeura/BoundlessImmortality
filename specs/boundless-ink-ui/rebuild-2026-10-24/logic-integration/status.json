@@ -1,12 +1,12 @@
 {
   "team": "logic-integration",
-  "updated_at": "2026-10-24T17:47:25.826233+08:00",
-  "phase": "actual_functional_journey_launch_race_provider_UI_running",
+  "updated_at": "2026-10-24T18:49:08.442497+08:00",
+  "phase": "confirmation_fix_nonunity_build28_running",
   "source_writer": "unique",
   "source_change_ledger": "../../orchestration/2026-10-24-ui-component-rollout/logic-integration/visible-source-integration/source-change-ledger.json",
   "source_epoch_files": 88,
-  "source_ledger_records": 225,
-  "source_compiled": true,
+  "source_ledger_records": 226,
+  "source_compiled": false,
   "latest_build": {
     "attempt": 26,
     "exit_code": 0,
@@ -16,12 +16,10 @@
   },
   "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
   "engine_lease": "../engine-lease.json",
-  "engine_lease_expires": "2026-10-24T18:32:33.7348276+08:00",
-  "own_engine_pids": [
-    39700
-  ],
+  "engine_lease_expires": "2026-10-24T19:32:33.7348276+08:00",
+  "own_engine_pids": [],
   "own_service_pids": [
-    35712
+    10000
   ],
   "runtime_verified": false,
   "core_runtime_verified": true,
@@ -87,7 +85,7 @@
     "Live platform integration and release acceptance",
     "Five contextual or earned-result trigger gaps listed explicitly"
   ],
-  "current_pie": "functional-journey-pie-01",
+  "current_pie": null,
   "avatar_https_regression": {
     "passed": true,
     "report": "service-pie-10/report.json",
@@ -178,5 +176,35 @@
     "existing_service_tests_passed": true,
     "cpp_unchanged": true,
     "source26_44render_evidence_retained": true
-  }
+  },
+  "functional01_failure": {
+    "product_failure": false,
+    "actual_raw_page": "HUD",
+    "actual_dimensions": [
+      720,
+      1280
+    ],
+    "reason": "Test assumed Main StartGame although actual default local-test startup had already reached HUD;02 inspects real startup branch",
+    "report": "functional-journey-pie-01/report.json"
+  },
+  "functional02_failure": {
+    "passed": false,
+    "finished": false,
+    "error": null,
+    "checks": 5,
+    "edges": 0,
+    "exit": "Log shows Editor window destruction/PIE teardown/QUIT_EDITOR18:11:11-15 before actions; no callback exception or functional result; closure origin not established",
+    "report": "functional-journey-pie-02/report.json"
+  },
+  "functional03_product_failure": {
+    "reason": "Repeated idle SetTravelFeedback(false) cleared open first confirmation for resource Detail; real second-confirmation caption disappeared",
+    "report": "functional-journey-pie-03/report.json",
+    "minimal_fix": "Three Journey components clear confirmation only on pending→idle completion; same-subject idle refresh preserves it; subject/identity changes still reset"
+  },
+  "build27": {
+    "exit_code": 6,
+    "reason": "Adaptive Unity regroup exposed existing anonymous helper/type collisions in seven source files; actual changed JourneyNewWidgets.cpp compiled individually",
+    "log": "build-27.log"
+  },
+  "build28_mode": "Explicit -DisableUnity; current89files/226records, compiler still running; default Unity failure retained, not claimed fixed"
 }

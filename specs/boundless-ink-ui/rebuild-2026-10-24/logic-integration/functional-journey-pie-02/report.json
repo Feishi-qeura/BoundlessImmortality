@@ -1,0 +1,44 @@
+{
+  "scope": "Actual portrait UI LaunchStart, exact selected resource detail/queue/cancel, actual matched race, truthful active/missing/inactive refusals and six real native common actions/settlement. Isolated declared actors/test clock, real rules unchanged.",
+  "checks": [
+    {
+      "name": "isolated Saved directory",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkDisplay",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual Chinese font F_InkBody",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "actual new default asset",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "begin actual default PIE",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "captures": [],
+  "finished": false,
+  "target_orientation": "portrait_only",
+  "target_aspect_ratio": "9:16",
+  "target_platform": "mobile_live_interaction",
+  "device_platform_acceptance": false,
+  "engine_pid": 28860,
+  "started_at": "2026-10-24T10:10:58.123316+00:00",
+  "source_epoch_sha256": "927a69fc1ba82d0794010a7bb62a2cb09435219188b9a7830d32fcb2d4ce36b1",
+  "visual_approval": "pending_user",
+  "edges": [],
+  "continues_actual_ui_entry03": true,
+  "authority_provider_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+  "passed": false
+}

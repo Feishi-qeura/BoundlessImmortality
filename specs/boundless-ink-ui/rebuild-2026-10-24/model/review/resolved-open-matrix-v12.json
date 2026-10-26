@@ -1,0 +1,40 @@
+{
+  "findings": [
+    {
+      "id": "CLOSED-SCOPED-RENDER-NAV",
+      "state": "closed",
+      "proof": "formal14 exact portrait + physical110edges/44views;native07current26;merchant02;12portraitpaint/13exactasset hashes;oldowned normalshutdown",
+      "remaining": "No reruns; five business contexts and new followup batch remain separate."
+    },
+    {
+      "id": "V11-RACE-ACTIVE-01",
+      "state": "source-authority-repaired-applicable-UI-not-yet-proven",
+      "proof": "backup/ledger224 hashca515...;7red-to-green and102existing; actual session boolean exported; unknown Source deny preserved",
+      "remaining": "Actual eligible race UI action and real denial/receipt context after fix; do not claim functional01/02 success."
+    },
+    {
+      "id": "FIVE-SUBJECT-RESULT",
+      "state": "open-machine-scope",
+      "proof": "five-subject-result-closure-v12.csv; all have real view entries but empty context/no result evidence",
+      "remaining": "Region/Resource genuine pin context tests; actual completed world/settled race UI result; ResourceRewards existing receipt projection wiring."
+    },
+    {
+      "id": "AVAILABLE-BACKEND-ACTIONS",
+      "state": "scoped-runtime-followup-pending",
+      "proof": "World travel/queue-cancel/eligible StartLaunch backend exists; no accepted new UI receipt chain in consumed evidence",
+      "remaining": "Combine with five gaps in bounded actual native chains; no invented rewards/prices/unknownoffers."
+    },
+    {
+      "id": "NEW-FUNCTIONAL-BATCH",
+      "state": "not-accepted",
+      "proof": "functional01 failed StartGame selector;functional02 report not passed; old failed attempts preserved",
+      "remaining": "New pass/result/shutdown evidence by sole integration; old shutdown does not cover new processes."
+    },
+    {
+      "id": "USER-EXTERNAL",
+      "state": "pending-user-separate",
+      "proof": "portrait9:16 only; no images viewed for approval",
+      "remaining": "User visual, physical phone and platform separately; not substitutes for machine gaps."
+    }
+  ]
+}

@@ -1,18 +1,44 @@
 # Logic-core review handoff
 
+## Latest: v12 independent review persisted; five business subject/result gaps stay open
+
+Read `bounded-v12-checkpoint.md`, `readiness-v12.json`, `independent-closeout-proof-v12.json`, `race-provider-proof-v12.json`, `five-subject-result-closure-v12.csv`, `functional-44-evidence-v12.csv` and `resolved-open-matrix-v12.json`; baseline plus supplements are `selected-inputs-v12.json`. Closed by scope: formal14 exact portrait44render/37typedBack/strictgeometry;110physical view-navigation edges03+04 covering44views; current26 native07 48Success+1warning; merchant02negative45;13retained/12portrait-painted components and9expanded Appearance attributes; old17:27owned normal shutdown. No reruns requested.
+
+V11-RACE-ACTIVE-01 old missing-field conclusion is superseded: authority now exports bool(real session.active), hashca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de, backup/ledger224. Seven projection/native-rule cases green and102existing service tests green. Source/authority fixed; actual Race/UI chain remains pending, not presumed by unit/native totals. functional01 failed StartGame selector before business steps; functional02 pass not yet consumed.
+
+Five contextual gaps are not removed from machine scope: RegionDetail/ResourceDetail have existing pin-selection->context->detail source paths and need genuine subject tests; EventSettlement/RaceSettlement have real backend result providers but need actual corresponding completed/settled result plus UI/receipt evidence; ResourceRewards reads absent resource_rewards.rows although real reward_receipts.entries already exists, so projection wiring is implementable without inventing grants. Exact closure standards and bounded World/queue-cancel/launch followup are in checkpoint. New functional process shutdown remains separate from old completed batch.
+
+Machine complete=false; only model/review writes, no engine/service/test/production actions or visual approval. The checkpoint was persisted first, then completed with proof/index/matrices. Review delivery is complete; machine business acceptance remains false.
+
 ## Latest: v11 — human portrait-only, formal14 scoped passed, actions and UI entries separate
+
+
 
 Read `bounded-v11-portrait-proof-remaining.md`, `stage-to-runtime-v11.csv`, `functional-44-evidence-v11.csv`, `functional-source-findings-v11.json`, `runtime-evidence-v11.json`, `resolved-open-matrix-v11.json` and `readiness-v11.json`. Human verified9:16portrait-only scope removes landscape acceptance; retain landscape asset. Source26 named88/88 hashes match. Final14 passed906checks56captures,44render pages,37typedBack-toHUD,all56exact720x1280; formal audit0errors/56bad-metric injections rejected. Current portrait12/12expected-painted components passed,13imported retained. Do not rerun this whole render suite.13 passed905 but19earlycaptures720x1282, retained separately.
 
+
+
 Nested map evidence proves8unique real inner UButtons,8expected paint/positive size and static wrapper->OnClicked->EntryId->page callback. It does not prove every pin clicked/travelled.37Feature loop calls direct frontend router; onlycore7 plus6feature real entry flows are proven here.31real player entry/context flows remain for integration's lightweight popup/scroll/paint/Slate/Back work; result/detail pages need genuine parent trigger or an honest state gap.
+
+
 
 Action matrix44 distinguishes read-only/legal empty, scoped true business, native/Source applicability, backend-present no newHost runtime chain, and provider/environment gap. One concrete P1: RaceDenied requires identity.active absent from authority._snapshot (truthful session provider needed, never default true). V11-ACTIVITY-CARD-01 withdrawn: reviewer missed Source line37 final selected-detail VM override; supported Start/End binding exists, no code fix requested. See exact Source/hash/minimal fixes. Combine actual UI-entry with bounded World travel/resource queue-cancel/eligible StartLaunch chain where backend is genuinely applicable. No fictitious offer/fortune/global ranks or arbitrary result IDs.
 
+
+
 Late merchant02 now passed45 on source26: real-refresh stale confirmation detached; actual old-version/cross-SKU-price native seam yields zeroPurchase and unchanged wallet/inventory, inbound/audit count remains1. Current expanded Appearance shared glyph paint also passed. Those old pending items are closed by scope, retaining prior15/14+stage/Avatar/Appearance successes. Current formal native49 still not found in consumed evidence:05 was build24 broad suite;06 reflection preflight is not execution.13/14 normal-quit markers/PIDs absent; authority40168/avatar28596 stilllive so full owned shutdown pending.
+
+
 
 Machine complete remains false due real-entry/action/provider/native/exit gaps, not landscape or repeated completed render tests. User visual/device/platform separate. Reviewer only model/review writes; no UE/UBT/service/tests/production/visual approval.
 
+
+
 ## Latest: v10 — Avatar/Stage/Appearance evidence closed by scope; current26 map pin blocker
+
+
+
+
 
 
 
@@ -20,7 +46,15 @@ Read `bounded-v10-proof-remaining.md`, `stage-persisted-proof-v10.csv/.json`, `r
 
 
 
+
+
+
+
 Native05 is build24 broad Frontend49 (48Success+1SuccessWithWarning,0fail0notRun), not49NewUI tests and not current26 coverage. Warning is transient-world DestroyActor no context in StageCoordinatesKeepPawnRoles. Build25 exit0 88/222; current26 exit0 88/224 and later Root extent/x-y Source not automatically covered by old runtime/native.
+
+
+
+
 
 
 
@@ -28,7 +62,15 @@ Late actual attempt10 ended false222checks16captures at WorldCultivation: author
 
 
 
+
+
+
+
 Exact owned PID/log observation: service10/stage/default07-10 closed with shutdown markers; native05 absent with TestExit/request-exit log. Authority40168 and avatar28596 still present Python, so final all-owned normal shutdown not proved. TLS peer override only owned process; seeded stage realm/qi/material not natural growth or production player/platform authentication. User visual/device acceptance pending.
+
+
+
+
 
 
 
@@ -36,7 +78,17 @@ Reviewer only wrote model/review; no UE/UBT/service/test execution, production e
 
 
 
+
+
+
+
 ## Latest: v9 — actual authority receipts now independently qualified
+
+
+
+
+
+
 
 
 
@@ -48,7 +100,19 @@ Read `bounded-v9-proof-remaining.md`, `service-chain-proof-v9.csv/.json`, `runti
 
 
 
+
+
+
+
+
+
 Native04 formal4 Success/0failed includes fresh-stage helper fixture; no rerun. Actual stage host/service negative remains pending. 13/13 unique component candidates now have visible brush readbacks at recorded epochs (Equipment added by service03). Appearance shared attribute atlas has9 bound but hidden images; visible preview/paint pending. Original partial12 report preserved.
+
+
+
+
+
+
 
 
 
@@ -60,7 +124,19 @@ Default PIE06 is still false at Activities Back (660checks/42captures,32 default
 
 
 
+
+
+
+
+
+
 Remaining: Stage runtime freshguard/actor/quote zero-write negatives under declared separate synthetic namespace; Appearance preview visible shared glyphs; merchant refresh stable-ID and stale-version/price zero-write negatives; avatar cache/retry recovery; current full44 normal returns and portrait/landscape strictgeometry; eventual user visual/device acceptance. naturally_earned=false fixtures and owned-process TLS peer override/HTTPS image fixture are not production-player growth or platform authentication.
+
+
+
+
+
+
 
 
 
@@ -72,7 +148,21 @@ Reviewer only wrote model/review; no UE/UBT/service/test execution, production m
 
 
 
+
+
+
+
+
+
 ## Latest: v8 — imports/references repaired; new runtime brush and business evidence pending
+
+
+
+
+
+
+
+
 
 
 
@@ -88,7 +178,23 @@ Read `bounded-v8-incremental-review.md`, `runtime-component-application-v8.md`, 
 
 
 
+
+
+
+
+
+
+
+
 V7-CONFIRM-01 now has latest-stage checks at request-confirmation and prepare/rework, captured confirmation fingerprint and final match. V7-CYCLE-01 now filters RouteCycle daily/limited and updates consumer title/selection. Shop/listing/order selection round-trips to retained host IDs; refresh invalidates changed/disappeared subject/version/price. These bounded Source chains are qualified; actual current-epoch service/runtime regression pending. Build19 records88 Source/212 ledger exit0 at15:37:42. Later selected verifier/status drift is separate.
+
+
+
+
+
+
+
+
 
 
 
@@ -104,6 +210,14 @@ PIE05 observed22 routes,479 checks/31 captures, with actual scroll+click success
 
 
 
+
+
+
+
+
+
+
+
 Short integration remainder: separately recorded new attempt for actual return/scroll route closure; seven new live brush bindings plus existing shared Appearance atlas; fresh-stage/cycle/stable SKU-listing refresh runtime cases; real service Busy/business and eventual user visual acceptance. No production edits, engine/build/tests/import execution or visual image review by this worker.
 
 
@@ -112,7 +226,25 @@ Short integration remainder: separately recorded new attempt for actual return/s
 
 
 
+
+
+
+
+
+
+
+
 ## Latest: v7 — 44 Source routes, failed PIE04, seven new components outstanding
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -132,7 +264,27 @@ Read `bounded-v7-evidence-update.md`, `runtime-component-application-v7.md`, `st
 
 
 
+
+
+
+
+
+
+
+
+
+
 PIE04 observed core7 plus Extensions/WorldCultivation, 229 checks/17 captures, but finished=false/passed=false at real Character OpenEquipmentFabao click None; independent arrangement places that target below the clip. Preserve failed04; next passing attempt must be a separate record. Strict geometry/culling and deliberate bad-value checks passed only the captured subset: old circular filter is source-repaired, global geometry still provisional. Native3 Success carries forward without rerun; real service Busy/business, all44 and visual approval remain unverified.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -152,7 +304,27 @@ Integration handoff: V7-ENTRY-01 actual scroll/click; V7-CONFIRM-01 fresh stage 
 
 
 
+
+
+
+
+
+
+
+
+
+
 This reviewer changed only this review directory, launched no UE/build/tests/import/migration, and viewed no images. `selected-inputs-v7.json` preserves input bytes; `source-drift-after-v7.json` lists later changes. Earlier reports below are historical, not current approval or missing-record state.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -172,7 +344,27 @@ This reviewer changed only this review directory, launched no UE/build/tests/imp
 
 
 
+
+
+
+
+
+
+
+
+
+
 Read `bounded-v6-evidence-update.md`, `stage-to-runtime-v6.csv`, `runtime-evidence-v6.json`, `resolved-open-matrix-v6.json` and `readiness-v6.json` first. Build11 epoch64/ledger118, default PIE03 (159 checks/15 captures, finished/pass=true) and formal NewUI3 index (3 Success/0 failed/0 notRun) have been consumed. **N03 and builder Busy fixture execution records now exist and passed.** Do not carry forward v5's missing-record statement as current. Actual default WBP_C and all seven core route/shell assertions are validated.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,7 +384,27 @@ Geometry remains provisional: the successful PIE03 report still records40 visibl
 
 
 
+
+
+
+
+
+
+
+
+
+
 The 44-screen map now separates declared44, connected/observed/route-validated7 at the tested checkpoint, formal native3, provisional geometry, and unverified real-service/visual scopes. Current Root/Extensions feature-host integration is newer than build11 and not automatically covered by its proof. No engine/build/test rerun or image approval was performed by this reviewer.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -212,7 +424,27 @@ The 44-screen map now separates declared44, connected/observed/route-validated7 
 
 
 
+
+
+
+
+
+
+
+
+
+
 Read `bounded-v5-review.md`, `resolved-open-matrix-v5.json`, `stage-to-runtime-v5.csv`, `runtime-evidence-v5.json` and `readiness-v5.json`. All six previous v4 groups have ready v5 source/overlay dispositions, with exact owner hashes matched. The Player-e patch was apply-checked but not applied. I3 is repaired in Source; native N03/Busy execution pass records are absent from the scoped current evidence, and real transport Busy remains unproved.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -232,7 +464,27 @@ Four imported texture uasset hashes match the import report; the saved new defau
 
 
 
+
+
+
+
+
+
+
+
+
+
 The late Source epoch now lazily wires the new Leaderboard, giving 7/0/37 static connection counts. The selected runtime observations still cover only the previous six pages; no full page acceptance is claimed. Two new source findings need dispatch: **V5-VERIFY-01/P1** (finite-value-dependent arrangement filter can hide the invalid geometry it tests) and **V5-AVATAR-01/P2** (host backoff rejection can leave the new page request latch stuck). Selected late source bytes/hashes are in `late-source-v5.json`.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -252,7 +504,27 @@ The final drift list records newer Source epoch metadata plus later Rank base-he
 
 
 
+
+
+
+
+
+
+
+
+
+
 ## Latest: bounded v4, all 44 stage declarations located
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -272,7 +544,27 @@ Read `bounded-v4-review.md`, `resolved-open-matrix-v4.json`, `stage-to-runtime-v
 
 
 
+
+
+
+
+
+
+
+
+
+
 PC3-01 is satisfied at the current frozen source hash: its retained typed AddDynamic bridge is present. Do not redispatch the old AddLambda text finding against that hash. PC3-02/03 minimal diff was independently apply-checked but remains unapplied. J3-01 is repaired in Journey-v4 source, with optional captured month identity retained.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -292,7 +584,27 @@ The nine formerly missing stage entries are now mapped, so stage declaration cov
 
 
 
+
+
+
+
+
+
+
+
+
+
 ## Latest: bounded review-v3 and Player-c
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -312,7 +624,27 @@ Read `bounded-v3-review.md`, `resolved-open-matrix-v3.json`, `stage-to-runtime-v
 
 
 
+
+
+
+
+
+
+
+
+
+
 All 44 rows now map actual stage class/builder, typed input and canonical VM/actions to source mount/proof state. At this capture 35 have a stage declaration and 9 lack ready new source; these are not mounted-screen counts. Production source coverage remains 6/1/37, and runtime/player-entry evidence is zero. Activities follow-on rank/commerce/orders source was not ready at this capture. Historical v2 evidence is preserved below and in its original files.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -332,7 +664,27 @@ All 44 rows now map actual stage class/builder, typed input and canonical VM/act
 
 
 
+
+
+
+
+
+
+
+
+
+
 Read `remaining-v2.md`, `resolved-open-matrix-v2.json`, `screen-coverage-v2.csv` and `readiness-v2.json` first. Exact reviewed source bytes/hashes are recorded in `source-delta-v2.json` and `source-snapshot-v2/`. There are 12 first-review records resolved in review-v2 source, 1 partially resolved avatar record, 2 production source integration steps confirmed, and 9 remaining findings/risks. Priority: N01 incorrectly requires an existing EventId for the native known-absent Launch start. Source coverage is 6 newly connected compositions, 1 placeholder and 37 without observed new production component wiring; none is player-entry verified. Changes after the snapshot, if any, are explicit in readiness-v2 and require delta review.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -352,7 +704,27 @@ The report below is the historical first checkpoint; its findings are superseded
 
 
 
+
+
+
+
+
+
+
+
+
+
 Read `current-source-review.md` for eight confirmed API/type issue groups, one content alpha issue, three lifecycle risks, and current production Root integration checks. File hashes and explicit verification boundaries are in `readiness.json`; recheck concurrent edits before applying a finding.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,7 +744,22 @@ Only contracts/model were written. The production owner should repair or reconci
 
 
 
+
+
+
+
+
+
+
+
+
+
 The unified contracts handoff is `../../contracts/handoff.md`; validation remains the recorded 30 structural checks plus the owned GameUI strict snapshot (0 errors, 0 warnings). No old suite result is promoted to new-tree runtime acceptance. Optional new raster assets remain pending.
+
+
+
+
+
 
 
 

@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-10-24T10:46:10.220303+00:00",
+  "ledger_record": {
+    "path": "Tools/CultivationService/authority.py",
+    "state": "recorded",
+    "reason": "V11-RACE-ACTIVE-01: additive truthful native session.active projection, no rules/heartbeat/eligibility/reward changes",
+    "started_at": "2026-10-24T17:42:48.454977+08:00",
+    "before_sha256": "b2faf88bb9572c381edcf8a9a28b109514ee61f472dcc36e558ebdb4011741a6",
+    "before_exists": true,
+    "backup": "backups/224",
+    "grant_sha256": "f2d4ec018811a87e036b0a832414f31877d7ff1768510be49eb1884d712a764f",
+    "metadata": {},
+    "after_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
+    "finished_at": "2026-10-24T17:42:57.508893+08:00",
+    "changed": true
+  },
+  "before_hash_matches": true,
+  "after_hash_matches": true,
+  "current_hash_matches": true,
+  "exact_diff": [
+    "--- \n",
+    "+++ \n",
+    "@@ -188,3 +188,3 @@\n",
+    "         state = dict(version=scope['version'], server_utc=ctx.now, manifest=dict(rule_version=self.rules.version, rules_hash=self.rules.sha256, profile='prototype_full', window_end=scope['end']),",
+    "-                     identity=dict(user=ctx.user, role=ctx.role, room=ctx.room, generation=ctx.session['generation']),",
+    "+                     identity=dict(user=ctx.user, role=ctx.role, room=ctx.room, generation=ctx.session['generation'], active=bool(ctx.session['active'])),",
+    "                      guild=guild, counts=dict(members=total, participating_members=participating, helpers=helpers),"
+  ],
+  "green_projection_cases": 7,
+  "existing_service_cases": 102,
+  "source_unknown_deny_preserved": true,
+  "scope": "additive truthful session flag projection plus isolated authority tests; actual Race UI followup not yet proven"
+}

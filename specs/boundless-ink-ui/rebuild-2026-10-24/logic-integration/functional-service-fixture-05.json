@@ -1,0 +1,12 @@
+{
+  "declared_synthetic_actors": true,
+  "naturally_earned": false,
+  "app": "NewUIFunctional20261024",
+  "user": "functional-anchor",
+  "room": "functional-room",
+  "world_user": "functional-world",
+  "world_room": "functional-world-room",
+  "clock": "real wall clock plus explicitly controlled offset; advances in<=4s steps with real session heartbeats; no world/race states or rewards injected",
+  "database": "D:\\demo\\BoundlessImmortality\\specs\\boundless-ink-ui\\rebuild-2026-10-24\\logic-integration\\service-data-05\\prototype.sqlite3",
+  "production_authority_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de"
+}

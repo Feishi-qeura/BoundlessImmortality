@@ -3527,6 +3527,20 @@
       "after_sha256": "ca51514499201236b9e77622401f42be08bb589306f24746e7b314edd27190de",
       "finished_at": "2026-10-24T17:42:57.508893+08:00",
       "changed": true
+    },
+    {
+      "path": "Source/BoundlessImmortality/Frontend/UIRebuild20261024/Journey/InkJourneyNewWidgets.cpp",
+      "state": "recorded",
+      "reason": "Actual UI red functional03: idle snapshot refresh clears two-step travel confirmation; preserve until pending completion or subject change",
+      "started_at": "2026-10-24T18:43:14.077506+08:00",
+      "before_sha256": "37cf356d56054d89d658c1792277b2632055a51a6b8f8c5a49f2e64419dbaae1",
+      "before_exists": true,
+      "backup": "backups/225",
+      "grant_sha256": "f2d4ec018811a87e036b0a832414f31877d7ff1768510be49eb1884d712a764f",
+      "metadata": {},
+      "after_sha256": "192bfb98f3194030ebc597b64f1fac2a0d98b5e1fc454cb6c32899e38483e89a",
+      "finished_at": "2026-10-24T18:43:27.105360+08:00",
+      "changed": true
     }
   ]
 }

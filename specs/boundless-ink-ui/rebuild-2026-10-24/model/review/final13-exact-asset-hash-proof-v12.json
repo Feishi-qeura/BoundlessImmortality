@@ -1,0 +1,113 @@
+{
+  "checked_utc": "2026-10-24T10:46:10.263845+00:00",
+  "scope": "13 exact imported candidates only, no old migration rerun or directory scan",
+  "total": 13,
+  "matches": 13,
+  "portrait_applicable": 12,
+  "rows": [
+    {
+      "object": "/Game/newUI/Components/Player/T_MainActionOrnament_v1.T_MainActionOrnament_v1",
+      "exists": true,
+      "expected": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee",
+      "current": "034d2bf931ddec42dac0ca1cda3b80fbd40c4f31b980daaa3c00104e737bedee",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_HudRouteGlyphAtlas_v1.T_HudRouteGlyphAtlas_v1",
+      "exists": true,
+      "expected": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d",
+      "current": "eb739f1387fee400cf23d3c5951712187af5276f27d3627bd82d4314748f3f7d",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_CharacterAttributeGlyphAtlas_v1.T_CharacterAttributeGlyphAtlas_v1",
+      "exists": true,
+      "expected": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "current": "df89cc7a1101e2219360a16280d128c64f7c69ae2f6f035fa7f8892093109ca6",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_InventoryCategoryGlyphAtlas_v1.T_InventoryCategoryGlyphAtlas_v1",
+      "exists": true,
+      "expected": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86",
+      "current": "e2dec2814eec194c1bc31d6d9c54a0ea7ae12fd4f8b7f9a032b096a96d440a86",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_MethodLoadoutGlyphAtlas_v1.T_MethodLoadoutGlyphAtlas_v1",
+      "exists": true,
+      "expected": "131337ea991ece98779fb3fae2e86af2806f8d032563b6c30fdcd9c22e5770dd",
+      "current": "131337ea991ece98779fb3fae2e86af2806f8d032563b6c30fdcd9c22e5770dd",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_EquipmentFabaoGlyphAtlas_v1.T_EquipmentFabaoGlyphAtlas_v1",
+      "exists": true,
+      "expected": "3d1035616108d006dd455a4455d7fc6d3e49fa409c7e4b217641d08380e9881b",
+      "current": "3d1035616108d006dd455a4455d7fc6d3e49fa409c7e4b217641d08380e9881b",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/Player/T_AppearancePreviewOrnamentAtlas_v1.T_AppearancePreviewOrnamentAtlas_v1",
+      "exists": true,
+      "expected": "3948cac0ec8cbdc6f7d05359cc0f89478beb4ea51c485450c41da7d131a1588f",
+      "current": "3948cac0ec8cbdc6f7d05359cc0f89478beb4ea51c485450c41da7d131a1588f",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Activities/Icons/T_DailyActivityScroll_v1.T_DailyActivityScroll_v1",
+      "exists": true,
+      "expected": "3009ecc410c96d67e61e0b01f1ffddae8b9a2306b8e04116e3acbbad7aa18f39",
+      "current": "3009ecc410c96d67e61e0b01f1ffddae8b9a2306b8e04116e3acbbad7aa18f39",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Activities/Icons/T_LimitedActivityCalendar_v1.T_LimitedActivityCalendar_v1",
+      "exists": true,
+      "expected": "bf64c6c2242f06ffc262bb650ffab8a727e599f9bcdf6d2405eb6bb4cf037195",
+      "current": "bf64c6c2242f06ffc262bb650ffab8a727e599f9bcdf6d2405eb6bb4cf037195",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Activities/Icons/T_PermanentActivityLotus_v1.T_PermanentActivityLotus_v1",
+      "exists": true,
+      "expected": "3a9fe499f8e3d18c61a34cfb3825deb48d43f898b77c89a61b3739338ab08308",
+      "current": "3a9fe499f8e3d18c61a34cfb3825deb48d43f898b77c89a61b3739338ab08308",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Components/RankWuling/T_NUI_Wuling_SectInsignia_Normal_V1.T_NUI_Wuling_SectInsignia_Normal_V1",
+      "exists": true,
+      "expected": "30d27a3c2c0b2b209bc5fc8fa972da2890e64dcf552e3b24f54b5583be1147d5",
+      "current": "30d27a3c2c0b2b209bc5fc8fa972da2890e64dcf552e3b24f54b5583be1147d5",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapPortrait_V1.T_NUI_JourneyMapPortrait_V1",
+      "exists": true,
+      "expected": "9c070d6e28b9f43a4172df0d87b3d7a7717bd96b76ba9f04ec49e1c826d4411e",
+      "current": "9c070d6e28b9f43a4172df0d87b3d7a7717bd96b76ba9f04ec49e1c826d4411e",
+      "matches": true,
+      "portrait_applicable": true
+    },
+    {
+      "object": "/Game/newUI/Textures/Journey/T_NUI_JourneyMapLandscape_V1.T_NUI_JourneyMapLandscape_V1",
+      "exists": true,
+      "expected": "143564312b02565b9829557e730a6a3b2af1bd301341114ac81843538870b110",
+      "current": "143564312b02565b9829557e730a6a3b2af1bd301341114ac81843538870b110",
+      "matches": true,
+      "portrait_applicable": false
+    }
+  ]
+}

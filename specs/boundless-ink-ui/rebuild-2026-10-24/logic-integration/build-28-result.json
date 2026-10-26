@@ -1,0 +1,8 @@
+{
+  "scope": "Current bounded functional repair; explicit DisableUnity due pre-existing merged-helper collisions; default unity failure retained",
+  "source_files": 89,
+  "source_ledger_records": 226,
+  "started_at": "2026-10-24T18:46:24.8154338+08:00",
+  "finished_at": "2026-10-24T18:50:24.4226615+08:00",
+  "exit_code": 6
+}
